@@ -1,31 +1,18 @@
 module.exports = {
-    "/zh/": {
-      nav: [
-        { text: "项目主页", link: "/zh/home/", icon: "home" },
-        {
-          text: "如何使用",
-          icon: "creative",
-          link: "/zh/guide/",
-        },
-        {
-          text: "主题文档",
-          icon: "note",
-          link: "https://vuepress-theme-hope.github.io/zh/",
-        },
-      ],
-      sidebar: {
-        "/zh/": [
-          "",
-          "home",
-          "slides",
-          "layout",
-          {
-            title: "如何使用",
-            icon: "creative",
-            prefix: "guide/",
-            children: ["", "page", "markdown", "disable", "encrypt"],
-          },
-        ],
+    nav: [
+      { text: "项目主页", link: "/zh/", icon: "home" },
+      { text: "Wiki", link: "/zh/guide/", icon: "repo" },
+      { text: "联动", link: "/zh/hooks/", icon: "plugin"},
+      { text: "API", link: "/zh/API", icon: "api" },
+      { text: "资源", link: "/zh/resources/", icon: "code" },
+      {
+	      text: "获取支持",
+          ariaLabel: "购买支持",
+	      items: [
+	          { text: "Patreon", link: "https://www.patreon.com/bloodmc" },
+              { text: "Spigot", link: "https://www.spigotmc.org/resources/griefdefender.68900/" }
+	      ]
       },
-    },
+    ], 
+    sidebar: require("./zh_sidebar.js"),
 };

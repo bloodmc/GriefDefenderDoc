@@ -1,3 +1,3 @@
 module.exports = {
-    "/zh/": require("./zh/content")
+    "/zh/": require("./zh/content"),
 };

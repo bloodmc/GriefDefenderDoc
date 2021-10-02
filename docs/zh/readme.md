@@ -23,11 +23,11 @@ features:
     details: 使用默认的权限配置或根据标签创建属于您自己的，可能无上限!
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: 多语言支持 🌏 ℹ
+  - title: 多语言支持 🌏
     details: 许多语言开箱即用，不需要额外的配置!
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: 多种数据库支持 📇📝
+  - title: 多种数据库支持 📇
     details: 支持 MySQL，MariaDB，PostgreSQL 及 SQLite(文件型)。
     link: https://github.com/bloodmc/GriefDefender
 
