@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Flag Definition | GriefDefender</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <link rel="alternate" type="application/atom+xml" href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/atom.xml" title="GriefDefender Atom Feed">
+    <link rel="alternate" type="application/json" href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/feed.json" title="GriefDefender JSON Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml" title="GriefDefender RSS Feed">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512">
+    <link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512">
+    <link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192">
+    <link rel="manifest" href="/GriefDefenderDoc/manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png">
+    <meta name="description" content="Powerful Claim Plugin.">
+    <meta property="og:url" content="/GriefDefenderDoc/guide/basic/flag-definitions-gui.html">
+    <meta property="og:site_name" content="GriefDefender">
+    <meta property="og:title" content="Flag Definition">
+    <meta property="og:description" content="Overview The flag definition system provides both users and admins the ability to manage their claim flags with ease. GriefDefender delivers a bundle of flag definitions by default">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en-US">
+    <meta property="og:locale:alternate" content="zh-CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="GriefDefender">
+    <meta name="theme-color" content="#46bd87">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <link rel="preload" href="/GriefDefenderDoc/assets/css/0.styles.3d284239.css" as="style"><link rel="preload" href="/GriefDefenderDoc/assets/js/app.cf2474ca.js" as="script"><link rel="preload" href="/GriefDefenderDoc/assets/js/vendors~layout-Layout.1964ea2f.js" as="script"><link rel="preload" href="/GriefDefenderDoc/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound.e75abd98.js" as="script"><link rel="preload" href="/GriefDefenderDoc/assets/js/page-FlagDefinition.7ab8b8db.js" as="script"><link rel="preload" href="/GriefDefenderDoc/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound~layout-Slide.91ec1857.js" as="script"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/49.7f1aa54d.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/50.cabd8a40.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/51.23cfd094.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/52.2923b429.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/53.2ec021be.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/54.176685ac.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/layout-Blog.3c8afc04.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/layout-Layout.2bf34208.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/layout-NotFound.5e23a16d.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/layout-Slide.5a9e4751.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/mermaid.64594bfe.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-API.0e64a78f.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-ClaimManagement.75d2ae67.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-ClaimTypes.8922e04a.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-CommandOverview.2fdc640e.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Contexts.885e1348.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Contrubution.a78f250b.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-CustomLayout.946acd1f.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Debugging.8110f46a.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Dynmap.c83d75ea.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Flags.2a1b82f2.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-GDHooks.bc927dbe.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-GlobalConfig.19f96acb.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-GriefDefender.497808a7.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-GriefPrevention.30704212.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Install.2a75d367.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Markdown增强.5d6cd7f9.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Options.9a224146.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-PVP.90d8812e.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Permission.617e3900.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-PixelmonPreset.1e580923.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Placeholder.c43c7182.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-RentSystem.48e1a136.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Resources.205c815f.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-Slidepage.993743d5.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-TagsSystem.5c148c18.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-TrustSystem.63b07d68.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-User-FriendlyCommands.58453433.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-WECUI.bc1868be.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-WorldGuard.bdc55d0a.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-主要功能与配置演示.1b8cf519.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-密码加密的文章.a64efa75.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-组件禁用.32b1da4d.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-自定义布局.9b3e22d6.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/page-页面配置.dc81aca0.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/vendors~flowchart.8c4d6c2e.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/vendors~mermaid.44c01f30.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/vendors~photo-swipe.63a5d325.js"><link rel="prefetch" href="/GriefDefenderDoc/assets/js/vendors~reveal.6f27580c.js">
+    <link rel="stylesheet" href="/GriefDefenderDoc/assets/css/0.styles.3d284239.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container has-navbar has-sidebar has-anchor"><header class="navbar"><!----> <div class="content__navbar-start"></div> <button title="Sidebar Button" class="sidebar-button"><span class="icon"></span></button> <a href="/GriefDefenderDoc/" class="home-link router-link-active"><img src="/GriefDefenderDoc/logo.png" alt="GriefDefender" class="logo"> <!----> <span class="site-name can-hide">GriefDefender</span></a> <!----> <div class="content__navbar-center"></div> <div class="links"><button tabindex="-1" aria-hidden="true" class="color-button"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="skin-icon"><path d="M224 800c0 9.6 3.2 44.8 6.4 54.4 6.4 48-48 76.8-48 76.8s80 41.6 147.2 0 134.4-134.4
+        38.4-195.2c-22.4-12.8-41.6-19.2-57.6-19.2C259.2 716.8 227.2 761.6 224 800zM560 675.2l-32
+        51.2c-51.2 51.2-83.2 32-83.2 32 25.6 67.2 0 112-12.8 128 25.6 6.4 51.2 9.6 80 9.6 54.4 0
+        102.4-9.6 150.4-32l0 0c3.2 0 3.2-3.2 3.2-3.2 22.4-16 12.8-35.2
+        6.4-44.8-9.6-12.8-12.8-25.6-12.8-41.6 0-54.4 60.8-99.2 137.6-99.2 6.4 0 12.8 0 22.4
+        0 12.8 0 38.4 9.6 48-25.6 0-3.2 0-3.2 3.2-6.4 0-3.2 3.2-6.4 3.2-6.4 6.4-16 6.4-16 6.4-19.2
+        9.6-35.2 16-73.6 16-115.2 0-105.6-41.6-198.4-108.8-268.8C704 396.8 560 675.2 560 675.2zM224
+        419.2c0-28.8 22.4-51.2 51.2-51.2 28.8 0 51.2 22.4 51.2 51.2 0 28.8-22.4 51.2-51.2 51.2C246.4
+        470.4 224 448 224 419.2zM320 284.8c0-22.4 19.2-41.6 41.6-41.6 22.4 0 41.6 19.2 41.6 41.6 0
+        22.4-19.2 41.6-41.6 41.6C339.2 326.4 320 307.2 320 284.8zM457.6 208c0-12.8 12.8-25.6 25.6-25.6
+        12.8 0 25.6 12.8 25.6 25.6 0 12.8-12.8 25.6-25.6 25.6C470.4 233.6 457.6 220.8 457.6 208zM128
+        505.6C128 592 153.6 672 201.6 736c28.8-60.8 112-60.8 124.8-60.8-16-51.2 16-99.2
+        16-99.2l316.8-422.4c-48-19.2-99.2-32-150.4-32C297.6 118.4 128 291.2 128 505.6zM764.8
+        86.4c-22.4 19.2-390.4 518.4-390.4 518.4-22.4 28.8-12.8 76.8 22.4 99.2l9.6 6.4c35.2 22.4
+        80 12.8 99.2-25.6 0 0 6.4-12.8 9.6-19.2 54.4-105.6 275.2-524.8 288-553.6
+        6.4-19.2-3.2-32-19.2-32C777.6 76.8 771.2 80 764.8 86.4z"></path></svg> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><ul class="themecolor-select"><label for="themecolor-select">Theme Color:</label> <li><span class="default-theme"></span></li> </ul> <div class="darkmode-toggle"><label for="darkmode-toggle" class="desc">Theme Mode:</label> <div class="darkmode-switch"><div class="item day"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon light-icon"><path d="M512 256a42.667 42.667 0 0 0 42.667-42.667V128a42.667 42.667 0 0 0-85.334 0v85.333A42.667 42.667 0 0 0 512 256zm384 213.333h-85.333a42.667 42.667 0 0 0 0 85.334H896a42.667 42.667 0 0 0 0-85.334zM256 512a42.667 42.667 0 0 0-42.667-42.667H128a42.667 42.667 0 0 0 0 85.334h85.333A42.667 42.667 0 0 0 256 512zm9.387-298.667a42.667 42.667 0 0 0-59.307 62.72l61.44 59.307a42.667 42.667 0 0 0 31.147 11.947 42.667 42.667 0 0 0 30.72-13.227 42.667 42.667 0 0 0 0-60.16zm459.946 133.974a42.667 42.667 0 0 0 29.44-11.947l61.44-59.307a42.667 42.667 0 0 0-57.6-62.72l-61.44 60.587a42.667 42.667 0 0 0 0 60.16 42.667 42.667 0 0 0 28.16 13.227zM512 768a42.667 42.667 0 0 0-42.667 42.667V896a42.667 42.667 0 0 0 85.334 0v-85.333A42.667 42.667 0 0 0 512 768zm244.48-79.36a42.667 42.667 0 0 0-59.307 61.44l61.44 60.587a42.667 42.667 0 0 0 29.44 11.946 42.667 42.667 0 0 0 30.72-12.8 42.667 42.667 0 0 0 0-60.586zm-488.96 0-61.44 59.307a42.667 42.667 0 0 0 0 60.586 42.667 42.667 0 0 0 30.72 12.8 42.667 42.667 0 0 0 28.587-10.666l61.44-59.307a42.667 42.667 0 0 0-59.307-61.44zM512 341.333A170.667 170.667 0 1 0 682.667 512 170.667 170.667 0 0 0 512 341.333z" fill="currentColor"></path></svg></div> <div class="item auto active"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon auto-icon"><path d="M460.864 539.072H564.8L510.592 376l-49.728 163.072zM872 362.368V149.504H659.648L510.528 0l-149.12 149.504H149.12v212.928L0 511.872l149.12 149.504v212.928h212.352l149.12 149.504 149.12-149.504h212.352V661.376l149.12-149.504L872 362.368zM614.464 693.12l-31.616-90.624H438.272l-31.616 90.624h-85.888l144.576-407.68h90.368l144.576 407.68h-85.824zm0 0" fill="currentColor"></path></svg></div> <div class="item night"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon dark-icon"><path d="M935.539 630.402c-11.43-11.432-28.674-14.739-43.531-8.354-46.734 20.103-96.363 30.297-147.508 30.297-99.59 0-193.221-38.784-263.64-109.203-108.637-108.637-139.61-270.022-78.908-411.148a39.497 39.497 0 0 0-51.886-51.887c-52.637 22.64-100.017 54.81-140.826 95.616-85.346 85.346-132.346 198.821-132.346 319.52 0 120.7 47.001 234.172 132.347 319.519S408.063 947.11 528.76 947.11c120.7 0 234.172-47.003 319.52-132.351 40.809-40.81 72.978-88.19 95.616-140.826a39.497 39.497 0 0 0-8.356-43.532z" fill="currentColor"></path></svg></div></div> <!----></div></div></div></button> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/GriefDefenderDoc/" class="nav-link router-link-active"><i class="iconfont icon-home"></i>
+  Project Home
+</a></div><div class="nav-item"><a href="/GriefDefenderDoc/guide/" class="nav-link router-link-active active"><i class="iconfont icon-repo"></i>
+  Wiki
+</a></div><div class="nav-item"><a href="/GriefDefenderDoc/hooks/" class="nav-link"><i class="iconfont icon-plugin"></i>
+  Hooks
+</a></div><div class="nav-item"><a href="/GriefDefenderDoc/API.html" class="nav-link"><i class="iconfont icon-api"></i>
+  API
+</a></div><div class="nav-item"><a href="/GriefDefenderDoc/resources/" class="nav-link"><i class="iconfont icon-code"></i>
+  Resources
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Purchase Support" class="dropdown-title"><span class="title"><!---->
+        Support
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="https://www.patreon.com/bloodmc" target="_blank" rel="noopener noreferrer" class="nav-link external"><!---->
+  Patreon
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><a href="https://www.spigotmc.org/resources/griefdefender.68900/" target="_blank" rel="noopener noreferrer" class="nav-link external"><!---->
+  Spigot
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div></nav> <div class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon i18n-icon" style="width:1rem;height:1rem;vertical-align:middle;margin-left:1rem;"><path d="M639.981 344.075c14.805 44.45 34.542 79.023 69.084 113.596 29.603-29.634 49.34-69.146 64.145-113.596H639.981zM314.33 591.024h128.29l-64.145-172.865-64.145 172.865z" fill="currentColor"></path> <path d="M807.746 116.882H215.643c-54.274 0-98.681 44.45-98.681 98.78v592.677c0 54.329 44.407 98.78 98.68 98.78h592.104c54.273 0 98.681-44.451 98.681-98.78V215.66c0-54.329-39.475-98.78-98.68-98.78zM565.971 754.01c-9.866 9.878-19.738 9.878-29.603 9.878-4.94 0-14.805 0-19.738-4.939-4.939-4.939-9.872 0-9.872-4.939s-4.932-9.878-9.865-19.756c-4.94-9.878-4.94-14.817-9.872-24.695L467.29 655.23H294.592l-19.737 54.33c-9.866 19.755-14.805 34.572-19.738 44.45-4.939 9.878-14.804 9.878-29.603 9.878-9.871 0-19.737-4.939-29.609-9.878-9.865-9.878-14.798-14.817-14.798-24.695 0-4.939 0-9.878 4.933-19.756 4.939-9.878 4.939-14.817 9.865-24.695l108.553-276.583c4.939-9.878 4.939-19.756 9.872-29.633 4.932-9.878 9.865-19.756 14.798-24.695 4.939-4.94 9.872-14.817 19.737-19.756 9.872-4.94 19.738-4.94 29.61-4.94 9.865 0 19.73 0 29.603 4.94 9.865 4.939 14.804 9.878 19.737 19.756 4.933 4.939 9.866 14.817 14.798 24.695 4.94 9.877 9.872 19.755 14.805 34.572l108.553 271.644c9.865 19.756 14.804 34.573 14.804 44.451-4.939 4.94-9.872 14.817-14.804 24.695zm271.378-192.62c-54.273-19.756-93.748-44.451-128.29-74.085-34.536 34.573-78.943 59.268-133.223 74.085l-14.798-24.695c54.273-14.817 98.68-34.573 133.223-69.146-34.542-34.573-64.145-79.024-74.017-128.413h-49.34V319.38h133.228c-9.877-14.817-19.743-34.573-29.609-49.39l14.799-4.94c9.871 14.818 24.676 34.574 34.542 54.33h123.35v24.695h-49.34c-14.798 49.39-39.468 93.84-69.077 123.474 34.541 29.634 74.01 54.329 128.29 69.146l-19.738 24.695z" fill="currentColor"></path></svg> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/" aria-current="page" class="nav-link router-link-exact-active router-link-active active"><!---->
+  English
+</a></li><li class="dropdown-item"><a href="/GriefDefenderDoc/zh/" class="nav-link"><!---->
+  简体中文
+</a></li></ul></div></div></div> <a rel="noopener noreferrer" href="https://github.com/ahdg6/GriefDefenderDoc" target="_blank" class="repo-link can-hide">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <!----> <div class="content__navbar-end"></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!----> <!----> <div class="content__sidebar-top"></div> <nav class="sidebar-nav-links"><div class="nav-item"><a href="/GriefDefenderDoc/" class="nav-link router-link-active"><i class="iconfont icon-home"></i>
+  Project Home
+</a></div><div class="nav-item"><a href="/GriefDefenderDoc/guide/" class="nav-link router-link-active active"><i class="iconfont icon-repo"></i>
+  Wiki
+</a></div><div class="nav-item"><a href="/GriefDefenderDoc/hooks/" class="nav-link"><i class="iconfont icon-plugin"></i>
+  Hooks
+</a></div><div class="nav-item"><a href="/GriefDefenderDoc/API.html" class="nav-link"><i class="iconfont icon-api"></i>
+  API
+</a></div><div class="nav-item"><a href="/GriefDefenderDoc/resources/" class="nav-link"><i class="iconfont icon-code"></i>
+  Resources
+</a></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Purchase Support" class="dropdown-title"><span class="title"><!---->
+      Support
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.patreon.com/bloodmc" target="_blank" rel="noopener noreferrer" class="nav-link external"><!---->
+  Patreon
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.spigotmc.org/resources/griefdefender.68900/" target="_blank" rel="noopener noreferrer" class="nav-link external"><!---->
+  Spigot
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <a rel="noopener noreferrer" href="https://github.com/ahdg6/GriefDefenderDoc" target="_blank" class="repo-link">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <!----> <div class="content__sidebar-center"></div> <ul class="sidebar-links"><li><a href="/GriefDefenderDoc/" aria-current="page" class="sidebar-link"><i class="iconfont icon-home"></i>GriefDefender</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><i class="iconfont icon-config"></i> <span class="title">Start</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/GriefDefenderDoc/guide/" aria-current="page" class="sidebar-link">GriefDefender</a></li><li><a href="/GriefDefenderDoc/guide/install/" class="sidebar-link"><i class="iconfont icon-install"></i>Install</a></li><li><a href="/GriefDefenderDoc/guide/commands/" class="sidebar-link"><i class="iconfont icon-shell"></i>Command Overview</a></li><li><a href="/GriefDefenderDoc/guide/permissions/" class="sidebar-link"><i class="iconfont icon-condition"></i>Permission</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading clickable open"><i class="iconfont icon-type"></i> <span class="title">Basics</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/GriefDefenderDoc/guide/basic/claim-management/" class="sidebar-link"><i class="iconfont icon-operate"></i>Claim Management</a></li><li><a href="/GriefDefenderDoc/guide/basic/claim-types/" class="sidebar-link"><i class="iconfont icon-type"></i>Claim Types</a></li><li><a href="/GriefDefenderDoc/guide/basic/custom-alias-creation/" class="sidebar-link"><i class="iconfont icon-alias"></i>User-Friendly Commands</a></li><li><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/" aria-current="page" class="active sidebar-link"><i class="iconfont icon-activity"></i>Flag Definition</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#overview" class="sidebar-link">Overview</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#sponge" class="sidebar-link heading3">Sponge</a></li><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#bukkit" class="sidebar-link heading3">Bukkit</a></li></ul></li><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#admin" class="sidebar-link">Admin</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#add-new-flag-definition" class="sidebar-link heading3">Add new flag definition</a></li><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#minecraft-flag-definition-preset-config" class="sidebar-link heading3">Minecraft Flag Definition Preset Config</a></li></ul></li><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#gui" class="sidebar-link">GUI</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#permissions-2" class="sidebar-link heading3">Permissions</a></li><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#flag-values" class="sidebar-link heading3">Flag Values</a></li><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#admin-2" class="sidebar-link heading3">ADMIN</a></li><li class="sidebar-sub-header"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#user" class="sidebar-link heading3">USER</a></li></ul></li></ul></li><li><a href="/GriefDefenderDoc/guide/basic/options/" class="sidebar-link"><i class="iconfont icon-set"></i>Options</a></li><li><a href="/GriefDefenderDoc/guide/basic/pvp/" class="sidebar-link"><i class="iconfont icon-group"></i>PVP</a></li><li><a href="/GriefDefenderDoc/guide/basic/tags/" class="sidebar-link"><i class="iconfont icon-list"></i>Tags System</a></li><li><a href="/GriefDefenderDoc/guide/basic/trust-system/" class="sidebar-link"><i class="iconfont icon-profile"></i>Trust System</a></li><li><a href="/GriefDefenderDoc/guide/basic/claim-rent-system/" class="sidebar-link"><i class="iconfont icon-view"></i>Rent System</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading clickable"><i class="iconfont icon-advance"></i> <span class="title">Advanced Usage</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><i class="iconfont icon-alias"></i> <span class="title">Migration</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/GriefDefenderDoc/guide/migration/griefprevention/" class="sidebar-link">GriefPrevention</a></li><li><a href="/GriefDefenderDoc/guide/migration/worldguard/" class="sidebar-link">WorldGuard</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading clickable"><i class="iconfont icon-plugin"></i> <span class="title">Hook</span> <span class="arrow right"></span></p> <!----></section></li></ul> <!----> <div class="content__sidebar-bottom"></div> <!----></aside> <main class="page"><nav class="breadcrumb"><ol vocab="https://schema.org/" typeof="BreadcrumbList"><li property="itemListElement" typeof="ListItem"><a href="/GriefDefenderDoc/guide/" property="item" typeof="WebPage" class="router-link-active"><!----> <span property="name">GriefDefender</span></a> <meta property="position" content="1"></li><li property="itemListElement" typeof="ListItem" class="is-active"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/" aria-current="page" property="item" typeof="WebPage" class="router-link-exact-active router-link-active"><i class="iconfont icon-activity"></i> <span property="name">Flag Definition</span></a> <meta property="position" content="2"></li></ol></nav> <!----> <div class="content__page-top"></div> <div vocab="https://schema.org/" typeof="Article" class="page-title"><h1><i class="iconfont icon-activity"></i> <span property="headline">Flag Definition</span></h1> <div class="page-info"><!----> <!----><!----><span aria-label="Writing Date📅" data-balloon-pos="down" class="time-info"><svg viewBox="0 0 1030 1024" xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 0 1-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 0 1-33.473-33.473V143.657H180.6A134.314 134.314 0 0 0 46.66 277.595v535.756A134.314 134.314 0 0 0 180.6 947.289h669.74a134.36 134.36 0 0 0 133.94-133.938V277.595a134.314 134.314 0 0 0-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 0 1-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 0 1-33.472 33.473z" fill="currentColor"></path></svg> <span property="datePublished">2021-10-2</span></span><span role="" aria-label="Category🌈" data-balloon-pos="down" class="category-info"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon category-icon"><path d="M148.41 106.992h282.176c22.263 0 40.31 18.048 40.31 40.31V429.48c0 22.263-18.047 40.31-40.31 40.31H148.41c-22.263 0-40.311-18.047-40.311-40.31V147.302c0-22.263 18.048-40.31 40.311-40.31zm-.854 446.486H429.73c22.263 0 40.311 18.048 40.311 40.31v282.176c0 22.263-18.048 40.312-40.31 40.312H147.555c-22.263 0-40.311-18.049-40.311-40.312V593.79c0-22.263 18.048-40.311 40.31-40.311zm446.371-446.486h282.176c22.263 0 40.31 18.048 40.31 40.31V429.48c0 22.263-18.047 40.31-40.31 40.31H593.927c-22.263 0-40.311-18.047-40.311-40.31V147.302c0-22.263 18.048-40.31 40.31-40.31zm136.293 813.51H623.926c-40.925 0-74.22-33.388-74.22-74.425V623.992c0-41.038 33.387-74.424 74.425-74.424h222.085c41.038 0 74.424 33.226 74.424 74.067v114.233c0 10.244-8.304 18.548-18.547 18.548s-18.548-8.304-18.548-18.548V623.635c0-20.388-16.746-36.974-37.33-36.974H624.13c-20.585 0-37.331 16.747-37.331 37.33v222.086c0 20.585 16.654 37.331 37.126 37.331H730.22c10.243 0 18.547 8.304 18.547 18.547 0 10.244-8.304 18.547-18.547 18.547z" fill="currentColor"></path></svg> <span property="articleSection">Flag</span></span><span aria-label="Tags🏷" data-balloon-pos="down"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon tag-icon"><path d="M939.902 458.563 910.17 144.567c-1.507-16.272-14.465-29.13-30.737-30.737L565.438 84.098h-.402c-3.215 0-5.726 1.005-7.634 2.913l-470.39 470.39a10.004 10.004 0 0 0 0 14.164l365.423 365.424c1.909 1.908 4.42 2.913 7.132 2.913s5.223-1.005 7.132-2.913l470.39-470.39c2.01-2.11 3.014-5.023 2.813-8.036zm-240.067-72.121c-35.458 0-64.286-28.828-64.286-64.286s28.828-64.285 64.286-64.285 64.286 28.828 64.286 64.285-28.829 64.286-64.286 64.286z" fill="currentColor"></path></svg> <ul class="tags-wrapper"><li class="tag tag0"><span role="">Settings</span></li></ul> <meta property="keywords" content="Settings"></span><span aria-label="Reading Time⌛" data-balloon-pos="down" class="reading-time-info"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon timer-icon"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z" fill="currentColor"></path></svg> <span>About 14 min</span> <meta property="timeRequired" content="PT14M"></span></div> <!----> <hr></div> <div class="anchor-place-holder"><aside id="anchor"><div class="anchor-wrapper"><ul class="anchor-list"><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#overview" class="anchor-link heading2"><div>Overview</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#sponge" class="anchor-link heading3"><div>Sponge</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#bukkit" class="anchor-link heading3"><div>Bukkit</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#admin" class="anchor-link heading2"><div>Admin</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#add-new-flag-definition" class="anchor-link heading3"><div>Add new flag definition</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#minecraft-flag-definition-preset-config" class="anchor-link heading3"><div>Minecraft Flag Definition Preset Config</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#gui" class="anchor-link heading2"><div>GUI</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#permissions-2" class="anchor-link heading3"><div>Permissions</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#flag-values" class="anchor-link heading3"><div>Flag Values</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#admin-2" class="anchor-link heading3"><div>ADMIN</div></a></li><li class="anchor"><a href="/GriefDefenderDoc/guide/basic/flag-definitions-gui/#user" class="anchor-link heading3"><div>USER</div></a></li></ul></div></aside></div> <!----> <div class="content__content-top"></div> <div class="theme-default-content content__default"><h2 id="overview"><a href="#overview" class="header-anchor">#</a> Overview</h2> <p>The flag definition system provides both users and admins the ability to manage their claim flags with ease.
+GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
+The delivered vanilla flag definition data can be found in the following location</p> <h3 id="sponge"><a href="#sponge" class="header-anchor">#</a> Sponge</h3> <p><code>./config/GriefDefender/presets/minecraft.conf</code></p> <h3 id="bukkit"><a href="#bukkit" class="header-anchor">#</a> Bukkit</h3> <p><code>./plugins/GriefDefender/presets/minecraft.conf</code></p> <h2 id="admin"><a href="#admin" class="header-anchor">#</a> Admin</h2> <p>Admins are given full control to add/remove/customize flag definitions.</p> <p>To add a flag definition to an existing delivered minecraft preset, open the <code>./presets/minecraft.conf</code> file.
+Within this section, you will see 2 delivered groups 'admin' and 'user'.</p> <h3 id="add-new-flag-definition"><a href="#add-new-flag-definition" class="header-anchor">#</a> Add new flag definition</h3> <p>If you want to add a flag to the 'admin' section, do the following</p> <ol><li>Clone an existing flag definition. We will use <code>ambient-spawn</code> for this example.</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>ambient-spawn {
+    contexts=[
+        &quot;gd_claim_default=user&quot;
+    ]
+    default-value=true
+    enabled=true
+    permissions=[
+        &quot;flag=entity-spawn, target=#ambient&quot;
+    ]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>Lets break this example down</p> <h4 id="name"><a href="#name" class="header-anchor">#</a> Name</h4> <p><code>ambient-spawn</code> - This is the name of your definition that will be displayed to users when they open it up in the flag GUI. It can be whatever you like.</p> <h4 id="contexts"><a href="#contexts" class="header-anchor">#</a> Contexts</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>contexts=[
+        &quot;gd_claim_default=user&quot;
+    ]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>These are the definition contexts that will be used with all permissions defined within <code>permissions=[...]</code>.<br>
+It currently only supports context keys <code>gd_claim_default</code>, <code>gd_claim_override</code>, or <code>gd_claim</code>.<br>
+See https://github.com/bloodmc/GriefDefender/wiki/Contexts to learn how contexts work.</p> <h4 id="default-value"><a href="#default-value" class="header-anchor">#</a> Default value</h4> <p><code>default-value=true</code> - This is the default-value GD will use when applying the definition during startup.<br>
+GD will only apply this value during startup as a transient permission if the contexts include either <code>gd_claim_default</code> or <code>gd_claim_override</code>.<br>
+If the definition does not contain one of these contexts then the default value is ignored.</p> <h4 id="enabled"><a href="#enabled" class="header-anchor">#</a> Enabled</h4> <p><code>enabled=true</code> - This controls whether the definition is enabled in GD or disabled. If set to <code>false</code>, the definition will be ignored.</p> <h4 id="permissions"><a href="#permissions" class="header-anchor">#</a> Permissions</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>permissions=[
+    &quot;flag=entity-spawn, target=#ambient&quot;
+]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>These are the flag permissions to assign this definition. Permissions can hold one or more flag entries. To add an additional line, add a <code>,</code> at end of previous then insert a new line.<br>
+Each line requires a <code>flag=&lt;flag_name&gt;</code> entry followed by either source or target  context.<br>
+If you want to apply a permission to all possible targets then don't include <code>target</code> as GD will automatically apply to all targets.<br>
+If you want to apply a permission to all possible sources then don't include <code>source</code> as GD will automatically apply to all sources.</p> <p>The most common contexts for permissions are as follows</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>source
+target
+used_item
+item_name
+server
+state
+world
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>The accepted context value must be a valid identifier. To locate the proper value in game, do the following</p> <ol><li>Run command <code>/gddebug record claim</code> - This will start a debug session in the claim you are in.</li> <li>Perform an action you want to manage via flag definition.</li> <li>Run command <code>/gddebug paste</code> - This will display a web link to view debug results.</li> <li>Open link, and you will see a list of actions GD checked for the claim. You will a <code>source</code> and <code>target</code> column which will contain the values you need.</li></ol> <p>To locate a value for <code>used_item</code> or any other context, locate the Context column and you will see a list of all support contexts for the specific line action.</p> <p>Another way to find an id you are looking for is to check a community run wiki for it</p> <p>See https://minecraft-ids.grahamedgecombe.com/</p> <h3 id="minecraft-flag-definition-preset-config"><a href="#minecraft-flag-definition-preset-config" class="header-anchor">#</a> Minecraft Flag Definition Preset Config</h3> <p>For more information on what you can do with the flags config, see below</p> <details><summary>Minecraft Preset</summary> <div class="language- line-numbers-mode"><pre class="language-text"><code># A collection of flag definitions designed for vanilla minecraft.
+# Each group defined will be displayed in the flag GUI for users.
+# Groups can have the following settings : 
+# enabled=&lt;true|false&gt;: Whether the group is enabled.
+# admin-group=&lt;true|false&gt;: Whether this group is considered for admin use only.
+# Note: GUI toggles in PRESETS will always apply to current claim only.
+# Note: If you assign users the permission 'griefdefender.admin.advanced-flags', they will be able to access admin presets within the claim tab.
+#      It is recommended not to assign this permission to users for best experience.
+# value=&lt;true|false&gt;: This is used to set a default value for the flag definition. It is only used in conjunction with 'override=&lt;type&gt;, default=&lt;type&gt; settings.
+# contexts=[&quot;key=value&quot;]: A list of definition contexts that will be applied to all permissions.
+# Note: This is primary used with 'default' and 'override' contexts. Ex. contexts=[&quot;default=global&quot;]
+# Note: You must specify one of the following contexts :'gd_claim_default=&lt;type&gt;' or 'gd_claim_override=&lt;type&gt;''
+# Note: Context values support wildcards '?' and '*' by using Apache's wildcard matcher.
+# The wildcard '?' represents a single character.
+# The wildcard '*' represents zero or more characters.
+# Each group will have an associated permission in order to be viewable.
+# The user groups will use the permission : 'griefdefender.user.custom.flag.&lt;preset&gt;.&lt;group&gt;
+# The admin groups will use the permission : 'griefdefender.admin.custom.flag.&lt;preset&gt;.&lt;group&gt;
+# Within each group, you can define flag definitions.
+# Each flag definition must be defined in the following format:
+# enabled: Controls whether the definition is enabled. Accepts a value of 'true' or 'false'
+# default-value: The default value to assign flag definition.
+# description: The flag description to display on hover. Uses the legacy text format.
+# permissions: The list of permissions to link to definition. Permissions can accept various contexts such as :
+# flag=&lt;linked-flag&gt;: This context is used to link the permission to a GD specific flag. Ex. 'flag=block-break' would link permission to GD's block-break flag
+# source=&lt;id&gt;: This context is used to specify a source id such as 'minecraft:creeper'.
+# target=&lt;id&gt;: This context is used to specify a target id such as 'minecraft:chest'.
+# state=&lt;properties&gt;: This context is used to specify a blockstate property such as 'state=lit:true'.
+# Note: All flag definitions that contain a definition context of 'gd_claim_default' or 'gd_claim_override' will be applied to permissions during server startup.
+# Note: Required if no source or target context is specified, the permission will default to ALL.
+# Note: Commonly used contexts are : flag, source, target, state, used_item, item_name, world, server
+# These contexts may change, See https://github.com/bloodmc/GriefDefender/wiki/Contexts for latest information.
+
+minecraft {
+    groups {
+        admin {
+            # Set to true if this flag group is for admin use only.
+            # Note: If admin group, the permission is 'griefdefender.admin.custom.flag.&lt;groupname&gt;
+            # Note: If user group (admin set false), the permission is 'griefdefender.user.custom.flag.&lt;groupname&gt;
+            admin-group=true
+            definitions {
+                ambient-spawn {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-spawn, target=#ambient&quot;
+                    ]
+                }
+                animal-block-modify {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-modify, source=#animal&quot;
+                    ]
+                }
+                animal-spawn {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-spawn, target=#animal&quot;
+                    ]
+                }
+                aquatic-spawn {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-spawn, target=#aquatic&quot;
+                    ]
+                }
+                armorstand-use {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-item-secondary, target=minecraft:armor_stand, source=minecraft:player&quot;,
+                        &quot;flag=entity-damage, target=minecraft:armor_stand, source=minecraft:player&quot;,
+                        &quot;flag=interact-entity-secondary, target=minecraft:armor_stand, source=minecraft:player&quot;,
+                        &quot;flag=interact-inventory, target=minecraft:armor_stand, source=minecraft:player&quot;
+                    ]
+                }
+                block-trampling {
+                    contexts=[
+                        &quot;gd_claim_override=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=collide-block, target=minecraft:turtle_egg, target=minecraft:farmland&quot;
+                    ]
+                }
+                chorus-fruit-teleport {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=item-use, target=minecraft:chorus_fruit, source=minecraft:player&quot;
+                    ]
+                }
+                commandblock-block-break {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:command_block, source=minecraft:chain_command_block, source=minecraft:repeating_command_block&quot;
+                    ]
+                }
+                commandblock-block-place {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-place, source=minecraft:command_block, source=minecraft:chain_command_block, source=minecraft:repeating_command_block&quot;
+                    ]
+                }
+                creeper-block-explosion {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=explosion-block, source=minecraft:creeper&quot;
+                    ]
+                }
+                creeper-entity-explosion {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=explosion-entity, source=minecraft:creeper&quot;
+                    ]
+                }
+                endcrystal-use {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=projectile-impact-entity, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player&quot;,
+                        &quot;flag=interact-item-secondary, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player&quot;,
+                        &quot;flag=entity-damage, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player&quot;,
+                        &quot;flag=interact-entity-secondary, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player&quot;
+                    ]
+                }
+                entity-armorstand-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, target=minecraft:armor_stand, source=minecraft:player&quot;,
+                        &quot;flag=projectile-impact-entity, target=minecraft:armor_stand, source=minecraft:player&quot;
+                    ]
+                }
+                entity-itemframe-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, target=minecraft:glow_item_frame, target=minecraft:item_frame&quot;,
+                        &quot;flag=projectile-impact-entity, target=minecraft:glow_item_frame, target=minecraft:item_frame&quot;
+                    ]
+                }
+                exp-drop {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-spawn, target=minecraft:xp_orb&quot;
+                    ]
+                }
+                fall-entity-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, source=minecraft:fall&quot;
+                    ]
+                }
+                fall-player-damage {
+                    contexts=[
+                        &quot;gd_claim_override=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, target=minecraft:player, source=minecraft:fall&quot;
+                    ]
+                }
+                falling-block-break {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:fall&quot;
+                    ]
+                }
+                fire-block-damage {
+                    contexts=[
+                        &quot;gd_claim_default=global&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:fire&quot;
+                    ]
+                }
+                fire-entity-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, source=minecraft:fire&quot;,
+                        &quot;flag=entity-damage, source=minecraft:fire_tick&quot;,
+                        &quot;flag=entity-damage, source=minecraft:magma_block&quot;,
+                        &quot;flag=entity-damage, source=minecraft:lava&quot;
+                    ]
+                }
+                lightning-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, source=minecraft:lightning_bolt&quot;
+                    ]
+                }
+                monster-animal-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, source=#monster, target=#animal&quot;,
+                        &quot;flag=entity-damage, source=#monster, target=#aquatic&quot;,
+                        &quot;flag=projectile-impact-entity, source=#monster, target=#aquatic&quot;
+                    ]
+                }
+                monster-player-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, source=#monster, target=minecraft:player&quot;,
+                        &quot;flag=projectile-impact-entity, source=#monster, target=minecraft:player&quot;
+                    ]
+                }
+                monster-spawn {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-spawn, target=#monster&quot;
+                    ]
+                }
+                piston-item-spawn {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=item-spawn, source=minecraft:piston&quot;,
+                        &quot;flag=item-spawn, source=minecraft:sticky_piston&quot;
+                    ]
+                }
+                piston-use {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:piston&quot;,
+                        &quot;flag=block-place, source=minecraft:piston&quot;,
+                        &quot;flag=block-break, source=minecraft:sticky_piston&quot;,
+                        &quot;flag=block-place, source=minecraft:sticky_piston&quot;
+                    ]
+                }
+                player-block-break {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:player&quot;
+                    ]
+                }
+                player-block-interact {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-block-secondary, source=minecraft:player&quot;
+                    ]
+                }
+                player-block-place {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-place, source=minecraft:player&quot;
+                    ]
+                }
+                player-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, target=minecraft:player&quot;,
+                        &quot;flag=projectile-impact-entity, target=minecraft:player&quot;
+                    ]
+                }
+                player-enderpearl-interact {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-item-secondary, source=minecraft:player, target=minecraft:ender_pearl&quot;
+                    ]
+                }
+                player-endportal-use {
+                    contexts=[
+                        &quot;gd_claim_default=global&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-teleport-from, source=minecraft:end_portal, target=minecraft:player&quot;
+                    ]
+                }
+                player-enter {
+                    contexts=[
+                        &quot;gd_claim=claim&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=enter-claim, source=minecraft:player&quot;
+                    ]
+                }
+                player-entity-interact {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-entity-secondary, source=minecraft:player&quot;
+                    ]
+                }
+                player-exit {
+                    contexts=[
+                        &quot;gd_claim=claim&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=exit-claim, source=minecraft:player&quot;
+                    ]
+                }
+                player-item-drop {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=item-drop, source=minecraft:player&quot;
+                    ]
+                }
+                player-item-pickup {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=item-pickup, source=minecraft:player&quot;
+                    ]
+                }
+                player-itemframe-interact {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-entity-secondary, target=minecraft:glow_item_frame, target=minecraft:item_frame, source=minecraft:player&quot;
+                    ]
+                }
+                player-itemhanging-place {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-item-secondary, target=#hanging, source=minecraft:player&quot;
+                    ]
+                }
+                player-netherportal-use {
+                    contexts=[
+                        &quot;gd_claim_default=global&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-teleport-from, source=minecraft:nether_portal, target=minecraft:player&quot;
+                    ]
+                }
+                player-teleport-from {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-teleport-from, target=minecraft:player&quot;
+                    ]
+                }
+                player-teleport-to {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-teleport-to, target=minecraft:player&quot;
+                    ]
+                }
+                player-villager-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, target=minecraft:villager, source=minecraft:player&quot;,
+                        &quot;flag=projectile-impact-entity, target=minecraft:villager, source=minecraft:player&quot;
+                    ]
+                }
+                ravager-block-break {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:ravager&quot;
+                    ]
+                }
+                silverfish-block-infest {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-modify, source=minecraft:silverfish&quot;
+                    ]
+                }
+                tnt-block-explosion {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=explosion-block, source=minecraft:tnt&quot;
+                    ]
+                }
+                tnt-entity-explosion {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=explosion-entity, source=minecraft:tnt&quot;
+                    ]
+                }
+                turtle-egg-hatch {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:turtle_egg, target=minecraft:turtle_egg&quot;
+                    ]
+                }
+                villager-farm {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:villager, target=#crops&quot;,
+                        &quot;flag=block-place, source=minecraft:villager, target=#crops&quot;
+                    ]
+                }
+                villager-trade {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player&quot;
+                    ]
+                }
+                wither-block-break {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:wither&quot;
+                    ]
+                }
+                wither-entity-damage {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, source=minecraft:wither&quot;
+                    ]
+                }
+            }
+            # Whether flag definition group is enabled.
+            enabled=true
+        }
+        user {
+            # Set to true if this flag group is for admin use only.
+            # Note: If admin group, the permission is 'griefdefender.admin.custom.flag.&lt;groupname&gt;
+            # Note: If user group (admin set false), the permission is 'griefdefender.user.custom.flag.&lt;groupname&gt;
+            admin-group=false
+            definitions {
+                block-fertilize {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-grow, used_item=minecraft:bone_meal, target=#crops, source=minecraft:player&quot;,
+                        &quot;flag=block-grow, used_item=minecraft:bone_meal, target=#plants, source=minecraft:player&quot;
+                    ]
+                }
+                chest-access {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-block-secondary, target=minecraft:chest, source=minecraft:player&quot;,
+                        &quot;flag=interact-inventory, target=minecraft:chest, source=minecraft:player&quot;
+                    ]
+                }
+                crop-growth {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-grow, target=#crops&quot;
+                    ]
+                }
+                damage-animals {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, target=#animal&quot;,
+                        &quot;flag=projectile-impact-entity, target=#animal&quot;
+                    ]
+                }
+                enderman-grief {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:enderman&quot;,
+                        &quot;flag=block-place, source=minecraft:enderman&quot;
+                    ]
+                }
+                fire-spread {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-spread, source=minecraft:fire&quot;,
+                        &quot;flag=block-spread, source=minecraft:lava&quot;
+                    ]
+                }
+                grass-growth {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-grow, target=minecraft:grass&quot;
+                    ]
+                }
+                ice-form {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-modify, target=minecraft:ice&quot;
+                    ]
+                }
+                ice-melt {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-modify, target=minecraft:water, source=minecraft:ice&quot;
+                    ]
+                }
+                lava-flow {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=liquid-flow, source=minecraft:lava, target=minecraft:air&quot;
+                    ]
+                }
+                leaf-decay {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=leaf-decay&quot;
+                    ]
+                }
+                lighter {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-item-secondary, target=minecraft:flint_and_steel, source=minecraft:player&quot;
+                    ]
+                }
+                mushroom-growth {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-grow, target=#mushroom&quot;
+                    ]
+                }
+                mycelium-spread {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-spread, target=minecraft:mycelium&quot;
+                    ]
+                }
+                pvp {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-damage, target=minecraft:player, source=minecraft:player&quot;,
+                        &quot;flag=projectile-impact-entity, target=minecraft:player, source=minecraft:player&quot;
+                    ]
+                }
+                ride {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=entity-riding, target=#vehicle, source=minecraft:player&quot;,
+                        &quot;flag=interact-entity-secondary, target=#vehicle, source=minecraft:player&quot;
+                    ]
+                }
+                sign-use {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-block-primary, target=#signs, source=minecraft:player&quot;,
+                        &quot;flag=interact-block-secondary, target=#signs, source=minecraft:player&quot;
+                    ]
+                }
+                sleep {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-block-secondary, target=#beds, source=minecraft:player&quot;,
+                        &quot;flag=interact-item-secondary, target=#beds, source=minecraft:player&quot;
+                    ]
+                }
+                snow-fall {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-place, target=minecraft:snow, source=minecraft:air&quot;
+                    ]
+                }
+                snow-melt {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-break, source=minecraft:snow&quot;
+                    ]
+                }
+                snowman-trail {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-place, source=minecraft:snow_golem, target=minecraft:snow&quot;
+                    ]
+                }
+                soil-dry {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-modify, source=minecraft:farmland, state=moisture:0&quot;
+                    ]
+                }
+                vehicle-use {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-item-secondary, target=minecraft:minecart, target=#boats, source=minecraft:player&quot;,
+                        &quot;flag=entity-damage, target=minecraft:minecart, target=minecraft:boat, source=minecraft:player&quot;,
+                        &quot;flag=entity-riding, target=minecraft:minecart, target=minecraft:boat, source=minecraft:player&quot;,
+                        &quot;flag=interact-entity-secondary, target=minecraft:minecart, target=minecraft:boat, source=minecraft:player&quot;
+                    ]
+                }
+                villager-trade {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player&quot;
+                    ]
+                }
+                vine-growth {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        &quot;flag=block-grow, target=minecraft:vine&quot;
+                    ]
+                }
+                water-flow {
+                    contexts=[
+                        &quot;gd_claim_default=user&quot;
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        &quot;flag=liquid-flow, source=minecraft:water, target=minecraft:air&quot;
+                    ]
+                }
+            }
+            # Whether flag definition group is enabled.
+            enabled=true
+        }
+    }
+    version=&quot;1.0&quot;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br><span class="line-number">333</span><br><span class="line-number">334</span><br><span class="line-number">335</span><br><span class="line-number">336</span><br><span class="line-number">337</span><br><span class="line-number">338</span><br><span class="line-number">339</span><br><span class="line-number">340</span><br><span class="line-number">341</span><br><span class="line-number">342</span><br><span class="line-number">343</span><br><span class="line-number">344</span><br><span class="line-number">345</span><br><span class="line-number">346</span><br><span class="line-number">347</span><br><span class="line-number">348</span><br><span class="line-number">349</span><br><span class="line-number">350</span><br><span class="line-number">351</span><br><span class="line-number">352</span><br><span class="line-number">353</span><br><span class="line-number">354</span><br><span class="line-number">355</span><br><span class="line-number">356</span><br><span class="line-number">357</span><br><span class="line-number">358</span><br><span class="line-number">359</span><br><span class="line-number">360</span><br><span class="line-number">361</span><br><span class="line-number">362</span><br><span class="line-number">363</span><br><span class="line-number">364</span><br><span class="line-number">365</span><br><span class="line-number">366</span><br><span class="line-number">367</span><br><span class="line-number">368</span><br><span class="line-number">369</span><br><span class="line-number">370</span><br><span class="line-number">371</span><br><span class="line-number">372</span><br><span class="line-number">373</span><br><span class="line-number">374</span><br><span class="line-number">375</span><br><span class="line-number">376</span><br><span class="line-number">377</span><br><span class="line-number">378</span><br><span class="line-number">379</span><br><span class="line-number">380</span><br><span class="line-number">381</span><br><span class="line-number">382</span><br><span class="line-number">383</span><br><span class="line-number">384</span><br><span class="line-number">385</span><br><span class="line-number">386</span><br><span class="line-number">387</span><br><span class="line-number">388</span><br><span class="line-number">389</span><br><span class="line-number">390</span><br><span class="line-number">391</span><br><span class="line-number">392</span><br><span class="line-number">393</span><br><span class="line-number">394</span><br><span class="line-number">395</span><br><span class="line-number">396</span><br><span class="line-number">397</span><br><span class="line-number">398</span><br><span class="line-number">399</span><br><span class="line-number">400</span><br><span class="line-number">401</span><br><span class="line-number">402</span><br><span class="line-number">403</span><br><span class="line-number">404</span><br><span class="line-number">405</span><br><span class="line-number">406</span><br><span class="line-number">407</span><br><span class="line-number">408</span><br><span class="line-number">409</span><br><span class="line-number">410</span><br><span class="line-number">411</span><br><span class="line-number">412</span><br><span class="line-number">413</span><br><span class="line-number">414</span><br><span class="line-number">415</span><br><span class="line-number">416</span><br><span class="line-number">417</span><br><span class="line-number">418</span><br><span class="line-number">419</span><br><span class="line-number">420</span><br><span class="line-number">421</span><br><span class="line-number">422</span><br><span class="line-number">423</span><br><span class="line-number">424</span><br><span class="line-number">425</span><br><span class="line-number">426</span><br><span class="line-number">427</span><br><span class="line-number">428</span><br><span class="line-number">429</span><br><span class="line-number">430</span><br><span class="line-number">431</span><br><span class="line-number">432</span><br><span class="line-number">433</span><br><span class="line-number">434</span><br><span class="line-number">435</span><br><span class="line-number">436</span><br><span class="line-number">437</span><br><span class="line-number">438</span><br><span class="line-number">439</span><br><span class="line-number">440</span><br><span class="line-number">441</span><br><span class="line-number">442</span><br><span class="line-number">443</span><br><span class="line-number">444</span><br><span class="line-number">445</span><br><span class="line-number">446</span><br><span class="line-number">447</span><br><span class="line-number">448</span><br><span class="line-number">449</span><br><span class="line-number">450</span><br><span class="line-number">451</span><br><span class="line-number">452</span><br><span class="line-number">453</span><br><span class="line-number">454</span><br><span class="line-number">455</span><br><span class="line-number">456</span><br><span class="line-number">457</span><br><span class="line-number">458</span><br><span class="line-number">459</span><br><span class="line-number">460</span><br><span class="line-number">461</span><br><span class="line-number">462</span><br><span class="line-number">463</span><br><span class="line-number">464</span><br><span class="line-number">465</span><br><span class="line-number">466</span><br><span class="line-number">467</span><br><span class="line-number">468</span><br><span class="line-number">469</span><br><span class="line-number">470</span><br><span class="line-number">471</span><br><span class="line-number">472</span><br><span class="line-number">473</span><br><span class="line-number">474</span><br><span class="line-number">475</span><br><span class="line-number">476</span><br><span class="line-number">477</span><br><span class="line-number">478</span><br><span class="line-number">479</span><br><span class="line-number">480</span><br><span class="line-number">481</span><br><span class="line-number">482</span><br><span class="line-number">483</span><br><span class="line-number">484</span><br><span class="line-number">485</span><br><span class="line-number">486</span><br><span class="line-number">487</span><br><span class="line-number">488</span><br><span class="line-number">489</span><br><span class="line-number">490</span><br><span class="line-number">491</span><br><span class="line-number">492</span><br><span class="line-number">493</span><br><span class="line-number">494</span><br><span class="line-number">495</span><br><span class="line-number">496</span><br><span class="line-number">497</span><br><span class="line-number">498</span><br><span class="line-number">499</span><br><span class="line-number">500</span><br><span class="line-number">501</span><br><span class="line-number">502</span><br><span class="line-number">503</span><br><span class="line-number">504</span><br><span class="line-number">505</span><br><span class="line-number">506</span><br><span class="line-number">507</span><br><span class="line-number">508</span><br><span class="line-number">509</span><br><span class="line-number">510</span><br><span class="line-number">511</span><br><span class="line-number">512</span><br><span class="line-number">513</span><br><span class="line-number">514</span><br><span class="line-number">515</span><br><span class="line-number">516</span><br><span class="line-number">517</span><br><span class="line-number">518</span><br><span class="line-number">519</span><br><span class="line-number">520</span><br><span class="line-number">521</span><br><span class="line-number">522</span><br><span class="line-number">523</span><br><span class="line-number">524</span><br><span class="line-number">525</span><br><span class="line-number">526</span><br><span class="line-number">527</span><br><span class="line-number">528</span><br><span class="line-number">529</span><br><span class="line-number">530</span><br><span class="line-number">531</span><br><span class="line-number">532</span><br><span class="line-number">533</span><br><span class="line-number">534</span><br><span class="line-number">535</span><br><span class="line-number">536</span><br><span class="line-number">537</span><br><span class="line-number">538</span><br><span class="line-number">539</span><br><span class="line-number">540</span><br><span class="line-number">541</span><br><span class="line-number">542</span><br><span class="line-number">543</span><br><span class="line-number">544</span><br><span class="line-number">545</span><br><span class="line-number">546</span><br><span class="line-number">547</span><br><span class="line-number">548</span><br><span class="line-number">549</span><br><span class="line-number">550</span><br><span class="line-number">551</span><br><span class="line-number">552</span><br><span class="line-number">553</span><br><span class="line-number">554</span><br><span class="line-number">555</span><br><span class="line-number">556</span><br><span class="line-number">557</span><br><span class="line-number">558</span><br><span class="line-number">559</span><br><span class="line-number">560</span><br><span class="line-number">561</span><br><span class="line-number">562</span><br><span class="line-number">563</span><br><span class="line-number">564</span><br><span class="line-number">565</span><br><span class="line-number">566</span><br><span class="line-number">567</span><br><span class="line-number">568</span><br><span class="line-number">569</span><br><span class="line-number">570</span><br><span class="line-number">571</span><br><span class="line-number">572</span><br><span class="line-number">573</span><br><span class="line-number">574</span><br><span class="line-number">575</span><br><span class="line-number">576</span><br><span class="line-number">577</span><br><span class="line-number">578</span><br><span class="line-number">579</span><br><span class="line-number">580</span><br><span class="line-number">581</span><br><span class="line-number">582</span><br><span class="line-number">583</span><br><span class="line-number">584</span><br><span class="line-number">585</span><br><span class="line-number">586</span><br><span class="line-number">587</span><br><span class="line-number">588</span><br><span class="line-number">589</span><br><span class="line-number">590</span><br><span class="line-number">591</span><br><span class="line-number">592</span><br><span class="line-number">593</span><br><span class="line-number">594</span><br><span class="line-number">595</span><br><span class="line-number">596</span><br><span class="line-number">597</span><br><span class="line-number">598</span><br><span class="line-number">599</span><br><span class="line-number">600</span><br><span class="line-number">601</span><br><span class="line-number">602</span><br><span class="line-number">603</span><br><span class="line-number">604</span><br><span class="line-number">605</span><br><span class="line-number">606</span><br><span class="line-number">607</span><br><span class="line-number">608</span><br><span class="line-number">609</span><br><span class="line-number">610</span><br><span class="line-number">611</span><br><span class="line-number">612</span><br><span class="line-number">613</span><br><span class="line-number">614</span><br><span class="line-number">615</span><br><span class="line-number">616</span><br><span class="line-number">617</span><br><span class="line-number">618</span><br><span class="line-number">619</span><br><span class="line-number">620</span><br><span class="line-number">621</span><br><span class="line-number">622</span><br><span class="line-number">623</span><br><span class="line-number">624</span><br><span class="line-number">625</span><br><span class="line-number">626</span><br><span class="line-number">627</span><br><span class="line-number">628</span><br><span class="line-number">629</span><br><span class="line-number">630</span><br><span class="line-number">631</span><br><span class="line-number">632</span><br><span class="line-number">633</span><br><span class="line-number">634</span><br><span class="line-number">635</span><br><span class="line-number">636</span><br><span class="line-number">637</span><br><span class="line-number">638</span><br><span class="line-number">639</span><br><span class="line-number">640</span><br><span class="line-number">641</span><br><span class="line-number">642</span><br><span class="line-number">643</span><br><span class="line-number">644</span><br><span class="line-number">645</span><br><span class="line-number">646</span><br><span class="line-number">647</span><br><span class="line-number">648</span><br><span class="line-number">649</span><br><span class="line-number">650</span><br><span class="line-number">651</span><br><span class="line-number">652</span><br><span class="line-number">653</span><br><span class="line-number">654</span><br><span class="line-number">655</span><br><span class="line-number">656</span><br><span class="line-number">657</span><br><span class="line-number">658</span><br><span class="line-number">659</span><br><span class="line-number">660</span><br><span class="line-number">661</span><br><span class="line-number">662</span><br><span class="line-number">663</span><br><span class="line-number">664</span><br><span class="line-number">665</span><br><span class="line-number">666</span><br><span class="line-number">667</span><br><span class="line-number">668</span><br><span class="line-number">669</span><br><span class="line-number">670</span><br><span class="line-number">671</span><br><span class="line-number">672</span><br><span class="line-number">673</span><br><span class="line-number">674</span><br><span class="line-number">675</span><br><span class="line-number">676</span><br><span class="line-number">677</span><br><span class="line-number">678</span><br><span class="line-number">679</span><br><span class="line-number">680</span><br><span class="line-number">681</span><br><span class="line-number">682</span><br><span class="line-number">683</span><br><span class="line-number">684</span><br><span class="line-number">685</span><br><span class="line-number">686</span><br><span class="line-number">687</span><br><span class="line-number">688</span><br><span class="line-number">689</span><br><span class="line-number">690</span><br><span class="line-number">691</span><br><span class="line-number">692</span><br><span class="line-number">693</span><br><span class="line-number">694</span><br><span class="line-number">695</span><br><span class="line-number">696</span><br><span class="line-number">697</span><br><span class="line-number">698</span><br><span class="line-number">699</span><br><span class="line-number">700</span><br><span class="line-number">701</span><br><span class="line-number">702</span><br><span class="line-number">703</span><br><span class="line-number">704</span><br><span class="line-number">705</span><br><span class="line-number">706</span><br><span class="line-number">707</span><br><span class="line-number">708</span><br><span class="line-number">709</span><br><span class="line-number">710</span><br><span class="line-number">711</span><br><span class="line-number">712</span><br><span class="line-number">713</span><br><span class="line-number">714</span><br><span class="line-number">715</span><br><span class="line-number">716</span><br><span class="line-number">717</span><br><span class="line-number">718</span><br><span class="line-number">719</span><br><span class="line-number">720</span><br><span class="line-number">721</span><br><span class="line-number">722</span><br><span class="line-number">723</span><br><span class="line-number">724</span><br><span class="line-number">725</span><br><span class="line-number">726</span><br><span class="line-number">727</span><br><span class="line-number">728</span><br><span class="line-number">729</span><br><span class="line-number">730</span><br><span class="line-number">731</span><br><span class="line-number">732</span><br><span class="line-number">733</span><br><span class="line-number">734</span><br><span class="line-number">735</span><br><span class="line-number">736</span><br><span class="line-number">737</span><br><span class="line-number">738</span><br><span class="line-number">739</span><br><span class="line-number">740</span><br><span class="line-number">741</span><br><span class="line-number">742</span><br><span class="line-number">743</span><br><span class="line-number">744</span><br><span class="line-number">745</span><br><span class="line-number">746</span><br><span class="line-number">747</span><br><span class="line-number">748</span><br><span class="line-number">749</span><br><span class="line-number">750</span><br><span class="line-number">751</span><br><span class="line-number">752</span><br><span class="line-number">753</span><br><span class="line-number">754</span><br><span class="line-number">755</span><br><span class="line-number">756</span><br><span class="line-number">757</span><br><span class="line-number">758</span><br><span class="line-number">759</span><br><span class="line-number">760</span><br><span class="line-number">761</span><br><span class="line-number">762</span><br><span class="line-number">763</span><br><span class="line-number">764</span><br><span class="line-number">765</span><br><span class="line-number">766</span><br><span class="line-number">767</span><br><span class="line-number">768</span><br><span class="line-number">769</span><br><span class="line-number">770</span><br><span class="line-number">771</span><br><span class="line-number">772</span><br><span class="line-number">773</span><br><span class="line-number">774</span><br><span class="line-number">775</span><br><span class="line-number">776</span><br><span class="line-number">777</span><br><span class="line-number">778</span><br><span class="line-number">779</span><br><span class="line-number">780</span><br><span class="line-number">781</span><br><span class="line-number">782</span><br><span class="line-number">783</span><br><span class="line-number">784</span><br><span class="line-number">785</span><br><span class="line-number">786</span><br><span class="line-number">787</span><br><span class="line-number">788</span><br><span class="line-number">789</span><br><span class="line-number">790</span><br><span class="line-number">791</span><br><span class="line-number">792</span><br><span class="line-number">793</span><br><span class="line-number">794</span><br><span class="line-number">795</span><br><span class="line-number">796</span><br><span class="line-number">797</span><br><span class="line-number">798</span><br><span class="line-number">799</span><br><span class="line-number">800</span><br><span class="line-number">801</span><br><span class="line-number">802</span><br><span class="line-number">803</span><br><span class="line-number">804</span><br><span class="line-number">805</span><br><span class="line-number">806</span><br><span class="line-number">807</span><br><span class="line-number">808</span><br><span class="line-number">809</span><br><span class="line-number">810</span><br><span class="line-number">811</span><br><span class="line-number">812</span><br><span class="line-number">813</span><br><span class="line-number">814</span><br><span class="line-number">815</span><br><span class="line-number">816</span><br><span class="line-number">817</span><br><span class="line-number">818</span><br><span class="line-number">819</span><br><span class="line-number">820</span><br><span class="line-number">821</span><br><span class="line-number">822</span><br><span class="line-number">823</span><br><span class="line-number">824</span><br><span class="line-number">825</span><br><span class="line-number">826</span><br><span class="line-number">827</span><br><span class="line-number">828</span><br><span class="line-number">829</span><br><span class="line-number">830</span><br><span class="line-number">831</span><br><span class="line-number">832</span><br><span class="line-number">833</span><br><span class="line-number">834</span><br><span class="line-number">835</span><br><span class="line-number">836</span><br><span class="line-number">837</span><br><span class="line-number">838</span><br><span class="line-number">839</span><br><span class="line-number">840</span><br><span class="line-number">841</span><br><span class="line-number">842</span><br><span class="line-number">843</span><br><span class="line-number">844</span><br><span class="line-number">845</span><br><span class="line-number">846</span><br><span class="line-number">847</span><br><span class="line-number">848</span><br><span class="line-number">849</span><br><span class="line-number">850</span><br><span class="line-number">851</span><br><span class="line-number">852</span><br><span class="line-number">853</span><br><span class="line-number">854</span><br><span class="line-number">855</span><br><span class="line-number">856</span><br><span class="line-number">857</span><br><span class="line-number">858</span><br><span class="line-number">859</span><br><span class="line-number">860</span><br><span class="line-number">861</span><br><span class="line-number">862</span><br><span class="line-number">863</span><br><span class="line-number">864</span><br><span class="line-number">865</span><br><span class="line-number">866</span><br><span class="line-number">867</span><br><span class="line-number">868</span><br><span class="line-number">869</span><br><span class="line-number">870</span><br><span class="line-number">871</span><br></div></div></details> <h2 id="gui"><a href="#gui" class="header-anchor">#</a> GUI</h2> <p>The flag GUI is designed to allow both users and admins to easily administer their claim flags.</p> <p>The command to access the flags GUI is <code>/cf</code> or <code>/gd flag claim</code></p> <p>With GD 2.0, all flag definitions can be applied to two types of players : PUBLIC and OWNER.</p> <p><code>PUBLIC</code> - When toggling a flag definition within <code>PUBLIC</code> in GUI, all non-trusted players will be affected.<br> <code>OWNER</code> - When toggling a flag definition within <code>OWNER</code> in GUI, all trusted players including owner will be affected.</p> <h3 id="permissions-2"><a href="#permissions-2" class="header-anchor">#</a> Permissions</h3> <p>The following permission controls access to each user flag <code>griefdefender.user.custom.flag.&lt;group&gt;.&lt;flagname&gt;</code>.
+As an example, lets assume you want to deny user access to the <code>damage-animals</code> flag. You would enter the following in LuckPerms , <code>/lp group &lt;groupname&gt; set griefdefender.user.custom.flag.user.damage-animals false</code></p> <h3 id="flag-values"><a href="#flag-values" class="header-anchor">#</a> Flag Values</h3> <p>As shown below, both admin/user flags start off as either <code>true</code> or <code>false</code> and will represent the current active value of claim you are in.</p> <h3 id="admin-2"><a href="#admin-2" class="header-anchor">#</a> ADMIN</h3> <p>⚠️ Admin flags will ONLY affect the claim you are in.</p> <p><img src="https://i.imgur.com/tSVSC7q.png" alt="Admin GUI"></p> <p>By default, admins have access to 2 modes <code>PRESET</code> and <code>ADVANCED</code>.
+The <code>PRESET</code> mode is directly linked to the minecraft flag definitions preset file. Each group is read into the GUI as a tab along with its definitions.
+There are 2 delivered groups that GD ships with, <code>USER</code> and <code>ADMIN</code>.</p> <p>Both groups will apply flags to claim you are standing in. If you need flags set as a default, set it up in config as shown above.</p> <table><thead><tr><th>Flag Definition</th> <th>Default Value</th> <th>Description</th></tr></thead> <tbody><tr><td><code>ambient-spawn</code></td> <td>true</td> <td>Controls whether ambients, such as bats, spawn.</td></tr> <tr><td><code>animal-block-modify</code></td> <td>true</td> <td>Controls whether animals can modify blocks such as rabbits eating carrots.</td></tr> <tr><td><code>animal-spawn</code></td> <td>true</td> <td>Controls whether animals, such as cows/pigs/horses/etc., spawn.</td></tr> <tr><td><code>aquatic-spawn</code></td> <td>true</td> <td>Controls whether aquatics that live in water, such as squids, spawn.</td></tr> <tr><td><code>armorstand-use</code></td> <td>false</td> <td>Controls whether armorstands can be placed or broken.</td></tr> <tr><td><code>block-trampling</code></td> <td>false</td> <td>Controls whether farmland and turtle eggs can be trampled.</td></tr> <tr><td><code>chorus-fruit-teleport</code></td> <td>false</td> <td>Controls whether a player can use chorus fruit to teleport.</td></tr> <tr><td><code>commandblock-block-break</code></td> <td>false</td> <td>Controls whether command blocks can break blocks.</td></tr> <tr><td><code>commandblock-block-place</code></td> <td>false</td> <td>Controls whether command blocks can place blocks.</td></tr> <tr><td><code>creeper-block-explosion</code></td> <td>false</td> <td>Controls whether a creeper can explode blocks.</td></tr> <tr><td><code>creeper-entity-explosion</code></td> <td>false</td> <td>Controls whether a creeper can explode entities.</td></tr> <tr><td><code>endcrystal-use</code></td> <td>false</td> <td>Controls whether endcrystals can be placed or broken.</td></tr> <tr><td><code>entity-armorstand-damage</code></td> <td>false</td> <td>Controls whether entities can deal damage to armorstands.</td></tr> <tr><td><code>entity-itemframe-damage</code></td> <td>false</td> <td>Controls whether entities can deal damage to item frames.</td></tr> <tr><td><code>exp-drop</code></td> <td>true</td> <td>Controls whether experience orbs can drop.</td></tr> <tr><td><code>fall-entity-damage</code></td> <td>true</td> <td>Controls whether entities can take fall damage.</td></tr> <tr><td><code>fall-player-damage</code></td> <td>true</td> <td>Controls whether players can take fall damage.</td></tr> <tr><td><code>falling-block-break</code></td> <td>true</td> <td>Controls whether falling blocks can break.</td></tr> <tr><td><code>fire-block-damage</code></td> <td>true</td> <td>Controls whether fire can cause block damage.</td></tr> <tr><td><code>fire-entity-damage</code></td> <td>true</td> <td>Controls whether fire can cause entity damage.</td></tr> <tr><td><code>lightning-damage</code></td> <td>true</td> <td>Controls whether lightning can cause harm.</td></tr> <tr><td><code>monster-animal-damage</code></td> <td>false</td> <td>Controls whether monsters can deal damage to animals.</td></tr> <tr><td><code>monster-player-damage</code></td> <td>true</td> <td>Controls whether monsters can deal damage to players.</td></tr> <tr><td><code>monster-spawn</code></td> <td>true</td> <td>Controls whether monsters, such as creepers and skeletons, can spawn.</td></tr> <tr><td><code>piston-item-spawn</code></td> <td>true</td> <td>Controls whether mycelium can spread.</td></tr> <tr><td><code>piston-use</code></td> <td>false</td> <td>Controls whether pistons can be used.</td></tr> <tr><td><code>player-block-break</code></td> <td>false</td> <td>Controls whether players can break blocks.</td></tr> <tr><td><code>player-block-interact</code></td> <td>false</td> <td>Controls whether players can interact with blocks.<br>Note: This does not include inventory blocks such as chests.</td></tr> <tr><td><code>player-block-place</code></td> <td>false</td> <td>Controls whether players can place blocks.</td></tr> <tr><td><code>player-damage</code></td> <td>true</td> <td>Controls whether players can be damaged.</td></tr> <tr><td><code>player-enderpearl-interact</code></td> <td>true</td> <td>Controls whether players can use an enderpearl.</td></tr> <tr><td><code>player-endportal-use</code></td> <td>true</td> <td>Controls whether players can use end portal.</td></tr> <tr><td><code>player-entity-interact</code></td> <td>true</td> <td>Controls whether players can interact with entities.<br>Note: This does not include chest access with entities such as horses.</td></tr> <tr><td><code>player-enter</code></td> <td>true</td> <td>Controls whether a player can enter this claim.</td></tr> <tr><td><code>player-exit</code></td> <td>true</td> <td>Controls whether a player can exit this claim.</td></tr> <tr><td><code>player-item-drop</code></td> <td>true</td> <td>Controls whether players can drop items.</td></tr> <tr><td><code>player-item-pickup</code></td> <td>true</td> <td>Controls whether players can pickup items.</td></tr> <tr><td><code>player-itemframe-interact</code></td> <td>false</td> <td>Controls whether players can interact with item frames.</td></tr> <tr><td><code>player-itemhanging-place</code></td> <td>false</td> <td>Controls whether players can place hanging items such as itemframes.</td></tr> <tr><td><code>player-netherportal-use</code></td> <td>true</td> <td>Controls whether players can use nether portal.</td></tr> <tr><td><code>player-teleport-from</code></td> <td>true</td> <td>Controls whether players can teleport from this claim.</td></tr> <tr><td><code>player-teleport-to</code></td> <td>true</td> <td>Controls whether players can teleport to this claim.</td></tr> <tr><td><code>player-villager-damage</code></td> <td>false</td> <td>Controls whether players can deal damage to villagers.</td></tr> <tr><td><code>ravager-block-break</code></td> <td>true</td> <td>Controls whether ravagers can break blocks during raids.</td></tr> <tr><td><code>silverfish-block-infest</code></td> <td>false</td> <td>Controls whether silverfish can infest blocks such as cobblestone.</td></tr> <tr><td><code>tnt-block-explosion</code></td> <td>false</td> <td>Controls whether tnt can explode blocks.</td></tr> <tr><td><code>tnt-entity-explosion</code></td> <td>false</td> <td>Controls whether tnt can explode entities.</td></tr> <tr><td><code>turtle-egg-hatch</code></td> <td>true</td> <td>Controls whether turtle eggs can hatch.</td></tr> <tr><td><code>villager-farm</code></td> <td>true</td> <td>Controls whether villages can farm crops.</td></tr> <tr><td><code>wither-block-break</code></td> <td>false</td> <td>Controls whether withers can break blocks.</td></tr> <tr><td><code>wither-entity-damage</code></td> <td>true</td> <td>Controls whether withers can damage entities.</td></tr></tbody></table> <h3 id="user"><a href="#user" class="header-anchor">#</a> USER</h3> <p>⚠️ User flags will ONLY affect the claim you are in.<br>
+⚠️ If you want to modify <code>USER</code> flag definitions in a claim that you do not own, you must have ignoreclaims permissions and enter <code>/ignoreclaims</code> before executing <code>/cf</code> command.</p> <p>As a user, if you enter the <code>/cf</code> command, you will see the following</p> <p><img src="https://i.imgur.com/LTeNaaD.png" alt="User GUI"></p> <table><thead><tr><th>Flag Definition</th> <th>Default Value</th> <th>Description</th></tr></thead> <tbody><tr><td><code>block-fertilize</code></td> <td>false</td> <td>Controls whether a player can fertilize a block with bonemeal.</td></tr> <tr><td><code>chest-access</code></td> <td>false</td> <td>Controls whether a player can access chest inventories.</td></tr> <tr><td><code>crop-growth</code></td> <td>true</td> <td>Controls whether crops can grow.</td></tr> <tr><td><code>damage-animals</code></td> <td>false</td> <td>Controls whether animals can be damaged.</td></tr> <tr><td><code>enderman-grief</code></td> <td>false</td> <td>Controls whether enderman can grief.</td></tr> <tr><td><code>fire-spread</code></td> <td>false</td> <td>Controls whether fire can spread.</td></tr> <tr><td><code>grass-growth</code></td> <td>true</td> <td>Controls whether grass can grow.</td></tr> <tr><td><code>ice-form</code></td> <td>true</td> <td>Controls whether ice can form.</td></tr> <tr><td><code>ice-melt</code></td> <td>true</td> <td>Controls whether ice can melt.</td></tr> <tr><td><code>lava-flow</code></td> <td>false</td> <td>Controls whether lava can flow.</td></tr> <tr><td><code>leaf-decay</code></td> <td>true</td> <td>Controls whether leaves can decay.</td></tr> <tr><td><code>lighter</code></td> <td>false</td> <td>Controls whether a player can use flint and steel.</td></tr> <tr><td><code>mushroom-growth</code></td> <td>true</td> <td>Controls whether mushrooms can grow.</td></tr> <tr><td><code>mycelium-spread</code></td> <td>true</td> <td>Controls whether mycelium can spread.</td></tr> <tr><td><code>pvp</code></td> <td>true</td> <td>Controls whether PvP combat is allowed.</td></tr> <tr><td><code>ride</code></td> <td>false</td> <td>Controls whether vehicles(including animals), not owned by the player, can be mounted.</td></tr> <tr><td><code>sign-use</code></td> <td>true</td> <td>Controls whether players can use signs.</td></tr> <tr><td><code>sleep</code></td> <td>true</td> <td>Controls whether players can sleep in beds</td></tr> <tr><td><code>snow-fall</code></td> <td>true</td> <td>Controls whether snow can fall.</td></tr> <tr><td><code>snow-melt</code></td> <td>true</td> <td>Controls whether snow can melt.</td></tr> <tr><td><code>snowman-trail</code></td> <td>true</td> <td>Controls whether snowmen can create snow beneath them.</td></tr> <tr><td><code>soil-dry</code></td> <td>true</td> <td>Controls whether soil will dry.</td></tr> <tr><td><code>vehicle-use</code></td> <td>false</td> <td>Controls whether vehicles(boats, minecarts, etc.) can be placed, ridden and broken.</td></tr> <tr><td><code>villager-trade</code></td> <td>true</td> <td>Controls whether players can trade with villagers.</td></tr> <tr><td><code>vine-growth</code></td> <td>true</td> <td>Controls whether vines(and kelp) can grow.</td></tr> <tr><td><code>water-flow</code></td> <td>false</td> <td>Controls whether water can flow.</td></tr></tbody></table></div> <!----> <div class="content__content-bottom"></div> <footer class="page-meta"><div class="edit-link"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon edit-icon"><path d="M117.953 696.992 64.306 959.696l265.931-49.336 450.204-452.505-212.284-213.376-450.204 452.513zm496.384-296.326L219.039 797.993l-46.108-46.34L568.233 354.33l46.104 46.335zm345.357-122.99-114.45 115.04-212.288-213.377 114.45-115.035 212.288 213.371zm0 0" fill="currentColor"></path></svg> <a href="https://github.com/ahdg6/GriefDefenderDoc/edit/main/./docs/guide/basic/flag-definitions-gui.md" target="_blank" rel="noopener noreferrer">Edit this page</a></div> <div class="meta-item update-time"><span class="label">Last update:</span> <span class="info">October 3, 2021 02:30</span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/GriefDefenderDoc/guide/basic/custom-alias-creation/" class="prev"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon prev-icon"><path d="M906.783 588.79c-.02 8.499-6.882 15.36-15.38 15.37l-443.7-.01 75.704 191.682c2.52 6.42.482 13.763-5.038 17.91-5.52 4.168-13.138 4.147-18.616-.092L123.228 524.175a15.362 15.362 0 0 1-6-12.165c0-4.782 2.222-9.277 6-12.185L499.753 210.35a15.388 15.388 0 0 1 9.38-3.195c3.236 0 6.502 1.034 9.236 3.103 5.52 4.147 7.578 11.49 5.038 17.91L447.683 419.84l443.72-.01c8.498.01 15.36 6.881 15.36 15.36l.02 153.6z" fill="currentColor"></path></svg>
+        User-Friendly Commands
+      </a></span> <span class="next"><a href="/GriefDefenderDoc/guide/basic/options/">
+        Options
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon next-icon"><path d="M906.772 512c0 4.772-2.211 9.267-5.99 12.175L524.257 813.66a15.37 15.37 0 0 1-18.616.092 15.368 15.368 0 0 1-5.038-17.91l75.714-191.672h-443.73c-8.488 0-15.36-6.881-15.36-15.36v-153.6c0-8.489 6.872-15.36 15.36-15.36h443.73l-75.714-191.682a15.358 15.358 0 0 1 5.048-17.91c5.51-4.158 13.128-4.137 18.606.092l376.525 289.485a15.323 15.323 0 0 1 5.99 12.165z" fill="currentColor"></path></svg></a></span></p></div> <!----> <!----> <div class="content__page-bottom"></div></main> <footer class="footer-wrapper"><!----> <div class="footer">MIT Licensed | Copyright © 2019-present GriefDefender</div> <!----></footer></div><div class="global-ui"><!----><!----><div id="pwa-install"><!----> <div id="install-modal-wrapper" style="display:none;"><div class="background"></div> <div class="install-modal"><div class="header"><button aria-label="Close" class="close-button"><svg width="23" height="22" xmlns="http://www.w3.org/2000/svg" class="icon close-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.12.358a1.224 1.224 0 011.729 0l8.92 8.914L20.686.358a1.224 1.224 0 011.73 1.728L13.497 11l8.92 8.913a1.222 1.222 0 11-1.73 1.729l-8.919-8.913-8.92 8.913a1.224 1.224 0 01-1.729-1.729L10.04 11l-8.92-8.914a1.222 1.222 0 010-1.728z" fill="currentColor"></path></svg></button> <div class="logo"><!----> <div class="title"><h1></h1> <p class="desc">This app can be installed on your PC or mobile device.  This will allow this web app to look and behave like any other installed app.  You will find it in your app lists and be able to pin it to your home screen, start menus or task bars.  This installed web app will also be able to safely interact with other apps and your operating system. </p></div></div></div> <div class="content"><div class="highlight"><!----> <!----></div> <div class="description"><h3>Description</h3> <p></p></div></div> <div class="button-wrapper"><button class="install-button">
+        Install <span></span></button> <button class="cancel-button">
+        Cancel
+      </button></div></div></div></div><div tabindex="-1" role="dialog" aria-hidden="true" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button class="pswp__button pswp__button--close"></button> <button class="pswp__button pswp__button--share"></button> <button class="pswp__button pswp__button--fs"></button> <button class="pswp__button pswp__button--zoom"></button> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div> <button class="pswp__button pswp__button--arrow--left"></button> <button class="pswp__button pswp__button--arrow--right"></button> <div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div></div></div>
+    <script src="/GriefDefenderDoc/assets/js/app.cf2474ca.js" defer></script><script src="/GriefDefenderDoc/assets/js/vendors~layout-Layout.1964ea2f.js" defer></script><script src="/GriefDefenderDoc/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound.e75abd98.js" defer></script><script src="/GriefDefenderDoc/assets/js/page-FlagDefinition.7ab8b8db.js" defer></script><script src="/GriefDefenderDoc/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound~layout-Slide.91ec1857.js" defer></script>
+  </body>
+</html>
