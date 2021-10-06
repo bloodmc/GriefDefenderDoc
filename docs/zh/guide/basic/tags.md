@@ -1,49 +1,48 @@
 ---
-title: Tags System
+title: 标签组系统
 category: Tag
 tags: QOL
 icon: list
 ---
 
-A `Tag` is a new system introduced in Minecraft 1.13 that allows users to group one or more item, block, entity identifiers under a single group known as a tag. GriefDefender integrates into the tag system and exposes all available tags as contexts that can applied with a flag or option.
+ `标签` 是一个于 Minecraft 1.13 引入的新系统，其允许用户将 物品，方块，实体 的标志符捆绑为一个标签组以方便分类。GriefDefender 将与标签系统集成并将其导出为情境用以 标签(Flag)/选项(Option)。
 
-For example, lets say you wanted to allow interaction with the following standing signs 
+例如，假设您希望允许与以下站立告示牌进行交互
 
 * oak_sign, spruce_sign, birch_sign, acacia_sign, jungle_sign, dark_oak_sign, crimson_sign, warped_sign 
 
-Without tags, you would have to create a flag that targets each sign identifier like so via flag command
+如果没有标签组，您只能手动将一个个告示牌的标志符添加到权限的情境当中，就像这样
 
 ```
 /cf interact-block-secondary oak_sign true
 /cf interact-block-secondary spruce_sign true
 /cf interact-block-secondary birch_sign true
-etc..
+更多诸如此类的东西..
 ```
 
-This would become tedious very quickly and clutter up your permissions.  
+这十分麻烦且会让您的权限系统变得一团乱麻。
 
-With the tag system, you can use the delivered tag for all standing signs named [#standing_signs](https://minecraft.gamepedia.com/Tag#blocks_standing_signs)
+使用标签系统，您可以将提供的标签组用于所有名为 [#standing_signs](https://minecraft.gamepedia.com/Tag#blocks_standing_signs)
 
-So the above commands would become one single command
+使用如上的标签组将简化您原来繁琐的命令为一条
 
 ```
 /cf interact-block-secondary #standing_signs
 ```
 
-This gives the user extreme flexibility for protecting not just one thing but many.  
-Note: Tag names will ALWAYS begin with the character `#`  
+这为用户提供了极大的灵活性，不仅可以保护一件东西，还可以保护许多东西。
+注意: 标签组名称总以 `#`  开头
 
-Now let's assume you have special needs and the delivered vanilla tags do not provide everything for your server.  
-This is where a [Data Pack](https://minecraft.gamepedia.com/Data_Pack) would come into play.  
+现在让我们假设您有一些特殊需求，并且提供的原版标签组所标记的内容并不能满足您的服务器的需求。该示例将指导您将 [数据包](https://minecraft.gamepedia.com/Data_Pack) 引入游戏。
 
-A [Data Pack](https://minecraft.gamepedia.com/Data_Pack) allows a server admin to enhance the minecraft experience with custom advancements, recipes, loot tables, tags, and more. 
+[数据包](https://minecraft.gamepedia.com/Data_Pack) 允许服务器管理员通过定制成就、合成表、掉落物表、标签组 等行为增强 minecraft 体验。
 
-To create a datapack to use custom tags for your server , the following would have to be done  
+要创建一个用以添加 自定义标签组 的数据包，请执行以下操作
 
-1. Navigate to world folder you want to use datapack in.  
-Ex. `./world/datapacks`  
-2. Create a datapack by following instructions [here](https://minecraft.gamepedia.com/Data_Pack)  
-Note: The datapacks folder structure should be setup as follows within the world folder  
+1. 导航到要在其中使用数据包的世界文件夹。
+例如 `./world/datapacks`  
+2. 参考 [这里](https://minecraft.gamepedia.com/Data_Pack) 的介绍来创建一个数据包。 
+注意：数据包文件夹结构应在 world 文件夹中设置如下
 ```
 datapacks/
 └── <datapack_name>/
@@ -58,13 +57,13 @@ datapacks/
     │   └── 
     └── pack.mcmeta
 
-Note: An actual example can be found in the root of the minecraft server jar within folder `data`  
+注意：在文件夹中的 minecraft 服务器 jar 的根目录中可以找到一个实际的示例 `data`  
 ```  
-3. Create as many tags as you want within your datapack and add any other custom data you require inside it.  
-4. Launch server  
-5. Verify your datapack has been loaded by running command `/datapack list enabled`. See [DataPack Command](https://minecraft.gamepedia.com/Data_Pack) for more info  
-Note: If your datapack is not enabled then your datapack structure shown in step 2 is most likely wrong.  
+3. 在数据包中创建任意数量的 标签组，并在其中添加所需的任何其他自定义数据。
+4. 启动服务器  
+5. 通过运行命令验证您的数据包是否已加载 `/datapack list enabled`。查看 [数据包命令](https://minecraft.gamepedia.com/Data_Pack) 以获取更多信息
+注意：如果未启用数据包，则步骤2中显示的数据包结构很可能是错误的。
 
-If you managed to load your datapack successfully, GD will automatically load all tags into its context registry for you to use with flags.
+如果您成功加载数据包，GD 将自动将所有 标签组 加载到其 情境注册表 中，供您与 标志(Flag) 一起使用。
 
-To verify tags are working with specific actions in GriefDefender, run the `/gddebug` command and check the context column which will display any tags if used.
+要验证 标签组 是否与 GriefDefender 中的特定操作一起工作，请运行 `/gddebug` 命令并检查 情境 列，该列将显示所有已被调用的 标签组。
