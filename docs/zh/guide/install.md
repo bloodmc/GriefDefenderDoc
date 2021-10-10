@@ -69,6 +69,7 @@ config/
 领地数据可以在领地所处维度的文件夹中找到, 例如，所有 A 纬度的世界领地都保存在
 
 Sponge: `config/GriefDefender/worlds/minecraft/A/world/ClaimData`
+
 Bukkit: `plugins/GriefDefender/worlds/minecraft/A/world/ClaimData`
 
  
