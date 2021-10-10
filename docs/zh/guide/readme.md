@@ -20,7 +20,7 @@ tags: 信息
 一个保护您的服务器免遭不友好玩家背刺的通用解决方案.  
 开箱即用，并与 [LuckPerms](https://ci.lucko.me/job/LuckPerms/) 紧密配合.
 
-> **提示: 由于 GriefDefender 在很大程度上依赖于情境权限, 它重度依赖于 [LuckPerms]. 查阅 <https://github.com/lucko/LuckPerms/wiki/Migration> 以了解如何从其他权限插件迁移至 LP.
+> **提示: 由于 GriefDefender 在很大程度上依赖于情境权限, 所以它与 [LuckPerms] 有着硬性依赖. 查阅 <https://github.com/lucko/LuckPerms/wiki/Migration> 以了解如何从其他权限插件迁移至 LP.
 
 ## 特点
 * **新功能!** 租赁系统 - 您的玩家可以建造自己的酒店, 公寓, 庇护所等建筑进行出租! (开发中)
