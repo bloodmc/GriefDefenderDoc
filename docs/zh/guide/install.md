@@ -33,7 +33,7 @@ icon: install
 
 ### 配置
 
-> **提示: 还有一些选项必须使用你的权限系统来设置，你可以在 [选项 wiki 页面](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options) 上阅读更多关于这些选项的信息.There are also a few options that have to be set using your permission system, you can read more about those on the [Options wiki page](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options).**
+> **提示: 还有一些选项必须使用你的权限系统来设置，你可以在 [选项 wiki 页面](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options) 上阅读更多关于这些选项的信息.**
 
 所有的配置文件都在你的 config 或 plugin 文件夹中名为 `GriefDefender` 的文件夹中找到.
 
