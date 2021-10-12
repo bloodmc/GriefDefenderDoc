@@ -28,9 +28,9 @@ module.exports = config({
 
   themeConfig: {
     logo: "/logo.png",
-    hostname: "https://vuepress-theme-hope-demo.mrhope.site",
+    hostname: "https://bloodmc.github.io/GriefDefenderDoc",
 
-    repo: "https://github.com/ahdg6/GriefDefenderDoc",
+    repo: "https://github.com/bloodmc/GriefDefenderDoc",
     docsDir: "./docs",
 	
     nav: require("../nav"),
