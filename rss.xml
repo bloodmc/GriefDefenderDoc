@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <atom:link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml" rel="self" type="application/rss+xml"/>
     <title>GriefDefender</title>
-    <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/</link>
+    <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</link>
     <description>A new way to secure your world.</description>
     <language>en-US</language>
-    <pubDate>Tue, 12 Oct 2021 10:19:29 GMT</pubDate>
-    <lastBuildDate>Tue, 12 Oct 2021 10:19:29 GMT</lastBuildDate>
+    <pubDate>Tue, 12 Oct 2021 16:34:12 GMT</pubDate>
+    <lastBuildDate>Tue, 12 Oct 2021 16:34:12 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>develop</category>
@@ -29,11 +29,11 @@
     <category>信息</category>
     <item>
       <title>API</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/API/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/API/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">API</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/API/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/API/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">API</source>
       <category>develop</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -81,11 +81,11 @@ Note: If you make use of any API methods that accepts a kyori component as param
     </item>
     <item>
       <title>Contrubution</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/Contribution/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/Contribution/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Contrubution</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/Contribution/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/Contribution/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Contrubution</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -116,11 +116,11 @@ In the bottom of each pages there will be a button redirect you to the source fi
     </item>
     <item>
       <title>Contexts</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/contexts/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/contexts/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Contexts</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/contexts/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/contexts/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Contexts</source>
       <category>Usage</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -346,11 +346,11 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
     </item>
     <item>
       <title>Debugging</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/debugging/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/debugging/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Debugging</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/debugging/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/debugging/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Debugging</source>
       <category>Usage</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -900,11 +900,11 @@ Note: The filter can be any word you want.</p>
     </item>
     <item>
       <title>Flags</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/flags/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/flags/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Flags</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/flags/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/flags/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Flags</source>
       <category>Flag</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -1125,11 +1125,11 @@ flag-control {
     </item>
     <item>
       <title>Global Config</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/global-config/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/global-config/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Global Config</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/global-config/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/global-config/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Global Config</source>
       <category>Configuration</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -1864,11 +1864,11 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
     </item>
     <item>
       <title>Claim Management</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-management/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-management/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Claim Management</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-management/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-management/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Claim Management</source>
       <category>Claim</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -2156,11 +2156,11 @@ griefdefender.admin.option.perk.fly.manager
     </item>
     <item>
       <title>Rent System</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-rent-system/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-rent-system/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Rent System</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-rent-system/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-rent-system/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Rent System</source>
       <category>Economy</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -2262,11 +2262,11 @@ Syntax is as follows<br>
     </item>
     <item>
       <title>Claim Types</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-types/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-types/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Claim Types</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-types/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-types/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Claim Types</source>
       <category>Claim</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p><em>This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims.</em></p>
 <h2 id="claim-types"> Claim Types</h2>
 <p>There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use <code>/adminclaims</code>, <code>/townclaims</code> and <code>/basicclaims</code>. To switch to subdivision mode, use <code>/claimsubdivide</code>. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.</p>
@@ -2316,11 +2316,11 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     </item>
     <item>
       <title>User-Friendly Commands</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/custom-alias-creation/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/custom-alias-creation/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">User-Friendly Commands</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/custom-alias-creation/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/custom-alias-creation/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">User-Friendly Commands</source>
       <category>Command</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="user-friendly-commands"> User-Friendly Commands</h2>
 <p>One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accesible for everyone with shorter commands.</p>
 <p>For this, you may need to install an alias plugin like CustomCommands, or the commands.yml inside of the server folder.</p>
@@ -2339,11 +2339,11 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     </item>
     <item>
       <title>Flag Definition</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/flag-definitions-gui/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/flag-definitions-gui/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Flag Definition</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/flag-definitions-gui/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/flag-definitions-gui/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Flag Definition</source>
       <category>Flag</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="overview"> Overview</h2>
 <p>The flag definition system provides both users and admins the ability to manage their claim flags with ease.
 GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
@@ -3729,11 +3729,11 @@ There are 2 delivered groups that GD ships with, <code>USER</code> and <code>ADM
     </item>
     <item>
       <title>Options</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/options/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/options/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Options</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/options/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/options/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Options</source>
       <category>Option</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
 <p>Default values can be changed in <code>options.conf</code>, for finer control continue reading below.</p>
 <h2 id="built-in-commands"> Built-in Commands</h2>
@@ -4080,11 +4080,11 @@ There are 4 subsections within this section.</p>
     </item>
     <item>
       <title>PVP</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/pvp/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/pvp/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">PVP</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/pvp/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/pvp/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">PVP</source>
       <category>Conf</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -4123,11 +4123,11 @@ Note: These examples assume a clean installation with no modified settings.</p>
     </item>
     <item>
       <title>Tags System</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/tags/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/tags/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Tags System</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/tags/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/tags/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Tags System</source>
       <category>Tag</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>A <code>Tag</code> is a new system introduced in Minecraft 1.13 that allows users to group one or more item, block, entity identifiers under a single group known as a tag. GriefDefender integrates into the tag system and exposes all available tags as contexts that can applied with a flag or option.</p>
 <p>For example, lets say you wanted to allow interaction with the following standing signs</p>
 <ul>
@@ -4183,11 +4183,11 @@ Note: If your datapack is not enabled then your datapack structure shown in step
     </item>
     <item>
       <title>Trust System</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/trust-system/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/trust-system/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Trust System</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/trust-system/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/trust-system/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Trust System</source>
       <category>Claim</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>There four different types of trust: Accessors, Builders, Containers, and Managers.</p>
 <h3 id="arguments"> Arguments</h3>
 <table>
@@ -4234,11 +4234,11 @@ Note: If your datapack is not enabled then your datapack structure shown in step
     </item>
     <item>
       <title>Command Overview</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/commands/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/commands/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Command Overview</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/commands/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/commands/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Command Overview</source>
       <category>Command</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="command-overview"> Command Overview</h1>
 <p>Arguments Key: \&lt;required\&gt; [optional]</p>
 <h3 id="claims"> Claims</h3>
@@ -4651,11 +4651,11 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     </item>
     <item>
       <title>Install</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/install/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/install/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Install</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/install/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/install/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Install</source>
       <category>configurabe</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ In this page, we will explain how to start using GriefDefender in your Bukkit/Sponge server step by step. ⚠️</p>
 <h2 id="getting-started"> Getting Started</h2>
 <h3 id="requirements"> Requirements</h3>
@@ -4727,11 +4727,11 @@ World configs override dimension and global configs.</p>
     </item>
     <item>
       <title>GriefPrevention</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/migration/griefprevention/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/migration/griefprevention/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">GriefPrevention</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/griefprevention/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/griefprevention/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefPrevention</source>
       <category>Migration</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -4842,11 +4842,11 @@ Migration output should appear in console as it is migrating.</li>
     </item>
     <item>
       <title>WorldGuard</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/migration/worldguard/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/migration/worldguard/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">WorldGuard</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/worldguard/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/worldguard/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">WorldGuard</source>
       <category>Migration</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -4939,11 +4939,11 @@ Migration output should appear in console as it is migrating.</p>
     </item>
     <item>
       <title>Permission</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/permissions/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/permissions/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Permission</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/permissions/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/permissions/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Permission</source>
       <category>Info</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>If you want to have a quickstart, apply <code>griefdefender.user.*</code> to your players and both <code>griefdefender.user.*</code> and <code>griefdefender.admin.*</code> to your staff/admins.</p>
 <p>It is recommended to use the base permission nodes above, and if you want a more fine control read all permissions below and deny accordingly.</p>
 <h3 id="important"> IMPORTANT</h3>
@@ -5604,11 +5604,11 @@ See https://luckperms.net/wiki/Default-Groups</li>
     </item>
     <item>
       <title>GriefDefender</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">GriefDefender</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefDefender</source>
       <category>configurabe</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>W.I.P</p>
 <p>This document is being greatly improved!
 If you encounter problems, please report to us</p>
@@ -5656,11 +5656,11 @@ It works out of the box and fully integrates with <a href="https://ci.lucko.me/j
     </item>
     <item>
       <title>Dynmap</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/dynmap/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/dynmap/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Dynmap</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/dynmap/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/dynmap/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Dynmap</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -5719,11 +5719,11 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>Placeholder</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/placeholder/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/placeholder/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Placeholder</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/placeholder/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/placeholder/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Placeholder</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<table>
 <thead>
 <tr>
@@ -5822,11 +5822,11 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>GDHooks</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">GDHooks</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GDHooks</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -5894,11 +5894,11 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>WECUI</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/wecui/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/wecui/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">WECUI</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/wecui/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/wecui/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">WECUI</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -5924,10 +5924,10 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>Custom Layout</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/layout/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/layout/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Custom Layout</source>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/layout/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/layout/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Custom Layout</source>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>You can use slots with markdown and component support to custom page layout.</p>
 <div><p>Note</p>
 <p>This is just a demo, you should add styles according to your own needs.</p>
@@ -5949,10 +5949,10 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>GriefDefender</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">GriefDefender</source>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefDefender</source>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>This is an example of a normal homepage. You can place your main content here.</p>
 <p>To use this layout, you need to set <code>home: true</code> in the page front matter.</p>
 <p>For related descriptions of configuration items, please see <a href="https://vuepress-theme-hope.github.io/guide/layout/home/" target="_blank" rel="noopener noreferrer">Project HomePage Layout Config</a>.</p>
@@ -5960,11 +5960,11 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>Pixelmon Preset</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/resources/Pixelmon/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/resources/Pixelmon/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Pixelmon Preset</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/Pixelmon/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/Pixelmon/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Pixelmon Preset</source>
       <category>Preset</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -5974,10 +5974,10 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>Resources</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/resources/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/resources/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Resources</source>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Resources</source>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>
@@ -5993,21 +5993,21 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>Slide page</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/slides/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/slides/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Slide page</source>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/slides/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/slides/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Slide page</source>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
-      <enclosure url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/logo.svg" type="image/svg+xml"/>
+      <enclosure url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/logo.svg" type="image/svg+xml"/>
     </item>
     <item>
       <title>API</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/API/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/API/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">API</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/API/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/API/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">API</source>
       <category>develop</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -6055,11 +6055,11 @@ Note: If you make use of any API methods that accepts a kyori component as param
     </item>
     <item>
       <title>Contrubution</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/Contribution/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/Contribution/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Contrubution</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/Contribution/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/Contribution/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Contrubution</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -6090,11 +6090,11 @@ In the bottom of each pages there will be a button redirect you to the source fi
     </item>
     <item>
       <title>Contexts</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/contexts/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/contexts/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Contexts</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/contexts/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/contexts/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Contexts</source>
       <category>Usage</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -6320,11 +6320,11 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
     </item>
     <item>
       <title>Debugging</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/debugging/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/debugging/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Debugging</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/debugging/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/debugging/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Debugging</source>
       <category>Usage</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -6874,11 +6874,11 @@ Note: The filter can be any word you want.</p>
     </item>
     <item>
       <title>Flags</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/flags/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/flags/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Flags</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/flags/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/flags/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Flags</source>
       <category>Flag</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -7099,11 +7099,11 @@ flag-control {
     </item>
     <item>
       <title>Global Config</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/global-config/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/global-config/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Global Config</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/global-config/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/global-config/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Global Config</source>
       <category>Configuration</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -7838,11 +7838,11 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
     </item>
     <item>
       <title>Claim Management</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-management/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-management/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Claim Management</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-management/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-management/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Claim Management</source>
       <category>Claim</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -8130,11 +8130,11 @@ griefdefender.admin.option.perk.fly.manager
     </item>
     <item>
       <title>Rent System</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-rent-system/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-rent-system/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Rent System</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-rent-system/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-rent-system/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Rent System</source>
       <category>Economy</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -8236,11 +8236,11 @@ Syntax is as follows<br>
     </item>
     <item>
       <title>Claim Types</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-types/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-types/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Claim Types</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-types/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-types/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Claim Types</source>
       <category>Claim</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p><em>This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims.</em></p>
 <h2 id="claim-types"> Claim Types</h2>
 <p>There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use <code>/adminclaims</code>, <code>/townclaims</code> and <code>/basicclaims</code>. To switch to subdivision mode, use <code>/claimsubdivide</code>. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.</p>
@@ -8290,11 +8290,11 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     </item>
     <item>
       <title>User-Friendly Commands</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/custom-alias-creation/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/custom-alias-creation/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">User-Friendly Commands</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/custom-alias-creation/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/custom-alias-creation/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">User-Friendly Commands</source>
       <category>Command</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="user-friendly-commands"> User-Friendly Commands</h2>
 <p>One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accesible for everyone with shorter commands.</p>
 <p>For this, you may need to install an alias plugin like CustomCommands, or the commands.yml inside of the server folder.</p>
@@ -8313,11 +8313,11 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     </item>
     <item>
       <title>Flag Definition</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Flag Definition</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Flag Definition</source>
       <category>Flag</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="overview"> Overview</h2>
 <p>The flag definition system provides both users and admins the ability to manage their claim flags with ease.
 GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
@@ -9703,11 +9703,11 @@ There are 2 delivered groups that GD ships with, <code>USER</code> and <code>ADM
     </item>
     <item>
       <title>Options</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/options/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/options/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Options</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/options/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/options/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Options</source>
       <category>Option</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
 <p>Default values can be changed in <code>options.conf</code>, for finer control continue reading below.</p>
 <h2 id="built-in-commands"> Built-in Commands</h2>
@@ -10054,11 +10054,11 @@ There are 4 subsections within this section.</p>
     </item>
     <item>
       <title>PVP</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/pvp/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/pvp/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">PVP</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/pvp/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/pvp/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">PVP</source>
       <category>Conf</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -10097,11 +10097,11 @@ Note: These examples assume a clean installation with no modified settings.</p>
     </item>
     <item>
       <title>标签组系统</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/tags/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/tags/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">标签组系统</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/tags/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/tags/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">标签组系统</source>
       <category>Tag</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p><code>标签</code> 是一个于 Minecraft 1.13 引入的新系统，其允许用户将 物品，方块，实体 的标志符捆绑为一个标签组以方便分类。GriefDefender 将与标签系统集成并将其导出为情境用以 标签(Flag)/选项(Option)。</p>
 <p>例如，假设您希望允许与以下站立告示牌进行交互</p>
 <ul>
@@ -10156,11 +10156,11 @@ Note: These examples assume a clean installation with no modified settings.</p>
     </item>
     <item>
       <title>Trust System</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/trust-system/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/trust-system/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Trust System</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/trust-system/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/trust-system/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Trust System</source>
       <category>Claim</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>There four different types of trust: Accessors, Builders, Containers, and Managers.</p>
 <h3 id="arguments"> Arguments</h3>
 <table>
@@ -10207,11 +10207,11 @@ Note: These examples assume a clean installation with no modified settings.</p>
     </item>
     <item>
       <title>Command Overview</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/commands/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/commands/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Command Overview</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/commands/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/commands/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Command Overview</source>
       <category>Command</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="command-overview"> Command Overview</h1>
 <p>Arguments Key: \&lt;required\&gt; [optional]</p>
 <h3 id="claims"> Claims</h3>
@@ -10624,11 +10624,11 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     </item>
     <item>
       <title>安装</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/install/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/install/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">安装</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/install/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/install/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">安装</source>
       <category>配置</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ 在本页面, 我们将手把手教你如何在你的 Bukkit/Sponge 服务器上开始使用 GriefDefender. ⚠️</p>
 <h2 id="入门"> 入门</h2>
 <h3 id="需求"> 需求</h3>
@@ -10700,11 +10700,11 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     </item>
     <item>
       <title>GriefPrevention</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/migration/griefprevention/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/migration/griefprevention/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">GriefPrevention</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/griefprevention/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/griefprevention/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefPrevention</source>
       <category>Migration</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -10815,11 +10815,11 @@ Migration output should appear in console as it is migrating.</li>
     </item>
     <item>
       <title>WorldGuard</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/migration/worldguard/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/migration/worldguard/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">WorldGuard</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/worldguard/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/worldguard/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">WorldGuard</source>
       <category>Migration</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -10912,11 +10912,11 @@ Migration output should appear in console as it is migrating.</p>
     </item>
     <item>
       <title>权限</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/permissions/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/permissions/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">权限</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/permissions/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/permissions/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">权限</source>
       <category>信息</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>如果您想快速使用，将 <code>griefdefender.user.*</code> 授权至您的玩家，并给予 <code>griefdefender.user.*</code> 和 <code>griefdefender.admin.*</code> 给您的社区管理或服务器管理。</p>
 <p>在大多数情况下，建议使用上面的通用权限，如果您想要更精细的控制，请阅览下面的所有权限并相应地关掉一些不需要的权限。</p>
 <h3 id="重要信息"> 重要信息</h3>
@@ -11577,11 +11577,11 @@ Migration output should appear in console as it is migrating.</p>
     </item>
     <item>
       <title>GriefDefender</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">GriefDefender</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefDefender</source>
       <category>配置</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>施工中</p>
 <p>这个文档还不稳定，我们正尽力地积极改进它!
 如果您遇到了什么问题，请报告给我们</p>
@@ -11629,11 +11629,11 @@ Migration output should appear in console as it is migrating.</p>
     </item>
     <item>
       <title>Dynmap</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/dynmap/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/dynmap/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Dynmap</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/dynmap/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/dynmap/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Dynmap</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -11692,11 +11692,11 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>Placeholder</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/placeholder/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/placeholder/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Placeholder</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/placeholder/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/placeholder/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Placeholder</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<table>
 <thead>
 <tr>
@@ -11795,11 +11795,11 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>GDHooks</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">GDHooks</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GDHooks</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -11867,11 +11867,11 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>WECUI</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/wecui/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/wecui/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">WECUI</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/wecui/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/wecui/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">WECUI</source>
       <category>Dev</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -11897,10 +11897,10 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>自定义布局</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/layout/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/layout/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">自定义布局</source>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/layout/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/layout/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">自定义布局</source>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
 <div><p>Note</p>
 <p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
@@ -11922,18 +11922,18 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>GriefDefender</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">GriefDefender</source>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefDefender</source>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
     </item>
     <item>
       <title>Pixelmon Preset</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/resources/Pixelmon/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/resources/Pixelmon/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Pixelmon Preset</source>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/Pixelmon/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/Pixelmon/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Pixelmon Preset</source>
       <category>Preset</category>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -11943,10 +11943,10 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     </item>
     <item>
       <title>Resources</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/resources/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/resources/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/rss.xml">Resources</source>
-      <pubDate>Tue, 12 Oct 2021 10:19:05 GMT</pubDate>
+      <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/</link>
+      <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/</guid>
+      <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Resources</source>
+      <pubDate>Tue, 12 Oct 2021 16:33:50 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>

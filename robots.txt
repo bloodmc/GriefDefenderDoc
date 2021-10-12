@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/sitemap.xml
+Sitemap: https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/sitemap.xml
