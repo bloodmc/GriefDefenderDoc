@@ -3,7 +3,7 @@
   <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/</id>
   <title>GriefDefender</title>
   <subtitle>A new way to secure your world.</subtitle>
-  <updated>2021-10-06T05:40:31.225Z</updated>
+  <updated>2021-10-12T10:18:34.492Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/atom.xml"/>
   <link rel="alternate" href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/"/>
@@ -22,12 +22,13 @@
   <category term="Migration"/>
   <category term="Info"/>
   <category term="Preset"/>
+  <category term="信息"/>
   <category term="配置"/>
   <entry>
     <title type="html">API</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/API/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/API/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -76,13 +77,13 @@ Note: If you make use of any API methods that accepts a kyori component as param
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Contrubution</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/Contribution/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/Contribution/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -114,13 +115,13 @@ In the bottom of each pages there will be a button redirect you to the source fi
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Contexts</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/contexts/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/contexts/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -347,13 +348,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Debugging</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/debugging/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/debugging/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -904,13 +905,13 @@ Note: The filter can be any word you want.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Flags</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/flags/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/flags/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -1132,13 +1133,13 @@ flag-control {
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Global Config</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/global-config/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/advanced/global-config/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -1874,13 +1875,13 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Management</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-management/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-management/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -2169,13 +2170,13 @@ griefdefender.admin.option.perk.fly.manager
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Rent System</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-rent-system/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-rent-system/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -2277,13 +2278,13 @@ Syntax is as follows<br>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Types</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-types/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/claim-types/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p><em>This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims.</em></p>
 <h2 id="claim-types"> Claim Types</h2>
 <p>There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use <code>/adminclaims</code>, <code>/townclaims</code> and <code>/basicclaims</code>. To switch to subdivision mode, use <code>/claimsubdivide</code>. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.</p>
@@ -2334,13 +2335,13 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">User-Friendly Commands</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/custom-alias-creation/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/custom-alias-creation/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h2 id="user-friendly-commands"> User-Friendly Commands</h2>
 <p>One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accesible for everyone with shorter commands.</p>
 <p>For this, you may need to install an alias plugin like CustomCommands, or the commands.yml inside of the server folder.</p>
@@ -2360,13 +2361,13 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Flag Definition</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/flag-definitions-gui/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/flag-definitions-gui/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h2 id="overview"> Overview</h2>
 <p>The flag definition system provides both users and admins the ability to manage their claim flags with ease.
 GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
@@ -3752,13 +3753,13 @@ There are 2 delivered groups that GD ships with, <code>USER</code> and <code>ADM
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Options</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/options/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/options/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
 <p>Default values can be changed in <code>options.conf</code>, for finer control continue reading below.</p>
 <h2 id="built-in-commands"> Built-in Commands</h2>
@@ -4106,13 +4107,13 @@ There are 4 subsections within this section.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">PVP</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/pvp/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/pvp/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -4152,13 +4153,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Tags System</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/tags/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/tags/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>A <code>Tag</code> is a new system introduced in Minecraft 1.13 that allows users to group one or more item, block, entity identifiers under a single group known as a tag. GriefDefender integrates into the tag system and exposes all available tags as contexts that can applied with a flag or option.</p>
 <p>For example, lets say you wanted to allow interaction with the following standing signs</p>
 <ul>
@@ -4215,13 +4216,13 @@ Note: If your datapack is not enabled then your datapack structure shown in step
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Trust System</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/trust-system/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/basic/trust-system/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>There four different types of trust: Accessors, Builders, Containers, and Managers.</p>
 <h3 id="arguments"> Arguments</h3>
 <table>
@@ -4269,13 +4270,13 @@ Note: If your datapack is not enabled then your datapack structure shown in step
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Command Overview</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/commands/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/commands/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h1 id="command-overview"> Command Overview</h1>
 <p>Arguments Key: \&lt;required\&gt; [optional]</p>
 <h3 id="claims"> Claims</h3>
@@ -4689,13 +4690,13 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Install</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/install/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/install/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ In this page, we will explain how to start using GriefDefender in your Bukkit/Sponge server step by step. ⚠️</p>
 <h2 id="getting-started"> Getting Started</h2>
 <h3 id="requirements"> Requirements</h3>
@@ -4768,13 +4769,13 @@ World configs override dimension and global configs.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefPrevention</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/migration/griefprevention/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/migration/griefprevention/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -4886,13 +4887,13 @@ Migration output should appear in console as it is migrating.</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">WorldGuard</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/migration/worldguard/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/migration/worldguard/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -4986,13 +4987,13 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Permission</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/permissions/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/permissions/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>If you want to have a quickstart, apply <code>griefdefender.user.*</code> to your players and both <code>griefdefender.user.*</code> and <code>griefdefender.admin.*</code> to your staff/admins.</p>
 <p>It is recommended to use the base permission nodes above, and if you want a more fine control read all permissions below and deny accordingly.</p>
 <h3 id="important"> IMPORTANT</h3>
@@ -5654,13 +5655,13 @@ See https://luckperms.net/wiki/Default-Groups</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/guide/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<div><p>W.I.P</p>
 <p>This document is being greatly improved!
 If you encounter problems, please report to us</p>
@@ -5709,13 +5710,13 @@ It works out of the box and fully integrates with <a href="https://ci.lucko.me/j
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Dynmap</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/dynmap/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/dynmap/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -5775,13 +5776,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Placeholder</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/placeholder/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/placeholder/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -5881,13 +5882,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">GDHooks</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -5956,13 +5957,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">WECUI</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/wecui/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/hooks/wecui/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -5988,13 +5989,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Custom Layout</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/layout/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/layout/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>You can use slots with markdown and component support to custom page layout.</p>
 <div><p>Note</p>
 <p>This is just a demo, you should add styles according to your own needs.</p>
@@ -6016,13 +6017,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>This is an example of a normal homepage. You can place your main content here.</p>
 <p>To use this layout, you need to set <code>home: true</code> in the page front matter.</p>
 <p>For related descriptions of configuration items, please see <a href="https://vuepress-theme-hope.github.io/guide/layout/home/" target="_blank" rel="noopener noreferrer">Project HomePage Layout Config</a>.</p>
@@ -6030,13 +6031,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Pixelmon Preset</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/resources/Pixelmon/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/resources/Pixelmon/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -6047,13 +6048,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Resources</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/resources/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/resources/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>
@@ -6069,25 +6070,25 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Slide page</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/slides/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/slides/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[
 <i>Not supported content</i>]]></content>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">API</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/API/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/API/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -6136,13 +6137,13 @@ Note: If you make use of any API methods that accepts a kyori component as param
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Contrubution</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/Contribution/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/Contribution/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -6174,13 +6175,13 @@ In the bottom of each pages there will be a button redirect you to the source fi
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Contexts</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/contexts/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/contexts/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -6407,13 +6408,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Debugging</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/debugging/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/debugging/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -6964,13 +6965,13 @@ Note: The filter can be any word you want.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Flags</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/flags/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/flags/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -7192,13 +7193,13 @@ flag-control {
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Global Config</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/global-config/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/advanced/global-config/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -7934,13 +7935,13 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Management</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-management/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-management/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -8229,13 +8230,13 @@ griefdefender.admin.option.perk.fly.manager
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Rent System</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-rent-system/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-rent-system/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -8337,13 +8338,13 @@ Syntax is as follows<br>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Types</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-types/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/claim-types/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p><em>This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims.</em></p>
 <h2 id="claim-types"> Claim Types</h2>
 <p>There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use <code>/adminclaims</code>, <code>/townclaims</code> and <code>/basicclaims</code>. To switch to subdivision mode, use <code>/claimsubdivide</code>. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.</p>
@@ -8394,13 +8395,13 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">User-Friendly Commands</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/custom-alias-creation/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/custom-alias-creation/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h2 id="user-friendly-commands"> User-Friendly Commands</h2>
 <p>One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accesible for everyone with shorter commands.</p>
 <p>For this, you may need to install an alias plugin like CustomCommands, or the commands.yml inside of the server folder.</p>
@@ -8420,13 +8421,13 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Flag Definition</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h2 id="overview"> Overview</h2>
 <p>The flag definition system provides both users and admins the ability to manage their claim flags with ease.
 GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
@@ -9812,13 +9813,13 @@ There are 2 delivered groups that GD ships with, <code>USER</code> and <code>ADM
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Options</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/options/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/options/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
 <p>Default values can be changed in <code>options.conf</code>, for finer control continue reading below.</p>
 <h2 id="built-in-commands"> Built-in Commands</h2>
@@ -10166,13 +10167,13 @@ There are 4 subsections within this section.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">PVP</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/pvp/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/pvp/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -10212,13 +10213,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">标签组系统</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/tags/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/tags/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p><code>标签</code> 是一个于 Minecraft 1.13 引入的新系统，其允许用户将 物品，方块，实体 的标志符捆绑为一个标签组以方便分类。GriefDefender 将与标签系统集成并将其导出为情境用以 标签(Flag)/选项(Option)。</p>
 <p>例如，假设您希望允许与以下站立告示牌进行交互</p>
 <ul>
@@ -10274,13 +10275,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Trust System</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/trust-system/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/basic/trust-system/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>There four different types of trust: Accessors, Builders, Containers, and Managers.</p>
 <h3 id="arguments"> Arguments</h3>
 <table>
@@ -10328,13 +10329,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Command Overview</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/commands/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/commands/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<h1 id="command-overview"> Command Overview</h1>
 <p>Arguments Key: \&lt;required\&gt; [optional]</p>
 <h3 id="claims"> Claims</h3>
@@ -10748,13 +10749,13 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Install</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/install/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/install/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ In this page, we will explain how to start using GriefDefender in your Bukkit/Sponge server step by step. ⚠️</p>
 <h2 id="getting-started"> Getting Started</h2>
 <h3 id="requirements"> Requirements</h3>
@@ -10827,13 +10828,13 @@ World configs override dimension and global configs.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefPrevention</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/migration/griefprevention/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/migration/griefprevention/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -10945,13 +10946,13 @@ Migration output should appear in console as it is migrating.</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">WorldGuard</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/migration/worldguard/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/migration/worldguard/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -11045,244 +11046,244 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
-    <title type="html">Permission</title>
+    <title type="html">权限</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/permissions/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/permissions/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
-    <content type="html"><![CDATA[<p>If you want to have a quickstart, apply <code>griefdefender.user.*</code> to your players and both <code>griefdefender.user.*</code> and <code>griefdefender.admin.*</code> to your staff/admins.</p>
-<p>It is recommended to use the base permission nodes above, and if you want a more fine control read all permissions below and deny accordingly.</p>
-<h3 id="important"> IMPORTANT</h3>
-<p>⚠️</p>
-<p>If you alter any admin permissions while in-game, make sure you run <code>/gdreload</code> as GD caches various permissions for performance gains.<br>
-Wildcard permission <code>*</code> is currently not supported. Use <code>griefdefender.user.*</code> and <code>griefdefender.admin.*</code> for admins instead.</p>
-<p>As GD makes heavy use of LP's <code>default</code> group, the following MUST be setup properly or GD will not function properly</p>
+    <updated>2021-10-12T10:18:11.000Z</updated>
+    <content type="html"><![CDATA[<p>如果您想快速使用，将 <code>griefdefender.user.*</code> 授权至您的玩家，并给予 <code>griefdefender.user.*</code> 和 <code>griefdefender.admin.*</code> 给您的社区管理或服务器管理。</p>
+<p>在大多数情况下，建议使用上面的通用权限，如果您想要更精细的控制，请阅览下面的所有权限并相应地关掉一些不需要的权限。</p>
+<h3 id="重要信息"> 重要信息</h3>
+<div><p>警告</p>
+<p>由于 GriefDefender 缓存了获取的权限，所以请确保您在更改管理员权限后运行 <code>/gdreload</code> 。
+目前尚不支持通配符权限 <code>*</code> 。请使用 <code>griefdefender.user.*</code> 和 <code>griefdefender.admin.*</code> 来授予管理员权限。</p>
+<p>就目前而言，GD 大量使用了 LP 的 <code>default</code> 权限组，以下现象是必须出现的，请不要删除权限组，否则很可能插件将不能正常使用。</p>
 <ul>
-<li>All non-griefdefender LP groups are inheriting the <code>default</code> group.</li>
-<li>The <code>default</code> group is inheriting GD's delivered groups : <code>griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override</code></li>
-<li>The <code>default</code> group is NOT disabled. LP strongly recommends to never disable this group.<br>
-See https://luckperms.net/wiki/Default-Groups</li>
+<li>所有非 GriefDefender 的权限组继承自 <code>default</code> 权限组。</li>
+<li><code>default</code> 权限组继承自以下 GD 创建的权限组： <code>griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override</code></li>
+<li><code>default</code> 权限组不应该被禁用。LP 强烈建议不要禁用此组。
+详见 https://luckperms.net/wiki/Default-Groups</li>
 </ul>
-<p>⚠️</p>
-<h1 id="user-permissions"> User Permissions</h1>
-<h2 id="claims"> Claims</h2>
+</div>
+<h1 id="用户权限"> 用户权限</h1>
+<h2 id="领地相关"> 领地相关</h2>
 <table>
 <thead>
 <tr>
-<th>Permission Node</th>
-<th>Description</th>
+<th>权限节点</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>griefdefender.user.claim.command.abandon.basic</td>
-<td>Allows to abandon basic claims</td>
+<td>允许遗弃 基础 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.abandon.town</td>
-<td>Allows to abandon town claims</td>
+<td>允许遗弃 城镇 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.abandon-all</td>
-<td>Allows to abandon all claims</td>
+<td>允许遗弃 全部 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.abandon-top-level</td>
-<td>Allows to abandon a claim and all its subdivisions</td>
+<td>允许遗弃母领地及其下属的子领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.ban-item</td>
-<td>Allows to ban items in claims</td>
+<td>允许在领地内 禁用 物品</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.basic-mode</td>
-<td>Allows to use basic claim shovel mode</td>
+<td>允许使用 基础 领地圈地模式</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.bank</td>
-<td>Allows to use claim bank</td>
+<td>允许使用 领地银行</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.buy</td>
-<td>Allows to buy a claim (Requires economy plugin)</td>
+<td>允许 购买 领地 (需要经济插件)</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.buy-blocks</td>
-<td>Allows to buy claim blocks (Requires economy plugin)</td>
+<td>允许购买 领地方块 (需要经济插件)</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.claim.tax</td>
-<td>Allows to check/pay tax balance</td>
+<td>允许 查看/支付 税务</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.contract</td>
-<td>Allows to contract(shrink) a claim in a direction</td>
+<td>允许在一个方向上 缩减 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.cuboid</td>
-<td>Allows to toggle cuboid claims mode</td>
+<td>允许切换到 3D 领地模式</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.expand</td>
-<td>Allows to expand a claim in a direction</td>
+<td>允许在一个方向上 扩大 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.farewell</td>
-<td>Allows to set a claim farewell</td>
+<td>允许设置 领地 告别信息</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.give.blocks</td>
-<td>Allows to give claim blocks to another player</td>
+<td>允许玩家给予别的玩家 领地方块</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.give.pet</td>
-<td>Allows a player to give away a pet they tamed</td>
+<td>允许玩家给予别的玩家已驯服宠物</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.greeting</td>
-<td>Allows to set a claim greeting</td>
+<td>允许设置 领地 问候信息</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.info.others</td>
-<td>Allows to get information about others claims</td>
+<td>允许获取有关 其他领地 的信息</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.info.base</td>
-<td>Allows to get information about claims</td>
+<td>允许获取有关 领地 的信息</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.info.teleport.others</td>
-<td>Allows a user to use the teleport feature in claiminfo on other claims</td>
+<td>允许用户在 其他领地 中使用 claiminfo中的传送功能</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.info.teleport.base</td>
-<td>Allows a user to use the teleport feature in claiminfo</td>
+<td>允许用户在 领地 中使用 claiminfo</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.inherit</td>
-<td>Allows to toggle inheritance from parent claim</td>
+<td>允许从 母领地 开关继承</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.list.base</td>
-<td>Allows to list your claims</td>
+<td>允许列出 属于自己 的领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.list.others</td>
-<td>Allows to list other players claims</td>
+<td>允许列出 其他玩家 的领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.list-flags</td>
-<td>Allows to list claim flags</td>
+<td>允许列出 领地标签</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.name</td>
-<td>Allows to set a claimname</td>
+<td>允许设置 领地名称</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.sell</td>
-<td>Allows to sell a claim (Requires economy plugin)</td>
+<td>允许 出售 领地 (需要经济插件)</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.sell-blocks</td>
-<td>Allows to sell claim blocks (Requires economy plugin)</td>
+<td>允许 出售 领地方块 (需要经济插件)</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.set-spawn</td>
-<td>Allows to set claim spawn</td>
+<td>允许 设置 领地出生点</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.spawn</td>
-<td>Allows to use claim spawn</td>
+<td>允许 使用 领地出生点</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.subdivide-mode</td>
-<td>Allows to use subdivide shovel mode</td>
+<td>允许使用 子领地 圈地模式</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.town-mode</td>
-<td>Allows to use town shovel mode</td>
+<td>允许使用 城镇 圈地模式</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.transfer</td>
-<td>Allows to transfer own claims</td>
+<td>允许 转让 个人的领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.trapped</td>
-<td>Teleports the player to a safe location if stuck and unable to build</td>
+<td>如果玩家被卡住无法建造，则将其传送到安全位置</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.unban-item</td>
-<td>Allows to unban items in claims</td>
+<td>允许取消 领地 中的禁用物品</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.unlock-drops</td>
-<td>Allows other players to pickup any items dropped from death</td>
+<td>允许玩家拾取所有死亡掉落的物品</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.worldedit-claim</td>
-<td>Allows to use a worldedit selection to create a claim.</td>
+<td>允许使用 worldedit 的选中区域创建领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.create.base</td>
-<td>Allows to create a basic claim</td>
+<td>允许创建一个 基础 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.create.basic</td>
-<td>Allows to create/resize basic claims</td>
+<td>允许创建/更改大小于 基础 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.create.subdivision</td>
-<td>Allows to create/resize subdivision claims</td>
+<td>允许创建/更改大小于 子领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.create.town</td>
-<td>Allows to create/resize town claims</td>
+<td>允许创建/更改大小于 城镇 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.create.cuboid.basic</td>
-<td>Allows to create/resize basic claims in 3D mode</td>
+<td>允许创建/更改大小于 3D 基础 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.create.cuboid.subdivision</td>
-<td>Allows to create/resize subdivision claims in 3D mode</td>
+<td>允许创建/更改大小于 3D 子领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.create.cuboid.town</td>
-<td>Allows to create/resize town claims in 3D mode</td>
+<td>允许创建/更改大小于 3D 城镇 领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.resize</td>
-<td>Allows to resize claims</td>
+<td>允许重新定义领地的大小</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.show-tutorial</td>
-<td>Allows to see claim tutorial text when creating/resizing claims</td>
+<td>允许玩家于领地创建或更改大小时显示向导</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.list.other</td>
-<td>Allows to list other player claims</td>
+<td>允许列出 其他玩家 的领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.visualize.base</td>
-<td>Allows player to visualize their claims</td>
+<td>允许玩家可视化他们的领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.visualize.nearby</td>
-<td>Allows player to visualize nearby claims</td>
+<td>允许玩家可视化周围的领地</td>
 </tr>
 <tr>
 <td>griefdefender.user.command.info.base</td>
-<td>Allows to get information about self</td>
+<td>允许玩家获取自己的个人信息</td>
 </tr>
 <tr>
 <td>griefdefender.user.command.info.others</td>
-<td>Allows to get information about another player</td>
+<td>允许玩家获取别人的个人信息</td>
 </tr>
 <tr>
 <td>griefdefender.user.command.version</td>
-<td>Allows to get information about GD, server and LP versions</td>
+<td>允许获取有关 GD，服务器和 LP 等版本信息</td>
 </tr>
 <tr>
 <td>griefdefender.user.town.command.bank</td>
@@ -11290,19 +11291,19 @@ See https://luckperms.net/wiki/Default-Groups</li>
 </tr>
 <tr>
 <td>griefdefender.user.town.command.info.base</td>
-<td>Allows to get information about town claims</td>
+<td>允许获取 城镇 信息</td>
 </tr>
 <tr>
 <td>griefdefender.user.town.command.info.others</td>
-<td>Allows to get information about others town claims</td>
+<td>允许获取 别人城镇 的信息</td>
 </tr>
 <tr>
 <td>griefdefender.user.town.command.name</td>
-<td>Allows to set a town claimname</td>
+<td>允许设置 城镇 名称</td>
 </tr>
 <tr>
 <td>griefdefender.user.town.command.tag</td>
-<td>Allows to set the tag of your town</td>
+<td>允许设置 城镇 的聊天标签</td>
 </tr>
 <tr>
 <td>griefdefender.user.town.command.tax</td>
@@ -11310,339 +11311,339 @@ See https://luckperms.net/wiki/Default-Groups</li>
 </tr>
 </tbody>
 </table>
-<h2 id="flags"> Flags</h2>
+<h2 id="标签相关"> 标签相关</h2>
 <table>
 <thead>
 <tr>
-<th>Permission Node</th>
-<th>Description</th>
+<th>权限节点</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>griefdefender.admin.claim.command.flag.arg</td>
-<td>Allows to use the claimflag command with command line arguments</td>
+<td>允许使用 claimflag 相关指令的时候附加参数</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.flag.base</td>
-<td>Allows to use the claimflag command</td>
+<td>允许使用 claimflag 相关指令</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.flag.gui</td>
-<td>Allows to use the claimflag command GUI</td>
+<td>允许使用 claimflag 命令的GUI</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.flag.debug</td>
-<td>Allows to toggle claim flag debug mode</td>
+<td>允许切换 领地标签调试 模式</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.flag.player</td>
-<td>Allows to use the claimflag for players command</td>
+<td>允许指定 claimflag 所影响的玩家</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.flag.group</td>
-<td>Allows to use the claimflag for groups command</td>
+<td>允许指定 claimflag 所影响的玩家组</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.flag.reset</td>
-<td>Allows to use the claimreset command</td>
+<td>允许使用 claimreset 命令</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.flag</td>
-<td>Base permission used to check if user has access to use a specific core flag. <br />The format is <code>griefdefender.user.claim.flag.&lt;flag_name&gt;</code>.<br />Note: This is checked when accessing the flag ADVANCED GUI section and when using the flag command with arguments.<br />Note: The flag name is not to be confused with a definition flag name. This checks for GD's core flags. The list can be found <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags#available-flags" target="_blank" rel="noopener noreferrer">here</a></td>
+<td>用以检查玩家是否有相关 标签 的权限<br />格式 <code>griefdefender.user.claim.flag.&lt;标签名称&gt;</code>。<br />注意：在访问 高级标签 GUI部分以及使用带有参数的 flag 命令时，会检查此权限。<br/>注意：不要将 标签名称 与 自定义标签名称 混淆。这里指的是检查 GD 的 核心标签。 在<a href="https://github.com/bloodmc/GriefDefender/wiki/Flags#available-flags" target="_blank" rel="noopener noreferrer">这里</a>获取更多</td>
 </tr>
 </tbody>
 </table>
-<h2 id="flag-definitions"> Flag Definitions</h2>
+<h2 id="预制标签"> 预制标签</h2>
 <table>
 <thead>
 <tr>
-<th>Permission Node</th>
-<th>Description</th>
+<th>权限节点</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>griefdefender.admin.custom.flag</td>
-<td>Base permission used to check if user has access to a specific admin flag definition. <br />The format is   <code>griefdefender.admin.custom.flag.&lt;group&gt;.&lt;definition_flag_name&gt;</code>. <br />Note: By default, this manages the delivered admin group which is mapped to the ADMIN tab.</td>
+<td>用于检查用户是否有权限访问 管理员自定义标签 的基础权限 <br />权限格式   <code>griefdefender.admin.custom.flag.&lt;预制标签组&gt;.&lt;预制标签名称&gt;</code>。 <br />注意：在默认情况下，这个权限管理了对 设定UI 中 管理员 选项卡的使用。</td>
 </tr>
 <tr>
 <td>griefdefender.user.custom.flag</td>
-<td>Base permission used to check if user has access to a specific user flag definition. <br />The format is   <code>griefdefender.user.custom.flag.&lt;group&gt;.&lt;definition_flag_name&gt;</code>. <br />Note: By default, this manages the delivered user group which is mapped to the USER tab.</td>
+<td>用于检查用户是否有权限访问 用户自定义标签 的基础权限 <br />权限格式  <code>griefdefender.user.custom.flag.&lt;预制标签组&gt;.&lt;预制标签名称&gt;</code>。<br />注意：在默认情况下，这个权限管理了对 设定UI 中 用户 选项卡的使用。</td>
 </tr>
 </tbody>
 </table>
-<p><em>*See <a href="https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI" target="_blank" rel="noopener noreferrer">Flag Definitions GUI</a> for information on how to manage the flag GUI for both users and admins.</em></p>
-<h2 id="options"> Options</h2>
+<p><em>*查看 <a href="https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI" target="_blank" rel="noopener noreferrer">预制标签 GUI</a> 来获取更多关于预制管理员或用户标签设定的信息。</em></p>
+<h2 id="选项"> 选项</h2>
 <table>
 <thead>
 <tr>
-<th>Permission Node</th>
-<th>Description</th>
+<th>权限节点</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>griefdefender.user.claim.command.option.base</td>
-<td>Allows to use the claimoption command</td>
+<td>允许使用 claimoption 命令</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.option.group</td>
-<td>Allows to set group options in claims</td>
+<td>允许在领地里对 玩家组 修改选项</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.option.player</td>
-<td>Allows to set player options in claims</td>
+<td>允许在领地里对 玩家 修改选项</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.option</td>
-<td>Allows to set options in claims</td>
+<td>允许在领地里使用选项设置</td>
 </tr>
 <tr>
 <td>griefdefender.user.option.perk.owner-fly.basic</td>
-<td>Allows to fly in own basic claim</td>
+<td>允许在自己领地里飞行</td>
 </tr>
 <tr>
 <td>griefdefender.user.option.perk.owner-fly.town</td>
-<td>Allows to fly in own town claim</td>
+<td>允许在所有的城镇里飞行</td>
 </tr>
 </tbody>
 </table>
-<h2 id="trust"> Trust</h2>
+<h2 id="信任相关"> 信任相关</h2>
 <table>
 <thead>
 <tr>
-<th>Permission Node</th>
-<th>Description</th>
+<th>权限节点</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>griefdefender.user.claim.command.trust.group</td>
-<td>Allows to grant group trust</td>
+<td>允许给予 玩家组 领地权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.trust.player</td>
-<td>Allows to grant player trust</td>
+<td>允许给予 玩家 领地权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.trust.list</td>
-<td>Allows to list trusted players</td>
+<td>允许列出受信任的名单</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.trustall.group</td>
-<td>Allows to grant group trust to all claims</td>
+<td>允许一次性对所有领地授予 玩家组 权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.trustall.player</td>
-<td>Allows to grant player trust to all claims</td>
+<td>允许一次性对所有领地授予 玩家 权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.untrust.group</td>
-<td>Allows to revoke group trust</td>
+<td>允许撤销 玩家组 的领地权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.untrust.player</td>
-<td>Allows to revoke player trust</td>
+<td>允许撤销 玩家 的领地取消</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.untrustall.group</td>
-<td>Allows to revoke group trust to all claims</td>
+<td>允许在所有领地中一次性撤销 玩家组 的权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.command.untrustall.player</td>
-<td>Allows to revoke player trust to all claims</td>
+<td>允许在所有领地中一次性撤销 玩家 的权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.trust.accessor</td>
-<td>Allows to add accessors</td>
+<td>允许添加 访客 权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.trust.container</td>
-<td>Allows to add containers</td>
+<td>允许添加 容器存取 权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.trust.builder</td>
-<td>Allows to add builders</td>
+<td>允许添加 领地建筑师 权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.trust.manager</td>
-<td>Allows to add managers</td>
+<td>允许添加 领地管理者 权限</td>
 </tr>
 <tr>
 <td>griefdefender.user.claim.trust.remove</td>
-<td>Allows to untrust players</td>
+<td>允许撤销权限</td>
 </tr>
 </tbody>
 </table>
-<h1 id="admin-permissions"> Admin Permissions</h1>
+<h1 id="管理员权限"> 管理员权限</h1>
 <table>
 <thead>
 <tr>
-<th>Permission Node</th>
-<th>Description</th>
+<th>权限节点</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>griefdefender.admin.advanced-flags</td>
-<td>Allows usage of advanced mode in flag GUI</td>
+<td>允许使用 高级标签GUI</td>
 </tr>
 <tr>
 <td>griefdefender.admin.bypass.ban</td>
-<td>Allows bypass of bans</td>
+<td>允许绕过物品封禁</td>
 </tr>
 <tr>
 <td>griefdefender.admin.bypass.border-check</td>
-<td>Allows bypass of claim border checks</td>
+<td>允许绕过领地超界检测</td>
 </tr>
 <tr>
 <td>griefdefender.admin.bypass.option</td>
-<td>Allows bypass of options</td>
+<td>允许绕过选项设置</td>
 </tr>
 <tr>
 <td>griefdefender.admin.bypass.override.resize</td>
-<td>Allows bypass of claim resize restrictions</td>
+<td>允许绕过领地调整大小限制</td>
 </tr>
 <tr>
 <td>griefdefender.admin.bypass.override.limit</td>
-<td>Allows bypass of claim creation limit restrictions</td>
+<td>允许绕过领地所有量限制</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.adjust-claim-blocks</td>
-<td>Allows to edit amount of bonus claim blocks</td>
+<td>允许编辑奖励领地方块数量</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.admin-mode</td>
-<td>Allows to use admin claim shovel mode</td>
+<td>允许使用 管理员 圈地模式</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.ban</td>
-<td>Allows to ban target id from all usage</td>
+<td>允许封禁 物品 的所有用途</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.clear</td>
-<td>Allows to clear entities within one or more claims</td>
+<td>允许清除一个或多个领地的实体</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.schematic</td>
-<td>Allows to manage claim schematics</td>
+<td>允许管理领地图纸</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.debug</td>
-<td>Allows to use GDdebug</td>
+<td>允许玩家使用 GDdebug</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.delete.base</td>
-<td>Allows to use the deleteclaim command</td>
+<td>允许使用 deleteclaim 命令</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.delete.basic</td>
-<td>Allows to delete basic claims</td>
+<td>允许删除 基础 领地</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.delete.admin</td>
-<td>Allows to delete admin claims</td>
+<td>允许删除 管理员 领地</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.delete-claims</td>
-<td>Allows to delete all of another player's claims</td>
+<td>允许删除另一名玩家所有的领地</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.ignore.base</td>
-<td>Allows to use the ignore claims command</td>
+<td>允许使用 ignore claims 命令用以无视领地保护</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.ignore.basic</td>
-<td>Allows to ignore basic claim flags</td>
+<td>允许无视 基础 领地的保护</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.ignore.admin</td>
-<td>Allows to ignore admin claim flags</td>
+<td>允许无视 管理员 领地标签</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.ignore.town</td>
-<td>Allows to ignore town claim flags</td>
+<td>允许无视 城镇 领地标签</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.ignore.wilderness</td>
-<td>Allows to ignore wilderness claim flags</td>
+<td>允许无视 荒野 领地标签</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.permission-group</td>
-<td>Allows to use the claim command for group permissions</td>
+<td>允许对权限组使用领地指令</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.permission-player</td>
-<td>Allows to use the claim command for player permissions</td>
+<td>允许对玩家权限使用领地指令</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.reserve-name</td>
-<td>Allows to reserve claim names</td>
+<td>允许使用服务器保留领地名称</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.cuboid</td>
-<td>Allows to create/resize admin claims in 3D mode</td>
+<td>允许创建/重建大小于 3D 模式的 管理员 领地</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.list.admin</td>
-<td>Allows to list admin claims</td>
+<td>允许列出管理员领地</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.option.global</td>
-<td>Allows to manage global options</td>
+<td>允许管理全局选项</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.resize</td>
-<td>Allows to resize claims</td>
+<td>允许重建领地尺寸</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.resize.admin</td>
-<td>Allows to resize admin claims</td>
+<td>允许重建管理员领地的尺寸</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.resize.admin.subdivision</td>
-<td>Allows to resize admin claim subdivisions</td>
+<td>允许重建管理员子领地的尺寸</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.resize.basic</td>
-<td>Allows to resize basic claims</td>
+<td>允许重建 基础 领地的尺寸</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.resize.basic.subdivision</td>
-<td>Allows to resize basic claim subdivisions</td>
+<td>允许重建 基础子领地 的大小</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.resize.town</td>
-<td>Allows to resize town claims</td>
+<td>允许重建 城镇 领地的大小</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.set-admin-flags</td>
-<td>Allows to edit flags in an admin claim</td>
+<td>允许在 管理员 领地中编辑管理员标签</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.use-reserved-names</td>
-<td>Allows to use reserved claim names</td>
+<td>允许使用服务器保留名称</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.wilderness</td>
-<td>Allows to edit wilderness claims</td>
+<td>允许编辑 荒野 领地</td>
 </tr>
 <tr>
 <td>griefdefender.admin.command.delete-admin-claims</td>
-<td>Allows to delete all admin claims</td>
+<td>允许删除所有 管理员 领地</td>
 </tr>
 <tr>
 <td>griefdefender.admin.command.reload</td>
-<td>Allows to reload GP</td>
+<td>允许重新加载 GP</td>
 </tr>
 <tr>
 <td>griefdefender.admin.command.restore-claim.base</td>
-<td>Allows to restore claim to its natural state</td>
+<td>允许将领地恢复到初始状态</td>
 </tr>
 <tr>
 <td>griefdefender.admin.command.restore-nature.base</td>
-<td>Allows to switch shovel tool to restoration mode.</td>
+<td>允许切换圈地工具为恢复模式</td>
 </tr>
 <tr>
 <td>griefdefender.admin.command.restore-nature.aggressive</td>
@@ -11654,72 +11655,72 @@ See https://luckperms.net/wiki/Default-Groups</li>
 </tr>
 <tr>
 <td>griefdefender.admin.command.set-accrued-claim-blocks</td>
-<td>Allows to edit amount of accrued claim blocks</td>
+<td>允许编辑 累积领地方块数目</td>
 </tr>
 <tr>
 <td>griefdefender.admin.custom.flag</td>
-<td>Allows to use advanced claim flags in GUI</td>
+<td>允许在 GUI 中使用高级标签</td>
 </tr>
 <tr>
 <td>griefdefender.admin.flag-defaults</td>
-<td>Allows to edit flag defaults</td>
+<td>允许编辑 默认标签</td>
 </tr>
 <tr>
 <td>griefdefender.admin.flag-overrides</td>
-<td>Allows to edit flag overrides</td>
+<td>允许编辑 覆写标签</td>
 </tr>
 </tbody>
 </table>
-<h2 id="options-2"> Options</h2>
+<h2 id="选项-2"> 选项</h2>
 <table>
 <thead>
 <tr>
-<th>Permission Node</th>
-<th>Description</th>
+<th>权限节点</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>griefdefender.admin.claim.command.option.group.base</td>
-<td>Allows to set group options in claims</td>
+<td>允许设置领地中权限组的选项</td>
 </tr>
 <tr>
 <td>griefdefender.admin.claim.command.option.player.base</td>
-<td>Allows to set player options in claims</td>
+<td>允许设置领地玩家的选项</td>
 </tr>
 </tbody>
 </table>
-<h1 id="misc"> Misc</h1>
+<h1 id="杂项"> 杂项</h1>
 <table>
 <thead>
 <tr>
-<th>Permission Node</th>
-<th>Description</th>
+<th>权限节点</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>griefdefender.user.command.help</td>
-<td>Allows to you the view the help</td>
+<td>允许您查看帮助菜单</td>
 </tr>
 <tr>
 <td>griefdefender.user.chat.capture</td>
-<td>Allows to record chat in command GUI's</td>
+<td>在命令 GUI 中查看玩家聊天记录</td>
 </tr>
 </tbody>
 </table>
 ]]></content>
-    <category term="Info"/>
+    <category term="信息"/>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/guide/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<div><p>施工中</p>
 <p>这个文档还不稳定，我们正尽力地积极改进它!
 如果您遇到了什么问题，请报告给我们</p>
@@ -11768,13 +11769,13 @@ It works out of the box and fully integrates with <a href="https://ci.lucko.me/j
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Dynmap</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/dynmap/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/dynmap/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -11834,13 +11835,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Placeholder</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/placeholder/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/placeholder/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -11940,13 +11941,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">GDHooks</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -12015,13 +12016,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">WECUI</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/wecui/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/hooks/wecui/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -12047,13 +12048,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">自定义布局</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/layout/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/layout/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
 <div><p>Note</p>
 <p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
@@ -12075,23 +12076,23 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Pixelmon Preset</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/resources/Pixelmon/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/resources/Pixelmon/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -12102,13 +12103,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
   <entry>
     <title type="html">Resources</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/resources/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/GriefDefenderDoc/zh/resources/"/>
-    <updated>2021-10-06T05:40:09.000Z</updated>
+    <updated>2021-10-12T10:18:11.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>
@@ -12124,6 +12125,6 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-06T05:40:09.000Z</published>
+    <published>2021-10-12T10:18:11.000Z</published>
   </entry>
 </feed>
