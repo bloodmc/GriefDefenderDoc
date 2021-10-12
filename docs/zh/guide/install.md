@@ -1,41 +1,41 @@
 ---
-title: Install
-tags: install
-category: configurabe
+title: 安装
+tags: 安装
+category: 配置
 icon: install
 ---
 
-:warning: In this page, we will explain how to start using GriefDefender in your Bukkit/Sponge server step by step. :warning: 
+:warning: 在本页面, 我们将手把手教你如何在你的 Bukkit/Sponge 服务器上开始使用 GriefDefender. :warning: 
 
-## Getting Started
+## 入门
 
-### Requirements
+### 需求
 
-* [LuckPerms](https://luckperms.github.io/) permission plugin.  
-> **NOTE: GD only supports LuckPerms v5.**
+* [LuckPerms](https://luckperms.github.io/) 权限插件.  
+> **提示: GD 只支持 LuckPerms v5.**
 
-:warning: GD makes heavy use of LP's `default` group. Make sure your LP groups are inheriting the `default` group or GD will not function properly. LP also strongly recommends to never disable this group. See https://github.com/lucko/LuckPerms/wiki/Default-Groups#where-to-start :warning: 
+:warning: GD 大量使用了 LP 的 `default` 权限组. 请确保你的 LP 权限组均已继承 `default` 组，否则 GD 将无法正常工作. LP 也强烈建议不要禁用该权限组. 查阅 https://github.com/lucko/LuckPerms/wiki/Default-Groups#where-to-start :warning: 
 
 ##### Sponge
-* An up-to-date [Sponge].
+* 最新版本的 [Sponge].
 
 ##### Bukkit
-* An up-to-date [Paper] or [Spigot].
+* 最新版本的 [Paper] 或 [Spigot].
 
-### Installation
+### 安装
 
-:warning: If using `spark`, update to latest version at https://ci.lucko.me/job/spark/ :warning:   
-:warning: Set `spawn-protection` to `0` in `server.properties` to allow GD to protect spawn. If this is not set properly, the server will block actions before GD has a chance to see it. :warning:   
+:warning: 如果你在使用 `spark` 插件, 请在此链接下载并更新到最新版本 https://ci.lucko.me/job/spark/ :warning:   
+:warning: 在  `server.properties` 中设置 `spawn-protection` 为 `0` 以允许 GD 接管出生保护. 如果此项设置错误, GD 将无法正常接管出生保护. :warning:   
 
-Download the latest GriefDefender jar from spigot's plugin website. Be sure to choose your correct Minecraft version, and keep it always updated! After the download drop it into your server's plugins folder.
+从 Spigot 的插件页面下载最新的 GriefDefender.请务必选择正确的 Minecraft 版本，并保持它为最新版本 下载后,将其放入你服务器的插件文件夹.
 
-Now start your server once to generate all configuration files, to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`. Next shut down your server and start configuring your server.
+现在启动你的服务器以生成所有的配置文件，检查 GriefDefender 是否成功加载，你可以检查控制台是否出现 `[GriefDefender] Loaded successfully`. 接下来关闭你的服务器并开始配置流程.
 
-### Configuration
+### 配置
 
-> **NOTE: There are also a few options that have to be set using your permission system, you can read more about those on the [Options wiki page](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options).**
+> **提示: 还有一些选项必须使用你的权限系统来设置，你可以在 [选项 wiki 页面](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options) 上阅读更多关于这些选项的信息.**
 
-All configuration files can be found in a folder called `GriefDefender` in your servers config or plugins directory.
+所有的配置文件都在你的 config 或 plugin 文件夹中名为 `GriefDefender` 的文件夹中找到.
 
 ```
 config/
@@ -56,41 +56,42 @@ config/
     └── options.conf
 ```
 
-You can change a number of settings in the [config file](https://github.com/bloodmc/GriefDefender/wiki/Global-Config). The file has detailed annotations that should make it clear what each option does. There are three types of configs:
+你可以更改 [配置文件](https://github.com/bloodmc/GriefDefender/wiki/Global-Config) 中的很多设置. 这些文件有详细的注释可以让你了解每个选项的作用. 一共有 3 种类型的配置文件:
 
-* Global
-* Dimension
-* World
+* 全局 (Global)
+* 纬度 (Dimension)
+* 世界 (World)
 
-Global configuration files can affect all of a server’s worlds and dimensions. This is the default level for configs.  
-Dimension configuration files are used to affect a certain dimension or group of worlds. These types of configs will override the global config files. World configuration files are used to modify individual worlds only.   
-World configs override dimension and global configs.
+全局配置文件可以影响一个服务器的所有世界和维度. 这是配置文件的默认级别.
+维度配置文件是用来影响某个维度或一组世界的. 这些类型的配置文件将覆盖全局配置文件的设置. 世界配置文件仅用于修改单个世界.
+世界配置文件将覆盖维度和全局配置文件的设置.
 
-Claim data can be found inside the folder of the dimension the claim is in, e.g. all overworld world claims are saved inside 
+领地数据可以在领地所处维度的文件夹中找到, 例如，所有 A 纬度的世界领地都保存在
 
-`config/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Sponge  
-`plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Bukkit  
+Sponge: `config/GriefDefender/worlds/minecraft/A/world/ClaimData`
+
+Bukkit: `plugins/GriefDefender/worlds/minecraft/A/world/ClaimData`
 
  
-### Permissions
+### 权限
 
-:warning: It is VERY IMPORTANT you follow https://github.com/bloodmc/GriefDefender/wiki/Permissions#important before proceeding. :warning:  
+:warning: **非常重要**的是在你继续进行本项配置之前需要查阅 https://github.com/bloodmc/GriefDefender/wiki/Permissions#important :warning:  
 
-After install GriefDefender correctly, you need to give your players permission to claim land, they aren't given by default. The only permission needed for basic GD setup is `griefdefender.user.*`. For basic admin setup, give admins the permission `griefdefender.admin.*` and `griefdefender.user.*`. 
+在正确安装 GriefDefender 后, 你需要给玩家领地相关的权限, 玩家默认是没有这些权限的. 对于基础 GD 权限只需要给予 `griefdefender.user.*`. 对于管理员权限, 给予管理员 `griefdefender.admin.*` 和 `griefdefender.user.*` 权限. 
 
-If you want more fine tuned permissions you can find all permissions [here](https://github.com/bloodmc/GriefDefender/wiki/Permissions) and for a list of all command permissions & their usage check [here](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
+你可以在 [这里](https://github.com/bloodmc/GriefDefender/wiki/Permissions) 找到更详细的权限节点, 查看所有指令权限和用法请在 [这里](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions) 查看. 
 
-If you believe that commands might be a little longer or hard to memorize, consider creating custom alias. [Click here for more information](https://github.com/bloodmc/GriefDefender/wiki/Custom-Alias-Creation)
+如果你觉得指令过长或难于记忆, 可以考虑使用指令别名. [点击这里获取更多相关信息](https://github.com/bloodmc/GriefDefender/wiki/Custom-Alias-Creation)
 
-To apply the above permissions to a group in LuckPerms, run the following command
+要对某个权限组应用上述权限, 请运行此命令
 
 ```
-/lp group <group> permission set griefdefender.user.*
+/lp group <权限组> permission set griefdefender.user.*
 ```
 
-For ´group´ use your default group, use "default" if you don't have one.
+在 ´权限组´ 处填写你的默认权限组, 如果你不知道，请使用 "default".
 
-Once GD is installed and running, see https://github.com/bloodmc/GriefDefender/wiki/Claim-Management to learn how to create a protection claim and manage it.
+当 GD 已安装并运行, 查阅 https://github.com/bloodmc/GriefDefender/wiki/Claim-Management 学习如何创建和管理领地.
 
 [Paper]: https://papermc.io/downloads
 [Spigot]: https://www.spigotmc.org/wiki/buildtools/
