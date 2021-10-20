@@ -1,9 +1,18 @@
 ---
-title: Options
-category: Option
+title: 选项
+category: 
 tags: Meta
 icon: set
 ---
+:::: details 名词辨析
+Options - 选项
+Meta - 元数据
+Global - 全局
+set - 集
+permission - 权限
+group - 权限组
+::::
+
 Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.  
 
 Default values can be changed in `options.conf`, for finer control continue reading below.

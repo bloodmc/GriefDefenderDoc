@@ -1,33 +1,38 @@
 ---
-title: Flag Definition
-tags: Settings
-category: Flag
+title: 预制标签
+tags: 设置
+category: 标签
 icon: activity
 ---
 
-## Overview
+## 概览
 
-The flag definition system provides both users and admins the ability to manage their claim flags with ease.
-GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
-The delivered vanilla flag definition data can be found in the following location
+预制标签系统为用户及管理员提供了简便管理领地标签的可能。
+GriefDefender 默认提供了一些较为通用的预制标签，默认提供的标签数据只适用于纯净且可以于以下文件找到
 ### Sponge
 `./config/GriefDefender/presets/minecraft.conf`
 ### Bukkit
 `./plugins/GriefDefender/presets/minecraft.conf`
 
+:::: details 名词详解
+flag definitions - 预制标签
+flag - 基础标签
+permission - 规则
+PUBLC - 公众
+OWNER - 受信者
+::::
 
+## 管理标签
 
-## Admin
+管理员能根据需要对预制标签进行**增删改**，以便最大程度的客制化用户的标签使用体验。
 
-Admins are given full control to add/remove/customize flag definitions.
+如果要向默认提供的 minecraft 预制标签组添加新标签，请打开 `./presets/minecraft.conf` 文件。
+在本节，您将看到两个预制标签页 'admin' 和 'user'。  
 
-To add a flag definition to an existing delivered minecraft preset, open the `./presets/minecraft.conf` file.
-Within this section, you will see 2 delivered groups 'admin' and 'user'.  
+### 添加新的预制标签
 
-### Add new flag definition
-
-If you want to add a flag to the 'admin' section, do the following
-1. Clone an existing flag definition. We will use `ambient-spawn` for this example.
+我们假设您要往 'admin' 标签页添加新标签。
+1. 克隆一个预制标签，我们以 `ambient-spawn` 作为样例。
 
 ```
 ambient-spawn {
@@ -42,77 +47,76 @@ ambient-spawn {
 }
 ```
 
-Lets break this example down
+让我们一步步拆分其组成
 
-#### Name  
+#### 名称  
 
-`ambient-spawn` - This is the name of your definition that will be displayed to users when they open it up in the flag GUI. It can be whatever you like.
+`ambient-spawn` - 这是定义的名称，当用户在标签 GUI中打开它时，该名称将显示给用户。它可以是你喜欢的任何东西。
 
-#### Contexts  
+#### 情境  
 
 ```
 contexts=[
         "gd_claim_default=user"
     ]
 ```
-These are the definition contexts that will be used with all permissions defined within `permissions=[...]`.  
-It currently only supports context keys `gd_claim_default`, `gd_claim_override`, or `gd_claim`.  
-See https://github.com/bloodmc/GriefDefender/wiki/Contexts to learn how contexts work.  
+这是预制标签中所包含权限 `permissions=[...]` 的作用情境。
+其目前只接受以下值 `gd_claim_default`, `gd_claim_override`，或 `gd_claim`。
+预知更多，详见 https://github.com/bloodmc/GriefDefender/wiki/Contexts 来进一步了解情境的作用。
 
-#### Default value  
+#### 默认值  
 
-`default-value=true` - This is the default-value GD will use when applying the definition during startup.  
-GD will only apply this value during startup as a transient permission if the contexts include either `gd_claim_default` or `gd_claim_override`.  
-If the definition does not contain one of these contexts then the default value is ignored.
+`default-value=true` - 这是 GD 在启动期间应用预制标签时使用的默认值。
+GD 仅在启动期间将此值作为临时权限应用，前提是情境包括 `gd_claim_default` 或 `gd_claim_override`。
+如果定义不包含这些情境之一，则忽略默认值。
 
-#### Enabled  
+#### 启用与否  
 
-`enabled=true` - This controls whether the definition is enabled in GD or disabled. If set to `false`, the definition will be ignored.
+`enabled=true` - 该选项决定了 GD 是否使用该预制标签，如果设为 `false`，该预制标签将被忽略。
 
 
-#### Permissions  
+#### 规则
 
 ```
 permissions=[
-    "flag=entity-spawn, target=#ambient"
+    "flag=entity-spawn, target=#ambient",
+    "flag=xxx"
 ]
 ```
-These are the flag permissions to assign this definition. Permissions can hold one or more flag entries. To add an additional line, add a `,` at end of previous then insert a new line.  
-Each line requires a `flag=<flag_name>` entry followed by either source or target  context.  
-If you want to apply a permission to all possible targets then don't include `target` as GD will automatically apply to all targets.  
-If you want to apply a permission to all possible sources then don't include `source` as GD will automatically apply to all sources.  
+这里定义了该预制标签中包含的基础标签。一个预制标签可以拥有一个乃至多个基础标签。如果要将多条基础标签整合进预制标签，那么应在每行末尾插入一个 `,` 再添加新行。
+在每行中需要定义 `flag=<基础标签>` 及其紧接着的目标和来源。  
+因为 GD 会自动应用到所有检测目标，如果您想要一条规则应用到全部可能的目标，则不填 `target` 。
+因为 GD 会自动检测所有来源，如果您想要一条规则应用到全部可能的来源，则不填 `source`。
 
-The most common contexts for permissions are as follows
+一些常用的规则情境
 ```
-source
-target
-used_item
-item_name
-server
-state
-world
+source  行为来源
+target  作用目标
+used_item  使用物品
+item_name  物品名称
+server  所处服务器
+state  状态
+world  世界
 ```
 
-The accepted context value must be a valid identifier. To locate the proper value in game, do the following
+提供的情境必须是有效且适用于标签。要在游戏中找到合适的值，请执行以下操作
 
-1. Run command `/gddebug record claim` - This will start a debug session in the claim you are in.
-2. Perform an action you want to manage via flag definition.
-3. Run command `/gddebug paste` - This will display a web link to view debug results.
-4. Open link, and you will see a list of actions GD checked for the claim. You will a `source` and `target` column which will contain the values you need.
+1. 运行命令 `/gddebug record claim` - 这将在您所在的领地中启动调试会话。
+2. 做您想通过领地标签来限制的事
+3. 运行命令 `/gddebug paste` - 这将显示一个 web链接 以查看调试结果。
+4. 打开链接，您将看到 GD 为领地检查的操作列表。您会在 `source` `target` 列看到您所需要的值。
 
-To locate a value for `used_item` or any other context, locate the Context column and you will see a list of all support contexts for the specific line action.
+要知晓 `used_item` 或任何其他情境，找到情境列，您将会在特定行看到该操作所支持的情境。
 
-Another way to find an id you are looking for is to check a community run wiki for it
-
-See https://minecraft-ids.grahamedgecombe.com/
+另一个找到您想获取的情境的方法是查阅相关资料。
 
 
-### Minecraft Flag Definition Preset Config  
+### Minecraft 预制标签预设  
 
-For more information on what you can do with the flags config, see below
+有关如何使用标志配置的更多信息，请参见下文
 
 <details>
-  <summary>Minecraft Preset</summary>
+  <summary>Minecraft 预设</summary>
 
 ```
 # A collection of flag definitions designed for vanilla minecraft.
@@ -990,129 +994,47 @@ minecraft {
 
 </details>
 
-## GUI  
+## GUI 组成及工作方式
 
-The flag GUI is designed to allow both users and admins to easily administer their claim flags.
+标签 GUI旨在允许用户和管理员轻松管理其领地标签。
 
-The command to access the flags GUI is `/cf` or `/gd flag claim`
+打开标签界面的指令是 `/cf` 或 `/gd flag claim`
 
-With GD 2.0, all flag definitions can be applied to two types of players : PUBLIC and OWNER.  
+在 GD 2.0 中, 所有预制标签可以应用到两种新玩家类型，即 : PUBLIC 和 OWNER。
 
-`PUBLIC` - When toggling a flag definition within `PUBLIC` in GUI, all non-trusted players will be affected.  
-`OWNER` - When toggling a flag definition within `OWNER` in GUI, all trusted players including owner will be affected.  
+`PUBLIC` - 在标签界面中切换预制标签页为 `PUBLIC`，所有未被信任的玩家都将被影响。
+`OWNER` - 在标签界面中切换预制标签页为 `OWNER`，所有领地受信者及所有者本身都将被影响。
 
 
-### Permissions  
+### 权限  
 
-The following permission controls access to each user flag `griefdefender.user.custom.flag.<group>.<flagname>`.
-As an example, lets assume you want to deny user access to the `damage-animals` flag. You would enter the following in LuckPerms , `/lp group <groupname> set griefdefender.user.custom.flag.user.damage-animals false`
+以下权限控制着用户对预制标签的访问 `griefdefender.user.custom.flag.<标签组>.<预制标签名称>`.
+我们假设您不想让用户有权控制 `damage-animals` 预制标签。 您需要在 LuckPerms 输入以下命令 `/lp group <groupname> set griefdefender.user.custom.flag.user.damage-animals false`
 
-### Flag Values
+### 标签值
 
-As shown below, both admin/user flags start off as either `true` or `false` and will represent the current active value of claim you are in.  
+如下所示，两个 管理/用户 预制标签都以 `true` 或 `false` 来显示您所处领地的标签影响。
 
-### ADMIN
-:warning: Admin flags will ONLY affect the claim you are in.  
+### 管理员GUI相关
+:warning: 管理员标签组的标签只会影响您所在领地。
 
 ![Admin GUI](https://i.imgur.com/tSVSC7q.png)
 
 
-By default, admins have access to 2 modes `PRESET` and `ADVANCED`.
-The `PRESET` mode is directly linked to the minecraft flag definitions preset file. Each group is read into the GUI as a tab along with its definitions.
-There are 2 delivered groups that GD ships with, `USER` and `ADMIN`. 
+默认情况下，管理员可以访问2种模式 `PRESET` 和 `ADVANCED`。
+`PRESET` 模式直接链接到 minecraft 预设标签定义预设文件。每个组都作为一个选项页并将该选项页定义的内容读入 GUI。
+GD 随附 2 个预制标签组，即 `USER` 和 `ADMIN`。
  
-Both groups will apply flags to claim you are standing in. If you need flags set as a default, set it up in config as shown above.
+这两个小组都将使用预制标签。如果需要将标志设置为默认值，请在配置中进行设置，如上所示。
+
+### 用户GUI
+:warning: 用户标签组的预制标签只会影响您所在的领地。
+:warning: 如果您想要更改 `USER` 于别人的领地中，那您必须有忽略领地的权限并输入 `/ignoreclaims`，之后就能使用 `/cf` 命令了。
 
 
-Flag Definition                                  | Default Value | Description |
--------------------------------------------------|---------------|--------------|
-```ambient-spawn``` |  true  | Controls whether ambients, such as bats, spawn.
-```animal-block-modify``` |  true  | Controls whether animals can modify blocks such as rabbits eating carrots.
-```animal-spawn``` |  true  | Controls whether animals, such as cows/pigs/horses/etc., spawn.
-```aquatic-spawn``` |  true  | Controls whether aquatics that live in water, such as squids, spawn.
-```armorstand-use``` |  false | Controls whether armorstands can be placed or broken.
-```block-trampling``` |  false  | Controls whether farmland and turtle eggs can be trampled.
-```chorus-fruit-teleport``` | false | Controls whether a player can use chorus fruit to teleport.
-```commandblock-block-break``` | false | Controls whether command blocks can break blocks.
-```commandblock-block-place``` | false | Controls whether command blocks can place blocks.
-```creeper-block-explosion``` | false | Controls whether a creeper can explode blocks.
-```creeper-entity-explosion``` | false | Controls whether a creeper can explode entities.
-```endcrystal-use```      | false  | Controls whether endcrystals can be placed or broken.
-```entity-armorstand-damage``` | false | Controls whether entities can deal damage to armorstands.
-```entity-itemframe-damage``` | false | Controls whether entities can deal damage to item frames.
-```exp-drop``` | true | Controls whether experience orbs can drop.
-```fall-entity-damage``` | true | Controls whether entities can take fall damage.
-```fall-player-damage``` | true | Controls whether players can take fall damage.
-```falling-block-break``` | true | Controls whether falling blocks can break.
-```fire-block-damage``` | true | Controls whether fire can cause block damage.
-```fire-entity-damage``` | true |  Controls whether fire can cause entity damage.
-```lightning-damage```  | true | Controls whether lightning can cause harm.
-```monster-animal-damage``` | false |  Controls whether monsters can deal damage to animals.
-```monster-player-damage``` | true | Controls whether monsters can deal damage to players.
-```monster-spawn```  | true | Controls whether monsters, such as creepers and skeletons, can spawn.
-```piston-item-spawn``` | true | Controls whether mycelium can spread.
-```piston-use``` | false | Controls whether pistons can be used.
-```player-block-break``` | false | Controls whether players can break blocks.
-```player-block-interact``` | false | Controls whether players can interact with blocks.<br />Note: This does not include inventory blocks such as chests.
-```player-block-place``` | false | Controls whether players can place blocks.
-```player-damage``` | true | Controls whether players can be damaged.
-```player-enderpearl-interact``` | true | Controls whether players can use an enderpearl.
-```player-endportal-use``` | true | Controls whether players can use end portal.
-```player-entity-interact``` | true | Controls whether players can interact with entities.<br />Note: This does not include chest access with entities such as horses.
-```player-enter``` | true | Controls whether a player can enter this claim.
-```player-exit``` | true | Controls whether a player can exit this claim.
-```player-item-drop``` | true | Controls whether players can drop items.
-```player-item-pickup``` | true | Controls whether players can pickup items.
-```player-itemframe-interact``` | false | Controls whether players can interact with item frames.
-```player-itemhanging-place``` | false | Controls whether players can place hanging items such as itemframes.
-```player-netherportal-use``` | true | Controls whether players can use nether portal.
-```player-teleport-from``` | true | Controls whether players can teleport from this claim.
-```player-teleport-to``` | true | Controls whether players can teleport to this claim.
-```player-villager-damage``` | false | Controls whether players can deal damage to villagers.
-```ravager-block-break``` | true | Controls whether ravagers can break blocks during raids.
-```silverfish-block-infest``` | false | Controls whether silverfish can infest blocks such as cobblestone.
-```tnt-block-explosion``` | false | Controls whether tnt can explode blocks.
-```tnt-entity-explosion``` | false | Controls whether tnt can explode entities.
-```turtle-egg-hatch``` | true | Controls whether turtle eggs can hatch.
-```villager-farm``` | true | Controls whether villages can farm crops.
-```wither-block-break``` | false | Controls whether withers can break blocks.
-```wither-entity-damage``` | true | Controls whether withers can damage entities.
-
-### USER
-:warning: User flags will ONLY affect the claim you are in.  
-:warning: If you want to modify `USER` flag definitions in a claim that you do not own, you must have ignoreclaims permissions and enter `/ignoreclaims` before executing `/cf` command.
-
-
-As a user, if you enter the `/cf` command, you will see the following
+作为用户，如果您输入 `/cf` 命令，您将看到以下内容
 
 ![User GUI](https://i.imgur.com/LTeNaaD.png)
 
-Flag Definition                                  | Default Value | Description | 
--------------------------------------------------|---------------|--------------|
-```block-fertilize``` | false | Controls whether a player can fertilize a block with bonemeal.
-```chest-access``` | false | Controls whether a player can access chest inventories.
-```crop-growth``` | true | Controls whether crops can grow.
-```damage-animals``` | false | Controls whether animals can be damaged.
-```enderman-grief``` | false | Controls whether enderman can grief.
-```fire-spread``` | false | Controls whether fire can spread.
-```grass-growth``` | true | Controls whether grass can grow.
-```ice-form``` | true | Controls whether ice can form.
-```ice-melt``` | true | Controls whether ice can melt.
-```lava-flow``` | false | Controls whether lava can flow.
-```leaf-decay``` | true | Controls whether leaves can decay.
-```lighter``` | false | Controls whether a player can use flint and steel.
-```mushroom-growth``` | true | Controls whether mushrooms can grow.
-```mycelium-spread``` | true | Controls whether mycelium can spread.
-```pvp``` | true | Controls whether PvP combat is allowed.
-```ride``` | false | Controls whether vehicles(including animals), not owned by the player, can be mounted.
-```sign-use``` | true | Controls whether players can use signs.
-```sleep``` | true | Controls whether players can sleep in beds
-```snow-fall``` | true | Controls whether snow can fall.
-```snow-melt``` | true | Controls whether snow can melt.
-```snowman-trail``` | true | Controls whether snowmen can create snow beneath them.
-```soil-dry``` | true | Controls whether soil will dry.
-```vehicle-use``` | false | Controls whether vehicles(boats, minecarts, etc.) can be placed, ridden and broken.
-```villager-trade``` | true | Controls whether players can trade with villagers.
-```vine-growth``` | true | Controls whether vines(and kelp) can grow.
-```water-flow``` | false | Controls whether water can flow.
+
 
