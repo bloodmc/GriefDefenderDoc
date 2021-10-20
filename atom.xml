@@ -3,7 +3,7 @@
   <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</id>
   <title>GriefDefender</title>
   <subtitle>A new way to secure your world.</subtitle>
-  <updated>2021-10-12T16:34:12.444Z</updated>
+  <updated>2021-10-20T10:41:05.651Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/atom.xml"/>
   <link rel="alternate" href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/"/>
@@ -22,13 +22,14 @@
   <category term="Migration"/>
   <category term="Info"/>
   <category term="Preset"/>
+  <category term="标签"/>
   <category term="配置"/>
   <category term="信息"/>
   <entry>
     <title type="html">API</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/API/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/API/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -77,13 +78,13 @@ Note: If you make use of any API methods that accepts a kyori component as param
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Contrubution</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/Contribution/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/Contribution/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -115,13 +116,13 @@ In the bottom of each pages there will be a button redirect you to the source fi
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Contexts</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/contexts/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/contexts/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -348,13 +349,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Debugging</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/debugging/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/debugging/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -905,13 +906,13 @@ Note: The filter can be any word you want.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Flags</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/flags/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/flags/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -1133,13 +1134,13 @@ flag-control {
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Global Config</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/global-config/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/global-config/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -1875,13 +1876,13 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Management</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-management/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-management/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -2170,13 +2171,13 @@ griefdefender.admin.option.perk.fly.manager
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Rent System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-rent-system/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-rent-system/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -2278,13 +2279,13 @@ Syntax is as follows<br>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Types</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-types/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-types/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p><em>This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims.</em></p>
 <h2 id="claim-types"> Claim Types</h2>
 <p>There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use <code>/adminclaims</code>, <code>/townclaims</code> and <code>/basicclaims</code>. To switch to subdivision mode, use <code>/claimsubdivide</code>. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.</p>
@@ -2335,13 +2336,13 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">User-Friendly Commands</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/custom-alias-creation/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/custom-alias-creation/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h2 id="user-friendly-commands"> User-Friendly Commands</h2>
 <p>One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accesible for everyone with shorter commands.</p>
 <p>For this, you may need to install an alias plugin like CustomCommands, or the commands.yml inside of the server folder.</p>
@@ -2361,13 +2362,13 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Flag Definition</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/flag-definitions-gui/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/flag-definitions-gui/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h2 id="overview"> Overview</h2>
 <p>The flag definition system provides both users and admins the ability to manage their claim flags with ease.
 GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
@@ -3753,13 +3754,13 @@ There are 2 delivered groups that GD ships with, <code>USER</code> and <code>ADM
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Options</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/options/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/options/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
 <p>Default values can be changed in <code>options.conf</code>, for finer control continue reading below.</p>
 <h2 id="built-in-commands"> Built-in Commands</h2>
@@ -4107,13 +4108,13 @@ There are 4 subsections within this section.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">PVP</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/pvp/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/pvp/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -4153,13 +4154,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Tags System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/tags/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/tags/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>A <code>Tag</code> is a new system introduced in Minecraft 1.13 that allows users to group one or more item, block, entity identifiers under a single group known as a tag. GriefDefender integrates into the tag system and exposes all available tags as contexts that can applied with a flag or option.</p>
 <p>For example, lets say you wanted to allow interaction with the following standing signs</p>
 <ul>
@@ -4216,13 +4217,13 @@ Note: If your datapack is not enabled then your datapack structure shown in step
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Trust System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/trust-system/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/trust-system/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>There four different types of trust: Accessors, Builders, Containers, and Managers.</p>
 <h3 id="arguments"> Arguments</h3>
 <table>
@@ -4270,13 +4271,13 @@ Note: If your datapack is not enabled then your datapack structure shown in step
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Command Overview</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/commands/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/commands/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h1 id="command-overview"> Command Overview</h1>
 <p>Arguments Key: \&lt;required\&gt; [optional]</p>
 <h3 id="claims"> Claims</h3>
@@ -4690,13 +4691,13 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Install</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/install/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/install/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ In this page, we will explain how to start using GriefDefender in your Bukkit/Sponge server step by step. ⚠️</p>
 <h2 id="getting-started"> Getting Started</h2>
 <h3 id="requirements"> Requirements</h3>
@@ -4769,13 +4770,13 @@ World configs override dimension and global configs.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefPrevention</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/griefprevention/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/griefprevention/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -4887,13 +4888,13 @@ Migration output should appear in console as it is migrating.</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">WorldGuard</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/worldguard/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/worldguard/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -4987,13 +4988,13 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Permission</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/permissions/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/permissions/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>If you want to have a quickstart, apply <code>griefdefender.user.*</code> to your players and both <code>griefdefender.user.*</code> and <code>griefdefender.admin.*</code> to your staff/admins.</p>
 <p>It is recommended to use the base permission nodes above, and if you want a more fine control read all permissions below and deny accordingly.</p>
 <h3 id="important"> IMPORTANT</h3>
@@ -5655,13 +5656,13 @@ See https://luckperms.net/wiki/Default-Groups</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<div><p>W.I.P</p>
 <p>This document is being greatly improved!
 If you encounter problems, please report to us</p>
@@ -5710,13 +5711,13 @@ It works out of the box and fully integrates with <a href="https://ci.lucko.me/j
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Dynmap</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/dynmap/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/dynmap/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -5776,13 +5777,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Placeholder</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/placeholder/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/placeholder/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -5882,13 +5883,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">GDHooks</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -5957,13 +5958,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">WECUI</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/wecui/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/wecui/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -5989,13 +5990,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Custom Layout</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/layout/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/layout/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>You can use slots with markdown and component support to custom page layout.</p>
 <div><p>Note</p>
 <p>This is just a demo, you should add styles according to your own needs.</p>
@@ -6017,13 +6018,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>This is an example of a normal homepage. You can place your main content here.</p>
 <p>To use this layout, you need to set <code>home: true</code> in the page front matter.</p>
 <p>For related descriptions of configuration items, please see <a href="https://vuepress-theme-hope.github.io/guide/layout/home/" target="_blank" rel="noopener noreferrer">Project HomePage Layout Config</a>.</p>
@@ -6031,13 +6032,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Pixelmon Preset</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/Pixelmon/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/Pixelmon/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -6048,13 +6049,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Resources</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>
@@ -6070,25 +6071,25 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Slide page</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/slides/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/slides/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[
 <i>Not supported content</i>]]></content>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">API</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/API/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/API/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -6137,13 +6138,13 @@ Note: If you make use of any API methods that accepts a kyori component as param
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Contrubution</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/Contribution/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/Contribution/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -6175,13 +6176,13 @@ In the bottom of each pages there will be a button redirect you to the source fi
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Contexts</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/contexts/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/contexts/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -6408,13 +6409,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Debugging</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/debugging/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/debugging/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -6965,13 +6966,13 @@ Note: The filter can be any word you want.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Flags</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/flags/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/flags/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -7193,13 +7194,13 @@ flag-control {
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Global Config</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/global-config/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/global-config/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -7935,13 +7936,13 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Management</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-management/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-management/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -8230,13 +8231,13 @@ griefdefender.admin.option.perk.fly.manager
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Rent System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-rent-system/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-rent-system/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -8338,13 +8339,13 @@ Syntax is as follows<br>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Types</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-types/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-types/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p><em>This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims.</em></p>
 <h2 id="claim-types"> Claim Types</h2>
 <p>There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use <code>/adminclaims</code>, <code>/townclaims</code> and <code>/basicclaims</code>. To switch to subdivision mode, use <code>/claimsubdivide</code>. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.</p>
@@ -8395,55 +8396,35 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
-    <title type="html">User-Friendly Commands</title>
-    <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/custom-alias-creation/</id>
-    <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/custom-alias-creation/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="user-friendly-commands"> User-Friendly Commands</h2>
-<p>One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accesible for everyone with shorter commands.</p>
-<p>For this, you may need to install an alias plugin like CustomCommands, or the commands.yml inside of the server folder.</p>
-<p>Here is one example of using the brand new fly-speed option. This example was developed using CMI alias system built-in, but as mentioned before, you can use any.</p>
-<div><pre><code> CustomAlias:
-  fspeed:
-    Cmds:
-    - cop [playerName] player-fly-speed $1 context[default=global]
-    Perm: true
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>This will result on a player executing <code>/fspeed 0.5</code> and having his flight updated immediately, instead of using the longer input.</p>
-<p>You could basically make anything from GriefDefender shortened with custom alias.</p>
-<p><strong>NOTE:</strong> For this specific case, apart from having a CMI permission to execute the <code>/fspeed</code> command, the player also needs to have the GriefDefender permission to interact with Advanced Options. For more information: <a href="https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options" target="_blank" rel="noopener noreferrer">See Advanced Options Wiki</a></p>
-<p>test</p>
-]]></content>
-    <category term="Command"/>
-    <contributor>
-      <name/>
-    </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">Flag Definition</title>
+    <title type="html">预制标签</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="overview"> Overview</h2>
-<p>The flag definition system provides both users and admins the ability to manage their claim flags with ease.
-GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
-The delivered vanilla flag definition data can be found in the following location</p>
+    <updated>2021-10-20T10:37:01.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="概览"> 概览</h2>
+<p>预制标签系统为用户及管理员提供了简便管理领地标签的可能。
+GriefDefender 默认提供了一些较为通用的预制标签，默认提供的标签数据只适用于纯净且可以于以下文件找到</p>
 <h3 id="sponge"> Sponge</h3>
 <p><code>./config/GriefDefender/presets/minecraft.conf</code></p>
 <h3 id="bukkit"> Bukkit</h3>
 <p><code>./plugins/GriefDefender/presets/minecraft.conf</code></p>
-<h2 id="admin"> Admin</h2>
-<p>Admins are given full control to add/remove/customize flag definitions.</p>
-<p>To add a flag definition to an existing delivered minecraft preset, open the <code>./presets/minecraft.conf</code> file.
-Within this section, you will see 2 delivered groups 'admin' and 'user'.</p>
-<h3 id="add-new-flag-definition"> Add new flag definition</h3>
-<p>If you want to add a flag to the 'admin' section, do the following</p>
+<details><summary>名词详解</summary>
+<p>flag definitions - 预制标签
+flag - 基础标签
+permission - 规则
+PUBLC - 公众
+OWNER - 受信者</p>
+</details>
+<h2 id="管理标签"> 管理标签</h2>
+<p>管理员能根据需要对预制标签进行<strong>增删改</strong>，以便最大程度的客制化用户的标签使用体验。</p>
+<p>如果要向默认提供的 minecraft 预制标签组添加新标签，请打开 <code>./presets/minecraft.conf</code> 文件。
+在本节，您将看到两个预制标签页 'admin' 和 'user'。</p>
+<h3 id="添加新的预制标签"> 添加新的预制标签</h3>
+<p>我们假设您要往 'admin' 标签页添加新标签。</p>
 <ol>
-<li>Clone an existing flag definition. We will use <code>ambient-spawn</code> for this example.</li>
+<li>克隆一个预制标签，我们以 <code>ambient-spawn</code> 作为样例。</li>
 </ol>
 <div><pre><code>ambient-spawn {
     contexts=[
@@ -8456,55 +8437,55 @@ Within this section, you will see 2 delivered groups 'admin' and 'user'.</p>
     ]
 }
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>Lets break this example down</p>
-<h4 id="name"> Name</h4>
-<p><code>ambient-spawn</code> - This is the name of your definition that will be displayed to users when they open it up in the flag GUI. It can be whatever you like.</p>
-<h4 id="contexts"> Contexts</h4>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>让我们一步步拆分其组成</p>
+<h4 id="名称"> 名称</h4>
+<p><code>ambient-spawn</code> - 这是定义的名称，当用户在标签 GUI中打开它时，该名称将显示给用户。它可以是你喜欢的任何东西。</p>
+<h4 id="情境"> 情境</h4>
 <div><pre><code>contexts=[
         &quot;gd_claim_default=user&quot;
     ]
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>These are the definition contexts that will be used with all permissions defined within <code>permissions=[...]</code>.<br>
-It currently only supports context keys <code>gd_claim_default</code>, <code>gd_claim_override</code>, or <code>gd_claim</code>.<br>
-See https://github.com/bloodmc/GriefDefender/wiki/Contexts to learn how contexts work.</p>
-<h4 id="default-value"> Default value</h4>
-<p><code>default-value=true</code> - This is the default-value GD will use when applying the definition during startup.<br>
-GD will only apply this value during startup as a transient permission if the contexts include either <code>gd_claim_default</code> or <code>gd_claim_override</code>.<br>
-If the definition does not contain one of these contexts then the default value is ignored.</p>
-<h4 id="enabled"> Enabled</h4>
-<p><code>enabled=true</code> - This controls whether the definition is enabled in GD or disabled. If set to <code>false</code>, the definition will be ignored.</p>
-<h4 id="permissions"> Permissions</h4>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>这是预制标签中所包含权限 <code>permissions=[...]</code> 的作用情境。
+其目前只接受以下值 <code>gd_claim_default</code>, <code>gd_claim_override</code>，或 <code>gd_claim</code>。
+预知更多，详见 https://github.com/bloodmc/GriefDefender/wiki/Contexts 来进一步了解情境的作用。</p>
+<h4 id="默认值"> 默认值</h4>
+<p><code>default-value=true</code> - 这是 GD 在启动期间应用预制标签时使用的默认值。
+GD 仅在启动期间将此值作为临时权限应用，前提是情境包括 <code>gd_claim_default</code> 或 <code>gd_claim_override</code>。
+如果定义不包含这些情境之一，则忽略默认值。</p>
+<h4 id="启用与否"> 启用与否</h4>
+<p><code>enabled=true</code> - 该选项决定了 GD 是否使用该预制标签，如果设为 <code>false</code>，该预制标签将被忽略。</p>
+<h4 id="规则"> 规则</h4>
 <div><pre><code>permissions=[
-    &quot;flag=entity-spawn, target=#ambient&quot;
+    &quot;flag=entity-spawn, target=#ambient&quot;,
+    &quot;flag=xxx&quot;
 ]
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>These are the flag permissions to assign this definition. Permissions can hold one or more flag entries. To add an additional line, add a <code>,</code> at end of previous then insert a new line.<br>
-Each line requires a <code>flag=&lt;flag_name&gt;</code> entry followed by either source or target  context.<br>
-If you want to apply a permission to all possible targets then don't include <code>target</code> as GD will automatically apply to all targets.<br>
-If you want to apply a permission to all possible sources then don't include <code>source</code> as GD will automatically apply to all sources.</p>
-<p>The most common contexts for permissions are as follows</p>
-<div><pre><code>source
-target
-used_item
-item_name
-server
-state
-world
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>这里定义了该预制标签中包含的基础标签。一个预制标签可以拥有一个乃至多个基础标签。如果要将多条基础标签整合进预制标签，那么应在每行末尾插入一个 <code>,</code> 再添加新行。
+在每行中需要定义 <code>flag=&lt;基础标签&gt;</code> 及其紧接着的目标和来源。<br>
+因为 GD 会自动应用到所有检测目标，如果您想要一条规则应用到全部可能的目标，则不填 <code>target</code> 。
+因为 GD 会自动检测所有来源，如果您想要一条规则应用到全部可能的来源，则不填 <code>source</code>。</p>
+<p>一些常用的规则情境</p>
+<div><pre><code>source  行为来源
+target  作用目标
+used_item  使用物品
+item_name  物品名称
+server  所处服务器
+state  状态
+world  世界
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>The accepted context value must be a valid identifier. To locate the proper value in game, do the following</p>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>提供的情境必须是有效且适用于标签。要在游戏中找到合适的值，请执行以下操作</p>
 <ol>
-<li>Run command <code>/gddebug record claim</code> - This will start a debug session in the claim you are in.</li>
-<li>Perform an action you want to manage via flag definition.</li>
-<li>Run command <code>/gddebug paste</code> - This will display a web link to view debug results.</li>
-<li>Open link, and you will see a list of actions GD checked for the claim. You will a <code>source</code> and <code>target</code> column which will contain the values you need.</li>
+<li>运行命令 <code>/gddebug record claim</code> - 这将在您所在的领地中启动调试会话。</li>
+<li>做您想通过领地标签来限制的事</li>
+<li>运行命令 <code>/gddebug paste</code> - 这将显示一个 web链接 以查看调试结果。</li>
+<li>打开链接，您将看到 GD 为领地检查的操作列表。您会在 <code>source</code> <code>target</code> 列看到您所需要的值。</li>
 </ol>
-<p>To locate a value for <code>used_item</code> or any other context, locate the Context column and you will see a list of all support contexts for the specific line action.</p>
-<p>Another way to find an id you are looking for is to check a community run wiki for it</p>
-<p>See https://minecraft-ids.grahamedgecombe.com/</p>
-<h3 id="minecraft-flag-definition-preset-config"> Minecraft Flag Definition Preset Config</h3>
-<p>For more information on what you can do with the flags config, see below</p>
+<p>要知晓 <code>used_item</code> 或任何其他情境，找到情境列，您将会在特定行看到该操作所支持的情境。</p>
+<p>另一个找到您想获取的情境的方法是查阅相关资料。</p>
+<h3 id="minecraft-预制标签预设"> Minecraft 预制标签预设</h3>
+<p>有关如何使用标志配置的更多信息，请参见下文</p>
 <details>
-  <summary>Minecraft Preset</summary>
+  <summary>Minecraft 预设</summary>
 <div><pre><code># A collection of flag definitions designed for vanilla minecraft.
 # Each group defined will be displayed in the flag GUI for users.
 # Groups can have the following settings : 
@@ -9378,449 +9359,50 @@ minecraft {
 }
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br><span>111</span><br><span>112</span><br><span>113</span><br><span>114</span><br><span>115</span><br><span>116</span><br><span>117</span><br><span>118</span><br><span>119</span><br><span>120</span><br><span>121</span><br><span>122</span><br><span>123</span><br><span>124</span><br><span>125</span><br><span>126</span><br><span>127</span><br><span>128</span><br><span>129</span><br><span>130</span><br><span>131</span><br><span>132</span><br><span>133</span><br><span>134</span><br><span>135</span><br><span>136</span><br><span>137</span><br><span>138</span><br><span>139</span><br><span>140</span><br><span>141</span><br><span>142</span><br><span>143</span><br><span>144</span><br><span>145</span><br><span>146</span><br><span>147</span><br><span>148</span><br><span>149</span><br><span>150</span><br><span>151</span><br><span>152</span><br><span>153</span><br><span>154</span><br><span>155</span><br><span>156</span><br><span>157</span><br><span>158</span><br><span>159</span><br><span>160</span><br><span>161</span><br><span>162</span><br><span>163</span><br><span>164</span><br><span>165</span><br><span>166</span><br><span>167</span><br><span>168</span><br><span>169</span><br><span>170</span><br><span>171</span><br><span>172</span><br><span>173</span><br><span>174</span><br><span>175</span><br><span>176</span><br><span>177</span><br><span>178</span><br><span>179</span><br><span>180</span><br><span>181</span><br><span>182</span><br><span>183</span><br><span>184</span><br><span>185</span><br><span>186</span><br><span>187</span><br><span>188</span><br><span>189</span><br><span>190</span><br><span>191</span><br><span>192</span><br><span>193</span><br><span>194</span><br><span>195</span><br><span>196</span><br><span>197</span><br><span>198</span><br><span>199</span><br><span>200</span><br><span>201</span><br><span>202</span><br><span>203</span><br><span>204</span><br><span>205</span><br><span>206</span><br><span>207</span><br><span>208</span><br><span>209</span><br><span>210</span><br><span>211</span><br><span>212</span><br><span>213</span><br><span>214</span><br><span>215</span><br><span>216</span><br><span>217</span><br><span>218</span><br><span>219</span><br><span>220</span><br><span>221</span><br><span>222</span><br><span>223</span><br><span>224</span><br><span>225</span><br><span>226</span><br><span>227</span><br><span>228</span><br><span>229</span><br><span>230</span><br><span>231</span><br><span>232</span><br><span>233</span><br><span>234</span><br><span>235</span><br><span>236</span><br><span>237</span><br><span>238</span><br><span>239</span><br><span>240</span><br><span>241</span><br><span>242</span><br><span>243</span><br><span>244</span><br><span>245</span><br><span>246</span><br><span>247</span><br><span>248</span><br><span>249</span><br><span>250</span><br><span>251</span><br><span>252</span><br><span>253</span><br><span>254</span><br><span>255</span><br><span>256</span><br><span>257</span><br><span>258</span><br><span>259</span><br><span>260</span><br><span>261</span><br><span>262</span><br><span>263</span><br><span>264</span><br><span>265</span><br><span>266</span><br><span>267</span><br><span>268</span><br><span>269</span><br><span>270</span><br><span>271</span><br><span>272</span><br><span>273</span><br><span>274</span><br><span>275</span><br><span>276</span><br><span>277</span><br><span>278</span><br><span>279</span><br><span>280</span><br><span>281</span><br><span>282</span><br><span>283</span><br><span>284</span><br><span>285</span><br><span>286</span><br><span>287</span><br><span>288</span><br><span>289</span><br><span>290</span><br><span>291</span><br><span>292</span><br><span>293</span><br><span>294</span><br><span>295</span><br><span>296</span><br><span>297</span><br><span>298</span><br><span>299</span><br><span>300</span><br><span>301</span><br><span>302</span><br><span>303</span><br><span>304</span><br><span>305</span><br><span>306</span><br><span>307</span><br><span>308</span><br><span>309</span><br><span>310</span><br><span>311</span><br><span>312</span><br><span>313</span><br><span>314</span><br><span>315</span><br><span>316</span><br><span>317</span><br><span>318</span><br><span>319</span><br><span>320</span><br><span>321</span><br><span>322</span><br><span>323</span><br><span>324</span><br><span>325</span><br><span>326</span><br><span>327</span><br><span>328</span><br><span>329</span><br><span>330</span><br><span>331</span><br><span>332</span><br><span>333</span><br><span>334</span><br><span>335</span><br><span>336</span><br><span>337</span><br><span>338</span><br><span>339</span><br><span>340</span><br><span>341</span><br><span>342</span><br><span>343</span><br><span>344</span><br><span>345</span><br><span>346</span><br><span>347</span><br><span>348</span><br><span>349</span><br><span>350</span><br><span>351</span><br><span>352</span><br><span>353</span><br><span>354</span><br><span>355</span><br><span>356</span><br><span>357</span><br><span>358</span><br><span>359</span><br><span>360</span><br><span>361</span><br><span>362</span><br><span>363</span><br><span>364</span><br><span>365</span><br><span>366</span><br><span>367</span><br><span>368</span><br><span>369</span><br><span>370</span><br><span>371</span><br><span>372</span><br><span>373</span><br><span>374</span><br><span>375</span><br><span>376</span><br><span>377</span><br><span>378</span><br><span>379</span><br><span>380</span><br><span>381</span><br><span>382</span><br><span>383</span><br><span>384</span><br><span>385</span><br><span>386</span><br><span>387</span><br><span>388</span><br><span>389</span><br><span>390</span><br><span>391</span><br><span>392</span><br><span>393</span><br><span>394</span><br><span>395</span><br><span>396</span><br><span>397</span><br><span>398</span><br><span>399</span><br><span>400</span><br><span>401</span><br><span>402</span><br><span>403</span><br><span>404</span><br><span>405</span><br><span>406</span><br><span>407</span><br><span>408</span><br><span>409</span><br><span>410</span><br><span>411</span><br><span>412</span><br><span>413</span><br><span>414</span><br><span>415</span><br><span>416</span><br><span>417</span><br><span>418</span><br><span>419</span><br><span>420</span><br><span>421</span><br><span>422</span><br><span>423</span><br><span>424</span><br><span>425</span><br><span>426</span><br><span>427</span><br><span>428</span><br><span>429</span><br><span>430</span><br><span>431</span><br><span>432</span><br><span>433</span><br><span>434</span><br><span>435</span><br><span>436</span><br><span>437</span><br><span>438</span><br><span>439</span><br><span>440</span><br><span>441</span><br><span>442</span><br><span>443</span><br><span>444</span><br><span>445</span><br><span>446</span><br><span>447</span><br><span>448</span><br><span>449</span><br><span>450</span><br><span>451</span><br><span>452</span><br><span>453</span><br><span>454</span><br><span>455</span><br><span>456</span><br><span>457</span><br><span>458</span><br><span>459</span><br><span>460</span><br><span>461</span><br><span>462</span><br><span>463</span><br><span>464</span><br><span>465</span><br><span>466</span><br><span>467</span><br><span>468</span><br><span>469</span><br><span>470</span><br><span>471</span><br><span>472</span><br><span>473</span><br><span>474</span><br><span>475</span><br><span>476</span><br><span>477</span><br><span>478</span><br><span>479</span><br><span>480</span><br><span>481</span><br><span>482</span><br><span>483</span><br><span>484</span><br><span>485</span><br><span>486</span><br><span>487</span><br><span>488</span><br><span>489</span><br><span>490</span><br><span>491</span><br><span>492</span><br><span>493</span><br><span>494</span><br><span>495</span><br><span>496</span><br><span>497</span><br><span>498</span><br><span>499</span><br><span>500</span><br><span>501</span><br><span>502</span><br><span>503</span><br><span>504</span><br><span>505</span><br><span>506</span><br><span>507</span><br><span>508</span><br><span>509</span><br><span>510</span><br><span>511</span><br><span>512</span><br><span>513</span><br><span>514</span><br><span>515</span><br><span>516</span><br><span>517</span><br><span>518</span><br><span>519</span><br><span>520</span><br><span>521</span><br><span>522</span><br><span>523</span><br><span>524</span><br><span>525</span><br><span>526</span><br><span>527</span><br><span>528</span><br><span>529</span><br><span>530</span><br><span>531</span><br><span>532</span><br><span>533</span><br><span>534</span><br><span>535</span><br><span>536</span><br><span>537</span><br><span>538</span><br><span>539</span><br><span>540</span><br><span>541</span><br><span>542</span><br><span>543</span><br><span>544</span><br><span>545</span><br><span>546</span><br><span>547</span><br><span>548</span><br><span>549</span><br><span>550</span><br><span>551</span><br><span>552</span><br><span>553</span><br><span>554</span><br><span>555</span><br><span>556</span><br><span>557</span><br><span>558</span><br><span>559</span><br><span>560</span><br><span>561</span><br><span>562</span><br><span>563</span><br><span>564</span><br><span>565</span><br><span>566</span><br><span>567</span><br><span>568</span><br><span>569</span><br><span>570</span><br><span>571</span><br><span>572</span><br><span>573</span><br><span>574</span><br><span>575</span><br><span>576</span><br><span>577</span><br><span>578</span><br><span>579</span><br><span>580</span><br><span>581</span><br><span>582</span><br><span>583</span><br><span>584</span><br><span>585</span><br><span>586</span><br><span>587</span><br><span>588</span><br><span>589</span><br><span>590</span><br><span>591</span><br><span>592</span><br><span>593</span><br><span>594</span><br><span>595</span><br><span>596</span><br><span>597</span><br><span>598</span><br><span>599</span><br><span>600</span><br><span>601</span><br><span>602</span><br><span>603</span><br><span>604</span><br><span>605</span><br><span>606</span><br><span>607</span><br><span>608</span><br><span>609</span><br><span>610</span><br><span>611</span><br><span>612</span><br><span>613</span><br><span>614</span><br><span>615</span><br><span>616</span><br><span>617</span><br><span>618</span><br><span>619</span><br><span>620</span><br><span>621</span><br><span>622</span><br><span>623</span><br><span>624</span><br><span>625</span><br><span>626</span><br><span>627</span><br><span>628</span><br><span>629</span><br><span>630</span><br><span>631</span><br><span>632</span><br><span>633</span><br><span>634</span><br><span>635</span><br><span>636</span><br><span>637</span><br><span>638</span><br><span>639</span><br><span>640</span><br><span>641</span><br><span>642</span><br><span>643</span><br><span>644</span><br><span>645</span><br><span>646</span><br><span>647</span><br><span>648</span><br><span>649</span><br><span>650</span><br><span>651</span><br><span>652</span><br><span>653</span><br><span>654</span><br><span>655</span><br><span>656</span><br><span>657</span><br><span>658</span><br><span>659</span><br><span>660</span><br><span>661</span><br><span>662</span><br><span>663</span><br><span>664</span><br><span>665</span><br><span>666</span><br><span>667</span><br><span>668</span><br><span>669</span><br><span>670</span><br><span>671</span><br><span>672</span><br><span>673</span><br><span>674</span><br><span>675</span><br><span>676</span><br><span>677</span><br><span>678</span><br><span>679</span><br><span>680</span><br><span>681</span><br><span>682</span><br><span>683</span><br><span>684</span><br><span>685</span><br><span>686</span><br><span>687</span><br><span>688</span><br><span>689</span><br><span>690</span><br><span>691</span><br><span>692</span><br><span>693</span><br><span>694</span><br><span>695</span><br><span>696</span><br><span>697</span><br><span>698</span><br><span>699</span><br><span>700</span><br><span>701</span><br><span>702</span><br><span>703</span><br><span>704</span><br><span>705</span><br><span>706</span><br><span>707</span><br><span>708</span><br><span>709</span><br><span>710</span><br><span>711</span><br><span>712</span><br><span>713</span><br><span>714</span><br><span>715</span><br><span>716</span><br><span>717</span><br><span>718</span><br><span>719</span><br><span>720</span><br><span>721</span><br><span>722</span><br><span>723</span><br><span>724</span><br><span>725</span><br><span>726</span><br><span>727</span><br><span>728</span><br><span>729</span><br><span>730</span><br><span>731</span><br><span>732</span><br><span>733</span><br><span>734</span><br><span>735</span><br><span>736</span><br><span>737</span><br><span>738</span><br><span>739</span><br><span>740</span><br><span>741</span><br><span>742</span><br><span>743</span><br><span>744</span><br><span>745</span><br><span>746</span><br><span>747</span><br><span>748</span><br><span>749</span><br><span>750</span><br><span>751</span><br><span>752</span><br><span>753</span><br><span>754</span><br><span>755</span><br><span>756</span><br><span>757</span><br><span>758</span><br><span>759</span><br><span>760</span><br><span>761</span><br><span>762</span><br><span>763</span><br><span>764</span><br><span>765</span><br><span>766</span><br><span>767</span><br><span>768</span><br><span>769</span><br><span>770</span><br><span>771</span><br><span>772</span><br><span>773</span><br><span>774</span><br><span>775</span><br><span>776</span><br><span>777</span><br><span>778</span><br><span>779</span><br><span>780</span><br><span>781</span><br><span>782</span><br><span>783</span><br><span>784</span><br><span>785</span><br><span>786</span><br><span>787</span><br><span>788</span><br><span>789</span><br><span>790</span><br><span>791</span><br><span>792</span><br><span>793</span><br><span>794</span><br><span>795</span><br><span>796</span><br><span>797</span><br><span>798</span><br><span>799</span><br><span>800</span><br><span>801</span><br><span>802</span><br><span>803</span><br><span>804</span><br><span>805</span><br><span>806</span><br><span>807</span><br><span>808</span><br><span>809</span><br><span>810</span><br><span>811</span><br><span>812</span><br><span>813</span><br><span>814</span><br><span>815</span><br><span>816</span><br><span>817</span><br><span>818</span><br><span>819</span><br><span>820</span><br><span>821</span><br><span>822</span><br><span>823</span><br><span>824</span><br><span>825</span><br><span>826</span><br><span>827</span><br><span>828</span><br><span>829</span><br><span>830</span><br><span>831</span><br><span>832</span><br><span>833</span><br><span>834</span><br><span>835</span><br><span>836</span><br><span>837</span><br><span>838</span><br><span>839</span><br><span>840</span><br><span>841</span><br><span>842</span><br><span>843</span><br><span>844</span><br><span>845</span><br><span>846</span><br><span>847</span><br><span>848</span><br><span>849</span><br><span>850</span><br><span>851</span><br><span>852</span><br><span>853</span><br><span>854</span><br><span>855</span><br><span>856</span><br><span>857</span><br><span>858</span><br><span>859</span><br><span>860</span><br><span>861</span><br><span>862</span><br><span>863</span><br><span>864</span><br><span>865</span><br><span>866</span><br><span>867</span><br><span>868</span><br><span>869</span><br><span>870</span><br><span>871</span><br></div></div></details>
-<h2 id="gui"> GUI</h2>
-<p>The flag GUI is designed to allow both users and admins to easily administer their claim flags.</p>
-<p>The command to access the flags GUI is <code>/cf</code> or <code>/gd flag claim</code></p>
-<p>With GD 2.0, all flag definitions can be applied to two types of players : PUBLIC and OWNER.</p>
-<p><code>PUBLIC</code> - When toggling a flag definition within <code>PUBLIC</code> in GUI, all non-trusted players will be affected.<br>
-<code>OWNER</code> - When toggling a flag definition within <code>OWNER</code> in GUI, all trusted players including owner will be affected.</p>
-<h3 id="permissions-2"> Permissions</h3>
-<p>The following permission controls access to each user flag <code>griefdefender.user.custom.flag.&lt;group&gt;.&lt;flagname&gt;</code>.
-As an example, lets assume you want to deny user access to the <code>damage-animals</code> flag. You would enter the following in LuckPerms , <code>/lp group &lt;groupname&gt; set griefdefender.user.custom.flag.user.damage-animals false</code></p>
-<h3 id="flag-values"> Flag Values</h3>
-<p>As shown below, both admin/user flags start off as either <code>true</code> or <code>false</code> and will represent the current active value of claim you are in.</p>
-<h3 id="admin-2"> ADMIN</h3>
-<p>⚠️ Admin flags will ONLY affect the claim you are in.</p>
+<h2 id="gui-组成及工作方式"> GUI 组成及工作方式</h2>
+<p>标签 GUI旨在允许用户和管理员轻松管理其领地标签。</p>
+<p>打开标签界面的指令是 <code>/cf</code> 或 <code>/gd flag claim</code></p>
+<p>在 GD 2.0 中, 所有预制标签可以应用到两种新玩家类型，即 : PUBLIC 和 OWNER。</p>
+<p><code>PUBLIC</code> - 在标签界面中切换预制标签页为 <code>PUBLIC</code>，所有未被信任的玩家都将被影响。
+<code>OWNER</code> - 在标签界面中切换预制标签页为 <code>OWNER</code>，所有领地受信者及所有者本身都将被影响。</p>
+<h3 id="权限"> 权限</h3>
+<p>以下权限控制着用户对预制标签的访问 <code>griefdefender.user.custom.flag.&lt;标签组&gt;.&lt;预制标签名称&gt;</code>.
+我们假设您不想让用户有权控制 <code>damage-animals</code> 预制标签。 您需要在 LuckPerms 输入以下命令 <code>/lp group &lt;groupname&gt; set griefdefender.user.custom.flag.user.damage-animals false</code></p>
+<h3 id="标签值"> 标签值</h3>
+<p>如下所示，两个 管理/用户 预制标签都以 <code>true</code> 或 <code>false</code> 来显示您所处领地的标签影响。</p>
+<h3 id="管理员gui相关"> 管理员GUI相关</h3>
+<p>⚠️ 管理员标签组的标签只会影响您所在领地。</p>
 <p><img src="https://i.imgur.com/tSVSC7q.png" alt="Admin GUI" /></p>
-<p>By default, admins have access to 2 modes <code>PRESET</code> and <code>ADVANCED</code>.
-The <code>PRESET</code> mode is directly linked to the minecraft flag definitions preset file. Each group is read into the GUI as a tab along with its definitions.
-There are 2 delivered groups that GD ships with, <code>USER</code> and <code>ADMIN</code>.</p>
-<p>Both groups will apply flags to claim you are standing in. If you need flags set as a default, set it up in config as shown above.</p>
-<table>
-<thead>
-<tr>
-<th>Flag Definition</th>
-<th>Default Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ambient-spawn</code></td>
-<td>true</td>
-<td>Controls whether ambients, such as bats, spawn.</td>
-</tr>
-<tr>
-<td><code>animal-block-modify</code></td>
-<td>true</td>
-<td>Controls whether animals can modify blocks such as rabbits eating carrots.</td>
-</tr>
-<tr>
-<td><code>animal-spawn</code></td>
-<td>true</td>
-<td>Controls whether animals, such as cows/pigs/horses/etc., spawn.</td>
-</tr>
-<tr>
-<td><code>aquatic-spawn</code></td>
-<td>true</td>
-<td>Controls whether aquatics that live in water, such as squids, spawn.</td>
-</tr>
-<tr>
-<td><code>armorstand-use</code></td>
-<td>false</td>
-<td>Controls whether armorstands can be placed or broken.</td>
-</tr>
-<tr>
-<td><code>block-trampling</code></td>
-<td>false</td>
-<td>Controls whether farmland and turtle eggs can be trampled.</td>
-</tr>
-<tr>
-<td><code>chorus-fruit-teleport</code></td>
-<td>false</td>
-<td>Controls whether a player can use chorus fruit to teleport.</td>
-</tr>
-<tr>
-<td><code>commandblock-block-break</code></td>
-<td>false</td>
-<td>Controls whether command blocks can break blocks.</td>
-</tr>
-<tr>
-<td><code>commandblock-block-place</code></td>
-<td>false</td>
-<td>Controls whether command blocks can place blocks.</td>
-</tr>
-<tr>
-<td><code>creeper-block-explosion</code></td>
-<td>false</td>
-<td>Controls whether a creeper can explode blocks.</td>
-</tr>
-<tr>
-<td><code>creeper-entity-explosion</code></td>
-<td>false</td>
-<td>Controls whether a creeper can explode entities.</td>
-</tr>
-<tr>
-<td><code>endcrystal-use</code></td>
-<td>false</td>
-<td>Controls whether endcrystals can be placed or broken.</td>
-</tr>
-<tr>
-<td><code>entity-armorstand-damage</code></td>
-<td>false</td>
-<td>Controls whether entities can deal damage to armorstands.</td>
-</tr>
-<tr>
-<td><code>entity-itemframe-damage</code></td>
-<td>false</td>
-<td>Controls whether entities can deal damage to item frames.</td>
-</tr>
-<tr>
-<td><code>exp-drop</code></td>
-<td>true</td>
-<td>Controls whether experience orbs can drop.</td>
-</tr>
-<tr>
-<td><code>fall-entity-damage</code></td>
-<td>true</td>
-<td>Controls whether entities can take fall damage.</td>
-</tr>
-<tr>
-<td><code>fall-player-damage</code></td>
-<td>true</td>
-<td>Controls whether players can take fall damage.</td>
-</tr>
-<tr>
-<td><code>falling-block-break</code></td>
-<td>true</td>
-<td>Controls whether falling blocks can break.</td>
-</tr>
-<tr>
-<td><code>fire-block-damage</code></td>
-<td>true</td>
-<td>Controls whether fire can cause block damage.</td>
-</tr>
-<tr>
-<td><code>fire-entity-damage</code></td>
-<td>true</td>
-<td>Controls whether fire can cause entity damage.</td>
-</tr>
-<tr>
-<td><code>lightning-damage</code></td>
-<td>true</td>
-<td>Controls whether lightning can cause harm.</td>
-</tr>
-<tr>
-<td><code>monster-animal-damage</code></td>
-<td>false</td>
-<td>Controls whether monsters can deal damage to animals.</td>
-</tr>
-<tr>
-<td><code>monster-player-damage</code></td>
-<td>true</td>
-<td>Controls whether monsters can deal damage to players.</td>
-</tr>
-<tr>
-<td><code>monster-spawn</code></td>
-<td>true</td>
-<td>Controls whether monsters, such as creepers and skeletons, can spawn.</td>
-</tr>
-<tr>
-<td><code>piston-item-spawn</code></td>
-<td>true</td>
-<td>Controls whether mycelium can spread.</td>
-</tr>
-<tr>
-<td><code>piston-use</code></td>
-<td>false</td>
-<td>Controls whether pistons can be used.</td>
-</tr>
-<tr>
-<td><code>player-block-break</code></td>
-<td>false</td>
-<td>Controls whether players can break blocks.</td>
-</tr>
-<tr>
-<td><code>player-block-interact</code></td>
-<td>false</td>
-<td>Controls whether players can interact with blocks.<br />Note: This does not include inventory blocks such as chests.</td>
-</tr>
-<tr>
-<td><code>player-block-place</code></td>
-<td>false</td>
-<td>Controls whether players can place blocks.</td>
-</tr>
-<tr>
-<td><code>player-damage</code></td>
-<td>true</td>
-<td>Controls whether players can be damaged.</td>
-</tr>
-<tr>
-<td><code>player-enderpearl-interact</code></td>
-<td>true</td>
-<td>Controls whether players can use an enderpearl.</td>
-</tr>
-<tr>
-<td><code>player-endportal-use</code></td>
-<td>true</td>
-<td>Controls whether players can use end portal.</td>
-</tr>
-<tr>
-<td><code>player-entity-interact</code></td>
-<td>true</td>
-<td>Controls whether players can interact with entities.<br />Note: This does not include chest access with entities such as horses.</td>
-</tr>
-<tr>
-<td><code>player-enter</code></td>
-<td>true</td>
-<td>Controls whether a player can enter this claim.</td>
-</tr>
-<tr>
-<td><code>player-exit</code></td>
-<td>true</td>
-<td>Controls whether a player can exit this claim.</td>
-</tr>
-<tr>
-<td><code>player-item-drop</code></td>
-<td>true</td>
-<td>Controls whether players can drop items.</td>
-</tr>
-<tr>
-<td><code>player-item-pickup</code></td>
-<td>true</td>
-<td>Controls whether players can pickup items.</td>
-</tr>
-<tr>
-<td><code>player-itemframe-interact</code></td>
-<td>false</td>
-<td>Controls whether players can interact with item frames.</td>
-</tr>
-<tr>
-<td><code>player-itemhanging-place</code></td>
-<td>false</td>
-<td>Controls whether players can place hanging items such as itemframes.</td>
-</tr>
-<tr>
-<td><code>player-netherportal-use</code></td>
-<td>true</td>
-<td>Controls whether players can use nether portal.</td>
-</tr>
-<tr>
-<td><code>player-teleport-from</code></td>
-<td>true</td>
-<td>Controls whether players can teleport from this claim.</td>
-</tr>
-<tr>
-<td><code>player-teleport-to</code></td>
-<td>true</td>
-<td>Controls whether players can teleport to this claim.</td>
-</tr>
-<tr>
-<td><code>player-villager-damage</code></td>
-<td>false</td>
-<td>Controls whether players can deal damage to villagers.</td>
-</tr>
-<tr>
-<td><code>ravager-block-break</code></td>
-<td>true</td>
-<td>Controls whether ravagers can break blocks during raids.</td>
-</tr>
-<tr>
-<td><code>silverfish-block-infest</code></td>
-<td>false</td>
-<td>Controls whether silverfish can infest blocks such as cobblestone.</td>
-</tr>
-<tr>
-<td><code>tnt-block-explosion</code></td>
-<td>false</td>
-<td>Controls whether tnt can explode blocks.</td>
-</tr>
-<tr>
-<td><code>tnt-entity-explosion</code></td>
-<td>false</td>
-<td>Controls whether tnt can explode entities.</td>
-</tr>
-<tr>
-<td><code>turtle-egg-hatch</code></td>
-<td>true</td>
-<td>Controls whether turtle eggs can hatch.</td>
-</tr>
-<tr>
-<td><code>villager-farm</code></td>
-<td>true</td>
-<td>Controls whether villages can farm crops.</td>
-</tr>
-<tr>
-<td><code>wither-block-break</code></td>
-<td>false</td>
-<td>Controls whether withers can break blocks.</td>
-</tr>
-<tr>
-<td><code>wither-entity-damage</code></td>
-<td>true</td>
-<td>Controls whether withers can damage entities.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="user"> USER</h3>
-<p>⚠️ User flags will ONLY affect the claim you are in.<br>
-⚠️ If you want to modify <code>USER</code> flag definitions in a claim that you do not own, you must have ignoreclaims permissions and enter <code>/ignoreclaims</code> before executing <code>/cf</code> command.</p>
-<p>As a user, if you enter the <code>/cf</code> command, you will see the following</p>
+<p>默认情况下，管理员可以访问2种模式 <code>PRESET</code> 和 <code>ADVANCED</code>。
+<code>PRESET</code> 模式直接链接到 minecraft 预设标签定义预设文件。每个组都作为一个选项页并将该选项页定义的内容读入 GUI。
+GD 随附 2 个预制标签组，即 <code>USER</code> 和 <code>ADMIN</code>。</p>
+<p>这两个小组都将使用预制标签。如果需要将标志设置为默认值，请在配置中进行设置，如上所示。</p>
+<h3 id="用户gui"> 用户GUI</h3>
+<p>⚠️ 用户标签组的预制标签只会影响您所在的领地。
+⚠️ 如果您想要更改 <code>USER</code> 于别人的领地中，那您必须有忽略领地的权限并输入 <code>/ignoreclaims</code>，之后就能使用 <code>/cf</code> 命令了。</p>
+<p>作为用户，如果您输入 <code>/cf</code> 命令，您将看到以下内容</p>
 <p><img src="https://i.imgur.com/LTeNaaD.png" alt="User GUI" /></p>
-<table>
-<thead>
-<tr>
-<th>Flag Definition</th>
-<th>Default Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>block-fertilize</code></td>
-<td>false</td>
-<td>Controls whether a player can fertilize a block with bonemeal.</td>
-</tr>
-<tr>
-<td><code>chest-access</code></td>
-<td>false</td>
-<td>Controls whether a player can access chest inventories.</td>
-</tr>
-<tr>
-<td><code>crop-growth</code></td>
-<td>true</td>
-<td>Controls whether crops can grow.</td>
-</tr>
-<tr>
-<td><code>damage-animals</code></td>
-<td>false</td>
-<td>Controls whether animals can be damaged.</td>
-</tr>
-<tr>
-<td><code>enderman-grief</code></td>
-<td>false</td>
-<td>Controls whether enderman can grief.</td>
-</tr>
-<tr>
-<td><code>fire-spread</code></td>
-<td>false</td>
-<td>Controls whether fire can spread.</td>
-</tr>
-<tr>
-<td><code>grass-growth</code></td>
-<td>true</td>
-<td>Controls whether grass can grow.</td>
-</tr>
-<tr>
-<td><code>ice-form</code></td>
-<td>true</td>
-<td>Controls whether ice can form.</td>
-</tr>
-<tr>
-<td><code>ice-melt</code></td>
-<td>true</td>
-<td>Controls whether ice can melt.</td>
-</tr>
-<tr>
-<td><code>lava-flow</code></td>
-<td>false</td>
-<td>Controls whether lava can flow.</td>
-</tr>
-<tr>
-<td><code>leaf-decay</code></td>
-<td>true</td>
-<td>Controls whether leaves can decay.</td>
-</tr>
-<tr>
-<td><code>lighter</code></td>
-<td>false</td>
-<td>Controls whether a player can use flint and steel.</td>
-</tr>
-<tr>
-<td><code>mushroom-growth</code></td>
-<td>true</td>
-<td>Controls whether mushrooms can grow.</td>
-</tr>
-<tr>
-<td><code>mycelium-spread</code></td>
-<td>true</td>
-<td>Controls whether mycelium can spread.</td>
-</tr>
-<tr>
-<td><code>pvp</code></td>
-<td>true</td>
-<td>Controls whether PvP combat is allowed.</td>
-</tr>
-<tr>
-<td><code>ride</code></td>
-<td>false</td>
-<td>Controls whether vehicles(including animals), not owned by the player, can be mounted.</td>
-</tr>
-<tr>
-<td><code>sign-use</code></td>
-<td>true</td>
-<td>Controls whether players can use signs.</td>
-</tr>
-<tr>
-<td><code>sleep</code></td>
-<td>true</td>
-<td>Controls whether players can sleep in beds</td>
-</tr>
-<tr>
-<td><code>snow-fall</code></td>
-<td>true</td>
-<td>Controls whether snow can fall.</td>
-</tr>
-<tr>
-<td><code>snow-melt</code></td>
-<td>true</td>
-<td>Controls whether snow can melt.</td>
-</tr>
-<tr>
-<td><code>snowman-trail</code></td>
-<td>true</td>
-<td>Controls whether snowmen can create snow beneath them.</td>
-</tr>
-<tr>
-<td><code>soil-dry</code></td>
-<td>true</td>
-<td>Controls whether soil will dry.</td>
-</tr>
-<tr>
-<td><code>vehicle-use</code></td>
-<td>false</td>
-<td>Controls whether vehicles(boats, minecarts, etc.) can be placed, ridden and broken.</td>
-</tr>
-<tr>
-<td><code>villager-trade</code></td>
-<td>true</td>
-<td>Controls whether players can trade with villagers.</td>
-</tr>
-<tr>
-<td><code>vine-growth</code></td>
-<td>true</td>
-<td>Controls whether vines(and kelp) can grow.</td>
-</tr>
-<tr>
-<td><code>water-flow</code></td>
-<td>false</td>
-<td>Controls whether water can flow.</td>
-</tr>
-</tbody>
-</table>
 ]]></content>
-    <category term="Flag"/>
+    <category term="标签"/>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
-    <title type="html">Options</title>
+    <title type="html">选项</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/options/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/options/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
-    <content type="html"><![CDATA[<p>Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
+    <updated>2021-10-20T10:37:01.000Z</updated>
+    <content type="html"><![CDATA[<details><summary>名词辨析</summary>
+<p>Options - 选项
+Meta - 元数据
+Global - 全局
+set - 集
+permission - 权限
+group - 权限组</p>
+</details>
+<p>Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
 <p>Default values can be changed in <code>options.conf</code>, for finer control continue reading below.</p>
 <h2 id="built-in-commands"> Built-in Commands</h2>
 <p>Options support the same format as flags</p>
@@ -10163,17 +9745,16 @@ There are 4 subsections within this section.</p>
 }
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div>]]></content>
-    <category term="Option"/>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">PVP</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/pvp/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/pvp/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -10213,13 +9794,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">标签组系统</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/tags/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/tags/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p><code>标签</code> 是一个于 Minecraft 1.13 引入的新系统，其允许用户将 物品，方块，实体 的标志符捆绑为一个标签组以方便分类。GriefDefender 将与标签系统集成并将其导出为情境用以 标签(Flag)/选项(Option)。</p>
 <p>例如，假设您希望允许与以下站立告示牌进行交互</p>
 <ul>
@@ -10275,13 +9856,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Trust System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/trust-system/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/trust-system/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>There four different types of trust: Accessors, Builders, Containers, and Managers.</p>
 <h3 id="arguments"> Arguments</h3>
 <table>
@@ -10329,13 +9910,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Command Overview</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/commands/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/commands/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<h1 id="command-overview"> Command Overview</h1>
 <p>Arguments Key: \&lt;required\&gt; [optional]</p>
 <h3 id="claims"> Claims</h3>
@@ -10749,13 +10330,13 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">安装</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/install/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/install/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ 在本页面, 我们将手把手教你如何在你的 Bukkit/Sponge 服务器上开始使用 GriefDefender. ⚠️</p>
 <h2 id="入门"> 入门</h2>
 <h3 id="需求"> 需求</h3>
@@ -10828,13 +10409,13 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefPrevention</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/griefprevention/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/griefprevention/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -10946,13 +10527,13 @@ Migration output should appear in console as it is migrating.</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">WorldGuard</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/worldguard/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/worldguard/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -11046,13 +10627,13 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">权限</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/permissions/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/permissions/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>如果您想快速使用，将 <code>griefdefender.user.*</code> 授权至您的玩家，并给予 <code>griefdefender.user.*</code> 和 <code>griefdefender.admin.*</code> 给您的社区管理或服务器管理。</p>
 <p>在大多数情况下，建议使用上面的通用权限，如果您想要更精细的控制，请阅览下面的所有权限并相应地关掉一些不需要的权限。</p>
 <h3 id="重要信息"> 重要信息</h3>
@@ -11714,13 +11295,13 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<div><p>施工中</p>
 <p>这个文档还不稳定，我们正尽力地积极改进它!
 如果您遇到了什么问题，请报告给我们</p>
@@ -11769,13 +11350,13 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Dynmap</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/dynmap/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/dynmap/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -11835,13 +11416,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Placeholder</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/placeholder/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/placeholder/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -11941,13 +11522,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">GDHooks</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -12016,13 +11597,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">WECUI</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/wecui/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/wecui/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -12048,13 +11629,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">自定义布局</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/layout/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/layout/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
 <div><p>Note</p>
 <p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
@@ -12076,23 +11657,23 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Pixelmon Preset</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/Pixelmon/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/Pixelmon/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -12103,13 +11684,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
   <entry>
     <title type="html">Resources</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/"/>
-    <updated>2021-10-12T16:33:50.000Z</updated>
+    <updated>2021-10-20T10:37:01.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>
@@ -12125,6 +11706,6 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-12T16:33:50.000Z</published>
+    <published>2021-10-20T10:37:01.000Z</published>
   </entry>
 </feed>
