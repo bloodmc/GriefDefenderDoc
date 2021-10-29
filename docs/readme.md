@@ -23,11 +23,11 @@ features:
     details: Use the default flags or create your own. Endless possibilities!
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Multilingual Translations 🌏 ℹ
+  - title: Multilingual Translations 🌏 
     details: A lot of languages already available out of the box!
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Database support 📇📝
+  - title: Database support 📇
     details: Supports MySQL，Maria DB， PostgreSQL and SQLite.
     link: https://github.com/bloodmc/GriefDefender
 
@@ -71,8 +71,3 @@ copyrightText: false
 footer: MIT Licensed | Copyright © 2019-present GriefDefender
 ---
 
-This is an example of a normal homepage. You can place your main content here.
-
-To use this layout, you need to set `home: true` in the page front matter.
-
-For related descriptions of configuration items, please see [Project HomePage Layout Config](https://vuepress-theme-hope.github.io/guide/layout/home/).
