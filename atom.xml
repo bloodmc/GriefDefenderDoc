@@ -3,7 +3,7 @@
   <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</id>
   <title>GriefDefender</title>
   <subtitle>A new way to secure your world.</subtitle>
-  <updated>2021-10-20T10:41:05.651Z</updated>
+  <updated>2021-10-29T15:56:37.036Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/atom.xml"/>
   <link rel="alternate" href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/"/>
@@ -29,7 +29,7 @@
     <title type="html">API</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/API/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/API/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -78,13 +78,13 @@ Note: If you make use of any API methods that accepts a kyori component as param
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Contrubution</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/Contribution/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/Contribution/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -116,13 +116,13 @@ In the bottom of each pages there will be a button redirect you to the source fi
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Contexts</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/contexts/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/contexts/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -349,13 +349,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Debugging</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/debugging/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/debugging/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -906,13 +906,13 @@ Note: The filter can be any word you want.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Flags</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/flags/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/flags/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -1134,13 +1134,13 @@ flag-control {
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Global Config</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/global-config/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/global-config/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -1876,13 +1876,13 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Management</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-management/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-management/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -2171,13 +2171,13 @@ griefdefender.admin.option.perk.fly.manager
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Rent System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-rent-system/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-rent-system/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -2279,13 +2279,13 @@ Syntax is as follows<br>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Types</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-types/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-types/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p><em>This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims.</em></p>
 <h2 id="claim-types"> Claim Types</h2>
 <p>There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use <code>/adminclaims</code>, <code>/townclaims</code> and <code>/basicclaims</code>. To switch to subdivision mode, use <code>/claimsubdivide</code>. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.</p>
@@ -2336,13 +2336,13 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">User-Friendly Commands</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/custom-alias-creation/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/custom-alias-creation/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h2 id="user-friendly-commands"> User-Friendly Commands</h2>
 <p>One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accesible for everyone with shorter commands.</p>
 <p>For this, you may need to install an alias plugin like CustomCommands, or the commands.yml inside of the server folder.</p>
@@ -2362,13 +2362,13 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Flag Definition</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/flag-definitions-gui/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/flag-definitions-gui/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h2 id="overview"> Overview</h2>
 <p>The flag definition system provides both users and admins the ability to manage their claim flags with ease.
 GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
@@ -3754,13 +3754,13 @@ There are 2 delivered groups that GD ships with, <code>USER</code> and <code>ADM
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Options</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/options/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/options/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
 <p>Default values can be changed in <code>options.conf</code>, for finer control continue reading below.</p>
 <h2 id="built-in-commands"> Built-in Commands</h2>
@@ -4108,13 +4108,13 @@ There are 4 subsections within this section.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">PVP</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/pvp/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/pvp/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -4154,13 +4154,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Tags System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/tags/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/tags/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>A <code>Tag</code> is a new system introduced in Minecraft 1.13 that allows users to group one or more item, block, entity identifiers under a single group known as a tag. GriefDefender integrates into the tag system and exposes all available tags as contexts that can applied with a flag or option.</p>
 <p>For example, lets say you wanted to allow interaction with the following standing signs</p>
 <ul>
@@ -4217,13 +4217,13 @@ Note: If your datapack is not enabled then your datapack structure shown in step
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Trust System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/trust-system/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/trust-system/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>There four different types of trust: Accessors, Builders, Containers, and Managers.</p>
 <h3 id="arguments"> Arguments</h3>
 <table>
@@ -4271,13 +4271,13 @@ Note: If your datapack is not enabled then your datapack structure shown in step
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Command Overview</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/commands/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/commands/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h1 id="command-overview"> Command Overview</h1>
 <p>Arguments Key: \&lt;required\&gt; [optional]</p>
 <h3 id="claims"> Claims</h3>
@@ -4691,13 +4691,13 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Install</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/install/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/install/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ In this page, we will explain how to start using GriefDefender in your Bukkit/Sponge server step by step. ⚠️</p>
 <h2 id="getting-started"> Getting Started</h2>
 <h3 id="requirements"> Requirements</h3>
@@ -4770,13 +4770,13 @@ World configs override dimension and global configs.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefPrevention</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/griefprevention/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/griefprevention/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -4888,13 +4888,13 @@ Migration output should appear in console as it is migrating.</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">WorldGuard</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/worldguard/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/worldguard/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -4988,13 +4988,13 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Permission</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/permissions/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/permissions/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>If you want to have a quickstart, apply <code>griefdefender.user.*</code> to your players and both <code>griefdefender.user.*</code> and <code>griefdefender.admin.*</code> to your staff/admins.</p>
 <p>It is recommended to use the base permission nodes above, and if you want a more fine control read all permissions below and deny accordingly.</p>
 <h3 id="important"> IMPORTANT</h3>
@@ -5656,13 +5656,13 @@ See https://luckperms.net/wiki/Default-Groups</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<div><p>W.I.P</p>
 <p>This document is being greatly improved!
 If you encounter problems, please report to us</p>
@@ -5711,13 +5711,13 @@ It works out of the box and fully integrates with <a href="https://ci.lucko.me/j
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Dynmap</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/dynmap/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/dynmap/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -5777,13 +5777,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Placeholder</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/placeholder/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/placeholder/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -5883,13 +5883,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">GDHooks</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -5958,13 +5958,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">WECUI</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/wecui/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/wecui/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -5990,13 +5990,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Custom Layout</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/layout/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/layout/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>You can use slots with markdown and component support to custom page layout.</p>
 <div><p>Note</p>
 <p>This is just a demo, you should add styles according to your own needs.</p>
@@ -6018,27 +6018,23 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
-    <content type="html"><![CDATA[<p>This is an example of a normal homepage. You can place your main content here.</p>
-<p>To use this layout, you need to set <code>home: true</code> in the page front matter.</p>
-<p>For related descriptions of configuration items, please see <a href="https://vuepress-theme-hope.github.io/guide/layout/home/" target="_blank" rel="noopener noreferrer">Project HomePage Layout Config</a>.</p>
-]]></content>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Pixelmon Preset</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/Pixelmon/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/Pixelmon/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -6049,13 +6045,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Resources</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>
@@ -6071,25 +6067,25 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Slide page</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/slides/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/slides/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[
 <i>Not supported content</i>]]></content>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">API</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/API/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/API/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -6138,13 +6134,13 @@ Note: If you make use of any API methods that accepts a kyori component as param
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Contrubution</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/Contribution/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/Contribution/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -6176,13 +6172,13 @@ In the bottom of each pages there will be a button redirect you to the source fi
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Contexts</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/contexts/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/contexts/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -6409,13 +6405,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Debugging</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/debugging/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/debugging/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -6966,13 +6962,13 @@ Note: The filter can be any word you want.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Flags</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/flags/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/flags/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -7194,13 +7190,13 @@ flag-control {
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Global Config</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/global-config/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/global-config/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -7936,13 +7932,13 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Management</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-management/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-management/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -8231,13 +8227,13 @@ griefdefender.admin.option.perk.fly.manager
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Rent System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-rent-system/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-rent-system/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -8339,13 +8335,13 @@ Syntax is as follows<br>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Claim Types</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-types/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-types/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p><em>This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims.</em></p>
 <h2 id="claim-types"> Claim Types</h2>
 <p>There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use <code>/adminclaims</code>, <code>/townclaims</code> and <code>/basicclaims</code>. To switch to subdivision mode, use <code>/claimsubdivide</code>. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.</p>
@@ -8396,13 +8392,13 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">预制标签</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h2 id="概览"> 概览</h2>
 <p>预制标签系统为用户及管理员提供了简便管理领地标签的可能。
 GriefDefender 默认提供了一些较为通用的预制标签，默认提供的标签数据只适用于纯净且可以于以下文件找到</p>
@@ -9387,13 +9383,13 @@ GD 随附 2 个预制标签组，即 <code>USER</code> 和 <code>ADMIN</code>。
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">选项</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/options/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/options/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<details><summary>名词辨析</summary>
 <p>Options - 选项
 Meta - 元数据
@@ -9748,13 +9744,13 @@ There are 4 subsections within this section.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">PVP</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/pvp/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/pvp/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -9794,13 +9790,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">标签组系统</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/tags/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/tags/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p><code>标签</code> 是一个于 Minecraft 1.13 引入的新系统，其允许用户将 物品，方块，实体 的标志符捆绑为一个标签组以方便分类。GriefDefender 将与标签系统集成并将其导出为情境用以 标签(Flag)/选项(Option)。</p>
 <p>例如，假设您希望允许与以下站立告示牌进行交互</p>
 <ul>
@@ -9856,13 +9852,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Trust System</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/trust-system/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/trust-system/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>There four different types of trust: Accessors, Builders, Containers, and Managers.</p>
 <h3 id="arguments"> Arguments</h3>
 <table>
@@ -9910,13 +9906,13 @@ Note: These examples assume a clean installation with no modified settings.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Command Overview</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/commands/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/commands/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<h1 id="command-overview"> Command Overview</h1>
 <p>Arguments Key: \&lt;required\&gt; [optional]</p>
 <h3 id="claims"> Claims</h3>
@@ -10330,13 +10326,13 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">安装</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/install/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/install/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ 在本页面, 我们将手把手教你如何在你的 Bukkit/Sponge 服务器上开始使用 GriefDefender. ⚠️</p>
 <h2 id="入门"> 入门</h2>
 <h3 id="需求"> 需求</h3>
@@ -10409,13 +10405,13 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefPrevention</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/griefprevention/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/griefprevention/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -10527,13 +10523,13 @@ Migration output should appear in console as it is migrating.</li>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">WorldGuard</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/worldguard/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/worldguard/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -10627,13 +10623,13 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">权限</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/permissions/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/permissions/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>如果您想快速使用，将 <code>griefdefender.user.*</code> 授权至您的玩家，并给予 <code>griefdefender.user.*</code> 和 <code>griefdefender.admin.*</code> 给您的社区管理或服务器管理。</p>
 <p>在大多数情况下，建议使用上面的通用权限，如果您想要更精细的控制，请阅览下面的所有权限并相应地关掉一些不需要的权限。</p>
 <h3 id="重要信息"> 重要信息</h3>
@@ -11295,13 +11291,13 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<div><p>施工中</p>
 <p>这个文档还不稳定，我们正尽力地积极改进它!
 如果您遇到了什么问题，请报告给我们</p>
@@ -11350,13 +11346,13 @@ Migration output should appear in console as it is migrating.</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Dynmap</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/dynmap/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/dynmap/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -11416,13 +11412,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Placeholder</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/placeholder/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/placeholder/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -11522,13 +11518,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">GDHooks</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -11597,13 +11593,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">WECUI</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/wecui/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/wecui/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -11629,13 +11625,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">自定义布局</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/layout/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/layout/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
 <div><p>Note</p>
 <p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
@@ -11657,23 +11653,23 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">GriefDefender</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Pixelmon Preset</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/Pixelmon/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/Pixelmon/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -11684,13 +11680,13 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
   <entry>
     <title type="html">Resources</title>
     <id>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/</id>
     <link href="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/"/>
-    <updated>2021-10-20T10:37:01.000Z</updated>
+    <updated>2021-10-29T15:55:25.000Z</updated>
     <content type="html"><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>
@@ -11706,6 +11702,6 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
     <contributor>
       <name/>
     </contributor>
-    <published>2021-10-20T10:37:01.000Z</published>
+    <published>2021-10-29T15:55:25.000Z</published>
   </entry>
 </feed>
