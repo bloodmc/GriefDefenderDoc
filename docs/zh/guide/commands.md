@@ -7,7 +7,15 @@ icon: shell
 
 # Command Overview
 
-Arguments Key: \\<required\\> [optional]
+Arguments Key: \<required\> [optional]
+
+### Claim Identifier  
+
+Many commands support the new argument `[identifier]` which is the claim id set by the claim owner.  If you do not want to be required to stand in a claim for a specific command, set the claim identifier using `/gd claim id \<identifier\>` then pass the identifier at the end of the command.  
+If using an identifier for an admin claim, the format is `admin:\<identifier\>`     
+If using an identifier for wilderness, the format is `wilderness:\<identifier\>`  
+If using an identifier for another player, the format is `\<playername\>:\<identifier\>`  
+
 
 ### Claims
 
@@ -16,79 +24,83 @@ Arguments Key: \\<required\\> [optional]
 * [/gd abandon top](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-abandon-top)
 * [/gd buy blocks [numberOfBlocks]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-buy-blocks)
 * [/gd buy claim](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-buy-claim)
-* [/gd claim contract \\<amount\\> [direction]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-contract)
-* [/gd claim create \\<radius\\> [type]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-create)
-* [/gd claim expand \\<amount\\> [direction]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-expand)
-* [/gd claim farewell \\<message\\>](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-farewell)
-* [/gd claim greeting \\<message\\>](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-greeting)
+* [/gd claim contract \<amount\> [direction]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-contract)
+* [/gd claim create \<radius\> [type]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-create)
+* [/gd claim expand \<amount\> [direction]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-expand)
+* [/gd claim farewell \<message\>](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-farewell)
+* [/gd claim greeting \<message\>](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-greeting)
+* [/gd claim id \<identifier\>](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-id)
 * [/gd claim info [id]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-info)
 * [/gd claim inherit](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-inherit)
 * [/gd claim investigate](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-investigate)
-* [/gd claim list [\\<player\\> [world]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-list)
+* [/gd claim list [\<player\> [world]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-list)
 * [/gd claim displayname [name]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-displayname)
-* [/gd claim rent create [\\<rate\\> [max_days]]|info|list|cancel](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-rent)
+* [/gd claim rent create [\<rate\> [max_days]]|info|list|cancel](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-rent)
 * [/gd claim setspawn](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-setspawn)
 * [/gd claim spawn](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-spawn)
 * [/gd claim transfer [player]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-transfer)
 * [/gd claim we](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-we)
+* [/gd claimgroup admin [\<join\>|\<unjoin\>|\<create\>|\<delete\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claimgroup-admin)
+* [/gd claimgroup player [\<join\>|\<unjoin\>|\<create\>|\<delete\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claimgroup-player)
 * [/gd cuboid](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-cuboid)
 * [/gd mode basic](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-basic)
 * [/gd mode subdivide](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-subdivide)
 * [/gd mode town](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-town)
-* [/gd player info \\<player\\> \\<world\\>|\\<player\\>|[\\<world\\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-info)
+* [/gd player info \<player\> \<world\>|\<player\>|[\<world\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-info)
 * [/gd player trapped](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-trapped)
 * [/gd player unlockdrops](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-unlockdrops)
 * [/gd sell blocks [numberOfBlocks]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-sell-blocks)
-* [/gd sell claim \\<price\\>](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-sell-claim-price)
+* [/gd sell claim \<price\>](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-sell-claim-price)
 * [/gd transferblocks](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-transferblocks)
 
 ### Flags
 
 * [/gd flag debug](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-debug)
-* [/gd flag claim [\\<flag\\> \\<target\\> \\<value\\> [context[key=value]]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-claim)
-* [/gd flag group \\<group\\> [\\<flag\\> \\<target\\> \\<value\\> [context[key=value]]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-group)
-* [/gd flag player \\<player\\> [\\<flag\\> \\<target\\> \\<value\\> [context[key=value]]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-player)
+* [/gd flag claim [\<flag\> \<target\> \<value\> [\<contexts\>]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-claim)
+* [/gd flag definition \<preset:definition\> \<value\> [identifier]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-definition)
+* [/gd flag group \<group\> [\<flag\> \<target\> \<value\> [\<\contexts\>]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-group)
+* [/gd flag player \<player\> [\<flag\> \<target\> \<value\> [\<\contexts\>]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-player)
 * [/gd flag reset](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-reset)
 
 ### Options
-* [/gd option [\\<option\\> \\<value\\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-claim)
-* [/gd option group \\<group\\> [\\<option\\> \\<value\\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-group)
-* [/gd option player \\<player\\> [\\<option\\> \\<value\\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-player)
+* [/gd option [\<option\> \<value\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-claim)
+* [/gd option group \<group\> [\<option\> \<value\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-group)
+* [/gd option player \<player\> [\<option\> \<value\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-player)
 
 ### Trust  
 
 Note: Use `public` if you want to trust all users.
 
-* [/gd trust player \\<player\\>|public \<accessor|container|builder|manager\> ](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-player)
-* [/gd trust group \\<group\\>|public \<accessor|container|builder|manager\> ](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-group)
-* [/gd trustall player \\<player\\>|public](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-player)
-* [/gd trustall group \\<group\\>|public](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-group)
-* [/gd untrust player \\<player\\>|public ](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-player)
-* [/gd untrust group \\<group\\>|public ](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-group)
-* [/gd untrustall player \\<player\\>|public](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-player)
-* [/gd untrustall group \\<group\\>|public](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-group)
+* [/gd trust player \<player\>|public \<accessor|container|builder|manager\> ](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-player)
+* [/gd trust group \<group\>|public \<accessor|container|builder|manager\> ](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-group)
+* [/gd trustall player \<player\>|public](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-player)
+* [/gd trustall group \<group\>|public](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-group)
+* [/gd untrust player \<player\>|public ](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-player)
+* [/gd untrust group \<group\>|public ](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-group)
+* [/gd untrustall player \<player\>|public](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-player)
+* [/gd untrustall group \<group\>|public](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-group)
 * [/gd trust list](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-list)
 
 ### Admin
 
 * [/gd abandon world [world]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-abandon-world)
-* [/gd ban [hand | \\<type\\> \\<target\\> [\\<message\\>]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-ban)
-* [/gd claim clear \\<target\\> [\\<claim\\> [\\<world\\>]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-clear)
+* [/gd ban [hand | \<type\> \<target\> [\<message\>]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-ban)
+* [/gd claim clear \<target\> [\<claim\> [\<world\>]]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-clear)
 * [/gd claim ignore](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-ignore)
 * [/gd claim restore](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-restore)
-* [/gd claim schematic \\<create|delete\\> \<name\>](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-schematic)
+* [/gd claim schematic \<create|delete\> \<name\>](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-schematic)
 * [/gd delete claim](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-delete-claim)
 * [/gd delete all \<player\> [world]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-delete-all)
 * [/gd delete alladmin [world]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-delete-alladmin)
 * [/gd mode admin](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-admin)
 * [/gd mode nature](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-nature)
-* [/gd permission group \\<group\\> [\\<permission\\> \\<value\\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-group)
-* [/gd permission player \\<player\\> [\\<permission\\> \\<value\\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-player)
-* [/gd player adjustbonusblocks \\<player\\> \\<amount\\> [world]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-adjustbonusblocks)
-* [/gd player setaccruedblocks \\<player\\> \\<amount\\> [\\<world\\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-setaccruedblocks)
-* [/gd debug \\<on\\>\\<off\\>\\<record\\>\\<paste\\> [\\<player\\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-debug)
+* [/gd permission group \<group\> [\<permission\> \<value\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-group)
+* [/gd permission player \<player\> [\<permission\> \<value\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-player)
+* [/gd player adjustbonusblocks \<player\> \<amount\> [world]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-adjustbonusblocks)
+* [/gd player setaccruedblocks \<player\> \<amount\> [\<world\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-setaccruedblocks)
+* [/gd debug \<on\>\<off\>\<record\>\<paste\> [\<player\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-debug)
 * [/gd reload](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-reload)
-* [/gd unban [hand | \\<type\\> \\<target\\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-unban)
+* [/gd unban [hand | \<type\> \<target\>]](https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-unban)
 
 ### Main Command
 
@@ -104,6 +116,7 @@ Note: Use `public` if you want to trust all users.
 ### Claims
 ___
 #### `/gd abandon claim`
+**Arguments**: `[identifier]` 
 Abandons a claim
 
 ___
@@ -129,7 +142,7 @@ View a list of claims for sale. Click [Buy] to purchase.
 ___
 #### `/gd claim contract`
 **Aliases**: `claimcontract`, `contractclaim`  
-**Arguments**: `\<amount\> [direction]`  
+**Arguments**: `\<amount\> [direction] [identifier]`  
 Contracts/Shrinks the claim from the direction you are facing.   
 
 ___
@@ -141,27 +154,34 @@ Creates a claim around the player of the given type. If no claimtype (or an inco
 ___
 #### `/gd claim expand`
 **Aliases**: `claimexpand`, `expandclaim`  
-**Arguments**: `\<amount\> [direction]`  
+**Arguments**: `\<amount\> [direction] [identifier]`  
 Expands the claim in the direction you are facing.   
 
 ___
 #### `/gd claim farewell`
-**Arguments**: `\<message\>`  
+**Arguments**: `\<message\> [identifier]`  
 Sets the farewell message of your claim
 
 To unset, `/gd claim farewell clear`
 
 ___
 #### `/gd claim greeting`
-**Arguments**: `\<message\>`  
+**Arguments**: `\<message\> [identifier]`  
 Sets the greeting message of your claim
 
 To unset, `/gd claim greeting clear`
 
+
+___
+#### `/gd claim id`
+**Arguments**: `\<identifier\>`  
+Sets the friendly identifier of your claim.  
+
+
 ___
 #### `/gd claim info`
 **Aliases**: `claiminfo`  
-**Arguments**: `[id]`  
+**Arguments**: `[identifier]`  
 
 Gets information about a claim you are standing in or by claim id.
 
@@ -211,14 +231,28 @@ Teleports you to claim spawn, if available.
 ___
 #### `/gd claim transfer`
 **Aliases**: `transferclaim`  
-**Arguments**: `\<player\>`  
+**Arguments**: `\<player\> [identifier]`  
 
 Transfer the claim you're standing in to a player.
 
 ___
 #### `/gd claim we`
+**Arguments**: `[identifier]`  
 Claims a selection made in WorldEdit.  
 Note: This command will not work unless the server has WorldEdit.
+
+
+___
+#### `/gd claimgroup admin`
+**Arguments**: `join \<group\> [\<identifier\>]|unjoin [\<identifier\>]|create \<group\>|delete \<group\>`  
+Used to manage admin claim groups. 
+
+
+___
+#### `/gd claimgroup player`
+**Arguments**: `join \<group\> [\<identifier\>]|unjoin [\<identifier\>]|create \<group\>|delete \<group\>`  
+Used to manage player claim groups. 
+
 
 ___
 #### `/gd cuboid`
@@ -287,21 +321,29 @@ Toggles claim flag debug mode
 ___
 #### `/gd flag claim`
 **Aliases**: `cf`  
-**Arguments**: `[\<flag\> \<target\> \<value\> context[key=value]]`  
+**Arguments**: `[\<flag\> \<target\> \<value\> [\<\contexts\>]]`  
 
 Gets/Sets claim flags in the claim you are standing in.
+
+
+___
+#### `/gd flag definition`
+**Aliases**: `cf`  
+**Arguments**: `\<preset:definition\> \<value\> [identifier]`  
+
+Sets claim flag definitions in the claim you are standing in or claim identifier.
 
 ___
 #### `/gd flag group`
 **Aliases**: `cfg`  
-**Arguments**: `\<group\> \<flag\> \<target\> \<value\> context[key=value]]`  
+**Arguments**: `\<group\> \<flag\> \<target\> \<value\> [\<\contexts\>]]`  
 
 Gets/Sets flag permission for a group in claim you are standing in.
 
 ___
 #### `/gd flag player`
 **Aliases**: `cfp`  
-**Arguments**: `\<player\> \<flag\> \<target\> \<value\> context[key=value]]`  
+**Arguments**: `\<player\> \<flag\> \<target\> \<value\> [\<\contexts\>]]`  
 
 Adds flag permission to player.
 

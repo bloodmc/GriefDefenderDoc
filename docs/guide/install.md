@@ -23,9 +23,11 @@ icon: install
 * An up-to-date [Paper] or [Spigot].
 
 ### Installation
+::::warning
+If using `spark`, update to latest version at https://ci.lucko.me/job/spark/
 
-:warning: If using `spark`, update to latest version at https://ci.lucko.me/job/spark/ :warning:   
-:warning: Set `spawn-protection` to `0` in `server.properties` to allow GD to protect spawn. If this is not set properly, the server will block actions before GD has a chance to see it. :warning:   
+Set `spawn-protection` to `0` in `server.properties` to allow GD to protect spawn. If this is not set properly, the server will block actions before GD has a chance to see it. 
+::::
 
 Download the latest GriefDefender jar from spigot's plugin website. Be sure to choose your correct Minecraft version, and keep it always updated! After the download drop it into your server's plugins folder.
 
@@ -73,8 +75,9 @@ Claim data can be found inside the folder of the dimension the claim is in, e.g.
 
  
 ### Permissions
-
-:warning: It is VERY IMPORTANT you follow https://github.com/bloodmc/GriefDefender/wiki/Permissions#important before proceeding. :warning:  
+:::: info
+It is VERY IMPORTANT you follow https://github.com/bloodmc/GriefDefender/wiki/Permissions#important before proceeding.
+::::
 
 After install GriefDefender correctly, you need to give your players permission to claim land, they aren't given by default. The only permission needed for basic GD setup is `griefdefender.user.*`. For basic admin setup, give admins the permission `griefdefender.admin.*` and `griefdefender.user.*`. 
 

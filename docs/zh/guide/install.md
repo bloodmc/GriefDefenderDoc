@@ -5,7 +5,9 @@ category: 配置
 icon: install
 ---
 
-:warning: 在本页面, 我们将手把手教你如何在你的 Bukkit/Sponge 服务器上开始使用 GriefDefender. :warning: 
+:::: info 
+在本页面, 我们将手把手教你如何在你的 Bukkit/Sponge 服务器上开始使用 GriefDefender.
+::::
 
 ## 入门
 
@@ -23,9 +25,11 @@ icon: install
 * 最新版本的 [Paper] 或 [Spigot].
 
 ### 安装
-
-:warning: 如果你在使用 `spark` 插件, 请在此链接下载并更新到最新版本 https://ci.lucko.me/job/spark/ :warning:   
-:warning: 在  `server.properties` 中设置 `spawn-protection` 为 `0` 以允许 GD 接管出生保护. 如果此项设置错误, GD 将无法正常接管出生保护. :warning:   
+:::: warning
+ 如果你在使用 `spark` 插件, 请在此链接下载并更新到最新版本 https://ci.lucko.me/job/spark/
+ 
+在 `server.properties` 中设置 `spawn-protection` 为 `0` 以允许 GD 接管出生保护. 如果此项设置错误, GD 将无法正常接管出生保护.   
+::::
 
 从 Spigot 的插件页面下载最新的 GriefDefender.请务必选择正确的 Minecraft 版本，并保持它为最新版本 下载后,将其放入你服务器的插件文件夹.
 
@@ -75,7 +79,9 @@ Bukkit: `plugins/GriefDefender/worlds/minecraft/A/world/ClaimData`
  
 ### 权限
 
-:warning: **非常重要**的是在你继续进行本项配置之前需要查阅 https://github.com/bloodmc/GriefDefender/wiki/Permissions#important :warning:  
+:::: info 
+**非常重要**的是在你继续进行本项配置之前需要查阅 https://github.com/bloodmc/GriefDefender/wiki/Permissions#important
+::::
 
 在正确安装 GriefDefender 后, 你需要给玩家领地相关的权限, 玩家默认是没有这些权限的. 对于基础 GD 权限只需要给予 `griefdefender.user.*`. 对于管理员权限, 给予管理员 `griefdefender.admin.*` 和 `griefdefender.user.*` 权限. 
 
