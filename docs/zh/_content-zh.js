@@ -14,5 +14,5 @@ module.exports = {
 	      ]
       },
     ], 
-    sidebar: require("./zh_sidebar.js"),
+    sidebar: require("./_sidebar-zh.js"),
 };
