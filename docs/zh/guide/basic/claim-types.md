@@ -1,66 +1,66 @@
 ---
-title: Claim Types
-category: Claim
-tags: Types
+title: 领地类型
+category: 领地
+tags: 类型
 icon: type
 ---
 
-_This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims._
+_这是一个正在施工中的页面，将涵盖 GD 的所有领地类型--基本领地、细分领地、城镇领地和管理员领地。._
 
-## Claim Types
-There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use `/adminclaims`, `/townclaims` and `/basicclaims`. To switch to subdivision mode, use `/claimsubdivide`. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic. 
+## 领地类型
+有四种类型的用户领地：管理员、城镇、基本和细分，每一种都有一个 2D 和 3D 模式。要在不同类型之间切换，请使用 `/adminclaims` 、 `/townclaims` 和 `/basicclaims` 。要切换到细分模式，使用 `/claimsubdivide` 。所有三种主要领地类型都支持直接的子领地（细分）--城镇、管理员和基本。
 
-Admin claims have no size limitations and different flags compared to basic claims which normal players can make. Towns can also be made by players, and supports the creation of basic claims within town claims. Basic claims are the go-to claim type for players, and can support a player's own management of claim flags. For more information, visit our [permission](https://github.com/bloodmc/GriefDefender/wiki/Permissions) page, which will help you assign proper permissions.
+管理员领地没有大小限制，与普通玩家可创建的基本领地相比，有不同的 Flag. 城镇也可以由玩家创建，并支持在城镇领地中创建基本领地。基本领地是玩家的首选领地类型，并且可以支持玩家自己管理领地的 Flags. 更多信息，请访问我们的 [权限](https://bloodmc.github.io/GriefDefenderDoc/zh/guide/permissions/) 页面，它将帮助你分配适当的权限。
 
-### Basic
+##基本领地
 
-Basic claims are the default claim type used for users.
+基本领地是用于用户的默认领地类型.
 
-A basic claim has the following capabilities  
+一个基本领地具有以下功能  
 
-* 5x5 size restriction in 2D mode. 5x5x5 size restriction in 3D mode.  
-* Can be sold, rented, or transferred to another player.  
-* Requires claim blocks.  
+* 2D 模式下的 5x5 尺寸限制. 3D 模式下的 5x5x5 尺寸限制.  
+* 可以出售、出租或转让给其他玩家.  
+* 需要领地方块.  
 
-This is the default claim type mode when equipping the claiming tool (minecraft:golden_shovel).  
-Note: Use `/basicclaims` or `/gd mode basic` to switch to this claim type mode.  
+这是使用领地工具(minecraft:golden_shovel) 时的默认圈地类型模式。 
+注意: 使用 `/basicclaims` 或 `/gd mode basic` 来切换到这种圈地类型模式。.  
 
-### Subdivision
+### 细分
 
-Subdivision claims are used to subdivide top level claims such as basic/admin/town into smaller areas.
+细分领地用于将最高级别的领地，如基本/管理员/城镇细分为较小的区域.
 
-A subdivision claim has the following capabilities  
+细分领地具有以下功能  
 
-* 1x1 size restriction in 2D mode. 1x1x1 size restriction in 3D mode.
-* Can be sold, rented, or transferred to another player.  
-* Requires no claim blocks when created by owner. 
+* 2D 模式下的 1x1 尺寸限制. 3D 模式下的 1x1x1 尺寸限制. 
+* 可以出售、出租或转让给其他玩家.  
+* 由所有者创建时不需要领地方块. 
 
-### Admin
+### 管理员
 
-Admin claims are the administrative tool by excellence. They can be overlapped over any claim type to enforce flags. To create an admin claim, the permission `griefdefender.admin.claim.command.admin-mode` is necessary. However, please note that `griefdefender.admin` is recommended - it'll allow the management of the admin typed claims.
+管理员领地是最适合管理的. 它们可以叠加在任何领地类型上，以强制执行Flags. 要创建一个管理员领地，需要权限节点 `griefdefender.admin.claim.command.admin-mode`. 注意: 推荐使用 `griefdefender.admin` --它将允许对管理员类型的领地进行管理。
 
-An admin claim has the following capabilities  
+管理员领地具有以下能力  
 
-* No size restrictions.
-* Does not cost anything to create.
-* Can be created around any existing claim.
-* Can rented. 
-* Used by administrators only.
+* 没有大小限制.
+* 创建不需要任何费用.
+* 可以围绕任何现有的领地进行创建.
+* 可以租借.
+* 仅由管理员使用.
 
-Note: Use `/adminclaims` or `/gd mode admin` to switch to this claim type mode.
+注意: 使用 `/adminclaims` 或 `/gd mode admin` 来切换到这种领地类型模式。
 
-### Town Claims
+### 城镇领地
 
-Town claims are the third type of player claim introduced to GriefDefender. When holding the golden shovel, use `/townclaims`to switch to Town claim mode. Once created, town claims can house other basic claims, much like subdivisions to basic or admin claims.
+城镇领地是引入 GriefDefender 的第三种玩家领地类型. 当拿着金铲子时, 使用 `/townclaims` 切换到城镇领地模式. 一旦创建,城镇领地可以容纳其他基本领地，就像基本或管理员领地的细分领地一样.
 
-A town claim has the following capabilities  
+一个城镇领地有以下功能  
 
-* 32x32 size restriction in 2D mode. 32x32x32 size restriction in 3D mode.
-* Requires claim blocks.  
-* Supports basic claims inside.  
-* A creation limit of 1 which means you can only create 1 town by default.  
-Note: This can be adjusted by changing `griefdefender.create-limit` to a value higher than 1 with `gd_claim_default=town` context. 
+* 在 2D 模式下有 32x32 的尺寸限制. 在 3D 模式下有 32x32x32 的尺寸限制。
+* 需要领地方块. 
+* 支持内部的基本领地. 
+* 创建限制为1,这意味着你默认只能创建一个城镇.
+注意: 这可以通过改变 `griefdefender.create-limit` 在 `gd_claim_default=town` 情境下来达到一个高于 1 的值.
 
-### Wilderness Claim
+### 野外
 
-The wilderness claim is an administrative claim. It is automatically created on first time world load and uses any space not claimed by a user. It functions just like any other claim where you can assign flags and options to it. By default, all actions are allowed in the wilderness.
+荒野是一种管理员领地。它在世界首次加载时自动创建，并使用任何未被用户拥有的空间。它的功能就像任何其他领地一样，你可以给它分配 Flags 和 Options.默认情况下，在荒野中允许所有的操作。
