@@ -1,43 +1,43 @@
 ---
-title: Trust System
-category: Claim
-tags: permission
+title: 信任系统
+category: 领地
+tags: 权限
 icon: profile
 ---
 
-There four different types of trust: Accessors, Builders, Containers, and Managers.
+有四种不同类型的信任。访问者、建造师、容器和管理者.
 
-### Arguments
-| Arguments | Description |
+### 选项
+|选项 | 描述 |
 | --------- | ----------- |
-| `<player>`| The player to trust. |
-| `<group>` | The group to trust. Note: If you want to trust everyone, use `public`. |
-| `<type>`  | The type of trust [none, accessor, builder, container, manager]. Note: If you want to remove trust, use `none`. <br>*None*: `Revokes a player/group's access to your claim`<br>*Accessor*: `Grants a player/group access to interact with all blocks except inventory`<br>*Container*: `Grants a player/group access to interact with all blocks including inventory`<br>*Builder*: `Grants a player/group edit access to everything above including ability to place and break blocks`<br>*Manager*: `Grants a player/group access to all of the above including ability to modify claim`  |
+| `<player>`| 需要信任的玩家. |
+| `<group>` | 需要信任的组. 注意: 如果你信任所有人, 使用 `public`. |
+| `<type>`  | 信任类型 [none, accessor, builder, container, manager]. 注意: 如果你想移除信任, 使用 `none`. <br>*None*: `撤销一个玩家/权限组对你的领地的访问权`<br>*Accessor*: `授予玩家/权限组与除库存以外的所有方块互动的权限`<br>*Container*: `授予玩家/权限组与所有方块互动的权限，包括库存。`<br>*Builder*: `授予玩家/权限组编辑权限，包括放置和破坏方块的能力，以实现上述所有功能`<br>*Manager*: `授予玩家/权限组对上述所有内容的访问权，包括修改领地的能力`  |
 
-### Trust Player
-**Command**: `/gd trust player <player> <type>`  
-**Alias**: `trust`  
-**Example**: `/gd trust player Kratos basic`  
+### 信任玩家
+**指令**: `/gd trust player <player> <type>`  
+**别名**: `trust`  
+**例子**: `/gd trust player Kratos basic`  
 
-Grants a player access to your claim(s)
+授予玩家访问你的领地.
 
-### Trust Group
-**Command**: `/gd trust group <group> <type>`  
-**Alias**: `trust`  
+### 信任权限组
+**指令**: `/gd trust group <group> <type>`  
+**别名**: `trust`  
 
-Grants a group access to your claim(s)
+授予权限组访问你的领地.
 
-### Remove Trust Player
-**Command**: `/gd trust player <player> none`  
+### 移除信任玩家
+**指令**: `/gd trust player <player> none`  
 
-Revokes a player's access to all your claims.
+撤销一个玩家对你领地的访问权.
 
-### Remove Trust Group
-**Command**: `/gd trust group <group> none`  
+### 移除信任权限组
+**指令**: `/gd trust group <group> none`  
 
-Revokes a group's access to all your claims.
+撤销一个权限组对你领地的访问权.
 
-## List Trusted
-**Command**: `/trustlist` 
+## 信任名单
+**指令**: `/trustlist` 
 
-Lists currently trusted players and the trust type.
+列出当前受信任的玩家和信任类型.
