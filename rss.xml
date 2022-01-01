@@ -6,8 +6,8 @@
     <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</link>
     <description>A new way to secure your world.</description>
     <language>en-US</language>
-    <pubDate>Sun, 12 Dec 2021 09:16:48 GMT</pubDate>
-    <lastBuildDate>Sun, 12 Dec 2021 09:16:48 GMT</lastBuildDate>
+    <pubDate>Sat, 01 Jan 2022 07:44:19 GMT</pubDate>
+    <lastBuildDate>Sat, 01 Jan 2022 07:44:19 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>develop</category>
@@ -35,7 +35,7 @@
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/API/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">API</source>
       <category>develop</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -87,7 +87,7 @@ Note: If you make use of any API methods that accepts a kyori component as param
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/Contribution/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Contrubution</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -122,7 +122,7 @@ In the bottom of each pages there will be a button redirect you to the source fi
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/contexts/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Contexts</source>
       <category>Usage</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -352,7 +352,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/debugging/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Debugging</source>
       <category>Usage</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -906,7 +906,7 @@ Note: The filter can be any word you want.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/flags/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Flags</source>
       <category>Flag</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -1131,7 +1131,7 @@ flag-control {
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/advanced/global-config/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Global Config</source>
       <category>Configuration</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -1870,7 +1870,7 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-management/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Claim Management</source>
       <category>Claim</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -2162,7 +2162,7 @@ griefdefender.admin.option.perk.fly.manager
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-rent-system/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Rent System</source>
       <category>Economy</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -2268,7 +2268,7 @@ Syntax is as follows<br>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/claim-types/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Claim Types</source>
       <category>Claim</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p><em>This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims.</em></p>
 <h2 id="claim-types"> Claim Types</h2>
 <p>There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use <code>/adminclaims</code>, <code>/townclaims</code> and <code>/basicclaims</code>. To switch to subdivision mode, use <code>/claimsubdivide</code>. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.</p>
@@ -2322,7 +2322,7 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/custom-alias-creation/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">User-Friendly Commands</source>
       <category>Command</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="user-friendly-commands"> User-Friendly Commands</h2>
 <p>One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accesible for everyone with shorter commands.</p>
 <p>For this, you may need to install an alias plugin like CustomCommands, or the commands.yml inside of the server folder.</p>
@@ -2345,7 +2345,7 @@ Note: This can be adjusted by changing <code>griefdefender.create-limit</code> t
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/flag-definitions-gui/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Flag Definition</source>
       <category>Flag</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="overview"> Overview</h2>
 <p>The flag definition system provides both users and admins the ability to manage their claim flags with ease.
 GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.
@@ -3735,7 +3735,7 @@ There are 2 delivered groups that GD ships with, <code>USER</code> and <code>ADM
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/options/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Options</source>
       <category>Option</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
 <p>Default values can be changed in <code>options.conf</code>, for finer control continue reading below.</p>
 <h2 id="built-in-commands"> Built-in Commands</h2>
@@ -4086,7 +4086,7 @@ There are 4 subsections within this section.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/pvp/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">PVP</source>
       <category>Conf</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -4129,7 +4129,7 @@ Note: These examples assume a clean installation with no modified settings.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/tags/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Tags System</source>
       <category>Tag</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>A <code>Tag</code> is a new system introduced in Minecraft 1.13 that allows users to group one or more item, block, entity identifiers under a single group known as a tag. GriefDefender integrates into the tag system and exposes all available tags as contexts that can applied with a flag or option.</p>
 <p>For example, lets say you wanted to allow interaction with the following standing signs</p>
 <ul>
@@ -4189,7 +4189,7 @@ Note: If your datapack is not enabled then your datapack structure shown in step
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/basic/trust-system/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Trust System</source>
       <category>Claim</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>There four different types of trust: Accessors, Builders, Containers, and Managers.</p>
 <h3 id="arguments"> Arguments</h3>
 <table>
@@ -4240,9 +4240,14 @@ Note: If your datapack is not enabled then your datapack structure shown in step
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/commands/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Command Overview</source>
       <category>Command</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="command-overview"> Command Overview</h1>
-<p>Arguments Key: \&lt;required\&gt; [optional]</p>
+<p>Arguments Key: &lt;required&gt; [optional]</p>
+<h3 id="claim-identifier"> Claim Identifier</h3>
+<p>Many commands support the new argument <code>[identifier]</code> which is the claim id set by the claim owner.  If you do not want to be required to stand in a claim for a specific command, set the claim identifier using <code>/gd claim id \&lt;identifier\&gt;</code> then pass the identifier at the end of the command.<br>
+If using an identifier for an admin claim, the format is <code>admin:\&lt;identifier\&gt;</code><br>
+If using an identifier for wilderness, the format is <code>wilderness:\&lt;identifier\&gt;</code><br>
+If using an identifier for another player, the format is <code>\&lt;playername\&gt;:\&lt;identifier\&gt;</code></p>
 <h3 id="claims"> Claims</h3>
 <ul>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-abandon-claim" target="_blank" rel="noopener noreferrer">/gd abandon claim</a></li>
@@ -4250,79 +4255,83 @@ Note: If your datapack is not enabled then your datapack structure shown in step
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-abandon-top" target="_blank" rel="noopener noreferrer">/gd abandon top</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-buy-blocks" target="_blank" rel="noopener noreferrer">/gd buy blocks [numberOfBlocks]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-buy-claim" target="_blank" rel="noopener noreferrer">/gd buy claim</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-contract" target="_blank" rel="noopener noreferrer">/gd claim contract \&lt;amount\&gt; [direction]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-create" target="_blank" rel="noopener noreferrer">/gd claim create \&lt;radius\&gt; [type]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-expand" target="_blank" rel="noopener noreferrer">/gd claim expand \&lt;amount\&gt; [direction]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-farewell" target="_blank" rel="noopener noreferrer">/gd claim farewell \&lt;message\&gt;</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-greeting" target="_blank" rel="noopener noreferrer">/gd claim greeting \&lt;message\&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-contract" target="_blank" rel="noopener noreferrer">/gd claim contract &lt;amount&gt; [direction]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-create" target="_blank" rel="noopener noreferrer">/gd claim create &lt;radius&gt; [type]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-expand" target="_blank" rel="noopener noreferrer">/gd claim expand &lt;amount&gt; [direction]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-farewell" target="_blank" rel="noopener noreferrer">/gd claim farewell &lt;message&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-greeting" target="_blank" rel="noopener noreferrer">/gd claim greeting &lt;message&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-id" target="_blank" rel="noopener noreferrer">/gd claim id &lt;identifier&gt;</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-info" target="_blank" rel="noopener noreferrer">/gd claim info [id]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-inherit" target="_blank" rel="noopener noreferrer">/gd claim inherit</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-investigate" target="_blank" rel="noopener noreferrer">/gd claim investigate</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-list" target="_blank" rel="noopener noreferrer">/gd claim list [\&lt;player\&gt; [world]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-list" target="_blank" rel="noopener noreferrer">/gd claim list [&lt;player&gt; [world]]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-displayname" target="_blank" rel="noopener noreferrer">/gd claim displayname [name]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-rent" target="_blank" rel="noopener noreferrer">/gd claim rent create [\&lt;rate\&gt; [max_days]]|info|list|cancel</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-rent" target="_blank" rel="noopener noreferrer">/gd claim rent create [&lt;rate&gt; [max_days]]|info|list|cancel</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-setspawn" target="_blank" rel="noopener noreferrer">/gd claim setspawn</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-spawn" target="_blank" rel="noopener noreferrer">/gd claim spawn</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-transfer" target="_blank" rel="noopener noreferrer">/gd claim transfer [player]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-we" target="_blank" rel="noopener noreferrer">/gd claim we</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claimgroup-admin" target="_blank" rel="noopener noreferrer">/gd claimgroup admin [&lt;join&gt;|&lt;unjoin&gt;|&lt;create&gt;|&lt;delete&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claimgroup-player" target="_blank" rel="noopener noreferrer">/gd claimgroup player [&lt;join&gt;|&lt;unjoin&gt;|&lt;create&gt;|&lt;delete&gt;]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-cuboid" target="_blank" rel="noopener noreferrer">/gd cuboid</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-basic" target="_blank" rel="noopener noreferrer">/gd mode basic</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-subdivide" target="_blank" rel="noopener noreferrer">/gd mode subdivide</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-town" target="_blank" rel="noopener noreferrer">/gd mode town</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-info" target="_blank" rel="noopener noreferrer">/gd player info \&lt;player\&gt; \&lt;world\&gt;|\&lt;player\&gt;|[\&lt;world\&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-info" target="_blank" rel="noopener noreferrer">/gd player info &lt;player&gt; &lt;world&gt;|&lt;player&gt;|[&lt;world&gt;]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-trapped" target="_blank" rel="noopener noreferrer">/gd player trapped</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-unlockdrops" target="_blank" rel="noopener noreferrer">/gd player unlockdrops</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-sell-blocks" target="_blank" rel="noopener noreferrer">/gd sell blocks [numberOfBlocks]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-sell-claim-price" target="_blank" rel="noopener noreferrer">/gd sell claim \&lt;price\&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-sell-claim-price" target="_blank" rel="noopener noreferrer">/gd sell claim &lt;price&gt;</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-transferblocks" target="_blank" rel="noopener noreferrer">/gd transferblocks</a></li>
 </ul>
 <h3 id="flags"> Flags</h3>
 <ul>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-debug" target="_blank" rel="noopener noreferrer">/gd flag debug</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-claim" target="_blank" rel="noopener noreferrer">/gd flag claim [\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [context[key=value]]]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-group" target="_blank" rel="noopener noreferrer">/gd flag group \&lt;group\&gt; [\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [context[key=value]]]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-player" target="_blank" rel="noopener noreferrer">/gd flag player \&lt;player\&gt; [\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [context[key=value]]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-claim" target="_blank" rel="noopener noreferrer">/gd flag claim [&lt;flag&gt; &lt;target&gt; &lt;value&gt; [&lt;contexts&gt;]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-definition" target="_blank" rel="noopener noreferrer">/gd flag definition &lt;preset:definition&gt; &lt;value&gt; [identifier]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-group" target="_blank" rel="noopener noreferrer">/gd flag group &lt;group&gt; [&lt;flag&gt; &lt;target&gt; &lt;value&gt; [&lt;\contexts&gt;]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-player" target="_blank" rel="noopener noreferrer">/gd flag player &lt;player&gt; [&lt;flag&gt; &lt;target&gt; &lt;value&gt; [&lt;\contexts&gt;]]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-reset" target="_blank" rel="noopener noreferrer">/gd flag reset</a></li>
 </ul>
 <h3 id="options"> Options</h3>
 <ul>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-claim" target="_blank" rel="noopener noreferrer">/gd option [\&lt;option\&gt; \&lt;value\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-group" target="_blank" rel="noopener noreferrer">/gd option group \&lt;group\&gt; [\&lt;option\&gt; \&lt;value\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-player" target="_blank" rel="noopener noreferrer">/gd option player \&lt;player\&gt; [\&lt;option\&gt; \&lt;value\&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-claim" target="_blank" rel="noopener noreferrer">/gd option [&lt;option&gt; &lt;value&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-group" target="_blank" rel="noopener noreferrer">/gd option group &lt;group&gt; [&lt;option&gt; &lt;value&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-player" target="_blank" rel="noopener noreferrer">/gd option player &lt;player&gt; [&lt;option&gt; &lt;value&gt;]</a></li>
 </ul>
 <h3 id="trust"> Trust</h3>
 <p>Note: Use <code>public</code> if you want to trust all users.</p>
 <ul>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-player" target="_blank" rel="noopener noreferrer">/gd trust player \&lt;player\&gt;|public &lt;accessor|container|builder|manager&gt; </a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-group" target="_blank" rel="noopener noreferrer">/gd trust group \&lt;group\&gt;|public &lt;accessor|container|builder|manager&gt; </a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-player" target="_blank" rel="noopener noreferrer">/gd trustall player \&lt;player\&gt;|public</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-group" target="_blank" rel="noopener noreferrer">/gd trustall group \&lt;group\&gt;|public</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-player" target="_blank" rel="noopener noreferrer">/gd untrust player \&lt;player\&gt;|public </a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-group" target="_blank" rel="noopener noreferrer">/gd untrust group \&lt;group\&gt;|public </a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-player" target="_blank" rel="noopener noreferrer">/gd untrustall player \&lt;player\&gt;|public</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-group" target="_blank" rel="noopener noreferrer">/gd untrustall group \&lt;group\&gt;|public</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-player" target="_blank" rel="noopener noreferrer">/gd trust player &lt;player&gt;|public &lt;accessor|container|builder|manager&gt; </a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-group" target="_blank" rel="noopener noreferrer">/gd trust group &lt;group&gt;|public &lt;accessor|container|builder|manager&gt; </a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-player" target="_blank" rel="noopener noreferrer">/gd trustall player &lt;player&gt;|public</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-group" target="_blank" rel="noopener noreferrer">/gd trustall group &lt;group&gt;|public</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-player" target="_blank" rel="noopener noreferrer">/gd untrust player &lt;player&gt;|public </a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-group" target="_blank" rel="noopener noreferrer">/gd untrust group &lt;group&gt;|public </a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-player" target="_blank" rel="noopener noreferrer">/gd untrustall player &lt;player&gt;|public</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-group" target="_blank" rel="noopener noreferrer">/gd untrustall group &lt;group&gt;|public</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-list" target="_blank" rel="noopener noreferrer">/gd trust list</a></li>
 </ul>
 <h3 id="admin"> Admin</h3>
 <ul>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-abandon-world" target="_blank" rel="noopener noreferrer">/gd abandon world [world]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-ban" target="_blank" rel="noopener noreferrer">/gd ban [hand | \&lt;type\&gt; \&lt;target\&gt; [\&lt;message\&gt;]]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-clear" target="_blank" rel="noopener noreferrer">/gd claim clear \&lt;target\&gt; [\&lt;claim\&gt; [\&lt;world\&gt;]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-ban" target="_blank" rel="noopener noreferrer">/gd ban [hand | &lt;type&gt; &lt;target&gt; [&lt;message&gt;]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-clear" target="_blank" rel="noopener noreferrer">/gd claim clear &lt;target&gt; [&lt;claim&gt; [&lt;world&gt;]]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-ignore" target="_blank" rel="noopener noreferrer">/gd claim ignore</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-restore" target="_blank" rel="noopener noreferrer">/gd claim restore</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-schematic" target="_blank" rel="noopener noreferrer">/gd claim schematic \&lt;create|delete\&gt; &lt;name&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-schematic" target="_blank" rel="noopener noreferrer">/gd claim schematic &lt;create|delete&gt; &lt;name&gt;</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-delete-claim" target="_blank" rel="noopener noreferrer">/gd delete claim</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-delete-all" target="_blank" rel="noopener noreferrer">/gd delete all &lt;player&gt; [world]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-delete-alladmin" target="_blank" rel="noopener noreferrer">/gd delete alladmin [world]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-admin" target="_blank" rel="noopener noreferrer">/gd mode admin</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-nature" target="_blank" rel="noopener noreferrer">/gd mode nature</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-group" target="_blank" rel="noopener noreferrer">/gd permission group \&lt;group\&gt; [\&lt;permission\&gt; \&lt;value\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-player" target="_blank" rel="noopener noreferrer">/gd permission player \&lt;player\&gt; [\&lt;permission\&gt; \&lt;value\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-adjustbonusblocks" target="_blank" rel="noopener noreferrer">/gd player adjustbonusblocks \&lt;player\&gt; \&lt;amount\&gt; [world]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-setaccruedblocks" target="_blank" rel="noopener noreferrer">/gd player setaccruedblocks \&lt;player\&gt; \&lt;amount\&gt; [\&lt;world\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-debug" target="_blank" rel="noopener noreferrer">/gd debug \&lt;on\&gt;\&lt;off\&gt;\&lt;record\&gt;\&lt;paste\&gt; [\&lt;player\&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-group" target="_blank" rel="noopener noreferrer">/gd permission group &lt;group&gt; [&lt;permission&gt; &lt;value&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-player" target="_blank" rel="noopener noreferrer">/gd permission player &lt;player&gt; [&lt;permission&gt; &lt;value&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-adjustbonusblocks" target="_blank" rel="noopener noreferrer">/gd player adjustbonusblocks &lt;player&gt; &lt;amount&gt; [world]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-setaccruedblocks" target="_blank" rel="noopener noreferrer">/gd player setaccruedblocks &lt;player&gt; &lt;amount&gt; [&lt;world&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-debug" target="_blank" rel="noopener noreferrer">/gd debug &lt;on&gt;&lt;off&gt;&lt;record&gt;&lt;paste&gt; [&lt;player&gt;]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-reload" target="_blank" rel="noopener noreferrer">/gd reload</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-unban" target="_blank" rel="noopener noreferrer">/gd unban [hand | \&lt;type\&gt; \&lt;target\&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-unban" target="_blank" rel="noopener noreferrer">/gd unban [hand | &lt;type&gt; &lt;target&gt;]</a></li>
 </ul>
 <h3 id="main-command"> Main Command</h3>
 <ul>
@@ -4336,7 +4345,8 @@ Note: If your datapack is not enabled then your datapack structure shown in step
 <h3 id="claims-2"> Claims</h3>
 <hr>
 <h4 id="gd-abandon-claim"> <code>/gd abandon claim</code></h4>
-<p>Abandons a claim</p>
+<p><strong>Arguments</strong>: <code>[identifier]</code>
+Abandons a claim</p>
 <hr>
 <h4 id="gd-abandon-all"> <code>/gd abandon all</code></h4>
 <p>Abandons ALL your claims</p>
@@ -4354,7 +4364,7 @@ Note: If your datapack is not enabled then your datapack structure shown in step
 <hr>
 <h4 id="gd-claim-contract"> <code>/gd claim contract</code></h4>
 <p><strong>Aliases</strong>: <code>claimcontract</code>, <code>contractclaim</code><br>
-<strong>Arguments</strong>: <code>\&lt;amount\&gt; [direction]</code><br>
+<strong>Arguments</strong>: <code>\&lt;amount\&gt; [direction] [identifier]</code><br>
 Contracts/Shrinks the claim from the direction you are facing.</p>
 <hr>
 <h4 id="gd-claim-create"> <code>/gd claim create</code></h4>
@@ -4364,22 +4374,26 @@ Creates a claim around the player of the given type. If no claimtype (or an inco
 <hr>
 <h4 id="gd-claim-expand"> <code>/gd claim expand</code></h4>
 <p><strong>Aliases</strong>: <code>claimexpand</code>, <code>expandclaim</code><br>
-<strong>Arguments</strong>: <code>\&lt;amount\&gt; [direction]</code><br>
+<strong>Arguments</strong>: <code>\&lt;amount\&gt; [direction] [identifier]</code><br>
 Expands the claim in the direction you are facing.</p>
 <hr>
 <h4 id="gd-claim-farewell"> <code>/gd claim farewell</code></h4>
-<p><strong>Arguments</strong>: <code>\&lt;message\&gt;</code><br>
+<p><strong>Arguments</strong>: <code>\&lt;message\&gt; [identifier]</code><br>
 Sets the farewell message of your claim</p>
 <p>To unset, <code>/gd claim farewell clear</code></p>
 <hr>
 <h4 id="gd-claim-greeting"> <code>/gd claim greeting</code></h4>
-<p><strong>Arguments</strong>: <code>\&lt;message\&gt;</code><br>
+<p><strong>Arguments</strong>: <code>\&lt;message\&gt; [identifier]</code><br>
 Sets the greeting message of your claim</p>
 <p>To unset, <code>/gd claim greeting clear</code></p>
 <hr>
+<h4 id="gd-claim-id"> <code>/gd claim id</code></h4>
+<p><strong>Arguments</strong>: <code>\&lt;identifier\&gt;</code><br>
+Sets the friendly identifier of your claim.</p>
+<hr>
 <h4 id="gd-claim-info"> <code>/gd claim info</code></h4>
 <p><strong>Aliases</strong>: <code>claiminfo</code><br>
-<strong>Arguments</strong>: <code>[id]</code></p>
+<strong>Arguments</strong>: <code>[identifier]</code></p>
 <p>Gets information about a claim you are standing in or by claim id.</p>
 <hr>
 <h4 id="gd-claim-inherit"> <code>/gd claim inherit</code></h4>
@@ -4415,12 +4429,21 @@ Note: Requires economy plugin.</p>
 <hr>
 <h4 id="gd-claim-transfer"> <code>/gd claim transfer</code></h4>
 <p><strong>Aliases</strong>: <code>transferclaim</code><br>
-<strong>Arguments</strong>: <code>\&lt;player\&gt;</code></p>
+<strong>Arguments</strong>: <code>\&lt;player\&gt; [identifier]</code></p>
 <p>Transfer the claim you're standing in to a player.</p>
 <hr>
 <h4 id="gd-claim-we"> <code>/gd claim we</code></h4>
-<p>Claims a selection made in WorldEdit.<br>
+<p><strong>Arguments</strong>: <code>[identifier]</code><br>
+Claims a selection made in WorldEdit.<br>
 Note: This command will not work unless the server has WorldEdit.</p>
+<hr>
+<h4 id="gd-claimgroup-admin"> <code>/gd claimgroup admin</code></h4>
+<p><strong>Arguments</strong>: <code>join \&lt;group\&gt; [\&lt;identifier\&gt;]|unjoin [\&lt;identifier\&gt;]|create \&lt;group\&gt;|delete \&lt;group\&gt;</code><br>
+Used to manage admin claim groups.</p>
+<hr>
+<h4 id="gd-claimgroup-player"> <code>/gd claimgroup player</code></h4>
+<p><strong>Arguments</strong>: <code>join \&lt;group\&gt; [\&lt;identifier\&gt;]|unjoin [\&lt;identifier\&gt;]|create \&lt;group\&gt;|delete \&lt;group\&gt;</code><br>
+Used to manage player claim groups.</p>
 <hr>
 <h4 id="gd-cuboid"> <code>/gd cuboid</code></h4>
 <p><strong>Aliases</strong>: <code>cuboid</code></p>
@@ -4467,17 +4490,22 @@ Note: This command will not work unless the server has WorldEdit.</p>
 <hr>
 <h4 id="gd-flag-claim"> <code>/gd flag claim</code></h4>
 <p><strong>Aliases</strong>: <code>cf</code><br>
-<strong>Arguments</strong>: <code>[\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; context[key=value]]</code></p>
+<strong>Arguments</strong>: <code>[\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [\&lt;\contexts\&gt;]]</code></p>
 <p>Gets/Sets claim flags in the claim you are standing in.</p>
+<hr>
+<h4 id="gd-flag-definition"> <code>/gd flag definition</code></h4>
+<p><strong>Aliases</strong>: <code>cf</code><br>
+<strong>Arguments</strong>: <code>\&lt;preset:definition\&gt; \&lt;value\&gt; [identifier]</code></p>
+<p>Sets claim flag definitions in the claim you are standing in or claim identifier.</p>
 <hr>
 <h4 id="gd-flag-group"> <code>/gd flag group</code></h4>
 <p><strong>Aliases</strong>: <code>cfg</code><br>
-<strong>Arguments</strong>: <code>\&lt;group\&gt; \&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; context[key=value]]</code></p>
+<strong>Arguments</strong>: <code>\&lt;group\&gt; \&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [\&lt;\contexts\&gt;]]</code></p>
 <p>Gets/Sets flag permission for a group in claim you are standing in.</p>
 <hr>
 <h4 id="gd-flag-player"> <code>/gd flag player</code></h4>
 <p><strong>Aliases</strong>: <code>cfp</code><br>
-<strong>Arguments</strong>: <code>\&lt;player\&gt; \&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; context[key=value]]</code></p>
+<strong>Arguments</strong>: <code>\&lt;player\&gt; \&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [\&lt;\contexts\&gt;]]</code></p>
 <p>Adds flag permission to player.</p>
 <hr>
 <h4 id="gd-flag-reset"> <code>/gd flag reset</code></h4>
@@ -4657,7 +4685,7 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/install/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Install</source>
       <category>configurabe</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ In this page, we will explain how to start using GriefDefender in your Bukkit/Sponge server step by step. ⚠️</p>
 <h2 id="getting-started"> Getting Started</h2>
 <h3 id="requirements"> Requirements</h3>
@@ -4677,8 +4705,10 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
 <li>An up-to-date <a href="https://papermc.io/downloads" target="_blank" rel="noopener noreferrer">Paper</a> or <a href="https://www.spigotmc.org/wiki/buildtools/" target="_blank" rel="noopener noreferrer">Spigot</a>.</li>
 </ul>
 <h3 id="installation"> Installation</h3>
-<p>⚠️ If using <code>spark</code>, update to latest version at https://ci.lucko.me/job/spark/ ⚠️<br>
-⚠️ Set <code>spawn-protection</code> to <code>0</code> in <code>server.properties</code> to allow GD to protect spawn. If this is not set properly, the server will block actions before GD has a chance to see it. ⚠️</p>
+<div><p>Note</p>
+<p>If using <code>spark</code>, update to latest version at https://ci.lucko.me/job/spark/</p>
+<p>Set <code>spawn-protection</code> to <code>0</code> in <code>server.properties</code> to allow GD to protect spawn. If this is not set properly, the server will block actions before GD has a chance to see it.</p>
+</div>
 <p>Download the latest GriefDefender jar from spigot's plugin website. Be sure to choose your correct Minecraft version, and keep it always updated! After the download drop it into your server's plugins folder.</p>
 <p>Now start your server once to generate all configuration files, to check if GriefDefender was loaded sucessfully you can check console for <code>[GriefDefender] Loaded successfully</code>. Next shut down your server and start configuring your server.</p>
 <h3 id="configuration"> Configuration</h3>
@@ -4716,7 +4746,9 @@ World configs override dimension and global configs.</p>
 <p><code>config/GriefDefender/worlds/minecraft/overworld/world/ClaimData</code> for Sponge<br>
 <code>plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData</code> for Bukkit</p>
 <h3 id="permissions"> Permissions</h3>
-<p>⚠️ It is VERY IMPORTANT you follow https://github.com/bloodmc/GriefDefender/wiki/Permissions#important before proceeding. ⚠️</p>
+<div><p>Info</p>
+<p>It is VERY IMPORTANT you follow https://github.com/bloodmc/GriefDefender/wiki/Permissions#important before proceeding.</p>
+</div>
 <p>After install GriefDefender correctly, you need to give your players permission to claim land, they aren't given by default. The only permission needed for basic GD setup is <code>griefdefender.user.*</code>. For basic admin setup, give admins the permission <code>griefdefender.admin.*</code> and <code>griefdefender.user.*</code>.</p>
 <p>If you want more fine tuned permissions you can find all permissions <a href="https://github.com/bloodmc/GriefDefender/wiki/Permissions" target="_blank" rel="noopener noreferrer">here</a> and for a list of all command permissions &amp; their usage check <a href="https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&amp;-Permissions" target="_blank" rel="noopener noreferrer">here</a>.</p>
 <p>If you believe that commands might be a little longer or hard to memorize, consider creating custom alias. <a href="https://github.com/bloodmc/GriefDefender/wiki/Custom-Alias-Creation" target="_blank" rel="noopener noreferrer">Click here for more information</a></p>
@@ -4733,7 +4765,7 @@ World configs override dimension and global configs.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/griefprevention/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefPrevention</source>
       <category>Migration</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -4848,7 +4880,7 @@ Migration output should appear in console as it is migrating.</li>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/migration/worldguard/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">WorldGuard</source>
       <category>Migration</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -4945,7 +4977,7 @@ Migration output should appear in console as it is migrating.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/permissions/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Permission</source>
       <category>Info</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>If you want to have a quickstart, apply <code>griefdefender.user.*</code> to your players and both <code>griefdefender.user.*</code> and <code>griefdefender.admin.*</code> to your staff/admins.</p>
 <p>It is recommended to use the base permission nodes above, and if you want a more fine control read all permissions below and deny accordingly.</p>
 <h3 id="important"> IMPORTANT</h3>
@@ -5610,7 +5642,7 @@ See https://luckperms.net/wiki/Default-Groups</li>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/guide/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefDefender</source>
       <category>configurabe</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>W.I.P</p>
 <p>This document is being greatly improved!
 If you encounter problems, please report to us</p>
@@ -5662,7 +5694,7 @@ It works out of the box and fully integrates with <a href="https://ci.lucko.me/j
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/dynmap/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Dynmap</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -5725,7 +5757,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/placeholder/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Placeholder</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<table>
 <thead>
 <tr>
@@ -5828,7 +5860,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GDHooks</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -5900,7 +5932,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/hooks/wecui/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">WECUI</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -5929,7 +5961,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/layout/</link>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/layout/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Custom Layout</source>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>You can use slots with markdown and component support to custom page layout.</p>
 <div><p>Note</p>
 <p>This is just a demo, you should add styles according to your own needs.</p>
@@ -5954,7 +5986,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</link>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefDefender</source>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
     </item>
     <item>
       <title>Pixelmon Preset</title>
@@ -5962,7 +5994,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/Pixelmon/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Pixelmon Preset</source>
       <category>Preset</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -5975,7 +6007,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/</link>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/resources/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Resources</source>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>
@@ -5994,7 +6026,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/slides/</link>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/slides/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Slide page</source>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/logo.svg" type="image/svg+xml"/>
@@ -6005,7 +6037,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/API/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">API</source>
       <category>develop</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="add-griefdefenderapi-to-your-project"> Add GriefDefenderAPI to your project</h2>
 <CodeGroup>
 <CodeGroupItem title="gradle">
@@ -6057,7 +6089,7 @@ Note: If you make use of any API methods that accepts a kyori component as param
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/Contribution/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Contrubution</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="info"> Info</h2>
 <div><p>Info</p>
 <p>GriefDefenderDoc is built with <a href="https://v1.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer">VuePress</a> and <a href="https://vuepress-theme-hope.github.io/" target="_blank" rel="noopener noreferrer">Theme Hope</a> which means you can learn some editing skill from there.</p>
@@ -6092,7 +6124,7 @@ In the bottom of each pages there will be a button redirect you to the source fi
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/contexts/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Contexts</source>
       <category>Usage</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="contexts"> Contexts</h1>
 <p>Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context</p>
 <p>Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.</p>
@@ -6322,7 +6354,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info</li>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/debugging/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Debugging</source>
       <category>Usage</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender is powered by permissions. Every action done in a world is checked against a specific flag permission. If you are trying to figure out what is causing an action to be blocked or not to be blocked then /gddebug is what you will need to use.</p>
 <p>Syntax
 <code>/gddebug record [filter]</code>
@@ -6876,7 +6908,7 @@ Note: The filter can be any word you want.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/flags/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Flags</source>
       <category>Flag</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="flags"> Flags</h1>
 <p>Flags allow for very specific control of actions by Players or Groups both inside and outside of claims.<br>
 Default Flags can be overridden or per claim specific Flags can be used.</p>
@@ -7101,7 +7133,7 @@ flag-control {
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/advanced/global-config/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Global Config</source>
       <category>Configuration</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience.</p>
 <blockquote>
 <p>⚠️ Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated <code>global.conf</code> file. <strong>All migration variables should ALWAYS be used AFTER a backup of your data is made.</strong> ⚠️</p>
@@ -7840,7 +7872,7 @@ For more info you can go to <a href="https://commons.apache.org/proper/commons-i
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-management/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Claim Management</source>
       <category>Claim</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the <a href="https://github.com/bloodmc/GriefDefender/wiki/Flags" target="_blank" rel="noopener noreferrer">Flags page</a>.</p>
 <p>All the examples are with the defaults at the time of writing this in mind.</p>
 <h2 id="claim-creation"> Claim Creation</h2>
@@ -8132,7 +8164,7 @@ griefdefender.admin.option.perk.fly.manager
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-rent-system/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Rent System</source>
       <category>Economy</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p><img src="https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png" alt="Rent System" /></p>
 <p>This new system will allow you to set your claim up for rent and earn some money on the way.</p>
 <h1 id="how-to-enable-it"> How to enable it</h1>
@@ -8238,7 +8270,7 @@ Syntax is as follows<br>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/claim-types/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">领地类型</source>
       <category>领地</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p><em>这是一个正在施工中的页面，将涵盖 GD 的所有领地类型--基本领地、细分领地、城镇领地和管理员领地。.</em></p>
 <h2 id="领地类型"> 领地类型</h2>
 <p>有四种类型的用户领地：管理员、城镇、基本和细分，每一种都有一个 2D 和 3D 模式。要在不同类型之间切换，请使用 <code>/adminclaims</code> 、 <code>/townclaims</code> 和 <code>/basicclaims</code> 。要切换到细分模式，使用 <code>/claimsubdivide</code> 。所有三种主要领地类型都支持直接的子领地（细分）--城镇、管理员和基本。</p>
@@ -8292,7 +8324,7 @@ Syntax is as follows<br>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/flag-definitions-gui/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">预制标签</source>
       <category>标签</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="概览"> 概览</h2>
 <p>预制标签系统为用户及管理员提供了简便管理领地标签的可能。
 GriefDefender 默认提供了一些较为通用的预制标签，默认提供的标签数据只适用于纯净且可以于以下文件找到</p>
@@ -9280,7 +9312,7 @@ GD 随附 2 个预制标签组，即 <code>USER</code> 和 <code>ADMIN</code>。
       <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/options/</link>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/options/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">选项</source>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<details><summary>名词辨析</summary>
 <p>Options - 选项
 Meta - 元数据
@@ -9639,7 +9671,7 @@ There are 4 subsections within this section.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/pvp/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">PVP</source>
       <category>Conf</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender has the ability to control PvP globally, per user/group, or per claim.</p>
 <p>Here are a few examples on how to configure PvP<br>
 Note: These examples assume a clean installation with no modified settings.</p>
@@ -9682,7 +9714,7 @@ Note: These examples assume a clean installation with no modified settings.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/tags/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">标签组系统</source>
       <category>Tag</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p><code>标签</code> 是一个于 Minecraft 1.13 引入的新系统，其允许用户将 物品，方块，实体 的标志符捆绑为一个标签组以方便分类。GriefDefender 将与标签系统集成并将其导出为情境用以 标签(Flag)/选项(Option)。</p>
 <p>例如，假设您希望允许与以下站立告示牌进行交互</p>
 <ul>
@@ -9741,7 +9773,7 @@ Note: These examples assume a clean installation with no modified settings.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/basic/trust-system/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">信任系统</source>
       <category>领地</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>有四种不同类型的信任。访问者、建造师、容器和管理者.</p>
 <h3 id="选项"> 选项</h3>
 <table>
@@ -9792,9 +9824,14 @@ Note: These examples assume a clean installation with no modified settings.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/commands/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Command Overview</source>
       <category>Command</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="command-overview"> Command Overview</h1>
-<p>Arguments Key: \&lt;required\&gt; [optional]</p>
+<p>Arguments Key: &lt;required&gt; [optional]</p>
+<h3 id="claim-identifier"> Claim Identifier</h3>
+<p>Many commands support the new argument <code>[identifier]</code> which is the claim id set by the claim owner.  If you do not want to be required to stand in a claim for a specific command, set the claim identifier using <code>/gd claim id \&lt;identifier\&gt;</code> then pass the identifier at the end of the command.<br>
+If using an identifier for an admin claim, the format is <code>admin:\&lt;identifier\&gt;</code><br>
+If using an identifier for wilderness, the format is <code>wilderness:\&lt;identifier\&gt;</code><br>
+If using an identifier for another player, the format is <code>\&lt;playername\&gt;:\&lt;identifier\&gt;</code></p>
 <h3 id="claims"> Claims</h3>
 <ul>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-abandon-claim" target="_blank" rel="noopener noreferrer">/gd abandon claim</a></li>
@@ -9802,79 +9839,83 @@ Note: These examples assume a clean installation with no modified settings.</p>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-abandon-top" target="_blank" rel="noopener noreferrer">/gd abandon top</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-buy-blocks" target="_blank" rel="noopener noreferrer">/gd buy blocks [numberOfBlocks]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-buy-claim" target="_blank" rel="noopener noreferrer">/gd buy claim</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-contract" target="_blank" rel="noopener noreferrer">/gd claim contract \&lt;amount\&gt; [direction]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-create" target="_blank" rel="noopener noreferrer">/gd claim create \&lt;radius\&gt; [type]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-expand" target="_blank" rel="noopener noreferrer">/gd claim expand \&lt;amount\&gt; [direction]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-farewell" target="_blank" rel="noopener noreferrer">/gd claim farewell \&lt;message\&gt;</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-greeting" target="_blank" rel="noopener noreferrer">/gd claim greeting \&lt;message\&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-contract" target="_blank" rel="noopener noreferrer">/gd claim contract &lt;amount&gt; [direction]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-create" target="_blank" rel="noopener noreferrer">/gd claim create &lt;radius&gt; [type]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-expand" target="_blank" rel="noopener noreferrer">/gd claim expand &lt;amount&gt; [direction]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-farewell" target="_blank" rel="noopener noreferrer">/gd claim farewell &lt;message&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-greeting" target="_blank" rel="noopener noreferrer">/gd claim greeting &lt;message&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-id" target="_blank" rel="noopener noreferrer">/gd claim id &lt;identifier&gt;</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-info" target="_blank" rel="noopener noreferrer">/gd claim info [id]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-inherit" target="_blank" rel="noopener noreferrer">/gd claim inherit</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-investigate" target="_blank" rel="noopener noreferrer">/gd claim investigate</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-list" target="_blank" rel="noopener noreferrer">/gd claim list [\&lt;player\&gt; [world]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-list" target="_blank" rel="noopener noreferrer">/gd claim list [&lt;player&gt; [world]]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-displayname" target="_blank" rel="noopener noreferrer">/gd claim displayname [name]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-rent" target="_blank" rel="noopener noreferrer">/gd claim rent create [\&lt;rate\&gt; [max_days]]|info|list|cancel</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-rent" target="_blank" rel="noopener noreferrer">/gd claim rent create [&lt;rate&gt; [max_days]]|info|list|cancel</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-setspawn" target="_blank" rel="noopener noreferrer">/gd claim setspawn</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-spawn" target="_blank" rel="noopener noreferrer">/gd claim spawn</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-transfer" target="_blank" rel="noopener noreferrer">/gd claim transfer [player]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-we" target="_blank" rel="noopener noreferrer">/gd claim we</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claimgroup-admin" target="_blank" rel="noopener noreferrer">/gd claimgroup admin [&lt;join&gt;|&lt;unjoin&gt;|&lt;create&gt;|&lt;delete&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claimgroup-player" target="_blank" rel="noopener noreferrer">/gd claimgroup player [&lt;join&gt;|&lt;unjoin&gt;|&lt;create&gt;|&lt;delete&gt;]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-cuboid" target="_blank" rel="noopener noreferrer">/gd cuboid</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-basic" target="_blank" rel="noopener noreferrer">/gd mode basic</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-subdivide" target="_blank" rel="noopener noreferrer">/gd mode subdivide</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-town" target="_blank" rel="noopener noreferrer">/gd mode town</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-info" target="_blank" rel="noopener noreferrer">/gd player info \&lt;player\&gt; \&lt;world\&gt;|\&lt;player\&gt;|[\&lt;world\&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-info" target="_blank" rel="noopener noreferrer">/gd player info &lt;player&gt; &lt;world&gt;|&lt;player&gt;|[&lt;world&gt;]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-trapped" target="_blank" rel="noopener noreferrer">/gd player trapped</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-unlockdrops" target="_blank" rel="noopener noreferrer">/gd player unlockdrops</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-sell-blocks" target="_blank" rel="noopener noreferrer">/gd sell blocks [numberOfBlocks]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-sell-claim-price" target="_blank" rel="noopener noreferrer">/gd sell claim \&lt;price\&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-sell-claim-price" target="_blank" rel="noopener noreferrer">/gd sell claim &lt;price&gt;</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-transferblocks" target="_blank" rel="noopener noreferrer">/gd transferblocks</a></li>
 </ul>
 <h3 id="flags"> Flags</h3>
 <ul>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-debug" target="_blank" rel="noopener noreferrer">/gd flag debug</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-claim" target="_blank" rel="noopener noreferrer">/gd flag claim [\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [context[key=value]]]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-group" target="_blank" rel="noopener noreferrer">/gd flag group \&lt;group\&gt; [\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [context[key=value]]]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-player" target="_blank" rel="noopener noreferrer">/gd flag player \&lt;player\&gt; [\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [context[key=value]]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-claim" target="_blank" rel="noopener noreferrer">/gd flag claim [&lt;flag&gt; &lt;target&gt; &lt;value&gt; [&lt;contexts&gt;]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-definition" target="_blank" rel="noopener noreferrer">/gd flag definition &lt;preset:definition&gt; &lt;value&gt; [identifier]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-group" target="_blank" rel="noopener noreferrer">/gd flag group &lt;group&gt; [&lt;flag&gt; &lt;target&gt; &lt;value&gt; [&lt;\contexts&gt;]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-player" target="_blank" rel="noopener noreferrer">/gd flag player &lt;player&gt; [&lt;flag&gt; &lt;target&gt; &lt;value&gt; [&lt;\contexts&gt;]]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-flag-reset" target="_blank" rel="noopener noreferrer">/gd flag reset</a></li>
 </ul>
 <h3 id="options"> Options</h3>
 <ul>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-claim" target="_blank" rel="noopener noreferrer">/gd option [\&lt;option\&gt; \&lt;value\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-group" target="_blank" rel="noopener noreferrer">/gd option group \&lt;group\&gt; [\&lt;option\&gt; \&lt;value\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-player" target="_blank" rel="noopener noreferrer">/gd option player \&lt;player\&gt; [\&lt;option\&gt; \&lt;value\&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-claim" target="_blank" rel="noopener noreferrer">/gd option [&lt;option&gt; &lt;value&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-group" target="_blank" rel="noopener noreferrer">/gd option group &lt;group&gt; [&lt;option&gt; &lt;value&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-option-player" target="_blank" rel="noopener noreferrer">/gd option player &lt;player&gt; [&lt;option&gt; &lt;value&gt;]</a></li>
 </ul>
 <h3 id="trust"> Trust</h3>
 <p>Note: Use <code>public</code> if you want to trust all users.</p>
 <ul>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-player" target="_blank" rel="noopener noreferrer">/gd trust player \&lt;player\&gt;|public &lt;accessor|container|builder|manager&gt; </a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-group" target="_blank" rel="noopener noreferrer">/gd trust group \&lt;group\&gt;|public &lt;accessor|container|builder|manager&gt; </a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-player" target="_blank" rel="noopener noreferrer">/gd trustall player \&lt;player\&gt;|public</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-group" target="_blank" rel="noopener noreferrer">/gd trustall group \&lt;group\&gt;|public</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-player" target="_blank" rel="noopener noreferrer">/gd untrust player \&lt;player\&gt;|public </a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-group" target="_blank" rel="noopener noreferrer">/gd untrust group \&lt;group\&gt;|public </a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-player" target="_blank" rel="noopener noreferrer">/gd untrustall player \&lt;player\&gt;|public</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-group" target="_blank" rel="noopener noreferrer">/gd untrustall group \&lt;group\&gt;|public</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-player" target="_blank" rel="noopener noreferrer">/gd trust player &lt;player&gt;|public &lt;accessor|container|builder|manager&gt; </a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-group" target="_blank" rel="noopener noreferrer">/gd trust group &lt;group&gt;|public &lt;accessor|container|builder|manager&gt; </a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-player" target="_blank" rel="noopener noreferrer">/gd trustall player &lt;player&gt;|public</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trustall-group" target="_blank" rel="noopener noreferrer">/gd trustall group &lt;group&gt;|public</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-player" target="_blank" rel="noopener noreferrer">/gd untrust player &lt;player&gt;|public </a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrust-group" target="_blank" rel="noopener noreferrer">/gd untrust group &lt;group&gt;|public </a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-player" target="_blank" rel="noopener noreferrer">/gd untrustall player &lt;player&gt;|public</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-untrustall-group" target="_blank" rel="noopener noreferrer">/gd untrustall group &lt;group&gt;|public</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-trust-list" target="_blank" rel="noopener noreferrer">/gd trust list</a></li>
 </ul>
 <h3 id="admin"> Admin</h3>
 <ul>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-abandon-world" target="_blank" rel="noopener noreferrer">/gd abandon world [world]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-ban" target="_blank" rel="noopener noreferrer">/gd ban [hand | \&lt;type\&gt; \&lt;target\&gt; [\&lt;message\&gt;]]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-clear" target="_blank" rel="noopener noreferrer">/gd claim clear \&lt;target\&gt; [\&lt;claim\&gt; [\&lt;world\&gt;]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-ban" target="_blank" rel="noopener noreferrer">/gd ban [hand | &lt;type&gt; &lt;target&gt; [&lt;message&gt;]]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-clear" target="_blank" rel="noopener noreferrer">/gd claim clear &lt;target&gt; [&lt;claim&gt; [&lt;world&gt;]]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-ignore" target="_blank" rel="noopener noreferrer">/gd claim ignore</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-restore" target="_blank" rel="noopener noreferrer">/gd claim restore</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-schematic" target="_blank" rel="noopener noreferrer">/gd claim schematic \&lt;create|delete\&gt; &lt;name&gt;</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-claim-schematic" target="_blank" rel="noopener noreferrer">/gd claim schematic &lt;create|delete&gt; &lt;name&gt;</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-delete-claim" target="_blank" rel="noopener noreferrer">/gd delete claim</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-delete-all" target="_blank" rel="noopener noreferrer">/gd delete all &lt;player&gt; [world]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-delete-alladmin" target="_blank" rel="noopener noreferrer">/gd delete alladmin [world]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-admin" target="_blank" rel="noopener noreferrer">/gd mode admin</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-mode-nature" target="_blank" rel="noopener noreferrer">/gd mode nature</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-group" target="_blank" rel="noopener noreferrer">/gd permission group \&lt;group\&gt; [\&lt;permission\&gt; \&lt;value\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-player" target="_blank" rel="noopener noreferrer">/gd permission player \&lt;player\&gt; [\&lt;permission\&gt; \&lt;value\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-adjustbonusblocks" target="_blank" rel="noopener noreferrer">/gd player adjustbonusblocks \&lt;player\&gt; \&lt;amount\&gt; [world]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-setaccruedblocks" target="_blank" rel="noopener noreferrer">/gd player setaccruedblocks \&lt;player\&gt; \&lt;amount\&gt; [\&lt;world\&gt;]</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-debug" target="_blank" rel="noopener noreferrer">/gd debug \&lt;on\&gt;\&lt;off\&gt;\&lt;record\&gt;\&lt;paste\&gt; [\&lt;player\&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-group" target="_blank" rel="noopener noreferrer">/gd permission group &lt;group&gt; [&lt;permission&gt; &lt;value&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-permission-player" target="_blank" rel="noopener noreferrer">/gd permission player &lt;player&gt; [&lt;permission&gt; &lt;value&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-adjustbonusblocks" target="_blank" rel="noopener noreferrer">/gd player adjustbonusblocks &lt;player&gt; &lt;amount&gt; [world]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-player-setaccruedblocks" target="_blank" rel="noopener noreferrer">/gd player setaccruedblocks &lt;player&gt; &lt;amount&gt; [&lt;world&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-debug" target="_blank" rel="noopener noreferrer">/gd debug &lt;on&gt;&lt;off&gt;&lt;record&gt;&lt;paste&gt; [&lt;player&gt;]</a></li>
 <li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-reload" target="_blank" rel="noopener noreferrer">/gd reload</a></li>
-<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-unban" target="_blank" rel="noopener noreferrer">/gd unban [hand | \&lt;type\&gt; \&lt;target\&gt;]</a></li>
+<li><a href="https://github.com/bloodmc/GriefDefender/wiki/Commands#gd-unban" target="_blank" rel="noopener noreferrer">/gd unban [hand | &lt;type&gt; &lt;target&gt;]</a></li>
 </ul>
 <h3 id="main-command"> Main Command</h3>
 <ul>
@@ -9888,7 +9929,8 @@ Note: These examples assume a clean installation with no modified settings.</p>
 <h3 id="claims-2"> Claims</h3>
 <hr>
 <h4 id="gd-abandon-claim"> <code>/gd abandon claim</code></h4>
-<p>Abandons a claim</p>
+<p><strong>Arguments</strong>: <code>[identifier]</code>
+Abandons a claim</p>
 <hr>
 <h4 id="gd-abandon-all"> <code>/gd abandon all</code></h4>
 <p>Abandons ALL your claims</p>
@@ -9906,7 +9948,7 @@ Note: These examples assume a clean installation with no modified settings.</p>
 <hr>
 <h4 id="gd-claim-contract"> <code>/gd claim contract</code></h4>
 <p><strong>Aliases</strong>: <code>claimcontract</code>, <code>contractclaim</code><br>
-<strong>Arguments</strong>: <code>\&lt;amount\&gt; [direction]</code><br>
+<strong>Arguments</strong>: <code>\&lt;amount\&gt; [direction] [identifier]</code><br>
 Contracts/Shrinks the claim from the direction you are facing.</p>
 <hr>
 <h4 id="gd-claim-create"> <code>/gd claim create</code></h4>
@@ -9916,22 +9958,26 @@ Creates a claim around the player of the given type. If no claimtype (or an inco
 <hr>
 <h4 id="gd-claim-expand"> <code>/gd claim expand</code></h4>
 <p><strong>Aliases</strong>: <code>claimexpand</code>, <code>expandclaim</code><br>
-<strong>Arguments</strong>: <code>\&lt;amount\&gt; [direction]</code><br>
+<strong>Arguments</strong>: <code>\&lt;amount\&gt; [direction] [identifier]</code><br>
 Expands the claim in the direction you are facing.</p>
 <hr>
 <h4 id="gd-claim-farewell"> <code>/gd claim farewell</code></h4>
-<p><strong>Arguments</strong>: <code>\&lt;message\&gt;</code><br>
+<p><strong>Arguments</strong>: <code>\&lt;message\&gt; [identifier]</code><br>
 Sets the farewell message of your claim</p>
 <p>To unset, <code>/gd claim farewell clear</code></p>
 <hr>
 <h4 id="gd-claim-greeting"> <code>/gd claim greeting</code></h4>
-<p><strong>Arguments</strong>: <code>\&lt;message\&gt;</code><br>
+<p><strong>Arguments</strong>: <code>\&lt;message\&gt; [identifier]</code><br>
 Sets the greeting message of your claim</p>
 <p>To unset, <code>/gd claim greeting clear</code></p>
 <hr>
+<h4 id="gd-claim-id"> <code>/gd claim id</code></h4>
+<p><strong>Arguments</strong>: <code>\&lt;identifier\&gt;</code><br>
+Sets the friendly identifier of your claim.</p>
+<hr>
 <h4 id="gd-claim-info"> <code>/gd claim info</code></h4>
 <p><strong>Aliases</strong>: <code>claiminfo</code><br>
-<strong>Arguments</strong>: <code>[id]</code></p>
+<strong>Arguments</strong>: <code>[identifier]</code></p>
 <p>Gets information about a claim you are standing in or by claim id.</p>
 <hr>
 <h4 id="gd-claim-inherit"> <code>/gd claim inherit</code></h4>
@@ -9967,12 +10013,21 @@ Note: Requires economy plugin.</p>
 <hr>
 <h4 id="gd-claim-transfer"> <code>/gd claim transfer</code></h4>
 <p><strong>Aliases</strong>: <code>transferclaim</code><br>
-<strong>Arguments</strong>: <code>\&lt;player\&gt;</code></p>
+<strong>Arguments</strong>: <code>\&lt;player\&gt; [identifier]</code></p>
 <p>Transfer the claim you're standing in to a player.</p>
 <hr>
 <h4 id="gd-claim-we"> <code>/gd claim we</code></h4>
-<p>Claims a selection made in WorldEdit.<br>
+<p><strong>Arguments</strong>: <code>[identifier]</code><br>
+Claims a selection made in WorldEdit.<br>
 Note: This command will not work unless the server has WorldEdit.</p>
+<hr>
+<h4 id="gd-claimgroup-admin"> <code>/gd claimgroup admin</code></h4>
+<p><strong>Arguments</strong>: <code>join \&lt;group\&gt; [\&lt;identifier\&gt;]|unjoin [\&lt;identifier\&gt;]|create \&lt;group\&gt;|delete \&lt;group\&gt;</code><br>
+Used to manage admin claim groups.</p>
+<hr>
+<h4 id="gd-claimgroup-player"> <code>/gd claimgroup player</code></h4>
+<p><strong>Arguments</strong>: <code>join \&lt;group\&gt; [\&lt;identifier\&gt;]|unjoin [\&lt;identifier\&gt;]|create \&lt;group\&gt;|delete \&lt;group\&gt;</code><br>
+Used to manage player claim groups.</p>
 <hr>
 <h4 id="gd-cuboid"> <code>/gd cuboid</code></h4>
 <p><strong>Aliases</strong>: <code>cuboid</code></p>
@@ -10019,17 +10074,22 @@ Note: This command will not work unless the server has WorldEdit.</p>
 <hr>
 <h4 id="gd-flag-claim"> <code>/gd flag claim</code></h4>
 <p><strong>Aliases</strong>: <code>cf</code><br>
-<strong>Arguments</strong>: <code>[\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; context[key=value]]</code></p>
+<strong>Arguments</strong>: <code>[\&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [\&lt;\contexts\&gt;]]</code></p>
 <p>Gets/Sets claim flags in the claim you are standing in.</p>
+<hr>
+<h4 id="gd-flag-definition"> <code>/gd flag definition</code></h4>
+<p><strong>Aliases</strong>: <code>cf</code><br>
+<strong>Arguments</strong>: <code>\&lt;preset:definition\&gt; \&lt;value\&gt; [identifier]</code></p>
+<p>Sets claim flag definitions in the claim you are standing in or claim identifier.</p>
 <hr>
 <h4 id="gd-flag-group"> <code>/gd flag group</code></h4>
 <p><strong>Aliases</strong>: <code>cfg</code><br>
-<strong>Arguments</strong>: <code>\&lt;group\&gt; \&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; context[key=value]]</code></p>
+<strong>Arguments</strong>: <code>\&lt;group\&gt; \&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [\&lt;\contexts\&gt;]]</code></p>
 <p>Gets/Sets flag permission for a group in claim you are standing in.</p>
 <hr>
 <h4 id="gd-flag-player"> <code>/gd flag player</code></h4>
 <p><strong>Aliases</strong>: <code>cfp</code><br>
-<strong>Arguments</strong>: <code>\&lt;player\&gt; \&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; context[key=value]]</code></p>
+<strong>Arguments</strong>: <code>\&lt;player\&gt; \&lt;flag\&gt; \&lt;target\&gt; \&lt;value\&gt; [\&lt;\contexts\&gt;]]</code></p>
 <p>Adds flag permission to player.</p>
 <hr>
 <h4 id="gd-flag-reset"> <code>/gd flag reset</code></h4>
@@ -10209,8 +10269,10 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/install/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">安装</source>
       <category>配置</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
-      <content:encoded><![CDATA[<p>⚠️ 在本页面, 我们将手把手教你如何在你的 Bukkit/Sponge 服务器上开始使用 GriefDefender. ⚠️</p>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
+      <content:encoded><![CDATA[<div><p>Info</p>
+<p>在本页面, 我们将手把手教你如何在你的 Bukkit/Sponge 服务器上开始使用 GriefDefender.</p>
+</div>
 <h2 id="入门"> 入门</h2>
 <h3 id="需求"> 需求</h3>
 <ul>
@@ -10229,8 +10291,10 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
 <li>最新版本的 <a href="https://papermc.io/downloads" target="_blank" rel="noopener noreferrer">Paper</a> 或 <a href="https://www.spigotmc.org/wiki/buildtools/" target="_blank" rel="noopener noreferrer">Spigot</a>.</li>
 </ul>
 <h3 id="安装"> 安装</h3>
-<p>⚠️ 如果你在使用 <code>spark</code> 插件, 请在此链接下载并更新到最新版本 https://ci.lucko.me/job/spark/ ⚠️<br>
-⚠️ 在  <code>server.properties</code> 中设置 <code>spawn-protection</code> 为 <code>0</code> 以允许 GD 接管出生保护. 如果此项设置错误, GD 将无法正常接管出生保护. ⚠️</p>
+<div><p>Note</p>
+<p>如果你在使用 <code>spark</code> 插件, 请在此链接下载并更新到最新版本 https://ci.lucko.me/job/spark/</p>
+<p>在 <code>server.properties</code> 中设置 <code>spawn-protection</code> 为 <code>0</code> 以允许 GD 接管出生保护. 如果此项设置错误, GD 将无法正常接管出生保护.</p>
+</div>
 <p>从 Spigot 的插件页面下载最新的 GriefDefender.请务必选择正确的 Minecraft 版本，并保持它为最新版本 下载后,将其放入你服务器的插件文件夹.</p>
 <p>现在启动你的服务器以生成所有的配置文件，检查 GriefDefender 是否成功加载，你可以检查控制台是否出现 <code>[GriefDefender] Loaded successfully</code>. 接下来关闭你的服务器并开始配置流程.</p>
 <h3 id="配置"> 配置</h3>
@@ -10268,7 +10332,9 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
 <p>Sponge: <code>config/GriefDefender/worlds/minecraft/A/world/ClaimData</code></p>
 <p>Bukkit: <code>plugins/GriefDefender/worlds/minecraft/A/world/ClaimData</code></p>
 <h3 id="权限"> 权限</h3>
-<p>⚠️ <strong>非常重要</strong>的是在你继续进行本项配置之前需要查阅 https://github.com/bloodmc/GriefDefender/wiki/Permissions#important ⚠️</p>
+<div><p>Info</p>
+<p><strong>非常重要</strong>的是在你继续进行本项配置之前需要查阅 https://github.com/bloodmc/GriefDefender/wiki/Permissions#important</p>
+</div>
 <p>在正确安装 GriefDefender 后, 你需要给玩家领地相关的权限, 玩家默认是没有这些权限的. 对于基础 GD 权限只需要给予 <code>griefdefender.user.*</code>. 对于管理员权限, 给予管理员 <code>griefdefender.admin.*</code> 和 <code>griefdefender.user.*</code> 权限.</p>
 <p>你可以在 <a href="https://github.com/bloodmc/GriefDefender/wiki/Permissions" target="_blank" rel="noopener noreferrer">这里</a> 找到更详细的权限节点, 查看所有指令权限和用法请在 <a href="https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&amp;-Permissions" target="_blank" rel="noopener noreferrer">这里</a> 查看.</p>
 <p>如果你觉得指令过长或难于记忆, 可以考虑使用指令别名. <a href="https://github.com/bloodmc/GriefDefender/wiki/Custom-Alias-Creation" target="_blank" rel="noopener noreferrer">点击这里获取更多相关信息</a></p>
@@ -10285,7 +10351,7 @@ Note: Valid types are <code>entity</code>, <code>item</code>, <code>block</code>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/griefprevention/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefPrevention</source>
       <category>Migration</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ Before using GriefPrevention migrator, backup your data (including LuckPerms).<br>
 It is recommended to test migration on a test server before applying to production to ensure everything works as expected.<br>
 ⚠️ All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.<br>
@@ -10400,7 +10466,7 @@ Migration output should appear in console as it is migrating.</li>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/migration/worldguard/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">WorldGuard</source>
       <category>Migration</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>⚠️ Before using WorldGuard migrator, backup your data (including LuckPerms).  It is recommended to test migration on a test server before applying to production to ensure everything works as expected.</p>
 <h3 id="griefdefender-supports-a-migration-of-cuboid-regions-from-worldguard-to-migrate-to-griefdefender-perform-the-following-steps"> GriefDefender supports a migration of cuboid regions from WorldGuard. To migrate to GriefDefender, perform the following steps</h3>
 <h3 id="current-limitations"> Current Limitations</h3>
@@ -10497,7 +10563,7 @@ Migration output should appear in console as it is migrating.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/permissions/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">权限</source>
       <category>信息</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>如果您想快速使用，将 <code>griefdefender.user.*</code> 授权至您的玩家，并给予 <code>griefdefender.user.*</code> 和 <code>griefdefender.admin.*</code> 给您的社区管理或服务器管理。</p>
 <p>在大多数情况下，建议使用上面的通用权限，如果您想要更精细的控制，请阅览下面的所有权限并相应地关掉一些不需要的权限。</p>
 <h3 id="重要信息"> 重要信息</h3>
@@ -11162,7 +11228,7 @@ Migration output should appear in console as it is migrating.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/guide/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefDefender</source>
       <category>配置</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>施工中</p>
 <p>这个文档还不稳定，我们正尽力地积极改进它!
 如果您遇到了什么问题，请报告给我们</p>
@@ -11214,7 +11280,7 @@ Migration output should appear in console as it is migrating.</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/dynmap/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Dynmap</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.<br>
 See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
 <p><strong>Bukkit</strong></p>
@@ -11277,7 +11343,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/placeholder/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Placeholder</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<table>
 <thead>
 <tr>
@@ -11380,7 +11446,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GDHooks</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GDHooks is an official GriefDefender addon designed to extend its support for other plugins. Releases are available on discord or you can compile it on GitHub.</p>
 <p><a href="https://github.com/bloodmc/GDHooks" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a><br>
 <a href="https://github.com/bloodmc/GDHooks/wiki" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
@@ -11452,7 +11518,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/hooks/wecui/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">WECUI</source>
       <category>Dev</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>GriefDefender now supports WECUI!</p>
 <p><img src="http://i.imgur.com/96RHwkv.jpg" alt="WECUI Preview" /></p>
 <p>In order to use WECUI, the following is required to be installed</p>
@@ -11481,7 +11547,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/layout/</link>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/layout/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">自定义布局</source>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
 <div><p>Note</p>
 <p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
@@ -11506,7 +11572,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/</link>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">GriefDefender</source>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
     </item>
     <item>
       <title>Pixelmon Preset</title>
@@ -11514,7 +11580,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/Pixelmon/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Pixelmon Preset</source>
       <category>Preset</category>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>Info</p>
 <p>Unlike GP where you had to set multiple flag commands for pixelmon manually, it is now highly recommended to make use of the new Flag Definition system. A flag definition combines 1 or more flag permissions into a single group which allows you to toggle all at once via GUI. Any flag definition entered in your <code>pixelmon.conf</code> will be accessible via the Flag GUI config by using <code>/cf</code> command in game. The main thing to keep in mind is all flags toggled in game will apply to claim only. However, the flags you set in config that use <code>gd_claim_default</code> or <code>gd_claim_override</code> contexts will be applied on server startup with the <code>default-value</code> you specify.</p>
 </div>
@@ -11527,7 +11593,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks</p>
       <link>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/</link>
       <guid>https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/zh/resources/</guid>
       <source url="https://bloodmc.github.io/GriefDefenderDoc/GriefDefenderDoc/rss.xml">Resources</source>
-      <pubDate>Sun, 12 Dec 2021 09:16:20 GMT</pubDate>
+      <pubDate>Sat, 01 Jan 2022 07:43:26 GMT</pubDate>
       <content:encoded><![CDATA[<div><p>Info</p>
 <p>You are always welcome to contribute your resource related to GD in following places:</p>
 <div>
