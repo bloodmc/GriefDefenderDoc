@@ -25,7 +25,10 @@ module.exports = config({
   ],
 
   locales: require("../_locale"),
-
+  plugins:  [
+    'fulltext-search',
+  ],
+  
   themeConfig: {
     logo: "/logo.png",
     hostname: "https://bloodmc.github.io/GriefDefenderDoc",
