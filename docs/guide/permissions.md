@@ -5,19 +5,18 @@ category: Info
 icon: condition
 ---
 
-If you want to have a quickstart, apply ```griefdefender.user.*``` to your players and both ```griefdefender.user.*``` and ```griefdefender.admin.*``` to your staff/admins.
-
-It is recommended to use the base permission nodes above, and if you want a more fine control read all permissions below and deny accordingly.
+Grant ```griefdefender.user.*``` to your players and both ```griefdefender.user.*``` and ```griefdefender.admin.*``` to your staff/admins then deny permissions you do NOT want.  
 
 ### IMPORTANT
 :warning:  
 
+If you do NOT grant the permission nodes above and instead grant singular permission nodes, you will not be supported as this goes against our recommendation.  
 If you alter any admin permissions while in-game, make sure you run `/gdreload` as GD caches various permissions for performance gains.  
 Wildcard permission ```*``` is currently not supported. Use ```griefdefender.user.*``` and ```griefdefender.admin.*``` for admins instead. 
  
 As GD makes heavy use of LP's `default` group, the following MUST be setup properly or GD will not function properly 
 
-- All non-griefdefender LP groups are inheriting the `default` group.  
+- All non-griefdefender LP groups have a path in inheritance to the `default` group.  
 - The `default` group is inheriting GD's delivered groups : `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
 - The `default` group is NOT disabled. LP strongly recommends to never disable this group.  
 See https://luckperms.net/wiki/Default-Groups  
@@ -33,7 +32,6 @@ See https://luckperms.net/wiki/Default-Groups
 | griefdefender.user.claim.command.abandon.town | Allows to abandon town claims |
 | griefdefender.user.claim.command.abandon-all | Allows to abandon all claims |
 | griefdefender.user.claim.command.abandon-top-level  | Allows to abandon a claim and all its subdivisions |
-| griefdefender.user.claim.command.ban-item | Allows to ban items in claims |
 | griefdefender.user.claim.command.basic-mode  | Allows to use basic claim shovel mode |
 | griefdefender.user.claim.command.bank | Allows to use claim bank |
 | griefdefender.user.claim.command.buy | Allows to buy a claim (Requires economy plugin) |
@@ -63,7 +61,6 @@ See https://luckperms.net/wiki/Default-Groups
 | griefdefender.user.claim.command.town-mode | Allows to use town shovel mode |
 | griefdefender.user.claim.command.transfer  | Allows to transfer own claims |
 | griefdefender.user.claim.command.trapped | Teleports the player to a safe location if stuck and unable to build |
-| griefdefender.user.claim.command.unban-item | Allows to unban items in claims |
 | griefdefender.user.claim.command.unlock-drops | Allows other players to pickup any items dropped from death |
 | griefdefender.user.claim.command.worldedit-claim | Allows to use a worldedit selection to create a claim. |
 | griefdefender.user.claim.create.base  | Allows to create a basic claim |
@@ -111,12 +108,15 @@ _*See [Flag Definitions GUI](https://github.com/bloodmc/GriefDefender/wiki/Flag-
 ## Options
 | Permission Node | Description |
 | --------- | ----------- |
-| griefdefender.user.claim.command.option.base | Allows to use the claimoption command |
-| griefdefender.user.claim.command.option.group | Allows to set group options in claims |
-| griefdefender.user.claim.command.option.player | Allows to set player options in claims |
-| griefdefender.user.claim.option | Allows to set options in claims |
-| griefdefender.user.option.perk.owner-fly.basic | Allows to fly in own basic claim |
-| griefdefender.user.option.perk.owner-fly.town | Allows to fly in own town claim |
+| griefdefender.admin.claim.command.option.base | Allows to use the claimoption command |
+| griefdefender.admin.claim.command.option.group | Allows to set group options in claims |
+| griefdefender.admin.claim.command.option.player | Allows to set player options in claims |
+| griefdefender.admin.claim.option | Allows to set options in claims |
+| griefdefender.admin.option.perk.fly.owner | Allows owners to fly in their own claim |
+| griefdefender.admin.option.perk.fly.accessor | Allows users to fly in claims where they have accessor trust |
+| griefdefender.admin.option.perk.fly.builder | Allows users to fly in claims where they have builder trust |
+| griefdefender.admin.option.perk.fly.container | Allows users to fly in claims where they have container trust |
+| griefdefender.admin.option.perk.fly.manager | Allows users to fly in claims where they have manager trust |
 
 ## Trust
 | Permission Node | Description |
@@ -140,7 +140,7 @@ _*See [Flag Definitions GUI](https://github.com/bloodmc/GriefDefender/wiki/Flag-
 
 | Permission Node | Description |
 | --------- | ----------- |
-| griefdefender.admin.advanced-flags | Allows usage of advanced mode in flag GUI |
+| griefdefender.advanced.admin.flags | Allows usage of advanced mode in flag GUI |
 | griefdefender.admin.bypass.ban | Allows bypass of bans |
 | griefdefender.admin.bypass.border-check | Allows bypass of claim border checks |
 | griefdefender.admin.bypass.option | Allows bypass of options |
@@ -148,7 +148,7 @@ _*See [Flag Definitions GUI](https://github.com/bloodmc/GriefDefender/wiki/Flag-
 | griefdefender.admin.bypass.override.limit | Allows bypass of claim creation limit restrictions |
 | griefdefender.admin.claim.command.adjust-claim-blocks | Allows to edit amount of bonus claim blocks |
 | griefdefender.admin.claim.command.admin-mode | Allows to use admin claim shovel mode |
-| griefdefender.admin.claim.command.ban | Allows to ban target id from all usage |
+| griefdefender.admin.claim.command.ban | Allows to ban or unban an item, block, or entity id from all usage |
 | griefdefender.admin.claim.command.clear | Allows to clear entities within one or more claims |
 | griefdefender.admin.claim.command.schematic | Allows to manage claim schematics |
 | griefdefender.admin.claim.command.debug | Allows to use GDdebug |
@@ -198,3 +198,4 @@ _*See [Flag Definitions GUI](https://github.com/bloodmc/GriefDefender/wiki/Flag-
 | --------- | ----------- |
 | griefdefender.user.command.help | Allows to you the view the help |
 | griefdefender.user.chat.capture | Allows to record chat in command GUI's |
+| griefdefender.login.inventory-gui | Sets user or group to use the Inventory GUI on login |

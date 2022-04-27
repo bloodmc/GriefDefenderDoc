@@ -13,6 +13,8 @@ GriefDefender's default config offers extended customization for your server. Be
 ## Plugin Dependency
 Do note, cost variables (such as Towns' `creation-cost`) **require** an Economy plugin. Similarly, MCClans is only needed if you plan on using it's integration across plugins. It is **not**, however, required to use GriefDefender's Town claims.
 
+For example, adding block-break to the list will translate into `griefdefender.user.flag.block-break` being checked as true, therefore allowing the player to edit his claim's block-break flag with `/cf`, `/cfg`, and `/cfp`. 
+
 ## Modular Configuration
 GriefDefender allows for modular enabling. As per default configuration files however, all modules are enabled. Disabling a module will render all flags unusable. Only do it if you do not plan on using GriefDefender's management of said flag. You can choose to disable the following: 
 * Block-Changes: block-break, block-grow, block-modify, block-place, block-pre, block-spread
@@ -44,7 +46,7 @@ Used to store a list of global banned blocks, entities, and items. Use the `/cla
 | global-target | A global list of target id's that are ignored by events. <br />Note: This only affects events where the id specified is the target. | [ ] |
 | entity-damage-source-blacklist | A global list of entity damage sources that are ignored in events by default. | [contact,cramming,drowning,<br />"falling_block",flyintowall,"fire_tick",<br />"hot_floor",poison,starvation,suffocation,<br />suicide,void] |
 
-The blacklist controls events from interacting with items, blocks, or entities on either a per-flag or global basis.
+The blacklist controls events from interacting with items, blocks, or entities on either a per-flag or global basis. Blacklists are extremely useful as it allows you to force GD to ignore actions in a world you do not need protected. By doing this, you prevent GD from wasting resources when it attempts to protect. To determine what you want to prevent GD from controlling, you will need to run a [GDDebug](https://github.com/bloodmc/GriefDefender/wiki/Debugging) in order to gather the data needed for the config. See [User Contributions](https://github.com/bloodmc/GriefDefender/wiki/Optimizations#optimization-contributions) for some examples on how to use it.  
 
 It supports wildcards `?` and `*` where `?` represents a single character and `*` represents zero or more characters.
 For more info you can go to [Apache's wildcard matcher.](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String))
@@ -122,6 +124,7 @@ An example of how to block items from being checked by GD is as shown
 | greeting-farewell-action-bar | Controls whether to send greeting/farewell messages to action bar by default. <br />Note: Setting to true will send messages to actionbar. <br />Note: This will only be set if there is no actionbar already set in claim. If so, it will use chat instead. | FALSE |
 | locale | Set the locale to use for GP messages. Available languages: de_DE, en_US, es_ES, fr_FR, pl_PL, ru_RU, zh_HK. The data is stored under assets in jar. <br />Note: The language code must be lowercase and the country code must be uppercase. | "en_US" |
 | locale-unicode-fix | Attempts to adjust unicode fonts to represent minecraft default fonts better. <br />Note: If you are using 'pl_PL' or 'ru_RU', this setting should be set to false. <br />Note: Any other languages that experience misalignment in chat menus should disable this setting. | TRUE |
+| wilderness-default-message | Controls whether wilderness default enter message is sent to players. | TRUE |
 
 # Migrators
 ## Bukkit

@@ -4,6 +4,7 @@ category: Option
 tags: Meta
 icon: set
 ---
+
 Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.  
 
 Default values can be changed in `options.conf`, for finer control continue reading below.
@@ -24,14 +25,16 @@ See https://github.com/bloodmc/GriefDefender/wiki/Contexts on what contexts you 
 ### Examples  
 
 * Send a welcome message to players entering a claim as console.  
-`/claimoption player-command-enter "/tellraw %player% [\"\",{\"text\":\"Welcome %player%!\",\"color\":\"gold\"},{\"text\":\"\\nYou are visiting %owner%s claim.\\nEnjoy your stay!\\n\\n-\"}]" context[run_for=member, run_as=console]`  
+`/claimoption player-command-enter "/tellraw %player% [\"\",{\"text\":\"Welcome %player%!\",\"color\":\"gold\"},{\"text\":\"\\nYou are visiting %owner%s claim.\\nEnjoy your stay!\\n\\n-\"}]" run_for=member run_as=console`  
 * Set group vip's `create-limit` to 100 default for basic claims.  
-`/cog vip create-limit 100 context[default=basic]`  
+`/cog vip create-limit 100 default=basic`  
 * Set player JoeSmith's `expiration` to 30 days default for basic claims.  
-`/cop JoeSmith expiration 30 context[default=basic]`  
+`/cop JoeSmith expiration 30 default=basic`  
+* Deny player hunger in claim player is in.  
+`/claimoption player-deny-hunger true`  
 
-
-Using `/claimoption` with no arguments opens up the GUI and displays all claim options for claim you are standing in including default options that affect all claims.  
+Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.conf`. See [Option Control](https://github.com/bloodmc/GriefDefender/wiki/Options/_edit#option-control)    
+Note: Using `/claimoption` with no arguments opens up the GUI and displays all claim options for claim you are standing in including default options that affect all claims.  
 
 ## LuckPerms
 
@@ -49,6 +52,38 @@ Reset all users accrued claimblocks
 Reset all users bonus claimblocks  
 `/lp bulkupdate users delete "permission ~~ meta.griefdefender\\.bonus-blocks.%"`  
 
+### Useful LP DB queries  
+Note: Change table prefix if not using default `luckperms`
+
+
+List all user accrued blocks
+```sql
+SELECT B.username, REGEXP_REPLACE(A.permission, '[^0-9]+', '') FROM luckperms_user_permissions A LEFT JOIN luckperms_players B ON A.uuid=B.uuid WHERE permission LIKE '%accrued-blocks%'
+```
+
+
+List all user bonus blocks
+```sql
+SELECT B.username, REGEXP_REPLACE(A.permission, '[^0-9]+', '') FROM luckperms_user_permissions A LEFT JOIN luckperms_players B ON A.uuid=B.uuid WHERE permission LIKE '%bonus-blocks%'
+```
+
+
+Reset ALL user accrued blocks  
+:warning:  This will wipe ALL user accrued block data. Use with caution.
+
+```sql
+DELETE FROM luckperms_user_permissions WHERE permission LIKE '%griefdefender\\\\.accrued-blocks%';
+```
+
+
+Reset ALL user bonus blocks  
+:warning:  This will wipe ALL user bonus block data. Use with caution.
+
+```sql
+DELETE FROM luckperms_user_permissions WHERE permission LIKE '%griefdefender\\\\.bonus-blocks%';
+```
+
+
 See https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta and https://luckperms.net/wiki/Meta-Commands for more information on how to use it directly in LuckPerms
 
 ## Global Options
@@ -56,7 +91,10 @@ See https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta and https://luckperms.n
 Global Options can be set globally, or on a server, world, group or player.  
 They cannot be set on individual claims or claim types.  
 
-Permissions for using Global Options are `griefdefender.admin.claim.option.global.<optionname>`
+Global option usage in GD commands and GUI can be managed with permission `griefdefender.admin.claim.option.global.<optionname>`.  
+Note: Leave out `griefdefender.` from `<optionname>`.
+
+To use GD options in LP commands, use the meta key format `griefdefender.<optionname>`  
 
 Option                                           | Default Value | Description | 
 -------------------------------------------------|---------------|--------------|
@@ -66,7 +104,7 @@ Option                                           | Default Value | Description |
 ```griefdefender.bonus-blocks```       |   0        | The total number of bonus claim blocks given to a player, and has no use/effect being set on a group.
 ```griefdefender.chest-expiration```     |   7           | Number of days of inactivity before an automatic chest claim will be deleted.
 ```griefdefender.economy-block-cost``` | 0.0 | The economy amount to charge per block of a claim. <br />Note: If set to 0 or less, the buy block feature will be disabled.
-```griefdefender.economy-block-sell-return``` | 0.0 | The return ratio for selling claim blocks. <br />Note: If set to 0 or less, the sell block feature will be disabled.
+```griefdefender.economy-block-sell-return``` | 0.0 | The return value for selling claim blocks. <br />Note: If set to 0 or less, the sell block feature will be disabled.
 ```griefdefender.expiration```    |   14          | Number of days of inactivity before a claim will be deleted.<br />Note: If set to 0, it will disable claim expiration for user/group.
 ```griefdefender.initial-blocks```       |   120         | The number of bonus starter claim blocks a player has initially. <br />Note: This number is not counted as part of accrued blocks. <br />Note: If using 'wilderness-cuboids', this value is 25600 by default.
 ```griefdefender.max-accrued-blocks```   |   80000       | The limit on accrued blocks (over time). doesn't limit purchased or admin-gifted blocks. <br />Note: If using 'wilderness-cuboids', this value is 20480000 by default. <br />Note: This setting will affect `/scb` command.
@@ -77,7 +115,10 @@ Option                                           | Default Value | Description |
 
 Claim Options can be set on individual claims, claim types, server, world, group or player.  
 
-Permissions for using Claim Options are `griefdefender.user.claim.option.<optionname>`
+Global option usage in GD commands and GUI can be managed with permission `griefdefender.admin.claim.option.<optionname>`.  
+Note: Leave out `griefdefender.` from `<optionname>`.
+
+To use GD options in LP commands, use the meta key format `griefdefender.<optionname>`  
 
 Option                                           | Default Value | Description | 
 -------------------------------------------------|---------------|--------------|
@@ -99,13 +140,16 @@ Option                                           | Default Value | Description |
 ```griefdefender.rent-restore``` | false | Used to determine if a rent owner has permission to have their claim automatically restored on rent end date.<br />Note: This requires the claim rental to have an end date.
 ```griefdefender.tax-expiration``` | 7		| Number of days after not paying taxes before a claim will be frozen.
 ```griefdefender.tax-expiration-days-keep``` | 7 		| Number of days to keep a claim after frozen and before being deleted 
-```griefdefender.tax-rate``` | 1.0 | Tax is calculated by the number of claimblocks in the claim. ```Number of claimblocks * tax-rate```
+```griefdefender.tax-rate``` | 0.1 | Tax is calculated by the number of claimblocks in the claim. ```Number of claimblocks * tax-rate```
 
 ## Admin Options
 
 Admin Options can be set on individual claims, claim types, server, world, group or player.  
 
-Permissions for using Admin Options are `griefdefender.admin.claim.option.admin.<optionname>`
+Global option usage in GD commands and GUI can be managed with permission `griefdefender.admin.claim.option.admin.<optionname>`.   
+Note: Leave out `griefdefender.` from `<optionname>`.
+
+To use GD options in LP commands, use the meta key format `griefdefender.<optionname>`  
 
 Option                                           | Default Value | Description | 
 -------------------------------------------------|---------------|--------------|
@@ -113,9 +157,11 @@ Option                                           | Default Value | Description |
 ```griefdefender.player-deny-hunger``` | false | Used to if a player's hunger is denied in a claim.
 ```griefdefender.player-gamemode``` | undefined | Used to determine the gamemode of a player in a claim. Accepts the following values : ADVENTURE, CREATIVE, SURVIVAL, SPECTATOR, UNDEFINED.
 ```griefdefender.player-health-regen``` | 0.0 | Used to set the health regen amount for a player in a claim.  Note: If the player is at max health, this will have no effect.
+```griefdefender.player-item-drop-lock``` | false | Used to determine if a player's dropped items should be locked from pickup by others on death.
 ```griefdefender.player-keep-inventory``` | undefined | Used to determine if a player can keep inventory after death in a claim.
 ```griefdefender.player-keep-level``` | undefined | Used to determine if a player can keep their level after death in a claim.
-```griefdefender.player-teleport-delay``` | undefined | Used to determine the delay before teleporting a player to a new location.
+```griefdefender.player-teleport-cost``` | undefined | Used to determine the cost to teleport a player to a new location.
+```griefdefender.player-teleport-delay``` | 0.0 | Used to determine the delay, in seconds, before teleporting a player to a new location.
 ```griefdefender.player-walk-speed``` | -1.0 | Used to set a player's walk speed in a claim.  Note: (-1 = undefined)
 ```griefdefender.spawn-limit``` | 0 | The limit of entity spawns a claim can have.
 

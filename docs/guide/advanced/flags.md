@@ -14,7 +14,11 @@ Using `/cf` Provides you a UI to edit the default flags for the claim you are in
 Flags do not apply to the owner of a claim, this includes Admins in Wilderness or Admin claims.  
 Use overrides if you want to force flags on all users in a claim type.
 
-Note: Flag commands are just wrappers around LuckPerm's API. Everything set via GD flags, can be set directly using LP. See [Usage with LuckPerms](https://github.com/bloodmc/GriefDefender/wiki/Flags#usage-with-luckperms)
+Note: Flag commands are just wrappers around LuckPerm's API. Everything set via GD flags, can be set directly using LP. See [Usage with LuckPerms](https://github.com/bloodmc/GriefDefender/wiki/Flags#usage-with-luckperms)  
+Note: In order to use flags with command arguments, you must have the `griefdefender.advanced.admin.flags.*` permission. 
+
+## Default Claim Flags
+All default flags can be customized per claim type. Currently, GriefDefender supports default flags for Admin, Basic, Town and Wilderness. You can modify the defaults in `flags.conf` and `presets/minecraft.conf`.
 
 ## Index
 

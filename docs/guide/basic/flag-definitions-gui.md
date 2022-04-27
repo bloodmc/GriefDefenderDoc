@@ -17,12 +17,14 @@ The delivered vanilla flag definition data can be found in the following locatio
 
 
 
-## Admin
-
 Admins are given full control to add/remove/customize flag definitions.
 
 To add a flag definition to an existing delivered minecraft preset, open the `./presets/minecraft.conf` file.
-Within this section, you will see 2 delivered groups 'admin' and 'user'.  
+Within this section, you will see 2 delivered groups `admin` and `user`.  
+
+All flag definitions located within the `admin` group are accessible by only admins. This is due to the `admin-group` setting be set to `true`.  
+All flag definitions located within the `user` group are accessible by all users.  
+You can add/remove/move flag definitions as you please and even create new preset files from scratch which will get read when GUI is loaded.  
 
 ### Add new flag definition
 
@@ -46,7 +48,8 @@ Lets break this example down
 
 #### Name  
 
-`ambient-spawn` - This is the name of your definition that will be displayed to users when they open it up in the flag GUI. It can be whatever you like.
+`ambient-spawn` - This is the name of your definition that will be displayed to users when they open it up in the flag GUI. It can be whatever you like.  
+Note: These are not actual GD core flags but rather a `flag definition` and cannot be used with the `/cf` command.  If you want to toggle a flag definition with a command then use `/claimflagdefinition` or `/gd flag definition`  
 
 #### Contexts  
 
@@ -58,6 +61,7 @@ contexts=[
 These are the definition contexts that will be used with all permissions defined within `permissions=[...]`.  
 It currently only supports context keys `gd_claim_default`, `gd_claim_override`, or `gd_claim`.  
 See https://github.com/bloodmc/GriefDefender/wiki/Contexts to learn how contexts work.  
+Note: These contexts do NOT apply in GUI. It is only used during server startup.  GUI will always apply flags to the claim player is standing in.
 
 #### Default value  
 
@@ -118,37 +122,38 @@ For more information on what you can do with the flags config, see below
 # A collection of flag definitions designed for vanilla minecraft.
 # Each group defined will be displayed in the flag GUI for users.
 # Groups can have the following settings : 
-# enabled=<true|false>: Whether the group is enabled.
-# admin-group=<true|false>: Whether this group is considered for admin use only.
-# Note: GUI toggles in PRESETS will always apply to current claim only.
-# Note: If you assign users the permission 'griefdefender.admin.advanced-flags', they will be able to access admin presets within the claim tab.
-#      It is recommended not to assign this permission to users for best experience.
-# value=<true|false>: This is used to set a default value for the flag definition. It is only used in conjunction with 'override=<type>, default=<type> settings.
-# contexts=["key=value"]: A list of definition contexts that will be applied to all permissions.
+#    enabled=<true|false>: Whether the group is enabled.
+#    admin-group=<true|false>: Whether this group is considered for admin use only.
+#    Note: GUI toggles in PRESETS will always apply to current claim only.
+#    Note: If you assign users the permission 'griefdefender.admin.advanced-flags', they will be able to access admin presets within the claim tab.
+#          It is recommended not to assign this permission to users for best experience.
+#    value=<true|false>: This is used to set a default value for the flag definition. It is only used in conjunction with 'override=<type>, default=<type> settings.
+#    contexts=["key=value"]: A list of definition contexts that will be applied to all permissions.
 # Note: This is primary used with 'default' and 'override' contexts. Ex. contexts=["default=global"]
 # Note: You must specify one of the following contexts :'gd_claim_default=<type>' or 'gd_claim_override=<type>''
 # Note: Context values support wildcards '?' and '*' by using Apache's wildcard matcher.
-# The wildcard '?' represents a single character.
-# The wildcard '*' represents zero or more characters.
+#  The wildcard '?' represents a single character.
+#  The wildcard '*' represents zero or more characters.
 # Each group will have an associated permission in order to be viewable.
 # The user groups will use the permission : 'griefdefender.user.custom.flag.<preset>.<group>
 # The admin groups will use the permission : 'griefdefender.admin.custom.flag.<preset>.<group>
 # Within each group, you can define flag definitions.
 # Each flag definition must be defined in the following format:
-# enabled: Controls whether the definition is enabled. Accepts a value of 'true' or 'false'
-# default-value: The default value to assign flag definition.
-# description: The flag description to display on hover. Uses the legacy text format.
-# permissions: The list of permissions to link to definition. Permissions can accept various contexts such as :
-# flag=<linked-flag>: This context is used to link the permission to a GD specific flag. Ex. 'flag=block-break' would link permission to GD's block-break flag
-# source=<id>: This context is used to specify a source id such as 'minecraft:creeper'.
-# target=<id>: This context is used to specify a target id such as 'minecraft:chest'.
-# state=<properties>: This context is used to specify a blockstate property such as 'state=lit:true'.
+#  enabled: Controls whether the definition is enabled. Accepts a value of 'true' or 'false'
+#  default-value: The default value to assign flag definition.
+#  description: The flag description to display on hover. Uses the legacy text format.
+#  permissions: The list of permissions to link to definition. Permissions can accept various contexts such as :
+#    flag=<linked-flag>: This context is used to link the permission to a GD specific flag. Ex. 'flag=block-break' would link permission to GD's block-break flag
+#    source=<id>: This context is used to specify a source id such as 'minecraft:creeper'.
+#    target=<id>: This context is used to specify a target id such as 'minecraft:chest'.
+#    state=<properties>: This context is used to specify a blockstate property such as 'state=lit:true'.
 # Note: All flag definitions that contain a definition context of 'gd_claim_default' or 'gd_claim_override' will be applied to permissions during server startup.
 # Note: Required if no source or target context is specified, the permission will default to ALL.
 # Note: Commonly used contexts are : flag, source, target, state, used_item, item_name, world, server
 # These contexts may change, See https://github.com/bloodmc/GriefDefender/wiki/Contexts for latest information.
 
 minecraft {
+    enabled=true
     groups {
         admin {
             # Set to true if this flag group is for admin use only.
@@ -162,6 +167,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:bat_spawn_egg"
+                        title="&6ambient-spawn"
+                    }
                     permissions=[
                         "flag=entity-spawn, target=#ambient"
                     ]
@@ -172,7 +182,13 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:chorus_plant"
+                        title="&6animal-block-modify"
+                    }
                     permissions=[
+                        "flag=block-break, source=#animal",
                         "flag=block-modify, source=#animal"
                     ]
                 }
@@ -182,6 +198,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:pig_spawn_egg"
+                        title="&6animal-spawn"
+                    }
                     permissions=[
                         "flag=entity-spawn, target=#animal"
                     ]
@@ -192,6 +213,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:squid_spawn_egg"
+                        title="&6aquatic-spawn"
+                    }
                     permissions=[
                         "flag=entity-spawn, target=#aquatic"
                     ]
@@ -202,21 +228,16 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:armor_stand"
+                        title="&6armorstand-use"
+                    }
                     permissions=[
                         "flag=interact-item-secondary, target=minecraft:armor_stand, source=minecraft:player",
                         "flag=entity-damage, target=minecraft:armor_stand, source=minecraft:player",
                         "flag=interact-entity-secondary, target=minecraft:armor_stand, source=minecraft:player",
                         "flag=interact-inventory, target=minecraft:armor_stand, source=minecraft:player"
-                    ]
-                }
-                block-trampling {
-                    contexts=[
-                        "gd_claim_override=user"
-                    ]
-                    default-value=false
-                    enabled=true
-                    permissions=[
-                        "flag=collide-block, target=minecraft:turtle_egg, target=minecraft:farmland"
                     ]
                 }
                 chorus-fruit-teleport {
@@ -225,6 +246,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:chorus_fruit"
+                        title="&6chorus-fruit-teleport"
+                    }
                     permissions=[
                         "flag=item-use, target=minecraft:chorus_fruit, source=minecraft:player"
                     ]
@@ -235,6 +261,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:command_block"
+                        title="&6commandblock-block-break"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:command_block, source=minecraft:chain_command_block, source=minecraft:repeating_command_block"
                     ]
@@ -245,6 +276,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:command_block"
+                        title="&6commandblock-block-place"
+                    }
                     permissions=[
                         "flag=block-place, source=minecraft:command_block, source=minecraft:chain_command_block, source=minecraft:repeating_command_block"
                     ]
@@ -255,6 +291,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:creeper_head"
+                        title="&6creeper-block-explosion"
+                    }
                     permissions=[
                         "flag=explosion-block, source=minecraft:creeper"
                     ]
@@ -263,8 +304,13 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
-                    default-value=false
+                    default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:creeper_head"
+                        title="&6creeper-entity-explosion"
+                    }
                     permissions=[
                         "flag=explosion-entity, source=minecraft:creeper"
                     ]
@@ -275,6 +321,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:end_crystal"
+                        title="&6endcrystal-use"
+                    }
                     permissions=[
                         "flag=projectile-impact-entity, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player",
                         "flag=interact-item-secondary, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player",
@@ -288,6 +339,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=true
+                        id="minecraft:armor_stand"
+                        title="&6entity-armorstand-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, target=minecraft:armor_stand, source=minecraft:player",
                         "flag=projectile-impact-entity, target=minecraft:armor_stand, source=minecraft:player"
@@ -299,6 +355,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=true
+                        id="minecraft:item_frame"
+                        title="&6entity-itemframe-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, target=minecraft:glow_item_frame, target=minecraft:item_frame",
                         "flag=projectile-impact-entity, target=minecraft:glow_item_frame, target=minecraft:item_frame"
@@ -310,6 +371,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:experience_bottle"
+                        title="&6exp-drop"
+                    }
                     permissions=[
                         "flag=entity-spawn, target=minecraft:xp_orb"
                     ]
@@ -320,6 +386,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=true
+                        id="minecraft:feather"
+                        title="&6fall-player-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, source=minecraft:fall"
                     ]
@@ -330,6 +401,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:feather"
+                        title="&6fall-player-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, target=minecraft:player, source=minecraft:fall"
                     ]
@@ -340,6 +416,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:sand"
+                        title="&6falling-block-break"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:fall"
                     ]
@@ -350,6 +431,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:magma_block"
+                        title="&6fire-block-damage"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:fire"
                     ]
@@ -360,11 +446,32 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:magma_cream"
+                        title="&6fire-entity-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, source=minecraft:fire",
                         "flag=entity-damage, source=minecraft:fire_tick",
                         "flag=entity-damage, source=minecraft:magma_block",
                         "flag=entity-damage, source=minecraft:lava"
+                    ]
+                }
+                lead-interact {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=false
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:lead"
+                        title="&6lead-interact"
+                    }
+                    permissions=[
+                        "flag=interact-item-secondary, target=minecraft:lead, source=minecraft:player",
+                        "flag=interact-entity-secondary, target=minecraft:leash_knot, source=minecraft:player"
                     ]
                 }
                 lightning-damage {
@@ -373,6 +480,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:dead_bush"
+                        title="&6lightning-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, source=minecraft:lightning_bolt"
                     ]
@@ -383,6 +495,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:skeleton_skull"
+                        title="&6monster-animal-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, source=#monster, target=#animal",
                         "flag=entity-damage, source=#monster, target=#aquatic",
@@ -395,6 +512,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:zombie_head"
+                        title="&6monster-player-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, source=#monster, target=minecraft:player",
                         "flag=projectile-impact-entity, source=#monster, target=minecraft:player"
@@ -406,6 +528,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:zombie_spawn_egg"
+                        title="&6monster-spawn"
+                    }
                     permissions=[
                         "flag=entity-spawn, target=#monster"
                     ]
@@ -416,6 +543,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:piston"
+                        title="&6piston-item-spawn"
+                    }
                     permissions=[
                         "flag=item-spawn, source=minecraft:piston",
                         "flag=item-spawn, source=minecraft:sticky_piston"
@@ -427,6 +559,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:sticky_piston"
+                        title="&6piston-use"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:piston",
                         "flag=block-place, source=minecraft:piston",
@@ -440,6 +577,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:diamond_pickaxe"
+                        title="&6player-block-break"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:player"
                     ]
@@ -450,6 +592,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:stone_button"
+                        title="&6player-block-interact"
+                    }
                     permissions=[
                         "flag=interact-block-secondary, source=minecraft:player"
                     ]
@@ -460,6 +607,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:grass_block"
+                        title="&6player-block-place"
+                    }
                     permissions=[
                         "flag=block-place, source=minecraft:player"
                     ]
@@ -470,9 +622,32 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:cactus"
+                        title="&6player-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, target=minecraft:player",
                         "flag=projectile-impact-entity, target=minecraft:player"
+                    ]
+                }
+                player-damage-pillager {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=true
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:red_banner"
+                        title="&6player-damage"
+                    }
+                    permissions=[
+                        "flag=entity-damage, source=minecraft:player, target=minecraft:pillager",
+                        "flag=projectile-impact-entity, source=minecraft:player, target=minecraft:pillager",
+                        "flag=entity-damage, source=minecraft:arrow, target=minecraft:pillager",
+                        "flag=projectile-impact-entity, source=minecraft:arrow, target=minecraft:pillager"
                     ]
                 }
                 player-enderpearl-interact {
@@ -481,6 +656,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:ender_pearl"
+                        title="&6player-enderpearl-interact"
+                    }
                     permissions=[
                         "flag=interact-item-secondary, source=minecraft:player, target=minecraft:ender_pearl"
                     ]
@@ -491,18 +671,13 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:end_portal_frame"
+                        title="&6player-endportal-use"
+                    }
                     permissions=[
                         "flag=entity-teleport-from, source=minecraft:end_portal, target=minecraft:player"
-                    ]
-                }
-                player-enter {
-                    contexts=[
-                        "gd_claim=claim"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=enter-claim, source=minecraft:player"
                     ]
                 }
                 player-entity-interact {
@@ -511,16 +686,26 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:carrot_on_a_stick"
+                        title="&6player-entity-interact"
+                    }
                     permissions=[
                         "flag=interact-entity-secondary, source=minecraft:player"
                     ]
                 }
                 player-exit {
                     contexts=[
-                        "gd_claim=claim"
+                        "gd_claim_default=user"
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:iron_door"
+                        title="&6player-exit"
+                    }
                     permissions=[
                         "flag=exit-claim, source=minecraft:player"
                     ]
@@ -531,6 +716,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:dropper"
+                        title="&6player-item-drop"
+                    }
                     permissions=[
                         "flag=item-drop, source=minecraft:player"
                     ]
@@ -541,6 +731,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:hopper"
+                        title="&6player-item-pickup"
+                    }
                     permissions=[
                         "flag=item-pickup, source=minecraft:player"
                     ]
@@ -551,6 +746,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:item_frame"
+                        title="&6player-itemframe-interact"
+                    }
                     permissions=[
                         "flag=interact-entity-secondary, target=minecraft:glow_item_frame, target=minecraft:item_frame, source=minecraft:player"
                     ]
@@ -561,8 +761,29 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:item_frame"
+                        title="&6player-itemhanging-place"
+                    }
                     permissions=[
                         "flag=interact-item-secondary, target=#hanging, source=minecraft:player"
+                    ]
+                }
+                player-monster-damage {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=true
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:zombie_head"
+                        title="&6monster-player-damage"
+                    }
+                    permissions=[
+                        "flag=entity-damage, target=#monster, source=minecraft:player",
+                        "flag=projectile-impact-entity, target=#monster, source=minecraft:player"
                     ]
                 }
                 player-netherportal-use {
@@ -571,6 +792,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:obsidian"
+                        title="&6player-netherportal-use"
+                    }
                     permissions=[
                         "flag=entity-teleport-from, source=minecraft:nether_portal, target=minecraft:player"
                     ]
@@ -581,6 +807,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:magenta_glazed_terracotta"
+                        title="&6entity-itemframe-damage"
+                    }
                     permissions=[
                         "flag=entity-teleport-from, target=minecraft:player"
                     ]
@@ -591,6 +822,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=true
+                        id="minecraft:magenta_glazed_terracotta"
+                        title="&6entity-itemframe-damage"
+                    }
                     permissions=[
                         "flag=entity-teleport-to, target=minecraft:player"
                     ]
@@ -601,6 +837,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:tripwire_hook"
+                        title="&6player-villager-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, target=minecraft:villager, source=minecraft:player",
                         "flag=projectile-impact-entity, target=minecraft:villager, source=minecraft:player"
@@ -612,8 +853,28 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:ravager_spawn_egg"
+                        title="&6ravager-block-break"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:ravager"
+                    ]
+                }
+                safarinet-use {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=false
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:ghast_spawn_egg"
+                        title="&6safarinet-use"
+                    }
+                    permissions=[
+                        "flag=interact-item-secondary, target=minecraft:ghast_spawn_egg, source=minecraft:player"
                     ]
                 }
                 silverfish-block-infest {
@@ -622,6 +883,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:infested_cobblestone"
+                        title="&6fall-player-damage"
+                    }
                     permissions=[
                         "flag=block-modify, source=minecraft:silverfish"
                     ]
@@ -632,6 +898,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:tnt"
+                        title="&6tnt-block-explosion"
+                    }
                     permissions=[
                         "flag=explosion-block, source=minecraft:tnt"
                     ]
@@ -640,8 +911,13 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
-                    default-value=false
+                    default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:tnt"
+                        title="&6tnt-entity-explosion"
+                    }
                     permissions=[
                         "flag=explosion-entity, source=minecraft:tnt"
                     ]
@@ -652,7 +928,13 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:egg"
+                        title="&6turtle-egg-hatch"
+                    }
                     permissions=[
+                        "flag=block-place, source=minecraft:turtle, target=minecraft:turtle_egg",
                         "flag=block-break, source=minecraft:turtle_egg, target=minecraft:turtle_egg"
                     ]
                 }
@@ -662,6 +944,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:composter"
+                        title="&6villager-farm"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:villager, target=#crops",
                         "flag=block-place, source=minecraft:villager, target=#crops"
@@ -673,6 +960,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:emerald"
+                        title="&6villager-trade"
+                    }
                     permissions=[
                         "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
                     ]
@@ -683,6 +975,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:wither_skeleton_skull"
+                        title="&6wither-block-break"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:wither"
                     ]
@@ -693,6 +990,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:nether_star"
+                        title="&6wither-entity-damage"
+                    }
                     permissions=[
                         "flag=entity-damage, source=minecraft:wither"
                     ]
@@ -700,6 +1002,11 @@ minecraft {
             }
             # Whether flag definition group is enabled.
             enabled=true
+            icon {
+                enchanted=false
+                id="minecraft:enchanted_golden_apple"
+                title="&cAdmin"
+            }
         }
         user {
             # Set to true if this flag group is for admin use only.
@@ -713,9 +1020,29 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:bone_meal"
+                        title="&6block-fertilize"
+                    }
                     permissions=[
                         "flag=block-grow, used_item=minecraft:bone_meal, target=#crops, source=minecraft:player",
                         "flag=block-grow, used_item=minecraft:bone_meal, target=#plants, source=minecraft:player"
+                    ]
+                }
+                block-trampling {
+                    contexts=[
+                        "gd_claim_override=user"
+                    ]
+                    default-value=false
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:dirt"
+                        title="&6block-trampling"
+                    }
+                    permissions=[
+                        "flag=collide-block, target=minecraft:turtle_egg, target=minecraft:farmland"
                     ]
                 }
                 chest-access {
@@ -724,9 +1051,24 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:chest"
+                        title="&6chest-access"
+                    }
                     permissions=[
                         "flag=interact-block-secondary, target=minecraft:chest, source=minecraft:player",
                         "flag=interact-inventory, target=minecraft:chest, source=minecraft:player"
+                    ]
+                }
+                collide-pixelmon-grass {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=collide-block, target=pixelmon:pixelmon_grass, source=minecraft:player"
                     ]
                 }
                 crop-growth {
@@ -735,6 +1077,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:wheat"
+                        title="&6crop-growth"
+                    }
                     permissions=[
                         "flag=block-grow, target=#crops"
                     ]
@@ -745,6 +1092,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:mutton"
+                        title="&6damage-animals"
+                    }
                     permissions=[
                         "flag=entity-damage, target=#animal",
                         "flag=projectile-impact-entity, target=#animal"
@@ -756,6 +1108,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:ender_eye"
+                        title="&6enderman-grief"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:enderman",
                         "flag=block-place, source=minecraft:enderman"
@@ -767,6 +1124,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:blaze_powder"
+                        title="&6fire-spread"
+                    }
                     permissions=[
                         "flag=block-spread, source=minecraft:fire",
                         "flag=block-spread, source=minecraft:lava"
@@ -778,6 +1140,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:tall_grass"
+                        title="&6grass-growth"
+                    }
                     permissions=[
                         "flag=block-grow, target=minecraft:grass"
                     ]
@@ -788,6 +1155,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:packed_ice"
+                        title="&6ice-form"
+                    }
                     permissions=[
                         "flag=block-modify, target=minecraft:ice"
                     ]
@@ -798,8 +1170,115 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:blue_stained_glass"
+                        title="&6ice-melt"
+                    }
                     permissions=[
                         "flag=block-modify, target=minecraft:water, source=minecraft:ice"
+                    ]
+                }
+                interact-with-chattingnpc {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-entity-secondary, target=pixelmon:chattingnpc, source=minecraft:player"
+                    ]
+                }
+                interact-with-endtable {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        "flag=interact-block-secondary, source=minecraft:player, target=pixelmon:end_table",
+                        "flag=interact-inventory, source=minecraft:player, target=pixelmon:end_table"
+                    ]
+                }
+                interact-with-fridge {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=false
+                    enabled=true
+                    permissions=[
+                        "flag=interact-block-secondary, target=pixelmon:fridge, source=minecraft:player",
+                        "flag=interact-inventory, target=pixelmon:fridge, source=minecraft:player"
+                    ]
+                }
+                interact-with-healer {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-block-secondary, target=pixelmon:healer, source=minecraft:player"
+                    ]
+                }
+                interact-with-move-relearner {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-entity-secondary, target=pixelmon:relearner, source=minecraft:player"
+                    ]
+                }
+                interact-with-move-tutor {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-entity-secondary, target=pixelmon:tutor, source=minecraft:player"
+                    ]
+                }
+                interact-with-nurses {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-entity-secondary, target=pixelmon:nursejoy, source=minecraft:player"
+                    ]
+                }
+                interact-with-old-fisherman {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-entity-secondary, target=pixelmon:oldfisherman, source=minecraft:player"
+                    ]
+                }
+                interact-with-shopkeepers {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-entity-secondary, target=pixelmon:shopkeeper, source=minecraft:player"
+                    ]
+                }
+                interact-with-traders {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-entity-secondary, target=pixelmon:trader, source=minecraft:player"
                     ]
                 }
                 lava-flow {
@@ -808,6 +1287,11 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:lava_bucket"
+                        title="&6lava-flow"
+                    }
                     permissions=[
                         "flag=liquid-flow, source=minecraft:lava, target=minecraft:air"
                     ]
@@ -818,6 +1302,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:oak_leaves"
+                        title="&6leaf-decay"
+                    }
                     permissions=[
                         "flag=leaf-decay"
                     ]
@@ -828,8 +1317,28 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:flint_and_steel"
+                        title="&6lighter"
+                    }
                     permissions=[
                         "flag=interact-item-secondary, target=minecraft:flint_and_steel, source=minecraft:player"
+                    ]
+                }
+                monster-spawn {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=true
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:zombie_spawn_egg"
+                        title="&6monster-spawn"
+                    }
+                    permissions=[
+                        "flag=entity-spawn, target=#monster"
                     ]
                 }
                 mushroom-growth {
@@ -838,6 +1347,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:brown_mushroom_block"
+                        title="&6mushroom-growth"
+                    }
                     permissions=[
                         "flag=block-grow, target=#mushroom"
                     ]
@@ -848,8 +1362,125 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:mycelium"
+                        title="&6mycelium-spread"
+                    }
                     permissions=[
                         "flag=block-spread, target=minecraft:mycelium"
+                    ]
+                }
+                occupied-pokeball-usage {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=projectile-impact-block, source=pixelmon:occupied_pokeball",
+                        "flag=projectile-impact-entity, source=pixelmon:occupied_pokeball, target=pixelmon:any",
+                        "flag=entity-spawn, source=pixelmon:occupied_pokeball, target=#pixelmon:animal"
+                    ]
+                }
+                painting-damage {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=false
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:painting"
+                        title="&6painting-damage"
+                    }
+                    permissions=[
+                        "flag=entity-damage, target=minecraft:painting"
+                    ]
+                }
+                phantom-spawn {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=true
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:phantom_membrane"
+                        title="&6phantom-spawn"
+                    }
+                    permissions=[
+                        "flag=entity-spawn, target=minecraft:phantom"
+                    ]
+                }
+                player-button-interact {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=false
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:stone_button"
+                        title="&6player-button-interact"
+                    }
+                    permissions=[
+                        "flag=interact-block-secondary, target=minecraft:button, source=minecraft:player"
+                    ]
+                }
+                player-enter {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=true
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:oak_door"
+                        title="&6player-enter"
+                    }
+                    permissions=[
+                        "flag=enter-claim, source=minecraft:player"
+                    ]
+                }
+                player-item-drop {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=true
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:dropper"
+                        title="&6player-item-drop"
+                    }
+                    permissions=[
+                        "flag=item-drop, source=minecraft:player"
+                    ]
+                }
+                player-item-pickup {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=true
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:hopper"
+                        title="&6player-item-pickup"
+                    }
+                    permissions=[
+                        "flag=item-pickup, source=minecraft:player"
+                    ]
+                }
+                poke-spawn {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=entity-spawn, target=#pixelmon:animal"
                     ]
                 }
                 pvp {
@@ -858,6 +1489,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:diamond_sword"
+                        title="&6pvp"
+                    }
                     permissions=[
                         "flag=entity-damage, target=minecraft:player, source=minecraft:player",
                         "flag=projectile-impact-entity, target=minecraft:player, source=minecraft:player"
@@ -869,6 +1505,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:saddle"
+                        title="&6ride"
+                    }
                     permissions=[
                         "flag=entity-riding, target=#vehicle, source=minecraft:player",
                         "flag=interact-entity-secondary, target=#vehicle, source=minecraft:player"
@@ -880,6 +1521,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:oak_sign"
+                        title="&6sign-use"
+                    }
                     permissions=[
                         "flag=interact-block-primary, target=#signs, source=minecraft:player",
                         "flag=interact-block-secondary, target=#signs, source=minecraft:player"
@@ -891,6 +1537,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:red_bed"
+                        title="&6sleep"
+                    }
                     permissions=[
                         "flag=interact-block-secondary, target=#beds, source=minecraft:player",
                         "flag=interact-item-secondary, target=#beds, source=minecraft:player"
@@ -902,6 +1553,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:snowball"
+                        title="&6snow-fall"
+                    }
                     permissions=[
                         "flag=block-place, target=minecraft:snow, source=minecraft:air"
                     ]
@@ -912,6 +1568,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:snow_block"
+                        title="&6snow-melt"
+                    }
                     permissions=[
                         "flag=block-break, source=minecraft:snow"
                     ]
@@ -922,6 +1583,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:snow"
+                        title="&6snowman-trail"
+                    }
                     permissions=[
                         "flag=block-place, source=minecraft:snow_golem, target=minecraft:snow"
                     ]
@@ -932,8 +1598,106 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:farmland"
+                        title="&6soil-dry"
+                    }
                     permissions=[
                         "flag=block-modify, source=minecraft:farmland, state=moisture:0"
+                    ]
+                }
+                throw-any-pokeball {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=projectile-impact-block, source=pixelmon:empty_pokeball",
+                        "flag=projectile-impact-entity, source=pixelmon:empty_pokeball"
+                    ]
+                }
+                use-cushion-chairs {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-block-secondary, target=pixelmon:red_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:yellow_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:green_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:pink_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:blue_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:black_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:gray_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:cyan_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:white_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:brown_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:orange_cushion_chair, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:purple_cushion_chair, source=minecraft:player"
+                    ]
+                }
+                use-fossil-cleaner {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-block-secondary, target=pixelmon:fossil_cleaner, source=minecraft:player"
+                    ]
+                }
+                use-fossil-machines {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-block-secondary, target=pixelmon:fossil_machine, source=minecraft:player"
+                    ]
+                }
+                use-pc {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-block-secondary, target=pixelmon:pc, source=minecraft:player"
+                    ]
+                }
+                use-trade-machines {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-block-secondary, target=pixelmon:trade_machine, source=minecraft:player"
+                    ]
+                }
+                use-vending-machines {
+                    contexts=[
+                        "gd_claim_default=global"
+                    ]
+                    default-value=true
+                    enabled=true
+                    permissions=[
+                        "flag=interact-block-secondary, target=pixelmon:pink_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:blue_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:green_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:orange_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:red_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:yellow_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, source=minecraft:player, target=pixelmon:brown_vending_machine",
+                        "flag=interact-block-secondary, target=pixelmon:white_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:gray_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:black_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:cyan_vending_machine, source=minecraft:player",
+                        "flag=interact-block-secondary, target=pixelmon:purple_vending_machine, source=minecraft:player"
                     ]
                 }
                 vehicle-use {
@@ -942,11 +1706,16 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:oak_boat"
+                        title="&6vehicle-use"
+                    }
                     permissions=[
-                        "flag=interact-item-secondary, target=minecraft:minecart, target=#boats, source=minecraft:player",
-                        "flag=entity-damage, target=minecraft:minecart, target=minecraft:boat, source=minecraft:player",
-                        "flag=entity-riding, target=minecraft:minecart, target=minecraft:boat, source=minecraft:player",
-                        "flag=interact-entity-secondary, target=minecraft:minecart, target=minecraft:boat, source=minecraft:player"
+                        "flag=interact-item-secondary, target=minecraft:minecart, target=#vehicle, target=#boats, source=minecraft:player",
+                        "flag=entity-damage, target=minecraft:minecart, target=minecraft:boat, target=#vehicle, source=minecraft:player",
+                        "flag=entity-riding, target=minecraft:minecart, target=minecraft:boat, target=#vehicle, source=minecraft:player",
+                        "flag=interact-entity-secondary, target=minecraft:minecart, target=minecraft:boat, target=#vehicle, source=minecraft:player"
                     ]
                 }
                 villager-trade {
@@ -955,6 +1724,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:emerald"
+                        title="&6villager-trade"
+                    }
                     permissions=[
                         "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
                     ]
@@ -965,6 +1739,11 @@ minecraft {
                     ]
                     default-value=true
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:vine"
+                        title="&6vine-growth"
+                    }
                     permissions=[
                         "flag=block-grow, target=minecraft:vine"
                     ]
@@ -975,14 +1754,63 @@ minecraft {
                     ]
                     default-value=false
                     enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:water_bucket"
+                        title="&6water-flow"
+                    }
                     permissions=[
                         "flag=liquid-flow, source=minecraft:water, target=minecraft:air"
+                    ]
+                }
+                work-station-access {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-value=false
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:crafting_table"
+                        title="&6work-station-access"
+                    }
+                    permissions=[
+                        "flag=interact-block-secondary, target=minecraft:crafting_table, source=minecraft:player",
+                        "flag=interact-inventory, target=minecraft:crafting_table, source=minecraft:player",
+                        "flag=interact-block-secondary, target=minecraft:anvil, source=minecraft:player",
+                        "flag=interact-inventory, target=minecraft:anvil, source=minecraft:player",
+                        "flag=interact-block-secondary, source=minecraft:player, target=minecraft:brewing_stand",
+                        "flag=interact-inventory, source=minecraft:player, target=minecraft:brewing_stand",
+                        "flag=interact-block-secondary, target=minecraft:cartography_table, source=minecraft:player",
+                        "flag=interact-inventory, target=minecraft:cartography_table, source=minecraft:player",
+                        "flag=interact-block-secondary, target=minecraft:smithing_table, source=minecraft:player",
+                        "flag=interact-inventory, target=minecraft:smithing_table, source=minecraft:player",
+                        "flag=interact-block-secondary, target=minecraft:enchanting_table, source=minecraft:player",
+                        "flag=interact-inventory, target=minecraft:enchanting_table, source=minecraft:player",
+                        "flag=interact-block-secondary, target=minecraft:grindstone, source=minecraft:player",
+                        "flag=interact-inventory, target=minecraft:grindstone, source=minecraft:player",
+                        "flag=interact-block-secondary, target=minecraft:loom, source=minecraft:player",
+                        "flag=interact-inventory, target=minecraft:loom, source=minecraft:player",
+                        "flag=interact-block-secondary, target=minecraft:stonecutter, source=minecraft:player",
+                        "flag=interact-inventory, target=minecraft:stonecutter, source=minecraft:player",
+                        "flag=interact-block-secondary, source=minecraft:player, target=minecraft:ender_chest",
+                        "flag=interact-inventory, source=minecraft:player, target=minecraft:ender_chest"
                     ]
                 }
             }
             # Whether flag definition group is enabled.
             enabled=true
+            icon {
+                enchanted=false
+                id="minecraft:apple"
+                title="&aUser"
+            }
         }
+    }
+    icon {
+        enchanted=false
+        id="minecraft:light_blue_shulker_box"
+        title="&dminecraft"
     }
     version="1.0"
 }
@@ -1004,8 +1832,12 @@ With GD 2.0, all flag definitions can be applied to two types of players : PUBLI
 
 ### Permissions  
 
-The following permission controls access to each user flag `griefdefender.user.custom.flag.<group>.<flagname>`.
-As an example, lets assume you want to deny user access to the `damage-animals` flag. You would enter the following in LuckPerms , `/lp group <groupname> set griefdefender.user.custom.flag.user.damage-animals false`
+The following permission controls the user's ability to toggle flag definitions in GUI  
+`griefdefender.user.custom.flag.<preset>.<group>.<flagname>`
+
+As an example, lets assume you want to deny user access to toggle the `damage-animals` flag in GUI.  
+You would enter the following in LuckPerms  
+`/lp group <groupname> permission set griefdefender.user.custom.flag.minecraft.user.damage-animals false`
 
 ### Flag Values
 
@@ -1103,6 +1935,7 @@ Flag Definition                                  | Default Value | Description |
 ```lighter``` | false | Controls whether a player can use flint and steel.
 ```mushroom-growth``` | true | Controls whether mushrooms can grow.
 ```mycelium-spread``` | true | Controls whether mycelium can spread.
+```painting-damage``` | false | Controls whether players can break paintings.
 ```pvp``` | true | Controls whether PvP combat is allowed.
 ```ride``` | false | Controls whether vehicles(including animals), not owned by the player, can be mounted.
 ```sign-use``` | true | Controls whether players can use signs.

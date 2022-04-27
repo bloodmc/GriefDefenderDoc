@@ -5,9 +5,11 @@ tags: management
 icon: operate
 ---
 
-GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the [Flags page](https://github.com/bloodmc/GriefDefender/wiki/Flags).
+GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the [Flag Definition page](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI).
 
 All the examples are with the defaults at the time of writing this in mind.
+
+For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](https://github.com/bloodmc/GriefDefender/wiki/FAQ)
 
 ## Claim Creation
 
@@ -115,12 +117,213 @@ Basic tool, you can use it to indicate the position of claims, and identify who 
 
 * Right clicking shows existing claim locations
 * Shift right clicking searches for all claims in a 100 block radius and shows their location
-* Left clicking hides the markers
+* Left clicking hides the markers  
+
+
+## Claim Identifiers
+
+Claim identifiers allow players to create unique id's for their claims.  
+All claim identifiers are created by using command `/claimid <identifier>`  
+The main purpose of using claim identifiers is to gain the ability to use at the end of most commands.  
+Previously, all players were required to stand in a claim to manage it. With claim identifiers, the player can now simply pass claim identifiers at the end of commands to manage them.  
+For example, if a player wanted to check claim info for a specific claim, they could use `/claiminfo <identifier>`
+
+### Types
+
+There are 4 types of claim identifiers
+
+#### Admin
+
+Admin claim identifiers are unique across all admin claims.  
+These identifiers can be accessed via commands with format `admin:<identifier>`  
+
+#### User
+
+User claim identifiers are unique across all of the user's personal claims.  
+These identifiers can be accessed via commands with format `<identifier>`  
+
+#### Wilderness
+
+Wilderness claim identifiers are unique across all wilderness claims.  
+These identifiers can be accessed via commands with format `wilderness:<identifier>`
+
+#### Other User
+
+Admins can access any player's personal claim identifiers by using the format `<player_name>:<identifier>` in a command.  
+
+### Storage
+
+All claim identifiers are stored in `./GriefDefender/claimnames.conf`  
+
+
+## Claim Display Names
+
+Claim display names are not unique and used for display purposes only.  
+They allow a player to name their claims anything for commands such as `/claimlist`.  
+To set a claim display name, use the command `/claimdisplayname <name>`  
+
+## Claim Snapshots
+
+Claim snapshots allow a user to backup all associated claim data of the claim including permissions.  
+
+### Types
+
+#### Public
+
+Public claim snapshots are accessible by all users.  
+Data is stored in `./GriefDefender/snapshots/public/<group>/<snapshotname>.conf`
+
+#### Admin
+
+Admin claim snapshots are accessible by only admins.  
+Data is stored in `./GriefDefender/snapshots/admin/<group>/<snapshotname>.conf`
+
+
+#### User
+
+User claim snapshots are only accessible by the creator.  
+Data is stored in `./GriefDefender/snapshots/user/<player_uuid>/<snapshotname>.conf`
+
+
+#### Claim
+
+Claim local snapshots are only accessible in the claim the snapshot was created in.  
+Data is stored in `./GriefDefender/worlds/<dimension_type>/<world_name>/snapshots/<claim_uuid>/<snapshotname>.conf`
+
+### GUI
+
+Run `/claimsnapshot` with no args to launch GUI  
+The following tabs are available 
+
+#### Claim 
+* Shows snapshots of claim you are standing in  
+* Snapshots will be listed in alphabetical order  
+
+#### User
+* Shows player snapshots you or trusted have created.  
+* Snapshots will be listed in alphabetical order  
+
+#### Public
+* Shows public snapshots created by admins  
+* Snapshots will be listed by group then clicking group will show normal list  
+
+#### Admin
+* Shows admin snapshots created by admins  
+* Snapshots will be listed by group then clicking group will show normal list  
+
+### Command examples
+
+
+1. Create a player snapshot called 'store' not tied to a claim and only copy claim data and permission data  
+`/claimsnapshot create store type=user option=false`
+2. Create an admin snapshot called 'spawn' and store it in group 'vanha'  
+`/claimsnapshot create spawn type=admin group=vanha`
+3. Create a public snapshot called 'home' and store it in group 'build'  
+`/claimsnapshot create home type=public group=build`
+4. Apply snapshot from step 2 to current claim  
+`/claimsnapshot apply spawn type=admin group=vanha`
+5. Apply snapshot from step 2 to current claim with custom apply settings  
+`/claimsnapshot apply spawn type=admin group=vanha option:false trust:false`  
+
+
+
+## Claim Groups
+
+Claim groups allow 2 or more claims to use the same permissions.  
+This is useful in situations where you have a group of claims where permissions need to be synced.  
+
+### Types
+
+There are 2 types of claim groups  
+
+#### Admin
+
+Admin claim groups are only accessible by admins.  
+Data is stored in `./GriefDefender/claimgroups/admin/<claimgroup_name>.conf`
+
+#### User
+
+User claim groups are only accessible by user who created the group.   
+Data is stored in `./GriefDefender/claimgroups/user/<player_uuid>/<claimgroup_name>.conf`
+
+### GUI
+
+Run `/claimgroup` with no args to launch GUI  
+The following tabs are available 
+
+#### User
+* Shows player claim groups you have created.  
+* Clicking the claim group will show all claims joined to the group.  
+* Claim groups will be listed in alphabetical order  
+
+#### Admin
+* Shows admin claim groups created by admins  
+* Clicking the claim group will show all claims joined to the group.  
+* Claim groups will be listed in alphabetical order  
+
+
+To create a claim group, click the `+` sign and enter a name for claim group.  
+To remove a claim group, click the `-` sign and enter a name for claim group.  
+To join a claim group, stand in the claim you want to join then click the `JOIN` button next to the claim group.  
+To unjoin a claim group, stand in the claim you want to unjoin then click the `UNJOIN` button next to the claim group.   
+Note: Unjoining a claim from a group will cause the claim to use its local permissions.  
+
+### Command Examples
+
+1. To create a user claim group called `tech`  
+`/claimgroup create tech`  
+2. To join the claim a player is in to claim group `tech`  
+`/claimgroup join tech`  
+3. To join a claim with identifier `stronghold1` to claim group `tech`  
+`/claimgroup join tech stronghold1`  
+4. To unjoin a claim a player is in from claim group `tech`  
+`/claimgroup unjoin`  
+4. To create an admin claim group called `event`  
+`/claimgroupadmin create event`  
+
 
 ## Claim Settings
 
 To get general information about claims use `/claiminfo` while standing in them. Hover over things to find various details you can change directly without entering any commands.
 There are also commands to change the claim name, greeting, and farewell.  
+
+![Claiminfo Details](https://i.imgur.com/6erpZLa.png)
+
+Field                              | Description |
+-----------------------------------|-------------|
+```Type```| The type of claim. <br />Note: 2D claim types protect bedrock to sky by default. <br />Note: 3D claim types include height (Y axis) and only protect the area selected at time of claim creation.
+```ID```| The unique friendly claim identifier. See [Claim identifiers](#claim-identifiers)
+```Display Name```| The display name of claim. See [Claim Display Names](#claim-display-names). <br />Note: Display names support formatting, are not unique, and can be set to anything.
+```Owner```| The claim owner.
+```Claim Group```| The claim group this claim is part of. See [Claim Groups](#claim-groups)
+```Spawn```| The claim spawn users will teleport to when using claim teleport in GUI. 
+```Inherit```| Whether the claim inherits flag permissions from parent. <br />Note: Use `/claiminherit` to toggle value.
+```Expired```| Whether the claim has expired due to inactivity.
+```For Sale```| Whether the claim is currently up for sale.
+```Raid```| Whether the claim supports village raids.
+```Deny Messages```| Whether the claim shows protection denial messages.
+```Greeting```| The claim entry message of claim. <br />Note: Use `/claimgreeting <message>|clear|none`.
+```Farewell```| The claim exit message of claim. <br />Note: Use `/claimfarewell <message>|clear|none`.
+```Enter Title```| The claim enter title of claim. <br />Note: Use `/claimtitle enter main <title>|clear|none`.
+```Enter Subtitle```| The claim enter title of claim. <br />Note: Use `/claimtitle enter sub <title>|clear|none`.
+```Exit Title```| The claim exit title of claim. <br />Note: Use `/claimtitle exit main <title>|clear|none`.
+```Exit Subtitle```| The claim exit title of claim. <br />Note: Use `/claimtitle exit sub <title>|clear|none`.
+
+
+![Claiminfo Details](https://i.imgur.com/65dcUwY.png)
+
+Field                              | Description |
+-----------------------------------|-------------|
+```World```| The world name.
+```Area``` | The size of claim. <br />Note: 2D claims include x and z axis. <br />Note: 3D claims include x, y, and z axis.
+```Blocks```| The total amount of 2D or 3D blocks used by claim.
+```Created```| The date claim was created.
+```Last Active```| The last active date the claim owner was seen. <br />Note: This is used by claim cleanup task to determine if its time to delete claim based on inactivity.
+```UUID```| The claim unique identifier.
+```Lesser Boundary Corner```| The lesser boundary corner of claim.
+```Greater Boundary Corner```| The greater boundary corner of claim.
+```North Corners```| The north block corner positions of claim. <br />Note: If player has teleport access, clicking `NW`, or `NE` will teleport to north position. <br />Note: Teleporting to corners is useful if players want to resize claim using modification tool.
+```South Corners```| The south block corner positions of claim. <br />Note: If player has teleport access, clicking `SW`, or `SE` will teleport to south position. <br />Note: Teleporting to corners is useful if players want to resize claim using modification tool.
 
 
 ## Claim Entry Control
@@ -246,115 +449,3 @@ GriefDefender {
 ```
 
 Note: These settings will only work for newly created claims. If the world has already been created, make sure to adjust the wilderness claim data with appropriate height.
-
-## FAQ
-
-**1. How do allow all users to create claims for free?**
-
-Set meta `griefdefender.initial-blocks` to a high value such as `999999999`. See https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#luckperms. You should also disable `claim-block-task` under claim category in `global.conf` so players do not accrue claim blocks.  
-
-**2. How do I transfer a claim to another player for free?**
-
-Create claim, use `/claiminfo` -> `Admin Settings` and toggle `Requires Claim Blocks` to false. Then use `/claimtransfer <playername>` to transfer claim to player.  
-
-**3. How do I create a claim using WorldEdit?**  
-
-First make sure your wand is set for cuboid mode as GD only supports cuboid. Use the wand to select your 2 points. If you want to create a 2D claim from bedrock to sky then type `/claimwe`. If you want to create a 3D claim that respect the height of your selection then type `/cuboid` then `/claimwe`. Using `/cuboid` will put you into 3D claiming mode where your selection will always respect block height.  
-
-**4. How do I make use of WECUI visuals with GD claims?**
-
-Make sure you use the investigation tool (minecraft:stick by default) or are in `/claimmode` then right-click an area.
-  
-**5. How do I allow everyone to access my spawn?** 
-
-Give them accessor trust by using `/at public` where public represents all players.  See https://github.com/bloodmc/GriefDefender/wiki/Trust-System.  If you need more detailed protection then use the flag system. See https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI
-
-**6. How do I select a specific claim to work in? (change settings, etc..)**
-
-Most GD commands will use the claim you are standing in. Simply stand in the claim and make your change. If the claim is far, use `/claimlist` and TP to it.  
-
-**7. How do I test flags as a non-trusted user in a claim?**
-
-Use `/cfdebug` to put yourself into claim flag debug mode then perform any action. This will internally set you as a non-trusted player for all claims. When done, simply run `/cfdebug` command again.  
-
-**8. Is there a way to allow a permission within all claims but deny it in the wild?**
-
-* To deny a specific player permission in wilderness
-
-1. Assign permission to all players in LuckPerms.
-2. Stand in wilderness claim.
-3. Execute command `/cpp <playername> <permission> false`
-
-
-* To deny a specific group permission in wilderness
-
-1. Assign permission to all players in LuckPerms.
-2. Stand in wilderness claim.
-3. Execute command `/cpg <group> <permission> false`
-
-Note: The same steps can be applied to any claim.
-
-**9. How do I stop a player from executing a command in a claim like `/sethome` ?**  
-
-* Deny the permission on a group in claim.  
-
-1. Stand in claim where you want to deny the permission.  
-2. Execute command `/cpg <group> <permission> false`  
-ex. To deny the permission `essentials.sethome` for group `default`  
-`/cpg default essentials.sethome false`  
-
-* Deny the permission on a single player in claim.  
-
-1. Stand in claim where you want to deny the permission.  
-2. Execute command `/cpp <playername> <permission> false`  
-ex. To deny the permission `essentials.sethome` for player `Mike`  
-`/cpp Mike essentials.sethome false`  
-
-OR  
-
-* Deny the command-execute flag on a group in claim.  
-
-1. Stand in claim where you want to deny the `command-execute` flag.  
-2. Execute command `/cfg <group> command-execute <pluginid:command[arg]> false`  
-ex. To deny the essentials command `/sethome` for group `default`  
-`/cfg default command-execute essentials:sethome false`  
-
-* Deny the command-execute flag on a single player in claim.
-
-1. Stand in claim where you want to deny the `command-execute` flag.  
-2. Execute command `/cfp <playername> command-execute <pluginid:command[arg]> false`  
-ex. To deny the essentials command `/sethome` for player `Mike`  
-`/cfp Mike command-execute essentials:sethome false`  
-
-Note: Use `/gddebug record claim` to get the proper info for command.  
-See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info.
-
-
-**10. How do I allow my admins to bypass protection ?**  
-
-Grant them access to use the `/ignoreclaims` command in order to toggle GriefDefender god-mode. 
-
-**11. How do I allow essentials `/sethome` in only claims users are trusted in?**
-
-Run the command `/cf command-execute essentials:sethome false default=user`
-
-**12. How do I allow players to fly in their own claims?**
-
-1. Deny flight globally in all claims by running command `/claimoption player-deny-flight true default=global`
-2. Give players permission to use the `fly` command.
-3. Assign the permission `griefdefender.admin.option.perk.fly.owner` to player or group.
-
-**13. How do I give claim owners the ability to allow other players to fly in their claims?**
-
-1. Admins need to assign all players the following perk permissions
-```
-griefdefender.admin.option.perk.fly.accessor
-griefdefender.admin.option.perk.fly.builder
-griefdefender.admin.option.perk.fly.container
-griefdefender.admin.option.perk.fly.manager
-```
-Note: Don't forget to run `/gdreload` after changing permissions
-
-These permissions allow the trusted player to fly in claims they are trusted to.
-
-2. Have the claim owners trust players they wish to fly in their claims.

@@ -5,6 +5,8 @@ tags: rent
 icon: view
 ---
 
+:warning: The rent system is currently being overhauled for an upcoming version. If you are using a Bukkit platform, it is recommended to use RealEstate on discord :warning: 
+
 ![Rent System](https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png)
 
 This new system will allow you to set your claim up for rent and earn some money on the way. 
