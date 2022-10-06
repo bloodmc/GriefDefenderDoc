@@ -3,13 +3,13 @@ import * as navbar from "./_navbar";
 import * as sidebar from "./_sidebar";
 
 export default hopeTheme({
-  hostname: "https://griefdefender.vercel.app",
+  hostname: "https://griefdefender.netlify.app",
 
   iconAssets: "//at.alicdn.com/t/c/font_3688305_tdmz24rfeye.css",
 
   logo: "/logo.png",
 
-  repo: "ahdg6/GriefDefenderDoc",
+  repo: "bloodmc/GriefDefenderDoc",
 
   docsDir: "",
 
@@ -48,7 +48,6 @@ export default hopeTheme({
 
   plugins: {
     blog: false,
-
     mdEnhance: {
       enableAll: false,
 	  tabs: true,

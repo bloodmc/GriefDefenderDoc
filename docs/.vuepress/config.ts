@@ -19,7 +19,27 @@ export default defineUserConfig({
     },
   },
 
-  plugins: [[ nextSearchPlugin({}), ]],
+  plugins: [[ 
+    nextSearchPlugin({
+      locales:{
+        '/':{
+		  fullText: true,
+          placeholder: 'search',
+          frontmatter: {
+            tag: 'tag',
+            category: 'category',
+          }
+        },
+        '/zh/':{
+          fullText: true,
+          placeholder: '搜索',
+          frontmatter: {
+            tag: '标签',
+            category: '分类',
+          }
+        }
+      }
+    }), ]],
 
   theme,
 });
