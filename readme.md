@@ -8,7 +8,7 @@
 
 <!-- Shields -->
 [Patreon]:https://img.shields.io/badge/-Support-F96854.svg?logo=patreon&style=for-the-badge&logoColor=white
-[Document]:https://img.shields.io/badge/-Document-blue.svg?logo=Wikipedia&style=for-the-badge&logoColor=black
+[Documento]:https://img.shields.io/badge/-Document-blue.svg?logo=Wikipedia&style=for-the-badge&logoColor=black
 [GD]:https://img.shields.io/badge/-Plugin-blue.svg?logo=github&style=for-the-badge&logoColor=black
 
 Icon here is clickable.
@@ -34,7 +34,7 @@ GriefDefenderDoc foi construído com [VuePress](https://v2.vuepress.vuejs.org/) 
 o arquivo de origem das páginas, então você pode fazer um PR para WIKI.
 
 - Você quer fazer uma grande mudança no Wiki
-1. Você deve instalar [NodeJS](https://nodejs.org/)(>=16) e [pnpm](https://pnpm.io/installation) corretamente.
+1. Você deve instalar [NodeJS](https://nodejs.org/pt-br/)(>=16) e [pnpm](https://pnpm.io/pt/installation) corretamente.
 2. Executar comando `pnpm install` na raiz do GriefDefenderDoc.
 3. Executar `pnpm docs:dev` então espere um momento
 4. Explore seu ambiente de desenvolvimento em http://localhost:8080/
