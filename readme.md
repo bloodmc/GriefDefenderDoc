@@ -2,9 +2,9 @@
 <div align="center">
 <img alt="GriefDefender" src="./docs/.vuepress/public/logo.png?raw=true" width="80" align=left hspace="5" vspace="5"/>
 <br>
-<h1>Document</h1>
+<h1>Documento</h1>
 
-**Here is the document of GD which is based on vuepress and hosted by github pages.**
+**Aqui está o documento do GD que é baseado em vuepress e hospedado por páginas do github.**
 
 <!-- Shields -->
 [Patreon]:https://img.shields.io/badge/-Support-F96854.svg?logo=patreon&style=for-the-badge&logoColor=white
