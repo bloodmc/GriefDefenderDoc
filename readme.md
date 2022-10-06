@@ -8,7 +8,7 @@
 
 <!-- Shields -->
 [Patreon]:https://img.shields.io/badge/-Support-F96854.svg?logo=patreon&style=for-the-badge&logoColor=white
-[Documento]:https://img.shields.io/badge/-Document-blue.svg?logo=Wikipedia&style=for-the-badge&logoColor=black
+[Document]:https://img.shields.io/badge/-Document-blue.svg?logo=Wikipedia&style=for-the-badge&logoColor=black
 [GD]:https://img.shields.io/badge/-Plugin-blue.svg?logo=github&style=for-the-badge&logoColor=black
 
 Icon here is clickable.
