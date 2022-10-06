@@ -21,21 +21,21 @@ Icon here is clickable.
 
 ## Table of Contents
 
-* [Introduction](#introduction)
-* [Contribution](#contribution)
+* [Introdução](#introduction)
+* [Contribuição](#contribution)
 
 ## Introduction
 
-GriefDefenderDoc was built with [VuePress](https://v2.vuepress.vuejs.org/) and [Theme Hope](https://vuepress-theme-hope.github.io/).
+GriefDefenderDoc foi construído com [VuePress](https://v2.vuepress.vuejs.org/) e [Theme Hope](https://vuepress-theme-hope.github.io/).
 
 ## Contribution
-- Just a small update
-<br>In the bottom of each pages there will be a button redirect you to 
-the source file of pages, then you can make a PR to WIKI.
+- Apenas uma pequena atualização
+<br>Na parte inferior de cada página haverá um botão redirecionando você para 
+o arquivo de origem das páginas, então você pode fazer um PR para WIKI.
 
-- You want to make a really big change to Wiki
-1. You should install [NodeJS](https://nodejs.org/)(>=16) and [pnpm](https://pnpm.io/installation) properly.
-2. Run command `pnpm install` in the root of GriefDefenderDoc.
-3. Run `pnpm docs:dev` then wait a moment
-4. Explore your dev enviroment in http://localhost:8080/
-5. Any changes to a Markdown file should be sync to your web.
+- Você quer fazer uma grande mudança no Wiki
+1. Você deve instalar [NodeJS](https://nodejs.org/)(>=16) e [pnpm](https://pnpm.io/installation) corretamente.
+2. Executar comando `pnpm install` na raiz do GriefDefenderDoc.
+3. Executar `pnpm docs:dev` então espere um momento
+4. Explore seu ambiente de desenvolvimento em http://localhost:8080/
+5. Quaisquer alterações em um arquivo Markdown devem ser sincronizadas com seu web.
