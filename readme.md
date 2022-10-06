@@ -29,8 +29,8 @@ Icon here is clickable.
 GriefDefenderDoc was built with [VuePress](https://v2.vuepress.vuejs.org/) and [Theme Hope](https://vuepress-theme-hope.github.io/).
 
 ## Contribution
-- Jist a small update
-In the bottom of each pages there will be a button redirect you to 
+- Just a small update
+<br>In the bottom of each pages there will be a button redirect you to 
 the source file of pages, then you can make a PR to WIKI.
 
 - You want to make a really big change to Wiki
