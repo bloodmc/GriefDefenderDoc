@@ -19,16 +19,16 @@ Icon here is clickable.
 ![Alt](https://repobeats.axiom.co/api/embed/c343fd07571f6727449099cd3e9374f715a11fcd.svg "Repobeats analytics image")
 </div>
 
-## Table of Contents
+## Sumário
 
 * [Introdução](#introduction)
 * [Contribuição](#contribution)
 
-## Introduction
+## Introdução
 
 GriefDefenderDoc foi construído com [VuePress](https://v2.vuepress.vuejs.org/) e [Theme Hope](https://vuepress-theme-hope.github.io/).
 
-## Contribution
+## Contribuição
 - Apenas uma pequena atualização
 <br>Na parte inferior de cada página haverá um botão redirecionando você para 
 o arquivo de origem das páginas, então você pode fazer um PR para WIKI.
