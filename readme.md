@@ -11,7 +11,7 @@
 [Document]:https://img.shields.io/badge/-Document-blue.svg?logo=Wikipedia&style=for-the-badge&logoColor=black
 [GD]:https://img.shields.io/badge/-Plugin-blue.svg?logo=github&style=for-the-badge&logoColor=black
 
-Icon here is clickable.
+O ícone aqui é clicável.
 <br>[![Patreon]](https://www.patreon.com/bloodmc)
 [![Document]](https://bloodmc.github.io/GriefDefenderDoc)
 [![GD]](https://github.com/bloodmc/griefdefender)
