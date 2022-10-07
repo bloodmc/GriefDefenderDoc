@@ -1,24 +1,24 @@
 ---
-title: Getting Started
+title: Começando
 tag: Info
 category: info
 icon: start
 ---
 
-## Getting Started
+## Começando
 
-### Requirements
+### Requisitos
 
-::: tip You need LuckPerms to run the plugin.
-Get latest [LuckPerms](https://luckperms.github.io/) for Bukkit & Sponge API 8/9.
-<br>Get [LuckPerms v5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) for Sponge API 7.
-<br>**NOTE: GD only supports LuckPerms v5.**
+::: dica Você precisa do LuckPerms para executar o plugin.
+últimas versão [LuckPerms](https://luckperms.github.io/) para Bukkit & Sponge API 8/9.
+<br>Obter [LuckPerms v5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) para Sponge API 7.
+<br>**OBS: GD suporta apenas LuckPerms v5.**
 :::
 
 ::: warning
-GD makes heavy use of LP's `default` group. Make sure your LP groups are inheriting the `default` group 
-or GD will not function properly. LP also strongly recommends to never disable this group.
-Check their [wiki](https://github.com/lucko/LuckPerms/wiki/Default-Groups#where-to-start) 
+GD faz uso pesado de LP's `default` grupo. Certifique-se de que seus grupos de LP estão herdando o `default` grupo
+ou GD não funcionará corretamente. LP também recomenda nunca desabilitar este grupo.
+Verifique na [wiki](https://github.com/lucko/LuckPerms/wiki/Default-Groups#where-to-start) 
 :::
 
 ### Installation
