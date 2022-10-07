@@ -12,7 +12,7 @@ export const en = sidebar({
           children: ["", "Configuration", "Permissions", "Commands"],
         },
 		{
-		  text: "Basics",
+		  text: "Básico",
 		  icon: "search",
 		  prefix: "/wiki/basic/",
 		  collapsable: true,
@@ -21,14 +21,14 @@ export const en = sidebar({
 		  "Tags", "Tax-System", "Trust-System", "Rent-System"],
 		},
 		{
-		  text: "Advanced Usage",
+		  text: "Uso avançado",
 		  icon: "grid",
 		  prefix: "/wiki/advanced/",
 		  collapsable: true,
 		  children: ["Contexts", "Debugging", "Flags", "Global-Config", "Optimizations"],
 		},
 		{
-		  text: "Migration",
+		  text: "Migração",
 		  icon: "import",
 		  prefix: "/wiki/migration/",
 		  collapsable: true,
