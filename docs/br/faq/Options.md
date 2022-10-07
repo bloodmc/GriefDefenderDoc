@@ -1,8 +1,8 @@
 ---
-title: Options
+title: Opções
 tag: faq
 category: faq
 icon: faq
 ---
 
-Work in progress...
+Trabalho em progresso...

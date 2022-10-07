@@ -5,124 +5,124 @@ category: faq
 icon: faq
 ---
 
-## 1. How do allow all users to create claims for free?**
+## 1. Como permitir que todos os usuários criem reivindicações gratuitamente?**
 
-Set `requires-claim-blocks` to `false` in `global.conf` within claim `creation-settings` section.  
+Defina `requires-claim-blocks` para `false` em `global.conf` dentro da seção `creation-settings`  
 
-## 2. How do I transfer a claim to another player for free?**
+## 2. Como transfiro uma reivindicação para outro jogador gratuitamente?**
 
-Create claim, use `/claiminfo` -> `Admin Settings` and toggle `Requires Claim Blocks` to false.  
-Then use `/claimtransfer <playername>` to transfer claim to player.  
+Criar reivindicação, use `/claiminfo` -> `Admin Settings` e alternar `Requer Blocos de Reivindicação` para falso.
+Então use `/claimtransfer <NomeDoJogador>` para transferir a reivindicação para o jogador.  
 
-## 3. How do I create a claim using WorldEdit?**  
+## 3. Como faço para criar uma reivindicação usando WorldEdit?**  
 
-First make sure your wand is set for cuboid mode as GD only supports cuboid. Use the wand to select your 2 points.  
-If you want to create a 2D claim from bedrock to sky then type `/claimwe`.  
+Primeiro, certifique-se de que sua seleção esteja configurada para o modo cubóide, pois o GD suporta apenas o cubóide. Use a seleção para selecionar seus 2 pontos.
+Se você deseja criar uma reivindicação 2D da rocha-mãe (bedrock) ao céu, digite `/claimwe`.  
 
-If you want to create a 3D claim that respect the height of your selection then type `/cuboid` then `/claimwe`.  
-Using `/cuboid` will put you into 3D claiming mode where your selection will always respect block height.  
+Se você deseja criar uma reivindicação 3D que respeite a altura de sua seleção, digite `/cuboid` então `/claimwe`.  
+Usando `/cuboid` colocará você no modo de reivindicação 3D, onde sua seleção sempre respeitará a altura que você deseja criar.
 
-## 4. How do I make use of WECUI visuals with GD claims?**
+## 4. Como faço para usar os visuais WECUI em reivindicações GD?**
 
-Make sure you use the investigation tool (minecraft:stick by default) or are in `/claimmode` then right-click an area.
+Certifique-se de usar a ferramenta de inspeção (minecraft:stick "Graveto" por padrão) ou esteja em `/claimmode` e clique com o botão direito do mouse em uma área.
   
-## 5. How do I allow everyone to access my spawn?** 
+## 5. Como faço para permitir que todos acessem meu spawn?** 
 
-Give them accessor trust by using `/at public` where public represents all players.  
-See https://github.com/bloodmc/GriefDefender/wiki/Trust-System.  
+Dê a eles trust de acesso usando `/at public` onde "public" representa todos os jogadores.
+Veja https://github.com/bloodmc/GriefDefender/wiki/Trust-System.  
 
-If you need more detailed protection then use the flag system.  
-See https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI
+Se você precisar de proteção mais detalhada, use o sistema de sinalização.
+Veja https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI
 
-## 6. How do I select a specific claim to work in? (change settings, etc..)**
+## 6. Como seleciono uma reivindicação específica para trabalhar? (alterar configurações, etc.)**
 
-Most GD commands will use the claim you are standing in. Simply stand in the claim and make your change.  
-If the claim is far, use `/claimlist` and TP to it.  
+A maioria dos comandos GD usará a reivindicação em que você está. Simplesmente permaneça na reivindicação e faça sua alteração.
+Se a reivindicação estiver longe, use `/claimlist` e teletransporte para ela.
 
-## 7. How do I test flags as a non-trusted user in a claim?**
+## 7. Como faço para testar bandeiras como um jogador não trust em uma reivindicação?**
 
-Use `/cfdebug` to put yourself into claim flag debug mode then perform any action.  
-This will internally set you as a non-trusted player for all claims. When done, simply run `/cfdebug` command again.  
+Use `/cfdebug` para se colocar no modo de depuração do bandeira de reivindicação e, em seguida, execute qualquer ação.
+Isso o definirá internamente como um jogador não trust para todas as reivindicações. Quando terminar, basta executar o comando `/cfdebug` novamente.  
 
-## 8. Is there a way to allow a permission within all claims but deny it in the wild?**
+## 8. Existe uma maneira de permitir uma permissão em todas as reivindicações, porém negá-la na região selvagem?**
 
-  - ### To deny a specific player permission in wilderness
+  - ### Para negar a permissão de um jogador específico em região selvagem
 
-1. Assign permission to all players in LuckPerms.
-2. Stand in wilderness claim.
-3. Execute command `/cpp <playername> <permission> false`
+1. Atribua permissão a todos os jogadores no LuckPerms.
+2. Fique na reivindicação de região selvagem.
+3. Execute o comando `/cpp <playername> <permission> false`
 
   - ### To deny a specific group permission in wilderness
 
-1. Assign permission to all players in LuckPerms.
-2. Stand in wilderness claim.
-3. Execute command `/cpg <group> <permission> false`
+1. Atribua permissão a todos os jogadores no LuckPerms.
+2. Fique na reivindicação de região selvagem.
+3. Execute o comando `/cpg <group> <permission> false`
 
-Note: The same steps can be applied to any claim.
+Nota: As mesmas etapas podem ser aplicadas a qualquer reivindicação.
 
-## 9. How do I stop a player from executing a command in a claim like `/sethome` ?**  
+## 9. Como faço para impedir que um jogador execute um comando por exemplo `/sethome` em uma reivindicação?**  
 
-  - ### Deny the permission on a group in claim.  
+  - ### Negue a permissão em um grupo em reivindicação.
 
-1. Stand in claim where you want to deny the permission.  
-2. Execute command `/cpg <group> <permission> false`  
-ex. To deny the permission `essentials.sethome` for group `default`  
+1. Fique na reivindicação onde você deseja negar a permissão.
+2. Execute o comando `/cpg <Grupo> <Permissão> false`  
+ex. Para negar a permissão `essentials.sethome` para o grupo `default`  
 `/cpg default essentials.sethome false`  
 
   - ### Deny the permission on a single player in claim.  
 
-1. Stand in claim where you want to deny the permission.  
-2. Execute command `/cpp <playername> <permission> false`  
-ex. To deny the permission `essentials.sethome` for player `Mike`  
+1. Fique na reivindicação onde você deseja negar a permissão.
+2. Execute o comando `/cpp <NomeDoJogador> <Permissão> false`  
+ex. Para negar a permissão `essentials.sethome` para o jogador `Mike`  
 `/cpp Mike essentials.sethome false`  
 
-  - ### Deny the command-execute flag on a group in claim.  
+  - ### Negue command-execute (executar um comando) para certo grupo em uma reivindicação
 
-1. Stand in claim where you want to deny the `command-execute` flag.  
-2. Execute command `/cfg <group> command-execute <pluginid:command[arg]> false`  
-ex. To deny the essentials command `/sethome` for group `default`  
+1. Fique na reivindicação onde você deseja negar a bandeira `command-execute`.  
+2. Execute o comando `/cfg <Grupo> command-execute <pluginid:command[arg]> false`  
+ex. Para negar o comando essentials `/sethome` para o grupo `default`  
 `/cfg default command-execute essentials:sethome false`  
 
-  - ### Deny the command-execute flag on a single player in claim.
+  - ### Negue a bandeira command-execute (executar um comando) para um único jogador na reivndicação
 
-1. Stand in claim where you want to deny the `command-execute` flag.  
-2. Execute command `/cfp <playername> command-execute <pluginid:command[arg]> false`  
-ex. To deny the essentials command `/sethome` for player `Mike`  
+1. Fique na reivindicação onde você deseja negar a bandeira `command-execute`  
+2. Execute o comando `/cfp <NomeDoJogador> command-execute <pluginid:command[arg]> false`  
+ex. Para negar o comando essentials `/sethome` para o jogador `Mike`  
 `/cfp Mike command-execute essentials:sethome false`  
 
-Note: Use `/gddebug record claim` to get the proper info for command.  
-See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info.
+Nota: Usar `/gddebug record claim` para obter as informações adequadas para o comando.
+Veja https://github.com/bloodmc/GriefDefender/wiki/Debugging para mais informações.
 
-## 10. How do I allow my admins to bypass protection ?**  
+## 10. Como permitir que meus administradores ignorem a proteção da reivindicação ?**  
 
-Grant them access to use the `/ignoreclaims` command in order to toggle GriefDefender god-mode. 
+Conceda a eles acesso para usar o `/ignoreclaims` o comando alterna entre respeitar e ignorar a proteção do GriefDefender.
 
-## 11. How do I allow essentials `/sethome` in only claims users are trusted in?**
+## 11. Como permitir itens do EssentialsX como o `/sethome` em apenas reivindicações em que os usuários tenham trust?**
 
-Run the command `/cf command-execute essentials:sethome false default=user`
+Execute o comando `/cf command-execute essentials:sethome false default=user`
 
-## 12. How do I allow players to fly in their own claims?**
+## 12. Como permito que os jogadores voem (fly) em suas próprias reivindicações?**
 
-1. Deny flight globally in all claims by running command `/claimoption player-deny-flight true default=global`
-2. Give players permission to use the `fly` command.
-3. Assign the permission `griefdefender.admin.option.perk.fly.owner` to player or group.
+1. Negue o voo (fly) globalmente em todas as reivindicações executando o comando `/claimoption player-deny-flight true default=global`
+2. Dê permissão aos jogadores para usar o commando `fly`
+3. Atribuir a permissão `griefdefender.admin.option.perk.fly.owner` para o jogador ou grupo.
 
-## 13. How do I give claim owners the ability to allow other players to fly in their claims?**
+## 13. Como dou aos donos de reivindicações a capacidade de permitir que outros jogadores voem em suas reivindicações?**
 
-1. Admins need to assign all players the following perk permissions
+1. Os administradores precisam atribuir a todos os jogadores as seguintes permissões de privilégio
 ```
 griefdefender.admin.option.perk.fly.accessor
 griefdefender.admin.option.perk.fly.builder
 griefdefender.admin.option.perk.fly.container
 griefdefender.admin.option.perk.fly.manager
 ```
-Note: Don't forget to run `/gdreload` after changing permissions
+Nota: Não se esqueça de executar `/gdreload` depois de alterar as permissões
 
-These permissions allow the trusted player to fly in claims they are trusted to.
+Essas permissões permitem que o jogador com confiável voe em reivindicações nas quais ele tenha trust.
 
-2. Have the claim owners trust players they wish to fly in their claims.
+2. Faça com que os proprietários das reivindicações confiem nos jogadores que desejam enviar em suas reivindicações.
 
-## 14. Is it possible to copy flags from and admin claim to other admin claim?**
+## 14. É possível copiar bandeiras de uma reivindicação de administrador para outra reivindicação de administrador?**
 
 1. From the `/gd` menu navigate to `CLAIM` then `CLAIMGROUP`.
 2. Click `ADMIN` tab.

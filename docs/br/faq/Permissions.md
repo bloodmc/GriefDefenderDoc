@@ -1,13 +1,13 @@
 ---
-title: Permissions
+title: Permissões
 tag: faq
 category: faq
 icon: faq
 ---
 
-## 1. How do I grant a specific group trust to ALL claims globally?
+## 1. Como eu concedo trust para um grupo específico para TODAS as reivindicações globalmente?
 
-Simply apply one of the following trust permissions to luckperms group
+Basta aplicar uma das seguintes permissões de trust para o grupo luckyperms
 
 **ACCESSOR** - `griefdefender.trust.1.2.3.4`  
 **RESIDENT** - `griefdefender.trust.resident`  

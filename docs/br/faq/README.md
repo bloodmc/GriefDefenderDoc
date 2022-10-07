@@ -1,16 +1,16 @@
 ---
-title: FAQ
+title: Perguntas frequentes
 tag: faq
 category: faq
 icon: faq
 ---
 
-The following are FAQ pages for their respective topics
+A seguir estão as páginas de perguntas frequentes com seus respectivos tópicos
 
-[Claim Management](./Claim-Management)  
+[Gerenciamento de Reivindicação](./Claim-Management)  
 
-[Flag Definitions](./Flag-Definitions)  
+[Definições de bandeiras](./Flag-Definitions)  
 
-[Options](./Options)  
+[Opções](./Options)  
 
-[Permissions](./Permissions)
+[Permissões](./Permissions)
