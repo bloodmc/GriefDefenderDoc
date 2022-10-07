@@ -21,46 +21,46 @@ ou GD não funcionará corretamente. LP também recomenda nunca desabilitar este
 Verifique na [wiki](https://github.com/lucko/LuckPerms/wiki/Default-Groups#where-to-start) 
 :::
 
-### Installation
+### Instalação
 
 ::: tabs
 
 @tab:active Bukkit
-:warning: If using `spark`, update to [latest version](https://ci.lucko.me/job/spark/) :warning:   
-:warning: Set `spawn-protection` to `0` in `server.properties` to allow GD to protect spawn. 
-If this is not set properly, the server will block actions before GD has a chance to see it. :warning:
-1. Install latest Luckperms.
-2. Get latest version on [Spigot](https://www.spigotmc.org/resources/68900/).
-3. Drop the jar into `./plugins`
-4. Now start your server once to generate all configuration files, 
-to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`.
-5. Next shut down your server and start configuring your server.
+:warning: Se estiver usando `spark`, Atualizar para a [última versão](https://ci.lucko.me/job/spark/) :warning:   
+:warning: Defina `spawn-protection` para `0` dentro `server.properties` para permitir que GD proteja o spawn. 
+Se isso não for definido corretamente, o servidor bloqueará as ações antes que o GD tenha a chance de vê-lo. :warning:
+1. Instale o Luckperms mais recente.
+2. Obtenha a versão mais recente em [Spigot](https://www.spigotmc.org/resources/68900/).
+3. Coloque o arquivo jar em `./plugins`
+4. Agora inicie seu servidor uma vez para gerar todos os arquivos de configuração,
+para verificar se o GriefDefender foi carregado com sucesso você pode verificar se o console mostrou `[GriefDefender] Loaded successfully`.
+5. Em seguida, desligue o servidor e comece a configurar.
 
 @tab Sponge
 
-:warning: LuckPerms do not support API7 since v5.3.98, Use [this version](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) 
-if you are using API7 to open a server.
-1. Get porper version of GD for Sponge API 7/8 from Discord.
-2. Drop the jar into `mods` or `mods/plugins`.
-3. Now start your server once to generate all configuration files, 
-to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`.
-4. Next shut down your server and start configuring your server.
+:warning: LuckPerms não suporta API7 desde a v5.3.98, Use [Esta versão](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) 
+se você estiver usando API7 para abrir um servidor.
+1. Obtenha a versão adequada do GD para o Sponge API 7/8 no Discord.
+2. Coloque o arquivo jar em `mods` ou `mods/plugins`.
+3. Agora inicie seu servidor uma vez para gerar todos os arquivos de configuração,
+para verificar se o GriefDefender foi carregado com sucesso você pode verificar se o console mostrou `[GriefDefender] Loaded successfully`.
+4. Em seguida, desligue o servidor e comece a configurar.
 
 @tab Forge
 
-Coming soon!
+Em breve!
 
 @tab Fabric
 
-Coming soon!
+Em breve!
 
 :::
 
-### Configuration
+### Configuração
 
-> **NOTE: There are also a few options that have to be set using your permission system, you can read more about those on the [Options wiki page](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options).**
+> **NOTA: Existem também algumas opções que devem ser definidas usando seu sistema de permissão, você pode ler mais sobre elas no [Opções na página da wiki](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options).**
 
-All configuration files can be found in a folder called `GriefDefender` in your servers config or plugins directory.  
+Todos os arquivos de configuração podem ser encontrados em uma pasta chamada`GriefDefender` na configuração do seu servidor ou na pasta de plugins.  
 
 ```
 plugins/
@@ -75,7 +75,7 @@ plugins/
     └── storage.conf
 ```
 
-You can change a number of settings in the [config file](https://github.com/bloodmc/GriefDefender/wiki/Global-Config). The file has detailed annotations that should make it clear what each option does. There are three types of configs:
+Você pode alterar várias configurações no [arquivo de configuração](https://github.com/bloodmc/GriefDefender/wiki/Global-Config). O arquivo tem anotações detalhadas que devem deixar claro o que cada opção faz. Existem três tipos de configurações:
 
 * Global
 * Dimension
