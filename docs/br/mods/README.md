@@ -1,2 +1,2 @@
-::: info Availlable Mods
-- Pixelmon ==> [Details](/Pixelmon) | [Presets](/Presets-Pixelmon)
+::: info Mods disponíveis
+- Pixelmon ==> [Detalhes](/Pixelmon) | [Presets](/Presets-Pixelmon)

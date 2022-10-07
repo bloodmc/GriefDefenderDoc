@@ -1,1 +1,1 @@
-Placeholder page for Pixelmon Flag Presets
+Página de Placeholder para predefinições de sinalizador Pixelmon
