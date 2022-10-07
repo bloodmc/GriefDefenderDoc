@@ -1,5 +1,5 @@
 ---
-title: Contexts
+title: Contextos
 tag: Info
 category: info
 icon: image-text
@@ -7,62 +7,62 @@ icon: image-text
 
 # Contexts
 
-Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context
+Os contextos são uma parte fundamental de como o GriefDefender é capaz de aplicar proteção às reivindicações. Para entender como funciona, você deve primeiro entender o que é um Contexto. Veja https://luckperms.net/wiki/Context
 
-Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.
+Agora que você tem uma compreensão básica do que é um contexto e como eles funcionam com permissões, abaixo está uma lista de contextos que o GD usa com suas bandeiras e comando de opção.
 
-Context                                          |     Value     | Description | 
+Contexto                                          |     Valor     | Descrição | 
 -------------------------------------------------|---------------|--------------|
-```gd_claim```            |   ```<claim_uuid>```  | Applies flag to claim with specified uuid.
-```gd_claim_default```    |   ```admin```<br>```basic```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Applies flag as a default to all claims of type specified. <br />Note: Use `global` as value to apply to all types.<br/>Note: Use `user` as value to apply to all types EXCEPT wilderness.
-```gd_claim_override```   |   ```admin```<br>```basic```<br>```claim```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Applies flag as an override to all claims of type specified. <br />Note: Use `global` as value to apply to all types.<br/>Note: Use `user` as value to apply to all types EXCEPT wilderness.
-```source```   |   `<source_id>`  | Applies flag to a specific source. <br />Example: `minecraft:creeper`
-```target```   |   `<target_id>`  | Applies flag to a specific target. <br />Example: `minecraft:player` <br />Note: Target is **ALWAYS** required after the flag in /cf command usage, but more than one target can be specified with use of context.
-```state```   |   `<state>`  | Applies flag to a specific block state. <br />Example: `powered:true` <br /> See https://minecraft.gamepedia.com/Block_states for a list of all vanilla block states.
-```used_item``` |   `<item_id>`  | Applies flag to a specific used item. <br />Example: `minecraft:diamond_sword`
-```boots```   |   `<item_id>`   | Applies flag to specific worn boots. <br />Example: `minecraft:diamond_boots`
-```chestplate```   |   `<item_id>`   | Applies flag to a specific worn chestplate. <br />Example: `minecraft:diamond_chestplate`
-```helmet```   |   `<item_id>`   | Applies flag to a specific worn helmet. <br />Example: `minecraft:diamond_helmet
-```leggings```   |   `<item_id>`   | Applies flag to specific worn leggings. <br />Example: `minecraft:diamond_leggings`
-```enchant```   |   `<enchant_id>`   | Applies flag to specific enchantment on item. <br />Example: `minecraft:flame`
-```enchant_data```   |   `<data_id>`   | Applies flag to specific enchantment data on item. <br />Example: `lvl:3`
-```mainhand_enchant```   |   `<enchant_id>`   | Applies flag to specific enchantment on item in main hand. <br />Example: `minecraft:efficiency`
-```offhand_enchant```   |   `<enchant_id>`   | Applies flag to specific enchantment on item in off-hand. <br />Example: `minecraft:unbreaking`
-```mainhand_enchant_data```   |   `<data_id>`   | Applies flag to specific enchantment data on item in main hand. <br />Example: `lvl:1`
-```offhand_enchant_data```   |   `<data_id>`   | Applies flag to specific enchantment data on item in off-hand. <br />Example: `lvl:2`
-```potion_effect```   |   `<potion_effect_id>`   | Applies flag to specific potion effect. <br />Example: `minecraft:speed`
-```run_as```   |   ```console```<br>```player```   | Run command as console or player. <br />Note: This context only applies to `griefdefender.player-command-enter` and `griefdefender.player-command-exit` options
-```run_for```   |   ```member```<br>```owner```<br>```public```   | Run command for only trusted members of claim, only for owner of claim, or only for everyone except the claim owner. More than one can be used at the same time for desired effected users. <br />Note: This context only applies to `griefdefender.player-command-enter` and `griefdefender.player-command-exit` options
-```server```   |   `<server_name>`  | Applies flag to a specific server.<br />Note: This uses the server name specified in permissions plugin. If no server context is specified or server name is not set, it defaults to `global`.
-```world```   |   `<world_name>`  | Applies flag to a specific world.
+```gd_claim```            |   ```<claim_uuid>```  | Aplica bandeira para reivindicação com uuid especificado.
+```gd_claim_default```    |   ```admin```<br>```basic```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Aplica a bandeira como padrão a todas as reivindicações do tipo especificado. <br />Nota: Use `global` como valor para aplicar a todos os tipos.<br/>Nota: Use `user` como valor para aplicar a todos os tipos EXCETO região selvagem.
+```gd_claim_override```   |   ```admin```<br>```basic```<br>```claim```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Aplica a bandeira como uma substituição a todas as reivindicações do tipo especificado. <br />Nota: Use `global` como valor para aplicar a todos os tipos.<br/>Nota: Use `user` como valor para aplicar a todos os tipos EXCETO região selvagem.
+```source```   |   `<source_id>`  | Aplica bandeira a uma fonte específica. <br />Exemplo: `minecraft:creeper`
+```target```   |   `<target_id>`  | Aplica bandeira a um destino específico. <br />Exemplo: `minecraft:player` <br />Nota: O destino é **SEMPRE** necessário após a bandeira no uso do comando /cf, mas mais de um destino pode ser especificado com o uso do contexto.
+```state```   |   `<state>`  | Aplica bandeira a um estado de bloco específico. <br />Exemplo: `powered:true` <br /> Veja https://minecraft.gamepedia.com/Block_states para uma lista de todos os estados de bloco vanilla.
+```used_item``` |   `<item_id>`  | Aplica a bandeira a um item usado específico. <br />Exemplo: `minecraft:diamond_sword`
+```boots```   |   `<item_id>`   | Aplica a bandeira a botas desgastadas específicas. <br />Exemplo: `minecraft:diamond_boots`
+```chestplate```   |   `<item_id>`   | Aplica a bandeira a um peitoral desgastado específico. <br />Exemplo: `minecraft:diamond_chestplate`
+```helmet```   |   `<item_id>`   | Aplica a bandeira a um capacete específico usado. <br />Exemplo: `minecraft:diamond_helmet
+```leggings```   |   `<item_id>`   | Aplica a bandeira a leggings desgastadas específicas. <br />Exemplo: `minecraft:diamond_leggings`
+```enchant```   |   `<enchant_id>`   |Aplica bandeira para encantamento específico no item. <br />Exemplo: `minecraft:flame`
+```enchant_data```   |   `<data_id>`   | Aplica bandeira a dados de encantamento específicos no item. <br />Exemplo: `lvl:3`
+```mainhand_enchant```   |   `<enchant_id>`   |Aplica a bandeira a um encantamento específico no item na mão principal. <br />Exemplo: `minecraft:efficiency`
+```offhand_enchant```   |   `<enchant_id>`   | Aplica a bandeira a um encantamento específico no item na mão secundária. <br />Exemplo: `minecraft:unbreaking`
+```mainhand_enchant_data```   |   `<data_id>`   | Aplica bandeira a dados de encantamento específicos no item na mão principal. <br />Exemplo: `lvl:1`
+```offhand_enchant_data```   |   `<data_id>`   | Aplica bandeira a dados de encantamento específicos no item na mão secundária. <br />Exemplo: `lvl:2`
+```potion_effect```   |   `<potion_effect_id>`   | Aplica a bandeira a um efeito de poção específico. <br />Exemplo: `minecraft:speed`
+```run_as```   |   ```console```<br>```player```   | Execute o comando como console ou player. <br />Nota: Este contexto só se aplica a `griefdefender.player-command-enter` e `griefdefender.player-command-exit` opções
+```run_for```   |   ```member```<br>```owner```<br>```public```   | Execute o comando apenas para membros com trust na reivindicação, apenas para o proprietário da reivindicação ou apenas para todos, exceto o proprietário da reivindicação. Mais de um pode ser usado ao mesmo tempo para usuários efetuados desejados. <br />Nota: Este contexto só se aplica às opções `griefdefender.player-command-enter` e `griefdefender.player-command-exit`
+```server```   |   `<server_name>`  | Aplica bandeira a um servidor específico.<br />Nota: Isso usa o nome do servidor especificado no plugin de permissões. Se nenhum contexto de servidor for especificado ou o nome do servidor não estiver definido, o padrão será `global`.
+```world```   |   `<world_name>`  | Aplica bandeira a um mundo específico.
 
-Note: Every flag or option permission will ALWAYS contain one of the following core contexts `gd_claim`, `gd_claim_default`, or `gd_claim_override`.  
-Note: When using contexts with commands `/cf`, `/claimoption`, or `flags.conf` you can use the following aliases for context keys  
+Nota: Cada permissão de bandeira ou opção SEMPRE conterá um dos seguintes contextos principais `gd_claim`, `gd_claim_default` ou `gd_claim_override`.
+Nota: Ao usar contextos com comandos `/cf`, `/claimoption` ou `flags.conf`, você pode usar os seguintes aliases para chaves de contexto
 `gd_claim_default` - `default`  
 `gd_claim_override` - `override`  
-So as an example  
+Então como exemplo
 `/cf block-break grass false gd_claim_default=global`  
-is the same as   
+é o mesmo que 
 `/cf block-break grass false default=global`  
 
-However, in LuckPerms it will ALWAYS show up as the actual context key which in this case would be `gd_claim_default`
+No entanto, em LuckPerms, SEMPRE aparecerá como a chave de contexto real que, neste caso, seria `gd_claim_default`
 
 
 
-### How contexts are applied
+### Como os contextos são aplicados
 
 
-Note: A uuid stands for [Universal Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier) which GD assigns to each claim created in the world.  
+Nota: Um uuid significa [Identificador Único Universal](https://pt.wikipedia.org/wiki/Identificador_%C3%BAnico_universal) que o GD atribui a cada reivindicação criada no mundo. 
 
 
 * **gd_claim**  
 
-:warning: This context does NOT affect owners of claims when used with flags but does affect owners when used with options :warning: 
+:warning: Este contexto NÃO afeta os proprietários de reivindicações quando usado com bandeiras, mas afeta os proprietários quando usado com opções :warning: 
 
-The context `gd_claim=<claim_uuid>` is used to apply a flag or option to a specific claim that matches the uuid specified.  
-Note: If you ONLY want to apply a flag or option to the claim you are standing in, GD will automatically apply this context as long as you do not provide `gd_claim`, `gd_claim_default`, or `gd_claim_override` in the context section of command.  
+O contexto `gd_claim=<claim_uuid>` é usado para aplicar uma bandeira ou opção a uma reivindicação específica que corresponda ao uuid especificado.
+Observação: se você APENAS quiser aplicar uma bandeira ou opção à reivindicação em que está, o GD aplicará automaticamente esse contexto, desde que você não forneça `gd_claim`, `gd_claim_default` ou `gd_claim_override` na seção de contexto do comando. 
 
-Let's go over an example of how this would look in LuckPerms
+Vamos ver um exemplo de como isso ficaria no LuckPerms
 
 ```
     {
@@ -75,25 +75,25 @@ Let's go over an example of how this would look in LuckPerms
     },
 ```
 
-This permission is denying the flag `entity-spawn` in claim with uuid `9594ca69-47d6-422a-8236-7c697d832ac9` targeting only animals.
+Esta permissão está negando a bandeira `entity-spawn` na reivindicação com uuid `9594ca69-47d6-422a-8236-7c697d832ac9` visando apenas animais.
 
 
 * **gd_claim_default**  
 
-:warning: This context does NOT affect owners of claims when used with flags but does affect owners when used with options :warning: 
+:warning: Este contexto NÃO afeta os proprietários de reivindicações quando usado com uma bandeira, mas afeta os proprietários quando usado com opções :warning: 
 
-It is used to apply a flag or option to one or more claim types or globally and acts as a default permission meaning it is applied to users until a higher context is used.  
-See https://github.com/bloodmc/GriefDefender/wiki/Contexts#context-core-priority  
+Ele é usado para aplicar uma bandeira ou opção a um ou mais tipos de reivindicação ou globalmente e atua como uma permissão padrão, o que significa que é aplicado aos usuários até que um contexto superior seja usado.
+Veja https://github.com/bloodmc/GriefDefender/wiki/Contexts#context-core-priority
 
-Let's break each combination down  
+Vamos quebrar cada combinação
 
-`gd_claim_default=admin` - A permission containing this context will only affect admin claims and act as a default permission.  
-`gd_claim_default=basic` - A permission containing this context will only affect basic claims and act as a default permission.  
-`gd_claim_default=subdivision` - A permission containing this context will only affect subdivision claims and act as a default permission.  
-`gd_claim_default=global` - A permission containing this context will affect all claims, including wilderness, and act as a default permission.  
-`gd_claim_default=user` - A permission containing this context will affect all claims except wilderness and act as a default permission.  
+`gd_claim_default=admin` - Uma permissão contendo esse contexto afetará apenas as reivindicações administrativas e atuará como uma permissão padrão. 
+`gd_claim_default=basic` - Uma permissão contendo esse contexto afetará apenas as reivindicações básicas e funcionará como uma permissão padrão. 
+`gd_claim_default=subdivision` - Uma permissão contendo esse contexto afetará apenas as subdivisões e atuará como uma permissão padrão.  
+`gd_claim_default=global` - Uma permissão que contenha esse contexto afetará todas as reivindicações, incluindo região selvagem, e funcionará como uma permissão padrão. 
+`gd_claim_default=user` - Uma permissão contendo esse contexto afetará todas as reivindicações, exceto a região selvagem, e funcionará como uma permissão padrão. 
 
-Taking our previous LuckPerms example, here is how it might show up as a permission
+Tomando nosso exemplo anterior de LuckPerms, aqui está como ele pode aparecer como uma permissão
 
 ```
     {
@@ -106,25 +106,25 @@ Taking our previous LuckPerms example, here is how it might show up as a permiss
     },
 ```
 
-This permission is denying the flag `entity-spawn` as a default on all admin claims and targeting only animals.
+Essa permissão está negando a bandeira `entity-spawn` como padrão em todas as reivindicações administrativas e visando apenas animais.
 
 
 * **gd_claim_override**  
 
-:warning: This context DOES affect owners of claims :warning: 
+:warning: Este contexto afeta os proprietários de reivindicações :warning: 
 
-The most important thing about this context is it is the only context that will affect claim owners.  
-It is used to apply a flag or option to a single claim, one or more claim types, or globally. It essentially acts as a ban.  
+A coisa mais importante sobre esse contexto é que ele é o único contexto que afetará os proprietários de reivindicações.
+É usado para aplicar uma bandeira ou opção a uma única reivindicação, um ou mais tipos de reivindicações ou globalmente. Funciona essencialmente como uma proibição.
 
-Let's break each combination down  
+Vamos quebrar cada combinação
 
-`gd_claim_override=admin` - A permission containing this context will only affect admin claims.  
-`gd_claim_override=basic` - A permission containing this context will only affect basic claims.  
-`gd_claim_override=subdivision` - A permission containing this context will only affect subdivision claims.  
-`gd_claim_override=global` - A permission containing this context will affect all claims including wilderness.  
-`gd_claim_override=user` - A permission containing this context will affect all claims except wilderness.  
+`gd_claim_override=admin` - Uma permissão que contenha esse contexto afetará apenas as reivindicações administrativas.
+`gd_claim_override=basic` - Uma permissão contendo esse contexto afetará apenas as reivindicações básicas.
+`gd_claim_override=subdivision` - Uma permissão contendo esse contexto afetará apenas as subdivisões.
+`gd_claim_override=global` - Uma permissão contendo este contexto afetará todas as reivindicações, incluindo região selvagem.
+`gd_claim_override=user` - Uma permissão contendo este contexto afetará todas as reivindicações, exceto a região selvagem.
 
-Let's go over an example of how this would look in LuckPerms
+Vamos ver um exemplo de como isso ficaria no LuckPerms
 
 ```
     {
@@ -136,28 +136,28 @@ Let's go over an example of how this would look in LuckPerms
       }
     },
 ```
-This permission is banning the ability to spawn animals in ALL basic claims. It will also affect claim owners.  
+Esta permissão está banindo a capacidade de gerar animais em TODAS as reivindicações básicas. Isso também afetará os proprietários de reivindicações.
 
-### Context core priority
+### Prioridade principal do contexto
 
-One of the following contexts are required in every flag or option permission set in LuckPerms 
+Um dos contextos a seguir é necessário em cada bandeira ou opção de permissão definida em LuckPerms
  `gd_claim_default`, `gd_claim`, `gd_claim_override`
 
-The order of context priority in permissions is as follows starting with the lowest
+A ordem de prioridade de contexto nas permissões é a seguinte, começando com o menor
 
-* `gd_claim_default` - Lowest priority. Always used with the `griefdefender_definition` and `griefdefender_default` groups to apply as a default to all players.  
-* `gd_claim` - Higher than default. If using commands or ADVANCED GUI, these permissions will always end up in `griefdefender_claim` group. If using the flag definition GUI w/ PRESET, permissions will always end up in `griefdefender_definition`.  
-Note: When using commands `/cfp`, `/cfg`, `/cop`, `/cog` which will apply a flag or permission to user or group, the `gd_claim` context will always be used.  
-* `gd_claim_override` - The highest priority context GD uses. GD will always do a permission lookup for any permission with this context. If found, this will be the end result. For multiple, the same values as `gd_claim_default` can be used.  
+* `gd_claim_default` - Prioridade mais baixa. Sempre usado com o `griefdefender_definition` e `griefdefender_default` grupos para aplicar como padrão a todos os jogadores.
+* `gd_claim` - Superior ao padrão. Se estiver usando comandos ou GUI ADVANCED, essas permissões sempre terminarão no grupo `griefdefender_claim`. Se estiver usando a GUI de definição de bandeira com PRESET, as permissões sempre terminarão em `griefdefender_definition`.  
+Nota: Ao usar comandos `/cfp`, `/cfg`, `/cop`, `/cog` que aplicará uma bandeira ou permissão ao usuário ou grupo, o contexto `gd_claim` sempre será usado.
+* `gd_claim_override` - O contexto de maior prioridade que o GD usa. O GD sempre fará uma pesquisa de permissão para qualquer permissão com este contexto. Se encontrado, este será o resultado final. Para vários, os mesmos valores que `gd_claim_default` podem ser usados.
 
 
-## FAQ
+## Perguntas frequentes
 
-1. Why do some contexts not affect owners when used with flags?  
-A. The reason is simple, it gives claim owners the ability to manage their own claims from non-trusted players. So an owner can deny specific actions but still have themselves not be affected.  
-2. Do flags affect trusted users?  
-A. Trusted users may not be affected depending on the level of trust required for the action. For example, if a player attempts to place a block in a claim, the `block-place` flag would be checked with `builder`. GD would then verify if a flag is specifically denying this action against the user and if not it would proceed to check if the user has `builder` trust or higher and if so stop there and allow the action.  
-Note: Overrides will always affect owners and trusted users.  
-3. How would I know what contexts, trust, permissions are being checked when I perform an action?  
-If you are an administrator, you can find information for each action by performing a `/gddebug record claim` command inside the claim you are in.  
-See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info  
+1. Por que alguns contextos não afetam os proprietários quando usados ​​com bandeira?
+R. A razão é simples, dá aos proprietários de reivindicações a capacidade de gerenciar suas próprias reivindicações de jogadores sem trust. Assim, um proprietário pode negar ações específicas, mas ainda assim não ser afetado.
+2. As bandeira afetam jogadores com trust?
+R. Os jogadores com trust ​​podem não ser afetados dependendo do nível de trust necessário para a ação. Por exemplo, se um jogador tentar colocar um bloco em uma reivindicação, a bandeira `block-place` será verificado com `builder`. O GD então verificaria se uma bandeira está negando especificamente esta ação contra o jogador e, caso contrário, prosseguiria para verificar se o usuário tem trust de 'builder' ou superior e, em caso afirmativo, pararia por aí e permitiria a ação.
+Observação: as substituições sempre afetarão proprietários e jogadores com trust.
+3. Como posso saber quais contextos, trust, permissões estão sendo verificados quando executo uma ação?
+Se você for um administrador, poderá encontrar informações para cada ação executando um comando `/gddebug record Claim` dentro da reivindicação em que está.
+Veja https://github.com/bloodmc/GriefDefender/wiki/Debugging para mais informações
