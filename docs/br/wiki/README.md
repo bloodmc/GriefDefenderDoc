@@ -9,7 +9,7 @@ icon: start
 
 ### Requisitos
 
-::: dica Você precisa do LuckPerms para executar o plugin.
+::: tip dica Você precisa do LuckPerms para executar o plugin.
 últimas versão [LuckPerms](https://luckperms.github.io/) para Bukkit & Sponge API 8/9.
 <br>Obter [LuckPerms v5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) para Sponge API 7.
 <br>**OBS: GD suporta apenas LuckPerms v5.**
@@ -75,7 +75,7 @@ plugins/
     └── storage.conf
 ```
 
-Você pode alterar várias configurações no [arquivo de configuração](https://github.com/bloodmc/GriefDefender/wiki/Global-Config). O arquivo tem anotações detalhadas que devem deixar claro o que cada opção faz. Existem três tipos de configurações:
+Você pode alterar várias configurações no [arquivo de configuração](https://github.com/bloodmc/GriefDefender/wiki/Global-Config). O arquivo tem anotações detalhadas que deixam claro o que cada opção faz. Existem três tipos de configurações:
 
 * Global
 * Dimension
@@ -85,26 +85,26 @@ Global configuration files can affect all of a server’s worlds and dimensions.
 Dimension configuration files are used to affect a certain dimension or group of worlds. These types of configs will override the global config files. World configuration files are used to modify individual worlds only.   
 World configs override dimension and global configs.
 
-Claim data can be found inside the folder of the dimension the claim is in, e.g. all overworld world claims are saved inside 
+Os dados da reivindicação podem ser encontrados dentro da pasta da dimensão em que a reivindicação está, por exemplo, todas as reivindicações do mundo superior são salvas dentro
 
-`config/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Sponge  
-`plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Bukkit  
+`config/GriefDefender/worlds/minecraft/overworld/world/ClaimData` para Sponge  
+`plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData` para Bukkit  
 
-See the [Configuration](/Configuration) page for more details on how each config works.  
+Veja em [Configuração](/Configuration) página para obter mais detalhes sobre como cada configuração funciona.
 
 #### HOCON  
 
-GriefDefender uses a configuration format known as [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md).  This format improves on various aspects of YAML such as ability to easily use comments per setting.  
+GriefDefender usa um formato de configuração conhecido como [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md).  Esse formato melhora vários aspectos do YAML, como a capacidade de usar comentários facilmente por configuração.
 
-Note: All configuration sections are automatically sorted alphabetically. This cannot be changed as HOCON functions this way.  
+Nota: Todas as seções de configuração são classificadas automaticamente em ordem alfabética. Isso não pode ser alterado, pois o HOCON funciona dessa maneira.
 
-#### Notepad++ Syntax highlighting  
+#### Notepad++ Realce de sintaxe
 
-1. Copy xml below from `Hocon NPP lang` into a file called `npp-lang-hocon.xml`
-2. Open Notepad++.
-3. Click Language > Define your language…
-4. At the top, click Import.
-5. Find the file and open it.  
+1. Copie o xml abaixo `Hocon NPP lang` em um arquivo chamado `npp-lang-hocon.xml`
+2. Abra Notepad++.
+3. Clique em Linguagem > Linguagem definida pelo usuário…
+4. Na parte superior, clique em Importar.
+5. Encontre o arquivo e abra-o.
 
 ::: details Hocon NPP lang
 
@@ -177,12 +177,12 @@ Note: All configuration sections are automatically sorted alphabetically. This c
 :::
 
 
-### Language
+### Linguagem
 
-GD supports the following languages : `de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK`
+GD suporta os seguintes idiomas : `de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK`
 
-The default language is `en_US`.  
-To change the lang, open `global.conf` and under `message` category change `locale="en_US"` to the language you want.  
+O idioma padrão é `en_US`.  
+Para alterar o idioma, abra `global.conf` and under `message` category change `locale="en_US"` to the language you want.  
 
 ### Storage
 
