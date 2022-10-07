@@ -1,46 +1,46 @@
 ---
-title: Permissions
+title: Permissões
 tag: Info
 category: info
 icon: node-tree
 ---
 
-Grant ```griefdefender.user.*``` to your players and both ```griefdefender.user.*``` and ```griefdefender.admin.*``` to your staff/admins then deny permissions you do NOT want.  
+Conceda ```griefdefender.user.*``` para seus jogadores e também ```griefdefender.user.*``` e ```griefdefender.admin.*```para sua equipe/administradores, então negue as permissões que você NÃO deseja dar a eles.
 
-### IMPORTANT
+### IMPORTANTE
 :warning:  
 
-If you do NOT grant the permission nodes above and instead grant singular permission nodes, you will not be supported as this goes against our recommendation.  
-If you alter any admin permissions while in-game, make sure you run `/gdreload` as GD caches various permissions for performance gains.  
-Wildcard permission ```*``` is currently not supported. Use ```griefdefender.user.*``` and ```griefdefender.admin.*``` for admins instead. 
+Se você NÃO conceder os nodes de permissão acima e, em vez disso, conceder nodes de permissão únicos, você não terá suporte, pois isso vai contra nossa recomendação.
+Se você alterar qualquer permissão de administrador durante o jogo, certifique-se de executar `/gdreload`, pois o GD armazena em cache várias permissões para ter ganhos de desempenho.
+Permissão suprema ```*``` atualmente não é suportado. Use ```griefdefender.user.*``` e ```griefdefender.admin.*``` para os administradores. 
  
-As GD makes heavy use of LP's `default` group, the following MUST be setup properly or GD will not function properly 
+Como o GD faz uso intenso do grupo `default` do LP, o seguinte DEVE ser configurado corretamente ou o GD não funcionará corretamente
 
-- All non-griefdefender LP groups have a path in inheritance to the `default` group.  
-- The `default` group is inheriting GD's delivered groups : `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
-- The `default` group is NOT disabled. LP strongly recommends to never disable this group.  
-See https://luckperms.net/wiki/Default-Groups  
+- Todos os grupos de LP não-griefdefender têm um caminho de herdado para o grupo `default`  
+- O `default` grupo está herdando os grupos fornecidos pelo GD : `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
+- O `default` grupo NÃO está desabilitado. LP recomenda nunca desabilitar este grupo.  
+Veja https://luckperms.net/wiki/Default-Groups  
 
 ## LuckPerms
 
-On first server boot of GriefDefender, 5 LP groups will automatically be created if they do not already exist.  
+Na primeira inicialização do servidor do GriefDefender, 5 grupos no LP serão criados automaticamente se ainda não existirem.
 
-* `griefdefender_claim` - Stores all flag permissions applied to single claims via `/cf` command.  
-ex. Executing the command `/cf block-place minecraft:wool true` would have the permission stored in this group.  
-Note: This does not store permissions made through Flag Preset GUI.  
-* `griefdefender_default` - Stores all flag permissions that contain `gd_claim_default` contexts via `/cf` command.  
-ex. Executing the command `/cf block-place minecraft:wool true default=user` would have the permission stored in this group.  
-Note: This does not store permissions made through Flag Preset GUI.  
-* `griefdefender_definition` - Stores all flag definition permissions applied via `/cf` GUI.  
-Note: This does not store permissions made through Flag Advanced GUI.  
-* `griefdefender_option` - Stores all option meta permissions applied via command or GUI.  
-* `griefdefender_override` - Stores all flag permissions that contain `gd_claim_override` context.  
+* `griefdefender_claim` - Armazena todas as permissões de bandeiras aplicadas a reivindicações únicas por meio do comando `/cf`.  
+ex. Executando o comando `/cf block-place minecraft:wool true` teria a permissão armazenada neste grupo.  
+Nota: Isso não armazena permissões feitas por meio da GUI de predefinição de bandeiras. 
+* `griefdefender_default` - Armazena todas as permissões de bandeiras que contêm `gd_claim_default` contextos via o comando `/cf`. 
+ex. Executando o comando `/cf block-place minecraft:wool true default=user` teria a permissão armazenada neste grupo.  
+Nota: Isso não armazena permissões feitas por meio da GUI de predefinição de bandeiras.
+* `griefdefender_definition` - Armazena todas as permissões de definição de bandeiras aplicadas via `/cf` GUI.
+Nota: Isso não armazena permissões feitas por meio do Bandeira GUI avançada. 
+* `griefdefender_option` - Armazena todas as meta permissões de opção aplicadas por meio de comando ou GUI.
+* `griefdefender_override` - Armazena todas as permissões de bandeiras que contêm `gd_claim_override` contexto.  
 
-### Useful MySQL DB queries
+### Consultas úteis de banco de dados MySQL
 
-:warning: Replace `minecraft` with LuckPerms DB name and `griefdefender` with GD DB name
+:warning: Substitua `minecraft` com o nome do banco de dados LuckPerms e `griefdefender` com nome de banco de dados GD
 
-#### Select all admin claim permissions
+#### Selecione todas as permissões de reivindicação do administrador
 
 ```sql
 SELECT A.* FROM minecraft.luckperms_group_permissions A, griefdefender.gd_claim_data B WHERE A.contexts LIKE CONCAT('%', BIN_TO_UUID(B.claim_uuid), '%') AND B.claim_type = 'admin'
@@ -48,7 +48,7 @@ UNION
 SELECT * FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%gd_claim_default":"admin"%')
 ```
 
-#### Select all user claim permissions
+#### Selecione todas as permissões de reivindicação do usuário
 
 ```sql
 SELECT A.* FROM minecraft.luckperms_group_permissions A, griefdefender.gd_claim_data B WHERE A.contexts LIKE CONCAT('%', BIN_TO_UUID(B.claim_uuid), '%') AND B.claim_type <> 'admin'
@@ -56,9 +56,9 @@ UNION
 SELECT * FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%gd_claim_default":"basic"%') OR contexts LIKE CONCAT('%gd_claim_default":"user"%') 
 ```
 
-#### Delete all user claim permissions
+#### Excluir todas as permissões de reivindicação do usuário
 
-:warning: Backup LuckPerms database before performing deletes. You have been WARNED! :warning:
+:warning: Faça backup do banco de dados LuckPerms antes de executar estas exclusões. VOCE FOI AVISADO! :warning:
 
 ```sql
 DELETE FROM minecraft.luckperms_group_permissions A, griefdefender.gd_claim_data B WHERE A.contexts LIKE CONCAT('%', BIN_TO_UUID(B.claim_uuid), '%') AND B.claim_type <> 'admin'
@@ -66,75 +66,75 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 ```
 
 
-# User Permissions
+# Permissões do usuário
 
-## Claims
-| Permission Node | Description |
+## Reivindicações
+| Node da permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.user.claim.command.abandon.basic | Allows to abandon basic claims |
-| griefdefender.user.claim.command.abandon.town | Allows to abandon town claims |
-| griefdefender.user.claim.command.abandon-all | Allows to abandon all claims |
-| griefdefender.user.claim.command.abandon-top-level  | Allows to abandon a claim and all its subdivisions |
-| griefdefender.user.claim.command.basic-mode  | Allows to use basic claim shovel mode |
-| griefdefender.user.claim.command.bank | Allows to use claim bank |
-| griefdefender.user.claim.command.buy | Allows to buy a claim (Requires economy plugin) |
-| griefdefender.user.claim.command.buy-blocks | Allows to buy claim blocks (Requires economy plugin) |
-| griefdefender.user.claim.command.claim.tax | Allows to check/pay tax balance |
-| griefdefender.user.claim.command.contract | Allows to contract(shrink) a claim in a direction |
-| griefdefender.user.claim.command.cuboid | Allows to toggle cuboid claims mode |
-| griefdefender.user.claim.command.expand | Allows to expand a claim in a direction |
-| griefdefender.user.claim.command.farewell | Allows to set a claim farewell |
-| griefdefender.user.claim.command.give.blocks | Allows to give claim blocks to another player |
-| griefdefender.user.claim.command.give.pet | Allows a player to give away a pet they tamed |
-| griefdefender.user.claim.command.greeting | Allows to set a claim greeting |
-| griefdefender.user.claim.command.info.others | Allows to get information about others claims |
-| griefdefender.user.claim.command.info.base | Allows to get information about claims |
-| griefdefender.user.claim.command.info.teleport.others | Allows a user to use the teleport feature in claiminfo on other claims |
-| griefdefender.user.claim.command.info.teleport.base | Allows a user to use the teleport feature in claiminfo |
-| griefdefender.user.claim.command.inherit | Allows to toggle inheritance from parent claim |
-| griefdefender.user.claim.command.list.base | Allows to list your claims |
-| griefdefender.user.claim.command.list.others | Allows to list other players claims |
-| griefdefender.user.claim.command.list-flags | Allows to list claim flags |
-| griefdefender.user.claim.command.name | Allows to set a claimname |
-| griefdefender.user.claim.command.sell | Allows to sell a claim (Requires economy plugin) |
-| griefdefender.user.claim.command.sell-blocks | Allows to sell claim blocks (Requires economy plugin) |
-| griefdefender.user.claim.command.set-spawn | Allows to set claim spawn |
-| griefdefender.user.claim.command.spawn | Allows to use claim spawn |
-| griefdefender.user.claim.command.subdivide-mode | Allows to use subdivide shovel mode |
-| griefdefender.user.claim.command.town-mode | Allows to use town shovel mode |
-| griefdefender.user.claim.command.transfer  | Allows to transfer own claims |
-| griefdefender.user.claim.command.trapped | Teleports the player to a safe location if stuck and unable to build |
-| griefdefender.user.claim.command.unlock-drops | Allows other players to pickup any items dropped from death |
-| griefdefender.user.claim.command.worldedit-claim | Allows to use a worldedit selection to create a claim. |
-| griefdefender.user.claim.create.base  | Allows to create a basic claim |
-| griefdefender.user.claim.create.basic | Allows to create/resize basic claims |
-| griefdefender.user.claim.create.subdivision | Allows to create/resize subdivision claims |
-| griefdefender.user.claim.create.town | Allows to create/resize town claims |
-| griefdefender.user.claim.create.cuboid.basic | Allows to create/resize basic claims in 3D mode |
-| griefdefender.user.claim.create.cuboid.subdivision | Allows to create/resize subdivision claims in 3D mode |
-| griefdefender.user.claim.create.cuboid.town | Allows to create/resize town claims in 3D mode |
-| griefdefender.user.claim.resize | Allows to resize claims |
-| griefdefender.user.claim.show-tutorial | Allows to see claim tutorial text when creating/resizing claims |
-| griefdefender.user.claim.list.other | Allows to list other player claims |
-| griefdefender.user.claim.visualize.base | Allows player to visualize their claims |
-| griefdefender.user.claim.visualize.nearby | Allows player to visualize nearby claims |
-| griefdefender.user.command.info.base | Allows to get information about self |
-| griefdefender.user.command.info.others | Allows to get information about another player |
-| griefdefender.user.command.version | Allows to get information about GD, server and LP versions |
+| griefdefender.user.claim.command.abandon.basic | Permite abandonar reivindicações básicas |
+| griefdefender.user.claim.command.abandon.town | Permite abandonar as reivindicações da cidade |
+| griefdefender.user.claim.command.abandon-all | Permite abandonar todas as reivindicações |
+| griefdefender.user.claim.command.abandon-top-level  | Permite abandonar uma reivindicação e todas as suas subdivisões |
+| griefdefender.user.claim.command.basic-mode  | Permite usar o modo de escavadeira de reivindicação básica |
+| griefdefender.user.claim.command.bank | Permite usar o banco de reclamações |
+| griefdefender.user.claim.command.buy | Permite comprar uma reivindicação (requer plugin de economia) |
+| griefdefender.user.claim.command.buy-blocks | Permite comprar blocos de reivindicação (requer plugin de economia) |
+| griefdefender.user.claim.command.claim.tax | Permite consultar/pagar saldo de impostos |
+| griefdefender.user.claim.command.contract | Permite reduzir/encolher a reivindicação em uma direção |
+| griefdefender.user.claim.command.cuboid | Permite alternar o modo de reivindicações cubóides |
+| griefdefender.user.claim.command.expand | Permite expandir uma reivindicação em uma direção |
+| griefdefender.user.claim.command.farewell | Permite definir uma despedida de reivindicação |
+| griefdefender.user.claim.command.give.blocks | Permite dar blocos de reivindicação a outro jogador |
+| griefdefender.user.claim.command.give.pet | Permite que um jogador doe um animal de estimação que domou |
+| griefdefender.user.claim.command.greeting | Permite definir uma saudação de reivindicação |
+| griefdefender.user.claim.command.info.others | Permite obter informações sobre outras reivindicações |
+| griefdefender.user.claim.command.info.base | Permite obter informações sobre a reivindicação |
+| griefdefender.user.claim.command.info.teleport.others | Permite que um usuário use o recurso de teletransporte em informações de reivindicação em outras reivindicações |
+| griefdefender.user.claim.command.info.teleport.base | Permite que um usuário use o recurso de teletransporte em Claiminfo |
+| griefdefender.user.claim.command.inherit | Permite alternar se a reivindicação deve herdar permissões da principal |
+| griefdefender.user.claim.command.list.base | Permite listar suas reivindicações |
+| griefdefender.user.claim.command.list.others | Permite listar reivindicações de outros jogadores |
+| griefdefender.user.claim.command.list-flags | Permite listar bandeiras de reivindicação |
+| griefdefender.user.claim.command.name | Permite definir um nome de reivindicação (claimname) |
+| griefdefender.user.claim.command.sell | Permite vender uma reivindicação (requer plugin de economia) |
+| griefdefender.user.claim.command.sell-blocks | Permite vender blocos de reivindicação (requer plugin de economia) |
+| griefdefender.user.claim.command.set-spawn | Permite definir o spawn da reivindicações |
+| griefdefender.user.claim.command.spawn | Permite usar o spawn da reivindicações |
+| griefdefender.user.claim.command.subdivide-mode | Permite usar o modo de subdivisão |
+| griefdefender.user.claim.command.town-mode | Permite usar o modo cidade |
+| griefdefender.user.claim.command.transfer  | Permite transferir reivindicações próprias para outros jogadores |
+| griefdefender.user.claim.command.trapped | Teletransporte o jogador para um local seguro se estiver preso e incapaz de construir |
+| griefdefender.user.claim.command.unlock-drops | Permite que outros jogadores peguem qualquer item caído da morte |
+| griefdefender.user.claim.command.worldedit-claim | Permite usar uma seleção worldedit para criar uma reivindicação. |
+| griefdefender.user.claim.create.base  | Permite criar uma reivindicação básica |
+| griefdefender.user.claim.create.basic | Permite criar/redimensionar uma reivindicação básicas |
+| griefdefender.user.claim.create.subdivision | Permite criar/redimensionar uma subdivisão |
+| griefdefender.user.claim.create.town | Permite criar/redimensionar uma cidade |
+| griefdefender.user.claim.create.cuboid.basic | Permite criar/redimensionar reivindicações básicas no modo 3D |
+| griefdefender.user.claim.create.cuboid.subdivision | Permite criar/redimensionar as subdivisão no modo 3D |
+| griefdefender.user.claim.create.cuboid.town | Permite criar/redimensionar as cidade no modo 3D |
+| griefdefender.user.claim.resize | Permite redimensionar reivindicações |
+| griefdefender.user.claim.show-tutorial | Permite ver o texto do tutorial de declaração ao criar/redimensionar declarações |
+| griefdefender.user.claim.list.other | Permite listar reivindicações de outros jogadores |
+| griefdefender.user.claim.visualize.base | Permite que o jogador visualize suas reivindicações |
+| griefdefender.user.claim.visualize.nearby | Permite que o jogador visualize reivindicações próximas |
+| griefdefender.user.command.info.base | Permite ver informações sobre si mesmo |
+| griefdefender.user.command.info.others | Permite ver informações sobre outro jogador |
+| griefdefender.user.command.version | Permite ver informações sobre a versões do GD, servidor e LP |
 | griefdefender.user.town.command.bank |  |
-| griefdefender.user.town.command.info.base | Allows to get information about town claims |
-| griefdefender.user.town.command.info.others | Allows to get information about others town claims |
-| griefdefender.user.town.command.name | Allows to set a town claimname |
-| griefdefender.user.town.command.tag | Allows to set the tag of your town |
+| griefdefender.user.town.command.info.base | Permite ver informações sobre a cidade |
+| griefdefender.user.town.command.info.others | Permite ver informações sobre outras reivindicações da cidade |
+| griefdefender.user.town.command.name | Permite definir um nome para a cidade (claimname) |
+| griefdefender.user.town.command.tag | Permite definir a tag da sua cidade |
 | griefdefender.user.town.command.tax |  |
 
-## Flags
+## Bandeiras
 | Permission Node | Description |
 | --------- | ----------- |
-| griefdefender.admin.claim.command.flag.arg | Allows to use the claimflag command with command line arguments |
-| griefdefender.user.claim.command.flag.base | Allows to use the claimflag command |
-| griefdefender.user.claim.command.flag.gui | Allows to use the claimflag command GUI |
-| griefdefender.user.claim.command.flag.debug | Allows to toggle claim flag debug mode |
+| griefdefender.admin.claim.command.flag.arg | Permite usar o comando Claimflag com argumentos de linha de comando |
+| griefdefender.user.claim.command.flag.base | Permite usar o comando Claimflag |
+| griefdefender.user.claim.command.flag.gui | Permite usar a GUI do comando Claimflag |
+| griefdefender.user.claim.command.flag.debug | Permite alternar o modo de depuração do sinalizador de reivindicação |
 | griefdefender.user.claim.command.flag.player | Allows to use the claimflag for players command |
 | griefdefender.user.claim.command.flag.group | Allows to use the claimflag for groups command |
 | griefdefender.user.claim.command.flag.reset | Allows to use the claimreset command |
@@ -148,8 +148,8 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 
 _*See [Flag Definitions GUI](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI) for information on how to manage the flag GUI for both users and admins._
 
-## Options
-| Permission Node | Description |
+## Opções
+| Node de permissão | Descrição |
 | --------- | ----------- |
 | griefdefender.admin.claim.command.option.base | Allows to use the claimoption command |
 | griefdefender.admin.claim.command.option.group | Allows to set group options in claims |

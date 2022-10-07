@@ -138,18 +138,18 @@ Once this is complete, setup your flags in any claim joined to claimgroup. All c
 
 Note: Unjoining a claim from a claimgroup will revert the claim back to its local flags.
 
-## 15. How do Geyser players confirm commands?  
+## 15. Como os jogadores do Geyser confirmam os comandos?  
 
-They can use the command `/gdconfirm`  
+Eles podem usar o comando `/gdconfirm`  
 
 
-## 16. How do I prevent players from earning blocks while AFK?  
+## 16. Como faço para impedir que os jogadores ganhem blocos enquanto estão AFK?  
 
-1. Open `global.conf`.  
-2. Search for the following section  
+1. Abra `global.conf`.  
+2. Procure a seguinte seção 
 ```
 # The minimum threshold of movement (in blocks) required to receive accrued claim blocks. (Default: 0)
 # Note: The claim block task runs every 5 minutes which is the time each player will get to move the required amount of blocks.
 claim-block-task-move-threshold=0
 ```
-3. Set `claim-block-task-move-threshold` to the amount of blocks you want to require players to move every 5 minutes to not be considered AFK.  
+3. Defina em `claim-block-task-move-threshold` a quantidade de blocos que o jogador terá que se movimentar no período de 5 minutos para não ser considerado AFK.

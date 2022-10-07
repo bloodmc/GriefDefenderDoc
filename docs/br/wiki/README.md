@@ -81,9 +81,9 @@ Você pode alterar várias configurações no [arquivo de configuração](https:
 * Dimension
 * World
 
-Global configuration files can affect all of a server’s worlds and dimensions. This is the default level for configs.  
-Dimension configuration files are used to affect a certain dimension or group of worlds. These types of configs will override the global config files. World configuration files are used to modify individual worlds only.   
-World configs override dimension and global configs.
+Global arquivos de configuração podem afetar todos os mundos e dimensões de um servidor. Este é o nível padrão para configurações.
+Dimension arquivos de configuração são usados ​​para afetar uma determinada dimensão ou grupo de mundos. Esses tipos de configurações substituirão os arquivos de configuração Global. Os arquivos de configuração do mundo são usados ​​apenas para modificar mundos individuais.
+World configs substituem a dimensão e as configurações globais.
 
 Os dados da reivindicação podem ser encontrados dentro da pasta da dimensão em que a reivindicação está, por exemplo, todas as reivindicações do mundo superior são salvas dentro
 
@@ -182,17 +182,17 @@ Nota: Todas as seções de configuração são classificadas automaticamente em 
 GD suporta os seguintes idiomas : `de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK`
 
 O idioma padrão é `en_US`.  
-Para alterar o idioma, abra `global.conf` and under `message` category change `locale="en_US"` to the language you want.  
+Para alterar o idioma, abra `global.conf` e abaixo `message` mudança de categoria `locale="en_US"` para o idioma desejado.
 
-### Storage
+### Armazenamento
 
-:warning: All player accrued/bonus block data is stored in LuckPerms as meta. Use `/lp editor` to view current data. :warning:   
+:warning: Todos os dados do bloco de bônus/acumulados dos jogadores são armazenados no LuckPerms como meta. Use `/lp editor` para visualizar os dados atuais. :warning:   
 
-#### File  
+#### Arquivo  
 
-GD uses hocon file storage by default. This does not affect performance as all file data is loaded into memory at startup.  
+O GD usa o armazenamento de arquivos hocon por padrão. Isso não afeta o desempenho, pois todos os dados do arquivo são carregados na memória RAM na inicialização. 
 
-All file data will be stored in a folder called `GriefDefender` in your servers config or plugins directory.  
+Todos os dados do arquivo serão armazenados em uma pasta chamada `GriefDefender` na configuração do seu servidor ou diretório de plugins. 
 
 ```
 config/
@@ -209,7 +209,7 @@ config/
     │   │   │   │   ├── SchematicData/
     │   │   │   │   └── world.conf
     │   │   │   └── dimension.conf
-    │   │   └── other...
+    │   │   └── outros...
     │   └── 
     ├── bans.conf
     ├── blacklist.conf
@@ -221,69 +221,69 @@ config/
     └── storage.conf
 ```
 
-#### Blacklist  
+#### lista negra  
 
-GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your `blacklist.conf` and remove any id's you do not want to blacklist for your server.  
+O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu `blacklist.conf` e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
 
-See https://github.com/bloodmc/GriefDefender/wiki/Configuration#blacklist for more info on how to configure.  
-
-
-#### Database  
-
-:warning: If specifying port in `address` surround with quotes or GD will not load. :warning:  
-
-If you want to switch to database storage, do the following
-1. Open `storage.conf` file.  
-2. Change `storage-method` value to a supported database format.  
-For example, if you want to use mysql, you would set this value to `mysql`.
-3. Set `address` to DB address and port. Make sure to use quotes if specifying a port. Ex. `"localhost:1000"`  
-4. Set `database-name`. If this value is not changed, GD will create a database with name `griefdefender` if one does not exist.  
-5. Set `username` to DB username.  
-6. Set `password` to DB password surrounded by quotes.  
-7. Adjust any other settings as needed.  
+Veja https://github.com/bloodmc/GriefDefender/wiki/Configuration#blacklist para obter mais informações sobre como configurar.
 
 
+#### Banco de dados  
 
-### Economy Mode
-:warning: Before enabling economy mode, make sure to test on a TEST server to make sure all settings are working properly. :warning:
+:warning: Se especificar a porta em `address` envolvido com aspas ou GD não será carregado. :warning:  
 
-By default, GD allows players to accrue claim blocks to be used for claim creation.  
-However, If you want all claims created to use economy directly instead of claim blocks then set `economy-mode` to `true` in `global.conf`.  
-With `economy-mode` turned on, all claim creations will prompt players with a confirmation of claim cost. Once confirmed, the funds will be taken from the player account.  
-If you want to bypass these confirmations, set the permission `griefdefender.user.claim.economy.create-confirm` to `false`.
+Se você deseja alternar para o armazenamento de banco de dados, faça o seguinte
+1. Abra o arquivo `storage.conf`  
+2. Altere `storage-method` para um formato de banco de dados suportado.
+Por exemplo, se você quiser usar mysql, você deve definir este valor para `mysql`.
+3. Defina `address` para o endereço e porta do banco de dados. Certifique-se de usar aspas ao especificar uma porta. Ex. `"localhost:1000"`  
+4. Defina `database-name`. Se este valor não for alterado, o GD criará um banco de dados com o nome `griefdefender` se caso não exista.
+5. Defina `username` para o nome de usuário do banco de dados.
+6. Defina `password` para a senha do banco de dados entre aspas. 
+7. Ajuste quaisquer outras configurações conforme necessário.
 
-After this setting is turned on, open up `options.conf` and configure the following options to a value greater than `0`
+
+
+### Modelo econômico
+:warning: Antes de ativar o modelo econômico, certifique-se de testar em um servidor de TESTE para garantir que todas as configurações estejam funcionando corretamente. :warning:
+
+Por padrão, o GD permite que os jogadores acumulem blocos de reivindicações para serem usados na criação de reivindicações.
+No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em `global.conf`.  
+Com `economy-mode` ativado, todas as criações de reivindicação solicitarão aos jogadores uma confirmação do custo da reivindicação. Uma vez confirmado, o dinheiro será retirado da conta do jogador. 
+Se você quiser ignorar essas confirmações, defina a permissão `griefdefender.user.claim.economy.create-confirm` para `false`.
+
+Depois que essa configuração for ativada, abra `options.conf`e configure as seguintes opções para um valor maior que `0`
 * `economy-block-cost`  
 * `economy-sell-return` 
 
-Note: If you want to use the `/buyclaimblocks` or  `/sellclaimblocks` commands then you MUST configure the above 2 options as well. These commands do not require `economy-mode` to be turned on.  
+Nota: Se você quiser usar o `/buyclaimblocks` ou  `/sellclaimblocks` comandos então você DEVE configurar as 2 opções acima também. Esses comandos não requerem `economy-mode` para ser ligado.
  
-### Permissions
+### Permissões
 
-:warning: It is VERY IMPORTANT you follow https://github.com/bloodmc/GriefDefender/wiki/Permissions#important before proceeding. :warning:  
-:warning: If you want to remove user permissions that do not apply to your server, it is HIGHLY recommended to keep `griefdefender.user.*` applied to them and simply deny the permissions you do not. If you remove `griefdefender.user.*` and attempt to apply all GD permissions manually, you will run into many issues.  
+:warning: É MUITO IMPORTANTE que você siga https://github.com/bloodmc/GriefDefender/wiki/Permissions#important antes de proceder. :warning:  
+:warning: Se você deseja remover permissões de usuário que não se aplicam ao seu servidor, é ALTAMENTE recomendado manter `griefdefender.user.*` aplicado a eles e simplesmente negar as permissões que você não possui. Se você remover o `griefdefender.user.*` e tentar aplicar todas as permissões do GD manualmente, você terá muitos problemas.
 
-After install GriefDefender correctly, you need to give your players permission to claim land, they aren't given by default. The only permission needed for basic GD setup is `griefdefender.user.*`. For basic admin setup, give admins the permission `griefdefender.admin.*` and `griefdefender.user.*`. 
+Depois de instalar o GriefDefender corretamente, você precisa dar permissão aos seus jogadores para reivindicar terrenos, eles não são dados por padrão. A única permissão necessária para a configuração básica do GD é `griefdefender.user.*`. Para configuração básica de administração, dê aos administradores a permissão `griefdefender.admin.*` e `griefdefender.user.*`.
 
-If you want more fine tuned permissions you can find all permissions [here](https://github.com/bloodmc/GriefDefender/wiki/Permissions) and for a list of all command permissions & their usage check [here](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
+Se você quiser ajustar mais permissões, você pode encontrar todas as permissões [aqui](https://github.com/bloodmc/GriefDefender/wiki/Permissions) e para uma lista com todas as permissões de comando e de uso [aqui](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
 
-If you believe that commands might be a little longer or hard to memorize, consider creating custom alias. [Click here for more information](https://github.com/bloodmc/GriefDefender/wiki/Custom-Alias-Creation)
+Se você acredita que os comandos podem ser um pouco mais longos ou difíceis de memorizar, considere criar um custom alias.[Clique aqui para obter mais informações](https://github.com/bloodmc/GriefDefender/wiki/Custom-Alias-Creation)
 
-To apply the above permissions to a group in LuckPerms, run the following command
+Para aplicar as permissões acima a um grupo no LuckPerms, execute o seguinte comando
 
 ```
-/lp group <group> permission set griefdefender.user.*
+/lp group <grupo> permission set griefdefender.user.*
 ```
 
-For `<group>` use your default group, use `default` if you don't have one.
+Para `<grupo>` use seu grupo padrão, use `default` se você não tiver um.
 
-Once GD is installed and running, see https://github.com/bloodmc/GriefDefender/wiki/Claim-Management to learn how to create a protection claim and manage it.
+Depois que o GD estiver instalado e em execução, consulte https://github.com/bloodmc/GriefDefender/wiki/Claim-Management para saber como criar uma proteção de terrra e gerenciá-lo.
 
 ### Options
-:warning: It is VERY IMPORTANT you follow https://github.com/bloodmc/GriefDefender/wiki/Options before proceeding. :warning:  
-:warning: All persisted options(meta) set in LuckPerms will take priority over defaults in `options.conf` :warning:
+:warning: É MUITO IMPORTANTE que você siga https://github.com/bloodmc/GriefDefender/wiki/Options antes de prosseguir. :warning:  
+:warning: Todas as opções persistentes (meta) definidas em LuckPerms terão prioridade sobre os padrões em `options.conf` :warning:
 
-If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in `options.conf`.  All default option settings are applied at server startup.  
+Se você quiser definir configurações como com quantos blocos iniciais um jogador pode começar, limites de criação de reivindicação, etc., então você deve começar ajustando as opções padrão do GD encontradas em `options.conf`. Todas as configurações de opção padrão são aplicadas na inicialização do servidor.
 
 [Paper]: https://papermc.io/downloads
 [Spigot]: https://www.spigotmc.org/wiki/buildtools/
