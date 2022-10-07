@@ -5,6 +5,6 @@ category: hooks
 icon: rent
 ---
 
-If you are looking for a more robust Rent/Lease/Sell plugin, I have ported GP RealEstate to GriefDefender.
+Se você estiver procurando por um plugin de aluguel/arrendamento/venda mais robusto, eu portei o GP RealEstate para o GriefDefender.
 
-Source: https://github.com/bloodmc/RealEstate
+Fonte: https://github.com/bloodmc/RealEstate

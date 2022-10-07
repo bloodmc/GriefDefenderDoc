@@ -5,30 +5,30 @@ category: hooks
 icon: visual
 ---
 
-GriefDefender now supports WECUI!
+GriefDefender agora suporta WorldEdit CUI (WECUI)!
 
-![WECUI Preview](http://i.imgur.com/96RHwkv.jpg)
+![Pré-visualização](http://i.imgur.com/96RHwkv.jpg)
 
-In order to use WECUI, the following is required to be installed  
+Para usar o WECUI, é necessário instalar o seguinte
 
-**Client** 
+**Cliente** 
 
 ***1.18+***  
-Pending PR https://github.com/EngineHub/WorldEditCUI/pull/53
+Solicitação de pull pendente https://github.com/EngineHub/WorldEditCUI/pull/53
  
 ***1.14+***  
-* WECUI (Fabric Version) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
+* WECUI (Versão Fabric) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
-***1.12 and under***  
-* Liteloader Vanilla - [Download](http://www.liteloader.com/download)    OR    Liteloader Forge - [Download](http://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
-* WECUI (LiteLoader version) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)
+***1.12 e abaixo***  
+* Liteloader Vanilla - [Download](http://www.liteloader.com/download)    ou    Liteloader Forge - [Download](http://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
+* WECUI (Versão LiteLoader) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)
 
-**Server**
+**Servidor**
 * WorldEdit - [Download](http://builds.enginehub.org/job/worldedit?branch=master)
 
 
-Simply place both WECUI and Fabric API jars into the mods client folder.
+Basta colocar os jars da API do WECUI e do Fabric na pasta mods.
 
-If installed correctly, you should be able to see the same visuals as above when you right-click on a claim using a stick.
+Se instalado corretamente, você poderá ver os mesmos recursos visuais acima ao clicar com o botão direito do mouse em uma reivindicação usando um bastão.
 
-**Disclaimer:** It's a known issue that Shaders don't get along with this feature due to Optifine having its own rendering pipeline. Shaders are probably even more custom and just plain break certain things. Resource packs, on the other hand, will work fine. Therefore, use at your own risk.
+**Isenção de responsabilidade:** É um problema conhecido que os Shaders não se dão bem com esse recurso devido ao Optifine ter seu próprio pipeline de renderização. Shaders são provavelmente ainda mais personalizados e simplesmente quebram certas coisas. Os pacotes de recursos, por outro lado, funcionarão bem. Portanto, use por sua conta e risco.

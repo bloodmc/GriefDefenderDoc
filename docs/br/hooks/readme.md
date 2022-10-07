@@ -1,3 +1,3 @@
-:::: info Just Check the sidebar!
-Check the sidebar for more information.
+:::: info Basta verificar a barra lateral!
+Verifique a barra lateral para mais informações.
 ::::

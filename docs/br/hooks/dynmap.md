@@ -5,8 +5,8 @@ category: hooks
 icon: map
 ---
 
-In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.  
-See https://github.com/bloodmc/GriefDefender/wiki/GDHooks  
+Para usar o Dynmap no GriefDefender, você deve ter GDHooks instalado.
+Veja https://github.com/bloodmc/GriefDefender/wiki/GDHooks  
 
 
 **Bukkit** 
@@ -14,7 +14,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/GDHooks
 * Dynmap - [Download](https://www.spigotmc.org/resources/dynmap.274/) 
 
 <details>
-  <summary>Sample Dynmap Configuration</summary>
+  <summary>Exemplo de configuração de mapa dinâmico</summary>
 
 ```
 dynmap {
@@ -54,8 +54,8 @@ dynmap {
     }
     enabled=true
     hidden-regions=[]
-    info-window-admin="<div class=\"infowindow\"><span style=\"font-weight:bold;\">Administrator Claim</span><br/>Permission Trust: <span style=\"font-weight:bold;\">%managers%</span><br/>Trust: <span style=\"font-weight:bold;\">%builders%</span><br/>Container Trust: <span style=\"font-weight:bold;\">%containers%</span><br/>Access Trust: <span style=\"font-weight:bold;\">%accessors%</span></div>"
-    info-window-basic="<div class=\"infowindow\">Name: <span style=\"font-weight:bold;\">%claimname%</span><br/>Owner: <span style=\"font-weight:bold;\">%owner%</span><br/>Type: <span style=\"font-weight:bold;\">%gdtype%</span><br/>Last Seen: <span style=\"font-weight:bold;\">%lastseen%</span><br/>Permission Trust: <span style=\"font-weight:bold;\">%managers%</span><br/>Trust: <span style=\"font-weight:bold;\">%builders%</span><br/>Container Trust: <span style=\"font-weight:bold;\">%containers%</span><br/>Access Trust: <span style=\"font-weight:bold;\">%accessors%</span></div>"
+    info-window-admin="<div class=\"infowindow\"><span style=\"font-weight:bold;\">Reivindicação administrativa </span><br/>Permissão de Trust: <span style=\"font-weight:bold;\">%managers%</span><br/>Trust: <span style=\"font-weight:bold;\">%builders%</span><br/>Trust de Recipiente: <span style=\"font-weight:bold;\">%containers%</span><br/>Trust de acesso: <span style=\"font-weight:bold;\">%accessors%</span></div>"
+    info-window-basic="<div class=\"infowindow\">Nome: <span style=\"font-weight:bold;\">%claimname%</span><br/>Dono: <span style=\"font-weight:bold;\">%owner%</span><br/>Type: <span style=\"font-weight:bold;\">%gdtype%</span><br/>Visto pela última vez: <span style=\"font-weight:bold;\">%lastseen%</span><br/>Permissão para gerenciar Trust: <span style=\"font-weight:bold;\">%managers%</span><br/>Trust: <span style=\"font-weight:bold;\">%builders%</span><br/>Trust de Recipiente: <span style=\"font-weight:bold;\">%containers%</span><br/>Trust de Acesso: <span style=\"font-weight:bold;\">%accessors%</span></div>"
     layer-hide-by-default=false
     layer-priority=10
     minzoom=0
