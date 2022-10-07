@@ -1,12 +1,12 @@
 ---
 home: true
 icon: home
-title: Project home
+title: Projeto inicial
 heroImage: /logo.png
 heroText: GriefDefender
-tagline: A protection plugin designed for Bukkit and Sponge! 
+tagline: Um plugin de proteção projetado para Bukkit e Sponge!
 actions:
-  - text: How to Use 💡
+  - text: Como usar 💡
     link: /wiki/
 
   - text: GitHub
@@ -14,55 +14,55 @@ actions:
     type: secondary
 
 features:
-  - title: Performant
+  - title: Desempenho
     icon: FAST
-    details: No hardcoded things Fast, lightweight and lagless.
+    details: Nada de coisas codificadas Rápido, leve e sem atrasos.
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Customizable
+  - title: Customizável
     icon: Toolbox
-    details: Use the default flags or create your own. Endless possibilities!
+    details: Use os sinalizadores padrão ou crie os seus próprios. Infinitas possibilidades!
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Multilingual Translations
+  - title: Traduções multilíngues
     icon: language
-    details: A lot of languages already available out of the box!
+    details: Muitos idiomas já disponíveis prontos para uso!
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Database support
+  - title: Suporte a banco de dados
     icon: database
-    details: Supports MySQL，Maria DB， PostgreSQL and SQLite.
+    details: Suporta MySQL, Maria DB, PostgreSQL e SQLite.
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Interactive UI
+  - title: IU interativa
     icon: smallscreen
-    details: Clickable texts in chat .Handle everything there.
+    details: Textos clicáveis no chat .Manuseie tudo lá.
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Mod Support
+  - title: Suporte a Mods
     icon: tools
-    details: Designed from the ground up for mods. Hybrid & Sponge supported.
+    details: Projetado desde o início para mods. Híbrido e Sponge.
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Taxes. Rental and sales
+  - title: Impostos. Aluguel e vendas
     icon: moneybag
-    details: Boost your economy by renting or selling your claims, and more.
+    details: Aumente sua economia alugando ou vendendo seus créditos e muito mais.
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Permission System
+  - title: Sistema de permissão
     icon: sheild
-    details: Everything is handled through permissions. LuckPerms required,
+    details: Tudo é tratado através de permissões. LuckPerms necessário,
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Well-Designed API
+  - title: API bem projetada
     icon: code
-    details: Hook into everything GriefDefender does via APl.
+    details: Conecte-se a tudo que o GriefDefender faz via API.
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: More new features ✨
-    details: Always listen to your feedbacky.
+  - title: Novos recursos ✨
+    details: Sempre escutando seus feedback.
     link: https://github.com/bloodmc/GriefDefender
 
 copyright: false
-footer: MIT Licensed | Copyright © 2019-present GriefDefender
+footer: MIT Licensed | Copyright © 2019-presente GriefDefender
 ---
