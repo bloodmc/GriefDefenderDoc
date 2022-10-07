@@ -179,13 +179,13 @@ _*Veja [GUI de definições de bandeiras](https://github.com/bloodmc/GriefDefend
 | griefdefender.user.claim.trust.manager | Permite adicionar managers |
 | griefdefender.user.claim.trust.remove | Permite untrust de jogadores |
 
-# Permissões adinistrativas
+# Permissões administrativas
 
 | Node de permissão | Descrição |
 | --------- | ----------- |
 | griefdefender.advanced.admin.flags | Permite o uso do modo avançado na GUI do sinalizador |
 | griefdefender.admin.bypass.ban | Permite ignorar o banimento de reivindicação |
-| griefdefender.admin.bypass.border-check | Permite ignorar a verificações de fronteira de reivindicação (Util para entrar em reivindicações com probição de jogador) |
+| griefdefender.admin.bypass.border-check | Permite ignorar a verificações de fronteira de reivindicação |
 | griefdefender.admin.bypass.option | Permite bypass de opções |
 | griefdefender.admin.bypass.override.resize | Permite ignorar as restrições de redimensionamento da reivindicação |
 | griefdefender.admin.bypass.override.limit | Permite ignorar as restrições de limite de criação de reivindicações |
