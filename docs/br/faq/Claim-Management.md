@@ -124,19 +124,19 @@ Essas permissões permitem que o jogador com confiável voe em reivindicações 
 
 ## 14. É possível copiar bandeiras de uma reivindicação de administrador para outra reivindicação de administrador?**
 
-1. From the `/gd` menu navigate to `CLAIM` then `CLAIMGROUP`.
-2. Click `ADMIN` tab.
-3. Click `+` button.
-4. Enter claimgroup name.
-5. Go to an admin claim that you want joined to group and navigate back to `CLAIMGROUP` in gd menu.
-6. Click `ADMIN` tab.
-7. Click `JOIN`
+1. Use `/gd` navegue até `REIVINDICAÇÃO` depois `GRUPO-REIVINIDICAÇÃO`.
+2. Clique em na aba `ADMIN`
+3. Clique no botão `+`
+4. Insira o nome do grupo de reivindicações.
+5. Vá para uma reivindicação administrativa que você deseja juntar ao grupo e navegue de volta para `GRUPO-REIVINIDICAÇÃO` no menu gd.
+6. Clique emna aba `ADMIN`
+7. Clique em `Unir-se`
 
-Repeat steps 5-7 for each claim you wanted joined to claimgroup.
+Repita as etapas 5 a 7 para cada reivindicação que você deseja juntar ao grupo de reivindicações.
 
-Once this is complete, setup your flags in any claim joined to claimgroup. All claims in claimgroup will share flags.
+Quando isso estiver concluído, configure seus bandeiras em qualquer reivindicação associada ao grupo de reivindicações. Todas as reivindicações no grupo de reivindicações compartilharão as bandeiras.
 
-Note: Unjoining a claim from a claimgroup will revert the claim back to its local flags.
+Observação: desvincular uma reivindicação de um grupo de reivindicações reverterá a reivindicação de volta para seus bandeiras locais.
 
 ## 15. Como os jogadores do Geyser confirmam os comandos?  
 
