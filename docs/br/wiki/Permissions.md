@@ -134,67 +134,67 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.admin.claim.command.flag.arg | Permite usar o comando Claimflag com argumentos de linha de comando |
 | griefdefender.user.claim.command.flag.base | Permite usar o comando Claimflag |
 | griefdefender.user.claim.command.flag.gui | Permite usar a GUI do comando Claimflag |
-| griefdefender.user.claim.command.flag.debug | Permite alternar o modo de depuração do sinalizador de reivindicação |
-| griefdefender.user.claim.command.flag.player | Allows to use the claimflag for players command |
-| griefdefender.user.claim.command.flag.group | Allows to use the claimflag for groups command |
-| griefdefender.user.claim.command.flag.reset | Allows to use the claimreset command |
-| griefdefender.user.claim.flag | Base permission used to check if user has access to use a specific core flag. <br />The format is `griefdefender.user.claim.flag.<flag_name>`.<br />Note: This is checked when accessing the flag ADVANCED GUI section and when using the flag command with arguments.<br />Note: The flag name is not to be confused with a definition flag name. This checks for GD's core flags. The list can be found [here](https://github.com/bloodmc/GriefDefender/wiki/Flags#available-flags) |
+| griefdefender.user.claim.command.flag.debug | Permite alternar o modo de depuração do bandeira de reivindicação |
+| griefdefender.user.claim.command.flag.player | Permite usar o comando Claimflag para jogadores |
+| griefdefender.user.claim.command.flag.group | Permite usar o comando Claimflag para grupos |
+| griefdefender.user.claim.command.flag.reset | Permite usar o comando Claimreset |
+| griefdefender.user.claim.flag | Permissão base usada para verificar se o usuário tem acesso para usar um bandeira de núcleo específico. <br />O formato é `griefdefender.user.claim.flag.<flag_name>`.<br />Observação: Isso é verificado ao acessar a seção GUI ADVANCED do bandeira e ao usar o comando bandeira com argumentos.<br />Observação: O nome do bandeira não deve ser confundido com o nome do bandeira de definição. Isso verifica os principais bandeiras do GD. A lista pode ser encontrada [aqui](https://github.com/bloodmc/GriefDefender/wiki/Flags#available-flags) |
 
 ## Flag Definitions
-| Permission Node | Description |
+| Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.admin.custom.flag | Base permission used to check if user has access to a specific admin flag definition. <br />The format is   `griefdefender.admin.custom.flag.<preset>.<group>.<definition_flag_name>`. <br />Note: By default, this manages the delivered admin group which is mapped to the ADMIN tab. |
-| griefdefender.user.custom.flag | Base permission used to check if user has access to a specific user flag definition. <br />The format is   `griefdefender.user.custom.flag.<preset>.<group>.<definition_flag_name>`. <br />Note: By default, this manages the delivered user group which is mapped to the USER tab.|
+| griefdefender.admin.custom.flag | Permissão base usada para verificar se o usuário tem acesso a uma definição de bandeira de administrador específica. <br />O formato é   `griefdefender.admin.custom.flag.<preset>.<group>.<definition_flag_name>`. <br />Nota: Por padrão, isso gerencia o grupo de administração entregue que é mapeado para a guia ADMIN. |
+| griefdefender.user.custom.flag | Permissão base usada para verificar se o usuário tem acesso a uma definição de bandeira de usuário específica. <br />O formato é   `griefdefender.user.custom.flag.<preset>.<group>.<definition_flag_name>`. <br />Nota: Por padrão, isso gerencia o grupo de usuários entregue que é mapeado para a guia USUÁRIO.|
 
-_*See [Flag Definitions GUI](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI) for information on how to manage the flag GUI for both users and admins._
+_*Veja [GUI de definições de bandeiras](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI) para obter informações sobre como gerenciar a GUI do sinalizador para usuários e administradores._
 
 ## Opções
 | Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.admin.claim.command.option.base | Allows to use the claimoption command |
-| griefdefender.admin.claim.command.option.group | Allows to set group options in claims |
-| griefdefender.admin.claim.command.option.player | Allows to set player options in claims |
-| griefdefender.admin.claim.option | Allows to set options in claims |
-| griefdefender.admin.option.perk.fly.owner | Allows owners to fly in their own claim |
-| griefdefender.admin.option.perk.fly.accessor | Allows users to fly in claims where they have accessor trust |
-| griefdefender.admin.option.perk.fly.builder | Allows users to fly in claims where they have builder trust |
-| griefdefender.admin.option.perk.fly.container | Allows users to fly in claims where they have container trust |
-| griefdefender.admin.option.perk.fly.manager | Allows users to fly in claims where they have manager trust |
+| griefdefender.admin.claim.command.option.base | Permite usar o comando Claimoption |
+| griefdefender.admin.claim.command.option.group | Permite definir opções de grupo em reivindicações (Claimgroup) |
+| griefdefender.admin.claim.command.option.player | Apermite definir opções do jogador em reivindicações |
+| griefdefender.admin.claim.option | Permite definir opções nas reivindicações |
+| griefdefender.admin.option.perk.fly.owner | Permite que os proprietários voem em sua própria reivindicação |
+| griefdefender.admin.option.perk.fly.accessor | Permite que os usuários voem em reivindicações onde eles têm trust de acessor |
+| griefdefender.admin.option.perk.fly.builder | Permite que os usuários voem em reivindicações em que tenham trust de builder |
+| griefdefender.admin.option.perk.fly.container | Permite que os usuários voem em reivindicações em que tenham trust de container |
+| griefdefender.admin.option.perk.fly.manager | Permite que os usuários voem em reivindicações onde eles têm trust do manager |
 
 ## Trust
-| Permission Node | Description |
+| Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.user.claim.command.trust.group | Allows to grant group trust |
-| griefdefender.user.claim.command.trust.player | Allows to grant player trust |
-| griefdefender.user.claim.command.trust.list | Allows to list trusted players |
-| griefdefender.user.claim.command.trustall.group | Allows to grant group trust to all claims|
-| griefdefender.user.claim.command.trustall.player | Allows to grant player trust to all claims |
-| griefdefender.user.claim.command.untrust.group | Allows to revoke group trust |
-| griefdefender.user.claim.command.untrust.player | Allows to revoke player trust |
-| griefdefender.user.claim.command.untrustall.group | Allows to revoke group trust to all claims|
-| griefdefender.user.claim.command.untrustall.player | Allows to revoke player trust to all claims |
-| griefdefender.user.claim.trust.accessor | Allows to add accessors |
-| griefdefender.user.claim.trust.container | Allows to add containers |
-| griefdefender.user.claim.trust.builder | Allows to add builders |
-| griefdefender.user.claim.trust.manager | Allows to add managers |
-| griefdefender.user.claim.trust.remove | Allows to untrust players |
+| griefdefender.user.claim.command.trust.group | Permite conceder trust ao grupo |
+| griefdefender.user.claim.command.trust.player | Permite conceder trust ao jogador |
+| griefdefender.user.claim.command.trust.list | Permite listar jogadores com trust |
+| griefdefender.user.claim.command.trustall.group | Permite conceder trust de grupo a todas as reivindicações|
+| griefdefender.user.claim.command.trustall.player | Permite conceder trust do jogador a todas as reivindicações |
+| griefdefender.user.claim.command.untrust.group | Permite remover o trust do grupo |
+| griefdefender.user.claim.command.untrust.player | Permite remover o trust do jogador |
+| griefdefender.user.claim.command.untrustall.group | Permite remover otrust do grupo para todas as reivindicações|
+| griefdefender.user.claim.command.untrustall.player | Permite remover o trust do jogador em todas as reivindicações |
+| griefdefender.user.claim.trust.accessor | Permite adicionar accessor |
+| griefdefender.user.claim.trust.container | Permite adicionar containers |
+| griefdefender.user.claim.trust.builder | Permite adicionar builders |
+| griefdefender.user.claim.trust.manager | Permite adicionar managers |
+| griefdefender.user.claim.trust.remove | Permite untrust de jogadores |
 
-# Admin Permissions
+# Permissões adinistrativas
 
-| Permission Node | Description |
+| Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.advanced.admin.flags | Allows usage of advanced mode in flag GUI |
-| griefdefender.admin.bypass.ban | Allows bypass of bans |
-| griefdefender.admin.bypass.border-check | Allows bypass of claim border checks |
-| griefdefender.admin.bypass.option | Allows bypass of options |
-| griefdefender.admin.bypass.override.resize | Allows bypass of claim resize restrictions |
-| griefdefender.admin.bypass.override.limit | Allows bypass of claim creation limit restrictions |
-| griefdefender.admin.claim.command.adjust-claim-blocks | Allows to edit amount of bonus claim blocks |
-| griefdefender.admin.claim.command.admin-mode | Allows to use admin claim shovel mode |
-| griefdefender.admin.claim.command.ban | Allows to ban or unban an item, block, or entity id from all usage |
-| griefdefender.admin.claim.command.clear | Allows to clear entities within one or more claims |
-| griefdefender.admin.claim.command.schematic | Allows to manage claim schematics |
-| griefdefender.admin.claim.command.debug | Allows to use GDdebug |
+| griefdefender.advanced.admin.flags | Permite o uso do modo avançado na GUI do sinalizador |
+| griefdefender.admin.bypass.ban | Permite ignorar o banimento de reivindicação |
+| griefdefender.admin.bypass.border-check | Permite ignorar a verificações de fronteira de reivindicação (Util para entrar em reivindicações com probição de jogador) |
+| griefdefender.admin.bypass.option | Permite bypass de opções |
+| griefdefender.admin.bypass.override.resize | Permite ignorar as restrições de redimensionamento da reivindicação |
+| griefdefender.admin.bypass.override.limit | Permite ignorar as restrições de limite de criação de reivindicações |
+| griefdefender.admin.claim.command.adjust-claim-blocks | Permite editar a quantidade de blocos de bônus de reivindicação |
+| griefdefender.admin.claim.command.admin-mode | Permite usar o modo de reivindicação administrativa |
+| griefdefender.admin.claim.command.ban | Permite banir ou desbanir um item, bloco ou id de entidade de todos os usos |
+| griefdefender.admin.claim.command.clear | Permite limpar entidades dentro de uma ou mais reivindicações |
+| griefdefender.admin.claim.command.schematic | Permite gerenciar esquemático de reivindicações |
+| griefdefender.admin.claim.command.debug | Permite usar GDdebug |
 | griefdefender.admin.claim.command.delete.base | Allows to use the deleteclaim command |
 | griefdefender.admin.claim.command.delete.basic | Allows to delete basic claims |
 | griefdefender.admin.claim.command.delete.admin | Allows to delete admin claims |
