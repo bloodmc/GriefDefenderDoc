@@ -1,5 +1,5 @@
 module.exports = [
-	"/wiki",
+	"/br/wiki",
 	"Claim-Management", 
 	"Flag-Definitions", 
 	"Options",

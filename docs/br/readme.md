@@ -7,7 +7,7 @@ heroText: GriefDefender
 tagline: Um plugin de proteção projetado para Bukkit e Sponge!
 actions:
   - text: Como usar 💡
-    link: /wiki/
+    link: /br/wiki/
 
   - text: GitHub
     link: https://github.com/bloodmc/GriefDefender
@@ -16,7 +16,7 @@ actions:
 features:
   - title: Desempenho
     icon: FAST
-    details: Nada de coisas codificadas Rápido, leve e sem atrasos.
+    details: Nada feitos as pressas, código leve e sem atrasos.
     link: https://github.com/bloodmc/GriefDefender
 
   - title: Customizável
@@ -36,7 +36,7 @@ features:
 
   - title: IU interativa
     icon: smallscreen
-    details: Textos clicáveis no chat .Manuseie tudo lá.
+    details: Textos clicáveis no chat manuseie tudo por lá.
     link: https://github.com/bloodmc/GriefDefender
 
   - title: Suporte a Mods
@@ -46,7 +46,7 @@ features:
 
   - title: Impostos. Aluguel e vendas
     icon: moneybag
-    details: Aumente sua economia alugando ou vendendo seus créditos e muito mais.
+    details: Aumente sua economia alugando ou vendendo suas reivindicações e muito mais.
     link: https://github.com/bloodmc/GriefDefender
 
   - title: Sistema de permissão

@@ -1,6 +1,6 @@
-## How to add GD API as dependency
+## Como adicionar a API GD como dependência
 
-Note: Add jar as a `compileOnly` dependency.  (Do not include GD's API in your jar or any of its dependencies as it is provided by GriefDefender)
+Nota: Adicione jar como uma dependência `compileOnly`. (Não inclua a API do GD em seu jar ou qualquer uma de suas dependências, pois é fornecida pelo GriefDefender)
 
 
 ### Groovy
@@ -8,7 +8,7 @@ Note: Add jar as a `compileOnly` dependency.  (Do not include GD's API in your j
 compileOnly group: 'com.griefdefender', name: 'api', version: '2.1.0-SNAPSHOT'
 ```
 
-#### Repository
+#### Repositório
 ```
 maven 
 {
@@ -28,7 +28,7 @@ maven
 </dependency>
 ```
 
-#### Repository
+#### Repositório
 ```
 <repository>
     <id>griefdefender</id>
@@ -36,12 +36,12 @@ maven
 </repository>
 ```
 
-Note: Latest API snapshots can be found on maven repo https://repo.glaremasters.me/#browse/browse:bloodshot:com%2Fgriefdefender%2Fapi%2F2.1.0-SNAPSHOT  
+Nota: os instantâneos de API mais recentes podem ser encontrados no repositório maven https://repo.glaremasters.me/#browse/browse:bloodshot:com%2Fgriefdefender%2Fapi%2F2.1.0-SNAPSHOT  
 
 
-## Code Examples
+## Exemplos de código
 
-### Check if location is part of a user claim  
+### Verifique se a localização faz parte de uma reclamação do usuário
 
 ```java
 final Claim claim = GriefDefender.getCore().getClaimAt(location);
@@ -52,7 +52,7 @@ if (claim != null && !claim.isWilderness()) {
 ```
 
 
-## Plugin Examples using GD's API  
+## Exemplos de plugins usando a API do GD
 
 * [GDHooks](https://github.com/bloodmc/GDHooks)
 * [RealEstate](https://github.com/bloodmc/RealEstate)

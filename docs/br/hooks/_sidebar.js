@@ -1,5 +1,5 @@
 module.exports = [
-	"/wiki",
+	"/br/wiki",
 	"GDHooks",
     "Dynmap",
 	"PlaceholderAPI",

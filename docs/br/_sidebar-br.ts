@@ -7,14 +7,14 @@ export const en = sidebar({
 	"/wiki/": [ 
         "/",
         {
-          prefix: "/wiki/",
+          prefix: "/br/wiki/",
 		  collapsable: false,
           children: ["", "Configuration", "Permissions", "Commands"],
         },
 		{
 		  text: "Básico",
 		  icon: "search",
-		  prefix: "/wiki/basic/",
+		  prefix: "/br/wiki/basic/",
 		  collapsable: true,
 		  children: ["Claim-Management", "Claim-Types", "Custom-Alias-Creation", 
 		  "GUI", "Flag-Definitions-GUI", "Options", "PvP",
@@ -23,14 +23,14 @@ export const en = sidebar({
 		{
 		  text: "Uso avançado",
 		  icon: "grid",
-		  prefix: "/wiki/advanced/",
+		  prefix: "/br/wiki/advanced/",
 		  collapsable: true,
 		  children: ["Contexts", "Debugging", "Flags", "Global-Config", "Optimizations"],
 		},
 		{
 		  text: "Migração",
 		  icon: "import",
-		  prefix: "/wiki/migration/",
+		  prefix: "/br/wiki/migration/",
 		  collapsable: true,
 		  children: ["GriefPrevention", "WorldGuard"],
 		},
