@@ -1,58 +1,58 @@
 ---
-title: Tax System
+title: Sistema de taxas
 tag: eco
 category: claim
 icon: tax
 ---
 
-## General  
-GD provides a tax system to tax claim owners based on the amount of land they own.  
+## Em geral
+A GD fornece um sistema taxas para os proprietários de reivindicações fiscais com base na quantidade de terra que possuem.
 
-This system is disabled by default. To enable, open up `global.conf` and set the `tax-system` setting to `true`.  
+Este sistema está desabilitado por padrão. Para habilitar, abra `global.conf` e defina a configuração `tax-system` para `true`.
 
-## Configuration  
+## Configuração
 
-### Tax apply time
-By default, taxes are taken from claim owners in real-time daily at 00:00 military time.  
-You can configure this time by adjusting the setting `tax-apply-hour` in `global.conf`.  
+### Tempo de aplicação do imposto
+Por padrão, os impostos são cobrados dos proprietários de reivindicações em tempo real diariamente às 00:00, horário militar.
+Você pode configurar este tempo ajustando a configuração `tax-apply-hour` em `global.conf`.
 
-### Tax rate  
-By default, claim owners are charged a flat rate of `0.1` in currency per block they own.  
-For ex. A claim that is 10x10 would be charged `0.1 * 100` which would be a total of `10`.  
-You can configure this rate for all users by adjusting `tax-rate` in `options.conf` under `default-user-options`.  
+### Taxa de imposto
+Por padrão, os proprietários de reivindicações são cobrados uma taxa fixa de '0,1' em moeda por bloco que possuem.
+Por ex. Uma reivindicação de 10 x 10 seria cobrada como "0,1 * 100", que seria um total de "10".
+Você pode configurar esta taxa para todos os usuários ajustando `tax-rate` em `options.conf` em `default-user-options`.
 
-Note: 2D claims are only charged `length * width`. Height is not included.  
-Note: 3D claims are charged `length * width * height`.  
+Observação: as reivindicações 2D são cobradas apenas como `comprimento * largura`. A altura não está incluída.
+Nota: as reivindicações 3D são cobradas `comprimento * largura * altura`.
 
-### Tax past due  
-If a claim owners fails to pay his/her taxes then the GD will freeze the claim.  
-Freezing the claim stops the claim owner from interacting with their claim until they pay their complete tax balance.  
-By default, this occurs after 7 days of an unpaid balance.  
-This setting can be adjusted by changing `tax-expiration` in `options.conf` under `default-user-options`.  
+### Imposto vencido
+Se os proprietários de uma reivindicação não pagarem seus impostos, o GD congelará a reivindicação.
+Congelar a reivindicação impede que o titular da reivindicação interaja com a reivindicação até que ele pague o saldo fiscal completo.
+Por padrão, isso ocorre após 7 dias de saldo não pago.
+Esta configuração pode ser ajustada alterando `tax-expiration` em `options.conf` em `default-user-options`.
 
-### Tax claim deletion  
-If a claim owner fails to pay their taxes after configured setting `tax-expiration` then GD will start a countdown to delete the claim.  
-By default, this occurs 7 days after a claim is past due and frozen.  
-This setting can be adjusted by changing `tax-expiration-days-keep` which is the amount, in days, to prevent a claim from being deleted after frozen.   
+### Exclusão da reivindicação por imposto
+Se o proprietário de uma reivindicação não pagar seus impostos após a configuração "expiração de impostos", o GD iniciará uma contagem regressiva para excluir a reivindicação.
+Por padrão, isso ocorre 7 dias depois que uma reivindicação está vencida e congelada.
+Essa configuração pode ser ajustada alterando o `tax-expiration-days-keep`, que é o valor, em dias, para evitar que uma reivindicação seja excluída após o congelamento.
 
-### Tax command  
+### Comando de imposto
 
 #### `/gd claim tax`
-**Arguments**: `balance|force|pay <amount>]`  
-Used to manage taxes of a claim.  
-Note: The argument `force` allows an admin to pay a claim's tax balance for another player.  
-Note: Requires economy plugin.
+**Argumentos**: `balance|force|pay <quantia>]`
+Usado para gerenciar impostos de uma reivindicação.
+Nota: O argumento `force` permite que um administrador pague o saldo de impostos de uma reivindicação para outro jogador.
+Nota: Requer plugin de economia.
 
 
-### Adjusting options for specific users 
+### Ajustando opções para usuários específicos
 
-See https://github.com/bloodmc/GriefDefender/wiki/Options for adjusting options per user or group.
+Veja https://github.com/bloodmc/GriefDefender/wiki/Options para ajustar as opções por usuário ou grupo.
 
 
-## Tax options
+## Opções fiscais
 
-Option                                           | Default Value | Description | 
+Option                                           | Valor padrão | Descrição | 
 -------------------------------------------------|---------------|--------------|
-```griefdefender.tax-expiration``` | 7		| Number of days after not paying taxes before a claim will be frozen.
-```griefdefender.tax-expiration-days-keep``` | 7 		| Number of days to keep a claim after frozen and before being deleted 
-```griefdefender.tax-rate``` | 0.1 | Tax is calculated by the number of claimblocks in the claim. ```Number of claimblocks * tax-rate```
+```griefdefender.tax-expiration``` | 7		| Número de dias após o não pagamento de impostos antes que uma reivindicação seja congelada.
+```griefdefender.tax-expiration-days-keep``` | 7 		| Número de dias para manter uma reivindicação depois de congelada e antes de ser excluída
+```griefdefender.tax-rate``` | 0.1 | O imposto é calculado pelo número de blocos de reivindicação na reivindicação. ```Número de blocos de reivindicação * tax-rate```
