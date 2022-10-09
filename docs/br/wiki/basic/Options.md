@@ -1,171 +1,171 @@
 ---
-title: Options
+title: Opções
 tag: options
 category: claim
 icon: Options
 ---
 
-Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.  
+As opções, também conhecidas como Meta, são uma maneira de configurar plugins usando contextos de jogador/grupo através do seu sistema de permissão, o que lhe dá o benefício de poder definir configurações diferentes para diferentes jogadores, grupos, mundos etc.
 
-:warning: It is HIGHLY recommended to learn how LP Meta works before proceeding. See https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta
+:warning: É ALTAMENTE recomendado aprender como o LP Meta funciona antes de continuar. Veja https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta
 
 
-## Configuration  
-Default values can be changed in `options.conf`  
-See [Option Config](https://github.com/bloodmc/GriefDefender/wiki/Configuration#options)  
+## Configuração  
+Os valores padrão podem ser alterados em `options.conf`
+Veja [Configuração de opções](https://github.com/bloodmc/GriefDefender/wiki/Configuration#options)
 
-## Built-in Commands
+## Comandos embutidos
 
-Options support the same format as flags  
+As opções suportam o mesmo formato que as bandeiras
 
-Claim - `/claimoption <option> <value> [contexts]`  
-Player - `/cop <player> <option> <value> [contexts]`  
-Group - `/cog <group> <option> <value> [contexts]`  
+Reivindicação - `/claimoption <option> <value> [contexts]`  
+Jogador - `/cop <player> <option> <value> [contexts]`  
+Grupo - `/cog <group> <option> <value> [contexts]`  
 
-### Contexts
+### Contextos
 
-All options may use one or more contexts when applied as meta in LuckPerms.   
-See https://github.com/bloodmc/GriefDefender/wiki/Contexts on what contexts you can use and how they work.   
+Todas as opções podem usar um ou mais contextos quando aplicadas como meta em LuckPerms.
+Veja https://github.com/bloodmc/GriefDefender/wiki/Contexts sobre quais contextos você pode usar e como eles funcionam.
 
-### Examples  
+### Exemplos  
 
-* Send a welcome message to players entering a claim as console.  
-`/claimoption player-command-enter "/tellraw %player% [\"\",{\"text\":\"Welcome %player%!\",\"color\":\"gold\"},{\"text\":\"\\nYou are visiting %owner%s claim.\\nEnjoy your stay!\\n\\n-\"}]" run_for=member run_as=console`  
-* Set group vip's `create-limit` to 100 default for basic claims.  
-`/cog vip create-limit 100 default=basic`  
-* Set player JoeSmith's `expiration` to 30 days default for basic claims.  
-`/cop JoeSmith expiration 30 default=basic`  
-* Deny player hunger in claim player is in.  
-`/claimoption player-deny-hunger true`  
+* Envie uma mensagem de boas-vindas aos jogadores que fizerem uma reivindicação como console. 
+`/claimoption player-command-enter "/tellraw %player% [\"\",{\"text\":\"Bem-vindo %player%!\",\"color\":\"gold\"},{\"text\":\"\\nVocê está visitando a reivindicação do %owner%s.\\nAproveite sua estadia!\\n\\n-\"}]" run_for=member run_as=console`  
+* Defina o `create-limit` do grupo vip como padrão de 100 para reivindicações básicas.
+`/cog vip create-limit 100 default=basic`
+* Defina a `expiration` do jogador JoeSmith como padrão de 30 dias para reivindicações básicas.
+`/cop JoeSmith expiração 30 default=basic`
+* Negue a fome do jogador ao reivindicar que o jogador está dentro.
+`/claimoption player-deny-hunger true`
 
-Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.conf`. See [Option Control](https://github.com/bloodmc/GriefDefender/wiki/Options/_edit#option-control)    
-Note: Using `/claimoption` with no arguments opens up the GUI and displays all claim options for claim you are standing in including default options that affect all claims.  
+Nota: Se você receber uma mensagem informando que a opção não está habilitada, habilite-a em `option-control` em `options.conf`. Veja [Controle de opções](https://github.com/bloodmc/GriefDefender/wiki/Options/_edit#option-control)
+Nota: O uso de `/claimoption` sem argumentos abre a Interface e exibe todas as opções de reivindicação para a reivindicação em que você está, incluindo opções padrão que afetam todas as reivindicações.
 
 ## LuckPerms
 
 `/lp user/group <user|group> meta set <option> <value> [contexts]`
 
-Ex1. Set create basic claim limit of 50 for a group called `vip`  
+Ex1. Definir limite de reivindicação básico de 50 para um grupo chamado `vip`  
 `/lp group vip meta set griefdefender.create-limit 50 gd_claim_default=basic server=global`
 
-Ex1. Set create basic claim limit of 50 for a group called `vip` on server mc01  
+Ex1. Definir limite de reivindicação básico de 50 para um grupo chamado `vip` no servidor mc01 
 `/lp group vip meta set griefdefender.create-limit 50 gd_claim_default=basic server=mc01`
 
-Reset all users accrued claimblocks  
+Redefinir todos os blocos de reivindicação acumulados pelos jogadores 
 `/lp bulkupdate users delete "permission ~~ meta.griefdefender\\.accrued-blocks.%"`
 
-Reset all users bonus claimblocks  
+Redefinir todos os blocos de reivindicação de bônus dos jogadores
 `/lp bulkupdate users delete "permission ~~ meta.griefdefender\\.bonus-blocks.%"`  
 
-### Useful LP DB queries  
-Note: Change table prefix if not using default `luckperms`
+### Consultas úteis de banco de dados LP
+Nota: Altere o prefixo da tabela se não estiver usando o padrão `luckperms`
 
 
-List all user accrued blocks
+Listar todos os blocos acumulados pelo usuário
 ```sql
 SELECT B.username, REGEXP_REPLACE(A.permission, '[^0-9]+', '') FROM luckperms_user_permissions A LEFT JOIN luckperms_players B ON A.uuid=B.uuid WHERE permission LIKE '%accrued-blocks%'
 ```
 
 
-List all user bonus blocks
+Listar todos os blocos de bônus do usuário
 ```sql
 SELECT B.username, REGEXP_REPLACE(A.permission, '[^0-9]+', '') FROM luckperms_user_permissions A LEFT JOIN luckperms_players B ON A.uuid=B.uuid WHERE permission LIKE '%bonus-blocks%'
 ```
 
 
-Reset ALL user accrued blocks  
-:warning:  This will wipe ALL user accrued block data. Use with caution.
+Redefinir TODOS os blocos acumulados pelo usuário
+:warning:  Isso limpará TODOS os dados de bloco acumulados pelo usuário. Use com cuidado.
 
 ```sql
 DELETE FROM luckperms_user_permissions WHERE permission LIKE '%griefdefender\\\\.accrued-blocks%';
 ```
 
 
-Reset ALL user bonus blocks  
-:warning:  This will wipe ALL user bonus block data. Use with caution.
+Redefinir TODOS os blocos de bônus do usuário 
+:warning:  Isso limpará TODOS os dados do bloco de bônus do usuário. Use com cuidado.
 
 ```sql
 DELETE FROM luckperms_user_permissions WHERE permission LIKE '%griefdefender\\\\.bonus-blocks%';
 ```
 
 
-See https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta and https://luckperms.net/wiki/Meta-Commands for more information on how to use it directly in LuckPerms
+Consulte https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta e https://luckperms.net/wiki/Meta-Commands para obter mais informações sobre como usá-lo diretamente no LuckPerms
 
-## Global Options
+## Opções globais
 
-Global Options can be set globally, or on a server, world, group or player.  
-They cannot be set on individual claims or claim types.  
+As opções globais podem ser definidas globalmente ou em um servidor, mundo, grupo ou jogador.
+Eles não podem ser definidos em reivindicações individuais ou tipos de reivindicações.
 
-Global option usage in GD commands and GUI can be managed with permission `griefdefender.admin.claim.option.global.<optionname>`.  
-Note: Leave out `griefdefender.` from `<optionname>`.
+O uso de opções globais em comandos GD e GUI pode ser gerenciado com permissão `griefdefender.admin.claim.option.global.<optionname>`.  
+Nota: Deixe de fora `griefdefender.` de `<optionname>`.
+
+Para usar as opções GD em comandos LP, use o formato de meta-chave`griefdefender.<optionname>`  
+
+Opção                                           | Valor padrão | Descrição | 
+-------------------------------------------------|---------------|--------------|
+```griefdefender.abandon-return-ratio```       |   1.0         | A porção de blocos de reivinidcação devolvida a um jogador quando uma reivinidcação é abandonada. Nota: Ao usar o Modelo Econômico, esta é a proporção de fundos devolvidos ao abandonar uma reivinidcação.
+```griefdefender.accrued-blocks```       |   0        | O número total de blocos de reivindicação acumulados por um jogador. <br />Nota: Isso não conta para blocos de bônus e não tem uso/efeito sendo definido em um grupo.
+```griefdefender.blocks-accrued-per-hour```    |   120         | Blocos ganhos por hora. Por padrão, cada jogador 'ativo' deve receber 6 blocos a cada 5 minutos. Nota: O jogador deve ter movido pelo menos 3 blocos desde a última verificação. Se estiver usando 'wilderness-cuboids', esse valor é 30720 por padrão com 1536 blocos a cada 5 minutos para os jogadores. A configuração mínima é 12 devido ao intervalo de verificação de 5 minutos, configurá-lo para baixo resultará em nenhum acúmulo de blocos.
+```griefdefender.bonus-blocks```       |   0        | O número total de blocos de reivindicação de bônus dados a um jogador e não tem uso/efeito sendo definido em um grupo.
+```griefdefender.chest-expiration```     |   7           | Número de dias de inatividade antes que uma reivindicação automática de baús seja excluída.
+```griefdefender.economy-block-cost``` | 0,0 | O valor da economia a cobrar por bloco de uma reivindicação. <br />Nota: Se definido como 0 ou menos, o recurso de compra de blocos será desabilitado.
+```griefdefender.economy-block-sell-return``` | 0.0 | O valor de retorno para vender blocos de reivindicação. <br />Nota: Se definido como 0 ou menos, o recurso de venda de blocos será desativado.
+```griefdefender.expiration```    |   14          | Número de dias de inatividade antes que uma reivindicação seja excluída.<br />Observação: Se definido como 0, desabilitará a expiração da reivindicação para o usuário/grupo.
+```griefdefender.initial-blocks```       |   120         | O número de blocos de reivindicação inicial de bônus que um jogador possui inicialmente. <br />Nota: Este número não é contado como parte dos blocos acumulados. <br />Nota: Se estiver usando 'wilderness-cuboids', este valor é 25600 por padrão.
+```griefdefender.max-accrued-blocks```   |   80000       | O limite de blocos acumulados (ao longo do tempo). não limita blocos comprados ou concedidos por administradores. <br />Nota: Se estiver usando 'wilderness-cuboids', este valor é 20480000 por padrão. <br />Nota: Esta configuração afetará o comando `/scb`.
+```griefdefender.max-bonus-blocks```   |   -1      | A quantidade máxima de blocos de bônus que um jogador pode obter. <br />Nota: Defina como -1 ou menos para tornar ilimitado. <br />Nota: Esta configuração afetará os comandos `/acb` e `/buyclaimblocks`, use com cuidado.
+```griefdefender.radius-inspect``` | 100 | O raio em quarteirões usado para pesquisar reivindicações próximas durante a inspeção.
+
+## Opções de reivindicação
+
+CLaim As opções podem ser definidas em reivindicações individuais, tipos de reivindicações, servidor, mundo, grupo ou jogador.
+
+O uso de opções globais em comandos GD e GUI pode ser gerenciado com permissão `griefdefender.admin.claim.option.<optionname>`.
+Nota: Deixe de fora `griefdefender.` de `<optionname>`.
+
+Para usar as opções GD em comandos LP, use o formato de meta-chave `griefdefender.<optionname>`  
+
+Opção                                           | Valor padrão | Descrição | 
+-------------------------------------------------|---------------|--------------|
+```griefdefender.abandon-delay```  | 0 | O número de dias de atraso antes de permitir que um jogador abandone uma reivindicação recém-criada.
+```griefdefender.create-mode```    | area | O modo de reivindicação padrão definido para jogadores no login. (area = 2D, volume = 3D)
+```griefdefender.create-limit```         |   -1           | Número máximo de reivindicação por jogador. (-1 = ilimitado)
+```griefdefender.min-level```<br>```griefdefender.max-level```    |   0/255          | O nível mínimo/máximo em que uma reivindicação pode ser criada.
+```griefdefender.min-size-x```<br>```griefdefender.max-size-x```    |   10/5000          | O tamanho mínimo/máximo em blocos que o eixo x pode ter.
+```griefdefender.min-size-y```<br>```griefdefender.max-size-y```    |   5/256          | O tamanho mínimo/máximo em blocos que o eixo y pode ter.
+```griefdefender.min-size-z```<br>```griefdefender.max-size-z```    |   10/5000          | O tamanho mínimo/máximo em blocos que o eixo z pode ter.
+```griefdefender.player-command-enter``` | undefined | Usado para executar um comando na reivindicação enter com contextos específicos. Aceita os seguintes espaços reservados : %player%, %owner%, %uuid%, %world%, %server%, %location%
+```griefdefender.player-command-exit``` | undefined | Usado para executar um comando na saída de reivindicação com contextos específicos. Aceita os seguintes espaços reservados : %player%, %owner%, %uuid%, %world%, %server%, %location%
+```griefdefender.player-deny-flight``` | false | Usado para determinar se um jogador não pode voar em uma reivindicação. Nota: Isso não dá aos jogadores a habilidade de voar, apenas remove a habilidade se definida. Isso fornece a maior compatibilidade com plugins.
+```griefdefender.player-weather``` | undefined | Usado para definir o clima de um jogador em uma reivindicação. Os tipos suportados são claros e chuvosos.
+```griefdefender.pvp``` | undefined | Usado para determinar se os jogadores podem lutar entre si.
+```griefdefender.pvp-combat-command``` | false | Usado para determinar se um jogador pode usar comandos durante o combate PvP.
+```griefdefender.pvp-combat-teleport``` | false | Usado para determinar se um jogador pode se teletransportar durante o combate PvP.
+```griefdefender.pvp-combat-timeout``` | 15 | Usado para determinar quantos segundos o combate PvP deve continuar após o dano mais recente.
+```griefdefender.rent-restore``` | false | Usado para determinar se um proprietário de aluguel tem permissão para ter sua reivindicação restaurada automaticamente na data de término do aluguel.<br />Observação: Isso exige que a reivindicação de aluguel tenha uma data de término.
+```griefdefender.tax-expiration``` | 7		| Número de dias após o não pagamento de impostos antes que uma reivindicação seja congelada.
+```griefdefender.tax-expiration-days-keep``` | 7 		| Número de dias para manter uma reivindicação depois de congelada e antes de ser excluída
+```griefdefender.tax-rate``` | 0.1 | O imposto é calculado pelo número de blocos de reivindicação na reivindicação. ```Número de blocos de reivindicação * tax-rate```
+
+## Opções de administrador
+
+As opções de administração podem ser definidas em reivindicações individuais, tipos de reivindicações, servidor, mundo, grupo ou jogador.
+
+O uso de opções globais em comandos GD e GUI pode ser gerenciado com permissão `griefdefender.admin.claim.option.admin.<optionname>`.
+Nota: Deixe de fora `griefdefender.` de `<optionname>`.
 
 To use GD options in LP commands, use the meta key format `griefdefender.<optionname>`  
 
-Option                                           | Default Value | Description | 
+Opção                                           | Valor padrão | Descrição | 
 -------------------------------------------------|---------------|--------------|
-```griefdefender.abandon-return-ratio```       |   1.0         | The portion of claim blocks returned to a player when a claim is abandoned. Note: When using Economy Mode, this is the ratio of funds returned when abandoning a claim.
-```griefdefender.accrued-blocks```       |   0        | The total number of claim blocks accrued by a player. <br />Note: This does not account for bonus blocks, and has no use/effect being set on a group.
-```griefdefender.blocks-accrued-per-hour```    |   120         | Blocks earned per hour. By default, each 'active' player should receive 6 blocks every 5 min.  Note: The player must have moved at least 3 blocks since last delivery. If using 'wilderness-cuboids', this value is 30720 by default with 1536 blocks every 5 min to players. Minimum setting is 12 due to 5 minute check interval, setting it lower will result in no blocks accruing.
-```griefdefender.bonus-blocks```       |   0        | The total number of bonus claim blocks given to a player, and has no use/effect being set on a group.
-```griefdefender.chest-expiration```     |   7           | Number of days of inactivity before an automatic chest claim will be deleted.
-```griefdefender.economy-block-cost``` | 0.0 | The economy amount to charge per block of a claim. <br />Note: If set to 0 or less, the buy block feature will be disabled.
-```griefdefender.economy-block-sell-return``` | 0.0 | The return value for selling claim blocks. <br />Note: If set to 0 or less, the sell block feature will be disabled.
-```griefdefender.expiration```    |   14          | Number of days of inactivity before a claim will be deleted.<br />Note: If set to 0, it will disable claim expiration for user/group.
-```griefdefender.initial-blocks```       |   120         | The number of bonus starter claim blocks a player has initially. <br />Note: This number is not counted as part of accrued blocks. <br />Note: If using 'wilderness-cuboids', this value is 25600 by default.
-```griefdefender.max-accrued-blocks```   |   80000       | The limit on accrued blocks (over time). doesn't limit purchased or admin-gifted blocks. <br />Note: If using 'wilderness-cuboids', this value is 20480000 by default. <br />Note: This setting will affect `/scb` command.
-```griefdefender.max-bonus-blocks```   |   -1      | The maximum amount of bonus blocks a player can obtain. <br />Note: Set to -1 or less to make unlimited. <br />Note: This setting will affect commands `/acb` and `/buyclaimblocks`, use with caution.
-```griefdefender.radius-inspect``` | 100 | The radius in blocks used to search for nearby claims while inspecting.
-
-## Claim Options
-
-Claim Options can be set on individual claims, claim types, server, world, group or player.  
-
-Global option usage in GD commands and GUI can be managed with permission `griefdefender.admin.claim.option.<optionname>`.  
-Note: Leave out `griefdefender.` from `<optionname>`.
-
-To use GD options in LP commands, use the meta key format `griefdefender.<optionname>`  
-
-Option                                           | Default Value | Description | 
--------------------------------------------------|---------------|--------------|
-```griefdefender.abandon-delay```  | 0 | The number of days to delay before allowing a player to abandon a newly created claim.
-```griefdefender.create-mode```    | area | The default claiming mode set for players on login. (area = 2D, volume = 3D)
-```griefdefender.create-limit```         |   -1           | Maximum number of claims per player. (-1 = unlimited)
-```griefdefender.min-level```<br>```griefdefender.max-level```    |   0/255          | The minimum/maximum level that a claim can be created in.
-```griefdefender.min-size-x```<br>```griefdefender.max-size-x```    |   10/5000          | The min/max size in blocks that the x-axis can be.
-```griefdefender.min-size-y```<br>```griefdefender.max-size-y```    |   5/256          | The min/max size in blocks that the y-axis can be.
-```griefdefender.min-size-z```<br>```griefdefender.max-size-z```    |   10/5000          | The min/max size in blocks that the z-axis can be.
-```griefdefender.player-command-enter``` | undefined | Used for executing a command on claim enter with specific contexts. Accepts the following placeholders : %player%, %owner%, %uuid%, %world%, %server%, %location%
-```griefdefender.player-command-exit``` | undefined | Used for executing a command on claim exit with specific contexts. Accepts the following placeholders : %player%, %owner%, %uuid%, %world%, %server%, %location%
-```griefdefender.player-deny-flight``` | false | Used to determine if a player is unable to fly in a claim.  Note: This does not give players the ability to fly, it merely removes the ability if set. This provides the greatest compatibility with plugins.
-```griefdefender.player-weather``` | undefined | Used to a set player's weather in a claim. Supported types are clear and rain.
-```griefdefender.pvp``` | undefined | Used to determine if players can combat each other.
-```griefdefender.pvp-combat-command``` | false | Used to determine if a player can use commands during PvP combat.
-```griefdefender.pvp-combat-teleport``` | false | Used to determine if a player can teleport during PvP combat.
-```griefdefender.pvp-combat-timeout``` | 15 | Used to determine how many seconds PvP combat is considered to continue after the most recent damage.
-```griefdefender.rent-restore``` | false | Used to determine if a rent owner has permission to have their claim automatically restored on rent end date.<br />Note: This requires the claim rental to have an end date.
-```griefdefender.tax-expiration``` | 7		| Number of days after not paying taxes before a claim will be frozen.
-```griefdefender.tax-expiration-days-keep``` | 7 		| Number of days to keep a claim after frozen and before being deleted 
-```griefdefender.tax-rate``` | 0.1 | Tax is calculated by the number of claimblocks in the claim. ```Number of claimblocks * tax-rate```
-
-## Admin Options
-
-Admin Options can be set on individual claims, claim types, server, world, group or player.  
-
-Global option usage in GD commands and GUI can be managed with permission `griefdefender.admin.claim.option.admin.<optionname>`.   
-Note: Leave out `griefdefender.` from `<optionname>`.
-
-To use GD options in LP commands, use the meta key format `griefdefender.<optionname>`  
-
-Option                                           | Default Value | Description | 
--------------------------------------------------|---------------|--------------|
-```griefdefender.player-deny-godmode``` | false | Used to determine if a player can be in godmode within a claim.  Note: This does not give players the ability to be in godmode, it merely removes the ability if set. This provides the greatest compatibility with plugins.
-```griefdefender.player-deny-hunger``` | false | Used to if a player's hunger is denied in a claim.
-```griefdefender.player-gamemode``` | undefined | Used to determine the gamemode of a player in a claim. Accepts the following values : ADVENTURE, CREATIVE, SURVIVAL, SPECTATOR, UNDEFINED.
-```griefdefender.player-health-regen``` | 0.0 | Used to set the health regen amount for a player in a claim.  Note: If the player is at max health, this will have no effect.
-```griefdefender.player-item-drop-lock``` | false | Used to determine if a player's dropped items should be locked from pickup by others on death.
-```griefdefender.player-keep-inventory``` | undefined | Used to determine if a player can keep inventory after death in a claim.
-```griefdefender.player-keep-level``` | undefined | Used to determine if a player can keep their level after death in a claim.
-```griefdefender.player-teleport-cost``` | undefined | Used to determine the cost to teleport a player to a new location.
-```griefdefender.player-teleport-delay``` | 0.0 | Used to determine the delay, in seconds, before teleporting a player to a new location.
-```griefdefender.player-walk-speed``` | -1.0 | Used to set a player's walk speed in a claim.  Note: (-1 = undefined)
-```griefdefender.spawn-limit``` | 0 | The limit of entity spawns a claim can have.
+```griefdefender.player-deny-godmode``` | false | Usado para determinar se um jogador pode estar no modo deus dentro de uma reivindicação. Nota: Isso não dá aos jogadores a habilidade de estar no Godmode, apenas remove a habilidade se definida. Isso fornece a maior compatibilidade com plugins.
+```griefdefender.player-deny-hunger``` | false | Usado se a fome de um jogador for negada em uma reivindicação.
+```griefdefender.player-gamemode``` | undefined | Usado para determinar o modo de jogo de um jogador em uma reivindicação. Aceita o seguinte valors : ADVENTURE, CREATIVE, SURVIVAL, SPECTATOR, UNDEFINED.
+```griefdefender.player-health-regen``` | 0.0 | Usado para definir a quantidade de regeneração de saúde para um jogador em uma reivindicação. Nota: Se o jogador estiver com a saúde máxima, isso não terá efeito.
+```griefdefender.player-item-drop-lock``` | false | Usado para determinar se os itens dropados de um jogador devem ser impedidos de pegar por outros após a morte.
+```griefdefender.player-keep-inventory``` | undefined | Usado para determinar se um jogador pode manter o inventário após a morte em uma reivindicação.
+```griefdefender.player-keep-level``` | undefined | Usado para determinar se um jogador pode manter seu nível após a morte em uma reivindicação.
+```griefdefender.player-teleport-cost``` | undefined | Usado para determinar o custo de teletransportar um jogador para um novo local.
+```griefdefender.player-teleport-delay``` | 0.0 | Usado para determinar o atraso, em segundos, antes de teletransportar um jogador para um novo local.
+```griefdefender.player-walk-speed``` | -1.0 | Usado para definir a velocidade de caminhada de um jogador em uma reivindicação. Nota: (-1 = undefined)
+```griefdefender.spawn-limit``` | 0 | O limite de geração de entidade que uma declaração pode ter.
