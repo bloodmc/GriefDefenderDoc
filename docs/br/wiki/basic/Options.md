@@ -162,10 +162,10 @@ Opção                                           | Valor padrão | Descrição 
 ```griefdefender.player-deny-hunger``` | false | Usado se a fome de um jogador for negada em uma reivindicação.
 ```griefdefender.player-gamemode``` | undefined | Usado para determinar o modo de jogo de um jogador em uma reivindicação. Aceita o seguinte valors : ADVENTURE, CREATIVE, SURVIVAL, SPECTATOR, UNDEFINED.
 ```griefdefender.player-health-regen``` | 0.0 | Usado para definir a quantidade de regeneração de saúde para um jogador em uma reivindicação. Nota: Se o jogador estiver com a saúde máxima, isso não terá efeito.
-```griefdefender.player-item-drop-lock``` | false | Usado para determinar se os itens dropados de um jogador devem ser impedidos de pegar por outros após a morte.
+```griefdefender.player-item-drop-lock``` | false | Usado para determinar se os itens dropados de um jogador devem ser impedidos de pegar por outros jogadores após a morte.
 ```griefdefender.player-keep-inventory``` | undefined | Usado para determinar se um jogador pode manter o inventário após a morte em uma reivindicação.
 ```griefdefender.player-keep-level``` | undefined | Usado para determinar se um jogador pode manter seu nível após a morte em uma reivindicação.
 ```griefdefender.player-teleport-cost``` | undefined | Usado para determinar o custo de teletransportar um jogador para um novo local.
 ```griefdefender.player-teleport-delay``` | 0.0 | Usado para determinar o atraso, em segundos, antes de teletransportar um jogador para um novo local.
 ```griefdefender.player-walk-speed``` | -1.0 | Usado para definir a velocidade de caminhada de um jogador em uma reivindicação. Nota: (-1 = undefined)
-```griefdefender.spawn-limit``` | 0 | O limite de geração de entidade que uma declaração pode ter.
+```griefdefender.spawn-limit``` | 0 | O limite de geração de entidade que uma reivindicação pode ter.
