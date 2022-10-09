@@ -1,19 +1,19 @@
 ---
-title: Rent System
+title: Sistema de aluguel
 tag: eco
 category: claim
 icon: rent
 ---
 
-:warning: The rent system is currently being overhauled for an upcoming version. If you are using a Bukkit platform, it is recommended to use RealEstate on discord :warning: 
+:warning: O sistema de aluguel está sendo reformulado para uma versão futura. Se você estiver usando uma plataforma Bukkit, é recomendável usar RealEstate no discord :warning: 
 
-![Rent System](https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png)
+![Sistema de aluguel](https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png)
 
-This new system will allow you to set your claim up for rent and earn some money on the way. 
+Este novo sistema permitirá que você configure seu pedido de aluguel e ganhe algum dinheiro no caminho.
 
-# How to enable it
+# Como habilitar
 
-Open your global.conf file and under economy section, you will find the following lines:
+Abra seu arquivo global.conf e na seção economia, você encontrará as seguintes linhas:
 
 ```
         # The specific hour in day to attempt to get owed claim rent balances from delinquent renters. Note: This uses military time and accepts values between 0-23. Default: 0
@@ -43,103 +43,103 @@ Open your global.conf file and under economy section, you will find the followin
         sign-update-interval=5
 ```
 
-# In Game Use
+# Em uso do jogo
 
-After you have properly modified the config and did `/gdreload` or (better) restarted the server, now you can establish your first claim to be rented.
+Depois que você modificou a configuração corretamente e fez `/gdreload` ou (melhor) reiniciou o servidor, agora você pode estabelecer sua primeira reclamação para ser alugado.
 
-This system currently works fine for Basic, Town and Subdivided claims.
+Este sistema atualmente funciona bem para reivindicações Básicas, Urbanas e Subdivididas.
 
-![Renting Sign](https://i.imgur.com/sPB7pMs.png)
+![Placa de aluguel](https://i.imgur.com/sPB7pMs.png)
 
-In order to start renting your claim, you need to put a sign inside a specific owned claim, and fill it using the following format:
+Para começar a alugar sua reivindicação, você precisa colocar um Placa dentro de uma reivindicação de propriedade específica e preenchê-la usando o seguinte formato:
 
 ```
 GD
-rent
-<amount per day/hour>
-[Min rent time] [Max rent time]
+aluguel
+<quantidade por dia/hora>
+[Tempo mínimo de aluguel] [Tempo máximo de aluguel]
 ```
 
-### Example 1
+### Exemplo 1
 ```
 GD
-rent
+aluguel
 100d
 5 30
 ```
-This example means that you will charge a minimum of ***500*** to start the rental (5 x 100) which will give the user 5 days already paid and your claim will be available for rent up to **30 days.**  
+Este exemplo significa que você cobrará um mínimo de ***500*** para iniciar o aluguel (5 x 100) o que dará ao usuário 5 dias já pagos e seu pedido ficará disponível para aluguel por até **30 dias. **
 
-### Example 2
+### Exemplo 2
 ```
 GD
-rent
+aluguel
 10h
 60
 ```
-This example means that you will charge **10 per hour** and your claim will be available for rent up to **60 days.**
+Este exemplo significa que você cobrará **10 por hora** e seu pedido ficará disponível para aluguel por até **60 dias.**
 
-### Example 3
+### Exemplo 3
 ```
 GD
-rent
+aluguel
 100d
 ```
-This example means that you will charge **100 per day** and your claim will be available for rent with unlimited time.
+Este exemplo significa que você cobrará **100 por dia** e seu pedido estará disponível para aluguel por tempo ilimitado.
 
-**Sidenote:** The rent time availability of your claim will start ticking as soon as you set up the sign, which means that if you start a rental with a max of **30 days** and a person starts renting it on the 5th day, that user will only have the claim available for **25 days**.
+**Nota:** A disponibilidade de tempo de aluguel do seu pedido começará a ser verificada assim que você configurar o letreiro, o que significa que se você iniciar um aluguel com um máximo de **30 dias** e uma pessoa começar a alugá-lo em no 5º dia, esse usuário só terá a reivindicação disponível por **25 dias**.
 
-After you place the sign, you will receive a message in chat that you need to read carefully, and then, click on CONFIRM.
+Depois de colocar a placa, você receberá uma mensagem no chat que você precisa ler com atenção e, em seguida, clique em CONFIRMAR.
 
-If you did everything ok, your sign will be updated to something like this: (Layout may be different due to recent updates)
+Se você fez tudo certo, sua placa será atualizado para algo assim: (O layout pode ser diferente devido a atualizações recentes)
 
-![Rent Claim Started](https://i.imgur.com/e194JUX.png)
+![Reivindicação de aluguel iniciada](https://i.imgur.com/e194JUX.png)
 
-If you want to cancel the claim rental, left-click the sign and click CONFIRM in chat.
+Se você deseja cancelar o aluguel da reivindicação, clique com o botão esquerdo do mouse na placa e clique em CONFIRMAR no chat.
 
-As a customer, in order to rent the claim, you can use:
+Como cliente, para alugar a reivindicação, você pode usar:
 
 ```
-Right Click the sign: You will rent it. 
-Left Click the sign: Your rent will be canceled.
+Clique com o botão direito do mouse na placa: Você o alugará.
+Clique com o botão esquerdo na placa: Seu aluguel será cancelado.
 ```
-**IMPORTANT:** if rent-schematics-restore is true, right after Canceling the rent, the blocks/entities/items will be lost and restored to its original state, so be careful.
+**IMPORTANTE:** se rent-schematics-restore for verdadeiro, logo após o cancelamento do aluguel, os blocos/entidades/itens serão perdidos e restaurados ao seu estado original, então tome cuidado.
 
 # Command Use
-The main command for handling rent is `/claimrent`  
-Syntax is as follows  
+O comando principal para lidar com aluguel é `/claimrent`
+A sintaxe é a seguinte
 `/claimrent [cancel|info|list|create <rate> [max]]`
 
-### Example 1
+### Exemplo 1
 
-Create a rental for $10 per hour with a maximum of 1 day  
+Crie um aluguel por $ 10 por hora com um máximo de 1 dia 
 `/claimrent create 10h 1`
 
-### Example 2
+### Exemplo 2
 
-Create a rental for $10 per hour with unlimited rentals  
+Crie um aluguel por US$ 10 por hora com aluguéis ilimitados
 `/claimrent create 10h`
 
-### Example 3
+### Exemplo 3
 
-Cancel rental  
+Cancelar aluguel
 `/claimrent cancel`
 
 
-### Example 4
+### Exemplo 4
 
-List all available rentals  
+Listar todos os aluguéis disponíveis
 `/claimrent list`
 
 
-### Example 5
+### Exemplo 5
 
-List current rental info  
+Listar informações de aluguel atuais
 `/claimrent info`
 
 
 
-## Current Features
-* Claims can be restored using schematics option. If this is enabled, both the claim owner and the person renting it will receive a warning message.
-* When a person rents the claim, the owner claim will lose the privileges inside it until the rent period is over. The person who rented it will get the _Trust_ permission inside the claim and will be able to interact with blocks like doors, levers, pistons, plates, etc. After the rental is finished, the trust permission will be automatically removed.
-* Everything works automatically. Claim owner will received the money and the customer will be charged every specific time you previously configured.
-* If the customers fails to pay the rental amount, their permission will be suspended until the payment is done.
+## Recursos atuais
+* As reivindicações podem ser restauradas usando a opção de esquemas. Se estiver habilitado, tanto o proprietário da reivindicação quanto a pessoa que o aluga receberão uma mensagem de aviso.
+* Quando uma pessoa aluga a reivindicação, o proprietário da reivindicação perderá os privilégios dentro dela até que o período de aluguel termine. A pessoa que alugou receberá a permissão _Trust_ dentro da reivindicação e poderá interagir com blocos como portas, alavancas, pistões, placas, etc. Após o término do aluguel, a permissão de confiança será removida automaticamente.
+* Tudo funciona automaticamente. O proprietário da reivindicação receberá o dinheiro e o cliente será cobrado a cada vez que você configurou anteriormente.
+* Caso o cliente não pague o valor do aluguel, sua permissão será suspensa até que o pagamento seja feito.
