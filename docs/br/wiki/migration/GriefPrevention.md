@@ -2,25 +2,25 @@
 title: GriefPrevention
 ---
 
-:warning: Before using GriefPrevention migrator, backup your data (including LuckPerms).  
-It is recommended to test migration on a test server before applying to production to ensure everything works as expected.  
-:warning: All player data that contains accrued claim blocks and bonus claim blocks will be stored as meta in LuckPerms when migrator is finished.  
-:warning: Converting a GP SQL Database back to file storage can be done with the python script found [here](https://gist.github.com/ar00n/f1ac69dd52554e56f012c8d631bed5d7), alter the database connection details in the script.  
-Note: GD 2.X supports migration from GP Database so it is no longer needed to convert back to file storage.  
+:warning: Antes de usar o migrador GriefPrevention, faça backup de seus dados (incluindo LuckPerms).
+É recomendável testar a migração em um servidor de teste antes de aplicar ao servidor principal para garantir que tudo funcione conforme o esperado. 
+:warning: Todos os dados do jogador que contêm blocos de reivindicação acumulados e blocos bônus serão armazenados como meta no LuckPerms quando a migração for concluída.  
+:warning: A conversão de um banco de dados GriefPrevention SQL de volta ao armazenamento de arquivos pode ser feita com o script python encontrado [aqui](https://gist.github.com/ar00n/f1ac69dd52554e56f012c8d631bed5d7), altere os detalhes da conexão do banco de dados no script.
+Nota: GriefDefender 2.X suporta migração do banco de dados do GriefPrevention, então não é mais necessário converter de volta para armazenamento de arquivos.
 
-Accrued claim blocks will use meta key `griefdefender.accrued-blocks`  
-Bonus claim blocks will use meta key `griefdefender.bonus-blocks`  
-See https://github.com/lucko/LuckPerms/wiki/Prefixes,-Suffixes-&-Meta#meta for more info
+Os blocos de reivindicações acumulados usarão a meta-chave `griefdefender.accrued-blocks`
+Os blocos de reivindicação de bônus usarão a meta-chave `griefdefender.bonus-blocks`
+Veja https://github.com/lucko/LuckPerms/wiki/Prefixes,-Suffixes-&-Meta#meta para mais informações
 
 ## Bukkit
 ### GriefDefender supports a complete migration from GriefPrevention Bukkit. To migrate to GriefDefender, perform the following steps 
 
-1. Add GriefDefender jar to plugins
-2. Remove GriefPrevention jar from plugins
-3. Start the server to generate GriefDefender configs.
-4. Stop server
-5. Edit global.conf under ./plugins/GriefDefender/
-6. Locate section
+1. Adicionar jar do GriefDefender a plugins
+2. Remova o jar do GriefPrevention dos plugins
+3. Inicie o servidor para gerar as configurações do GriefDefender.
+4. Pare (stop) o servidor
+5. Edite global.conf em ./plugins/GriefDefender/
+6. Localize a seção
 ```
 # List of migrators that convert old or other protection data into the current GD claim data format.
 # Note: It is recommended to backup data before using.
@@ -45,26 +45,26 @@ migrator {
         }
 }
 ```
-7a. If migrating from GP file-format, set classic to `true`  
-OR  
-:warning: This step requires `storage.conf` to be configured for GD database.  
-7b. If migrating from GP database, configure `classic-database` section.  
-8. Start Server  
-If done properly, GriefDefender will migrate all data from `plugins/GriefPreventionData` to `plugins/GriefDefender`.  
-Migration output should appear in console as it is migrating.  
-9. Disable the migrator in `global.conf` 
+7a. Se estiver migrando do formato de arquivo GP, defina classic para `true`
+OU
+:warning: Este passo requer que o `storage.conf` seja configurado para o banco de dados GD.
+7b. Se estiver migrando do banco de dados GP, configure a seção `classic-database`.
+8. Iniciar Servidor
+Se feito corretamente, o GriefDefender migrará todos os dados de `plugins/GriefPreventionData` para `plugins/GriefDefender`.
+O resultado da migração deve aparecer no console durante o processo.
+9. Desabilite o migrador em `global.conf`
 
 ## Sponge
 
-:warning: The migrator will not copy the `global.conf` as there have been many changes to it in GriefDefender. You will have to manually copy the settings you want from GP's `global.conf` to GD.  
-:warning: Make sure GriefPreventionData exists in `./plugins/` folder. If migrating from Bukkit, you must copy `GriefPreventionData` to `./plugins/`  
+:warning: O migrador não copiará o `global.conf` porque houve muitas mudanças no GriefDefender. Você terá que copiar manualmente as configurações desejadas do `global.conf` do GP para o GD.
+:warning: Certifique-se de que GriefPreventionData existe na pasta `./plugins/`. Se estiver migrando do Bukkit, você deve copiar `GriefPreventionData` para `./plugins/`
 
-1. Add GriefDefender jar to mods or plugins folder
-2. Remove GriefPrevention jar from mods/plugins folder
-3. Start the server to generate GriefDefender configs.
-4. Stop server
-5. Edit global.conf under ./plugins/GriefDefender/
-6. Locate section
+1. Adicione o jar do GriefDefender à pasta de mods ou plugins
+2. Remova o jar do GriefPrevention da pasta mods/plugins
+3. Inicie o servidor para gerar as configurações do GriefDefender.
+4. Pare (stop) o servidor
+5. Edite global.conf em ./plugins/GriefDefender/
+6. Localize a seção
 ```
 # List of migrators that convert old or other protection data into the current GD claim data format.
 # Note: It is recommended to backup data before using.
@@ -92,10 +92,10 @@ migrator {
     worldguard=false
 }
 ```
-7. Set `griefprevention-sponge` to `true` or `griefprevention-bukkit` to `true` if migrating from Bukkit.
-8. If migrating from GP Sponge, set 'playerdata' to true.  
-Note: Make sure to read the comment carefully as there are things to check before turning on the migrator.
-9. Locate section
+7. Defina `griefprevention-sponge` para `true` ou `griefprevention-bukkit` para `true` se estiver migrando do Bukkit.
+8. Se estiver migrando do GP Sponge, defina 'playerdata' para true.
+Observação: certifique-se de ler o comentário com atenção, pois há coisas a serem verificadas antes de ativar o migrador.
+9. Localize a seção
 ```
 playerdata {
     # Determines which claim block system to use for claims. (Default: AREA)
@@ -111,8 +111,8 @@ playerdata {
     ...
 }
 ```
-10. `context-storage-type` needs to be set to `global`, `server`, or `world`. Read comment for more information.
-11. Start server  
-If done properly, GriefDefender will migrate all data from `plugins/GriefPreventionData` to `plugins/GriefDefender` including permission data.  
-Migration output should appear in console as it is migrating.  
-12. Disable the migrator in `global.conf` 
+10. `context-storage-type` precisa ser definido como `global`, `server` ou `world`. Leia o comentário para mais informações.
+11. Inicie o servidor
+Se feito corretamente, o GriefDefender migrará todos os dados de `plugins/GriefPreventionData` para `plugins/GriefDefender` incluindo dados de permissão.
+O resultado da migração deve aparecer no console durante o processo.
+12. Desabilite o migrador em `global.conf`
