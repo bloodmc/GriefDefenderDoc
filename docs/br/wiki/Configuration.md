@@ -1,13 +1,13 @@
 ---
-title: Configuration
+title: Configuração
 tag: Info
 category: info
 icon: config
 ---
 
-## Configuration
+## Configuração
 
-GriefDefender includes various configuration files for admins. The current available config files are the following  
+GriefDefender inclui vários arquivos de configuração para administradores. Os arquivos de configuração disponíveis atualmente são os seguintes
 
 ```
 bans.conf
@@ -20,60 +20,60 @@ options.conf
 storage.conf
 ```
 
-### Bans  
+### Proibições  
 
-The `bans.conf` file stores all global and world ban data performed by the ban command `/claimban`.  
+O `bans.conf` armazena todos os dados de proibições global e mundial executados pelo comando `/claimban`  
 
-| Variable | Description | Default Value |
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| blocks | A map of banned block id's and messages | [ ] |
-| entities | A map of banned entity id's and messages | [ ] |
-| items | A map of banned item id's and messages | [ ] |
+| blocks | Um mapa de IDs de blocos proibido e mensagens de proibição | [ ] |
+| entities | Um mapa de IDs de entidades proibido e mensagens de proibição | [ ] |
+| items | Um mapa de IDs de itens proibido e mensagens de proibição | [ ] |
 
-You will find two sections within this file : `global` and `worlds`.  
-The global section is used to store a list of global banned blocks, entities, and items. 
-The worlds section is used to store a list of world specific banned blocks, entities, and items.
+Você encontrará duas seções dentro deste arquivo: `global` e `worlds`.
+A seção global é usada para armazenar uma lista de blocos, entidades e itens proibidos globais.
+A seção de worlds é usada para armazenar uma lista de blocos, entidades e itens proibido em mundos específicos.
 
-Bans will be stored in format `"modid:id"=<message>""`  
+As proibições serão armazenadas no formato `"modid:id"=<mensagem>""`  
 Ex. `"minecraft:axolotl_bucket"=""`  
 
-#### Ban command  
+#### Comando de proibição
 
-The following commands can be used to ban a block, entity, or item :  `/claimban` or `/gd ban`  
-This command supports the following arguments `hand | <type> <target> [worldname] [message]`  
+Os seguintes comandos podem ser usados para banir um bloco, entidade ou item:  `/claimban` ou `/gd ban`  
+Este comando suporta os seguintes argumentos `hand | <tipo> <alvo> [NomeDoMundo] [mensagem]`  
 
-`hand` - Uses the item held in main hand. Note: This only works when banning items.  
-`type` - The type to ban : `block`, `entity`, or `item`.  
-`<target>` - The target id to ban. This is tab complete supported. You can specific a single id or use a tag. Ex. `minecraft:tnt` , `minecraft:enderpearl`, `#minecraft:signs`  
-`[worldname]` - A world name can be specified at end of command which will instruct GD to only ban in the world the player is in.  
-`[message]` - A ban message can be added to end of command which will be shown to player if interacting with a banned block, entity, or item.  
+`hand` - Usa o item na mão principal. Nota: Isso só funciona ao banir itens.  
+`tipo` - O tipo a ser proibido : `block`, `entity`, ou `item`.  
+`<alvo>` - O ID do alvo a ser proibido. Esta é a guia completa suportada. Você pode especificar um único id ou usar uma tag. Ex. `minecraft:tnt` , `minecraft:enderpearl`, `#minecraft:signs`  
+`[NomeDoMundo]` - Um nome de mundo pode ser especificado no final do comando que instruirá o GD a banir apenas no mundo em que o jogador está.  
+`[mensagem]` - Uma mensagem de banimento pode ser adicionada ao final do comando, que será mostrada ao jogador se interagir com um bloco, entidade ou item banido.
 
 
-### Blacklist
-| Variable | Description | Default Value |
+### Lista negra
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| flag-id-blacklist | A list of id's ignored by flags. | [ ] |
-| global-source | A global list of source id's that are ignored by events. <br />Note: This only affects events where the id specified is the source. | [ ] |
-| global-target | A global list of target id's that are ignored by events. <br />Note: This only affects events where the id specified is the target. | [ ] |
-| entity-damage-source-blacklist | A global list of entity damage sources that are ignored in events by default. | [contact,cramming,drowning,<br />"falling_block",flyintowall,"fire_tick",<br />"hot_floor",poison,starvation,suffocation,<br />suicide,void] |
+| flag-id-blacklist | Uma lista de IDs ignorados por bandeiras. | [ ] |
+| global-source | Uma lista global de IDs de origem que são ignorados por eventos. <br />Nota: Isso afeta apenas eventos em que o id especificado é a source (origem). | [ ] |
+| global-target | Uma lista global de IDs de destino que são ignorados por eventos. <br />Observação: isso afeta apenas eventos em que o id especificado é o target (destino). | [ ] |
+| entity-damage-source-blacklist | Uma lista global de fontes de danos à entidade que são ignoradas em eventos por padrão. | [contact,cramming,drowning,<br />"falling_block",flyintowall,"fire_tick",<br />"hot_floor",envenenado,fome,sufocamento,<br />suicídio,void] |
 
-The blacklist controls events from interacting with items, blocks, or entities on either a per-flag or global basis. Blacklists are extremely useful as it allows you to force GD to ignore actions in a world you do not need protected. By doing this, you prevent GD from wasting resources when it attempts to protect. To determine what you want to prevent GD from controlling, you will need to run a [GDDebug](https://github.com/bloodmc/GriefDefender/wiki/Debugging) in order to gather the data needed for the config. See [User Contributions](https://github.com/bloodmc/GriefDefender/wiki/Optimizations#optimization-contributions) for some examples on how to use it.  
+A lista negra controla eventos de interação com itens, blocos ou entidades em uma base por-bandeira ou global. As listas negras são extremamente úteis, pois permitem forçar o GD a ignorar ações em um mundo que você não precisa proteger. Ao fazer isso, você evita que o GD desperdice recursos ao tentar proteger. Para determinar o que você deseja impedir que o GD controle, você precisará executar o [GDDebug](https://github.com/bloodmc/GriefDefender/wiki/Debugging) para coletar os dados necessários para a configuração. Veja [Contribuições do usuário](https://github.com/bloodmc/GriefDefender/wiki/Optimizations#optimization-contributions) para alguns exemplos de como usá-lo.  
 
-It supports wildcards `?` and `*` where `?` represents a single character and `*` represents zero or more characters.
-For more info you can go to [Apache's wildcard matcher.](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String))
+Ele suporta curingas `?` e `*` onde `?` representa um único caractere e `*` representa zero ou mais caracteres.
+Para mais informações, você pode acessar [correspondência de curingas do Apache.](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String))
 
-To add an item into the blacklist simply add the ID between a set of quotation marks.
+Para adicionar um item à lista negra, basta adicionar o ID entre um conjunto de aspas.
 
-An example of how to block items from being checked by GD is as shown
+Um exemplo de como impedir que itens sejam verificados pelo GD é mostrado
 
 `block-break=["modID:itemID"]`
 
 
-### Claimnames  
+### Nomes de reivindicações (claimnames)  
 
-See [Claim Identifiers](https://github.com/bloodmc/GriefDefender/wiki/Claim-Management#claim-identifiers)  
+Veja [Identificadores de Reivindicação](https://github.com/bloodmc/GriefDefender/wiki/Claim-Management#claim-identifiers)  
 
-The `claimnames.conf` file is used to store a mapping of player UUID to friendly claim names.  
+O arquivo `claimnames.conf` é usado para armazenar um mapeamento do UUID do player para nomes de reivindicações amigáveis.
 
 ```
 e035f345-1234-5678-b341-cb1c91fe2123 {
@@ -82,34 +82,34 @@ e035f345-1234-5678-b341-cb1c91fe2123 {
 }
 ```
 
-The above example shows player with UUID `e035f345-1234-5678-b341-cb1c91fe2123`.  
-The player has configured 2 friendly claim identifiers.  
-The first claim identifier is `store_front` which is mapped to claim UUID `e5da3742-c916-48a0-b2af-283092fd6ef8`  
-The second claim identifier is `valhalla` which is mapped to claim UUID `bdc6ca20-f62a-4c8a-a549-ec903fd63772`  
+O exemplo acima mostra o player com UUID `e035f345-1234-5678-b341-cb1c91fe2123`.
+O jogador configurou 2 identificadores de reivindicação amigáveis.
+O primeiro identificador de reivindicação é `store_front` que é mapeado para reivindicar UUID `e5da3742-c916-48a0-b2af-283092fd6ef8`
+O segundo identificador de reivindicação é `valhalla` que é mapeado para reivindicar o UUID `bdc6ca20-f62a-4c8a-a549-ec903fd63772`
 
 
-There are 2 built-in UUID's that GriefDefender uses for friendly identifiers.  
+Existem 2 UUIDs integrados que o GriefDefender usa para identificadores amigáveis.
 
-`00000000-0000-0000-0000-000000000000` - This UUID represents the world user and is used to set friendly identifiers in wilderness claims.  
-`11111111-1111-1111-1111-111111111111` - This UUID represents the admin user and is used to set friendly identifiers in admin claims.  
-
-
-### Flags  
-
-The `flags.conf` file is not to be confused with flag definitions and/or presets. This file controls all core flags that GD uses in events.  
-
-#### Default claim flag section  
-
-The first section in this file is `default-claim-flags` which is responsible for setting default transient flag permissions.  Transient permissions only exist in memory and do not persist. These permissions are designed as fallback permissions when there is no permission found for a LP user or group.  
-
-There are 2 configured types in this file  
-
-`user` - This configures default transient flag permissions for all claims EXCEPT wilderness.  
-`wilderness` - This confingures default transient flag permissions for all wilderness claims.  
+`00000000-0000-0000-0000-000000000000` - Este UUID representa o jogador mundial e é usado para definir identificadores amigáveis em reivindicação de região selvagem.
+`11111111-1111-1111-1111-111111111111` - Este UUID representa o usuário administrador e é usado para definir identificadores amigáveis em reivindicação administrativa
 
 
-#### Flag Control  
-The flag control section lets you enable/disable flag functionality on a per-flag basis. By default, all flags are enabled. If you have no use for a specific flag, set the flag to false in this section.  By disabling a flag, this will cause GriefDefender to ignore all events related to the flag.  
+### Bandeiras  
+
+O arquivo `flags.conf` não deve ser confundido com definições de bandeiras e/ou presets. Este arquivo controla todos os principais bandeiras que o GD usa em eventos.
+
+#### Seção de bandeiras de reivindicação padrão
+
+A primeira seção deste arquivo é `default-claim-flags` que é responsável por definir as permissões padrão de bandeiras transitórios. As permissões transitórias existem apenas na memória e não persistem. Essas permissões são projetadas como permissões de fallback quando não há permissão encontrada para um usuário ou grupo de LP.
+
+Existem 2 tipos configurados neste arquivo
+
+`user` - Isso configura as permissões de bandeira transitório padrão para todas as reivindicações, EXCETO deserto.
+`wilderness` - Isso configura as permissões de bandeira transitório padrão para todas as reivindicações de região selvagem.
+
+
+#### Controle de bandeira
+A seção de controle de bandeiras permite ativar/desativar a funcionalidade de bandeira por bandeira. Por padrão, todos as bandeiras estão habilitados. Se você não tem uso para uma bandeira específica, defina a bandeira como false nesta seção. Ao desabilitar uma bandeira, isso fará com que o GriefDefender ignore todos os eventos relacionados a bandeira.
 
 ```
 # Controls which flags are enabled.
@@ -158,87 +158,87 @@ flag-control {
 
 ### Global  
 
-See [Global Config](https://github.com/bloodmc/GriefDefender/wiki/Global-Config)  
+Veja [Configuração global](https://github.com/bloodmc/GriefDefender/wiki/Global-Config)  
 
 
 
-### Gui  
+### Interface  
 
-The `gui.conf` file is responsible for all settings related to Chat and Inventory GUI.  
+O arquivo `gui.conf` é responsável por todas as configurações relacionadas ao bate-papo e Interface de Inventário.
 
-#### Chat section  
+#### Seção de bate-papo
 
-`capture-clear-timeout` - The timeout in seconds when chat GUI will clear all captured chat.  
-`capture-idle-timeout` - The idle timeout in seconds when chat GUI will stop capturing chat.  
-`protocol-lib` - Whether to use ProtocolLib, if detected, to capture all messages directed toward a player.  
+`capture-clear-timeout` - O tempo limite em segundos quando a interface do bate-papo limpará todos os bate-papos capturados.
+`capture-idle-timeout` - O tempo limite ocioso em segundos quando a interface do bate-papo para de capturar o bate-papo.
+`protocol-lib` - Se deve usar ProtocolLib, se detectado, para capturar todas as mensagens direcionadas a um jogador.
 
-#### General section  
+#### Seção geral  
 
-`command-input-idle-timeout` - The idle timeout in seconds when a command GUI will stop waiting for player input.  
+`command-input-idle-timeout` - O tempo limite de inatividade em segundos quando uma interface de comando para de aguardar a entrada do jogador.
 
 
-#### Inventory section  
+#### Seção de inventário
 
-The inventory section controls what icons and titles will be used when loading the GD inventory GUI for players.  
+A seção de inventário controla quais ícones e títulos serão usados ao carregar a interface do inventário GD para os jogadores.
 
-`enchanted` - Controls if the icon will have an enchanted effect.  
-`id` - The icon item id.  Ex. `minecraft:diamond_shovel`  
-`title` - The icon title to display on hover.  
-`lore` - The icon lore.  
-`quantity` - The item quantity amount.  
-`meta` - The item identifier associated with icon. <br />Note: Meta is used instead of a material identifier when needed to be compatible across MC versions or for modded items that do not have an associated name identifier.  
+`enchanted` - Controla se o ícone terá um efeito encantado.
+`id` - O id do item do ícone. Ex. `minecraft:diamond_shovel`
+`title` - O título do ícone a ser exibido ao passar o mouse.
+`lore` - O lore do ícone.
+`quantity` - O valor da quantidade do item.
+`meta` - O identificador do item associado ao ícone. <br />Observação: Meta é usado em vez de um identificador de material quando necessário para ser compatível com as versões do MC ou para itens modificados que não possuem um identificador de nome associado.
 
 `icon-flags`  
-Icon flags are a special attribute of an icon and are stored as such  
+As bandeiras de ícone são um atributo especial de um ícone e são armazenados como tal 
 ```
 icon-flags=[
     "hide_attributes"
 ]
 ```  
-The following icon flags are available to use with an icon  
+As seguintes bandeiras de ícone estão disponíveis para uso com um ícone
 
-`HIDE_ENCHANTS` - Controls whether to show enchants.  
-`HIDE_ATTRIBUTES` - Controls whether to show attributes.  
-`HIDE_UNBREAKABLE` - Controls whether to show the unbreakable state.  
-`HIDE_DESTROYS` - Controls whether to show what can break or destroy.  
-`HIDE_PLACED_ON` - Controls whether to show what can be built or placed on.  
-`HIDE_POTION_EFFECTS` - Controls whether to show potion effects.  
-`HIDE_DYE` - Controls whether to show dyes.  
-
-
-### Options  
-
-The `options.conf` file controls all default claim and player settings.  
+`HIDE_ENCHANTS` - Controla se deve mostrar encantamentos.
+`HIDE_ATTRIBUTES` - Controla se os atributos devem ser exibidos.
+`HIDE_UNBREAKABLE` - Controla se deve mostrar o estado inquebrável.
+`HIDE_DESTROYS` - Controla se deve mostrar o que pode quebrar ou destruir.
+`HIDE_PLACED_ON` - Controla se mostra o que pode ser construído ou colocado.
+`HIDE_POTION_EFFECTS` - Controla se os efeitos da poção devem ser exibidos.
+`HIDE_DYE` - Controla se os corantes devem ser exibidos.
 
 
-#### Default Options   
+### Opções  
 
-`default-user-basic-options` - Controls min/max claim size limits for basic claims.  
-The default min basic limit is `5x5x5`.  
-Note: Y is not used unless claim is a 3D claim.  
-Note: A value of `0` means no limit.  
+O arquivo `options.conf` controla todas as configurações padrões de reivindicação e jogador.
 
 
-`default-user-subdivision-options` - Controls min/max claim size limits for subdivision claims.  
-The default min subdivision limit is `5x5x5`.  
-The default max subdivision limit is `1000x0x1000` where `0` represents no limit in height.  
-Note: Y is not used unless claim is a 3D claim.  
-Note: A value of `0` means no limit.  
+#### Opções padrão
+
+`default-user-basic-options` - Controla os limites de tamanho mínimo/máximo para reivindicação básicas.
+O limite mínimo básico padrão é `5x5x5`.
+Nota: Y não é usado a menos que a reivindicação seja uma reivindicação 3D.
+Nota: Um valor de '0' significa sem limite.
 
 
-`default-user-town-options` - Controls min/max claim size limits for basic claims.  
-The default town limit is `32x32x32`.  
-Note: Y is not used unless claim is a 3D claim.  
-Note: A value of `0` means no limit.  
+`default-user-subdivision-options` - Controla os limites de tamanho mínimo/máximo para subdivisão.
+O limite mínimo de subdivisão padrão é `5x5x5`.
+O limite máximo de subdivisão padrão é `1000x0x1000` onde `0` representa nenhum limite de altura.
+Nota: Y não é usado a menos que a reivindicação seja uma reivindicação 3D.
+Nota: Um valor de '0' significa sem limite.
 
 
-`default-user-options` - Controls default player options such as `player-deny-flight` in claims.  
-Note: Applying an option to a specific claim type section as shown above will override the option in this section.  
+`default-user-town-options` - Controla os limites de tamanho mínimo/máximo de reivindicação para reivindicações de cidade.
+O limite de cidade padrão é `32x32x32`.
+Nota: Y não é usado a menos que a reivindicação seja uma reivindicação 3D.
+Nota: Um valor de '0' significa sem limite.
 
-#### Option Control  
-The option control section lets you enable/disable option functionality. By default, all player/pvp and spawn options are disabled. To enable this functionality, you will need to set the corresponding option to true.  
 
-Here are the delivered options that can be controlled  
+`default-user-options` - Controla as opções padrão do jogador, como `player-deny-flight` nas reivindicação.
+Observação: a aplicação de uma opção a uma seção de tipo de reivindicação específica, conforme mostrado acima, substituirá a opção nesta seção.
+
+#### Controle de opções
+A seção de controle de opções permite ativar/desativar a funcionalidade de opções. Por padrão, todas as opções de jogador/pvp e spawn estão desabilitadas. Para habilitar essa funcionalidade, você precisará definir a opção correspondente como true.
+
+Aqui estão as opções entregues que podem ser controladas
 ```
 option-control {
     player-command-enter=false
@@ -265,10 +265,10 @@ option-control {
 }
 ```
 
-#### Vanilla fallback values  
-This section is currently only used for player fly and walk default speeds. If your server uses a different default value, you can adjust it here.  
+#### Valores de fallback Vanilla
+Atualmente, esta seção é usada apenas para as velocidades padrão de voo e caminhada do jogador. Se o seu servidor usa um valor padrão diferente, você pode ajustá-lo aqui.
 
-The delivered defaults are  
+Os padrões entregues são
 ```
 vanilla-fallback-values {
     player-fly-speed="0.1"
@@ -277,7 +277,7 @@ vanilla-fallback-values {
 ```
 
 
-### Storage  
+### Armazenamento  
 
-The `storage.conf` file controls GriefDefender storage settings.  
+O arquivo `storage.conf` controla as configurações de armazenamento do GriefDefender.
 
