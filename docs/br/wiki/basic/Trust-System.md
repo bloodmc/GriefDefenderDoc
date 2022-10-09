@@ -1,5 +1,5 @@
 ---
-title: Tax System
+title: Sistema de Trust
 tag: Claim
 category: claim
 icon: trust
@@ -7,41 +7,41 @@ icon: trust
 
 ### IMPORTANT
 :warning:  
-Trust is NOT inherited by subclaims that have inheritance turned on. If a claim owner wants to trust a player across all claims including subclaims, the `/trustall` command should be used.  
+O trust NÃO é herdada por subdivisões com herdar ativado. Se um proprietário de reivindicação quiser confiar (trust) em um jogador em todas as reivindicações, incluindo subdivisões, o comando `/trustall` deverá ser usado.
 
-There four different types of trust: Accessors, Builders, Containers, and Managers.
+Existem quatro tipos diferentes de trust: Accessors, Builders, Containers, and Managers.
 
-### Arguments
-| Arguments | Description |
+### Argumentos
+| Argumentos | Descrição |
 | --------- | ----------- |
-| `<player>`| The player to trust. |
-| `<group>` | The group to trust. Note: If you want to trust everyone, use `public`. |
-| `<type>`  | The type of trust [none, accessor, resident, builder, container, manager]. Note: If you want to remove trust, use `none`. <br>*None*: `Revokes a player/group's access to your claim`<br>*Accessor*: `Grants a player/group access to interact with all blocks except inventory`<br>*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`<br>*Container*: `Grants a player/group access to interact with all blocks including inventory, includes accessor trust.`<br>*Builder*: `Grants a player/group access to everything above, except Resident, including ability to place and break blocks`<br>*Manager*: `Grants a player/group access to all of the above including ability to modify claim`  |
+| `<Jogador>`| O jogador em quem confiar. |
+| `<grupo>` | O grupo em que confiar. Nota: Se você quiser confiar em todos, use `public`. |
+| `<tipo>`  | O tipo de confiança [none, accessor, resident, builder, container, manager]. Nota: Se você deseja remover a confiança, use `none`. <br>*None*: `Remove o acesso de um jogador/grupo à sua reivindicação`<br>*Accessor*: `Concede a um jogador/grupo acesso para interagir com todos os blocos, exceto inventário`<br>*Resident*: `Concede a um jogador/grupo a capacidade de criar reivindicações, inclui confiança de acesso.`<br>*Container*: `Concede a um jogador/grupo acesso para interagir com todos os blocos, incluindo inventário, inclui confiança de acesso.`<br>*Builder*: `Concede a um jogador/grupo acesso a tudo acima, exceto Residente, incluindo a capacidade de colocar e quebrar blocos`<br>*Manager*: `Concede a um jogador/grupo acesso a todos os itens acima, incluindo a capacidade de modificar a reivindicação`  |
 
 ### Trust Player
-**Command**: `/gd trust player <player> <type>`  
+**Command**: `/gd trust player <Jogador> <tipo>`  
 **Alias**: `trust`  
 **Example**: `/gd trust player Kratos basic`  
 
-Grants a player access to your claim(s)
+Concede a um jogador acesso à(s) sua(s) reivindicação(ões)
 
 ### Trust Group
-**Command**: `/gd trust group <group> <type>`  
+**Command**: `/gd trust group <grupo> <tipo>`  
 **Alias**: `trust`  
 
-Grants a group access to your claim(s)
+Concede a um grupo acesso às suas reivindicações
 
 ### Remove Trust Player
-**Command**: `/gd trust player <player> none`  
+**Command**: `/gd trust player <Jogador> none`  
 
-Revokes a player's access to all your claims.
+Remove o acesso de um jogador a todas as suas reivindicações.
 
-### Remove Trust Group
-**Command**: `/gd trust group <group> none`  
+### Remover grupo do trust
+**Command**: `/gd trust group <grupo> none`  
 
-Revokes a group's access to all your claims.
+Remove o acesso de um grupo a todas as suas reivindicações.
 
-## List Trusted
+## List Trusted (Lista de confiança)
 **Command**: `/trustlist` 
 
-Lists currently trusted players and the trust type.
+Lista os jogadores atualmente confiáveis e o tipo de trust que ele tem.
