@@ -14,22 +14,22 @@ As reivindicações do administrador não têm limitações de tamanho e bandeir
 
 ### Básica
 
-As reivindicação básicas são o tipo de declaração padrão usado para usuários.
+As reivindicação básicas são o tipo de reivindicação padrão usado para usuários.
 
-Uma declaração básica tem os seguintes recursos
+Uma reivindicação básica tem os seguintes recursos
 
 * Restrição de tamanho 5x5 no modo 2D. Restrição de tamanho 5x5x5 no modo 3D.
 * Pode ser vendido, alugado ou transferido para outro jogador.
 * Requer blocos de reivindicação.
 
 Este é o modo de tipo de reivindicação padrão ao equipar a ferramenta de reivindicação (minecraft:golden_shovel).
-Nota: Use `/basicclaims` ou `/gd mode basic` para alternar para este modo de tipo de declaração.
+Nota: Use `/basicclaims` ou `/gd mode basic` para alternar para este modo de tipo de reivindicação.
 
 ### Subdivisão
 
 As reivindicações de subdivisão são usadas para subdividir as reivindicações de nível superior, como básico/administrador/cidade em áreas menores.
 
-Uma declaração de subdivisão tem os seguintes recursos
+Uma reivindicação de subdivisão tem os seguintes recursos
 
 * Restrição de tamanho 1x1 no modo 2D. Restrição de tamanho 1x1x1 no modo 3D.
 * Pode ser vendido, alugado ou transferido para outro jogador.
@@ -37,9 +37,9 @@ Uma declaração de subdivisão tem os seguintes recursos
 
 ### Administrativa
 
-As reivindicações administrativas são a ferramenta administrativa por excelência. Eles podem ser sobrepostos a qualquer tipo de declaração para impor bandeira. Para criar uma reivindicação administrativa, é necessária a permissão `griefdefender.admin.claim.command.admin-mode`. No entanto, observe que `griefdefender.admin` é recomendado - ele permitirá o gerenciamento das reivindicações do tipo administrativa.
+As reivindicações administrativas são a ferramenta administrativa por excelência. Eles podem ser sobrepostos a qualquer tipo de reivindicação para impor bandeira. Para criar uma reivindicação administrativa, é necessária a permissão `griefdefender.admin.claim.command.admin-mode`. No entanto, observe que `griefdefender.admin` é recomendado - ele permitirá o gerenciamento das reivindicações do tipo administrativa.
 
-Uma declaração de administrador tem os seguintes recursos
+Uma reivindicação administrativa tem os seguintes recursos
 
 * Sem restrições de tamanho.
 * Não custa nada para criar.
@@ -47,7 +47,7 @@ Uma declaração de administrador tem os seguintes recursos
 * Pode ser alugado.
 * Usado apenas por administradores.
 
-Nota: Use `/adminclaims` ou `/gd mode admin` para alternar para este modo de tipo de declaração.
+Nota: Use `/adminclaims` ou `/gd mode admin` para alternar para este modo de tipo de reivindicação.
 
 ### Reivindicações da cidade
 
@@ -63,4 +63,4 @@ Nota: Isso pode ser ajustado alterando `griefdefender.create-limit` para um valo
 
 ### Reivindicação da região selvagem
 
-A reivindicação de região selvagem é uma reivindicação administrativa. Ele é criado automaticamente no primeiro carregamento mundial e usa qualquer espaço não reivindicado por um usuário. Funciona como qualquer outra reivindicação onde você pode atribuir bandeiras e opções a ela. Por padrão, todas as ações são permitidas no deserto.
+A reivindicação de região selvagem é uma reivindicação administrativa. Ele é criado automaticamente no primeiro carregamento mundial e usa qualquer espaço não reivindicado por um usuário. Funciona como qualquer outra reivindicação onde você pode atribuir bandeiras e opções a ela. Por padrão, todas as ações são permitidas em região selvagem.
