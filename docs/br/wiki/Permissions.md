@@ -195,50 +195,50 @@ _*Veja [GUI de definições de bandeiras](https://github.com/bloodmc/GriefDefend
 | griefdefender.admin.claim.command.clear | Permite limpar entidades dentro de uma ou mais reivindicações |
 | griefdefender.admin.claim.command.schematic | Permite gerenciar esquemático de reivindicações |
 | griefdefender.admin.claim.command.debug | Permite usar GDdebug |
-| griefdefender.admin.claim.command.delete.base | Allows to use the deleteclaim command |
-| griefdefender.admin.claim.command.delete.basic | Allows to delete basic claims |
-| griefdefender.admin.claim.command.delete.admin | Allows to delete admin claims |
-| griefdefender.admin.claim.command.delete-claims | Allows to delete all of another player's claims |
-| griefdefender.admin.claim.command.ignore.base | Allows to use the ignore claims command |
-| griefdefender.admin.claim.command.ignore.basic | Allows to ignore basic claim flags |
-| griefdefender.admin.claim.command.ignore.admin | Allows to ignore admin claim flags |
-| griefdefender.admin.claim.command.ignore.town | Allows to ignore town claim flags |
-| griefdefender.admin.claim.command.ignore.wilderness | Allows to ignore wilderness claim flags |
-| griefdefender.admin.claim.command.permission-group | Allows to use the claim command for group permissions |
-| griefdefender.admin.claim.command.permission-player | Allows to use the claim command for player permissions |
-| griefdefender.admin.claim.command.reserve-name | Allows to reserve claim names |
-| griefdefender.admin.claim.cuboid | Allows to create/resize admin claims in 3D mode |
-| griefdefender.admin.claim.list.admin | Allows to list admin claims |
-| griefdefender.admin.claim.option.global | Allows to manage global options |
-| griefdefender.admin.claim.resize | Allows to resize claims |
-| griefdefender.admin.claim.resize.admin | Allows to resize admin claims |
-| griefdefender.admin.claim.resize.admin.subdivision | Allows to resize admin claim subdivisions |
-| griefdefender.admin.claim.resize.basic | Allows to resize basic claims |
-| griefdefender.admin.claim.resize.basic.subdivision | Allows to resize basic claim subdivisions |
-| griefdefender.admin.claim.resize.town | Allows to resize town claims |
-| griefdefender.admin.claim.set-admin-flags | Allows to edit flags in an admin claim |
-| griefdefender.admin.claim.use-reserved-names | Allows to use reserved claim names |
-| griefdefender.admin.claim.wilderness | Allows to edit wilderness claims |
-| griefdefender.admin.command.delete-admin-claims | Allows to delete all admin claims |
-| griefdefender.admin.command.reload | Allows to reload GP |
-| griefdefender.admin.command.restore-claim.base | Allows to restore claim to its natural state |
-| griefdefender.admin.command.restore-nature.base | Allows to switch shovel tool to restoration mode. |
+| griefdefender.admin.claim.command.delete.base | Permite usar o comando deleteclaim |
+| griefdefender.admin.claim.command.delete.basic | Permite excluir reivindicações básicas |
+| griefdefender.admin.claim.command.delete.admin | Permite excluir reivindicações administrativa |
+| griefdefender.admin.claim.command.delete-claims | Permite excluir todas as reivindicações de outro jogador |
+| griefdefender.admin.claim.command.ignore.base | Permite usar o comando ignorar a proteção das reivindicações |
+| griefdefender.admin.claim.command.ignore.basic | Permite ignorar bandeiras de reivindicação básicos |
+| griefdefender.admin.claim.command.ignore.admin | Permite ignorar bandeiras de reivindicação administrativa |
+| griefdefender.admin.claim.command.ignore.town | Permite ignorar as bandeiras de reivindicação da cidade |
+| griefdefender.admin.claim.command.ignore.wilderness | Permite ignorar bandeiras de região selvagem |
+| griefdefender.admin.claim.command.permission-group | Permite usar o comando reivindicação para permissões de grupo |
+| griefdefender.admin.claim.command.permission-player | Permite usar o comando de reivindicação para permissões de jogador |
+| griefdefender.admin.claim.command.reserve-name | Permite reservar nomes de reivindicações |
+| griefdefender.admin.claim.cuboid | Permite criar/redimensionar declarações de administrador no modo 3D |
+| griefdefender.admin.claim.list.admin | Permite listar reivindicações administrativas |
+| griefdefender.admin.claim.option.global | Permite gerenciar opções globais |
+| griefdefender.admin.claim.resize | Permite redimensionar reivindicações |
+| griefdefender.admin.claim.resize.admin | Permite redimensionar reivindicações administrativas |
+| griefdefender.admin.claim.resize.admin.subdivision |Permite redimensionar subdivisões de reivindicações administrativas |
+| griefdefender.admin.claim.resize.basic | Permite redimensionar reivindicações básicas |
+| griefdefender.admin.claim.resize.basic.subdivision | Permite redimensionar subdivisões básicas de reivindicações |
+| griefdefender.admin.claim.resize.town | Permite redimensionar reivindicações da cidade |
+| griefdefender.admin.claim.set-admin-flags | Permite editar bandeiras em uma reivindicação administrativa |
+| griefdefender.admin.claim.use-reserved-names | Permite usar nomes de reivindicações reservados |
+| griefdefender.admin.claim.wilderness | Permite editar reivindicações de região selvagem |
+| griefdefender.admin.command.delete-admin-claims | Permite excluir todas as reivindicações administrativas |
+| griefdefender.admin.command.reload | Permite recarregar GP |
+| griefdefender.admin.command.restore-claim.base | Permite restaurar a reivindicação ao seu estado natural |
+| griefdefender.admin.command.restore-nature.base | Permite alternar a ferramenta de pá para o modo de restauração. |
 | griefdefender.admin.command.restore-nature.aggressive |  |
 | griefdefender.admin.command.restore-nature.fill |  |
-| griefdefender.admin.command.set-accrued-claim-blocks | Allows to edit amount of accrued claim blocks |
-| griefdefender.admin.custom.flag | Allows to use advanced claim flags in GUI |
-| griefdefender.admin.flag-defaults | Allows to edit flag defaults |
-| griefdefender.admin.flag-overrides | Allows to edit flag overrides |
+| griefdefender.admin.command.set-accrued-claim-blocks | Permite editar a quantidade de bloqueios de sinistros acumulados |
+| griefdefender.admin.custom.flag | Permite usar bandeiras de declaração avançados na GUI |
+| griefdefender.admin.flag-defaults | Permite editar padrões de bandeiras |
+| griefdefender.admin.flag-overrides | Permite editar sobreposição de bandeira |
 
 ## Options
-| Permission Node | Description |
+| Node de permissão | Descrição |
 | --------- | ----------- |
 | griefdefender.admin.claim.command.option.group.base | Allows to set group options in claims |
 | griefdefender.admin.claim.command.option.player.base | Allows to set player options in claims |
 
 # Misc
-| Permission Node | Description |
+| Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.user.command.help | Allows to you the view the help |
-| griefdefender.user.chat.capture | Allows to record chat in command GUI's |
-| griefdefender.login.inventory-gui | Sets user or group to use the Inventory GUI on login |
+| griefdefender.user.command.help | Permite-lhe visualizar a ajuda |
+| griefdefender.user.chat.capture | Permite gravar bate-papo em GUI's de comando |
+| griefdefender.login.inventory-gui | Define o jogador ou grupo para usar a Interface do bate-papo no login |
