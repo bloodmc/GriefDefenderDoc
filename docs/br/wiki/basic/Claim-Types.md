@@ -1,66 +1,66 @@
 ---
-title: Claim Types
+title: Tipos de reivindicação
 tag: Claim
 category: claim
 icon: type
 ---
 
-_This is a work in progress page that will cover all claim types in GD - basic, subdivision, towns and admin claims._
+_Esta é uma página de trabalho em andamento que cobrirá todos os tipos de reivindicação em GD - reivindicações básicas, de subdivisão, cidades e administrativa._
 
-## Claim Types
-There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use `/adminclaims`, `/townclaims` and `/basicclaims`. To switch to subdivision mode, use `/claimsubdivide`. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic. 
+## Tipos de reivindicação
+Existem quatro tipos de reivindicação de usuário: admin, cidade, básica e subdivisão, cada uma com um modo 2D e 3D. Para alternar entre os tipos, use `/adminclaims` (administrativa), `/townclaims` (cidade) e `/basicclaims` (básica). Para alternar para o modo de subdivisão, use `/claimsubdivide` (subdividir). Todos os três tipos de reivindicação principais oferecem suporte a reivindicação filhas diretas (subdivisões) - Cidade, Admin e Básica.
 
-Admin claims have no size limitations and different flags compared to basic claims which normal players can make. Towns can also be made by players, and supports the creation of basic claims within town claims. Basic claims are the go-to claim type for players, and can support a player's own management of claim flags. For more information, visit our [permission](https://github.com/bloodmc/GriefDefender/wiki/Permissions) page, which will help you assign proper permissions.
+As reivindicações do administrador não têm limitações de tamanho e sinalizações diferentes em comparação com as reivindicações básicas que os jogadores normais podem fazer. Cidades também podem ser feitas por jogadores e suporta a criação de reivindicações básicas dentro das reivindicações da cidade. Reivindicações básicas são o tipo de reivindicação principal para os jogadores e podem oferecer suporte ao gerenciamento de sinalizações de reivindicação do próprio jogador. Para obter mais informações, visite nossa página de [permissão](https://github.com/bloodmc/GriefDefender/wiki/Permissions), que o ajudará a atribuir as permissões adequadas.
 
-### Basic
+### Básica
 
-Basic claims are the default claim type used for users.
+As reivindicação básicas são o tipo de declaração padrão usado para usuários.
 
-A basic claim has the following capabilities  
+Uma declaração básica tem os seguintes recursos
 
-* 5x5 size restriction in 2D mode. 5x5x5 size restriction in 3D mode.  
-* Can be sold, rented, or transferred to another player.  
-* Requires claim blocks.  
+* Restrição de tamanho 5x5 no modo 2D. Restrição de tamanho 5x5x5 no modo 3D.
+* Pode ser vendido, alugado ou transferido para outro jogador.
+* Requer blocos de reivindicação.
 
-This is the default claim type mode when equipping the claiming tool (minecraft:golden_shovel).  
-Note: Use `/basicclaims` or `/gd mode basic` to switch to this claim type mode.  
+Este é o modo de tipo de reivindicação padrão ao equipar a ferramenta de reivindicação (minecraft:golden_shovel).
+Nota: Use `/basicclaims` ou `/gd mode basic` para alternar para este modo de tipo de declaração.
 
-### Subdivision
+### Subdivisão
 
-Subdivision claims are used to subdivide top level claims such as basic/admin/town into smaller areas.
+As reivindicações de subdivisão são usadas para subdividir as reivindicações de nível superior, como básico/administrador/cidade em áreas menores.
 
-A subdivision claim has the following capabilities  
+Uma declaração de subdivisão tem os seguintes recursos
 
-* 1x1 size restriction in 2D mode. 1x1x1 size restriction in 3D mode.
-* Can be sold, rented, or transferred to another player.  
-* Requires no claim blocks when created by owner. 
+* Restrição de tamanho 1x1 no modo 2D. Restrição de tamanho 1x1x1 no modo 3D.
+* Pode ser vendido, alugado ou transferido para outro jogador.
+* Não requer blocos de reivindicação quando criado pelo proprietário.
 
-### Admin
+### Administrativa
 
-Admin claims are the administrative tool by excellence. They can be overlapped over any claim type to enforce flags. To create an admin claim, the permission `griefdefender.admin.claim.command.admin-mode` is necessary. However, please note that `griefdefender.admin` is recommended - it'll allow the management of the admin typed claims.
+As reivindicações administrativas são a ferramenta administrativa por excelência. Eles podem ser sobrepostos a qualquer tipo de declaração para impor bandeira. Para criar uma reivindicação administrativa, é necessária a permissão `griefdefender.admin.claim.command.admin-mode`. No entanto, observe que `griefdefender.admin` é recomendado - ele permitirá o gerenciamento das reivindicações do tipo administrativa.
 
-An admin claim has the following capabilities  
+Uma declaração de administrador tem os seguintes recursos
 
-* No size restrictions.
-* Does not cost anything to create.
-* Can be created around any existing claim.
-* Can rented. 
-* Used by administrators only.
+* Sem restrições de tamanho.
+* Não custa nada para criar.
+* Pode ser criado em torno de qualquer reivindicação existente.
+* Pode ser alugado.
+* Usado apenas por administradores.
 
-Note: Use `/adminclaims` or `/gd mode admin` to switch to this claim type mode.
+Nota: Use `/adminclaims` ou `/gd mode admin` para alternar para este modo de tipo de declaração.
 
-### Town Claims
+### Reivindicações da cidade
 
-Town claims are the third type of player claim introduced to GriefDefender. When holding the golden shovel, use `/townclaims`to switch to Town claim mode. Once created, town claims can house other basic claims, much like subdivisions to basic or admin claims.
+Reivindicações de cidade são o terceiro tipo de reivindicação de jogador apresentado ao GriefDefender. Ao segurar a pá dourada, use `/townclaims` para alternar para o modo de reivindicação da cidade. Uma vez criadas, as reivindicações da cidade podem abrigar outras reivindicações básicas, bem como subdivisões para reivindicações básicas ou administrativas.
 
-A town claim has the following capabilities  
+Uma reivindicação de cidade tem as seguintes capacidades
 
-* 32x32 size restriction in 2D mode. 32x32x32 size restriction in 3D mode.
-* Requires claim blocks.  
-* Supports basic claims inside.  
-* A creation limit of 1 which means you can only create 1 town by default.  
-Note: This can be adjusted by changing `griefdefender.create-limit` to a value higher than 1 with `gd_claim_default=town` context. 
+* Restrição de tamanho 32x32 no modo 2D. Restrição de tamanho 32x32x32 no modo 3D.
+* Requer blocos de reivindicação.
+* Suporta reivindicações básicas dentro.
+* Um limite de criação de 1, o que significa que você só pode criar 1 cidade por padrão.
+Nota: Isso pode ser ajustado alterando `griefdefender.create-limit` para um valor maior que 1 com o contexto `gd_claim_default=town`.
 
-### Wilderness Claim
+### Reivindicação da região selvagem
 
-The wilderness claim is an administrative claim. It is automatically created on first time world load and uses any space not claimed by a user. It functions just like any other claim where you can assign flags and options to it. By default, all actions are allowed in the wilderness.
+A reivindicação de deserto é uma reivindicação administrativa. Ele é criado automaticamente no primeiro carregamento mundial e usa qualquer espaço não reivindicado por um usuário. Funciona como qualquer outra reivindicação onde você pode atribuir sinalizadores e opções a ela. Por padrão, todas as ações são permitidas no deserto.

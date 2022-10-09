@@ -1,155 +1,155 @@
 ---
-title: GUI
+title: Interface
 tag: Info
 category: info
 icon: gui
 ---
 
-## GUI
+## Interface
 
-GriefDefender provides a [Chat](#Chat) and [Inventory](#Inventory) GUI for players.  
-Both GUI's can be accessed by executing the command `/gd`.  
-Use `/claimgui` to toggle between GUI's.  
-To default players to inventory GUI on login, grant the permission `griefdefender.login.inventory-gui` to them.  
-
-
-## Chat  
-
-The chat GUI is designed for PC players using a mouse and keyboard.  
+GriefDefender fornece uma Interface de [Bate-papo](#Bate-Papo) e [Inventário ](#Inventario) para os jogadores.
+Ambas as Interfaces podem ser acessadas executando o comando `/gd`.
+Use `/claimgui` para alternar entre as Interfaces.
+Para padronizar jogadores para inventariar a Interface no login, conceda a permissão `griefdefender.login.inventory-gui` a eles.
 
 
-### Main Menu  
+## Bate-Papo  
 
-To access the main menu, execute the command `/gd`  
-
-![Main Menu Start](https://i.imgur.com/gvrqPUl.png)  
-
-The main menu is designed as a `throw-away` menu, meaning it is not meant to take up the full chat screen.  
-Clicking on a menu link will open the full screen menu.  
-
-![Main Menu Full](https://i.imgur.com/YQmihfG.png)  
-
-#### Claim  
-
-Clicking on the `CLAIM` link will bring player to the following screen  
-
-![Claim](https://i.imgur.com/YQmihfG.png)  
-
-The available links work as follows  
-
-`ABANDON` - Abandon claim player is in.  
-`CREATE` - Creates a claim in chunk player is in.  
-`INFO` - Loads the claiminfo menu.  
-`LIST` - Loads the claimlist menu.  
-`SCHEMATIC` - Loads the schematic menu.  
-
-### Commands  
-
-Clicking on the `COMMANDS` link will bring player to the following screen  
-
-![Commands](https://i.imgur.com/ypaKgrv.png)  
-
-This screen shows a paginated list of commands available to the player. Hovering over a command will show its description, arguments, and permission.  
-Note: Players will not see commands they do not have access to run.  
+A Interface de bate-papo foi projetada para jogadores de PC que usam mouse e teclado. 
 
 
-### Flags  
+### Menu principal
 
-:warning: Flags will only affect the claim you are standing in.  
+Para acessar o menu principal, execute o comando `/gd`
 
-Clicking on the `FLAGS` link will bring player to one of the following two screens  
+![Início do menu principal](https://i.imgur.com/gvrqPUl.png)
+
+O menu principal é projetado como um menu 'descartável', o que significa que não deve ocupar toda a tela de bate-papo.
+Clicar em um link de menu abrirá o menu de tela cheia.
+
+![Menu principal completo](https://i.imgur.com/YQmihfG.png)
+
+#### Reivindicação  
+
+Clicar no link `REIVINDICAÇÃO` levará o jogador à seguinte tela
+
+![Reivindicação](https://i.imgur.com/YQmihfG.png)  
+
+Os links disponíveis funcionam da seguinte forma
+
+`ABANDONAR` - Abandone a reivindicação do jogador.
+`CRIAR` - Cria uma reivindicação no pedaço em que o jogador está.
+`INFO` - Carrega o menu Claiminfo.
+`LISTA` - Carrega o menu da lista de reivindicações.
+`SCHEMATIC` - Carrega o menu esquemático.
+
+### Comandos  
+
+Clicar no link `Comandos` levará o jogador à seguinte tela
+
+![Comandos](https://i.imgur.com/ypaKgrv.png)  
+
+Esta tela mostra uma lista paginada de comandos disponíveis para o player. Passar o mouse sobre um comando mostrará sua descrição, argumentos e permissão.
+Nota: Os jogadores não verão comandos que não têm acesso para executar.  
+
+
+### Bandeiras  
+
+:warning: As bandeiras afetarão apenas a reivindicação em que você está. 
+
+Clicar no link `BANDEIRAS` levará o jogador a uma das duas telas a seguir
  
-If the server has more then one preset available for the player, the player will be presented with a preset screen listing all available presets to the player.  
+Se o servidor tiver mais de uma predefinição disponível para o jogador, o jogador verá uma tela de predefinição listando todas as predefinições disponíveis para o jogador.
 
  
-![Flag Presets](https://i.imgur.com/GuXPpcy.png)  
+![Predefinições de Bandeiras](https://i.imgur.com/GuXPpcy.png)  
 
-If the server only has the delivered minecraft preset loaded, the player will be presented with all flag definitions available to the player to use in their claim.  
+Se o servidor tiver apenas a predefinição de minecraft entregue carregada, o jogador receberá todas as definições de bandeira disponíveis para o jogador usar em sua reivindicação.
 
-![Flag Definitions](https://i.imgur.com/ETLunlL.png)  
+![Definições de Bandeiras](https://i.imgur.com/ETLunlL.png)  
 
-This screen will default to the `USER` group and `PUBLIC` type which controls flags for non-trusted players.  To control flags on the owner and trusted members of claim, click the `OWNER` link.  You will notice the same flags but values may be different as they reflect different permissions.  
-
-
-As an administrator, you will see another group at top called `ADMIN` which will display all administrative flag definitions configured in the preset loaded.  
-Note: This assumes the delivered `minecraft` preset is loaded. If you create your own preset then the details above may differ.  
-
-For an in-depth guide on how to configure flag definitions for presets, see https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI  
+Esta tela terá como padrão o grupo `USER` e o tipo `PUBLIC` que controla os sinalizadores para jogadores não confiáveis. Para controlar as sinalizações do proprietário e dos membros confiáveis da reivindicação, clique no link "PROPRIETÁRIO". Você notará os mesmos sinalizadores, mas os valores podem ser diferentes, pois refletem permissões diferentes.
 
 
-### Options  
+Como administrador, você verá outro grupo no topo chamado `ADMIN` que exibirá todas as definições de sinalizadores administrativos configurados no preset carregado.
+Nota: Isso pressupõe que a predefinição `minecraft` entregue está carregada. Se você criar sua própria predefinição, os detalhes acima podem ser diferentes.
 
-:warning: Options are considered more for administrative use.  Be cautious when allowing normal users to use it.  
-
-Clicking on the `OPTIONS` link will bring player to the following screen  
-
-![Options](https://i.imgur.com/3HcWKQA.png)  
+Para um guia detalhado sobre como configurar definições de sinalizadores para predefinições, consulte https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI
 
 
-Users will default to the `CLAIM` tab within options which controls all options in the claim they are standing in.  
+### Opções  
+
+:warning: As opções são consideradas mais para uso administrativo. Seja cauteloso ao permitir que usuários normais o usem. 
+
+Clicar no link 'OPÇÕES' levará o jogador à seguinte tela
+
+![Opções](https://i.imgur.com/3HcWKQA.png)
 
 
-For a list of all available options and how to configure them, see [Options](https://github.com/bloodmc/GriefDefender/wiki/Options)  
+Os usuários usarão como padrão a guia "CLAIM" nas opções que controlam todas as opções na reivindicação em que estão.
 
 
-### Player  
-
-Clicking on the `PLAYER` link will load the playerinfo menu  
-Note: This menu can also be accessed directly by executing the command `/playerinfo [<playername>]`  
-
-![Player Info](https://i.imgur.com/PPbrPwi.png)  
-
-This screen allows a player to view all of their claim stats such as claim creation restrictions, total claims, accrued and bonus blocks.  
-
-Clicking on `DETAILS` will bring additional information such as world, last active, and player UUID.  
-
-![Player Info Details](https://i.imgur.com/0cjvNKc.png)  
+Para obter uma lista de todas as opções disponíveis e como configurá-las, consulte [Opções](https://github.com/bloodmc/GriefDefender/wiki/Options)
 
 
-### Trust  
+### Jogador
 
-Clicking on the `TRUST` link will load the trust menu  
-Note: This menu can also be accessed directly by executing the command `/trustlist`  
+Clicar no link `PLAYER` carregará o menu playerinfo
+Nota: Este menu também pode ser acessado diretamente executando o comando `/playerinfo [<playername>]`
 
+![Informações do jogador](https://i.imgur.com/PPbrPwi.png)
 
-![Trust](https://i.imgur.com/T75Gvpw.png)  
+Esta tela permite que um jogador visualize todas as suas estatísticas de reivindicação, como restrições de criação de reivindicação, total de reivindicação, acumulados e bloqueios de bônus.
 
-The trust menu allows a player to trust a member or group to their claims.  
-See [Trust-System](https://github.com/bloodmc/GriefDefender/wiki/Trust-System) for types of trust and how they each work.  
+Clicar em 'DETALHES' trará informações adicionais, como mundo, último ativo e UUID do jogador.
 
-To add a member or group, click one of the trust types at top of menu then click the `+` sign.  
-This will send a message to the player asking if you want to trust a player or group.  Simply click the `Player` or `Group` link to proceed.  
-
-If trusting a player, you will be required to enter a name in the format `player <name>`. Erase `<name>` and enter a valid name. When done press enter.  
-Mote: Enter `public` to trust all.  
-
-If trusting a group, you will be required to enter a group name in the format `group <name>`. Erase `<name>` and enter a valid LP group.  
+![Detalhes das informações do jogador](https://i.imgur.com/0cjvNKc.png)
 
 
+### Confiar
 
-## Inventory  
-
-The inventory GUI was designed for bedrock and controller players who are unable to click chat.  
-To access the inventory GUI, make sure you are in the right GUI mode by using `/claimgui`.  
-Note: Players that default to inventory GUI on login can ignore usage of `/claimgui` unless they want to switch to Chat GUI temporarily.  
+Clicar no link `TRUST` carregará o menu de confiança
+Nota: Este menu também pode ser acessado diretamente executando o comando `/trustlist`
 
 
-![Inventory Main Menu](https://i.imgur.com/dgO8OON.png)  
+![Confiar](https://i.imgur.com/T75Gvpw.png)
 
-This screen presents the player with 5 icons  : Claim, Command, Flag, Player, Wiki.  
+O menu de confiança permite que um jogador confie em um membro ou grupo para suas reivindicações.
+Veja [Trust-System](https://github.com/bloodmc/GriefDefender/wiki/Trust-System) para tipos de confiança e como cada um funciona.
 
-Clicking the `golden shovel` icon will load the claim menu  
+Para adicionar um membro ou grupo, clique em um dos tipos de confiança na parte superior do menu e clique no sinal `+`.
+Isso enviará uma mensagem ao jogador perguntando se você deseja confiar em um jogador ou grupo. Basta clicar no link `Player` ou `Group` para continuar.
 
-![Claim](https://i.imgur.com/JFxoyqJ.png)  
+Se confiar em um jogador, você deverá digitar um nome no formato `player <nome>`. Apague `<nome>` e insira um nome válido. Quando terminar, pressione enter.
+Mote: Digite `public` para confiar em todos.
 
-The available icons work as follows  
+Se confiar em um grupo, você deverá inserir um nome de grupo no formato `grupo <nome>`. Apague `<name>` e insira um grupo LP válido.
 
-`ABANDON` - Abandon claim player is in.  
-`CREATE` - Creates a claim in chunk player is in.  
-`INFO` - Loads the claiminfo inventory menu.  
-`LIST` - Loads the claimlist inventory menu.  
-`DEBUG` - Debugs the current claim user is in.  
-Note: The debug icon is for admins only.  
 
-All inventory GUI configuration can be found in the `gui.conf` file within `./plugins/GriefDefender/` folder.  
-See https://github.com/bloodmc/GriefDefender/wiki/Configuration#inventory-section for more information.  
+
+## Inventario
+
+A Interface do inventário foi projetada para jogadores básicos e controladores que não conseguem clicar no bate-papo.
+Para acessar a Interface do inventário, certifique-se de estar no modo Interface correto usando `/claimgui`.
+Nota: Os jogadores que usam como padrão a Interface do inventário no login podem ignorar o uso de `/claimgui`, a menos que desejem alternar para a GUI do Chat temporariamente.
+
+
+![Menu principal do inventário](https://i.imgur.com/dgO8OON.png)
+
+Esta tela apresenta ao jogador 5 ícones: Reivindicação, Comando, Bandeira, Jogador, Wiki.
+
+Clicar no ícone 'golden shovel' carregará o menu de reivindicação
+
+![Reivindicação](https://i.imgur.com/JFxoyqJ.png)
+
+Os ícones disponíveis funcionam da seguinte forma
+
+`ABANDON` - Abandone a reivindicação do jogador.
+`CREATE` - Cria uma reivindicação no pedaço em que o jogador está.
+`INFO` - Carrega o menu de inventário Claiminfo.
+`LIST` - Carrega o menu de inventário da lista de reivindicações.
+`DEBUG` - Depura o usuário da reivindicação atual.
+Observação: o ícone de depuração é apenas para administradores.
+
+Toda a configuração da Interface do inventário pode ser encontrada no arquivo `gui.conf` dentro da pasta `./plugins/GriefDefender/`.
+Consulte https://github.com/bloodmc/GriefDefender/wiki/Configuration#inventory-section para obter mais informações.

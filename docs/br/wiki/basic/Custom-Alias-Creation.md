@@ -1,17 +1,17 @@
 ---
-title: Custom-Alias-Creation
+title: Criação-alias-personalizado
 tag: Misc
 category: misc
 icon: quill
 ---
 
-## User-Friendly Commands
+## Comandos amigáveis
 
-One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accessible for everyone with shorter commands.
+Um dos vários usos que você pode implementar em seu servidor é criar comandos de alias que aprimorarão a capacidade e aprimorarão o uso dessas opções avançadas, tornando-as mais acessíveis para todos com comandos mais curtos.
 
-For this, you may need to install an alias plugin like `CustomCommands`, or the `commands.yml` inside of the server folder. 
+Para isso, você pode precisar instalar um plugin de alias como `CustomCommands`, ou `commands.yml` dentro da pasta do servidor.
 
-Here is one example of using the brand new fly-speed option. This example was developed using CMI alias system built-in, but as mentioned before, you can use any.
+Aqui está um exemplo de como usar a nova opção de velocidade de vôo. Este exemplo foi desenvolvido usando o sistema de alias CMI integrado, mas como mencionado anteriormente, você pode usar qualquer um.
 
 ```
  CustomAlias:
@@ -20,8 +20,8 @@ Here is one example of using the brand new fly-speed option. This example was de
     - cop [playerName] player-fly-speed $1 context[default=global]
     Perm: true
 ```
-This will result on a player executing `/fspeed 0.5` and having his flight updated immediately, instead of using the longer input.
+Isso resultará em um jogador executando `/fspeed 0.5` e tendo seu vôo atualizado imediatamente, em vez de usar a entrada mais longa.
 
-You could basically make anything from GriefDefender shortened with custom alias.
+Você pode basicamente fazer qualquer coisa do GriefDefender encurtado com alias personalizado.
 
-**NOTE:** For this specific case, apart from having a CMI permission to execute the `/fspeed` command, the player also needs to have the GriefDefender permission to interact with Advanced Options. For more information: [See Advanced Options Wiki](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options)
+**NOTA:** Para este caso específico, além de ter uma permissão CMI para executar o comando `/fspeed`, o jogador também precisa ter a permissão GriefDefender para interagir com as Opções Avançadas. Para obter mais informações: [Veja a Wiki de opções avançadas](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options)

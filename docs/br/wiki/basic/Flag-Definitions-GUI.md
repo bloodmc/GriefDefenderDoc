@@ -1,15 +1,15 @@
 ---
-title: Flag Definitions GUI
+title: Interface de definições de bandeira
 tag: flags
 category: claim
 icon: screen
 ---
 
-## Overview
+## Visão geral
 
-The flag definition system provides both users and admins the ability to manage their claim flags in a [chat](https://github.com/bloodmc/GriefDefender/wiki/GUI#chat) or [inventory](https://github.com/bloodmc/GriefDefender/wiki/GUI#inventory) GUI.  
-GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.  
-The delivered vanilla flag definition data can be found in the following location
+O sistema de definição de bandeiras fornece aos usuários e administradores a capacidade de gerenciar seus bandeiras de reivindicação em um [Bate-papo](https://github.com/bloodmc/GriefDefender/wiki/GUI#chat) ou [Inventário](https://github .com/bloodmc/GriefDefender/wiki/GUI#inventory) interface.
+GriefDefender oferece um pacote de definições de bandeiras por padrão para fornecer a melhor compatibilidade entre servidores.
+Os dados de definição de bandeira vanilla entregues podem ser encontrados no seguinte local
 ### Sponge
 `./config/GriefDefender/presets/minecraft.conf`
 ### Bukkit
@@ -17,19 +17,19 @@ The delivered vanilla flag definition data can be found in the following locatio
 
 
 
-Admins are given full control to add/remove/customize flag definitions.  
+Os administradores têm controle total para adicionar/remover/personalizar definições de bandeiras.
 
-To add a flag definition to an existing delivered minecraft preset, open the `./presets/minecraft.conf` file.
-Within this section, you will see 2 delivered groups `admin` and `user`.  
+Para adicionar uma definição de bandeira a uma predefinição de minecraft entregue existente, abra o arquivo `./presets/minecraft.conf`.
+Nesta seção, você verá 2 grupos entregues `admin` e `user`.
 
-All flag definitions located within the `admin` group are accessible by only admins. This is due to the `admin-group` setting be set to `true`.  
-All flag definitions located within the `user` group are accessible by all users.  
-You can add/remove/move flag definitions as you please and even create new preset files from scratch which will get read when GUI is loaded.  
+Todas as definições de bandeiras localizadas no grupo `admin` são acessíveis apenas por administradores. Isso se deve à configuração do `admin-group` ser definida como `true`.
+Todas as definições de bandeiras localizadas no grupo `user` são acessíveis por todos os usuários.
+Você pode adicionar/remover/mover definições de bandeiras como quiser e até mesmo criar novos arquivos predefinidos do zero que serão lidos quando a interface for carregada.
 
-### Add new flag definition
+### Adicionar nova definição de bandeira
 
-If you want to add a flag to the 'admin' section, do the following
-1. Clone an existing flag definition. We will use `ambient-spawn` for this example.
+Se você quiser adicionar um bandeira à seção 'admin', faça o seguinte
+1. Clone uma definição de bandeira existente. Usaremos `ambient-spawn` para este exemplo.
 
 ```
 ambient-spawn {
@@ -44,49 +44,49 @@ ambient-spawn {
 }
 ```
 
-Lets break this example down
+Vamos quebrar este exemplo
 
-#### Name  
+#### Nome
 
-`ambient-spawn` - This is the name of your definition that will be displayed to users when they open it up in the flag GUI. It can be whatever you like.  
-Note: These are not actual GD core flags but rather a `flag definition` and cannot be used with the `/cf` command.  If you want to toggle a flag definition with a command then use `/claimflagdefinition` or `/gd flag definition`  
+`ambient-spawn` - Este é o nome da sua definição que será exibida aos usuários quando eles a abrirem na interface do bandeira. Pode ser o que você quiser.
+Nota: Estes não são bandeiras de núcleo GD reais, mas sim uma `flag definition` e não podem ser usados com o comando `/cf`. Se você quiser alternar uma definição de bandeira com um comando, use `/claimflagdefinition` ou `/gd flag definition`
 
-#### Contexts  
+#### Contextos  
 
 ```
 contexts=[
         "gd_claim_default=user"
     ]
 ```
-These are the definition contexts that will be used with all permissions defined within `permissions=[...]`.  
-It currently only supports context keys `gd_claim_default`, `gd_claim_override`, or `gd_claim`.  
-See https://github.com/bloodmc/GriefDefender/wiki/Contexts to learn how contexts work.  
-Note: These contexts do NOT apply in GUI. It is only used during server startup.  GUI will always apply flags to the claim player is standing in.
+Estes são os contextos de definição que serão usados com todas as permissões definidas em `permissions=[...]`.
+Atualmente suporta apenas chaves de contexto `gd_claim_default`, `gd_claim_override` ou `gd_claim`.
+Consulte https://github.com/bloodmc/GriefDefender/wiki/Contexts para saber como funcionam os contextos.
+Nota: Esses contextos NÃO se aplicam à interface. Ele é usado apenas durante a inicialização do servidor. A interface sempre aplicará bandeiras ao jogador de reivindicação em que está.
 
-#### Default value  
+#### Valor padrão
 
-`default-value=true` - This is the default-value GD will use when applying the definition during startup.  
-GD will only apply this value during startup as a transient permission if the contexts include either `gd_claim_default` or `gd_claim_override`.  
-If the definition does not contain one of these contexts then the default value is ignored.
+`default-value=true` - Este é o valor padrão que o GD usará ao aplicar a definição durante a inicialização.
+O GD só aplicará este valor durante a inicialização como uma permissão temporária se os contextos incluirem `gd_claim_default` ou `gd_claim_override`.
+Se a definição não contiver um desses contextos, o valor padrão será ignorado.
 
 #### Enabled  
 
-`enabled=true` - This controls whether the definition is enabled in GD or disabled. If set to `false`, the definition will be ignored.
+`enabled=true` - Isso controla se a definição está habilitada no GD ou desabilitada. Se definido como `false`, a definição será ignorada.
 
 
-#### Permissions  
+#### Permissões  
 
 ```
 permissions=[
     "flag=entity-spawn, target=#ambient"
 ]
 ```
-These are the flag permissions to assign this definition. Permissions can hold one or more flag entries. To add an additional line, add a `,` at end of previous then insert a new line.  
-Each line requires a `flag=<flag_name>` entry followed by either source or target  context.  
-If you want to apply a permission to all possible targets then don't include `target` as GD will automatically apply to all targets.  
-If you want to apply a permission to all possible sources then don't include `source` as GD will automatically apply to all sources.  
+Essas são as permissões de bandeira para atribuir essa definição. As permissões podem conter uma ou mais entradas de bandeira. Para adicionar uma linha adicional, adicione um `,` no final do anterior e insira uma nova linha.
+Cada linha requer uma entrada `flag=<flag_name>` seguida pelo contexto de origem ou destino.
+Se você deseja aplicar uma permissão a todos os destinos possíveis, não inclua `target`, pois o GD será aplicado automaticamente a todos os destinos.
+Se você deseja aplicar uma permissão a todas as fontes possíveis, não inclua `source`, pois o GD será aplicado automaticamente a todas as fontes.
 
-The most common contexts for permissions are as follows
+Os contextos mais comuns para permissões são os seguintes
 ```
 source
 target
@@ -97,26 +97,26 @@ state
 world
 ```
 
-The accepted context value must be a valid identifier. To locate the proper value in game, do the following
+O valor de contexto aceito deve ser um identificador válido. Para localizar o valor adequado no jogo, faça o seguinte
 
-1. Run command `/gddebug record claim` - This will start a debug session in the claim you are in.
-2. Perform an action you want to manage via flag definition.
-3. Run command `/gddebug paste` - This will display a web link to view debug results.
-4. Open link, and you will see a list of actions GD checked for the claim. You will a `source` and `target` column which will contain the values you need.
+1. Execute o comando `/gddebug record Claim` - Isso iniciará uma sessão de depuração na reivindicação em que você está.
+2. Execute uma ação que você deseja gerenciar por meio da definição de bandeira.
+3. Execute o comando `/gddebug paste` - Isso exibirá um link da web para visualizar os resultados da depuração.
+4. Abra o link e você verá uma lista de ações que o GD verificou para a reivindicação. Você terá uma coluna `source` e `target` que conterá os valores que você precisa.
 
-To locate a value for `used_item` or any other context, locate the Context column and you will see a list of all support contexts for the specific line action.
+Para localizar um valor para `used_item` ou qualquer outro contexto, localize a coluna Contexto e você verá uma lista de todos os contextos de suporte para a ação de linha específica.
 
-Another way to find an id you are looking for is to check a community run wiki for it
+Outra maneira de encontrar um id que você está procurando é verificar um wiki executado pela comunidade para ele
 
-See https://minecraft-ids.grahamedgecombe.com/
+Veja https://minecraft-ids.grahamedgecombe.com/
 
 
-### Minecraft Flag Definition Preset Config  
+### Configuração de predefinição de definição de bandeira do Minecraft
 
-For more information on what you can do with the flags config, see below
+Para mais informações sobre o que você pode fazer com a configuração de bandeiras, veja abaixo
 
 <details>
-  <summary>Minecraft Preset</summary>
+  <summary>Predefinição de Minecraft</summary>
 
 ```
 # A collection of flag definitions designed for vanilla minecraft.
@@ -1818,149 +1818,149 @@ minecraft {
 
 </details>
 
-## GUI  
+## INTERFACE
 
-GD provides a flag definition GUI which is designed to allow both users and admins to easily administer their claim flags.  
+O GD fornece uma interface de definição de bandeira projetada para permitir que usuários e administradores administrem facilmente seus bandeiras de reivindicação.
 
-In order to display the flag definition GUI, a user command must execute the following command `/cf` or `/gd flag claim`  
+Para exibir a interface de definição de bandeira, um comando de usuário deve executar o seguinte comando `/cf` ou `/gd flag Claim`
 
-The GUI will then be displayed on screen in either CHAT or as an inventory GUI.  
-This depends on what permission the user has set and the toggle status of `/claimgui`.  See the [Main GUI](https://github.com/bloodmc/GriefDefender/wiki/GUI#gui) page for more details.  
+A interface será exibida na tela no bate-papo ou como uma interface de inventário.
+Isso depende de qual permissão o usuário definiu e do status de alternância de `/claimgui`. Veja a página [Guia Principal](https://github.com/bloodmc/GriefDefender/wiki/GUI#gui) para mais detalhes.
 
-Once the flag definition GUI has been displayed, the user will see 2 subsections labeled `PUBLIC` and `OWNER`.  
-These subsections work as follows  
+Assim que a interface de definição do bandeira for exibida, o usuário verá 2 subseções rotuladas como `PUBLIC` e `OWNER`.
+Essas subseções funcionam da seguinte forma
 
-### PUBLIC  
+### PÚBLICO
 
-* All flag definitions will always support the `PUBLIC` type and thus will always be listed under it. 
-* When toggling a flag definition within `PUBLIC` in GUI, all non-trusted players will be affected.  
-* All permissions will be set on LP group `griefdefender_definition`  
+* Todas as definições de bandeiras sempre suportarão o tipo `PUBLIC` e, portanto, sempre serão listadas abaixo dele.
+* Ao alternar uma definição de bandeira dentro de `PUBLIC` na interface, todos os players não confiáveis serão afetados.
+* Todas as permissões serão definidas no grupo LP `griefdefender_definition`
 
-### OWNER  
+### PROPRIETÁRIO
 
-* A flag definition will only be displayed under `OWNER` if the flag definition has `owner-mode` set to `true`.  
-* When toggling a flag definition within `OWNER` in GUI, all trusted players including owner will be affected.  
-* All claim flag permissions will be set on LP user that owns the claim.   
-Note: For wilderness claims, all claim flag permissions are set on the LP wilderness user `_GDWorld_` with UUID `00000000-0000-0000-0000-000000000000`  
-Note: For admin claims, all claim flag permissions are set on the LP admin user `_GDAdmin_` with UUID `11111111-1111-1111-1111-111111111111`  
+* Uma definição de bandeira só será exibida em `OWNER` se a definição de bandeira tiver `owner-mode` definido como `true`.
+* Ao alternar uma definição de bandeira dentro de `OWNER` na interface, todos os jogadores confiáveis, incluindo o proprietário, serão afetados.
+* Todas as permissões do bandeira de reivindicação serão definidas no usuário do LP que possui a reivindicação.
+Observação: para reivindicações de área selvagem, todas as permissões de bandeira de reivindicação são definidas no usuário LP selvagem `_GDWorld_` com UUID `00000000-0000-0000-0000-000000000000`
+Observação: para reivinidcalções administrativa, todas as permissões de bandeira de reivindicação são definidas no usuário administrador do LP `_GDAdmin_` com UUID `11111111-1111-1111-1111-111111111111`
 
 
-### Permissions  
+### Permissões  
 
-The following permission controls the user's ability to toggle flag definitions in GUI  
+A permissão a seguir controla a capacidade do usuário de alternar as definições de bandeiras na interface 
 `griefdefender.user.definition.flag.<preset>.<group>.<definition_name>`
 
-As an example, lets assume you want to deny user access to toggle the `damage-animals` flag in GUI.  
-You would enter the following in LuckPerms  
-`/lp group <groupname> permission set griefdefender.user.definition.flag.minecraft.user.damage-animals false`
+Como exemplo, vamos supor que você queira negar o acesso do usuário para alternar o bandeira `damage-animals` na interface.
+Você digitaria o seguinte em LuckPerms
+`/lp group <groupname> conjunto de permissões griefdefender.user.definition.flag.minecraft.user.damage-animals false`
 
-### Flag Values
+### Valores de sinalização
 
-As shown below, both admin/user flags start off as either `true` or `false` and will represent the current active value of claim you are in.  
+Conforme mostrado abaixo, ambos os bandeiras de administrador/usuário começam como `true` ou `false` e representam o valor ativo atual da reivindicação em que você está.
 
 ### ADMIN
-:warning: Admin flags will ONLY affect the claim you are in.  
+:warning: As bandeiras de administrador APENAS afetarão a reivindicação em que você está.
 
-![Admin GUI](https://i.imgur.com/tSVSC7q.png)
+![Interface do ADMIN](https://i.imgur.com/tSVSC7q.png)
 
 
-By default, admins have access to 2 modes `PRESET` and `ADVANCED`.
-The `PRESET` mode is directly linked to the minecraft flag definitions preset file. Each group is read into the GUI as a tab along with its definitions.
-There are 2 delivered groups that GD ships with, `USER` and `ADMIN`. 
+Por padrão, os administradores têm acesso a 2 modos `PRESET` e `ADVANCED`.
+O modo `PRESET` está diretamente ligado ao arquivo predefinido de definições de bandeira do minecraft. Cada grupo é lido na interface como uma guia junto com suas definições.
+Existem 2 grupos entregues com os quais o GD é fornecido, `USER` e `ADMIN`.
  
-Both groups will apply flags to claim you are standing in. If you need flags set as a default, set it up in config as shown above.
+Ambos os grupos aplicarão bandeiras para afirmar que você está de pé. Se você precisar de sinalizadbandeirasores definidos como padrão, configure-o na configuração conforme mostrado acima.
 
 
-Flag Definition                                  | Default Value | Description |
+Definição de Sinalização                                  | Valor padrão | Descrição |
 -------------------------------------------------|---------------|--------------|
-```ambient-spawn``` |  true  | Controls whether ambients, such as bats, spawn.
-```animal-block-modify``` |  true  | Controls whether animals can modify blocks such as rabbits eating carrots.
-```animal-spawn``` |  true  | Controls whether animals, such as cows/pigs/horses/etc., spawn.
-```aquatic-spawn``` |  true  | Controls whether aquatics that live in water, such as squids, spawn.
-```armorstand-use``` |  false | Controls whether armorstands can be placed or broken.
-```block-trampling``` |  false  | Controls whether farmland and turtle eggs can be trampled.
-```chorus-fruit-teleport``` | false | Controls whether a player can use chorus fruit to teleport.
-```commandblock-block-break``` | false | Controls whether command blocks can break blocks.
-```commandblock-block-place``` | false | Controls whether command blocks can place blocks.
-```creeper-block-explosion``` | false | Controls whether a creeper can explode blocks.
-```creeper-entity-explosion``` | false | Controls whether a creeper can explode entities.
-```endcrystal-use```      | false  | Controls whether endcrystals can be placed or broken.
-```entity-armorstand-damage``` | false | Controls whether entities can deal damage to armorstands.
-```entity-itemframe-damage``` | false | Controls whether entities can deal damage to item frames.
-```exp-drop``` | true | Controls whether experience orbs can drop.
-```fall-entity-damage``` | true | Controls whether entities can take fall damage.
-```fall-player-damage``` | true | Controls whether players can take fall damage.
-```falling-block-break``` | true | Controls whether falling blocks can break.
-```fire-block-damage``` | true | Controls whether fire can cause block damage.
-```fire-entity-damage``` | true |  Controls whether fire can cause entity damage.
-```lightning-damage```  | true | Controls whether lightning can cause harm.
-```monster-animal-damage``` | false |  Controls whether monsters can deal damage to animals.
-```monster-player-damage``` | true | Controls whether monsters can deal damage to players.
-```monster-spawn```  | true | Controls whether monsters, such as creepers and skeletons, can spawn.
-```piston-item-spawn``` | true | Controls whether mycelium can spread.
-```piston-use``` | false | Controls whether pistons can be used.
-```player-block-break``` | false | Controls whether players can break blocks.
-```player-block-interact``` | false | Controls whether players can interact with blocks.<br />Note: This does not include inventory blocks such as chests.
-```player-block-place``` | false | Controls whether players can place blocks.
-```player-damage``` | true | Controls whether players can be damaged.
-```player-enderpearl-interact``` | true | Controls whether players can use an enderpearl.
-```player-endportal-use``` | true | Controls whether players can use end portal.
-```player-entity-interact``` | true | Controls whether players can interact with entities.<br />Note: This does not include chest access with entities such as horses.
-```player-enter``` | true | Controls whether a player can enter this claim.
-```player-exit``` | true | Controls whether a player can exit this claim.
-```player-item-drop``` | true | Controls whether players can drop items.
-```player-item-pickup``` | true | Controls whether players can pickup items.
-```player-itemframe-interact``` | false | Controls whether players can interact with item frames.
-```player-itemhanging-place``` | false | Controls whether players can place hanging items such as itemframes.
-```player-netherportal-use``` | true | Controls whether players can use nether portal.
-```player-teleport-from``` | true | Controls whether players can teleport from this claim.
-```player-teleport-to``` | true | Controls whether players can teleport to this claim.
-```player-villager-damage``` | false | Controls whether players can deal damage to villagers.
-```ravager-block-break``` | true | Controls whether ravagers can break blocks during raids.
-```silverfish-block-infest``` | false | Controls whether silverfish can infest blocks such as cobblestone.
-```tnt-block-explosion``` | false | Controls whether tnt can explode blocks.
-```tnt-entity-explosion``` | false | Controls whether tnt can explode entities.
-```turtle-egg-hatch``` | true | Controls whether turtle eggs can hatch.
-```villager-farm``` | true | Controls whether villages can farm crops.
-```wither-block-break``` | false | Controls whether withers can break blocks.
-```wither-entity-damage``` | true | Controls whether withers can damage entities.
+```ambient-spawn``` |  true  | Controla se ambientes, como morcegos, aparecem.
+```animal-block-modify``` |  true  | Controla se os animais podem modificar blocos, como coelhos comendo cenouras.
+```animal-spawn``` |  true  | Controla se animais, como vacas/porcos/cavalos/etc., geram.
+```aquatic-spawn``` |  true  | Controla se os aquáticos que vivem na água, como lulas, desovam.
+```armorstand-use``` |  false | Controla se armaduras podem ser colocadas ou quebradas.
+```block-trampling``` |  false  | Controla se terras arradads e ovos de tartaruga podem ser pisoteados.
+```chorus-fruit-teleport``` | false | Controla se um jogador pode usar a fruta do coro para se teletransportar.
+```commandblock-block-break``` | false | Controla se os blocos de comando podem quebrar blocos.
+```commandblock-block-place``` | false | Controla se os blocos de comando podem colocar blocos.
+```creeper-block-explosion``` | false | Controla se uma trepadeira pode explodir blocos.
+```creeper-entity-explosion``` | false | Controla se uma trepadeira pode explodir entidades.
+```endcrystal-use```      | false  | Controla se os cristais finais podem ser colocados ou quebrados.
+```entity-armorstand-damage``` | false | Controla se as entidades podem causar dano a armaduras.
+```entity-itemframe-damage``` | false | Controla se as entidades podem causar danos aos quadros de itens.
+```exp-drop``` | true | Controla se orbes de experiência podem cair.
+```fall-entity-damage``` | true | Controla se as entidades podem sofrer dano de queda.
+```fall-player-damage``` | true | Controla se os jogadores podem sofrer dano de queda.
+```falling-block-break``` | true | Controla se os blocos em queda podem quebrar.
+```fire-block-damage``` | true | Controla se o fogo pode causar danos ao bloco.
+```fire-entity-damage``` | true |  Controla se o fogo pode causar danos à entidade.
+```lightning-damage```  | true | Controla se um raio pode causar danos.
+```monster-animal-damage``` | false |  Controla se os monstros podem causar dano a animais.
+```monster-player-damage``` | true | Controla se os monstros podem causar dano aos jogadores.
+```monster-spawn```  | true | Controla se monstros, como trepadeiras e esqueletos, podem aparecer.
+```piston-item-spawn``` | true | Controla se o micélio pode se espalhar.
+```piston-use``` | false | Controla se os pistões podem ser usados.
+```player-block-break``` | false | Controla se os jogadores podem quebrar blocos.
+```player-block-interact``` | false | Controla se os jogadores podem interagir com os blocos.<br />Nota: Isso não inclui blocos de inventário, como baús.
+```player-block-place``` | false | Controla se os jogadores podem colocar blocos.
+```player-damage``` | true | Controla se os jogadores podem ser danificados.
+```player-enderpearl-interact``` | true | Controla se os jogadores podem usar uma enderpearl.
+```player-endportal-use``` | true | Controla se os jogadores podem usar o portal do fim.
+```player-entity-interact``` | true | Controla se os jogadores podem interagir com entidades.<br />Nota: Isso não inclui acesso ao baú com entidades como cavalos.
+```player-enter``` | true | Controla se um jogador pode entrar nesta reivindicação.
+```player-exit``` | true | Controla se um jogador pode sair desta reivindicação.
+```player-item-drop``` | true | Controla se os jogadores podem soltar itens.
+```player-item-pickup``` | true | Controla se os jogadores podem pegar itens.
+```player-itemframe-interact``` | false | Controla se os jogadores podem interagir com os quadros de itens.
+```player-itemhanging-place``` | false | Controla se os jogadores podem colocar itens pendurados, como molduras de itens.
+```player-netherportal-use``` | true | Controla se os jogadores podem usar o portal nether.
+```player-teleport-from``` | true | Controla se os jogadores podem se teletransportar desta reivindicação.
+```player-teleport-to``` | true | Controla se os jogadores podem se teletransportar para esta reivindicação.
+```player-villager-damage``` | false | Controla se os jogadores podem causar dano aos aldeões.
+```ravager-block-break``` | true | Controla se os saqueadores podem quebrar blocos durante as invasões.
+```silverfish-block-infest``` | false | Controla se o silverfish pode infestar blocos como paralelepípedos.
+```tnt-block-explosion``` | false | Controla se o tnt pode explodir blocos.
+```tnt-entity-explosion``` | false | Controla se o tnt pode explodir entidades.
+```turtle-egg-hatch``` | true | Controla se os ovos de tartaruga podem eclodir.
+```villager-farm``` | true | Controla se as aldeias podem cultivar colheitas.
+```wither-block-break``` | false | Controla se a cernelha pode quebrar blocos.
+```wither-entity-damage``` | true | Controla se a cernelha pode danificar entidades.
 
 ### USER
-:warning: User flags will ONLY affect the claim you are in.  
-:warning: If you want to modify `USER` flag definitions in a claim that you do not own, you must have ignoreclaims permissions and enter `/ignoreclaims` before executing `/cf` command.
+:warning: As bandeiras do usuário APENAS afetarão a reivindicação em que você está.
+:warning: Se você deseja modificar as definições do bandeira `USER` em uma reivindicação que não é sua, você deve ter permissões ignoreclaims e digite `/ignoreclaims` antes de executar o comando `/cf`.
 
 
-As a user, if you enter the `/cf` command, you will see the following
+Como usuário, se você digitar o comando `/cf`, verá o seguinte
 
-![User GUI](https://i.imgur.com/LTeNaaD.png)
+![INterface do jogador](https://i.imgur.com/LTeNaaD.png)
 
-Flag Definition                                  | Default Value | Description | 
+Definição de Sinalização                                  | Valor padrão | Descrição | 
 -------------------------------------------------|---------------|--------------|
-```block-fertilize``` | false | Controls whether a player can fertilize a block with bonemeal.
-```chest-access``` | false | Controls whether a player can access chest inventories.
-```crop-growth``` | true | Controls whether crops can grow.
-```damage-animals``` | false | Controls whether animals can be damaged.
-```enderman-grief``` | false | Controls whether enderman can grief.
-```fire-spread``` | false | Controls whether fire can spread.
-```grass-growth``` | true | Controls whether grass can grow.
-```ice-form``` | true | Controls whether ice can form.
-```ice-melt``` | true | Controls whether ice can melt.
-```lava-flow``` | false | Controls whether lava can flow.
-```leaf-decay``` | true | Controls whether leaves can decay.
-```lighter``` | false | Controls whether a player can use flint and steel.
-```mushroom-growth``` | true | Controls whether mushrooms can grow.
-```mycelium-spread``` | true | Controls whether mycelium can spread.
-```painting-damage``` | false | Controls whether players can break paintings.
-```pvp``` | true | Controls whether PvP combat is allowed.
-```ride``` | false | Controls whether vehicles(including animals), not owned by the player, can be mounted.
-```sign-use``` | true | Controls whether players can use signs.
-```sleep``` | true | Controls whether players can sleep in beds
-```snow-fall``` | true | Controls whether snow can fall.
-```snow-melt``` | true | Controls whether snow can melt.
-```snowman-trail``` | true | Controls whether snowmen can create snow beneath them.
-```soil-dry``` | true | Controls whether soil will dry.
-```vehicle-use``` | false | Controls whether vehicles(boats, minecarts, etc.) can be placed, ridden and broken.
-```villager-trade``` | true | Controls whether players can trade with villagers.
-```vine-growth``` | true | Controls whether vines(and kelp) can grow.
-```water-flow``` | false | Controls whether water can flow.
+```block-fertilize``` | false | Controla se um jogador pode fertilizar um bloco com farinha de ossos.
+```chest-access``` | false | Controla se um jogador pode acessar inventários de baús.
+```crop-growth``` | true | Controla se as culturas podem crescer.
+```damage-animals``` | false | Controla se os animais podem ser danificados.
+```enderman-grief``` | false | Controla se o enderman pode sofrer.
+```fire-spread``` | false | Controla se o fogo pode se espalhar.
+```grass-growth``` | true | Controla se a grama pode crescer.
+```ice-form``` | true | Controla se o gelo pode se formar.
+```ice-melt``` | true | Controla se o gelo pode derreter.
+```lava-flow``` | false | Controla se a lava pode fluir.
+```leaf-decay``` | true | Controla se as folhas podem decair.
+```lighter``` | false | Controla se um jogador pode usar pederneira.
+```mushroom-growth``` | true | Controla se os cogumelos podem crescer.
+```mycelium-spread``` | true | Controla se o micélio pode se espalhar.
+```painting-damage``` | false | Controla se os jogadores podem quebrar pinturas.
+```pvp``` | true | Controla se o combate PvP é permitido.
+```ride``` | false | Controla se veículos (incluindo animais), não pertencentes ao jogador, podem ser montados.
+```sign-use``` | true | Controla se os jogadores podem usar sinais.
+```sleep``` | true | Controla se os jogadores podem dormir em camas
+```snow-fall``` | true | Controla se a neve pode cair.
+```snow-melt``` | true | Controla se a neve pode derreter.
+```snowman-trail``` | true | Controla se os bonecos de neve podem criar neve abaixo deles.
+```soil-dry``` | true | Controla se o solo vai secar.
+```vehicle-use``` | false | Controla se os veículos (barcos, carrinhos de mina, etc.) podem ser colocados, montados e quebrados.
+```villager-trade``` | true | Controla se os jogadores podem negociar com os aldeões.
+```vine-growth``` | true | Controla se videiras (e algas) podem crescer.
+```water-flow``` | false | Controla se a água pode fluir.
 
