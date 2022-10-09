@@ -1,1 +1,1 @@
-Página de Placeholder para predefinições de sinalizador Pixelmon
+Página de Placeholder para predefinições de bandeiras para o mod Pixelmon
