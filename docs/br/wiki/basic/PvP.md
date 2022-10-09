@@ -5,42 +5,42 @@ category: Misc
 icon: swords
 ---
 
-GriefDefender has the ability to control PvP globally, per user/group, or per claim.  
+O GriefDefender tem a capacidade de controlar o PvP globalmente, por usuário/grupo ou por reivindicação.
 
-Here are a few examples on how to configure PvP  
-Note: These examples assume a clean installation with no modified settings.
+Aqui estão alguns exemplos de como configurar o PvP
+Nota: Esses exemplos pressupõem uma instalação limpa sem configurações modificadas.
 
-### Disable PvP on server
-To disable PvP on server, open `server.properties` and set `pvp` to false (On Sponge, set PVP to false in the Sponge config).
+### Desabilitar o PvP do servidor
+Para desabilitar o PvP do servidor, abra `server.properties` e configure `pvp` para false (Caso utilize o Sponge, na configuração PVP mude para false no arquivo de configuração do Sponge).
 
-### Disable PvP globally except specific claims
+### Desative o PvP globalmente, exceto reivindicações específicas
 
-1. Open `presets/minecraft.conf` in the GD config directory.
-2. Change `default-value=true` to `default-value=false` under the `pvp` definition
-3. Toggle the `pvp` definition to true in claims where pvp is wanted
-4. Optional: Move the `pvp` flag definition from USER group to ADMIN group in `minecraft.conf`  
-Note: Make this change if you ONLY want admins to be able to toggle `pvp` in claims.  
+1. Abra `presets/minecraft.conf` no diretório de configuração do GD.
+2. Altere `default-value=true` para `default-value=false` na definição de `pvp`
+3. Alterne a definição de `pvp` para true em reivindicações onde o pvp é desejado
+4. Opcional: Mova a definição a bandeira `pvp` do grupo USER para o grupo ADMIN em `minecraft.conf`
+Nota: Faça esta alteração se você APENAS quiser que os administradores possam alternar `pvp` nas reivindicações.
 5. `/gdreload`
 
-### Disable PvP for a specific player
+### Desative o PvP para um jogador específico
 
-1. Run command `/cfp <player> entity-damage player false source=player`
+1. Execute o comando `/cfp <jogador> entity-damage player false source=player`
 
 ### Disable PvP for a specific group of users
 
-1. Run command `/cfg <group> entity-damage player false source=player` 
+1. Execute o comando `/cfg <grupo> entity-damage player false source=player` 
 
-### Allow PvP globally except specific claims
+### Permitir PvP globalmente, exceto reivindicações específicas
 
-If you want to allow users to enable/disable PvP then have them do the following
-1. Run command `/cf` to launch flag GUI.
-2. Make sure `PRESET` `USER` tab is selected.
-3. Toggle `pvp` to `false`.
+Se você deseja permitir que os usuários ativem/desativem o PvP, faça o seguinte
+1. Execute o comando `/cf` para iniciar a GUI do sinalizador.
+2. Certifique-se de que a guia `PRESET` `USER` esteja selecionada.
+3. Alterne `pvp` para `falso`.
 
-### Allow users to configure PvP as they wish
+### Permitir que os usuários configurem o PvP como quiserem
 
-1. Run command `/cf` to launch flag GUI.
-2. Make sure `PRESET` `USER` tab is selected.
-3. Toggle `pvp` to `false` or `true`.
+1. Execute o comando `/cf` para iniciar a GUI do sinalizador.
+2. Certifique-se de que a guia `PRESET` `USER` esteja selecionada.
+3. Alterne `pvp` para `false` ou `true`.
 
 
