@@ -21,7 +21,7 @@ features:
 
   - title: Customizável
     icon: Toolbox
-    details: Use os sinalizadores padrão ou crie os seus próprios. Infinitas possibilidades!
+    details: Use as bandeiras padrões ou crie os seus próprios. Infinitas possibilidades!
     link: https://github.com/bloodmc/GriefDefender
 
   - title: Traduções multilíngues
@@ -44,7 +44,7 @@ features:
     details: Projetado desde o início para mods. Híbrido e Sponge.
     link: https://github.com/bloodmc/GriefDefender
 
-  - title: Impostos. Aluguel e vendas
+  - title: Taxas. Aluguel e vendas
     icon: moneybag
     details: Aumente sua economia alugando ou vendendo suas reivindicações e muito mais.
     link: https://github.com/bloodmc/GriefDefender
@@ -64,5 +64,5 @@ features:
     link: https://github.com/bloodmc/GriefDefender
 
 copyright: false
-footer: MIT Licensed | Copyright © 2019-presente GriefDefender
+footer: MIT licenciado | Copyright © 2019-presente GriefDefender
 ---
