@@ -1,51 +1,51 @@
 ---
-title: Claim Management
+title: Gestão de Reivindicações
 tag: Claim
 category: claim
 icon: manage
 ---
 
-GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the [Flag Definition page](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI).
+GriefDefender é um plugin que fornece funcionalidade de proteção de região de automática, oferecendo opções adicionais para ajustar aspectos como portas, baús e permissões de construção para jogadores ou grupos de jogadores! Abaixo algumas instruções básicas para gerenciamento de reivindicações para um controle mais personalizado sobre suas reivindicações para o seu servidor, confira a [página de definição de bandeiras](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI).
 
-All the examples are with the defaults at the time of writing this in mind.
+Todos os exemplos estão com os padrões no momento em que escrevo isso em mente.
 
-For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](https://github.com/bloodmc/GriefDefender/wiki/FAQ)
+Para obter exemplos detalhados de como gerenciar certos aspectos de suas reivindicações, consulte a seção **Gerenciamento de reivindicações** na [Página de perguntas frequentes](https://github.com/bloodmc/GriefDefender/wiki/FAQ)
 
-## Claim Creation
+## Criação de Reivindicação
 
-A player can create claims in two types of modes.
+Um jogador pode criar reivindicações em dois tipos de modos.
 
 ### 2D 
 
-A 2D claim creates a claim by `AREA` (X and Z). It creates the claim from bedrock (lowest block point) to sky (max Y level 255) in the world you are in. This mode is the most user friendly as it doesn't require the player to worry about block height or other players claiming above or below their claims. By default all players default to this mode unless the meta option `griefdefender.create-mode` is set to a different mode.  
-See https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#claim-options for more info on claim options.  
+Em modo 2D cria uma reivindicação por `AREA` (X e Z). Ele cria a reivindicação da rocha-mãe (bedrock) (ponto mais baixo do bloco) ao céu (máximo Y nível 320) no mundo em que você está. Este modo é o mais amigável, pois não exige que o jogador se preocupe com a altura do bloco ou outros jogadores reivindicando acima ou abaixo de suas reivindicações. Por padrão, todos os jogadores usam esse modo como padrão, a menos que a meta-opção `griefdefender.create-mode` esteja definida para um modo diferente.
+Veja https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#claim-options para obter mais informações sobre opções de reivindicação. 
 
 ### 3D
 
-A 3D claim creates a claim by `VOLUME` (X, Y, and Z). It is the same as 2D except it respects the block height from your selections. This mode is ideal perfect for subdivisions (child claims). For example, if you wanted to create a building with floors you could use this mode so the height is respected.  
-Note: To switch to this mode, use the command `/cuboid` or  `/gd cuboid`. To exit back to 2D mode, enter the same command.
+Em modo 3D cria uma reivindicação por `VOLUME` (X, Y e Z). É o mesmo que 2D, exceto que respeita a altura do bloco de suas seleções. Este modo é ideal para subdivisões (reivindicações em modo subdivisão ou de marcação de lã branca). Por exemplo, se você deseja criar um edifício com andares, pode usar este modo para que a altura seja respeitada.
+Nota: Para mudar para este modo, use o comando `/cuboid` ou `/gd cuboid`. Para sair de volta ao modo 2D, digite o mesmo comando.
 
-### Force players to default to 3D on login
+### Forçar os jogadores a usar o padrão 3D no login
 
-If you want to force players to default to 3D claiming mode on login, set `griefdefender.create-mode` to `VOLUME` on a LP group or player.  
-Note: This does not mean a player cannot switch modes, it just defaults them to what is set on login.  
-
-
-In order to start creating a claim, first make sure you are in the correct claiming mode (2D or 3D) then do one of the following
-
-1. Switch to the claiming tool which by default is a `minecraft:golden_shovel`.  
-OR
-2. Switch to claiming mode by using command `/claim` or `/claimmode`.  
-Note: Claim mode requires no tools in hand.
-
-Claim mode has the following functionality  
-
-* Left-click to inspect existing claims based on your mouse cursor. The first non-air block hit will be the claim it inspects.  
-* Shift Left-click to scan for existing claims around you.
-* Right-click to create a new claim. This requires 2 block points to complete. If in 2D mode, simply select 2 points in a square format. If in 3D mode, do the same as 2D but block height will matter so choose the lowest and highest block position you want your claim to be.  
+Se você quiser forçar os jogadores a usar o modo padrão de reivindicação 3D no login, defina `griefdefender.create-mode` para `VOLUME` em um grupo ou player de LP.
+Nota: Isso não significa que um jogador não pode alternar entre os modos, apenas os padroniza para o que está definido no login.
 
 
-Once you have the proper claiming tool equipped or are in `/claimmode` , it is time to decide what claim type you want to create.
+Para começar a criar uma reivindicação, primeiro certifique-se de que está no modo de reivindicação correto (2D ou 3D) e, em seguida, faça um dos seguintes
+
+1. Mude para a ferramenta de reivindicação que por padrão é um `minecraft:golden_shovel` (Pá de Ouro)
+OU
+2. Mude para o modo de reivindicação usando o comando `/claim` ou `/claimmode`.
+Observação: o modo de reivindicação não requer o jogador utilizar ferramentas em mãos.
+
+O modo de reivindicação tem a seguinte funcionalidade
+
+* Clique-Esquerdo para inspecionar as reivindicações existentes com base no cursor do mouse. O primeiro acerto do bloco não aéreo será a reivindicação que ele inspeciona.
+* Shift + Clique-Esquerdo para verificar as reivindicações existentes ao seu redor.
+* Clique-Direito para criar uma nova reivindicação. Isso requer 2 pontos de bloqueio para ser concluído. Se estiver no modo 2D, basta selecionar 2 pontos em formato quadrado. Se estiver no modo 3D, faça o mesmo que 2D, mas a altura do bloco será importante, então escolha a posição de bloco mais baixa e mais alta que você deseja que sua reivindicação seja.
+
+
+Assim que você tiver a ferramenta de reivindicação adequada equipada ou estiver em `/claimmode`, é hora de decidir qual tipo de reivindicação você deseja criar.
 
 
 There are four types of claims a user can create

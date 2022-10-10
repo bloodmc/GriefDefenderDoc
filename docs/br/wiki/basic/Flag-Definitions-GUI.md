@@ -1938,9 +1938,9 @@ Definição de Sinalização                                  | Valor padrão | 
 -------------------------------------------------|---------------|--------------|
 ```block-fertilize``` | false | Controla se um jogador pode fertilizar um bloco com farinha de ossos.
 ```chest-access``` | false | Controla se um jogador pode acessar inventários de baús.
-```crop-growth``` | true | Controla se as culturas podem crescer.
-```damage-animals``` | false | Controla se os animais podem ser danificados.
-```enderman-grief``` | false | Controla se o enderman pode sofrer.
+```crop-growth``` | true | Controla se as agriculturas (trigos, melancia, etc...) podem crescer.
+```damage-animals``` | false | Controla se os animais podem ser tomar dano.
+```enderman-grief``` | false | Controla se o enderman pode pegar/colocar bloco.
 ```fire-spread``` | false | Controla se o fogo pode se espalhar.
 ```grass-growth``` | true | Controla se a grama pode crescer.
 ```ice-form``` | true | Controla se o gelo pode se formar.
@@ -1953,14 +1953,14 @@ Definição de Sinalização                                  | Valor padrão | 
 ```painting-damage``` | false | Controla se os jogadores podem quebrar pinturas.
 ```pvp``` | true | Controla se o combate PvP é permitido.
 ```ride``` | false | Controla se veículos (incluindo animais), não pertencentes ao jogador, podem ser montados.
-```sign-use``` | true | Controla se os jogadores podem usar sinais.
+```sign-use``` | true | Controla se os jogadores podem usar placas (Útil para lojas ou interações com placas).
 ```sleep``` | true | Controla se os jogadores podem dormir em camas
 ```snow-fall``` | true | Controla se a neve pode cair.
 ```snow-melt``` | true | Controla se a neve pode derreter.
 ```snowman-trail``` | true | Controla se os bonecos de neve podem criar neve abaixo deles.
 ```soil-dry``` | true | Controla se o solo vai secar.
-```vehicle-use``` | false | Controla se os veículos (barcos, carrinhos de mina, etc.) podem ser colocados, montados e quebrados.
+```vehicle-use``` | false | Controla se os veículos (botes, carrinhos de mina, etc.) podem ser colocados, montados e quebrados.
 ```villager-trade``` | true | Controla se os jogadores podem negociar com os aldeões.
-```vine-growth``` | true | Controla se videiras (e algas) podem crescer.
+```vine-growth``` | true | Controla se trepadeiras (e algas) podem crescer.
 ```water-flow``` | false | Controla se a água pode fluir.
 
