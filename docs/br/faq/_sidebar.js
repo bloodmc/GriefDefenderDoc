@@ -1,7 +1,7 @@
 module.exports = [
 	"/br/wiki",
-	"Claim-Management", 
-	"Flag-Definitions", 
-	"Options",
-	"Permissions"
+	"Gerenciando reivinidcação", 
+	"Definições de bandeira", 
+	"Opções",
+	"Permissões"
 ];

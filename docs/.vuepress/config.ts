@@ -17,29 +17,42 @@ export default defineUserConfig({
       title: "GriefDefender",
       description: "为 GriefDefender 准备的文档",
     },
+    "/br/": {
+      lang: "pt-BR",
+      title: "GriefDefender",
+      description: "Documentação do plugin GriefDefender",
+    },
   },
 
-  plugins: [[ 
+  plugins: [[
     nextSearchPlugin({
-      locales:{
-        '/':{
-		  fullText: true,
+      locales: {
+        '/': {
+          fullText: true,
           placeholder: 'search',
           frontmatter: {
             tag: 'tag',
             category: 'category',
           }
         },
-        '/zh/':{
+        '/zh/': {
           fullText: true,
           placeholder: '搜索',
           frontmatter: {
             tag: '标签',
             category: '分类',
           }
+        },
+        '/br/': {
+          fullText: true,
+          placeholder: 'search',
+          frontmatter: {
+            tag: 'tag',
+            category: 'category',
+          }
         }
-      }
-    }), ]],
+      },
+    }),]],
 
   theme,
 });

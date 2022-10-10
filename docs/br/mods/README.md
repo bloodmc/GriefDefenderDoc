@@ -1,2 +1,2 @@
 ::: info Mods disponíveis
-- Pixelmon ==> [Detalhes](/Pixelmon) | [Presets](/Presets-Pixelmon)
+- Pixelmon ==> [Detalhes](/br/mods/Pixelmon) | [Presets](/br/mods/Presets-Pixelmon)

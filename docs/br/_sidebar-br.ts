@@ -1,10 +1,10 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const br = sidebar({
-	"/br/faq/": require("./faq/_sidebar"),
-    "/br/hooks/": require("./hooks/_sidebar"),
-	"/br/mods/": require("./mods/_sidebar"),
-	"/br/wiki/": [ 
+	"/faq/": require("./faq/_sidebar"),
+    "/hooks/": require("./hooks/_sidebar"),
+	"/mods/": require("./mods/_sidebar"),
+	"/wiki/": [ 
         "/",
         {
           prefix: "/br/wiki/",
@@ -14,7 +14,7 @@ export const br = sidebar({
 		{
 		  text: "Básico",
 		  icon: "search",
-		  prefix: "/br/wiki/basic/",
+		  prefix: "/wiki/basic/",
 		  collapsable: true,
 		  children: ["Claim-Management", "Claim-Types", "Custom-Alias-Creation", 
 		  "GUI", "Flag-Definitions-GUI", "Options", "PvP",
@@ -23,14 +23,14 @@ export const br = sidebar({
 		{
 		  text: "Uso avançado",
 		  icon: "grid",
-		  prefix: "/br/wiki/advanced/",
+		  prefix: "/wiki/advanced/",
 		  collapsable: true,
 		  children: ["Contexts", "Debugging", "Flags", "Global-Config", "Optimizations"],
 		},
 		{
 		  text: "Migração",
 		  icon: "import",
-		  prefix: "/br/wiki/migration/",
+		  prefix: "/wiki/migration/",
 		  collapsable: true,
 		  children: ["GriefPrevention", "WorldGuard"],
 		},
