@@ -17,6 +17,11 @@ export default defineUserConfig({
       title: "GriefDefender",
       description: "为 GriefDefender 准备的文档",
     },
+    "/br/": {
+      lang: "pt-BR",
+      title: "GriefDefender",
+      description: "Documentação do plugin GriefDefender",
+    },
   },
 
   plugins: [[ 
@@ -38,7 +43,15 @@ export default defineUserConfig({
             category: '分类',
           }
         }
-      }
+      },
+      '/br/':{
+        fullText: true,
+        placeholder: 'search',
+        frontmatter: {
+          tag: 'tag',
+          category: 'category',
+        }
+      },
     }), ]],
 
   theme,

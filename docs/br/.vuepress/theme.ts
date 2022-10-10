@@ -44,6 +44,22 @@ export default hopeTheme({
       displayFooter: true,
 
     },
+
+    /**
+     * Portuguese locale config
+     */
+     "/br/": {
+      // navbar
+      navbar: navbar.br,
+
+      // sidebar
+      sidebar: sidebar.br,
+
+      footer: "Licensed under MIT",
+
+      displayFooter: true,
+
+    },
   },
 
   plugins: {

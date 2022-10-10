@@ -1,10 +1,10 @@
 import { sidebar } from "vuepress-theme-hope";
 
-export const en = sidebar({
-	"/faq/": require("./faq/_sidebar"),
-    "/hooks/": require("./hooks/_sidebar"),
-	"/mods/": require("./mods/_sidebar"),
-	"/wiki/": [ 
+export const br = sidebar({
+	"/br/faq/": require("./faq/_sidebar"),
+    "/br/hooks/": require("./hooks/_sidebar"),
+	"/br/mods/": require("./mods/_sidebar"),
+	"/br/wiki/": [ 
         "/",
         {
           prefix: "/br/wiki/",
