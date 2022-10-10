@@ -10,7 +10,7 @@ icon: start
 ### Requisitos
 
 ::: tip Você precisa do LuckPerms para executar o plugin.
-últimas versão [LuckPerms](https://luckperms.github.io/) para Bukkit & Sponge API 8/9.
+últimas versão [LuckPerms](https://luckperms.net/) para Bukkit & Sponge API 8/9.
 <br>Obter [LuckPerms v5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) para Sponge API 7.
 <br>**OBS: GD suporta apenas LuckPerms v5.**
 :::
@@ -18,7 +18,7 @@ icon: start
 ::: warning
 GD faz uso pesado de LP's `default` grupo. Certifique-se de que seus grupos de LP estão herdando o `default` grupo
 ou GD não funcionará corretamente. LP também recomenda nunca desabilitar este grupo.
-Verifique na [wiki](https://github.com/lucko/LuckPerms/wiki/Default-Groups#where-to-start) 
+Verifique na [wiki](https://luckperms.net/wiki/Default-Groups#where-to-start) 
 :::
 
 ### Instalação
@@ -26,12 +26,12 @@ Verifique na [wiki](https://github.com/lucko/LuckPerms/wiki/Default-Groups#where
 ::: tabs
 
 @tab:active Bukkit
-:warning: Se estiver usando `spark`, Atualizar para a [última versão](https://ci.lucko.me/job/spark/) :warning:   
+:warning: Se estiver usando `spark`, Atualize para a [última versão](https://ci.lucko.me/job/spark/) :warning:   
 :warning: Defina `spawn-protection` para `0` dentro `server.properties` para permitir que GD proteja o spawn. 
 Se isso não for definido corretamente, o servidor bloqueará as ações antes que o GD tenha a chance de vê-lo. :warning:
-1. Instale o Luckperms mais recente.
-2. Obtenha a versão mais recente em [Spigot](https://www.spigotmc.org/resources/68900/).
-3. Coloque o arquivo jar em `./plugins`
+1. Instale o [LuckPerms](https://luckperms.net/) mais recente.
+2. Obtenha a versão mais recente do [GriefDefender](https://www.spigotmc.org/resources/68900/).
+3. Coloque o arquivo jar dentro da pasta `./plugins`
 4. Agora inicie seu servidor uma vez para gerar todos os arquivos de configuração,
 para verificar se o GriefDefender foi carregado com sucesso você pode verificar se o console mostrou `[GriefDefender] Loaded successfully`.
 5. Em seguida, desligue o servidor e comece a configurar.
@@ -82,8 +82,10 @@ Você pode alterar várias configurações no [arquivo de configuração](https:
 * World
 
 Global arquivos de configuração podem afetar todos os mundos e dimensões de um servidor. Este é o nível padrão para configurações.
+
 Dimension arquivos de configuração são usados ​​para afetar uma determinada dimensão ou grupo de mundos. Esses tipos de configurações substituirão os arquivos de configuração Global. Os arquivos de configuração do mundo são usados ​​apenas para modificar mundos individuais.
-World configs substituem a dimensão e as configurações globais.
+
+World configurações substituem a dimensão e as configurações globais.
 
 Os dados da reivindicação podem ser encontrados dentro da pasta da dimensão em que a reivindicação está, por exemplo, todas as reivindicações do mundo superior são salvas dentro
 
@@ -182,7 +184,7 @@ Nota: Todas as seções de configuração são classificadas automaticamente em 
 GD suporta os seguintes idiomas : `de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK`
 
 O idioma padrão é `en_US`.  
-Para alterar o idioma, abra `global.conf` e abaixo `message` mudança de categoria `locale="en_US"` para o idioma desejado.
+Para alterar o idioma, abra o `global.conf` e encontre `message` mude a linha `locale="en_US"` para `locale="pt_BR"`
 
 ### Armazenamento
 
@@ -225,7 +227,7 @@ config/
 
 O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu `blacklist.conf` e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
 
-Veja https://github.com/bloodmc/GriefDefender/wiki/Configuration#blacklist para obter mais informações sobre como configurar.
+Veja a [Lista negra](/br/wiki/Configuration.html#lista-negra) para obter mais informações sobre como configurar.
 
 
 #### Banco de dados  
@@ -260,14 +262,14 @@ Nota: Se você quiser usar o `/buyclaimblocks` ou  `/sellclaimblocks` comandos e
  
 ### Permissões
 
-:warning: É MUITO IMPORTANTE que você siga https://github.com/bloodmc/GriefDefender/wiki/Permissions#important antes de proceder. :warning:  
+:warning: É MUITO IMPORTANTE que você siga o [Permissões#Importante](/br/wiki/Permissions.html#importante) antes de proceder. :warning:  
 :warning: Se você deseja remover permissões de usuário que não se aplicam ao seu servidor, é ALTAMENTE recomendado manter `griefdefender.user.*` aplicado a eles e simplesmente negar as permissões que você não possui. Se você remover o `griefdefender.user.*` e tentar aplicar todas as permissões do GD manualmente, você terá muitos problemas.
 
 Depois de instalar o GriefDefender corretamente, você precisa dar permissão aos seus jogadores para reivindicar terrenos, eles não são dados por padrão. A única permissão necessária para a configuração básica do GD é `griefdefender.user.*`. Para configuração básica de administração, dê aos administradores a permissão `griefdefender.admin.*` e `griefdefender.user.*`.
 
 Se você quiser ajustar mais permissões, você pode encontrar todas as permissões [aqui](https://github.com/bloodmc/GriefDefender/wiki/Permissions) e para uma lista com todas as permissões de comando e de uso [aqui](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
 
-Se você acredita que os comandos podem ser um pouco mais longos ou difíceis de memorizar, considere criar um custom alias.[Clique aqui para obter mais informações](https://github.com/bloodmc/GriefDefender/wiki/Custom-Alias-Creation)
+Se você acredita que os comandos podem ser um pouco mais longos ou difíceis de memorizar, considere criar um custom alias.[Clique aqui para obter mais informações](/br/wiki/basic/Custom-Alias-Creation.html)
 
 Para aplicar as permissões acima a um grupo no LuckPerms, execute o seguinte comando
 
@@ -280,7 +282,7 @@ Para `<grupo>` use seu grupo padrão, use `default` se você não tiver um.
 Depois que o GD estiver instalado e em execução, consulte https://github.com/bloodmc/GriefDefender/wiki/Claim-Management para saber como criar uma proteção de terrra e gerenciá-lo.
 
 ### Options
-:warning: É MUITO IMPORTANTE que você siga https://github.com/bloodmc/GriefDefender/wiki/Options antes de prosseguir. :warning:  
+:warning: É MUITO IMPORTANTE que você veja [Opções](/br/wiki/basic/Options.html) antes de prosseguir. :warning:  
 :warning: Todas as opções persistentes (meta) definidas em LuckPerms terão prioridade sobre os padrões em `options.conf` :warning:
 
 Se você quiser definir configurações como com quantos blocos iniciais um jogador pode começar, limites de criação de reivindicação, etc., então você deve começar ajustando as opções padrão do GD encontradas em `options.conf`. Todas as configurações de opção padrão são aplicadas na inicialização do servidor.

@@ -29,10 +29,10 @@ Certifique-se de usar a ferramenta de inspeção (minecraft:stick "Graveto" por 
 ## 5. Como faço para permitir que todos acessem meu spawn?** 
 
 Dê a eles trust de acesso usando `/at public` onde "public" representa todos os jogadores.
-Veja https://github.com/bloodmc/GriefDefender/wiki/Trust-System.  
+Veja o [sistema de Trust](/br/wiki/basic/Trust-System.html).  
 
-Se você precisar de proteção mais detalhada, use o sistema de sinalização.
-Veja https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI
+Se você precisar de proteção mais detalhada, use o sistema de bandeira.
+Veja o [Interface de definições de bandeira](/br/wiki/basic/Flag-Definitions-GUI.html)
 
 ## 6. Como seleciono uma reivindicação específica para trabalhar? (alterar configurações, etc.)**
 
@@ -91,7 +91,7 @@ ex. Para negar o comando essentials `/sethome` para o jogador `Mike`
 `/cfp Mike command-execute essentials:sethome false`  
 
 Nota: Usar `/gddebug record claim` para obter as informações adequadas para o comando.
-Veja https://github.com/bloodmc/GriefDefender/wiki/Debugging para mais informações.
+Veja [depuração](/br/wiki/advanced/Debugging.html) para mais informações.
 
 ## 10. Como permitir que meus administradores ignorem a proteção da reivindicação ?**  
 

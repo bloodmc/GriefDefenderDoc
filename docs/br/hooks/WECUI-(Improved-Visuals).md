@@ -1,5 +1,5 @@
 ---
-title: WECUI
+title: World Edit CUI
 tag: Info
 category: hooks
 icon: visual

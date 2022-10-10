@@ -14,12 +14,12 @@ Se você NÃO conceder os nodes de permissão acima e, em vez disso, conceder no
 Se você alterar qualquer permissão de administrador durante o jogo, certifique-se de executar `/gdreload`, pois o GD armazena em cache várias permissões para ter ganhos de desempenho.
 Permissão suprema ```*``` atualmente não é suportado. Use ```griefdefender.user.*``` e ```griefdefender.admin.*``` para os administradores. 
  
-Como o GD faz uso intenso do grupo `default` do LP, o seguinte DEVE ser configurado corretamente ou o GD não funcionará corretamente
+Como o GriefDefender faz uso intenso do grupo `default` do LuckPerms, o seguinte DEVE ser configurado corretamente ou o GD não funcionará corretamente
 
-- Todos os grupos de LP não-griefdefender têm um caminho de herdado para o grupo `default`  
-- O `default` grupo está herdando os grupos fornecidos pelo GD : `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
-- O `default` grupo NÃO está desabilitado. LP recomenda nunca desabilitar este grupo.  
-Veja https://luckperms.net/wiki/Default-Groups  
+- Todos os grupos do LP não-griefdefender têm um caminho que herdam para o grupo `default`  
+- O grupo `default` está herdando os grupos fornecidos pelo GD : `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
+- O grupo `default` NUNCA deve está desabilitado. LP recomenda nunca desabilitar este grupo.  
+Veja [https://luckperms.net/wiki/Default-Groups](https://luckperms.net/wiki/Default-Groups)  
 
 ## LuckPerms
 
@@ -27,13 +27,13 @@ Na primeira inicialização do servidor do GriefDefender, 5 grupos no LP serão 
 
 * `griefdefender_claim` - Armazena todas as permissões de bandeiras aplicadas a reivindicações únicas por meio do comando `/cf`.  
 ex. Executando o comando `/cf block-place minecraft:wool true` teria a permissão armazenada neste grupo.  
-Nota: Isso não armazena permissões feitas por meio da GUI de predefinição de bandeiras. 
+Nota: Isso não armazena permissões feitas por meio da Interface de predefinição de bandeiras. 
 * `griefdefender_default` - Armazena todas as permissões de bandeiras que contêm `gd_claim_default` contextos via o comando `/cf`. 
 ex. Executando o comando `/cf block-place minecraft:wool true default=user` teria a permissão armazenada neste grupo.  
-Nota: Isso não armazena permissões feitas por meio da GUI de predefinição de bandeiras.
-* `griefdefender_definition` - Armazena todas as permissões de definição de bandeiras aplicadas via `/cf` GUI.
-Nota: Isso não armazena permissões feitas por meio do Bandeira GUI avançada. 
-* `griefdefender_option` - Armazena todas as meta permissões de opção aplicadas por meio de comando ou GUI.
+Nota: Isso não armazena permissões feitas por meio da Interface de predefinição de bandeiras.
+* `griefdefender_definition` - Armazena todas as permissões de definição de bandeiras aplicadas via Interface do `/cf`.
+Nota: Isso não armazena permissões feitas por meio do Bandeira Interface avançada. 
+* `griefdefender_option` - Armazena todas as meta permissões de opção aplicadas por meio de comando ou Interface.
 * `griefdefender_override` - Armazena todas as permissões de bandeiras que contêm `gd_claim_override` contexto.  
 
 ### Consultas úteis de banco de dados MySQL
@@ -140,13 +140,13 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.claim.command.flag.reset | Permite usar o comando Claimreset |
 | griefdefender.user.claim.flag | Permissão base usada para verificar se o usuário tem acesso para usar um bandeira de núcleo específico. <br />O formato é `griefdefender.user.claim.flag.<flag_name>`.<br />Observação: Isso é verificado ao acessar a seção GUI ADVANCED do bandeira e ao usar o comando bandeira com argumentos.<br />Observação: O nome do bandeira não deve ser confundido com o nome do bandeira de definição. Isso verifica os principais bandeiras do GD. A lista pode ser encontrada [aqui](https://github.com/bloodmc/GriefDefender/wiki/Flags#available-flags) |
 
-## Flag Definitions
+## Definições de Bandeiras
 | Node de permissão | Descrição |
 | --------- | ----------- |
 | griefdefender.admin.custom.flag | Permissão base usada para verificar se o usuário tem acesso a uma definição de bandeira de administrador específica. <br />O formato é   `griefdefender.admin.custom.flag.<preset>.<group>.<definition_flag_name>`. <br />Nota: Por padrão, isso gerencia o grupo de administração entregue que é mapeado para a guia ADMIN. |
 | griefdefender.user.custom.flag | Permissão base usada para verificar se o usuário tem acesso a uma definição de bandeira de usuário específica. <br />O formato é   `griefdefender.user.custom.flag.<preset>.<group>.<definition_flag_name>`. <br />Nota: Por padrão, isso gerencia o grupo de usuários entregue que é mapeado para a guia USUÁRIO.|
 
-_*Veja [GUI de definições de bandeiras](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI) para obter informações sobre como gerenciar a GUI do sinalizador para usuários e administradores._
+_*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-GUI.html) para obter informações sobre como gerenciar a Interface do Bandeiras para Jogadores e administradores._
 
 ## Opções
 | Node de permissão | Descrição |
@@ -183,7 +183,7 @@ _*Veja [GUI de definições de bandeiras](https://github.com/bloodmc/GriefDefend
 
 | Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.advanced.admin.flags | Permite o uso do modo avançado na GUI do sinalizador |
+| griefdefender.advanced.admin.flags | Permite o uso do modo avançado na Interface do bandeiras |
 | griefdefender.admin.bypass.ban | Permite ignorar o banimento de reivindicação |
 | griefdefender.admin.bypass.border-check | Permite ignorar a verificações de fronteira de reivindicação |
 | griefdefender.admin.bypass.option | Permite bypass de opções |
@@ -226,19 +226,19 @@ _*Veja [GUI de definições de bandeiras](https://github.com/bloodmc/GriefDefend
 | griefdefender.admin.command.restore-nature.aggressive |  |
 | griefdefender.admin.command.restore-nature.fill |  |
 | griefdefender.admin.command.set-accrued-claim-blocks | Permite editar a quantidade de bloqueios de sinistros acumulados |
-| griefdefender.admin.custom.flag | Permite usar bandeiras de declaração avançados na GUI |
+| griefdefender.admin.custom.flag | Permite usar bandeiras de declaração avançados na Interface |
 | griefdefender.admin.flag-defaults | Permite editar padrões de bandeiras |
 | griefdefender.admin.flag-overrides | Permite editar sobreposição de bandeira |
 
 ## Options
 | Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.admin.claim.command.option.group.base | Allows to set group options in claims |
-| griefdefender.admin.claim.command.option.player.base | Allows to set player options in claims |
+| griefdefender.admin.claim.command.option.group.base | Permite definir opções de grupo em reivindicações |
+| griefdefender.admin.claim.command.option.player.base | Permite definir as opções do jogador em reivindicações |
 
 # Misc
 | Node de permissão | Descrição |
 | --------- | ----------- |
 | griefdefender.user.command.help | Permite-lhe visualizar a ajuda |
-| griefdefender.user.chat.capture | Permite gravar bate-papo em GUI's de comando |
+| griefdefender.user.chat.capture | Permite gravar bate-papo em Interface de comando |
 | griefdefender.login.inventory-gui | Define o jogador ou grupo para usar a Interface do bate-papo no login |
