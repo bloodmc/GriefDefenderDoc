@@ -44,6 +44,23 @@ export default hopeTheme({
       displayFooter: true,
 
     },
+
+    /**
+     * Chinese locale config
+     */
+    "/br/": {
+      // navbar
+      navbar: navbar.br,
+
+      // sidebar
+      sidebar: sidebar.br,
+
+      footer: "FIT  MIT CORPORATION",
+
+      displayFooter: true,
+
+    },
+
   },
 
   plugins: {
