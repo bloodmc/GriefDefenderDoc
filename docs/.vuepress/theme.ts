@@ -55,7 +55,7 @@ export default hopeTheme({
       // sidebar
       sidebar: sidebar.br,
 
-      footer: "FIT  MIT CORPORATION",
+      footer: "Licenciado sob o MIT",
 
       displayFooter: true,
 

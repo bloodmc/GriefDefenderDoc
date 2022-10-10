@@ -47,7 +47,7 @@ Nota: os instantâneos de API mais recentes podem ser encontrados no repositóri
 final Claim claim = GriefDefender.getCore().getClaimAt(location);
 
 if (claim != null && !claim.isWilderness()) {
-    // do your logic
+    // faça a sua lógica
 }
 ```
 

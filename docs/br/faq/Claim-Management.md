@@ -1,5 +1,5 @@
 ---
-title: Claim-Management
+title: Gerenciamento de Reivindicação
 tag: faq
 category: faq
 icon: faq

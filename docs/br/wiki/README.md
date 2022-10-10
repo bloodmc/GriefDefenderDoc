@@ -9,7 +9,7 @@ icon: start
 
 ### Requisitos
 
-::: tip dica Você precisa do LuckPerms para executar o plugin.
+::: tip Você precisa do LuckPerms para executar o plugin.
 últimas versão [LuckPerms](https://luckperms.github.io/) para Bukkit & Sponge API 8/9.
 <br>Obter [LuckPerms v5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) para Sponge API 7.
 <br>**OBS: GD suporta apenas LuckPerms v5.**
