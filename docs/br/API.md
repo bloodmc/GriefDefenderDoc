@@ -41,7 +41,7 @@ Nota: os instantâneos de API mais recentes podem ser encontrados no repositóri
 
 ## Exemplos de código
 
-### Verifique se a localização faz parte de uma reclamação do usuário
+### Verifique se a localização faz parte de uma reivindicação do jogador
 
 ```java
 final Claim claim = GriefDefender.getCore().getClaimAt(location);

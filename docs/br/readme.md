@@ -61,6 +61,7 @@ features:
 
   - title: Novos recursos ✨
     details: Sempre escutando seus feedback.
+    link: https://www.spigotmc.org/resources/68900/reviews
 
 copyright: false
 footer: MIT licenciado | Copyright © 2019-presente GriefDefender
