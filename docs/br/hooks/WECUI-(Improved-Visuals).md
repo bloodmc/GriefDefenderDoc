@@ -13,6 +13,9 @@ Para usar o WECUI, é necessário instalar o seguinte
 
 **Cliente** 
 
+**1.19+**
+* WECUI (Versão Fabric) - [Download](https://github.com/EngineHub/WorldEditCUI)
+
 ***1.18+***  
 Solicitação de pull pendente https://github.com/EngineHub/WorldEditCUI/pull/53
  

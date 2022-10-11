@@ -5,9 +5,9 @@ category: info
 icon: image-text
 ---
 
-# Contexts
+# Contextos
 
-Os contextos são uma parte fundamental de como o GriefDefender é capaz de aplicar proteção às reivindicações. Para entender como funciona, você deve primeiro entender o que é um Contexto. Veja https://luckperms.net/wiki/Context
+Os contextos são uma parte fundamental de como o GriefDefender é capaz de aplicar proteção às reivindicações. Para entender como funciona, você deve primeiro entender o que é um Contexto. Veja [LuckPerms - Context](https://luckperms.net/wiki/Context)
 
 Agora que você tem uma compreensão básica do que é um contexto e como eles funcionam com permissões, abaixo está uma lista de contextos que o GD usa com suas bandeiras e comando de opção.
 
@@ -160,4 +160,4 @@ R. Os jogadores com trust ​​podem não ser afetados dependendo do nível de 
 Observação: as substituições sempre afetarão proprietários e jogadores com trust.
 3. Como posso saber quais contextos, trust, permissões estão sendo verificados quando executo uma ação?
 Se você for um administrador, poderá encontrar informações para cada ação executando um comando `/gddebug record Claim` dentro da reivindicação em que está.
-Veja https://github.com/bloodmc/GriefDefender/wiki/Debugging para mais informações
+Veja [Depuração](/br/wiki/advanced/Debugging.html) para mais informações

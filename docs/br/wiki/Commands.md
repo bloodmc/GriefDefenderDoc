@@ -7,17 +7,17 @@ icon: shell
 
 # Command Overview
 
-Arguments Key: \<required\> [optional]
+Chave dos argumentos: \<requerido\> [opcional]
 
 ### Claim Identifier  
 
-Many commands support the new argument `[identifier]` which is the claim id set by the claim owner.  If you do not want to be required to stand in a claim for a specific command, set the claim identifier using `/gd claim id <identifier>` then pass the identifier at the end of the command.  
+Muitos comandos suportam o novo argumento `[identificador]` que é o ID da declaração definido pelo proprietário da declaração. Se você não quiser ser obrigado a fazer uma reclamação para um comando específico, defina o identificador de reclamação usando `/gd claim id <identifier>` e passe o identificador no final do comando. 
 If using an identifier for an admin claim, the format is `admin:<identifier>`     
 If using an identifier for wilderness, the format is `wilderness:<identifier>`  
 If using an identifier for another player, the format is `<playername>:<identifier>`  
 
 
-### Claims
+### Reivindicações
 
 * [/gd abandon claim [identifier]](#gd-abandon-claim)
 * [/gd abandon all](#gd-abandon-all)
@@ -54,7 +54,7 @@ If using an identifier for another player, the format is `<playername>:<identifi
 * [/gd sell blocks [numberOfBlocks]](#gd-sell-blocks)
 * [/gd sell claim \<price\>](#gd-sell-claim-price)
 
-### Flags
+### Bandeiras
 
 * [/gd flag debug](#gd-flag-debug)
 * [/gd flag claim [\<flag\> \<target\> \<value\> [contexts]]](#gd-flag-claim)
@@ -63,14 +63,14 @@ If using an identifier for another player, the format is `<playername>:<identifi
 * [/gd flag player \<player\> [\<flag\> \<target\> \<value\> [contexts]]](#gd-flag-player)
 * [/gd flag reset](#gd-flag-reset)
 
-### Options
+### Opções
 * [/gd option claim [\<option\> \<value\> [contexts]]](#gd-option-claim)
 * [/gd option group \<group\> [\<option\> \<value\> [contexts]]](#gd-option-group)
 * [/gd option player \<player\> [\<option\> \<value\> [contexts]]](#gd-option-player)
 
 ### Trust  
 
-Note: Use `public` if you want to trust all users.
+Nota: Use `public` se quiser confiar em todos os jogadores.
 
 * [/gd trust player \<player\>|public <accessor|container|builder|manager> ](#gd-trust-player)
 * [/gd trust group \<group\>|public <accessor|container|builder|manager> ](#gd-trust-group)
@@ -86,7 +86,7 @@ Note: Use `public` if you want to trust all users.
 
 * [/gd abandon world [world]](#gd-abandon-world)
 * [/gd ban [hand | \<type\> \<target\> [message]]](#gd-ban)
-* [/gd claim clear \<target\> [identifier]](#gd-claim-clear)
+* [/gd claim clear \<target\> [identifier]](#gd-claim-clear) 
 * [/gd claim ignore](#gd-claim-ignore)
 * [/gd claim restore](#gd-claim-restore)
 * [/gd claim schematic \<create|delete\> \<name\>](#gd-claim-schematic)
@@ -104,310 +104,310 @@ Note: Use `public` if you want to trust all users.
 * [/gd reload](#gd-reload)
 * [/gd unban [hand | \<type\> \<target\>]](#gd-unban)
 
-### Main Command
+### Menu Principal
 
 * [/gd](#gd)
 
-### Misc
+### Diversos
 
 * [/gd version](#gd-version)
 
 
-# Command Detail
+# Detalhe do comando
 
-### Claims
+### Reivindicações
 ___
 #### `/gd abandon claim`
-**Arguments**: `[identifier]` 
-Abandons a claim
+**Argumentos**: `[identifier]` 
+Abandonar uma reivindicação
 
 ___
 #### `/gd abandon all`
-Abandons ALL your claims
+Abandona TODAS as suas reivindicações
 
 ___
 #### `/gd abandon top`
-Abandons a claim and all its subdivisions
+Abandona uma reivindicação e todas as suas subdivisões
 
 ___
 #### `/gd buy blocks`
-**Aliases**: `buyblocks`  
-**Arguments**: `<numberOfBlocks>`  
+**Abreviado**: `buyblocks`  
+**Argumentos**: `<numberOfBlocks>`  
 
-Purchases additional claim blocks with server money. Doesn't work on servers without any economy plugin.
+Compra blocos de reivindicação adicionais com dinheiro do servidor. Não funciona em servidores sem nenhum plugin de economia.
 
 ___
 #### `/gd buy claim`
 
-View a list of claims for sale. Click [Buy] to purchase.
+Veja uma lista de reivindicações à venda. Clique em [Comprar] para comprar.
 
 ___
 #### `/gd claim contract`
-**Aliases**: `claimcontract`, `contractclaim`  
-**Arguments**: `<amount> [direction] [identifier]`  
-Contracts/Shrinks the claim from the direction you are facing.   
+**Abreviado**: `claimcontract`, `contractclaim`  
+**Argumentos**: `<amount> [direction] [identifier]`  
+Contrai/Reduz a reivindicação da direção que você está de frente. 
 
 ___
 #### `/gd claim create`
-**Aliases**: `claimcreate`  
-**Arguments**: `<radius> [type]`  
-Creates a claim around the player of the given type. If no claimtype (or an incorrect one) is specified, a basic claim will be created.   
+**Abreviado**: `claimcreate`  
+**Argumentos**: `<radius> [TIPO]`  
+Cria uma reivindicação em torno do jogador do TIPO fornecido. Se nenhum TIPO de declarado (ou um incorreto) for especificado, uma reivindicação básica será criada.
 
 ___
 #### `/gd claim expand`
-**Aliases**: `claimexpand`, `expandclaim`  
-**Arguments**: `<amount> [direction] [identifier]`  
-Expands the claim in the direction you are facing.   
+**Abreviado**: `claimexpand`, `expandclaim`  
+**Argumentos**: `<amount> [direction] [identifier]`  
+Expande a reivindicação na direção que você está de frente.
 
 ___
 #### `/gd claim farewell`
-**Arguments**: `<message> [identifier]`  
-Sets the farewell message of your claim
+**Argumentos**: `<mensagem> [identifier]`  
+Define a mensagem de despedida do seu pedido
 
-To unset, `/gd claim farewell clear`
+Para limpar a mensagem, `/gd claim farewell clear`
 
 ___
 #### `/gd claim greeting`
-**Arguments**: `<message> [identifier]`  
-Sets the greeting message of your claim
+**Argumentos**: `<mensagem> [identifier]`  
+Define a mensagem de saudação do seu pedido
 
-To unset, `/gd claim greeting clear`
+Para limpar a mensagem, `/gd claim greeting clear`
 
 
 ___
 #### `/gd claim id`
-**Arguments**: `<identifier>`  
-Sets the friendly identifier of your claim.  
+**Argumentos**: `<identifier>`  
+Defina o identificador amigável para sua reivindicação.
 
 
 ___
 #### `/gd claim info`
-**Aliases**: `claiminfo`  
-**Arguments**: `[identifier]`  
+**Abreviado**: `claiminfo`  
+**Argumentos**: `[identifier]`  
 
-Gets information about a claim you are standing in or by claim id.
+Obtém informações sobre uma reivindicação em que você está ou pelo ID da reivindicação.
 
 ___
 #### `/gd claim inherit`
-**Aliases**: `inherit`  
+**Abreviado**: `inherit`  
 
-Toggles parent claim inherit mode
+Alterna o modo de herdar da reivindicação principal
 
 ___
 #### `/gd claim inspect`
-**Aliases**: `claiminspect`  
-**Arguments**: `[area|hide|hideall]`  
+**Abreviado**: `claiminspect`  
+**Argumentos**: `[area|hide|hideall]`  
 
-Inspects the target block player is looking at or nearby claims.
+Inspeciona o jogador do bloco alvo que está olhando ou nas reivindicações próximas.
 
 ___
 #### `/gd claim list`
-**Aliases**: `claimlist`  
-**Arguments**: `[<player> [world]]`  
+**Abreviado**: `claimlist`  
+**Argumentos**: `[<jogador> [world]]`  
 
-List information about a player's claims.
+Listar informações sobre as reivindicações de um jogador.
 
 ___
 #### `/gd claim displayname`
-**Arguments**: `<name>`  
-Sets the display name of your claim
+**Argumentos**: `<name>`  
+Define o nome de exibição da sua reivindicação
 
 ___
 #### `/gd claim rent`
-**Arguments**: `create [<rate> [<max_days>]]|info|list|cancel]`  
-Used to rent/list claims.  
-Note: Requires economy plugin.
+**Argumentos**: `create [<rate> [<max_days>]]|info|list|cancel]`  
+Usado para alugar/listar reivindicação.
+Nota: Requer plugin de economia.
 
 ___
 #### `/gd claim setspawn`
-**Aliases**: `claimsetspawn`  
+**Abreviado**: `claimsetspawn`  
 
-Sets the spawn of your claim to the location you are standing in.
+Define o spawn de sua reivindicação para o local em que você está.
 
 ___
 #### `/gd claim spawn`
-**Aliases**: `claimspawn`  
+**Abreviado**: `claimspawn`  
 
-Teleports you to claim spawn, if available.
+Teleporta você para reivindicar o spawn, se disponível.
 
 ___
 #### `/gd claim tax`
-**Arguments**: `balance|force|pay <amount>]`  
-Used to manage taxes of a claim.  
-Note: The argument `force` allows an admin to pay a claim's tax balance for another player.  
-Note: Requires economy plugin.
+**Argumentos**: `balance|force|pay <amount>]`  
+Usado para gerenciar impostos de uma reivindicação.
+Nota: O argumento `force` permite que um administrador pague o saldo de impostos de uma reivindicação para outro jogador.
+Nota: Requer plugin de economia.
 
 
 ___
 #### `/gd claim transfer`
-**Aliases**: `transferclaim`  
-**Arguments**: `<player> [identifier]`  
+**Abreviado**: `transferclaim`  
+**Argumentos**: `<jogador> [identifier]`  
 
-Transfer the claim you're standing in to a player.
+Transfira a reivindicação em que você está para um jogador.
 
 ___
 #### `/gd claim we`
-**Arguments**: `claim|clear|select [identifier]`  
-`claim` - creates GD claim from WE selection.  
-`clear` - clears worldedit selection.  
-`select` - creates new WE selection from GD claim.
+**Argumentos**: `claim|clear|select [identifier]`  
+`claim` - cria a reivindicação GD com seleção WE.
+`clear` - limpa a seleção do worldedit.
+`select` - cria uma nova seleção WE para reivindicação GD.
 
-Used to manage GD claims with worldedit.  
-Note: This command will not work unless the server has WorldEdit.
+Usado para gerenciar reivindicações GD com worldedit.
+Nota: Este comando não funcionará a menos que o servidor tenha WorldEdit.
 
 ___
 #### `/gd claimgroup admin`
-**Arguments**: `join <group> [<identifier>]|unjoin [<identifier>]|create <group>|delete <group>`  
-Used to manage admin claim groups. 
+**Argumentos**: `join <grupo> [<identifier>]|unjoin [<identifier>]|create <grupo>|delete <grupo>`  
+Usado para gerenciar grupos de declarações de administrador.
 
 
 ___
 #### `/gd claimgroup player`
-**Arguments**: `join <group> [<identifier>]|unjoin [<identifier>]|create <group>|delete <group>`  
-Used to manage player claim groups. 
+**Argumentos**: `join <grupo> [<identifier>]|unjoin [<identifier>]|create <grupo>|delete <grupo>`  
+Usado para gerenciar grupos de reivindicações de jogadores.
 
 
 ___
 #### `/gd cuboid`
-**Aliases**: `cuboid`  
+**Abreviado**: `cuboid`  
 
-Toggles 3D cuboid claims mode.
+Alterna o modo de reivindicações do cuboide 3D.
 
 ___
 #### `/gd mode basic`
-**Aliases**: `modebasic`
+**Abreviado**: `modebasic`
 
-Switches the shovel tool back to basic claims mode.
+Alterna a ferramenta de pá de volta ao modo de reivindicações básico.
 
 ___
 #### `/gd mode subdivide`
-**Aliases**: `modesubdivide`  
+**Abreviado**: `modesubdivide`  
 
-Switches the shovel tool to subdivision mode, used to subdivide your claims
+Alterna a ferramenta de pá para o modo de subdivisão, usada para subdividir suas reivindicações
 
 ___
 #### `/gd mode town`
-**Aliases**: `modetown`
+**Abreviado**: `modetown`
 
-Switches the shovel tool back to town claims mode.
+Alterna a ferramenta de pá de volta ao modo de reivindicação de cidade.
 ___
 #### `/gd player info`
-**Arguments**: `<player> <world>|<player>|[<world>]`  
+**Argumentos**: `<jogador> <world>|<jogador>|[<world>]`  
 
-Gets information about a player and their claimblocks
+Obtém informações sobre um jogador e seus blocos de reivindicação
 
 ___
 #### `/gd player transferblocks`
-**Aliases**: `transferblocks`  
-**Arguments**: `<player> <amount>`
+**Abreviado**: `transferblocks`  
+**Argumentos**: `<jogador> <amount>`
 
-Gives claim blocks to another player
+Dá bloqueios de reivindicação a outro jogador
 
 ___
 #### `/gd player trapped`  
-**Aliases**: `trapped`  
+**Abreviado**: `trapped`  
 
-Teleports the player to a safe location if stuck and unable to build.
+Teleporta o jogador para um local seguro se estiver preso e incapaz de construir.
 
 ___
 #### `/gd player unlockdrops`  
-**Aliases**: `unlockdrops`  
+**Abreviado**: `unlockdrops`  
 
-Allows other players to pickup any items dropped from death.  
+Permite que outros jogadores peguem quaisquer itens dropados por morte.
 
 ___
 #### `/gd sell blocks`
-**Aliases**: `sellblocks`  
-**Arguments**: `<numberOfBlocks>`  
+**Abreviado**: `sellblocks`  
+**Argumentos**: `<numberOfBlocks>`  
 
-Sell your claim blocks for server money. Doesn't work on servers without any economy plugin.
+Venda seus blocos de reivindicação por dinheiro do servidor. Não funciona em servidores sem nenhum plugin de economia.
 
 ___
 #### `/gd sell claim`
-**Arguments**: `<price>`  
+**Argumentos**: `<price>`  
 
-Puts your claim up for sale at the set price. To disable sale, set the price to -1 or set ForSale setting in /claiminfo to false.
+Coloca sua reivindicação à venda pelo preço definido. Para desabilitar a venda, defina o preço como -1 ou defina a configuração ForSale em /claiminfo como false.
 
 
 ### Flags
 
 ___
 #### `/gd flag debug`
-**Aliases**: `cfd`
+**Abreviado**: `cfd`
 
-Toggles claim flag debug mode
+Alterna para o modo de depuração de reivindicação.
 
 ___
 #### `/gd flag claim`
-**Aliases**: `cf`  
-**Arguments**: `[<flag> <target> <value> [<\contexts>]]`  
+**Abreviado**: `cf`  
+**Argumentos**: `[<flag> <target> <value> [<\contexts>]]`  
 
-Gets/Sets claim flags in the claim you are standing in.
+Obtém/define bandeiras de reivindicação na reivindicação em que você está.
 
 
 ___
 #### `/gd flag definition`
-**Aliases**: `cf`  
-**Arguments**: `<preset:group> <definition> <value> [identifier]`  
+**Abreviado**: `cf`  
+**Argumentos**: `<preset:group> <definition> <value> [identifier]`  
 
-Sets claim flag definitions in the claim you are standing in or claim identifier.
+Define as definições de bandeira de reivindicação na reivindicação em que você está ou no identificador de reivindicação.
 
 ___
 #### `/gd flag group`
-**Aliases**: `cfg`  
-**Arguments**: `<group> <flag> <target> <value> [<\contexts>]]`  
+**Abreviado**: `cfg`  
+**Argumentos**: `<grupo> <flag> <target> <value> [<\contexts>]]`  
 
-Gets/Sets flag permission for a group in claim you are standing in.
+Obtém/define a permissão de sinalizador para um grupo na reivindicação em que você está.
 
 ___
 #### `/gd flag player`
-**Aliases**: `cfp`  
-**Arguments**: `<player> <flag> <target> <value> [<\contexts>]]`  
+**Abreviado**: `cfp`  
+**Argumentos**: `<jogador> <flag> <target> <value> [<\contexts>]]`  
 
-Adds flag permission to player.
+Adiciona permissão de bandeira ao jogador.
 
 ___
 #### `/gd flag reset`
-**Aliases**: `cfr`
+**Abreviado**: `cfr`
 
-Resets a claim to flag defaults.
+Redefine a reivindicação para as bandeiras padrões do servidor.
 
 
 ### Options
 ___
 #### `/gd option claim `
-**Aliases**: `co`  
-**Arguments**: `[<option> <value> [<contexts>]]`  
+**Abreviado**: `co`  
+**Argumentos**: `[<option> <value> [<contexts>]]`  
 
-Gets/Sets options in the claim you are standing in.
+Obtém/configura as opções na reivindicação em que você está.
 
 ___
 #### `/gd option group`
-**Aliases**: `cog`  
-**Arguments**: `<group> [<option> <value> [<contexts>]]`  
+**Abreviado**: `cog`  
+**Argumentos**: `<grupo> [<option> <value> [<contexts>]]`  
 
-Gets/Sets options for a group in claim you are standing in.
+Obtém/configura as opções para um grupo-reivindicação em que você está.
 
 ___
 #### `/gd option player`
-**Aliases**: `cop`  
-**Arguments**: `<player> [<option> <value> [<contexts>]]`  
+**Abreviado**: `cop`  
+**Argumentos**: `<jogador> [<option> <value> [<contexts>]]`  
 
-Gets/Sets options for a player in claim you are standing in.
+Obtém/Define opções para um jogador que reivindica que você está de pé.
 
 
 ### Trust
-Note: `public` is for all users.
+Nota: `public` é para todos os usuários.
 ___
 #### `/gd trust player`
-*Accessor*: `Grants a player entry to your claim(s) and use of your bed`  
-*Container*: `Grants a player access to your claim's containers, crops, animals, bed, buttons, and levers`  
-*Builder*: `Grants a player edit access to your claim(s)`  
-*Manager*: `Grants a player access to all of the above including claim settings`  
-**Aliases**: `trust`  
-**Arguments**: `<player>|public <trusttype>`  
+*Accessor*: `Concede uma entrada de jogador para sua(s) reivindicação(ões) e uso de sua cama`  
+*Container*: `Concede a um jogador acesso aos recipientes (mesa de trabalho), colheitas, animais, cama, botões e alavancas da sua reivindicação`  
+*Builder*: `Concede a um jogador acesso de edição às suas reivindicações`  
+*Manager*: `Concede a um jogador acesso a todos os itens acima, incluindo configurações de reivindicação`  
+**Abreviado**: `trust`  
+**Argumentos**: `<jogador>|public <TipoDoTrust>`  
 
-Grants a player access to your claim(s).
+Concede a um jogador acesso à(s) sua(s) reivindicação(ões).
 
 ___
 #### `/gd trust group`
@@ -415,8 +415,8 @@ ___
 *Container*: `Grants a group access to your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a group edit access to your claim(s)`  
 *Manager*: `Grants a group access to all of the above including claim settings`  
-**Aliases**: `trustgroup`  
-**Arguments**: `<group>|public <trusttype>`  
+**Abreviado**: `trustgroup`  
+**Argumentos**: `<grupo>|public <TipoDoTrust>`  
 
 Grants a group access to your claim(s)
 
@@ -426,8 +426,8 @@ ___
 *Container*: `Grants a player access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a player edit access to ALL your claim(s)`  
 *Manager*: `Grants a player access to all of the above including claim settings`
-**Aliases**: `trust`  
-**Arguments**: `<player>|public <trusttype>`  
+**Abreviado**: `trust`  
+**Argumentos**: `<jogador>|public <trusttype>`  
 
 Grants a player access to ***ALL*** your claim(s).
 
@@ -437,36 +437,36 @@ ___
 *Container*: `Grants a group access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a group edit access to ALL your claim(s)`  
 *Manager*: `Grants a group access to all of the above including claim settings`
-**Aliases**: `trustallgroup`  
-**Arguments**: `<group>|public <trusttype>`  
+**Abreviado**: `trustallgroup`  
+**Argumentos**: `<grupo>|public <trusttype>`  
 
 Grants a group access to ***ALL*** your claim(s).
 
 ___
 #### `/gd untrust player`
-**Aliases**: `untrust`  
-**Arguments**: `<player>|public`  
+**Abreviado**: `untrust`  
+**Argumentos**: `<jogador>|public`  
 
 Revokes a player's access to your claim.
 
 ___
 #### `/gd untrust group`
-**Aliases**: `untrustgroup`  
-**Arguments**: `<group>|public`  
+**Abreviado**: `untrustgroup`  
+**Argumentos**: `<grupo>|public`  
 
 Revokes a group's access to your claim.
 
 ___
 #### `/gd untrustall player`
-**Aliases**: `untrustall`  
-**Arguments**: `<player>|public`  
+**Abreviado**: `untrustall`  
+**Argumentos**: `<jogador>|public`  
 
 Revokes a player's access to ***ALL*** your claim(s).
 
 ___
 #### `/untrustall group`
-**Aliases**: `untrustallgroup`  
-**Arguments**: `<group>|public`  
+**Abreviado**: `untrustallgroup`  
+**Argumentos**: `<grupo>|public`  
 
 Revokes a group's access to ***ALL*** your claim(s).
 ___
@@ -478,100 +478,100 @@ Lists permissions for the claim you're standing in
 
 ___
 #### `/gd abandon world`  
-**Aliases**: `abandonworld`  
-**Arguments**: `[world]`  
+**Abreviado**: `abandonworld`  
+**Argumentos**: `[world]`  
 
 Special admin command used to abandon ALL user claims in world.  
 ___
 #### `/gd ban`  
-**Aliases**: `claimban`  
-**Arguments**: `hand | <type> <target> [<message>]`  
+**Abreviado**: `claimban`  
+**Argumentos**: `hand | <type> <target> [<mensagem>]`  
 Note: Valid types are `entity`, `item`, `block`  
 Bans target or item in hand from all usage.  
 
 ___
 #### `/gd player adjustbonusblocks`
-**Aliases**: `adjustbonusblocks`  
-**Arguments**: `<player> <amount> [world]`  
+**Abreviado**: `adjustbonusblocks`  
+**Argumentos**: `<jogador> <amount> [world]`  
 
 Adds or subtracts bonus claim blocks for a player
 
 ___
 #### `/gd player adjustbonusblocksall`
-**Aliases**: `adjustbonusblocksall`  
-**Arguments**: `<amount>`  
+**Abreviado**: `adjustbonusblocksall`  
+**Argumentos**: `<amount>`  
 
 Adjusts bonus claim block total for all online players by amount specified.
 
 ___
 #### `/gd player setaccruedblocks`
-**Aliases**: `setaccruedblocks`  
-**Arguments**: `<player> <amount> [<world>]`  
+**Abreviado**: `setaccruedblocks`  
+**Argumentos**: `<jogador> <amount> [<world>]`  
 
 Updates a player's accrued claim block total.
 
 ___
 #### `/gd mode admin`
-**Aliases**: `modeadmin`  
+**Abreviado**: `modeadmin`  
 
 Switches the shovel tool to administrative claims mode
 
 ___
 #### `/gd delete claim`
-**Aliases**: `deleteclaim`  
+**Abreviado**: `deleteclaim`  
 
 Deletes the claim you're standing in, even if it's not your claim
 
 ___
 #### `/gd delete all`
-**Aliases**: `deleteall`  
-**Arguments**: `<player> [world]`  
+**Abreviado**: `deleteall`  
+**Argumentos**: `<jogador> [world]`  
 
 Delete all of another player's claims
 
 ___
 #### `/gd delete alladmin`
-**Aliases**: `deletealladmin`  
-**Arguments**: `[world]`  
+**Abreviado**: `deletealladmin`  
+**Argumentos**: `[world]`  
 
 Deletes all administrative claims
 
 ___
 #### `/gd claim ignore`
-**Aliases**: `ignoreclaims`  
+**Abreviado**: `ignoreclaims`  
 
 Toggles ignore claims mode
 
 ___
 #### `/gd claim clear`
-**Aliases**: `claimclear`  
-**Arguments**: `<target> [<claim> [<world>]]`  
+**Abreviado**: `claimclear`  
+**Argumentos**: `<target> [<claim> [<world>]]`  
 Allows clearing of entities within one or more claims.
 
 ___
 #### `/gd permission group`
-**Aliases**: `cpg`  
-**Arguments**: `<group> [<permission> <value>]`  
+**Abreviado**: `cpg`  
+**Argumentos**: `<grupo> [<permissão> <value>]`  
 
 Sets a permission on a group with a claim context
 
 ___
 #### `/gd permission player`
-**Aliases**: `cpp`  
-**Arguments**: `<player> [<permission> <value>]`  
+**Abreviado**: `cpp`  
+**Argumentos**: `<jogador> [<permissão> <value>]`  
 
 Sets a permission on a player with a claim context
 
 ___
 #### `/gd mode nature`
-**Aliases**: `rn`  
+**Abreviado**: `rn`  
 
 Switches the shovel tool to restoration mode
 
 ___
 #### `/gd debug`
-**Aliases**: `gddebug`  
-**Arguments**: `<on>|<off>|<record>|<paste> [<player>]`  
+**Abreviado**: `gddebug`  
+**Argumentos**: `<on>|<off>|<record>|<paste> [<jogador>]`  
 
 Toggles debug
 
@@ -582,15 +582,15 @@ Reloads Grief Prevention's configuration settings
 
 ___
 #### `/gd schematic`  
-**Aliases**: `claimschematic`  
-**Arguments**: `<create|delete> <name>`  
+**Abreviado**: `claimschematic`  
+**Argumentos**: `<create|delete> <name>`  
 
 Manages claim schematics. Use '/claimschematic create \<name\>' to create a live backup of claim. 
 
 ___
 #### `/gd unban`  
-**Aliases**: `claimunban`  
-**Arguments**: `hand | <type> <target> [<message>]`  
+**Abreviado**: `claimunban`  
+**Argumentos**: `hand | <type> <target> [<mensagem>]`  
 Note: Valid types are `entity`, `item`, `block`  
 
 Unbans target id allowing it to be used again. 
