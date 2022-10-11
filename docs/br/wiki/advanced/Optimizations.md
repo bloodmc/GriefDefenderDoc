@@ -323,11 +323,11 @@ blacklist {
   <summary>Dino's Known Issues</summary>
 
 ```
-- Water can grief claims from outside going in of region claims (removing water from the liquid flow blacklist flag will prevent that but keep in mind that active water flow has a big performance impact)
-- Players can activate wooden pressure plates by dropping an item on them
-- Players can shear other peoples sheep
-- Players can leash entities in other people claims (mostly an issue if you use a plugin that leases villagers and other entities that is not possible with vanilla minecraft)
-- Creepers can kill entities in claims
-- Players can interact with item frames only when they interact with an item in hand (spin around the items)
+- A água pode sofrer reivindicações de fora, de reivindicações de região (remover a água da bandeira da lista negra de fluxo líquido impedirá isso, mas lembre -se de que o fluxo de água ativo tem um grande impacto de desempenho)
+- Os jogadores podem ativar as placas de pressão de madeira soltando um item neles
+- Os jogadores podem cismar ovelhas de outras pessoas
+- Os jogadores podem colar entidades em outras pessoas reivindicações (principalmente um problema se você usar um plug -in que aluga moradores e outras entidades que não é possível com o baunilha minecraft)
+- As trepadeiras podem matar entidades em reivindicações
+- Os jogadores podem interagir com os quadros de itens apenas quando interagem com um item na mão (gire os itens)
 ```
 </details>
