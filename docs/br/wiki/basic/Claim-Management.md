@@ -48,329 +48,330 @@ O modo de reivindicação tem a seguinte funcionalidade
 Assim que você tiver a ferramenta de reivindicação adequada equipada ou estiver em `/claimmode`, é hora de decidir qual tipo de reivindicação você deseja criar.
 
 
-There are four types of claims a user can create
+Existem quatro tipos de reivindicações que um usuário pode criar
 
-1. Admin - Use `/adminclaims` or `/gd mode admin` to switch.
-2. Basic - Use `/basicclaims` or `/gd mode basic` to switch.
-3. Subdivision - Use `/subdivideclaims` or `/gd mode subdivide` to switch.
-4. Town - Use `/townclaims` or `/gd mode town` to switch.
-
-
-### Admin Claim
-
-An admin claim has the following capabilities  
-
-* No size restrictions.
-* Does not cost anything to create.
-* Can be created around any existing claim.
-* Can rented. 
-* Used by administrators only.
-
-Note: Use `/adminclaims` or `/gd mode admin` to switch to this claim type mode.
-
-### Basic Claim
-
-A basic claim has the following capabilities  
-
-* 5x5 size restriction in 2D mode. 5x5x5 size restriction in 3D mode.  
-* Can be sold, rented, or transferred to another player.  
-* Requires claim blocks.  
-
-This is the default claim type mode when equipping the claiming tool (minecraft:golden_shovel).  
-Note: Use `/basicclaims` or `/gd mode basic` to switch to this claim type mode.  
-
-### Subdivision Claim
-
-A subdivision claim has the following capabilities  
-
-* 1x1 size restriction in 2D mode. 1x1x1 size restriction in 3D mode.
-* Can be sold, rented, or transferred to another player.  
-* Requires no claim blocks when created by owner. 
+1. Administrativa - Use `/adminclaims` ou`/gd mode admin` para alternar.
+2. Básica - Use `/basicclaims` ou`/gd mode basic` para alternar.
+3. Subdivisão - Use `/subdivideclaim 'ou `/gd mode subdivide` para o alternar.
+4. Cidade - Use `/townclaims` ou`/gd mode town` para mudar.
 
 
-### Town Claim
+### Reivindicação administrativa
 
-A town claim has the following capabilities  
+Uma reivindicação administrativa tem os seguintes recursos
 
-* 32x32 size restriction in 2D mode. 32x32x32 size restriction in 3D mode.
-* Requires claim blocks.  
-* Supports basic claims inside.  
-* A creation limit of 1 which means you can only create 1 town by default.  
-Note: This can be adjusted by changing `griefdefender.create-limit` to a value higher than 1 with `gd_claim_default=town` context. 
+* Sem restrições de tamanho.
+* Não custa nada para criar.
+* Pode ser criado em torno de qualquer reivindicação existente.
+* Pode alugar.
+* Usado apenas pelos administradores.
+
+NOTA: Use `/adminclaims` ou`/gd mode admin` para alternar para este modo de tipo de reivindicação.
+
+### Reivindicação básica
+
+Uma reivindicação básica tem os seguintes recursos
+
+* 5x5 Restrição de tamanho no modo 2D.Restrição de tamanho 5x5x5 no modo 3D.
+* Pode ser vendido, alugado ou transferido para outro jogador.
+* Requer blocos de reivindicação.
+
+Este é o modo de tipo de reivindicação padrão ao equipar a ferramenta de reivindicação (minecraft:golden_shovel).
+Nota: Use `/basicclaims` ou `/gd mode basic` Para mudar para este modo de tipo de reivindicação.
+
+### Reivindicação de subdivisão ou apenas subdivisão
+
+Uma reivindicação de subdivisão ou apenas subdivisão tem os seguintes recursos
+
+* Restrição de tamanho 1x1 no modo 2D.Restrição de tamanho 1x1x1 no modo 3D.
+* Pode ser vendido, alugado ou transferido para outro jogador.
+* Não requer blocos de reivindicação para ser criado pelo proprietário.
 
 
-Note: For a player to claim chunks they need the permissions and enough claim-blocks for the size of their claim which can be configured with [Options](https://github.com/bloodmc/GriefDefender/wiki/Options).
+### Reivindicação da cidade
 
-See https://github.com/bloodmc/GriefDefender/wiki/Claim-Types for more information on each claim type.
+Uma reivindicação da cidade tem as seguintes capacidades
 
-### Golden Shovel
-You create claims with a golden shovel (item can be changed in the configs), which can also change claim size and position. Remember there are commands to switch claim type and mode, `/adminclaims`, `/townclaims`, `/basicclaims`, `/subdivideclaims`!
-
-* Creating a new claim: Right click at two points to mark the corners
-* Resizing a claim: Right click once in an existing claim to see the markers. Right click on a corner block and then again on a different position to move that corner.
-* Cancelling operations: Putting away a golden shovel without completing an operation cancels all actions
-
-The shovel can also be used to subdivide a basic. To switch to that mode, use `/claimsubdivide`. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic.
-
-### Wooden stick
-Basic tool, you can use it to indicate the position of claims, and identify who the owners of the claims are.
-
-* Right clicking shows existing claim locations
-* Shift right clicking searches for all claims in a 100 block radius and shows their location
-* Left clicking hides the markers  
+* 32x32 Restrição de tamanho no modo 2D.32x32x32 Restrição de tamanho no modo 3D.
+* Requer blocos de reivindicação.
+* Suporta reivindicações básicas dentro.
+* Um limite de criação de 1, o que significa que você só pode criar 1 cidade por padrão.
+Nota: Isso pode ser ajustado mudando `griefdefender.create-limit` para um valor superior a 1 com `gd_claim_default=town` contexto. 
 
 
-## Claim Identifiers
+Nota: Para um jogador reivindicar pedaços, eles precisam das permissões e blocos de reivindicação suficientes para o tamanho de sua reivindicação que pode ser configurada com [opções](https://github.com/bloodmc/grifefefender/wiki/Options).
 
-Claim identifiers allow players to create unique id's for their claims.  
-All claim identifiers are created by using command `/claimid <identifier>`  
-The main purpose of using claim identifiers is to gain the ability to use at the end of most commands.  
-Previously, all players were required to stand in a claim to manage it. With claim identifiers, the player can now simply pass claim identifiers at the end of commands to manage them.  
-For example, if a player wanted to check claim info for a specific claim, they could use `/claiminfo <identifier>`
+Veja https://github.com/bloodmc/griefdefender/wiki/claim-types para obter mais informações sobre cada tipo de reivindicação.
 
-### Types
+### Pá de ouro
+Você cria reivindicações com uma pá de ouro (o item pode ser alterado nas configurações), que também podem alterar o tamanho e a posição da reivindicação. Lembre-se de que existem comandos para alternar o tipo e o modo de reivindicação, `/adminclaims`, `/townclaims`, `/basicclaims`, `/subdivideclaims`!
 
-There are 4 types of claim identifiers
+* Criando uma nova reivindicação: Clique-Direito do mouse em dois pontos para marcar os cantos (também chamado como Conjunto de Cantos)
+* Redimensionamento de uma reivindicação: Clique-Direito do mouse em uma reivindicação existente para ver os marcadores.Clique com o botão direito do mouse em um bloco de canto e, novamente, em uma posição diferente para mover esse canto.
+* Operações de cancelamento: guardando uma pá de ouro sem concluir uma operação, cancelará todas as ações
+
+A pá também pode ser usada para subdividir uma reivindicação básico.Para mudar para esse modo, use `/claimsubdivide`. Todos os três tipos de reivindicações principais apóiam as reivindicações diretas da subdivisão (Marcada com Lã Branca) - cidade, administrativa e básica.
+
+### Graveto
+Ferramenta básica, você pode usá-la para indicar a posição das reivindicações e identificar quem são os proprietários das reivindicações.
+
+* Clicar com o botão direito mostra os locais de reivindicações existentes
+* Desligue o clique com o botão direito do clique em busca de todas as reivindicações em um raio de 100 blocos e mostra sua localização
+* Clique de cliques à esquerda oculta os marcadores
+
+
+## Identificadores de reivindicação
+
+Os identificadores de reivindicação permitem que os jogadores criem IDs exclusivos para suas reivindicações.
+Todos os identificadores de reivindicação são criados usando o comando `/claimid <Identificador>`  
+O principal objetivo do uso de identificadores de reivindicações é obter a capacidade de usar no final da maioria dos comandos.
+Anteriormente, todos os jogadores eram obrigados a estar na reivindicação que desejaria gerenciar. Com os identificadores de reivindicação, o jogador agora pode simplesmente usar os identificadores de reivindicação no final dos comandos para gerenciá-las sem precisar está na reivindicação que está no local.
+Por exemplo, se um jogador quisesse verificar as informações de uma reivindicação específica, poderia usar `/claiminfo <Identificador>`
+
+### Tipos
+
+Existem 4 tipos de identificadores de reivindicação
 
 #### Admin
 
-Admin claim identifiers are unique across all admin claims.  
-These identifiers can be accessed via commands with format `admin:<identifier>`  
+Os identificadores de reivindicação do administrador são únicos em todas as reivindicações de administrador.
+Esses identificadores podem ser acessados via comandos com formato `admin:<identifier>`  
 
-#### User
+#### Do utilizador
 
-User claim identifiers are unique across all of the user's personal claims.  
-These identifiers can be accessed via commands with format `<identifier>`  
+Os identificadores de reivindicação do usuário são únicos em todas as reivindicações pessoais do usuário.
+Esses identificadores podem ser acessados via comandos com formato `<identifier>`  
 
-#### Wilderness
+#### Região selvagem
 
-Wilderness claim identifiers are unique across all wilderness claims.  
-These identifiers can be accessed via commands with format `wilderness:<identifier>`
+Os identificadores de reivindicação da deserto são únicos em todas as reivindicações do deserto.
+Esses identificadores podem ser acessados via comandos com formato `wilderness:<identifier>`
 
-#### Other User
+#### Outro usuário
 
-Admins can access any player's personal claim identifiers by using the format `<player_name>:<identifier>` in a command.  
+Os administradores podem acessar os identificadores de reivindicação pessoal de qualquer jogador usando o formato `<player_name>:<identifier>` em um comando.
 
-### Storage
+### Armazenamento
 
-All claim identifiers are stored in `./GriefDefender/claimnames.conf`  
+Todos os identificadores de reivindicação são armazenados em `./GriefDefender/claimnames.conf`  
 
 
-## Claim Display Names
+## Nomes de exibição de reivindicações
 
-Claim display names are not unique and used for display purposes only.  
-They allow a player to name their claims anything for commands such as `/claimlist`.  
-To set a claim display name, use the command `/claimdisplayname <name>`  
+Os nomes de exibição de reivindicações não são exclusivos e usados apenas para fins de exibição.
+Eles permitem que um jogador nomeie suas reivindicações qualquer coisa para comandos como `/claimlist`.  
+Para definir um nome de exibição de reivindicação, use o comando `/claimdisplayname <name>`  
 
-## Claim Snapshots
+## Snapshots de reivindicação
 
-Claim snapshots allow a user to backup all associated claim data of the claim including permissions.  
+Os snapshots de reivindicação permitem que um usuário faça backup de todos os dados de reivindicação associados a aquela reivindicação específica, incluindo permissões.
+Exemplo: Você pode salvar uma área da loja, sem itens, e caso queirá restaurar para o jeito que você salvou, você usa os snapshots para fazer isso.
 
-### Types
+### Tipos
 
 #### Public
 
-Public claim snapshots are accessible by all users.  
-Data is stored in `./GriefDefender/snapshots/public/<group>/<snapshotname>.conf`
+Os snapshots de reivindicação pública são acessíveis por todos os usuários.
+Os dados são armazenados em `./GriefDefender/snapshots/public/<group>/<snapshotname>.conf`
 
 #### Admin
 
-Admin claim snapshots are accessible by only admins.  
-Data is stored in `./GriefDefender/snapshots/admin/<group>/<snapshotname>.conf`
+Os snapshots de reivindicação de administrador são acessíveis apenas por administradores.
+Os dados são armazenados em `./GriefDefender/snapshots/admin/<group>/<snapshotname>.conf`
 
 
-#### User
+#### Do utilizador
 
-User claim snapshots are only accessible by the creator.  
-Data is stored in `./GriefDefender/snapshots/user/<player_uuid>/<snapshotname>.conf`
-
-
-#### Claim
-
-Claim local snapshots are only accessible in the claim the snapshot was created in.  
-Data is stored in `./GriefDefender/worlds/<dimension_type>/<world_name>/snapshots/<claim_uuid>/<snapshotname>.conf`
-
-### GUI
-
-Run `/claimsnapshot` with no args to launch GUI  
-The following tabs are available 
-
-#### Claim 
-* Shows snapshots of claim you are standing in  
-* Snapshots will be listed in alphabetical order  
-
-#### User
-* Shows player snapshots you or trusted have created.  
-* Snapshots will be listed in alphabetical order  
-
-#### Public
-* Shows public snapshots created by admins  
-* Snapshots will be listed by group then clicking group will show normal list  
-
-#### Admin
-* Shows admin snapshots created by admins  
-* Snapshots will be listed by group then clicking group will show normal list  
-
-### Command examples
+Os snapshots de reivindicação do usuário são acessíveis apenas pelo Criador.
+Os dados são armazenados em `./GriefDefender/snapshots/user/<player_uuid>/<snapshotname>.conf`
 
 
-1. Create a player snapshot called 'store' not tied to a claim and only copy claim data and permission data  
+#### Reivindicação
+
+A reivindicação de snapshots locais são acessíveis apenas na reivindicação em que o instantâneo foi criado.
+Os dados são armazenados em `./GriefDefender/worlds/<dimension_type>/<world_name>/snapshots/<claim_uuid>/<snapshotname>.conf`
+
+### Interface
+
+Execute `/claimsnapshot` sem args para lançar a GUI
+As guias a seguir estão disponíveis
+
+#### Reivindicação
+* Mostra snapshots de reivindicação que você está de pé
+* snapshots serão listados em ordem alfabética
+
+#### Do utilizador
+* Mostra os snapshots dos jogadores que você ou confiável criaram.
+* snapshots serão listados em ordem alfabética
+
+#### público
+* Mostra snapshots públicos criados por administradores
+* Os snapshots serão listados pelo grupo e clicando em grupo mostrará a lista normal
+
+#### admin
+* Mostra snapshots de administrador criados por administradores
+* Os snapshots serão listados pelo grupo e clicando em grupo mostrará a lista normal
+
+### Exemplos de comando
+
+
+1. Crie um snapshot do jogador chamado 'Store' não vinculado a uma reivindicação e apenas copie dados de reivindicação e dados de permissão
 `/claimsnapshot create store type=user option=false`
-2. Create an admin snapshot called 'spawn' and store it in group 'vanha'  
+2. Crie um snapshots de administrador chamado 'spawn' e armazene -o em grupo 'vanha'  
 `/claimsnapshot create spawn type=admin group=vanha`
-3. Create a public snapshot called 'home' and store it in group 'build'  
+3. Crie um snapshots público chamado 'home' e armazene-o em grupo 'build'  
 `/claimsnapshot create home type=public group=build`
-4. Apply snapshot from step 2 to current claim  
+4. Aplique snapshots da etapa 2 à reivindicação atual
 `/claimsnapshot apply spawn type=admin group=vanha`
-5. Apply snapshot from step 2 to current claim with custom apply settings  
+5. Aplique snapshots da etapa 2 à reivindicação atual com configurações de aplicação personalizadas  
 `/claimsnapshot apply spawn type=admin group=vanha option:false trust:false`  
 
 
 
-## Claim Groups
+## Grupos de reivindicação
 
-Claim groups allow 2 or more claims to use the same permissions.  
-This is useful in situations where you have a group of claims where permissions need to be synced.  
+Os grupos de reivindicações permitem que 2 ou mais reivindicações usem as mesmas permissões.
+Isso é útil em situações em que você tem um grupo de reivindicações em que as permissões precisam ser sincronizadas.
 
-### Types
+### Tipos
 
-There are 2 types of claim groups  
+Existem 2 tipos de grupos de reivindicações
 
-#### Admin
+#### admin
 
-Admin claim groups are only accessible by admins.  
+Grupos de reivindicações de administrador são acessíveis apenas por administradores.
 Data is stored in `./GriefDefender/claimgroups/admin/<claimgroup_name>.conf`
 
-#### User
+#### Do utilizador
 
-User claim groups are only accessible by user who created the group.   
-Data is stored in `./GriefDefender/claimgroups/user/<player_uuid>/<claimgroup_name>.conf`
+Os grupos de reclamações de usuários são acessíveis apenas pelo usuário que criou o grupo.
+Os dados são armazenados em `./GriefDefender/claimgroups/user/<player_uuid>/<claimgroup_name>.conf`
 
-### GUI
+### Interface
 
-Run `/claimgroup` with no args to launch GUI  
-The following tabs are available 
+Execute `/claimgroup` sem args para lançar a GUI
+As guias a seguir estão disponíveis
 
-#### User
-* Shows player claim groups you have created.  
-* Clicking the claim group will show all claims joined to the group.  
-* Claim groups will be listed in alphabetical order  
+#### Do utilizador
+* Mostra grupos de reivindicação de jogadores que você criou.
+* Clicar no grupo de reivindicações mostrará todas as reivindicações unidas ao grupo.
+* Grupos de reclamações serão listados em ordem alfabética
 
-#### Admin
-* Shows admin claim groups created by admins  
-* Clicking the claim group will show all claims joined to the group.  
-* Claim groups will be listed in alphabetical order  
+#### admin
+* Mostra grupos de reivindicações de administrador criados por administradores
+* Clicar no grupo de reivindicações mostrará todas as reivindicações unidas ao grupo.
+* Grupos de reclamações serão listados em ordem alfabética
 
 
-To create a claim group, click the `+` sign and enter a name for claim group.  
-To remove a claim group, click the `-` sign and enter a name for claim group.  
-To join a claim group, stand in the claim you want to join then click the `JOIN` button next to the claim group.  
-To unjoin a claim group, stand in the claim you want to unjoin then click the `UNJOIN` button next to the claim group.   
-Note: Unjoining a claim from a group will cause the claim to use its local permissions.  
+Para criar um grupo de reivindicações, clique no `+` Assine e insira um nome para o grupo de reivindicações.
+Para remover um grupo de reivindicações, clique no `-` Assine e insira um nome para o grupo de reivindicações.
+Para ingressar em um grupo de reivindica `JOIN` button next to the claim group.  botão ao lado do grupo de reivindicações.
+Para desconectar um grupo de reivindica `UNJOIN` botão ao lado do grupo de reivindicações.
+NOTA: Desacelerando uma reivindicação de um grupo, fará com que a reivindicação use suas permissões locais.
 
-### Command Examples
+### Exemplos de comando
 
-1. To create a user claim group called `tech`  
+1. Para criar um grupo de reivindicação de usuário chamado `tech`  
 `/claimgroup create tech`  
-2. To join the claim a player is in to claim group `tech`  
+2. Para ingressar na reivindicação, um jogador está no grupo de reivindicação `tech`  
 `/claimgroup join tech`  
-3. To join a claim with identifier `stronghold1` to claim group `tech`  
+3. Para ingressar em uma reivindicação com identificador `stronghold1` para reivindicar o grupo `tech`  
 `/claimgroup join tech stronghold1`  
-4. To unjoin a claim a player is in from claim group `tech`  
+4. Para desconectar uma reivindicação que um jogador está no grupo de reivindicações `tech`  
 `/claimgroup unjoin`  
-4. To create an admin claim group called `event`  
-`/claimgroupadmin create event`  
+4. Para criar um grupo de reivindicações de administrador chamado `evento`  
+`/claimgroupadmin create evento`  
 
 
-## Claim Settings
+## Configurações da reivindicação
 
-To get general information about claims use `/claiminfo` while standing in them. Hover over things to find various details you can change directly without entering any commands.
-There are also commands to change the claim name, greeting, and farewell.  
+Para obter informações gerais sobre o uso de reclamações `/claiminfo` enquanto estava de pé neles.Passe o mouse sobre as coisas para encontrar vários detalhes que você pode alterar diretamente sem inserir nenhum comando.
+Também existem comandos para alterar o nome da reivindicação, a saudação e a despedida.  
 
-![Claiminfo Details](https://i.imgur.com/6erpZLa.png)
+![Detalhes reivindicados](https://i.imgur.com/6erpZLa.png)
 
-Field                              | Description |
+Campo                              | Descrição |
 -----------------------------------|-------------|
-```Type```| The type of claim. <br />Note: 2D claim types protect bedrock to sky by default. <br />Note: 3D claim types include height (Y axis) and only protect the area selected at time of claim creation.
-```ID```| The unique friendly claim identifier. See [Claim identifiers](#claim-identifiers)
-```Display Name```| The display name of claim. See [Claim Display Names](#claim-display-names). <br />Note: Display names support formatting, are not unique, and can be set to anything.
-```Owner```| The claim owner.
-```Claim Group```| The claim group this claim is part of. See [Claim Groups](#claim-groups)
-```Spawn```| The claim spawn users will teleport to when using claim teleport in GUI. 
-```Inherit```| Whether the claim inherits flag permissions from parent. <br />Note: Use `/claiminherit` to toggle value.
-```Expired```| Whether the claim has expired due to inactivity.
-```For Sale```| Whether the claim is currently up for sale.
-```Raid```| Whether the claim supports village raids.
-```Deny Messages```| Whether the claim shows protection denial messages.
-```Greeting```| The claim entry message of claim. <br />Note: Use `/claimgreeting \<message\>|clear|none`.
-```Farewell```| The claim exit message of claim. <br />Note: Use `/claimfarewell \<message\>|clear|none`.
-```Enter Title```| The claim enter title of claim. <br />Note: Use `/claimtitle enter main \<title\>|clear|none`.
-```Enter Subtitle```| The claim enter title of claim. <br />Note: Use `/claimtitle enter sub \<title\>|clear|none`.
-```Exit Title```| The claim exit title of claim. <br />Note: Use `/claimtitle exit main \<title\>|clear|none`.
-```Exit Subtitle```| The claim exit title of claim. <br />Note: Use `/claimtitle exit sub \<title\>|clear|none`.
+```Type```| O tipo de reivindicação.<br /> NOTA: Os tipos de reclamação 2D protegem o Bedrock para o céu por padrão.<br /> NOTA: Os tipos de reclamação 3D incluem altura (eixo y) e protegem apenas a área selecionada no momento da criação de reivindicações.
+```ID```|O identificador de reivindicação amigável exclusiva.Veja [Identificadores de reivindicação](#claim-identifiers)
+```Display Name```| O nome da exibição da reivindicação.Veja [Nomes de exibição de reivindicações](#claim-display-names). <br />Nota: Os nomes de exibição suportam a formatação, não são únicos e podem ser definidos como qualquer coisa.
+```Owner```| O dono da reivindicação.
+```Claim Group```| O grupo de reivindicações que essa reclamação faz parte.Veja [Grupos de reivindicação](#claim-groups)
+```Spawn```| Os usuários da Spawn de reivindicação se teletransportarão ao usar a reivindicação de teletransporte na Interface.
+```Inherit```| Se a reivindicação herda as permissões de bandeira da reivindicação principal.<br /> Nota: Use `/claiminherit` para alternar o valor.
+```Expired```| Se a reivindicação expirou devido à inatividade.
+```For Sale```| Se a reivindicação está atualmente à venda.
+```Raid```| Se a reivindicação apóia as ataques da vila.
+```Deny Messages```| Se a reivindicação mostra mensagens de negação de proteção. (Mensagem que diz que não tem permissão para quebrar/colocar/interagir com item ou entidade)
+```Greeting```| A mensagem de entrada de reivindicação de reivindicação.<br /> Nota: Use `/claimgreeting \<message\>|clear|none`.
+```Farewell```| A mensagem de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimfarewell \<message\>|clear|none`.
+```Enter Title```| A reivindicação entra no título de reivindicação.<br /> Nota: Use `/claimtitle enter main \<title\>|clear|none`.
+```Enter Subtitle```| A reivindicação entra no título de reivindicação.<br /> Nota: Use `/claimtitle enter sub \<title\>|clear|none`.
+```Exit Title```| O título de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimtitle exit main \<title\>|clear|none`.
+```Exit Subtitle```| O título de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimtitle exit sub \<title\>|clear|none`.
 
 
-![Claiminfo Details](https://i.imgur.com/65dcUwY.png)
+![Detalhes reivindicados](https://i.imgur.com/65dcUwY.png)
 
-Field                              | Description |
+Campo                              | Descrição |
 -----------------------------------|-------------|
-```World```| The world name.
-```Area``` | The size of claim. <br />Note: 2D claims include x and z axis. <br />Note: 3D claims include x, y, and z axis.
-```Blocks```| The total amount of 2D or 3D blocks used by claim.
-```Created```| The date claim was created.
-```Last Active```| The last active date the claim owner was seen. <br />Note: This is used by claim cleanup task to determine if its time to delete claim based on inactivity.
-```UUID```| The claim unique identifier.
-```Lesser Boundary Corner```| The lesser boundary corner of claim.
-```Greater Boundary Corner```| The greater boundary corner of claim.
-```North Corners```| The north block corner positions of claim. <br />Note: If player has teleport access, clicking `NW`, or `NE` will teleport to north position. <br />Note: Teleporting to corners is useful if players want to resize claim using modification tool.
-```South Corners```| The south block corner positions of claim. <br />Note: If player has teleport access, clicking `SW`, or `SE` will teleport to south position. <br />Note: Teleporting to corners is useful if players want to resize claim using modification tool.
+```World```| O nome do mundo.
+```Area``` | O tamanho da reivindicação.<br /> Nota: as reivindicações 2D incluem o eixo x e z.<br /> Nota: as reivindicações 3D incluem eixo x, y e z.
+```Blocks```| O valor total dos blocos 2D ou 3D utilizados por reivindicação.
+```Created```| A reivindicação de data foi criada.
+```Last Active```| A última data ativa que o proprietário da reivindicação foi visto.<br /> NOTA: Isso é usado pela tarefa de limpeza de reivindicações para determinar se seu tempo para excluir a reivindicação com base na inatividade.
+```UUID```| A reivindicação de identificador exclusivo.
+```Lesser Boundary Corner```| O menor canto de limite da reivindicação.
+```Greater Boundary Corner```| O maior canto de limite da reivindicação.
+```North Corners```| As posições de reivindicação de canto do bloco norte.<br /> NOTA: Se o jogador tiver acesso ao Teleport, clicando em `nw` ou` ne` será teletransportado para a posição norte.<br /> NOTA: A teletransporte para os cantos é útil se os jogadores desejam redimensionar as reivindicações usando a ferramenta de modificação.
+```South Corners```| As posições de reivindicação do canto do bloco sul.<br /> NOTA: Se o jogador tiver acesso ao Teleport, clicar em `SW` ou` SE` será teleportado para a posição sul.<br /> NOTA: A teletransporte para os cantos é útil se os jogadores desejam redimensionar as reivindicações usando a ferramenta de modificação.
 
 
-## Claim Entry Control
+## Controle de entrada de reivindicação
 
-### Allowing other players to access your claim
+### Permitindo que outros jogadores acessem sua reivindicação
 
-You can give other players access to your basic claim using the [trust commands](https://github.com/bloodmc/GriefDefender/wiki/Commands#trust), e.g. to give your friend "Applehead" building permissions to your claim just run `/trust Applehead`.
+Você pode dar a outros jogadores acesso à sua reivindicação básica usando os [Comandos de confiança] (https://github.com/bloodmc/grifefefender/wiki/Commands#Trust), por exemplo: Para dar ao seu amigo as permissões de construção para o jogador "Applehead" na sua reivindicação, apenas execute `/trust Applehead`.
 
-### Require trust for players to enter claim
+### Exigem confiança para os jogadores entrarem
 
-Toggle the user flag definition `player-enter` to `false`
+Alternar a definição de bandeira do usuário `plparaer-enter` to `false`
 
-Once the above is done, non-trusted players will not be able to enter your claim.
+Uma vez feito o exposto, jogadores não confiados não poderão inserir sua reivindicação.
 
-To allow entry for all users
+Para permitir a entrada para todos os usuários
 `/at public`
 
-To allow entry for a single user
+Para permitir a entrada para um único usuário
 `/at <playername>`
 
-To remove entry for all users
+Para remover a entrada para todos os usuários
 `/untrust public`
 
-To remove entry for a specific user
+Para remover a entrada para um usuário específico
 `/untrust <playername>`
 
 
-## How to disable claiming/GD functionality
+## Como desativar a funcionalidade de reivindicação/GD
 
-### Disable claiming in a specific world
+### Desative a reivindicação em um mundo específico
 
-To disable creating claims for a specific group of users in a world called `valhalla`, enter the following command  
+Para desativar a criação de reivindicações para um grupo específico de usuários em um mundo chamado `valhalla`, Digite o seguinte comando
 `/lp group <group> permission set griefdefender.user.claim.create.* false world=valhalla`
 
-### Disable GD in a specific world
+### DGD isável em um mundo específico
 
-To disable GD functionality in an overworld world named `valhalla`, go to GD config folder then to `worlds`
+Para desativar a funcionalidade de GD em um mundo do mundo superior nomeado `valhalla`, vá para a pasta de configuração do GD e então `worlds`
 
-You will see the following folders
+Você verá as seguintes pastas
 ```
 nether
 normal
 the_end
 ```
 
-Since the world `valhalla` is of type `overworld` , go into `normal` folder. You will see a folder named `valhalla`.
-Inside this folder will be a config folder named `world.conf`. Edit the config file to be the following
+Desde o mundo `valhalla` é do tipo `overworld` , entrar `normal` pasta.Você verá uma pasta chamada `valhalla`.
+Dentro desta pasta será uma pasta de configuração chamada `world.conf`. Edite o arquivo de configuração como o seguinte
 
 ```
 # 1.2.7
@@ -388,36 +389,36 @@ GriefDefender {
 }
 ```
 
-## How to handle explosions above surface level
+## Como lidar com explosões acima do nível da superfície
 
-Open up the global.conf found under `./plugins/griefdefender` on Bukkit and `./config/griefdefender` on Sponge servers.  
-You will find the following config settings  
+Abrir o global.conf encontrado em `./plugins/griefdefender` em Bukkit e `./config/griefdefender` e em servidores de Sponge.
+Você encontrará as seguintes configurações de configuração 
 
-* `explosion-block-surface-blacklist` - Allows you to blacklist specific block source, such as tnt, above the surface level defined by setting `explosion-surface-block-level`. To blacklist ALL blocks, use the id `any`.
-* `explosion-entity-surface-blacklist` - Allows you to blacklist specific entity explosion sources, such as creeper, above the surface level defined by setting `explosion-surface-block-level`. To blacklist ALL entities, use the id `any`.
-* `explosion-surface-block-level` - Allows you to configure the block surface level (Y coord) that GriefDefender will use to determine if an explosion is above the surface. (Default: 63)  
-Note: You can configure these settings per world by copying the setting to your respective `world.conf` file.
+* `explosion-block-surface-blacklist` - Permite que você faça uma fonte de bloco específica da lista negra, como TNT, acima do nível de superfície definido pela configuração `explosion-surface-block-level`. Para a lista negra de todos os blocos, use o ID `any`.
+* `explosion-entity-surface-blacklist` - Permite que você faça fontes de explosão de entidade específicas da lista negra, como o Creeper, acima do nível de superfície definido pela configuração `explosion-surface-block-level`. Para a lista negra de todas as entidades, use o ID `any`.
+* `explosion-surface-block-level` - Permite configurar o nível da superfície do bloco (coordenado Y) que o Griefdefender usará para determinar se uma explosão está acima da superfície.(Padrão: 63)
+Nota: Você pode definir essas configurações por mundo copiando a configuração para o seu respectivo arquivo `world.conf`.
 
 
-## How to override default min/max world height
+## Como substituir a altura do mundo mínimo/max
 
-To override a world named `valhalla` with environment type `overworld`, the following config changes need to be made
+Para substituir um mundo chamado `valhalla` com tipo de ambiente `overworld`, tAs seguintes alterações de configuração precisam ser feitas
 
 #### Bukkit
-* Locate world.conf in `./plugins/GriefDefender/worlds/normal/valhalla/world.conf`
-* Copy claim create settings from `global.conf` to new world.conf
-* Open `./plugins/GriefDefender/options.conf`
-* Under `default-user-options` set `min-level` to match override setting
-* Under `default-user-options` set `max-level` to match override setting
+* Localize world.conf dentro de `./plugins/GriefDefender/worlds/normal/valhalla/world.conf`
+* Copiar reivindicações de criação de configurações de `global.conf` Para novo world.conf
+* Abrir `./plugins/GriefDefender/options.conf`
+* Debaixo `default-user-options` definir `min-level` Para combinar a configuração de substituição
+* Debaixo `default-user-options` definir `max-level` Para combinar a configuração de substituição
 
 #### Sponge
-* Locate world.conf in `./config/GriefDefender/worlds/overworld/valhalla/world.conf`
-* Copy claim create settings from `global.conf` to new world.conf
-* Open `./config/GriefDefender/options.conf`
-* Under `default-user-options` set `min-level` to match override setting
-* Under `default-user-options` set `max-level` to match override setting
+* Localize world.conf in `./config/GriefDefender/worlds/overworld/valhalla/world.conf`
+* Copiar reivindicações de criação de configurações de `global.conf` Para novo world.conf
+* Abrir `./config/GriefDefender/options.conf`
+* Debaixo `default-user-options` definir `min-level` Para combinar a configuração de substituição
+* Debaixo `default-user-options` definir `max-level` Para combinar a configuração de substituição
 
-If done right, it should look similar to
+Se bem feito, deve parecer parecido com
 
 ```
 GriefDefender {
@@ -448,4 +449,4 @@ GriefDefender {
 }
 ```
 
-Note: These settings will only work for newly created claims. If the world has already been created, make sure to adjust the wilderness claim data with appropriate height.
+NOTA: Essas configurações funcionarão apenas para reivindicações recém criadas.Se o mundo já foi criado, certifique -se de ajustar os dados de reivindicação da região selvagem com a altura do mundo apropriada.
