@@ -5,6 +5,10 @@ category: info
 icon: start
 ---
 
+:::: info Revisão e Tradução para o Português-Brasil 
+Estamos traduzindo e revisando a Wiki e a tradução do plugin, para manter a coerencia entre ambas traduções.
+::::
+
 ## Começando
 
 ### Requisitos
@@ -16,8 +20,8 @@ icon: start
 :::
 
 ::: warning
-GD faz uso pesado de LP's `default` grupo. Certifique-se de que seus grupos de LP estão herdando o `default` grupo
-ou GD não funcionará corretamente. LP também recomenda nunca desabilitar este grupo.
+GriefDefender faz uso pesado do grupo `default` do LuckPerms. Certifique-se de que seus grupos de LP estão herdando o grupo `default` 
+caso não, o GD não irá funcionará corretamente. LP também recomenda nunca desabilitar este grupo.
 Verifique na [wiki](https://luckperms.net/wiki/Default-Groups#where-to-start) 
 :::
 
@@ -58,7 +62,7 @@ Em breve!
 
 ### Configuração
 
-> **NOTA: Existem também algumas opções que devem ser definidas usando seu sistema de permissão, você pode ler mais sobre elas no [Opções na página da wiki](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options).**
+> **NOTA: Existem também algumas opções que devem ser definidas usando seu sistema de permissão, você pode ler mais sobre elas no [Opções na página da wiki](/br/wiki/advanced/Contexts.html).**
 
 Todos os arquivos de configuração podem ser encontrados em uma pasta chamada`GriefDefender` na configuração do seu servidor ou na pasta de plugins.  
 
@@ -75,7 +79,7 @@ plugins/
     └── storage.conf
 ```
 
-Você pode alterar várias configurações no [arquivo de configuração](https://github.com/bloodmc/GriefDefender/wiki/Global-Config). O arquivo tem anotações detalhadas que deixam claro o que cada opção faz. Existem três tipos de configurações:
+Você pode alterar várias configurações no [arquivo de configuração](/br/wiki/advanced/Global-Config.html). O arquivo tem anotações detalhadas que deixam claro o que cada opção faz. Existem três tipos de configurações:
 
 * Global
 * Dimension
@@ -267,7 +271,7 @@ Nota: Se você quiser usar o `/buyclaimblocks` ou  `/sellclaimblocks` comandos e
 
 Depois de instalar o GriefDefender corretamente, você precisa dar permissão aos seus jogadores para reivindicar terrenos, eles não são dados por padrão. A única permissão necessária para a configuração básica do GD é `griefdefender.user.*`. Para configuração básica de administração, dê aos administradores a permissão `griefdefender.admin.*` e `griefdefender.user.*`.
 
-Se você quiser ajustar mais permissões, você pode encontrar todas as permissões [aqui](https://github.com/bloodmc/GriefDefender/wiki/Permissions) e para uma lista com todas as permissões de comando e de uso [aqui](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
+Se você quiser ajustar mais permissões, você pode encontrar todas as permissões [aqui](/br/wiki/Permissions.html) e para uma lista com todas as permissões de comando e de uso [aqui](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
 
 Se você acredita que os comandos podem ser um pouco mais longos ou difíceis de memorizar, considere criar um custom alias.[Clique aqui para obter mais informações](/br/wiki/basic/Custom-Alias-Creation.html)
 
@@ -279,7 +283,7 @@ Para aplicar as permissões acima a um grupo no LuckPerms, execute o seguinte co
 
 Para `<grupo>` use seu grupo padrão, use `default` se você não tiver um.
 
-Depois que o GD estiver instalado e em execução, consulte https://github.com/bloodmc/GriefDefender/wiki/Claim-Management para saber como criar uma proteção de terrra e gerenciá-lo.
+Depois que o GD estiver instalado e em execução, veja [Gestão de Reivindicações](/br/wiki/basic/Claim-Management.html) para saber como criar uma proteção de terrra e gerenciá-lo.
 
 ### Options
 :warning: É MUITO IMPORTANTE que você veja [Opções](/br/wiki/basic/Options.html) antes de prosseguir. :warning:  

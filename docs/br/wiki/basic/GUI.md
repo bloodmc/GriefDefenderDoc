@@ -22,7 +22,7 @@ A Interface de bate-papo foi projetada para jogadores de PC que usam mouse e tec
 
 Para acessar o menu principal, execute o comando `/gd`
 
-![Início do menu principal](https://i.imgur.com/gvrqPUl.png)
+![Início do menu principal](https://i.imgur.com/S2ZpVPA.gif)
 
 O menu principal é projetado como um menu 'descartável', o que significa que não deve ocupar toda a tela de bate-papo.
 Clicar em um link de menu abrirá o menu de tela cheia.
@@ -134,7 +134,7 @@ Para acessar a Interface do inventário, certifique-se de estar no modo Interfac
 Nota: Os jogadores que usam como padrão a Interface do inventário no login podem ignorar o uso de `/claimgui`, a menos que desejem alternar para a GUI do Chat temporariamente.
 
 
-![Menu principal do inventário](https://i.imgur.com/dgO8OON.png)
+![Menu principal do inventário](https://i.imgur.com/2iqE2ma.gif)
 
 Esta tela apresenta ao jogador 5 ícones: Reivindicação, Comando, Bandeira, Jogador, Wiki.
 

@@ -1,5 +1,8 @@
 ---
 title: WorldGuard
+tag: Migration
+category: migration
+icon: map
 ---
 
 :warning: Antes de usar o migrador do WorldGuard, faça backup de seus dados (incluindo LuckPerms). É recomendável testar a migração em um servidor de teste antes de aplicar ao servidor principal para garantir que tudo funcione conforme o esperado.

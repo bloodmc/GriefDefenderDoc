@@ -7,12 +7,12 @@ icon: Options
 
 As opções, também conhecidas como Meta, são uma maneira de configurar plugins usando contextos de jogador/grupo através do seu sistema de permissão, o que lhe dá o benefício de poder definir configurações diferentes para diferentes jogadores, grupos, mundos etc.
 
-:warning: É ALTAMENTE recomendado aprender como o LP Meta funciona antes de continuar. Veja https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta
+:warning: É ALTAMENTE recomendado aprender como o LP Meta funciona antes de continuar. Veja [LuckPerms - Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta)
 
 
 ## Configuração  
 Os valores padrão podem ser alterados em `options.conf`
-Veja [Configuração de opções](https://github.com/bloodmc/GriefDefender/wiki/Configuration#options)
+Veja [Configuração de opções](/br/wiki/Configuration.html#opcoes)
 
 ## Comandos embutidos
 
@@ -38,7 +38,7 @@ Veja https://github.com/bloodmc/GriefDefender/wiki/Contexts sobre quais contexto
 * Negue a fome do jogador ao reivindicar que o jogador está dentro.
 `/claimoption player-deny-hunger true`
 
-Nota: Se você receber uma mensagem informando que a opção não está habilitada, habilite-a em `option-control` em `options.conf`. Veja [Controle de opções](https://github.com/bloodmc/GriefDefender/wiki/Options/_edit#option-control)
+Nota: Se você receber uma mensagem informando que a opção não está habilitada, habilite-a em `option-control` em `options.conf`. Veja [Controle de opções](Options.html#comandos-embutidos)
 Nota: O uso de `/claimoption` sem argumentos abre a Interface e exibe todas as opções de reivindicação para a reivindicação em que você está, incluindo opções padrão que afetam todas as reivindicações.
 
 ## LuckPerms

@@ -8,9 +8,7 @@ icon: node-tree
 Conceda ```griefdefender.user.*``` para seus jogadores e também ```griefdefender.user.*``` e ```griefdefender.admin.*```para sua equipe/administradores, então negue as permissões que você NÃO deseja dar a eles.
 
 ### IMPORTANTE
-:warning:  
-
-Se você NÃO conceder os nodes de permissão acima e, em vez disso, conceder nodes de permissão únicos, você não terá suporte, pois isso vai contra nossa recomendação.
+:warning: Se você NÃO conceder os nodes de permissão acima e, em vez disso, conceder nodes de permissão únicos, você não terá suporte, pois isso vai contra nossa recomendação.
 Se você alterar qualquer permissão de administrador durante o jogo, certifique-se de executar `/gdreload`, pois o GD armazena em cache várias permissões para ter ganhos de desempenho.
 Permissão suprema ```*``` atualmente não é suportado. Use ```griefdefender.user.*``` e ```griefdefender.admin.*``` para os administradores. 
  
@@ -230,7 +228,7 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.admin.flag-defaults | Permite editar padrões de bandeiras |
 | griefdefender.admin.flag-overrides | Permite editar sobreposição de bandeira |
 
-## Options
+## outras-opções
 | Node de permissão | Descrição |
 | --------- | ----------- |
 | griefdefender.admin.claim.command.option.group.base | Permite definir opções de grupo em reivindicações |

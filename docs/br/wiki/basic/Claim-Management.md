@@ -9,7 +9,7 @@ GriefDefender é um plugin que fornece funcionalidade de proteção de região d
 
 Todos os exemplos estão com os padrões no momento em que escrevo isso em mente.
 
-Para obter exemplos detalhados de como gerenciar certos aspectos de suas reivindicações, consulte a seção **Gerenciamento de reivindicações** na [Página de perguntas frequentes](https://github.com/bloodmc/GriefDefender/wiki/FAQ)
+Para obter exemplos detalhados de como gerenciar certos aspectos de suas reivindicações, consulte a seção [Gerenciamento de reivindicações](/br/faq/Claim-Management.html) no [FAQ](/br/faq/)
 
 ## Criação de Reivindicação
 
@@ -99,9 +99,9 @@ Uma reivindicação da cidade tem as seguintes capacidades
 Nota: Isso pode ser ajustado mudando `griefdefender.create-limit` para um valor superior a 1 com `gd_claim_default=town` contexto. 
 
 
-Nota: Para um jogador reivindicar pedaços, eles precisam das permissões e blocos de reivindicação suficientes para o tamanho de sua reivindicação que pode ser configurada com [opções](https://github.com/bloodmc/grifefefender/wiki/Options).
+Nota: Para um jogador reivindicar pedaços, eles precisam das permissões e blocos de reivindicação suficientes para o tamanho de sua reivindicação que pode ser configurada com [Opções](/br/wiki/basic/Options.html).
 
-Veja https://github.com/bloodmc/griefdefender/wiki/claim-types para obter mais informações sobre cada tipo de reivindicação.
+Veja [Tipos de reivindicação](/br/wiki/basic/Claim-Types.html) para obter mais informações sobre cada tipo de reivindicação.
 
 ### Pá de ouro
 Você cria reivindicações com uma pá de ouro (o item pode ser alterado nas configurações), que também podem alterar o tamanho e a posição da reivindicação. Lembre-se de que existem comandos para alternar o tipo e o modo de reivindicação, `/adminclaims`, `/townclaims`, `/basicclaims`, `/subdivideclaims`!
@@ -293,10 +293,10 @@ Também existem comandos para alterar o nome da reivindicação, a saudação e 
 Campo                              | Descrição |
 -----------------------------------|-------------|
 ```Type```| O tipo de reivindicação.<br /> NOTA: Os tipos de reclamação 2D protegem o Bedrock para o céu por padrão.<br /> NOTA: Os tipos de reclamação 3D incluem altura (eixo y) e protegem apenas a área selecionada no momento da criação de reivindicações.
-```ID```|O identificador de reivindicação amigável exclusiva.Veja [Identificadores de reivindicação](#claim-identifiers)
-```Display Name```| O nome da exibição da reivindicação.Veja [Nomes de exibição de reivindicações](#claim-display-names). <br />Nota: Os nomes de exibição suportam a formatação, não são únicos e podem ser definidos como qualquer coisa.
+```ID```|O identificador de reivindicação amigável exclusiva.Veja [Identificadores de reivindicação](#identificadores-de-reivindicacao)
+```Display Name```| O nome da exibição da reivindicação.Veja [Nomes de exibição de reivindicações](#nomes-de-exibicao-de-reivindicacoes). <br />Nota: Os nomes de exibição suportam a formatação, não são únicos e podem ser definidos como qualquer coisa.
 ```Owner```| O dono da reivindicação.
-```Claim Group```| O grupo de reivindicações que essa reclamação faz parte.Veja [Grupos de reivindicação](#claim-groups)
+```Claim Group```| O grupo de reivindicações que essa reclamação faz parte.Veja [Grupos de reivindicação](#grupos-de-reivindicacao)
 ```Spawn```| Os usuários da Spawn de reivindicação se teletransportarão ao usar a reivindicação de teletransporte na Interface.
 ```Inherit```| Se a reivindicação herda as permissões de bandeira da reivindicação principal.<br /> Nota: Use `/claiminherit` para alternar o valor.
 ```Expired```| Se a reivindicação expirou devido à inatividade.
@@ -331,7 +331,7 @@ Campo                              | Descrição |
 
 ### Permitindo que outros jogadores acessem sua reivindicação
 
-Você pode dar a outros jogadores acesso à sua reivindicação básica usando os [Comandos de confiança] (https://github.com/bloodmc/grifefefender/wiki/Commands#Trust), por exemplo: Para dar ao seu amigo as permissões de construção para o jogador "Applehead" na sua reivindicação, apenas execute `/trust Applehead`.
+Você pode dar a outros jogadores acesso à sua reivindicação básica usando os [Comandos de confiança](/br/wiki/Commands.html#trust-1), por exemplo: Para dar ao seu amigo as permissões de construção para o jogador "Applehead" na sua reivindicação, apenas execute `/trust Applehead`.
 
 ### Exigem confiança para os jogadores entrarem
 

@@ -90,7 +90,7 @@ O Griefdefender permite a habilitação modular.De acordo com os arquivos de con
 | enter-claim-player-messages | Controls whether to display playername and claim display name as enter message if not set. <br /> Set to '1' to send messages to chat. <br /> Set to '2' to send messages to actionbar. <br />  Set to '3' to send messages to title. <br /> Set to 0 to disable. | 2 |
 | enter-exit-chat-show-gd-prefix | Whether GD prefix should be shown in enter/exit chat messages. | TRUE |
 | greeting-farewell-action-bar | Controls whether to send greeting/farewell messages to action bar by default. <br />Note: Setting to true will send messages to actionbar. <br />Note: This will only be set if there is no actionbar already set in claim. If so, it will use chat instead. | FALSE |
-| locale | Set the locale to use for GP messages. Available languages: de_DE, en_US, es_ES, fr_FR, pl_PL, ru_RU, zh_HK. The data is stored under assets in jar. <br />Note: The language code must be lowercase and the country code must be uppercase. | "en_US" |
+| locale | Set the locale to use for GP messages. Available languages: de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK. The data is stored under assets in jar. <br />Note: The language code must be lowercase and the country code must be uppercase. | "en_US" |
 | locale-unicode-fix | Attempts to adjust unicode fonts to represent minecraft default fonts better. <br />Note: If you are using 'pl_PL' or 'ru_RU', this setting should be set to false. <br />Note: Any other languages that experience misalignment in chat menus should disable this setting. | TRUE |
 | wilderness-default-message | Controls whether wilderness default enter message is sent to players. | TRUE |
 

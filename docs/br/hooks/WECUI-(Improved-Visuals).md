@@ -7,7 +7,7 @@ icon: visual
 
 GriefDefender agora suporta WorldEdit CUI (WECUI)!
 
-![Pré-visualização](http://i.imgur.com/96RHwkv.jpg)
+![Pré-visualização](https://i.IMGur.com/dYyUx6m.gif)
 
 Para usar o WECUI, é necessário instalar o seguinte
 

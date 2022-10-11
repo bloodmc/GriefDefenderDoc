@@ -1,18 +1,18 @@
 ---
-title: Optimizations
+title: Otimizações
 tag: Info
 category: info
 icon: optimization-timer
 ---
 
-GriefDefender provides built-in control for nearly every action in your minecraft world. However, attempting to control too much can sometimes cause resource issues depending on your server load. The solution to this issue is to make use of built-in optimization configuration found in `global.conf` and by learning how to use [blacklists](https://github.com/bloodmc/GriefDefender/wiki/Configuration#blacklist). 
+O Griefdefender fornece controle interno para quase todas as ações do seu mundo Minecraft.No entanto, tentar controlar muito às vezes pode causar problemas de recursos, dependendo da carga do servidor.A solução para esse problema é usar a configuração de otimização interna encontrada em `global.conf` e aprendendo a usar [listas negras](https://github.com/bloodmc/GriefDefender/wiki/Configuration#blacklist). 
 
-### Global Optimization config
+### Configuração de otimização global
 
-Below is a snippet of the optimization settings you can find in GD's `global.conf`
+Abaixo está um trecho das configurações de otimização que você pode encontrar em GD's `global.conf`
 
 <details>
-  <summary>Global Optimization Config</summary>
+  <summary>Configuração de otimização global</summary>
 
 ```
 optimization {
@@ -77,16 +77,16 @@ optimization {
 </details>
 
 
-### Optimization Contributions
+### Contribuições de otimização
 
-Below you will find user contributed configs for servers that have worked heavily on improving GD performance for their needs
+Abaixo, você encontrará configurações contribuídas pelo usuário para servidores que trabalharam fortemente para melhorar o desempenho do GD para suas necessidades
 
-### IMPORTANT
-:warning:  These settings are tweaked for individual servers and may not work on yours. It is HIGHLY recommended to test these configs before using them in production.
+### IMPORTANTE
+:warning:  Essas configurações são ajustadas para servidores individuais e podem não funcionar na sua.É altamente recomendável testar essas configurações antes de usá -las na produção.
 :warning:  
 
 <details>
-  <summary>Dino's Blacklist</summary>
+  <summary>Dino's Lista negra</summary>
 
 ```
 blacklist {
@@ -243,7 +243,7 @@ blacklist {
 </details>
 
 <details>
-  <summary>Dino's Flag Control</summary>
+  <summary>Dino's Controle de bandeira</summary>
 
 ```
     flag-control {
@@ -289,7 +289,7 @@ blacklist {
 </details>
 
 <details>
-  <summary>Dino's Option Control</summary>
+  <summary>Dino's Controle de opção</summary>
 
 ```
     option-control {
@@ -320,7 +320,7 @@ blacklist {
 </details>
 
 <details>
-  <summary>Dino's Known Issues</summary>
+  <summary>Problemas conhecidos de Dino's</summary>
 
 ```
 - A água pode sofrer reivindicações de fora, de reivindicações de região (remover a água da bandeira da lista negra de fluxo líquido impedirá isso, mas lembre -se de que o fluxo de água ativo tem um grande impacto de desempenho)

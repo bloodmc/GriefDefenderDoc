@@ -1,5 +1,8 @@
 ---
 title: GriefPrevention
+tag: Migration
+category: migration
+icon: sheild
 ---
 
 :warning: Antes de usar o migrador GriefPrevention, faça backup de seus dados (incluindo LuckPerms).

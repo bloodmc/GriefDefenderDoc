@@ -21,47 +21,46 @@ features:
 
   - title: Customizável
     icon: Toolbox
-    details: Use as bandeiras padrões ou crie os seus próprios. Infinitas possibilidades!
-    link: https://github.com/bloodmc/GriefDefender
+    details: Use as bandeiras padrões ou crie as suas próprias. Infinitas possibilidades!
+    link: /br/wiki/advanced/Flags.html
 
   - title: Traduções multilíngues
     icon: language
     details: Muitos idiomas já disponíveis prontos para uso!
-    link: https://github.com/bloodmc/GriefDefender
+    link: /br/wiki/#linguagem
 
   - title: Suporte a banco de dados
     icon: database
     details: Suporta MySQL, Maria DB, PostgreSQL e SQLite.
-    link: https://github.com/bloodmc/GriefDefender
+    link: /br/wiki/#banco-de-dados
 
   - title: IU interativa
     icon: smallscreen
     details: Textos clicáveis no chat manuseie tudo por lá.
-    link: https://github.com/bloodmc/GriefDefender
+    link: /br/wiki/basic/GUI.html
 
   - title: Suporte a Mods
     icon: tools
     details: Projetado desde o início para mods. Híbrido e Sponge.
-    link: https://github.com/bloodmc/GriefDefender
+    link: /br/mods/
 
   - title: Taxas. Aluguel e vendas
     icon: moneybag
     details: Aumente sua economia alugando ou vendendo suas reivindicações e muito mais.
-    link: https://github.com/bloodmc/GriefDefender
+    link: /br/wiki/basic/Rent-System.html
 
   - title: Sistema de permissão
     icon: sheild
     details: Tudo é tratado através de permissões. LuckPerms necessário,
-    link: https://github.com/bloodmc/GriefDefender
+    link: /br/wiki/Permissions.html
 
   - title: API bem projetada
     icon: code
     details: Conecte-se a tudo que o GriefDefender faz via API.
-    link: https://github.com/bloodmc/GriefDefender
+    link: /br/API.html
 
   - title: Novos recursos ✨
     details: Sempre escutando seus feedback.
-    link: https://github.com/bloodmc/GriefDefender
 
 copyright: false
 footer: MIT licenciado | Copyright © 2019-presente GriefDefender
