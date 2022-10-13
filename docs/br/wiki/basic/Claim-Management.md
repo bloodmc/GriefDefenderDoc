@@ -285,18 +285,18 @@ NOTA: Retirar uma reivindicação de um grupo, fará com que a reivindicação u
 
 ## Configurações da reivindicação
 
-Para obter informações gerais sobre o uso de reclamações `/claiminfo` enquanto estava de pé neles.Passe o mouse sobre as coisas para encontrar vários detalhes que você pode alterar diretamente sem inserir nenhum comando.
+Para obter informações gerais sobre o uso de reivinidicações `/claiminfo` enquanto estava de pé neles.Passe o mouse sobre as coisas para encontrar vários detalhes que você pode alterar diretamente sem inserir nenhum comando.
 Também existem comandos para alterar o nome da reivindicação, a saudação e a despedida.  
 
 ![Detalhes reivindicados](https://i.imgur.com/6erpZLa.png)
 
 Campo                              | Descrição |
 -----------------------------------|-------------|
-```Type```| O tipo de reivindicação.<br /> NOTA: Os tipos de reclamação 2D protegem o Bedrock para o céu por padrão.<br /> NOTA: Os tipos de reclamação 3D incluem altura (eixo y) e protegem apenas a área selecionada no momento da criação de reivindicações.
+```Type```| O tipo de reivindicação.<br /> NOTA: Os tipos de reivindicação 2D protegem o Bedrock para o céu por padrão.<br /> NOTA: Os tipos de reivindicação 3D incluem altura (eixo y) e protegem apenas a área selecionada no momento da criação de reivindicações.
 ```ID```|O identificador de reivindicação amigável exclusiva.Veja [Identificadores de reivindicação](#identificadores-de-reivindicacao)
 ```Display Name```| O nome da exibição da reivindicação.Veja [Nomes de exibição de reivindicações](#nomes-de-exibicao-de-reivindicacoes). <br />Nota: Os nomes de exibição suportam a formatação, não são únicos e podem ser definidos como qualquer coisa.
 ```Owner```| O dono da reivindicação.
-```Claim Group```| O grupo de reivindicações que essa reclamação faz parte.Veja [Grupos de reivindicação](#grupos-de-reivindicacao)
+```Claim Group```| O grupo de reivindicações que essa reivindicação faz parte.Veja [Grupos de reivindicação](#grupos-de-reivindicacao)
 ```Spawn```| Os usuários da Spawn de reivindicação se teletransportarão ao usar a reivindicação de teletransporte na Interface.
 ```Inherit```| Se a reivindicação herda as permissões de bandeira da reivindicação principal.<br /> Nota: Use `/claiminherit` para alternar o valor.
 ```Expired```| Se a reivindicação expirou devido à inatividade.
