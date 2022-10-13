@@ -5,7 +5,7 @@ category: claim
 icon: rent
 ---
 
-:::: warning O sistema de aluguel está sendo reformulado para uma versão futura.
+:::: danger O sistema de aluguel está sendo reformulado para uma versão futura.
 Se você estiver usando uma plataforma Bukkit, é recomendável usar RealEstate que se encontra no nosso discord ou [aqui](/br/hooks/RealEstate.html)
 ::::
 

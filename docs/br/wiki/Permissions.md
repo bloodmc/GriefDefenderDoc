@@ -74,7 +74,7 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.claim.command.abandon-all | Permite abandonar todas as reivindicações |
 | griefdefender.user.claim.command.abandon-top-level  | Permite abandonar uma reivindicação e todas as suas subdivisões |
 | griefdefender.user.claim.command.basic-mode  | Permite usar o modo de escavadeira de reivindicação básica |
-| griefdefender.user.claim.command.bank | Permite usar o banco de reclamações |
+| griefdefender.user.claim.command.bank | Permite usar o banco de reivindicação |
 | griefdefender.user.claim.command.buy | Permite comprar uma reivindicação (requer plugin de economia) |
 | griefdefender.user.claim.command.buy-blocks | Permite comprar blocos de reivindicação (requer plugin de economia) |
 | griefdefender.user.claim.command.claim.tax | Permite consultar/pagar saldo de impostos |
@@ -223,7 +223,7 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.admin.command.restore-nature.base | Permite alternar a ferramenta de pá para o modo de restauração. |
 | griefdefender.admin.command.restore-nature.aggressive |  |
 | griefdefender.admin.command.restore-nature.fill |  |
-| griefdefender.admin.command.set-accrued-claim-blocks | Permite editar a quantidade de bloqueios de sinistros acumulados |
+| griefdefender.admin.command.set-accrued-claim-blocks | Permite editar a quantidade de blocos de reivindicação acumulados |
 | griefdefender.admin.custom.flag | Permite usar bandeiras de declaração avançados na Interface |
 | griefdefender.admin.flag-defaults | Permite editar padrões de bandeiras |
 | griefdefender.admin.flag-overrides | Permite editar sobreposição de bandeira |

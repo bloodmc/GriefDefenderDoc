@@ -1,4 +1,8 @@
-## Como adicionar a API GD como dependência
+---
+title: API
+---
+
+## Como adicionar a Interface de Programação de Aplicação (API) do GriefDefender como dependência
 
 Nota: Adicione jar como uma dependência `compileOnly`. (Não inclua a API do GD em seu jar ou qualquer uma de suas dependências, pois é fornecida pelo GriefDefender)
 
