@@ -20,7 +20,7 @@ options.conf
 storage.conf
 ```
 
-### Proibições  
+### bans (proibições)  
 
 O `bans.conf` armazena todos os dados de proibições global e mundial executados pelo comando `/claimban`  
 
@@ -49,7 +49,7 @@ Este comando suporta os seguintes argumentos `hand | <tipo> <alvo> [NomeDoMundo]
 `[mensagem]` - Uma mensagem de banimento pode ser adicionada ao final do comando, que será mostrada ao jogador se interagir com um bloco, entidade ou item banido.
 
 
-### Lista negra
+### blacklist (lista negra)
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
 | flag-id-blacklist | Uma lista de IDs ignorados por bandeiras. | [ ] |
@@ -57,19 +57,19 @@ Este comando suporta os seguintes argumentos `hand | <tipo> <alvo> [NomeDoMundo]
 | global-target | Uma lista global de IDs de destino que são ignorados por eventos. <br />Observação: isso afeta apenas eventos em que o id especificado é o target (destino). | [ ] |
 | entity-damage-source-blacklist | Uma lista global de fontes de danos à entidade que são ignoradas em eventos por padrão. | [contact,cramming,drowning,<br />"falling_block",flyintowall,"fire_tick",<br />"hot_floor",envenenado,fome,sufocamento,<br />suicídio,void] |
 
-A lista negra controla eventos de interação com itens, blocos ou entidades em uma base por-bandeira ou global. As listas negras são extremamente úteis, pois permitem forçar o GD a ignorar ações em um mundo que você não precisa proteger. Ao fazer isso, você evita que o GD desperdice recursos ao tentar proteger. Para determinar o que você deseja impedir que o GD controle, você precisará executar o [GDDebug](/br/wiki/advanced/Debugging.html) para coletar os dados necessários para a configuração. Veja [Contribuições do usuário](https://github.com/bloodmc/GriefDefender/wiki/Optimizations#optimization-contributions) para alguns exemplos de como usá-lo.  
+A blacklist controla eventos de interação com itens, blocos ou entidades em uma base por-bandeira ou global. As listas negras são extremamente úteis, pois permitem forçar o GD a ignorar ações em um mundo que você não precisa proteger. Ao fazer isso, você evita que o GD desperdice recursos ao tentar proteger. Para determinar o que você deseja impedir que o GD controle, você precisará executar o [GDDebug](/br/wiki/advanced/Debugging.html) para coletar os dados necessários para a configuração. Veja [Contribuições do usuário](https://github.com/bloodmc/GriefDefender/wiki/Optimizations#optimization-contributions) para alguns exemplos de como usá-lo.  
 
 Ele suporta curingas `?` e `*` onde `?` representa um único caractere e `*` representa zero ou mais caracteres.
 Para mais informações, você pode acessar [correspondência de curingas do Apache.](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String))
 
-Para adicionar um item à lista negra, basta adicionar o ID entre um conjunto de aspas.
+Para adicionar um item à blacklist, basta adicionar o ID entre um conjunto de aspas.
 
 Um exemplo de como impedir que itens sejam verificados pelo GD é mostrado
 
 `block-break=["modID:itemID"]`
 
 
-### Nomes de reivindicações (claimnames)  
+### claimnames (Nome da reivindicação)
 
 Veja [Identificadores de Reivindicação](https://github.com/bloodmc/GriefDefender/wiki/Claim-Management#claim-identifiers)  
 
@@ -94,7 +94,7 @@ Existem 2 UUIDs integrados que o GriefDefender usa para identificadores amigáve
 `11111111-1111-1111-1111-111111111111` - Este UUID representa o usuário administrador e é usado para definir identificadores amigáveis em reivindicação administrativa
 
 
-### Bandeiras  
+### flags (bandeiras)  
 
 O arquivo `flags.conf` não deve ser confundido com definições de bandeiras e/ou presets. Este arquivo controla todos os principais bandeiras que o GD usa em eventos.
 
@@ -162,7 +162,7 @@ Veja [Configuração global](https://github.com/bloodmc/GriefDefender/wiki/Globa
 
 
 
-### Interface  
+### GUI (Interface) 
 
 O arquivo `gui.conf` é responsável por todas as configurações relacionadas ao bate-papo e Interface de Inventário.
 
@@ -206,7 +206,7 @@ As seguintes bandeiras de ícone estão disponíveis para uso com um ícone
 `HIDE_DYE` - Controla se os corantes devem ser exibidos.
 
 
-### Opções  
+### options (Opções)  
 
 O arquivo `options.conf` controla todas as configurações padrões de reivindicação e jogador.
 
