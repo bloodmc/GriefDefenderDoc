@@ -2,7 +2,6 @@
 title: Gerenciamento de Reivindicação
 tag: faq
 category: faq
-icon: faq
 ---
 
 ## 1. Como permitir que todos os jogadores criem reivindicações gratuitamente?**

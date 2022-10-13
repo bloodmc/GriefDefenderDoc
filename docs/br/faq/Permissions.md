@@ -2,7 +2,6 @@
 title: Permissões
 tag: faq
 category: faq
-icon: faq
 ---
 
 ## 1. Como eu concedo trust para um grupo específico para TODAS as reivindicações globalmente?

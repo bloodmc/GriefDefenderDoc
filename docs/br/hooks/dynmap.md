@@ -14,7 +14,7 @@ Veja https://github.com/bloodmc/GriefDefender/wiki/GDHooks
 * Dynmap - [Download](https://www.spigotmc.org/resources/dynmap.274/) 
 
 <details>
-  <summary>Exemplo de configuração de mapa dinâmico</summary>
+  <summary>Exemplo de configuração do Dynmap</summary>
 
 ```
 dynmap {

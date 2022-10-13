@@ -1,8 +1,8 @@
 ---
-title: Começando
+title: Introdução
 tag: Info
 category: info
-icon: start
+icon: type
 ---
 
 :::: info Revisão e Tradução para o Português-Brasil 

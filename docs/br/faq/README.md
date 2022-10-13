@@ -2,7 +2,6 @@
 title: Perguntas frequentes
 tag: faq
 category: faq
-icon: faq
 ---
 
 A seguir estão as páginas de perguntas frequentes com seus respectivos tópicos

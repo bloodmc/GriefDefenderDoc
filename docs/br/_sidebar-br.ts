@@ -7,8 +7,10 @@ export const br = sidebar({
 	"/br/wiki/": [ 
         "/br/",
         {
+		  text: "Começando",
+		  icon: "start",
           prefix: "/br/wiki/",
-		  collapsable: false,
+		  collapsable: true,
           children: ["", "Configuration", "Permissions", "Commands"],
         },
 		{

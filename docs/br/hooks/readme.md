@@ -10,6 +10,10 @@ GDHooks é um addon oficial do GriefDefender projetado para estender seu suporte
 [**Source**](https://github.com/bloodmc/GDHooks)  
 [**Wiki**](https://github.com/bloodmc/GDHooks/wiki)  
 
+::: info Mais informações sobre alguns Hooks
+- [Dynmap](./dynmap) | [PlaceholderAPI](./PlaceholderAPI) | [RealEstate](./RealEstate) | [WorldEdit CUI](WECUI-(Improved-Visuals))
+:::
+
 #### Suportado por GDHooks
 
  **Mapas**
@@ -61,14 +65,14 @@ GDHooks é um addon oficial do GriefDefender projetado para estender seu suporte
 * [Plan]: [ [Github](https://github.com/plan-player-analytics/Plan) | [Spigot](https://www.spigotmc.org/resources/32536/) | [Ore](https://ore.spongepowered.org/AuroraLS3/Plan) ] (Obtendo os dados dos jogadores para a web)
 
 
-**Misc**
+**Variados**
 * [BanFromClaim]: [ [Spigot](https://www.spigotmc.org/resources/70897/) | [Github](https://github.com/Baktus79/BanFromClaim) ] Permite jogadores banirem outros jogadores de sua(s) reivindicação(ões))
 * [CombatLogX]: [ [Github](https://github.com/SirBlobman/CombatLogX/blob/main/expansion/compatibility/GriefDefender/src/main/java/combatlogx/expansion/compatibility/region/grief/defender/GriefDefenderRegionHandler.java) | [Spigot](https://www.spigotmc.org/resources/31689/) ](Respeita as bandeiras do GriefDefender)
 * [Regionerator]: [ [Github](https://github.com/Jikoo/Regionerator) ] (Excluir a reivindicação quando sua região foi eliminada pelo Regionerator)
 * [[Parties](https://alessiodp.com/parties)]: [ [Spigot](https://bit.ly/parties-spigot) | [Bukkit](https://bit.ly/parties-bukkit) | [Github](https://github.com/AlessioDP/Parties) ] (Dar permissão nas reivindicações, aos Membros das Parties)
 
 
-#### Porta disponíveis no Discord
+#### Port disponíveis no Discord
 
 * [AdvancedRegionMarket]: [ [Spigot](https://www.spigotmc.org/resources/advancedregionmarket.58732/) ]
 * [RealEstate]: [ [Github](https://github.com/bloodmc/RealEstate) | [Spigot](https://www.spigotmc.org/resources/realestate.66966/) ]
