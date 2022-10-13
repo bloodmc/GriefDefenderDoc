@@ -230,12 +230,12 @@ As guias a seguir estão disponíveis
 
 ## Grupos de reivindicação
 
-Os grupos de reivindicações permitem que 2 ou mais reivindicações usem as mesmas permissões.
-Isso é útil em situações em que você tem um grupo de reivindicações em que as permissões precisam ser sincronizadas.
+Os GRUPO-REIVINIDICAÇÃO permitem que 2 ou mais reivindicações usem as mesmas permissões.
+Isso é útil em situações em que você tem um GRUPO-REIVINIDICAÇÃO em que as permissões precisam ser sincronizadas.
 
 ### Tipos
 
-Existem 2 tipos de grupos de reivindicações
+Existem 2 tipos de GRUPO-REIVINIDICAÇÃO
 
 #### admin
 
@@ -244,7 +244,7 @@ Data is stored in `./GriefDefender/claimgroups/admin/<claimgroup_name>.conf`
 
 #### Do utilizador
 
-Os grupos de reclamações de usuários são acessíveis apenas pelo usuário que criou o grupo.
+Os GRUPO-REIVINIDICAÇÃO de usuários são acessíveis apenas pelo usuário que criou o grupo.
 Os dados são armazenados em `./GriefDefender/claimgroups/user/<player_uuid>/<claimgroup_name>.conf`
 
 ### Interface
@@ -255,19 +255,19 @@ As guias a seguir estão disponíveis
 #### Do utilizador
 * Mostra grupos de reivindicação de jogadores que você criou.
 * Clicar no grupo de reivindicações mostrará todas as reivindicações unidas ao grupo.
-* Grupos de reclamações serão listados em ordem alfabética
+* GRUPO-REIVINIDICAÇÃO serão listados em ordem alfabética
 
 #### admin
-* Mostra grupos de reivindicações de administrador criados por administradores
+* Mostra grupos de reivindicações administrativas criados por administradores
 * Clicar no grupo de reivindicações mostrará todas as reivindicações unidas ao grupo.
-* Grupos de reclamações serão listados em ordem alfabética
+* GRUPO-REIVINIDICAÇÃO serão listados em ordem alfabética
 
 
-Para criar um grupo de reivindicações, clique no `+` Assine e insira um nome para o grupo de reivindicações.
-Para remover um grupo de reivindicações, clique no `-` Assine e insira um nome para o grupo de reivindicações.
-Para ingressar em um grupo de reivindica `JOIN` button next to the claim group.  botão ao lado do grupo de reivindicações.
-Para desconectar um grupo de reivindica `UNJOIN` botão ao lado do grupo de reivindicações.
-NOTA: Desacelerando uma reivindicação de um grupo, fará com que a reivindicação use suas permissões locais.
+Para criar um GRUPO-REIVINIDICAÇÃO, clique no `+` Assine e insira um nome para o GRUPO-REIVINIDICAÇÃO.
+Para remover um GRUPO-REIVINIDICAÇÃO, clique no `-` Assine e insira um nome para o GRUPO-REIVINIDICAÇÃO.
+Para ingressar em um grupo de reivindica `Unir-se` botão ao lado do GRUPO-REIVINIDICAÇÃO.  botão ao lado do grupo de reivindicações.
+Para desconectar um grupo de reivindica `Desunir` botão ao lado do GRUPO-REIVINIDICAÇÃO.
+NOTA: Retirar uma reivindicação de um grupo, fará com que a reivindicação use suas permissões locais.
 
 ### Exemplos de comando
 

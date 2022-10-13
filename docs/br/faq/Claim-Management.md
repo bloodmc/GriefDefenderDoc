@@ -5,13 +5,13 @@ category: faq
 icon: faq
 ---
 
-## 1. Como permitir que todos os usuários criem reivindicações gratuitamente?**
+## 1. Como permitir que todos os jogadores criem reivindicações gratuitamente?**
 
 Defina `requires-claim-blocks` para `false` em `global.conf` dentro da seção `creation-settings`  
 
 ## 2. Como transfiro uma reivindicação para outro jogador gratuitamente?**
 
-Criar reivindicação, use `/claiminfo` -> `Admin Settings` e alternar `Requer Blocos de Reivindicação` para falso.
+Crie uma reivindicação, use `/claiminfo` -> `Admin Settings` e alternar `Requer Blocos de Reivindicação` para false.
 Então use `/claimtransfer <NomeDoJogador>` para transferir a reivindicação para o jogador.  
 
 ## 3. Como faço para criar uma reivindicação usando WorldEdit?**  
@@ -50,13 +50,13 @@ Isso o definirá internamente como um jogador não trust para todas as reivindic
 
 1. Atribua permissão a todos os jogadores no LuckPerms.
 2. Fique na reivindicação de região selvagem.
-3. Execute o comando `/cpp <playername> <permission> false`
+3. Execute o comando `/cpp <NomeDoJogador> <Permissão> false`
 
   - ### To deny a specific group permission in wilderness
 
 1. Atribua permissão a todos os jogadores no LuckPerms.
 2. Fique na reivindicação de região selvagem.
-3. Execute o comando `/cpg <group> <permission> false`
+3. Execute o comando `/cpg <Grupo> <Permissão> false`
 
 Nota: As mesmas etapas podem ser aplicadas a qualquer reivindicação.
 

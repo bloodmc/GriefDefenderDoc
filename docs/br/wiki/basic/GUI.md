@@ -37,11 +37,11 @@ Clicar no link `REIVINDICAÇÃO` levará o jogador à seguinte tela
 
 Os links disponíveis funcionam da seguinte forma
 
-`ABANDONAR` - Abandone a reivindicação do jogador.
-`CRIAR` - Cria uma reivindicação no pedaço em que o jogador está.
-`INFO` - Carrega o menu Claiminfo.
-`LISTA` - Carrega o menu da lista de reivindicações.
-`SCHEMATIC` - Carrega o menu esquemático.
+`Abandonar` - Abandone a reivindicação do jogador.
+`Criar` - Cria uma reivindicação no pedaço em que o jogador está.
+`Info` - Carrega o menu Claiminfo.
+`Lista` - Carrega o menu da lista de reivindicações.
+`Esquemático` - Carrega o menu esquemático.
 
 ### Comandos  
 
@@ -106,24 +106,24 @@ Clicar em 'DETALHES' trará informações adicionais, como mundo, último ativo 
 ![Detalhes das informações do jogador](https://i.imgur.com/0cjvNKc.png)
 
 
-### Confiar
+### Trust
 
-Clicar no link `TRUST` carregará o menu de confiança
+Clicar no link `TRUST` carregará o menu de trust (Confiaça)
 Nota: Este menu também pode ser acessado diretamente executando o comando `/trustlist`
 
 
-![Confiar](https://i.imgur.com/T75Gvpw.png)
+![Trust](https://i.imgur.com/T75Gvpw.png)
 
-O menu de confiança permite que um jogador confie em um membro ou grupo para suas reivindicações.
-Veja [Trust-System](https://github.com/bloodmc/GriefDefender/wiki/Trust-System) para tipos de confiança e como cada um funciona.
+O menu de trust permite que um jogador confie em um membro ou grupo para suas reivindicações.
+Veja [Trust-System](https://github.com/bloodmc/GriefDefender/wiki/Trust-System) para tipos de trust e como cada um funciona.
 
-Para adicionar um membro ou grupo, clique em um dos tipos de confiança na parte superior do menu e clique no sinal `+`.
-Isso enviará uma mensagem ao jogador perguntando se você deseja confiar em um jogador ou grupo. Basta clicar no link `Player` ou `Group` para continuar.
+Para adicionar um membro ou grupo, clique em um dos tipos de trust na parte superior do menu e clique no sinal `+`.
+Isso enviará uma mensagem ao jogador perguntando se você deseja confiar em um jogador ou grupo. Basta clicar no link `Jogador` ou `Grupo` para continuar.
 
 Se confiar em um jogador, você deverá digitar um nome no formato `player <nome>`. Apague `<nome>` e insira um nome válido. Quando terminar, pressione enter.
 Mote: Digite `public` para confiar em todos.
 
-Se confiar em um grupo, você deverá inserir um nome de grupo no formato `grupo <nome>`. Apague `<name>` e insira um grupo LP válido.
+Se confiar em um grupo, você deverá inserir um nome de grupo no formato `grupo <nome>`. Apague `<nome>` e insira um grupo LP válido.
 
 
 
@@ -144,11 +144,11 @@ Clicar no ícone 'golden shovel' carregará o menu de reivindicação
 
 Os ícones disponíveis funcionam da seguinte forma
 
-`ABANDON` - Abandone a reivindicação do jogador.
-`CREATE` - Cria uma reivindicação no pedaço em que o jogador está.
-`INFO` - Carrega o menu de inventário Claiminfo.
-`LIST` - Carrega o menu de inventário da lista de reivindicações.
-`DEBUG` - Depura o usuário da reivindicação atual.
+`Abandonar` - Abandone a reivindicação do jogador.
+`Criar` - Cria uma reivindicação no pedaço em que o jogador está.
+`Info` - Carrega o menu de inventário Claiminfo.
+`Lista` - Carrega o menu de inventário da lista de reivindicações.
+`Depurar` - Depura o usuário da reivindicação atual.
 Observação: o ícone de depuração é apenas para administradores.
 
 Toda a configuração da Interface do inventário pode ser encontrada no arquivo `gui.conf` dentro da pasta `./plugins/GriefDefender/`.

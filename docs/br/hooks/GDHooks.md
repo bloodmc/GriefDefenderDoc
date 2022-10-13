@@ -12,13 +12,13 @@ GDHooks é um addon oficial do GriefDefender projetado para estender seu suporte
 
 #### Suportado por GDHooks
 
- **Mapa**
+ **Mapas**
 
 * [BlueMap]: [ [Github](https://github.com/BlueMap-Minecraft/BlueMap) | [Spigot](https://www.spigotmc.org/resources/83557/) | [Ore](https://ore.spongepowered.org/Blue/BlueMap) ]
 * [Dynmap]: [ [Github](https://github.com/webbukkit/dynmap) | [Spigot](https://www.spigotmc.org/resources/274/) ]
 * [Pl3xMap]: [ [Github](https://github.com/pl3xgaming/Pl3xMap) ]
 
-**Loja**
+**Lojas**
 
 * [BossShopPro]: [ [Spigot](https://www.spigotmc.org/resources/222/) | [Github](https://github.com/Blackixx/BossShopPro) ]
 * [ChestShop]: [ [Spigot](https://www.spigotmc.org/resources/51856/) | [Github](https://github.com/ChestShop-authors/ChestShop-3) ] 
@@ -45,12 +45,12 @@ GDHooks é um addon oficial do GriefDefender projetado para estender seu suporte
 
 #### Suportado pelo lado do plug-in
 
-**Teletransporte**
+**Teletransportes**
 * [BetterRTP]: [ [Spigot](https://www.spigotmc.org/resources/36081/) | [Github](https://github.com/SuperRonanCraft/BetterRTP) ]
 * [HyperDrive]: [ [Github](https://github.com/XZot1K/HyperDrive) | [Spigot](https://www.spigotmc.org/resources/17184/ ]
 * [WildernessTp]: [ [Spigot](https://www.spigotmc.org/resources/22853/) | [Github](https://github.com/AcmeProject/WildernessTp) ]
 
-**Proteção**
+**Proteções**
 
 * [Furniture]: [ [Spigot](https://www.spigotmc.org/resources/9368/) | [Github](https://github.com/Ste3et/FurnitureLib) ] (Os móveis estão protegidos na reivindicação)
 * [Insights]: [ [Addon](https://github.com/galexrt/InsightsGriefDefenderAddon) | [Github](https://github.com/InsightsPlugin/Insights) | [Spigot](https://www.spigotmc.org/resources/56489/)] (Limitar Blocos em suas reivindicações)
@@ -62,10 +62,10 @@ GDHooks é um addon oficial do GriefDefender projetado para estender seu suporte
 
 
 **Misc**
-* [BanFromClaim]: [ [Spigot](https://www.spigotmc.org/resources/70897/) | [Github](https://github.com/Baktus79/BanFromClaim) ] (Ban claims' relative players)
-* [CombatLogX]: [ [Github](https://github.com/SirBlobman/CombatLogX/blob/main/expansion/compatibility/GriefDefender/src/main/java/combatlogx/expansion/compatibility/region/grief/defender/GriefDefenderRegionHandler.java) | [Spigot](https://www.spigotmc.org/resources/31689/) ](Respect GD's flag)
-* [Regionerator]: [ [Github](https://github.com/Jikoo/Regionerator) ] (Delete Claim when its region was eratored by Regionerator)
-* [[Parties](https://alessiodp.com/parties)]: [ [Spigot](https://bit.ly/parties-spigot) | [Bukkit](https://bit.ly/parties-bukkit) | [Github](https://github.com/AlessioDP/Parties) ] (Giving claims' permission to Parties Member)
+* [BanFromClaim]: [ [Spigot](https://www.spigotmc.org/resources/70897/) | [Github](https://github.com/Baktus79/BanFromClaim) ] Permite jogadores banirem outros jogadores de sua(s) reivindicação(ões))
+* [CombatLogX]: [ [Github](https://github.com/SirBlobman/CombatLogX/blob/main/expansion/compatibility/GriefDefender/src/main/java/combatlogx/expansion/compatibility/region/grief/defender/GriefDefenderRegionHandler.java) | [Spigot](https://www.spigotmc.org/resources/31689/) ](Respeita as bandeiras do GriefDefender)
+* [Regionerator]: [ [Github](https://github.com/Jikoo/Regionerator) ] (Excluir a reivindicação quando sua região foi eliminada pelo Regionerator)
+* [[Parties](https://alessiodp.com/parties)]: [ [Spigot](https://bit.ly/parties-spigot) | [Bukkit](https://bit.ly/parties-bukkit) | [Github](https://github.com/AlessioDP/Parties) ] (Dar permissão nas reivindicações, aos Membros das Parties)
 
 
 #### Porta disponíveis no Discord
