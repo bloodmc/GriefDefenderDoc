@@ -23,11 +23,11 @@ Solicitação de pull pendente https://github.com/EngineHub/WorldEditCUI/pull/53
 * WECUI (Versão Fabric) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
 ***1.12 e abaixo***  
-* Liteloader Vanilla - [Download](http://www.liteloader.com/download)    ou    Liteloader Forge - [Download](http://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
+* Liteloader Vanilla - [Download](https://www.liteloader.com/download)    ou    Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
 * WECUI (Versão LiteLoader) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)
 
 **Servidor**
-* WorldEdit - [Download](http://builds.enginehub.org/job/worldedit?branch=master)
+* WorldEdit - [Download](https://builds.enginehub.org/job/worldedit?branch=master)
 
 
 Basta colocar os jars da API do WECUI e do Fabric na pasta mods.
