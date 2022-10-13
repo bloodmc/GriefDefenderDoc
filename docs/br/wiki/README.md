@@ -231,7 +231,7 @@ config/
 
 O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu `blacklist.conf` e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
 
-Veja a [Lista negra](/br/wiki/Configuration.html#lista-negra) para obter mais informações sobre como configurar.
+Veja a [Lista negra](/br/wiki/Configuration.html#blacklist-lista-negra) para obter mais informações sobre como configurar.
 
 
 #### Banco de dados  
@@ -271,7 +271,7 @@ Nota: Se você quiser usar o `/buyclaimblocks` ou  `/sellclaimblocks` comandos e
 
 Depois de instalar o GriefDefender corretamente, você precisa dar permissão aos seus jogadores para reivindicar terrenos, eles não são dados por padrão. A única permissão necessária para a configuração básica do GD é `griefdefender.user.*`. Para configuração básica de administração, dê aos administradores a permissão `griefdefender.admin.*` e `griefdefender.user.*`.
 
-Se você quiser ajustar mais permissões, você pode encontrar todas as permissões [aqui](/br/wiki/Permissions.html) e para uma lista com todas as permissões de comando e de uso [aqui](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
+Se você quiser ajustar mais permissões, você pode encontrar todas as permissões [aqui](/br/wiki/Permissions.html) e para uma lista com todas as permissões de comando e de uso [aqui]/br/wiki/Permissions.html#reivindicacoes). 
 
 Se você acredita que os comandos podem ser um pouco mais longos ou difíceis de memorizar, considere criar um custom alias.[Clique aqui para obter mais informações](/br/wiki/basic/Custom-Alias-Creation.html)
 

@@ -5,7 +5,7 @@ export const br = sidebar({
     "/br/hooks/": require("./hooks/_sidebar"),
 	"/br/mods/": require("./mods/_sidebar"),
 	"/br/wiki/": [ 
-        "/",
+        "/br/",
         {
           prefix: "/br/wiki/",
 		  collapsable: false,

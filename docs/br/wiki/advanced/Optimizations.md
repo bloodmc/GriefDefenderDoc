@@ -5,7 +5,7 @@ category: info
 icon: optimization-timer
 ---
 
-O Griefdefender fornece controle interno para quase todas as ações do seu mundo Minecraft.No entanto, tentar controlar muito às vezes pode causar problemas de recursos, dependendo da carga do servidor.A solução para esse problema é usar a configuração de otimização interna encontrada em `global.conf` e aprendendo a usar [listas negras](https://github.com/bloodmc/GriefDefender/wiki/Configuration#blacklist). 
+O Griefdefender fornece controle interno para quase todas as ações do seu mundo Minecraft.No entanto, tentar controlar muito às vezes pode causar problemas de recursos, dependendo da carga do servidor.A solução para esse problema é usar a configuração de otimização interna encontrada em `global.conf` e aprendendo a usar [listas negras](/br/wiki/Configuration.html#blacklist-lista-negra). 
 
 ### Configuração de otimização global
 

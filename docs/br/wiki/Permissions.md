@@ -136,7 +136,7 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.claim.command.flag.player | Permite usar o comando Claimflag para jogadores |
 | griefdefender.user.claim.command.flag.group | Permite usar o comando Claimflag para grupos |
 | griefdefender.user.claim.command.flag.reset | Permite usar o comando Claimreset |
-| griefdefender.user.claim.flag | Permissão base usada para verificar se o usuário tem acesso para usar um bandeira de núcleo específico. <br />O formato é `griefdefender.user.claim.flag.<flag_name>`.<br />Observação: Isso é verificado ao acessar a seção GUI ADVANCED do bandeira e ao usar o comando bandeira com argumentos.<br />Observação: O nome do bandeira não deve ser confundido com o nome do bandeira de definição. Isso verifica os principais bandeiras do GD. A lista pode ser encontrada [aqui](https://github.com/bloodmc/GriefDefender/wiki/Flags#available-flags) |
+| griefdefender.user.claim.flag | Permissão base usada para verificar se o usuário tem acesso para usar um bandeira de núcleo específico. <br />O formato é `griefdefender.user.claim.flag.<flag_name>`.<br />Observação: Isso é verificado ao acessar a seção GUI ADVANCED do bandeira e ao usar o comando bandeira com argumentos.<br />Observação: O nome do bandeira não deve ser confundido com o nome do bandeira de definição. Isso verifica os principais bandeiras do GD. A lista pode ser encontrada [aqui](/br/wiki/advanced/Flags.html#bandeiras-disponiveis) |
 
 ## Definições de Bandeiras
 | Node de permissão | Descrição |

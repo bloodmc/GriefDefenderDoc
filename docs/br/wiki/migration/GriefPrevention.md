@@ -13,7 +13,7 @@ Nota: GriefDefender 2.X suporta migração do banco de dados do GriefPrevention,
 
 Os blocos de reivindicações acumulados usarão a meta-chave `griefdefender.accrued-blocks`
 Os blocos de reivindicação de bônus usarão a meta-chave `griefdefender.bonus-blocks`
-Veja https://github.com/lucko/LuckPerms/wiki/Prefixes,-Suffixes-&-Meta#meta para mais informações
+Veja [LuckPerms - Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta) para mais informações
 
 ## Bukkit
 ### GriefDefender supports a complete migration from GriefPrevention Bukkit. To migrate to GriefDefender, perform the following steps 

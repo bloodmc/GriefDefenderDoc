@@ -83,7 +83,7 @@ Esta permissão está negando a bandeira `entity-spawn` na reivindicação com u
 :warning: Este contexto NÃO afeta os proprietários de reivindicações quando usado com uma bandeira, mas afeta os proprietários quando usado com opções :warning: 
 
 Ele é usado para aplicar uma bandeira ou opção a um ou mais tipos de reivindicação ou globalmente e atua como uma permissão padrão, o que significa que é aplicado aos usuários até que um contexto superior seja usado.
-Veja https://github.com/bloodmc/GriefDefender/wiki/Contexts#context-core-priority
+Veja [Prioridade principal do contexto](#prioridade-principal-do-contexto)
 
 Vamos quebrar cada combinação
 

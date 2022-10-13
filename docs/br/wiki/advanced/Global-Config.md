@@ -38,7 +38,7 @@ O Griefdefender permite a habilitação modular.De acordo com os arquivos de con
 | auto-nature-restore | Se as reivindicações de sobrevivência serão restauradas automaticamente à natureza quando excluídas automaticamente.. | FALSE |
 | auto-schematic-restore | Se as reivindicações de sobrevivência serão restauradas automaticamente ao seu esquema de criação de reivindicações no abandono/expiração. <br /> Nota: Ativar esse recurso fará com que todas as reivindicações criadas recentemente criem automaticamente um esquema especial que será usado para restaurar a reivindicação sobre abandono/expiração.<br />NOTA: Ativar esse recurso desativará a capacidade de redimensionar as reivindicações. <br /> Nota: É altamente recomendável desativar a construção no deserto antes de usar esse recurso para evitar que os jogadores explorem.<br />Nota: Também é recomendável usar apenas esse recurso em mundos recém -criados, onde não existem dados de jogadores existentes.<br />Nota: Isso não afeta as exclusões.Se os administradores quiserem restaurar de volta ao esquema original, eles podem selecionar '__restore__' usando o comando/claimschematic .| FALSE |
 | border-block-radius | Defina a borda da reivindicação do raio especificado (em blocos), centrado na reivindicação.Se definido como 1, adiciona um raio adicional de 1 bloco protegido em torno da reivindicação. <br />Nota: Não é recomendável definir esse valor muito alto, pois o desempenho pode se degradar devido a pesquisas de reivindicação mais profundas. | 0 |
-| claim-block-task | Se a tarefa de bloco de reivindicação deve ser executada para acumular blocos para os jogadores. <br />Nota: Se no modo de economia, use a configuração 'use-claim-block-task' na categoria de economia. <br />Nota: Para configurar a quantidade acumulada, consulte 'blocks-accrued-per-hour' opção em https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#global-options | FALSE |
+| claim-block-task | Se a tarefa de bloco de reivindicação deve ser executada para acumular blocos para os jogadores. <br />Nota: Se no modo de economia, use a configuração 'use-claim-block-task' na categoria de economia. <br />Nota: Para configurar a quantidade acumulada, consulte 'blocks-accrued-per-hour' opção em [Configuração Global](/br/wiki/advanced/Global-Config.html#reivindicacao) | FALSE |
 | claim-block-task-move-threshold | O limiar mínimo de movimento (em blocos) necessário para receber blocos de reivindicação acumulados. <br />Nota: A tarefa do bloco de reivindicações é executada a cada 5 minutos, que é a hora de cada jogador mover a quantidade necessária de blocos. | 0 |
 | claim-create-radius-limit | O limite do raio para o comando /claimcreate . | 256 |
 | claims-enabled | Se a reivindicação está ativada ou não.(0 = desativado, 1 = ativado). | 1 |
@@ -85,95 +85,95 @@ O Griefdefender permite a habilitação modular.De acordo com os arquivos de con
 # Message
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| deny-message-action-bar | Controls whether to send claim deny messages to action bar. <br />Note: Setting to false will send messages to chat. | TRUE |
-| enable-exit-chat-messages | Controls whether exit chat messages are displayed when both enter and exit messages are being sent to a player at the same time.For example, if both an enter and exit title message is configured in a claim then the exit title would be sent to chat if this setting is true. | FALSE |
-| enter-claim-player-messages | Controls whether to display playername and claim display name as enter message if not set. <br /> Set to '1' to send messages to chat. <br /> Set to '2' to send messages to actionbar. <br />  Set to '3' to send messages to title. <br /> Set to 0 to disable. | 2 |
-| enter-exit-chat-show-gd-prefix | Whether GD prefix should be shown in enter/exit chat messages. | TRUE |
-| greeting-farewell-action-bar | Controls whether to send greeting/farewell messages to action bar by default. <br />Note: Setting to true will send messages to actionbar. <br />Note: This will only be set if there is no actionbar already set in claim. If so, it will use chat instead. | FALSE |
-| locale | Set the locale to use for GP messages. Available languages: de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK. The data is stored under assets in jar. <br />Note: The language code must be lowercase and the country code must be uppercase. | "en_US" |
-| locale-unicode-fix | Attempts to adjust unicode fonts to represent minecraft default fonts better. <br />Note: If you are using 'pl_PL' or 'ru_RU', this setting should be set to false. <br />Note: Any other languages that experience misalignment in chat menus should disable this setting. | TRUE |
-| wilderness-default-message | Controls whether wilderness default enter message is sent to players. | TRUE |
+| deny-message-action-bar | Controla se deseja enviar mensagens de negar de reivindicação para a barra de ação. <br />Nota: A configuração para false enviará mensagens para bate -papo. | TRUE |
+| enable-exit-chat-messages | Controla se as mensagens de bate -papo de saída são exibidas quando as mensagens de entrada e saída estão sendo enviadas para um jogador ao mesmo tempo. Por exemplo, se uma mensagem de título Enter e Sair estiver configurada em uma reivindicação, o título de saída será enviado para conversar seEssa configuração é verdadeira. | FALSE |
+| enter-claim-player-messages | Controla se deseja exibir o nome do playername e a reivindicação de exibição como inserir a mensagem se não estiver definida. <br /> Defina como '1' para enviar mensagens para conversar. <br /> Defina como '2' para enviar mensagens para o ActionBar. <br />  Definido como '3' para enviar mensagens ao título. <br /> Definido como 0 para desativar. | 2 |
+| enter-exit-chat-show-gd-prefix | Se o prefixo GD deve ser mostrado em mensagens de bate -papo ENTER/EXIT. | TRUE |
+| greeting-farewell-action-bar | Controla se deseja enviar mensagens de saudação/despedida para a barra de ação por padrão. <br />Nota: A configuração para True enviará mensagens para o ActionBar. <br />NOTA: Isso será definido apenas se não houver ação de ação definida na reivindicação.Nesse caso, ele usará o bate -papo. | FALSE |
+| locale | Defina o local a ser usado para mensagens GP.Idiomas disponíveis: de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK. Os dados são armazenados em ativos em jar. <br />NOTA: O código do idioma deve ser minúsculo e o código do país deve ser maiúsculo. | "en_US" |
+| locale-unicode-fix | Tentativas de ajustar as fontes Unicode para representar melhor as fontes padrão do Minecraft. <br />Nota: Se você estiver usando 'pl_pl' ou 'ru_ru', essa configuração deve ser definida como falsa. <br />Nota: Quaisquer outros idiomas que sofrem desalinhamento nos menus de bate -papo devem desativar essa configuração. | TRUE |
+| wilderness-default-message | Controla se o padrão do deserto, a mensagem, digite a mensagem é enviada aos jogadores. | TRUE |
 
-# Migrators
+# Migrador
 ## Bukkit
-| Variable | Description | Default Value |
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| classic | Set to true to enable the classic migrator. <br />Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format.<br />Note: It is recommended to backup data before using. | FALSE | 
-| classic-database | Migrates GP bukkit classic database. | FALSE |
-| classic-playerdata-threshold | Controls the last active player day threshold in order to avoid migrating inactive GP playerdata. To disable, set value to 0. <br />Note: For example, with the default value of '180' the the migrator will only migrate playerdata for players that played within the past 180 days. <br />Note: This only handles a player's playerdata where accrued/bonus block information is stored. This setting has no effect on claim migration. <br />Note: This avoids storing inactive user data in LuckPerms which helps keep '/lp editor' view clean. | 180 |
-| griefdefender-file-to-database | Set to true to migrate from file format to database. <br />Note: The storage method must be set to hocon in order for this to work properly. <br />Note: After migration is complete, switch storage to database. <br />Note: This will NOT remove existing files in case you want to go back. | FALSE |
-| red-protect | Set to true to enable RedProtect data migrator. | FALSE |
-| worldguard | Set to true to enable WorldGuard data migrator. <br />Note: Only cuboid regions are supported. <br />Note: It is recommended to backup data before using. | FALSE |
+| classic | Defina como true para ativar o migrador clássico. <br />Nota: Migra dados de reclamações clássicos do GP Bukkit e dados GPFLAGS, se disponíveis, para o formato atual. <br /> Nota: Recomenda -se fazer backup de dados antes de usar. | FALSE | 
+| classic-database | Migra o banco de dados clássico do GP Bukkit. | FALSE |
+| classic-playerdata-threshold | Controla o último limite do dia do jogador ativo para evitar a migração de dados de player gp inativos.Para desativar, defina o valor para 0. <br />NOTA: Por exemplo, com o valor padrão de '180', o migrador migrará apenas os dados do jogador para jogadores que jogaram nos últimos 180 dias. <br />Nota: Isso apenas lida com o Data de jogador de um jogador, onde as informações acumuladas/bônus são armazenadas.Essa configuração não tem efeito na migração de reivindicações.<br /> NOTA: Isso evita armazenar dados inativos do usuário no LuckPerms, o que ajuda a manter a visualização ' /LP' /LP '. | 180 |
+| griefdefender-file-to-database | Defina como true para migrar do formato de arquivo para o banco de dados. <br />Nota: O método de armazenamento deve ser definido como Hocon para que isso funcione corretamente. <br />NOTA: Após a migração ser concluída, mude de armazenamento para o banco de dados. <br />Nota: Isso não removerá arquivos existentes, caso você queira voltar. | FALSE |
+| red-protect | Defina como true para ativar o Redprotect Data Migrator. | FALSE |
+| worldguard | Defina como true para ativar o migrador de dados mundiais. <br />Nota: Apenas regiões cubóides são suportadas. <br />Nota: é recomendável fazer backup de dados antes de usar. | FALSE |
 
 ## Sponge
-| Variable | Description | Default Value |
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| griefprevention-bukkit | Set to true to enable the griefprevention bukkit migrator. <br />Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format. <br />Note: It is recommended to backup data before using. | FALSE |
-| griefprevention-sponge | Set to true to enable the griefprevention sponge migrator. <br />Note: Migrates GP sponge claim data to current format. <br />Note: It is recommended to backup data before using. | FALSE |
-| red-protect | Set to true to enable RedProtect data migrator. <br />Note: All RedProtect data will be converted into basic claim data. | FALSE |
-| worldguard | Set to true to enable WorldGuard data migrator. <br />Note: Only cuboid regions are supported. <br />Note: It is recommended to backup data before using. | FALSE |
+| griefprevention-bukkit | Defina como true para permitir o migrador de Bukkit de GriefPrevenção. <br />Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format. <br />Note: It is recommended to backup data before using. | FALSE |
+| griefprevention-sponge | Defina como True para permitir o migrador de esponja de prevenção de luto. <br />Nota: migra dados de reivindicação de esponja GP para o formato atual. <br />Nota: Recomenda -se fazer backup de dados antes de usar. | FALSE |
+| red-protect | Defina como true para ativar o migrador de dados redprotect. <br />NOTA: Todos os dados redprotectos serão convertidos em dados básicos de reivindicação. | FALSE |
+| worldguard | Defina como true para ativar o migrador de dados mundiais. <br />Nota: Apenas regiões cubóides são suportadas.<br /> Nota: é recomendável fazer backup de dados antes de usar. | FALSE |
 
-# Optimization
-| Variable | Description | Default Value |
+# Otimização
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| dispenser-item-spawns | Controls whether dispener item spawns are ignored. | TRUE |
-| entity-damage-living-passive | Controls whether entity damage events that contain both a source/target living passive entity, such as two animals fighting, are ignored. | TRUE |
-| entity-damage-monster | Controls whether entity damage events that contain both a source/target monster are ignored. | TRUE |
-| entity-item-pickup-non-players | Controls whether entity item pickups made by non-players are ignored. | TRUE |
-| fall-non-player | Controls whether non-player falls are ignored. | TRUE |
-| monster-player-damage | Controls whether monster attacks against a player are ignored. <br />Note: This does not include explosion damage. <br />Note: If you need to prevent damage from monsters in claims then this should remain false. | FALSE |
-| player-monster-damage | Controls whether player attacks against a monster are ignored. <br />Note: This does not include explosion damage. | TRUE |
+| dispenser-item-spawns | Controla se os itens de dispensar geradores são ignorados. | TRUE |
+| entity-damage-living-passive | Controla se os eventos de dano da entidade que contêm uma entidade passiva de origem/alvo vivos, como dois animais lutando, são ignorados. | TRUE |
+| entity-damage-monster | Controla se os eventos de dano da entidade que contêm um monstro de origem/alvo são ignorados. | TRUE |
+| entity-item-pickup-non-players | Controla se os captadores de itens de entidade fabricados por não jogadores são ignorados. | TRUE |
+| fall-non-player | Controla se as quedas não-jogadores são ignoradas. | TRUE |
+| monster-player-damage | Ccontrola se monstro ataques contra um jogador são ignorados. <br />Nota: Isso não inclui danos causados pela explosão. <br />NOTA: Se você precisar evitar danos causados por monstros em reivindicações, isso deve permanecer falso. | FALSE |
+| player-monster-damage | Controla se os ataques de jogadores contra um monstro são ignorados. <br />NOTA: Isso não inclui danos à explosão. | TRUE |
 
-# Permission
-| Variable | Description | Default Value |
+# Permissão
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| griefdefender-claim-group-priority | The claimgroup permission group priority. | -60 |
-| griefdefender-claim-priority | The claim permission group priority. | -60 |
-| griefdefender-default-priority | The default permission group priority. | -80 |
-| griefdefender-option-priority | The option permission group priority. | 0 |
-| griefdefender-override-priority | The override permission group priority. | -40 |
+| griefdefender-claim-group-priority | A prioridade do grupo de permissão de reivindicação. | -60 |
+| griefdefender-claim-priority | A prioridade do grupo de permissão de reivindicação. | -60 |
+| griefdefender-default-priority | A prioridade do grupo de permissão padrão. | -80 |
+| griefdefender-option-priority | A prioridade do grupo de permissão de opção. | 0 |
+| griefdefender-override-priority | A prioridade do grupo de permissão de substituição. | -40 |
 
 # Player Data
-| Variable | Description | Default Value |
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| claim-block-system | Determines which claim block system to use for claims. <br />Note: If set to VOLUME, claim blocks will use the chunk count system to balance 3d claiming. <br />Note: If set to AREA, the standard 2d block count system will be used. | AREA |
-| context-storage-type | The context type used when storing playerdata within a permissions database. <br /> Available types are : global, server, world. (Default: global) <br /> Global will store data globally shared by all servers. <br /> Server will store data per server. Note: This requires servername to be properly set in permissions config. <br /> World will store data per world. | GLOBAL |
+| claim-block-system | Determina qual sistema de bloco de reclamação usar para reivindicações.<br /> NOTA: Se definido como volume, os blocos de reclamação usarão o sistema de contagem de pedaços para equilibrar a reivindicação 3D.<br /> NOTA: Se definido como área, o sistema de contagem de blocos 2D padrão será usado. | AREA |
+| context-storage-type | O tipo de contexto usado ao armazenar os dados do player em um banco de dados de permissões.<br /> Os tipos disponíveis são: global, servidor, mundo.(Padrão: global) <br /> O Global armazenará dados compartilhados globalmente por todos os servidores.<br /> O servidor armazenará dados por servidor.Nota: Isso exige que o servidor seja definido corretamente na configuração de permissões.<br /> O mundo armazenará dados por mundo. | GLOBAL |
 
 
 # PvP
-| Variable | Description | Default Value |
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| allow-fly | Whether flying is allowed during PvP. | false |
-| combat-logout | Whether players should be killed if they logout while in pvp combat. | false |
-| enabled | Whether pvp protection is enabled for players. <br />Note: Turnings this off disables all PvP functionality in GriefDefender. | true |
+| allow-fly | Se o vôo é permitido durante o PVP. | false |
+| combat-logout | Se os jogadores devem ser mortos se fizerem o logout enquanto estiver em combate pvp. | false |
+| enabled | Se a proteção de PVP está ativada para jogadores.<br /> NOTA: ATUALIZAÇÕES ESTE DESLIGADO DESPLECIVA TODA A FUNCIONALIZADA PVP EM GRIEFDEFENDER. | true |
 
-# Town
-| Variable | Description | Default Value |
+# Cidade
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| auto-nature-restore | Whether survival towns will be automatically restored to nature when auto-deleted. | FALSE |
-| clan-require-town | Requires a town to be owned for MCClans. <br />Note: This is for Sponge only. | TRUE |
-| cleanup-task-interval | The interval in minutes for restoring blocks in an expired town. | 5 |
-| creation-cost | The required amount of funds to create a town. <br />Note: This requires an Economy plugin. | 0.0 |
+| auto-nature-restore | Se as cidades de sobrevivência serão restauradas automaticamente à natureza quando excluídas automaticamente. | FALSE |
+| clan-require-town | Requer que uma cidade seja de propriedade da McClans.<br /> Nota: isso é apenas para Sponge. | TRUE |
+| cleanup-task-interval | O intervalo em minutos para restaurar blocos em uma cidade vencida. | 5 |
+| creation-cost | A quantidade necessária de fundos para criar uma cidade.<br /> NOTA: Isso requer um plug -in de economia. | 0.0 |
 
 # Visual
-| Variable | Description | Default Value |
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| active-claim-visual-time | The active time, in seconds, to keep a claim's visuals shown to a player. <br />Note: If value is <= 0, GD will use the default value. | 60 |
-| active-create-block-visual-time | The active time, in seconds, to keep a claim's create block visual shown to a player. <br />Note: This only applies during claim creation. <br />Note: If value is <= 0, GD will use the default value. | 180 |
-| client-visuals-per-tick | The amount of block visuals a client can receive per tick when showing/hiding claims. | 12 |
-| cuboid-level-visuals-2d | Whether to use cuboid visuals, in 2D claims, during inspection with owner min/max claim levels between 0 and 255 or 0 and 319 for MC 1.17+. <br />Note: WECUI visuals are not associated to this option. <br />Note: If enabled, this will send many block updates to players causing more client strain depending on size of claim. Use with caution. | FALSE |
-| fill-spacing | The space between each filler visual block. | 10 |
-| hide-borders-when-using-wecui | Whether to hide the glowstone/gold block borders when using WECUI. | FALSE |
-| hide-fillers-when-using-wecui | Whether to hide the block fillers when using WECUI. | TRUE |
-| hide-wecui-drag-visuals-2d | Whether drag visuals should be shown while creating a claim in 2D mode. | TRUE |
-| claim-create-block | The visual block used during claim creation. | minecraft:diamond_block |
-| admin-accent-block | The visual accent block used for admin claims. | minecraft:pumpkin |
-| admin-corner-block | The visual corner block used for admin claims. | minecraft:glowstone |
-| admin-filler-block | The visual filler block used for admin claims. | minecraft:pumpkin |
-| basic-accent-block | The visual accent block used for basic claims. | minecraft:gold_block |
-| basic-corner-block | The visual corner block used for basic claims. | minecraft:glowstone |
-| basic-filler-block | The visual filler block used for basic claims. | minecraft:gold_block |
-| error-accent-block | The visual accent block used to visualize an error in a claim. | minecraft:netherrack |
-| error-corner-block | The visual corner block used to visualize an error in a claim. | minecraft:redstone_ore |
-| error-filler-block | The visual filler block used to visualize an error in a claim. | minecraft:diamond_block |
-| subdivision-accent-block | The visual accent block used for subdivision claims. | minecraft:white_wool or minecraft:wool for legacy versions |
+| active-claim-visual-time | O tempo ativo, em segundos, para manter o visual de uma reivindicação mostrado a um jogador.<br /> NOTA: Se o valor for <= 0, GD usará o valor padrão. | 60 |
+| active-create-block-visual-time | O tempo ativo, em segundos, para manter o visual de Criar Block de uma reivindicação mostrado a um jogador.<br /> NOTA: Isso se aplica apenas durante a criação de reivindicações.<br /> Nota: Se o valor for <= 0, GD usará o valor padrão. | 180 |
+| client-visuals-per-tick | A quantidade de visuais em bloco que um cliente pode receber por tique -taxas ao mostrar/ocultar reclamações. | 12 |
+| cuboid-level-visuals-2d | Se deve usar visuais de cubóides, em reivindicações 2D, durante a inspeção com níveis de reivindicação Min/Max do Proprietário entre 0 e 255 ou 0 e 319 para MC 1.17+.<br /> Nota: os visuais do WECUI não estão associados a esta opção.<br /> NOTA: Se ativado, isso enviará muitas atualizações de bloco para os jogadores, causando mais tensão do cliente, dependendo do tamanho da reivindicação.Use com cuidado.| FALSE |
+| fill-spacing | O espaço entre cada bloco visual de enchimento. | 10 |
+| hide-borders-when-using-wecui | Se deve ocultar as fronteiras do bloco de brilho/ouro ao usar o WECUI. | FALSE |
+| hide-fillers-when-using-wecui | Se deve ocultar os preenchimentos de bloco ao usar o wecui. | TRUE |
+| hide-wecui-drag-visuals-2d | Se o drag visual deve ser mostrado ao criar uma reivindicação no modo 2D. | TRUE |
+| claim-create-block | O bloco visual usado durante a criação de reivindicações. | minecraft:diamond_block |
+| admin-accent-block | O bloco de sotaque visual usado para reivindicações de administrador. | minecraft:pumpkin |
+| admin-corner-block | O bloco de canto visual usado para reivindicações de administrador. | minecraft:glowstone |
+| admin-filler-block | O bloco de preenchimento visual usado para reivindicações de administrador. | minecraft:pumpkin |
+| basic-accent-block | O bloco de sotaque visual usado para reivindicações básicas. | minecraft:gold_block |
+| basic-corner-block | O bloco de canto visual usado para reivindicações básicas. | minecraft:glowstone |
+| basic-filler-block | O bloco de preenchimento visual usado para reivindicações básicas. | minecraft:gold_block |
+| error-accent-block | O bloco de sotaque visual usado para visualizar um erro em uma reivindicação. | minecraft:netherrack |
+| error-corner-block | O bloco de canto visual usado para visualizar um erro em uma reivindicação. | minecraft:redstone_ore |
+| error-filler-block | O bloco de preenchimento visual usado para visualizar um erro em uma reivindicação. | minecraft:diamond_block |
+| subdivision-accent-block | O bloco de sotaque visual usado para reivindicações de subdivisão. | minecraft:white_wool or minecraft:wool for legacy versions |

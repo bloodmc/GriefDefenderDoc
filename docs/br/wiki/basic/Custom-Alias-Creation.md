@@ -23,5 +23,3 @@ Aqui está um exemplo de como usar a nova opção de velocidade de vôo. Este ex
 Isso resultará em um jogador executando `/fspeed 0.5` e tendo seu vôo atualizado imediatamente, em vez de usar a entrada mais longa.
 
 Você pode basicamente fazer qualquer coisa do GriefDefender encurtado com alias personalizado.
-
-**NOTA:** Para este caso específico, além de ter uma permissão CMI para executar o comando `/fspeed`, o jogador também precisa ter a permissão GriefDefender para interagir com as Opções Avançadas. Para obter mais informações: [Veja a Wiki de opções avançadas](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options)

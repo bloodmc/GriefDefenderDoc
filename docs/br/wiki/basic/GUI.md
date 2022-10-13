@@ -74,7 +74,7 @@ Esta tela terá como padrão o grupo `USER` e o tipo `PUBLIC` que controla os si
 Como administrador, você verá outro grupo no topo chamado `ADMIN` que exibirá todas as definições de sinalizadores administrativos configurados no preset carregado.
 Nota: Isso pressupõe que a predefinição `minecraft` entregue está carregada. Se você criar sua própria predefinição, os detalhes acima podem ser diferentes.
 
-Para um guia detalhado sobre como configurar definições de sinalizadores para predefinições, consulte https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI
+Para um guia detalhado sobre como configurar definições de sinalizadores para predefinições, consulte [Interface de definições de bandeira](/br/wiki/basic/Flag-Definitions-GUI.html)
 
 
 ### Opções  
@@ -89,7 +89,7 @@ Clicar no link 'OPÇÕES' levará o jogador à seguinte tela
 Os usuários usarão como padrão a guia "CLAIM" nas opções que controlam todas as opções na reivindicação em que estão.
 
 
-Para obter uma lista de todas as opções disponíveis e como configurá-las, consulte [Opções](https://github.com/bloodmc/GriefDefender/wiki/Options)
+Para obter uma lista de todas as opções disponíveis e como configurá-las, consulte [Opções](/br/wiki/basic/Options.html)
 
 
 ### Jogador
@@ -115,7 +115,7 @@ Nota: Este menu também pode ser acessado diretamente executando o comando `/tru
 ![Trust](https://i.imgur.com/T75Gvpw.png)
 
 O menu de trust permite que um jogador confie em um membro ou grupo para suas reivindicações.
-Veja [Trust-System](https://github.com/bloodmc/GriefDefender/wiki/Trust-System) para tipos de trust e como cada um funciona.
+Veja [Sistema de Trust](/br/wiki/basic/Trust-System.html) para tipos de trust e como cada um funciona.
 
 Para adicionar um membro ou grupo, clique em um dos tipos de trust na parte superior do menu e clique no sinal `+`.
 Isso enviará uma mensagem ao jogador perguntando se você deseja confiar em um jogador ou grupo. Basta clicar no link `Jogador` ou `Grupo` para continuar.
@@ -152,4 +152,4 @@ Os ícones disponíveis funcionam da seguinte forma
 Observação: o ícone de depuração é apenas para administradores.
 
 Toda a configuração da Interface do inventário pode ser encontrada no arquivo `gui.conf` dentro da pasta `./plugins/GriefDefender/`.
-Consulte https://github.com/bloodmc/GriefDefender/wiki/Configuration#inventory-section para obter mais informações.
+Consulte [Seção de inventário](/br/wiki/Configuration.html#secao-de-inventario) para obter mais informações.

@@ -25,7 +25,7 @@ Grupo - `/cog <group> <option> <value> [contexts]`
 ### Contextos
 
 Todas as opções podem usar um ou mais contextos quando aplicadas como meta em LuckPerms.
-Veja https://github.com/bloodmc/GriefDefender/wiki/Contexts sobre quais contextos você pode usar e como eles funcionam.
+Veja [Contextos](/br/wiki/advanced/Contexts.html) sobre quais contextos você pode usar e como eles funcionam.
 
 ### Exemplos  
 

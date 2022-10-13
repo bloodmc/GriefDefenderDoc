@@ -7,7 +7,7 @@ icon: screen
 
 ## Visão geral
 
-O sistema de definição de bandeiras fornece aos usuários e administradores a capacidade de gerenciar seus bandeiras de reivindicação em um [Bate-papo](https://github.com/bloodmc/GriefDefender/wiki/GUI#chat) ou [Inventário](https://github .com/bloodmc/GriefDefender/wiki/GUI#inventory) interface.
+O sistema de definição de bandeiras fornece aos usuários e administradores a capacidade de gerenciar seus bandeiras de reivindicação em um [Bate-papo](/br/wiki/basic/GUI.html#bate-papo) ou [Inventário](/br/wiki/basic/GUI.html#inventario) interface.
 GriefDefender oferece um pacote de definições de bandeiras por padrão para fornecer a melhor compatibilidade entre servidores.
 Os dados de definição de bandeira vanilla entregues podem ser encontrados no seguinte local
 ### Sponge
@@ -60,7 +60,7 @@ contexts=[
 ```
 Estes são os contextos de definição que serão usados com todas as permissões definidas em `permissions=[...]`.
 Atualmente suporta apenas chaves de contexto `gd_claim_default`, `gd_claim_override` ou `gd_claim`.
-Consulte https://github.com/bloodmc/GriefDefender/wiki/Contexts para saber como funcionam os contextos.
+Consulte [Contextos](/br/wiki/advanced/Contexts.html) para saber como funcionam os contextos.
 Nota: Esses contextos NÃO se aplicam à interface. Ele é usado apenas durante a inicialização do servidor. A interface sempre aplicará bandeiras ao jogador de reivindicação em que está.
 
 #### Valor padrão
@@ -1825,7 +1825,7 @@ O GD fornece uma interface de definição de bandeira projetada para permitir qu
 Para exibir a interface de definição de bandeira, um comando de usuário deve executar o seguinte comando `/cf` ou `/gd flag Claim`
 
 A interface será exibida na tela no bate-papo ou como uma interface de inventário.
-Isso depende de qual permissão o usuário definiu e do status de alternância de `/claimgui`. Veja a página [Guia Principal](https://github.com/bloodmc/GriefDefender/wiki/GUI#gui) para mais detalhes.
+Isso depende de qual permissão o usuário definiu e do status de alternância de `/claimgui`. Veja a página [Interface Principal](/br/wiki/basic/GUI.html#interface) para mais detalhes.
 
 Assim que a interface de definição do bandeira for exibida, o usuário verá 2 subseções rotuladas como `PUBLIC` e `OWNER`.
 Essas subseções funcionam da seguinte forma

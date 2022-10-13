@@ -15,7 +15,7 @@ Usando `/cf` Fornece uma interface do usuário para editar os bandeiras padrão 
 As bandeiras não se aplicam ao proprietário de uma reivindicação, isso inclui administradores de reivindicações selvagens ou administrativas.
 Use substituir se você deseja forçar bandeiras em todos os usuários em um tipo de reivindicação.
 
-Nota: Os comandos de sinalizador são apenas os Wrappers em torno da API da LuckPerms.Tudo definido via sinalizadores GD pode ser definido diretamente usando LP.Ver [Uso com LuckPerms](https://github.com/bloodmc/GriefDefender/wiki/Flags#usage-with-luckperms)  
+Nota: Os comandos de sinalizador são apenas os Wrappers em torno da API da LuckPerms.Tudo definido via sinalizadores GD pode ser definido diretamente usando LP.Ver [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)  
 Nota: Para usar bandeiras com argumentos de comando, você deve ter a permissão `griefdefender.advanced.admin.flags.*`
 
 ## bandeiras de reivindicação padrão
@@ -23,12 +23,12 @@ Todos os bandeiras padrão podem ser personalizados por tipo de reivindicação.
 
 ## Índice
 
-* [Comandos](https://github.com/bloodmc/GriefDefender/wiki/Flags#commands)
-  * [Argumentos](https://github.com/bloodmc/GriefDefender/wiki/Flags#arguments)
-  * [CommandList](https://github.com/bloodmc/GriefDefender/wiki/Flags#commandlist)
-* [Exemplos de usos](https://github.com/bloodmc/GriefDefender/wiki/Flags#usage-examples)
-* [Uso com LuckPerms](https://github.com/bloodmc/GriefDefender/wiki/Flags#usage-with-luckperms)
-* [Bandeiras disponíveis](https://github.com/bloodmc/GriefDefender/wiki/Flags#available-flags)
+* [Comandos](/br/wiki/advanced/Flags.html#comandos)
+  * [Argumentos](/br/wiki/advanced/Flags.html#argumentos)
+  * [Lista de comandos](/br/wiki/advanced/Flags.html#lista-de-comandos)
+* [Exemplos de usos](/br/wiki/advanced/Flags.html#exemplos-de-uso)
+* [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)
+* [Bandeiras disponíveis](/br/wiki/advanced/Flags.html#bandeiras-disponiveis)
 
 
 ## Contextos
@@ -58,7 +58,7 @@ Alterna o modo de depuração do sinalizador de declaração. Usado para testar 
 
 ___
 #### `/gd flag claim [<flag> <target> <value> [contexts]`
-**Aliases**: `cf|claimflag`
+**Atalho**: `cf|claimflag`
 
 Edita sinalizadores, pode ser aplicado a tipos de declaração ou declarações específicas.
 
@@ -66,23 +66,23 @@ Observação: o motivo só tem suporte na declaração Wilderness ao usar o cont
 
 ___
 #### `/gd flag group <group> [<flag> <target> <value> [contexts]`
-**Aliases**: `cfg|claimflaggroup`
+**Atalho**: `cfg|claimflaggroup`
 
 Edita sinalizadores que se aplicam a um grupo.
 
 ___
 #### `/gd flag player <player> [<flag> <target> <value> [contexts]`
-**Aliases**: `cfp|claimflagplayer`
+**Atalho**: `cfp|claimflagplayer`
 
 Edita sinalizadores que se aplicam a um jogador.
 
 ___
 #### `/gd flag reset`
-**Aliases**: `cfr|claimflagreset`
+**Atalho**: `cfr|claimflagreset`
 
 Redefine uma reivindicação para sinalizar padrões, os padrões podem ser editados nas configurações.
 
-## Usage Examples
+## Exemplos de uso
 
 As bandeiras podem ser aplicadas a Jogadores, Grupos com ou sem um contexto de reivindicação específico. Eles também podem ser aplicados diretamente a todas as Reivindicações Básicas|Selvagens|Admin. Mais exemplos podem ser encontrados no jogo, apenas execute `/cf` e passe o mouse sobre as diferentes bandeiras!
 
@@ -131,7 +131,7 @@ Para evitar um item específico a ser clicado com o botão direito do mouse em u
 
 Nota: Use `interact-block-primary` para o clique esquerdo
 
-## Usage with LuckPerms
+## Usando com LuckPerms
 
 ### Example 1
 Desativar danos ao animal em todas as reivindicações básicas do grupo `starters`

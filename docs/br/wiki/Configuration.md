@@ -57,7 +57,7 @@ Este comando suporta os seguintes argumentos `hand | <tipo> <alvo> [NomeDoMundo]
 | global-target | Uma lista global de IDs de destino que são ignorados por eventos. <br />Observação: isso afeta apenas eventos em que o id especificado é o target (destino). | [ ] |
 | entity-damage-source-blacklist | Uma lista global de fontes de danos à entidade que são ignoradas em eventos por padrão. | [contact,cramming,drowning,<br />"falling_block",flyintowall,"fire_tick",<br />"hot_floor",envenenado,fome,sufocamento,<br />suicídio,void] |
 
-A blacklist controla eventos de interação com itens, blocos ou entidades em uma base por-bandeira ou global. As listas negras são extremamente úteis, pois permitem forçar o GD a ignorar ações em um mundo que você não precisa proteger. Ao fazer isso, você evita que o GD desperdice recursos ao tentar proteger. Para determinar o que você deseja impedir que o GD controle, você precisará executar o [GDDebug](/br/wiki/advanced/Debugging.html) para coletar os dados necessários para a configuração. Veja [Contribuições do usuário](https://github.com/bloodmc/GriefDefender/wiki/Optimizations#optimization-contributions) para alguns exemplos de como usá-lo.  
+A blacklist controla eventos de interação com itens, blocos ou entidades em uma base por-bandeira ou global. As listas negras são extremamente úteis, pois permitem forçar o GD a ignorar ações em um mundo que você não precisa proteger. Ao fazer isso, você evita que o GD desperdice recursos ao tentar proteger. Para determinar o que você deseja impedir que o GD controle, você precisará executar o [GDDebug](/br/wiki/advanced/Debugging.html) para coletar os dados necessários para a configuração. Veja [Contribuições do usuário](/br/wiki/advanced/Optimizations.html#contribuicoes-de-otimizacao) para alguns exemplos de como usá-lo.  
 
 Ele suporta curingas `?` e `*` onde `?` representa um único caractere e `*` representa zero ou mais caracteres.
 Para mais informações, você pode acessar [correspondência de curingas do Apache.](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String))
@@ -71,7 +71,7 @@ Um exemplo de como impedir que itens sejam verificados pelo GD é mostrado
 
 ### claimnames (Nome da reivindicação)
 
-Veja [Identificadores de Reivindicação](https://github.com/bloodmc/GriefDefender/wiki/Claim-Management#claim-identifiers)  
+Veja [Identificadores de Reivindicação](/br/wiki/basic/Claim-Management.html#identificadores-de-reivindicacao)  
 
 O arquivo `claimnames.conf` é usado para armazenar um mapeamento do UUID do player para nomes de reivindicações amigáveis.
 
@@ -158,7 +158,7 @@ flag-control {
 
 ### Global  
 
-Veja [Configuração global](https://github.com/bloodmc/GriefDefender/wiki/Global-Config)  
+Veja [Configuração global](/br/wiki/advanced/Global-Config.html)  
 
 
 
