@@ -1,8 +1,10 @@
 module.exports = [
-	"/br/wiki",
-	"GDHooks",
-    "Dynmap",
-	"PlaceholderAPI",
-	"RealEstate",
-	"WECUI-(Improved-Visuals)"
+	{
+		text: "Hooks",
+		icon: "plugin",
+		prefix: "/br/hooks/",
+		collapsable: false,
+		children: ["", "Dynmap", "PlaceholderAPI", 
+		"RealEstate", "WECUI-(Improved-Visuals)"],
+	  },
 ];

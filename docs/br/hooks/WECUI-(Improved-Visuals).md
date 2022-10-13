@@ -1,5 +1,5 @@
 ---
-title: World Edit CUI
+title: WorldEdit CUI
 tag: Info
 category: hooks
 icon: visual
