@@ -6,7 +6,7 @@ category: Dev
 
 GriefDefender now supports WECUI!
 
-![WECUI Preview](http://i.imgur.com/96RHwkv.jpg)
+![WECUI Preview](https://i.imgur.com/96RHwkv.jpg)
 
 In order to use WECUI, the following is required to be installed  
 
@@ -16,11 +16,11 @@ In order to use WECUI, the following is required to be installed
 * WECUI (Fabric Version) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
 ***1.12 and under***  
-* Liteloader Vanilla - [Download](http://www.liteloader.com/download)    OR    Liteloader Forge - [Download](http://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
+* Liteloader Vanilla - [Download](https://www.liteloader.com/download)    OR    Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
 * WECUI (LiteLoader version) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)
 
 **Server**
-* WorldEdit - [Download](http://builds.enginehub.org/job/worldedit?branch=master)
+* WorldEdit - [Download](https://builds.enginehub.org/job/worldedit?branch=master)
 
 
 Simply place both WECUI and Fabric API jars into the mods client folder.
