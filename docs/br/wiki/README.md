@@ -5,6 +5,13 @@ category: info
 icon: type
 ---
 
+:::: warning This document translation is provided by the community
+Thanks to community translator, we have the documentation written in serval languages.
+But as you know, documents are time-sensitive, we cannot guarantee that the translated 
+documents will be kept up-to-date. So please refer to this document **with thanks to the translator** 
+and always follow the official document when you get into trouble!
+:::: 
+
 :::: info Revisão e Tradução para o Português-Brasil 
 Estamos traduzindo e revisando a Wiki e a tradução do plugin, para manter a coerencia entre ambas traduções.
 ::::

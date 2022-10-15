@@ -4,7 +4,7 @@
 <br>
 <h1>Documento</h1>
 <h3 align="center">
-  <a href="../README.md">English</a>
+  <a href="https://github.com/bloodmc/GriefDefenderDoc/blob/main/readme.md">English</a>
   <span> · </span>
   <a href="./README-zh.md">中文</a>
 </h3>
