@@ -2,40 +2,45 @@
 <div align="center">
 <img alt="GriefDefender" src="./docs/.vuepress/public/logo.png?raw=true" width="80" align=left hspace="5" vspace="5"/>
 <br>
-<h1>Documento</h1>
+<h1>Document</h1>
+<h3 align="center">
+  <a href="./.github/README-zh.md">中文</a>
+  <span> · </span>
+  <a href="./.github/README-br.md">Português do Brasil</a>
+</h3>
 
-**Aqui está o documento do GD que é baseado em vuepress e hospedado por páginas do github.**
+**Here is the documentation of GD which is based on vuepress.**
 
 <!-- Shields -->
 [Patreon]:https://img.shields.io/badge/-Support-F96854.svg?logo=patreon&style=for-the-badge&logoColor=white
-[Document]:https://img.shields.io/badge/-Document-blue.svg?logo=Wikipedia&style=for-the-badge&logoColor=black
-[GD]:https://img.shields.io/badge/-Plugin-blue.svg?logo=github&style=for-the-badge&logoColor=black
+[Document]:https://img.shields.io/badge/-Web-blue.svg?logo=Wikipedia&style=for-the-badge&logoColor=black
+[GD]:https://img.shields.io/badge/-Code-blue.svg?logo=github&style=for-the-badge&logoColor=black
 
-O ícone aqui é clicável.
+Icon here is clickable.
 <br>[![Patreon]](https://www.patreon.com/bloodmc)
-[![Document]](https://bloodmc.github.io/GriefDefenderDoc)
+[![Document]](https://docs.griefdefender.com/)
 [![GD]](https://github.com/bloodmc/griefdefender)
 
 ![Alt](https://repobeats.axiom.co/api/embed/c343fd07571f6727449099cd3e9374f715a11fcd.svg "Repobeats analytics image")
 </div>
 
-## Sumário
+## Table of Contents
 
-* [Introdução](#introduction)
-* [Contribuição](#contribution)
+* [Introduction](#introduction)
+* [Contribution](#contribution)
 
-## Introdução
+## Introduction
 
-GriefDefenderDoc foi construído com [VuePress](https://v2.vuepress.vuejs.org/) e [Theme Hope](https://vuepress-theme-hope.github.io/).
+GriefDefenderDoc was built with [VuePress](https://v2.vuepress.vuejs.org/) and [Theme Hope](https://vuepress-theme-hope.github.io/).
 
-## Contribuição
-- Apenas uma pequena atualização
-<br>Na parte inferior de cada página haverá um botão redirecionando você para 
-o arquivo de origem das páginas, então você pode fazer um PR para WIKI.
+## Contribution
+- I just want to slightly change the document.
+<br>In the bottom of each pages there will be a button redirect you to 
+the source file of pages, then you can make a PR to WIKI.
 
-- Você quer fazer uma grande mudança no Wiki
-1. Você deve instalar [NodeJS](https://nodejs.org/pt-br/)(>=16) e [pnpm](https://pnpm.io/pt/installation) corretamente.
-2. Executar comando `pnpm install` na raiz do GriefDefenderDoc.
-3. Executar `pnpm docs:dev` então espere um momento
-4. Explore seu ambiente de desenvolvimento em http://localhost:8080/
-5. Quaisquer alterações em um arquivo Markdown devem ser sincronizadas com seu web.
+- I really want to make a big change to documentation!
+1. You should install [NodeJS](https://nodejs.org/)(>=16) and [pnpm](https://pnpm.io/installation) properly.
+2. Run command `pnpm install` in the root of GriefDefenderDoc.
+3. Run `pnpm docs:dev` then wait a moment
+4. Explore your dev enviroment in http://localhost:8080/
+5. Any changes to a Markdown file should be sync to your web.

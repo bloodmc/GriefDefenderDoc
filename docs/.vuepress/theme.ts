@@ -3,7 +3,7 @@ import * as navbar from "./_navbar";
 import * as sidebar from "./_sidebar";
 
 export default hopeTheme({
-  hostname: "https://griefdefender.netlify.app",
+  hostname: "https://docs.griefdefender.com",
 
   iconAssets: "//at.alicdn.com/t/c/font_3688305_tdmz24rfeye.css",
 
@@ -11,7 +11,7 @@ export default hopeTheme({
 
   repo: "bloodmc/GriefDefenderDoc",
 
-  docsDir: "",
+  docsDir: "docs",
 
   pageInfo: ["Original", "Date", "Category", "Tag", "ReadingTime"],
 
@@ -46,7 +46,7 @@ export default hopeTheme({
     },
 
     /**
-     * Chinese locale config
+     * Brazilian Portuguese locale config
      */
     "/br/": {
       // navbar
@@ -66,7 +66,7 @@ export default hopeTheme({
   plugins: {
     blog: false,
     mdEnhance: {
-      enableAll: false,
+	  enableAll: false,
 	  tabs: true,
       presentation: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
