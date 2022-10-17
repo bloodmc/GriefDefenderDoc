@@ -82,7 +82,7 @@ optimization {
 Abaixo, você encontrará configurações contribuídas pelo usuário para servidores que trabalharam fortemente para melhorar o desempenho do GD para suas necessidades
 
 ### IMPORTANTE
-:warning:  Essas configurações são ajustadas para servidores individuais e podem não funcionar na sua.É altamente recomendável testar essas configurações antes de usá -las na produção.
+:warning:  Essas configurações são ajustadas para servidores individuais e podem não funcionar na sua.É altamente recomendável testar essas configurações antes de usá-las em seu servidor principal.
 :warning:  
 
 <details>
@@ -323,9 +323,9 @@ blacklist {
   <summary>Problemas conhecidos de Dino's</summary>
 
 ```
-- A água pode sofrer reivindicações de fora, de reivindicações de região (remover a água da bandeira da lista negra de fluxo líquido impedirá isso, mas lembre -se de que o fluxo de água ativo tem um grande impacto de desempenho)
+- A água pode griefar reivindicações de outros jogadores, de reivindicações de região (remover a água da bandeira da lista negra de fluxo da água impedirá isso, mas lembre -se de que o fluxo de água ativo tem um grande impacto de desempenho)
 - Os jogadores podem ativar as placas de pressão de madeira soltando um item neles
-- Os jogadores podem cismar ovelhas de outras pessoas
+- Os jogadores podem tosquiar a ovelha de outros jogadores
 - Os jogadores podem colar entidades em outras pessoas reivindicações (principalmente um problema se você usar um plug -in que aluga moradores e outras entidades que não é possível com o baunilha minecraft)
 - As trepadeiras podem matar entidades em reivindicações
 - Os jogadores podem interagir com os quadros de itens apenas quando interagem com um item na mão (gire os itens)

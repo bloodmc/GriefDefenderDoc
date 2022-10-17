@@ -17,7 +17,7 @@ Como o GriefDefender faz uso intenso do grupo `default` do LuckPerms, o seguinte
 - Todos os grupos do LP não-griefdefender têm um caminho que herdam para o grupo `default`  
 - O grupo `default` está herdando os grupos fornecidos pelo GD : `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
 - O grupo `default` NUNCA deve está desabilitado. LP recomenda nunca desabilitar este grupo.  
-Veja [https://luckperms.net/wiki/Default-Groups](https://luckperms.net/wiki/Default-Groups)  
+Veja [LuckPerms - Default Groups](https://luckperms.net/wiki/Default-Groups)  
 
 ## LuckPerms
 

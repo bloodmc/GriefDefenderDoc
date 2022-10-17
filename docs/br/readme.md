@@ -51,7 +51,7 @@ features:
 
   - title: Sistema de permissão
     icon: sheild
-    details: Tudo é tratado através de permissões. LuckPerms necessário,
+    details: Tudo é tratado através de permissões. LuckPerms é necessário.
     link: /br/wiki/Permissions.html
 
   - title: API bem projetada
