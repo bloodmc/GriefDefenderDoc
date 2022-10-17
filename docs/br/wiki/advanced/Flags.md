@@ -34,7 +34,7 @@ Todos os bandeiras padrão podem ser personalizados por tipo de reivindicação.
 ## Contextos
 
 Todos os sinalizadores requerem um ou mais contextos quando aplicados como uma permissão no LuckPerms.
-Ver https://github.com/bloodmc/GriefDefender/wiki/Contexts Em quais contextos você pode usar e como eles funcionam.
+Ver [Contextos](/br/wiki/advanced/Contexts.html) Em quais contextos você pode usar e como eles funcionam.
 
 ## Comandos
 
