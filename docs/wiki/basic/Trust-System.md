@@ -1,5 +1,5 @@
 ---
-title: Tax System
+title: Trust System
 tag: Claim
 category: claim
 icon: trust

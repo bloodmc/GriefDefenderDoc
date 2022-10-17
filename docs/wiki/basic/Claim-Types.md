@@ -10,7 +10,7 @@ _This is a work in progress page that will cover all claim types in GD - basic, 
 ## Claim Types
 There are four types of user claims : admin, town, basic and subdivisions, with each having a 2D and 3D mode. To switch between types use `/adminclaims`, `/townclaims` and `/basicclaims`. To switch to subdivision mode, use `/claimsubdivide`. All three main claim types support direct child claims (subdivisions) - Town, Admin and Basic. 
 
-Admin claims have no size limitations and different flags compared to basic claims which normal players can make. Towns can also be made by players, and supports the creation of basic claims within town claims. Basic claims are the go-to claim type for players, and can support a player's own management of claim flags. For more information, visit our [permission](https://github.com/bloodmc/GriefDefender/wiki/Permissions) page, which will help you assign proper permissions.
+Admin claims have no size limitations and different flags compared to basic claims which normal players can make. Towns can also be made by players, and supports the creation of basic claims within town claims. Basic claims are the go-to claim type for players, and can support a player's own management of claim flags. For more information, visit our [permission](/wiki/Permissions.html) page, which will help you assign proper permissions.
 
 ### Basic
 

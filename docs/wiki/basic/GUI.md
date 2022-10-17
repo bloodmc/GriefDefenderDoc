@@ -74,7 +74,7 @@ This screen will default to the `USER` group and `PUBLIC` type which controls fl
 As an administrator, you will see another group at top called `ADMIN` which will display all administrative flag definitions configured in the preset loaded.  
 Note: This assumes the delivered `minecraft` preset is loaded. If you create your own preset then the details above may differ.  
 
-For an in-depth guide on how to configure flag definitions for presets, see https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI  
+For an in-depth guide on how to configure flag definitions for presets, see [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) 
 
 
 ### Options  
@@ -89,7 +89,7 @@ Clicking on the `OPTIONS` link will bring player to the following screen
 Users will default to the `CLAIM` tab within options which controls all options in the claim they are standing in.  
 
 
-For a list of all available options and how to configure them, see [Options](https://github.com/bloodmc/GriefDefender/wiki/Options)  
+For a list of all available options and how to configure them, see [Options](/wiki/basic/Options.html)  
 
 
 ### Player  
@@ -115,7 +115,7 @@ Note: This menu can also be accessed directly by executing the command `/trustli
 ![Trust](https://i.imgur.com/T75Gvpw.png)  
 
 The trust menu allows a player to trust a member or group to their claims.  
-See [Trust-System](https://github.com/bloodmc/GriefDefender/wiki/Trust-System) for types of trust and how they each work.  
+See [Trust-System](/wiki/basic/Trust-System.html) for types of trust and how they each work.  
 
 To add a member or group, click one of the trust types at top of menu then click the `+` sign.  
 This will send a message to the player asking if you want to trust a player or group.  Simply click the `Player` or `Group` link to proceed.  
@@ -152,4 +152,4 @@ The available icons work as follows
 Note: The debug icon is for admins only.  
 
 All inventory GUI configuration can be found in the `gui.conf` file within `./plugins/GriefDefender/` folder.  
-See https://github.com/bloodmc/GriefDefender/wiki/Configuration#inventory-section for more information.  
+See [Inventory section](/wiki/Configuration.html#gui) for more information.  

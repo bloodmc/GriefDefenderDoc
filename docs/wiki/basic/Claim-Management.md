@@ -5,11 +5,11 @@ category: claim
 icon: manage
 ---
 
-GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the [Flag Definition page](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI).
+GriefDefender is a plugin that provides self-service region protection functionality, giving you additional options to fine tune aspects such as door, chest, and build permissions for users or groups of users! Below some basic instructions for claim management for more fine tuned control over your claims check out the [Flag Definition page](/wiki/basic/Flag-Definitions-GUI.html).
 
 All the examples are with the defaults at the time of writing this in mind.
 
-For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](https://github.com/bloodmc/GriefDefender/wiki/FAQ)
+For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](/faq/)
 
 ## Claim Creation
 
@@ -18,7 +18,7 @@ A player can create claims in two types of modes.
 ### 2D 
 
 A 2D claim creates a claim by `AREA` (X and Z). It creates the claim from bedrock (lowest block point) to sky (max Y level 255) in the world you are in. This mode is the most user friendly as it doesn't require the player to worry about block height or other players claiming above or below their claims. By default all players default to this mode unless the meta option `griefdefender.create-mode` is set to a different mode.  
-See https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#claim-options for more info on claim options.  
+See [Claim Options](/wiki/basic/Options.html#claim-options) for more info on claim options.  
 
 ### 3D
 
@@ -99,9 +99,9 @@ A town claim has the following capabilities
 Note: This can be adjusted by changing `griefdefender.create-limit` to a value higher than 1 with `gd_claim_default=town` context. 
 
 
-Note: For a player to claim chunks they need the permissions and enough claim-blocks for the size of their claim which can be configured with [Options](https://github.com/bloodmc/GriefDefender/wiki/Options).
+Note: For a player to claim chunks they need the permissions and enough claim-blocks for the size of their claim which can be configured with [Options](/wiki/basic/Options.html).
 
-See https://github.com/bloodmc/GriefDefender/wiki/Claim-Types for more information on each claim type.
+See [Claim Types](/wiki/basic/Claim-Types.html) for more information on each claim type.
 
 ### Golden Shovel
 You create claims with a golden shovel (item can be changed in the configs), which can also change claim size and position. Remember there are commands to switch claim type and mode, `/adminclaims`, `/townclaims`, `/basicclaims`, `/subdivideclaims`!
@@ -330,7 +330,7 @@ Field                              | Description |
 
 ### Allowing other players to access your claim
 
-You can give other players access to your basic claim using the [trust commands](https://github.com/bloodmc/GriefDefender/wiki/Commands#trust), e.g. to give your friend "Applehead" building permissions to your claim just run `/trust Applehead`.
+You can give other players access to your basic claim using the [trust commands](/wiki/Commands.html#trust), e.g. to give your friend "Applehead" building permissions to your claim just run `/trust Applehead`.
 
 ### Require trust for players to enter claim
 

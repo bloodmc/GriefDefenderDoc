@@ -23,18 +23,18 @@ All default flags can be customized per claim type. Currently, GriefDefender sup
 
 ## Index
 
-* [Commands](https://github.com/bloodmc/GriefDefender/wiki/Flags#commands)
-  * [Arguments](https://github.com/bloodmc/GriefDefender/wiki/Flags#arguments)
-  * [Commandlist](https://github.com/bloodmc/GriefDefender/wiki/Flags#commandlist)
-* [Usage Examples](https://github.com/bloodmc/GriefDefender/wiki/Flags#usage-examples)
-* [Usage with LuckPerms](https://github.com/bloodmc/GriefDefender/wiki/Flags#usage-with-luckperms)
-* [Available Flags](https://github.com/bloodmc/GriefDefender/wiki/Flags#available-flags)
+* [Commands](/wiki/advanced/Flags.html#commands)
+  * [Arguments](/wiki/advanced/Flags.html#arguments)
+  * [Commandlist](/wiki/advanced/Flags.html#commandlist)
+* [Usage Examples](/wiki/advanced/Flags.html#usage-examples)
+* [Usage with LuckPerms](/wiki/advanced/Flags.html#usage-with-luckperms)
+* [Available Flags](/wiki/advanced/Flags.html#available-flags)
 
 
 ## Contexts
 
 All flags require one or more contexts when applied as a permission in LuckPerms.  
-See https://github.com/bloodmc/GriefDefender/wiki/Contexts on what contexts you can use and how they work.  
+See Contexts](/wiki/advanced/Contexts.html) on what contexts you can use and how they work.  
 
 ## Commands
 

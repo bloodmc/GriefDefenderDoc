@@ -7,7 +7,7 @@ icon: image-text
 
 # Contexts
 
-Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See https://luckperms.net/wiki/Context
+Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is. See [Contexts](/wiki/advanced/Contexts.html)
 
 Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.
 
@@ -83,7 +83,7 @@ This permission is denying the flag `entity-spawn` in claim with uuid `9594ca69-
 :warning: This context does NOT affect owners of claims when used with flags but does affect owners when used with options :warning: 
 
 It is used to apply a flag or option to one or more claim types or globally and acts as a default permission meaning it is applied to users until a higher context is used.  
-See https://github.com/bloodmc/GriefDefender/wiki/Contexts#context-core-priority  
+See [Context core priority](/wiki/advanced/Contexts.html#context-core-priority) 
 
 Let's break each combination down  
 
@@ -160,4 +160,4 @@ A. Trusted users may not be affected depending on the level of trust required fo
 Note: Overrides will always affect owners and trusted users.  
 3. How would I know what contexts, trust, permissions are being checked when I perform an action?  
 If you are an administrator, you can find information for each action by performing a `/gddebug record claim` command inside the claim you are in.  
-See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info  
+See [Debugging](/wiki/advanced/Debugging.html) for more info  

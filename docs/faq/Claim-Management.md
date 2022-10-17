@@ -29,10 +29,10 @@ Make sure you use the investigation tool (minecraft:stick by default) or are in 
 ## 5. How do I allow everyone to access my spawn?** 
 
 Give them accessor trust by using `/at public` where public represents all players.  
-See https://github.com/bloodmc/GriefDefender/wiki/Trust-System.  
+See [Trust systema](/wiki/basic/Trust-System.html).  
 
 If you need more detailed protection then use the flag system.  
-See https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI
+See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html)
 
 ## 6. How do I select a specific claim to work in? (change settings, etc..)**
 
@@ -91,7 +91,7 @@ ex. To deny the essentials command `/sethome` for player `Mike`
 `/cfp Mike command-execute essentials:sethome false`  
 
 Note: Use `/gddebug record claim` to get the proper info for command.  
-See https://github.com/bloodmc/GriefDefender/wiki/Debugging for more info.
+See [Debugging](/wiki/advanced/Debugging.html) for more info.
 
 ## 10. How do I allow my admins to bypass protection ?**  
 
