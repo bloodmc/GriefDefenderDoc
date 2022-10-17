@@ -24,4 +24,4 @@ This will result on a player executing `/fspeed 0.5` and having his flight updat
 
 You could basically make anything from GriefDefender shortened with custom alias.
 
-**NOTE:** For this specific case, apart from having a CMI permission to execute the `/fspeed` command, the player also needs to have the GriefDefender permission to interact with Advanced Options. For more information: [See Advanced Options Wiki](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options)
+**NOTE:** For this specific case, apart from having a CMI permission to execute the `/fspeed` command, the player also needs to have the GriefDefender permission to interact with Advanced Options. For more information: [See Advanced Options Wiki](/wiki/basic/Options.html)

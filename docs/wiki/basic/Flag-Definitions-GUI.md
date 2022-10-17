@@ -7,7 +7,7 @@ icon: screen
 
 ## Overview
 
-The flag definition system provides both users and admins the ability to manage their claim flags in a [chat](https://github.com/bloodmc/GriefDefender/wiki/GUI#chat) or [inventory](https://github.com/bloodmc/GriefDefender/wiki/GUI#inventory) GUI.  
+The flag definition system provides both users and admins the ability to manage their claim flags in a [chat](/wiki/basic/GUI.html#chat) or [inventory](/wiki/basic/GUI.html#inventoryy) GUI.  
 GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.  
 The delivered vanilla flag definition data can be found in the following location
 ### Sponge
@@ -60,7 +60,7 @@ contexts=[
 ```
 These are the definition contexts that will be used with all permissions defined within `permissions=[...]`.  
 It currently only supports context keys `gd_claim_default`, `gd_claim_override`, or `gd_claim`.  
-See https://github.com/bloodmc/GriefDefender/wiki/Contexts to learn how contexts work.  
+See [Contexts](/wiki/advanced/Contexts.html) to learn how contexts work.  
 Note: These contexts do NOT apply in GUI. It is only used during server startup.  GUI will always apply flags to the claim player is standing in.
 
 #### Default value  
@@ -150,7 +150,7 @@ For more information on what you can do with the flags config, see below
 # Note: All flag definitions that contain a definition context of 'gd_claim_default' or 'gd_claim_override' will be applied to permissions during server startup.
 # Note: Required if no source or target context is specified, the permission will default to ALL.
 # Note: Commonly used contexts are : flag, source, target, state, used_item, item_name, world, server
-# These contexts may change, See https://github.com/bloodmc/GriefDefender/wiki/Contexts for latest information.
+# These contexts may change, See https://docs.griefdefender.com/wiki/advanced/Contexts.html for latest information.
 
 minecraft {
     enabled=true

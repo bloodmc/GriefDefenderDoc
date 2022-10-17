@@ -32,4 +32,4 @@ Note: This command must be executed by an admin with permission `griefdefender.a
 
 Note: If you do not see the preset in GUI, make sure the files above end in `.conf`.  
 
-See https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI for more info on how to work with presets and default settings for flags.  
+See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for more info on how to work with presets and default settings for flags.  

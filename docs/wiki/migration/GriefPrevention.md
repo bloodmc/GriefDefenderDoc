@@ -10,7 +10,7 @@ Note: GD 2.X supports migration from GP Database so it is no longer needed to co
 
 Accrued claim blocks will use meta key `griefdefender.accrued-blocks`  
 Bonus claim blocks will use meta key `griefdefender.bonus-blocks`  
-See https://github.com/lucko/LuckPerms/wiki/Prefixes,-Suffixes-&-Meta#meta for more info
+See [LuckPerms - Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta) for more info
 
 ## Bukkit
 ### GriefDefender supports a complete migration from GriefPrevention Bukkit. To migrate to GriefDefender, perform the following steps 

@@ -46,7 +46,7 @@ Note: Requires economy plugin.
 
 ### Adjusting options for specific users 
 
-See https://github.com/bloodmc/GriefDefender/wiki/Options for adjusting options per user or group.
+See [Options](/wiki/basic/Options.html) for adjusting options per user or group.
 
 
 ## Tax options

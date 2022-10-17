@@ -75,7 +75,7 @@ plugins/
     └── storage.conf
 ```
 
-You can change a number of settings in the [config file](https://github.com/bloodmc/GriefDefender/wiki/Global-Config). The file has detailed annotations that should make it clear what each option does. There are three types of configs:
+You can change a number of settings in the [config file](/wiki/advanced/Global-Config.html). The file has detailed annotations that should make it clear what each option does. There are three types of configs:
 
 * Global
 * Dimension
@@ -225,7 +225,7 @@ config/
 
 GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your `blacklist.conf` and remove any id's you do not want to blacklist for your server.  
 
-See https://github.com/bloodmc/GriefDefender/wiki/Configuration#blacklist for more info on how to configure.  
+See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to configure.  
 
 
 #### Database  
@@ -260,14 +260,14 @@ Note: If you want to use the `/buyclaimblocks` or  `/sellclaimblocks` commands t
  
 ### Permissions
 
-:warning: It is VERY IMPORTANT you follow https://github.com/bloodmc/GriefDefender/wiki/Permissions#important before proceeding. :warning:  
+:warning: It is VERY IMPORTANT you follow [Permissions#Important](/wiki/Permissions.html#important) before proceeding. :warning:  
 :warning: If you want to remove user permissions that do not apply to your server, it is HIGHLY recommended to keep `griefdefender.user.*` applied to them and simply deny the permissions you do not. If you remove `griefdefender.user.*` and attempt to apply all GD permissions manually, you will run into many issues.  
 
 After install GriefDefender correctly, you need to give your players permission to claim land, they aren't given by default. The only permission needed for basic GD setup is `griefdefender.user.*`. For basic admin setup, give admins the permission `griefdefender.admin.*` and `griefdefender.user.*`. 
 
-If you want more fine tuned permissions you can find all permissions [here](https://github.com/bloodmc/GriefDefender/wiki/Permissions) and for a list of all command permissions & their usage check [here](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
+If you want more fine tuned permissions you can find all permissions [here](/wiki/Permissions.html) and for a list of all command permissions & their usage check [here](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
 
-If you believe that commands might be a little longer or hard to memorize, consider creating custom alias. [Click here for more information](https://github.com/bloodmc/GriefDefender/wiki/Custom-Alias-Creation)
+If you believe that commands might be a little longer or hard to memorize, consider creating custom alias. [Click here for more information](/wiki/basic/Custom-Alias-Creation.html)
 
 To apply the above permissions to a group in LuckPerms, run the following command
 
@@ -277,10 +277,10 @@ To apply the above permissions to a group in LuckPerms, run the following comman
 
 For `<group>` use your default group, use `default` if you don't have one.
 
-Once GD is installed and running, see https://github.com/bloodmc/GriefDefender/wiki/Claim-Management to learn how to create a protection claim and manage it.
+Once GD is installed and running, see [Claim Management](/wiki/basic/Claim-Management.html) to learn how to create a protection claim and manage it.
 
 ### Options
-:warning: It is VERY IMPORTANT you follow https://github.com/bloodmc/GriefDefender/wiki/Options before proceeding. :warning:  
+:warning: It is VERY IMPORTANT you follow [Options](/wiki/basic/Options.html) before proceeding. :warning:  
 :warning: All persisted options(meta) set in LuckPerms will take priority over defaults in `options.conf` :warning:
 
 If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in `options.conf`.  All default option settings are applied at server startup.  

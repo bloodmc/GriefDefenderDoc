@@ -7,12 +7,12 @@ icon: Options
 
 Options, also known as Meta, are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.  
 
-:warning: It is HIGHLY recommended to learn how LP Meta works before proceeding. See https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta
+:warning: It is HIGHLY recommended to learn how LP Meta works before proceeding. See [LuckPerms - Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta)
 
 
 ## Configuration  
 Default values can be changed in `options.conf`  
-See [Option Config](https://github.com/bloodmc/GriefDefender/wiki/Configuration#options)  
+See [Option Config](/wiki/Configuration.html#options)  
 
 ## Built-in Commands
 
@@ -25,7 +25,7 @@ Group - `/cog <group> <option> <value> [contexts]`
 ### Contexts
 
 All options may use one or more contexts when applied as meta in LuckPerms.   
-See https://github.com/bloodmc/GriefDefender/wiki/Contexts on what contexts you can use and how they work.   
+See [Contexts](/wiki/advanced/Contexts.html) on what contexts you can use and how they work.   
 
 ### Examples  
 
@@ -38,7 +38,7 @@ See https://github.com/bloodmc/GriefDefender/wiki/Contexts on what contexts you 
 * Deny player hunger in claim player is in.  
 `/claimoption player-deny-hunger true`  
 
-Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.conf`. See [Option Control](https://github.com/bloodmc/GriefDefender/wiki/Options/_edit#option-control)    
+Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.conf`.
 Note: Using `/claimoption` with no arguments opens up the GUI and displays all claim options for claim you are standing in including default options that affect all claims.  
 
 ## LuckPerms

@@ -19,7 +19,7 @@ As GD makes heavy use of LP's `default` group, the following MUST be setup prope
 - All non-griefdefender LP groups have a path in inheritance to the `default` group.  
 - The `default` group is inheriting GD's delivered groups : `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
 - The `default` group is NOT disabled. LP strongly recommends to never disable this group.  
-See https://luckperms.net/wiki/Default-Groups  
+See [LuckPerms - Default Groups](https://luckperms.net/wiki/Default-Groups)
 
 ## LuckPerms
 
@@ -138,7 +138,7 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.claim.command.flag.player | Allows to use the claimflag for players command |
 | griefdefender.user.claim.command.flag.group | Allows to use the claimflag for groups command |
 | griefdefender.user.claim.command.flag.reset | Allows to use the claimreset command |
-| griefdefender.user.claim.flag | Base permission used to check if user has access to use a specific core flag. <br />The format is `griefdefender.user.claim.flag.<flag_name>`.<br />Note: This is checked when accessing the flag ADVANCED GUI section and when using the flag command with arguments.<br />Note: The flag name is not to be confused with a definition flag name. This checks for GD's core flags. The list can be found [here](https://github.com/bloodmc/GriefDefender/wiki/Flags#available-flags) |
+| griefdefender.user.claim.flag | Base permission used to check if user has access to use a specific core flag. <br />The format is `griefdefender.user.claim.flag.<flag_name>`.<br />Note: This is checked when accessing the flag ADVANCED GUI section and when using the flag command with arguments.<br />Note: The flag name is not to be confused with a definition flag name. This checks for GD's core flags. The list can be found [here](/wiki/advanced/Flags.html#available-flags) |
 
 ## Flag Definitions
 | Permission Node | Description |
@@ -146,7 +146,7 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.admin.custom.flag | Base permission used to check if user has access to a specific admin flag definition. <br />The format is   `griefdefender.admin.custom.flag.<preset>.<group>.<definition_flag_name>`. <br />Note: By default, this manages the delivered admin group which is mapped to the ADMIN tab. |
 | griefdefender.user.custom.flag | Base permission used to check if user has access to a specific user flag definition. <br />The format is   `griefdefender.user.custom.flag.<preset>.<group>.<definition_flag_name>`. <br />Note: By default, this manages the delivered user group which is mapped to the USER tab.|
 
-_*See [Flag Definitions GUI](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI) for information on how to manage the flag GUI for both users and admins._
+_*See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for information on how to manage the flag GUI for both users and admins._
 
 ## Options
 | Permission Node | Description |

@@ -57,7 +57,7 @@ This command supports the following arguments `hand | <type> <target> [worldname
 | global-target | A global list of target id's that are ignored by events. <br />Note: This only affects events where the id specified is the target. | [ ] |
 | entity-damage-source-blacklist | A global list of entity damage sources that are ignored in events by default. | [contact,cramming,drowning,<br />"falling_block",flyintowall,"fire_tick",<br />"hot_floor",poison,starvation,suffocation,<br />suicide,void] |
 
-The blacklist controls events from interacting with items, blocks, or entities on either a per-flag or global basis. Blacklists are extremely useful as it allows you to force GD to ignore actions in a world you do not need protected. By doing this, you prevent GD from wasting resources when it attempts to protect. To determine what you want to prevent GD from controlling, you will need to run a [GDDebug](https://github.com/bloodmc/GriefDefender/wiki/Debugging) in order to gather the data needed for the config. See [User Contributions](https://github.com/bloodmc/GriefDefender/wiki/Optimizations#optimization-contributions) for some examples on how to use it.  
+The blacklist controls events from interacting with items, blocks, or entities on either a per-flag or global basis. Blacklists are extremely useful as it allows you to force GD to ignore actions in a world you do not need protected. By doing this, you prevent GD from wasting resources when it attempts to protect. To determine what you want to prevent GD from controlling, you will need to run a [GDDebug](/wiki/advanced/Debugging.html) in order to gather the data needed for the config. See [User Contributions](/wiki/advanced/Optimizations.html#optimization-contributions) for some examples on how to use it.  
 
 It supports wildcards `?` and `*` where `?` represents a single character and `*` represents zero or more characters.
 For more info you can go to [Apache's wildcard matcher.](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String))
@@ -71,7 +71,7 @@ An example of how to block items from being checked by GD is as shown
 
 ### Claimnames  
 
-See [Claim Identifiers](https://github.com/bloodmc/GriefDefender/wiki/Claim-Management#claim-identifiers)  
+See [Claim Identifiers](/wiki/basic/Claim-Management.html#claim-identifiers)  
 
 The `claimnames.conf` file is used to store a mapping of player UUID to friendly claim names.  
 
@@ -158,7 +158,7 @@ flag-control {
 
 ### Global  
 
-See [Global Config](https://github.com/bloodmc/GriefDefender/wiki/Global-Config)  
+See [Global Config](/wiki/advanced/Global-Config.html)  
 
 
 

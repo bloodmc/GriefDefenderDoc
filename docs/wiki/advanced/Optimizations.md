@@ -5,7 +5,7 @@ category: info
 icon: optimization-timer
 ---
 
-GriefDefender provides built-in control for nearly every action in your minecraft world. However, attempting to control too much can sometimes cause resource issues depending on your server load. The solution to this issue is to make use of built-in optimization configuration found in `global.conf` and by learning how to use [blacklists](https://github.com/bloodmc/GriefDefender/wiki/Configuration#blacklist). 
+GriefDefender provides built-in control for nearly every action in your minecraft world. However, attempting to control too much can sometimes cause resource issues depending on your server load. The solution to this issue is to make use of built-in optimization configuration found in `global.conf` and by learning how to use [blacklists](/wiki/Configuration.html#blacklist). 
 
 ### Global Optimization config
 
