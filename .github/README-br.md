@@ -1,6 +1,6 @@
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
-<img alt="GriefDefender" src="./docs/.vuepress/public/logo.png?raw=true" width="80" align=left hspace="5" vspace="5"/>
+<img alt="GriefDefender" src="../docs/.vuepress/public/logo.png?raw=true" width="80" align=left hspace="5" vspace="5"/>
 <br>
 <h1>Documento</h1>
 <h3 align="center">
