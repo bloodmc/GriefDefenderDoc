@@ -36,7 +36,7 @@ maven
 </repository>
 ```
 
-Note: Latest API snapshots can be found on maven repo https://repo.glaremasters.me/#browse/browse:bloodshot:com%2Fgriefdefender%2Fapi%2F2.1.0-SNAPSHOT  
+Note: Latest API snapshots can be found on [maven repo](https://repo.glaremasters.me/#browse/browse:bloodshot:com%2Fgriefdefender%2Fapi%2F2.1.0-SNAPSHOT)
 
 
 ## Code Examples

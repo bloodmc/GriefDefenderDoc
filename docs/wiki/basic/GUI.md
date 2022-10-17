@@ -17,6 +17,8 @@ To default players to inventory GUI on login, grant the permission `griefdefende
 
 The chat GUI is designed for PC players using a mouse and keyboard.  
 
+![Menu Navigation](https://i.imgur.com/S2ZpVPA.gif)
+
 
 ### Main Menu  
 

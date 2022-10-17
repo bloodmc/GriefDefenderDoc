@@ -17,12 +17,14 @@ Para padronizar jogadores para inventariar a Interface no login, conceda a permi
 
 A Interface de bate-papo foi projetada para jogadores de PC que usam mouse e teclado. 
 
+![Menu de navegação](https://i.imgur.com/S2ZpVPA.gif)
+
 
 ### Menu principal
 
 Para acessar o menu principal, execute o comando `/gd`
 
-![Início do menu principal](https://i.imgur.com/S2ZpVPA.gif)
+![Início do menu principal](https://i.imgur.com/gvrqPUl.png)
 
 O menu principal é projetado como um menu 'descartável', o que significa que não deve ocupar toda a tela de bate-papo.
 Clicar em um link de menu abrirá o menu de tela cheia.

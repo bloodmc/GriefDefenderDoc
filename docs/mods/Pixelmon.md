@@ -4,7 +4,7 @@ title: Pixelmon
 
 ## Pixelmon
 
-:warning:  GD Sponge requires Luckperms 5.3.98, and recent builds of Luckperms for Sponge only support Sponge API 8. Luckperms 5.3.98 can be found on Ore https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98
+:warning:  GD Sponge requires [Luckperms 5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98), and recent builds of Luckperms for Sponge only support Sponge API 8. [Luckperms 5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) can be found on [Ore](https://ore.spongepowered.org/)
 
 ### Setup
 
@@ -18,13 +18,13 @@ Note: This command must be executed by an admin with permission `griefdefender.a
 
 #### Install Pixelmon Flag Definition
 
-* https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/presets/pixelmon.conf
+* [presets/pixelmon.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/presets/pixelmon.conf)
 
   Right click on the page and select "Save as", save as `pixelmon.conf` in config/griefdefender/presets
 
-* https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.conf
+* [lang/presets/pixelmon/en_US.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.conf)
 
-  Right click on the page and select "Save as", save as `en_US.conf` in config/griefdefender/lang/presets/pixelmon
+  Right click on the page and select "Save as", save as `en_US.conf` in `config/griefdefender/lang/presets/pixelmon`
 
 * After doing both, /gdreload
 

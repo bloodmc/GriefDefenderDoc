@@ -40,7 +40,7 @@ maven
 </repository>
 ```
 
-Nota: os instantâneos de API mais recentes podem ser encontrados no repositório maven https://repo.glaremasters.me/#browse/browse:bloodshot:com%2Fgriefdefender%2Fapi%2F2.1.0-SNAPSHOT  
+Nota: As snapshots mais recentes da API podem ser encontrados no [repositório maven](https://repo.glaremasters.me/#browse/browse:bloodshot:com%2Fgriefdefender%2Fapi%2F2.1.0-SNAPSHOT)
 
 
 ## Exemplos de código

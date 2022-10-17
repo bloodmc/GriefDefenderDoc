@@ -103,7 +103,7 @@ Os dados da reivindicação podem ser encontrados dentro da pasta da dimensão e
 `config/GriefDefender/worlds/minecraft/overworld/world/ClaimData` para Sponge  
 `plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData` para Bukkit  
 
-Veja em [Configuração](/Configuration) página para obter mais detalhes sobre como cada configuração funciona.
+Veja em [Configuração](/br/wiki/Configuration.html) página para obter mais detalhes sobre como cada configuração funciona.
 
 #### HOCON  
 

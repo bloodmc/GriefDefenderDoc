@@ -6,7 +6,7 @@ icon: map
 ---
 
 Para usar o Dynmap no GriefDefender, você deve ter GDHooks instalado.
-Veja https://github.com/bloodmc/GriefDefender/wiki/GDHooks  
+Veja [GDHooks](/br/hooks)  
 
 
 **Bukkit** 

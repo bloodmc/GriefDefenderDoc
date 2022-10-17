@@ -10,7 +10,7 @@ icon: start
 ### Requirements
 
 ::: tip You need LuckPerms to run the plugin.
-Get latest [LuckPerms](https://luckperms.github.io/) for Bukkit & Sponge API 8/9.
+Get latest [LuckPerms](#global-options) for Bukkit & Sponge API 8/9.
 <br>Get [LuckPerms v5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) for Sponge API 7.
 <br>**NOTE: GD only supports LuckPerms v5.**
 :::
@@ -18,7 +18,7 @@ Get latest [LuckPerms](https://luckperms.github.io/) for Bukkit & Sponge API 8/9
 ::: warning
 GD makes heavy use of LP's `default` group. Make sure your LP groups are inheriting the `default` group 
 or GD will not function properly. LP also strongly recommends to never disable this group.
-Check their [wiki](https://github.com/lucko/LuckPerms/wiki/Default-Groups#where-to-start) 
+Check their [wiki](https://luckperms.net/wiki/Default-Groups#where-to-start) 
 :::
 
 ### Installation
@@ -90,7 +90,7 @@ Claim data can be found inside the folder of the dimension the claim is in, e.g.
 `config/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Sponge  
 `plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Bukkit  
 
-See the [Configuration](/Configuration) page for more details on how each config works.  
+See the [Configuration](/wiki/Configuration.html) page for more details on how each config works.  
 
 #### HOCON  
 

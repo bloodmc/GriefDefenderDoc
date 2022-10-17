@@ -1,12 +1,14 @@
 module.exports = [
+	"Pixelmon", 
+	"Presets-Pixelmon",
+];
+
+module.exports = [
 	{
-		text: "Info",
+		text: "Mods",
+		icon: "Options",
 		prefix: "/mods/",
-		children: ["Pixelmon"],
-	},
-	{
-		text: "Preset",
-		prefix: "/mods/",
-		children: ["Presets-Pixelmon"],
-	},
+		collapsable: false,
+		children: ["Pixelmon", "Presets-Pixelmon"],
+	  },
 ];
