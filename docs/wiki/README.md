@@ -10,7 +10,7 @@ icon: start
 ### Requirements
 
 ::: tip You need LuckPerms to run the plugin.
-Get latest [LuckPerms](#global-options) for Bukkit & Sponge API 8/9.
+Get latest [LuckPerms](https://luckperms.net/download) for Bukkit & Sponge API 8/9.
 <br>Get [LuckPerms v5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) for Sponge API 7.
 <br>**NOTE: GD only supports LuckPerms v5.**
 :::
@@ -29,7 +29,7 @@ Check their [wiki](https://luckperms.net/wiki/Default-Groups#where-to-start)
 :warning: If using `spark`, update to [latest version](https://ci.lucko.me/job/spark/) :warning:   
 :warning: Set `spawn-protection` to `0` in `server.properties` to allow GD to protect spawn. 
 If this is not set properly, the server will block actions before GD has a chance to see it. :warning:
-1. Install latest Luckperms.
+1. Install latest [LuckPerms](https://luckperms.net/download).
 2. Get latest version on [Spigot](https://www.spigotmc.org/resources/68900/).
 3. Drop the jar into `./plugins`
 4. Now start your server once to generate all configuration files, 
@@ -260,12 +260,12 @@ Note: If you want to use the `/buyclaimblocks` or  `/sellclaimblocks` commands t
  
 ### Permissions
 
-:warning: It is VERY IMPORTANT you follow [Permissions#Important](/wiki/Permissions.html#important) before proceeding. :warning:  
+:warning: It is VERY IMPORTANT you follow [Permissions](/wiki/Permissions.html#important) before proceeding. :warning:  
 :warning: If you want to remove user permissions that do not apply to your server, it is HIGHLY recommended to keep `griefdefender.user.*` applied to them and simply deny the permissions you do not. If you remove `griefdefender.user.*` and attempt to apply all GD permissions manually, you will run into many issues.  
 
 After install GriefDefender correctly, you need to give your players permission to claim land, they aren't given by default. The only permission needed for basic GD setup is `griefdefender.user.*`. For basic admin setup, give admins the permission `griefdefender.admin.*` and `griefdefender.user.*`. 
 
-If you want more fine tuned permissions you can find all permissions [here](/wiki/Permissions.html) and for a list of all command permissions & their usage check [here](https://github.com/bloodmc/GriefDefender/wiki/Commands-Usage-&-Permissions). 
+If you want more fine tuned permissions you can find all permissions [here](/wiki/Permissions.html)
 
 If you believe that commands might be a little longer or hard to memorize, consider creating custom alias. [Click here for more information](/wiki/basic/Custom-Alias-Creation.html)
 
