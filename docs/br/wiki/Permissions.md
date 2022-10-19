@@ -239,4 +239,4 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | --------- | ----------- |
 | griefdefender.user.command.help | Permite-lhe visualizar a ajuda |
 | griefdefender.user.chat.capture | Permite gravar bate-papo em Interface de comando |
-| griefdefender.login.inventory-gui | Define o jogador ou grupo para usar a Interface do bate-papo no login |
+|  | Define o jogador ou grupo para usar a Interface do bate-papo no login |

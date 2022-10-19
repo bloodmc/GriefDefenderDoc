@@ -58,7 +58,7 @@ Coming soon!
 
 ### Configuration
 
-> **NOTE: There are also a few options that have to be set using your permission system, you can read more about those on the [Options wiki page](https://github.com/bloodmc/GriefDefender/wiki/Advanced-Options).**
+> **NOTE: There are also a few options that have to be set using your permission system, you can read more about those on the [Options wiki page](/wiki/basic/Options).**
 
 All configuration files can be found in a folder called `GriefDefender` in your servers config or plugins directory.  
 
