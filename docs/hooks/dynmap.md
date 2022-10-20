@@ -6,7 +6,7 @@ icon: map
 ---
 
 In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.  
-See https://github.com/bloodmc/GriefDefender/wiki/GDHooks  
+See [GDHooks](/hooks) 
 
 
 **Bukkit** 

@@ -103,7 +103,7 @@ Os dados da reivindicação podem ser encontrados dentro da pasta da dimensão e
 `config/GriefDefender/worlds/minecraft/overworld/world/ClaimData` para Sponge  
 `plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData` para Bukkit  
 
-Veja em [Configuração](/Configuration) página para obter mais detalhes sobre como cada configuração funciona.
+Veja em [Configuração](/br/wiki/Configuration.html) página para obter mais detalhes sobre como cada configuração funciona.
 
 #### HOCON  
 
@@ -273,12 +273,12 @@ Nota: Se você quiser usar o `/buyclaimblocks` ou  `/sellclaimblocks` comandos e
  
 ### Permissões
 
-:warning: É MUITO IMPORTANTE que você siga o [Permissões#Importante](/br/wiki/Permissions.html#importante) antes de proceder. :warning:  
+:warning: É MUITO IMPORTANTE que você siga o [Permissões - Importante](/br/wiki/Permissions.html#importante) antes de proceder. :warning:  
 :warning: Se você deseja remover permissões de usuário que não se aplicam ao seu servidor, é ALTAMENTE recomendado manter `griefdefender.user.*` aplicado a eles e simplesmente negar as permissões que você não possui. Se você remover o `griefdefender.user.*` e tentar aplicar todas as permissões do GD manualmente, você terá muitos problemas.
 
 Depois de instalar o GriefDefender corretamente, você precisa dar permissão aos seus jogadores para reivindicar terrenos, eles não são dados por padrão. A única permissão necessária para a configuração básica do GD é `griefdefender.user.*`. Para configuração básica de administração, dê aos administradores a permissão `griefdefender.admin.*` e `griefdefender.user.*`.
 
-Se você quiser ajustar mais permissões, você pode encontrar todas as permissões [aqui](/br/wiki/Permissions.html) e para uma lista com todas as permissões de comando e de uso [aqui](/br/wiki/Permissions)html#reivindicacoes). 
+Se você quiser ajustar mais permissões, você pode encontrar todas as permissões [aqui](/br/wiki/Permissions.html) e para uma lista com todas as permissões de comando e de uso [aqui](/br/wiki/Permissions.html#reivindicacoes). 
 
 Se você acredita que os comandos podem ser um pouco mais longos ou difíceis de memorizar, considere criar um custom alias.[Clique aqui para obter mais informações](/br/wiki/basic/Custom-Alias-Creation.html)
 

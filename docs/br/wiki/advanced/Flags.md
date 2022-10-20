@@ -44,7 +44,7 @@ Ver [Contextos](/br/wiki/advanced/Contexts.html) Em quais contextos você pode u
 
 | Argumentos |Descrição |
 | --------- | ----------- |
-| `<flag>` | A ação ou evento para gerenciar [`flag`](#available-flags) |
+| `<flag>` | A ação ou evento para gerenciar [`flag`](#bandeiras-disponiveis) |
 | `<target>` | O que deve ser afetado pela ação, ou seja. `minecraft:dirt`. Usar `any` ou `modid:any` como curinga.|
 | `<value>` | Se deve permitir, negar ou remover a bandeira `false\|undefined\|true` , ao invés de `undefined` você pode usar `0` |
 | `[key=value]`| Contextos atuais opcionais:<br>`override=type` aplicará tudo a todas as reivindicações desse tipo.<br>`default` definirá como padrão para o tipo em que você está de pé para que todas as reivindicações recém -criadas receberão essa bandeira<br>`source` O que desencadeia a bandeira, ou seja. `minecraft:player`<br>`used_item` O item usado do jogador <br> Ex. `/cf entity-damage pig false used_item=diamond_sword override=basic` Isso negaria danos a um porco somente quando uma espada de diamante é usada em uma reivindicação básica|
@@ -150,7 +150,7 @@ LP:
 ## Bandeiras disponíveis
 Todas as informações fornecidas dentro () serão um dos exemplos.
 
-**_The most current list will always be available [here](https://github.com/bloodmc/GriefDefenderAPI/blob/master/src/main/java/com/griefdefender/api/permission/flag/Flags.java)._**
+**_A lista mais atual estará sempre disponível [aqui](https://github.com/bloodmc/GriefDefenderAPI/blob/master/src/main/java/com/griefdefender/api/permission/flag/Flags.java)._**
 - **block-break** - Use para gerenciar a quebra de blocos (permitindo quebrar um bloco de sujeira)
 - **block-grow** - Use para gerenciar o crescimento do bloco
 - **block-modify** - Usado para gerenciar modificações de bloqueio, como fusão de gelo.

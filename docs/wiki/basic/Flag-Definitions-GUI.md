@@ -1825,7 +1825,7 @@ GD provides a flag definition GUI which is designed to allow both users and admi
 In order to display the flag definition GUI, a user command must execute the following command `/cf` or `/gd flag claim`  
 
 The GUI will then be displayed on screen in either CHAT or as an inventory GUI.  
-This depends on what permission the user has set and the toggle status of `/claimgui`.  See the [Main GUI](https://github.com/bloodmc/GriefDefender/wiki/GUI#gui) page for more details.  
+This depends on what permission the user has set and the toggle status of `/claimgui`.  See the [Main GUI](/wiki/basic/Flag-Definitions-GUI.html) page for more details.  
 
 Once the flag definition GUI has been displayed, the user will see 2 subsections labeled `PUBLIC` and `OWNER`.  
 These subsections work as follows  

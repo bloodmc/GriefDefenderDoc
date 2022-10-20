@@ -47,7 +47,7 @@ GDHooks is an official GriefDefender addon designed to extend its support for ot
 
 **Teleport**
 * [BetterRTP]: [ [Spigot](https://www.spigotmc.org/resources/36081/) | [Github](https://github.com/SuperRonanCraft/BetterRTP) ]
-* [HyperDrive]: [ [Github](https://github.com/XZot1K/HyperDrive) | [Spigot](https://www.spigotmc.org/resources/17184/ ]
+* [HyperDrive]: [ [Github](https://github.com/XZot1K/HyperDrive) | [Spigot](https://www.spigotmc.org/resources/17184/)
 * [WildernessTp]: [ [Spigot](https://www.spigotmc.org/resources/22853/) | [Github](https://github.com/AcmeProject/WildernessTp) ]
 
 **Protection**
