@@ -11,7 +11,7 @@ Chave dos argumentos: \<requerido\> [opcional]
 
 ### Identificador de reivindicação
 
-Muitos comandos suportam o novo argumento `[identificador]` que é o ID da declaração definido pelo proprietário da declaração. Se você não quiser ser obrigado a fazer uma reivindicação para um comando específico, defina o identificador de reivindicação usando `/gd claim id <identifier>` e passe o identificador no final do comando. 
+Muitos comandos suportam o novo argumento `[identificador]` que é o ID da reivindicação definido pelo proprietário da reivindicação. Se você não quiser ser obrigado a fazer uma reivindicação para um comando específico, defina o identificador de reivindicação usando `/gd claim id <identifier>` e passe o identificador no final do comando. 
 Se estiver usando um identificador para uma reivindicação administrativa, o formato é `admin:<identifier>`     
 Se estiver usando um identificador para região selvagem, o formato é `wilderness:<identifier>`  
 Se estiver usando um identificador para outro jogador, o formato é `<jogador>:<identifier>`  
@@ -357,7 +357,7 @@ ___
 **Atalho**: `cfg`  
 **Argumentos**: `<grupo> <flag> <target> <value> [<\contexts>]]`  
 
-Obtém/define a permissão de sinalizador para um grupo na reivindicação em que você está.
+Obtém/define a permissão de bandeiras para um grupo na reivindicação em que você está.
 
 ___
 #### `/gd flag player`

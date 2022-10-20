@@ -45,7 +45,7 @@ export default defineUserConfig({
         },
         '/br/': {
           fullText: true,
-          placeholder: 'search',
+          placeholder: 'Pesquisar',
           frontmatter: {
             tag: 'tag',
             category: 'category',

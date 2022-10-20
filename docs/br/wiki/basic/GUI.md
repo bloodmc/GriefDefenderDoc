@@ -70,13 +70,13 @@ Se o servidor tiver apenas a predefinição de minecraft entregue carregada, o j
 
 ![Definições de Bandeiras](https://i.imgur.com/ETLunlL.png)  
 
-Esta tela terá como padrão o grupo `USER` e o tipo `PUBLIC` que controla os sinalizadores para jogadores não confiáveis. Para controlar as sinalizações do proprietário e dos membros confiáveis da reivindicação, clique no link "PROPRIETÁRIO". Você notará os mesmos sinalizadores, mas os valores podem ser diferentes, pois refletem permissões diferentes.
+Esta tela terá como padrão o grupo `USER` e o tipo `PUBLIC` que controla os bandeiras para jogadores não confiáveis. Para controlar as bandeiras do proprietário e dos membros confiáveis (trust) da reivindicação, clique no link "PROPRIETÁRIO". Você notará os mesmos bandeiras, mas os valores podem ser diferentes, pois refletem permissões diferentes.
 
 
-Como administrador, você verá outro grupo no topo chamado `ADMIN` que exibirá todas as definições de sinalizadores administrativos configurados no preset carregado.
+Como administrador, você verá outro grupo no topo chamado `ADMIN` que exibirá todas as definições de bandeiras administrativos configurados no preset carregado.
 Nota: Isso pressupõe que a predefinição `minecraft` entregue está carregada. Se você criar sua própria predefinição, os detalhes acima podem ser diferentes.
 
-Para um guia detalhado sobre como configurar definições de sinalizadores para predefinições, consulte [Interface de definições de bandeira](/br/wiki/basic/Flag-Definitions-GUI.html)
+Para um guia detalhado sobre como configurar definições de bandeiras para predefinições, consulte [Interface de definições de bandeira](/br/wiki/basic/Flag-Definitions-GUI.html)
 
 
 ### Opções  

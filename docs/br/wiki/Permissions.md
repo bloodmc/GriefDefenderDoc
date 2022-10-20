@@ -224,7 +224,7 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.admin.command.restore-nature.aggressive |  |
 | griefdefender.admin.command.restore-nature.fill |  |
 | griefdefender.admin.command.set-accrued-claim-blocks | Permite editar a quantidade de blocos de reivindicação acumulados |
-| griefdefender.admin.custom.flag | Permite usar bandeiras de declaração avançados na Interface |
+| griefdefender.admin.custom.flag | Permite usar bandeiras de reivindicação avançados na Interface |
 | griefdefender.admin.flag-defaults | Permite editar padrões de bandeiras |
 | griefdefender.admin.flag-overrides | Permite editar sobreposição de bandeira |
 
