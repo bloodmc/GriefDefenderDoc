@@ -126,7 +126,7 @@ Esta coluna contém o Jogador ou grupo ao qual o evento é atribuído. por exemp
 
 #### `Contexts`
 
-Esta coluna contém todos os contextos presentes quando um evento foi registrado. por exemplo; `used_item` ao usar um item em algo, ou tags etc. Veja [Página de Contextos](https://github.com/bloodmc/GriefDefender/wiki/Contexts) para mais detalhes.
+Esta coluna contém todos os contextos presentes quando um evento foi registrado. por exemplo; `used_item` ao usar um item em algo, ou tags etc. Veja [Página de Contextos](/br/wiki/advanced/Contexts.html) para mais detalhes.
 
 #### `Result`
 
