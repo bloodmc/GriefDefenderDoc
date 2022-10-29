@@ -32,7 +32,7 @@ optimization {
         # Note: This cache will occur after special caches such as entity damage, explosions, and physics.
         # Note: Setting this too high may result in players not seeing proper results with their actions.
         cache-permission-lookup-expiration=3
-        # Controls the amount of time, in seconds, for the permission cache of all block physic changes in world. If the cache is accessed before expiration then the time is reset.
+        # Controls the amount of time, in seconds, for the permission cache of all block physic changes in world.
         # Note: Blocks such as redstone will usually cache longer due to the repeated calls made.
         # Note: Setting this too high may result in players not being tracked properly during block changes.
         cache-physics-tracking-expiration=5
@@ -42,10 +42,14 @@ optimization {
         entity-damage-living-passive=true
         # Controls whether entity damage events that contain both a source/target monster are ignored.
         entity-damage-monster=true
+        # Controls whether entity damage events that contain a monster and other entity are ignored.
+        entity-damage-monster-other=true
         # Controls whether entity damage source or block that target a living passive are ignored.
         entity-damage-source-living-passive=true
         # Controls whether entity damage source or block that target a monster are ignored.
         entity-damage-source-monster=true
+        # Controls whether an entity interacting with a block is ignored.
+        entity-interact-block=true
         # Controls whether entity item pickups made by non-players are ignored.
         entity-item-pickup-non-player=true
         # Controls whether non-player falls are ignored.
@@ -66,6 +70,9 @@ optimization {
         # Controls whether aquatic spawns, such as squids, are ignored in wilderness.
         # Note: If you want to control aquatic spawns in wilderness, set this to false.
         wilderness-aquatic-spawns=true
+        # Controls whether liquid flow is ignored in wilderness.
+        # Note: If you want to control liquid flow in wilderness, set this to false.
+        wilderness-liquid-flow=true
         # Controls whether monster spawns, such as creepers, are ignored in wilderness.
         # Note: If you want to control monster spawns in wilderness, set this to false.
         wilderness-monster-spawns=true

@@ -53,10 +53,12 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | protect-tamed-entities | Whether tamed entities should be protected in claims. | true |
 | reserved-claim-names | A list of reserved claim names for use only by administrators. | [ ] |
 | restrict-world-max-height | Whether to restrict claiming to world max height. | true |
+| teleports-use-border-event | Whether teleports trigger claim border events. Default: True. <br />Note: Set to False if you want 'enter-claim' and 'exit-claim' to not be triggered by teleports. | TRUE |
 
 # Context
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
+|ignored-debug-contexts | A list of ignored context values during debug. |
 | player-equipment | Whether player equipment contexts should be applied during permission checks. | true |
 | potion-effects | Whether potion effect contexts should be applied during permission checks. | true |
 | enchantments | Whether potion effect contexts should be applied during permission checks. | false |
@@ -66,6 +68,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | --------- | ----------- | ----------- |
 | bank-system | Whether to enable the bank system for claims. Set to true to enable. | FALSE |
 | bank-transaction-log-limit | The amount of transactions to keep for history. | 60 |
+|currency-symbol | The currency symbol for economy messages. Default: $ | $ |
 | economy-mode | Uses economy instead of player claim blocks for claim creation. If true, disables the claim block system in favor of economy. <br />Note: Using this mode disables the '/buyblocks' command as claim creation will pull funds directly from a player's economy balance. <br />Note: If players have existing claimblocks from past configurations, an admin must use the '/ecomigrateblocks' command to convert remainder to currency. | FALSE |
 | rent-delinquent-task-apply-hour | The specific hour in day to attempt to get owed claim rent balances from delinquent renters. <br />Note: This uses military time and accepts values between 0-23. | 0 |
 | rent-max-time-limit | Controls the maximum time limit(hours or days) that a claim owner can have their rental max set to. <br />Note: This only affects claim rentals that have a max specified. If no max is specified by the claim owner, a renter may rent as long as they want. | false |
@@ -87,8 +90,9 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | --------- | ----------- | ----------- |
 | deny-message-action-bar | Controls whether to send claim deny messages to action bar. <br />Note: Setting to false will send messages to chat. | TRUE |
 | enable-exit-chat-messages | Controls whether exit chat messages are displayed when both enter and exit messages are being sent to a player at the same time.For example, if both an enter and exit title message is configured in a claim then the exit title would be sent to chat if this setting is true. | FALSE |
-| enter-claim-player-messages | Controls whether to display playername and claim display name as enter message if not set. <br /> Set to '1' to send messages to chat. <br /> Set to '2' to send messages to actionbar. <br />  Set to '3' to send messages to title. <br /> Set to 0 to disable. | 2 |
+| enter-claim-player-messages | Controls whether to display playername and claim display name as enter message if not set. <br />Set to '1' to send messages to chat. <br />Set to '2' to send messages to actionbar. <br />Set to '3' to send messages to title. <br /> Set to 0 to disable. | 2 |
 | enter-exit-chat-show-gd-prefix | Whether GD prefix should be shown in enter/exit chat messages. | TRUE |
+| gd-prefix | Controls the prefix used when sending messages. | [&bGD&r]  |
 | greeting-farewell-action-bar | Controls whether to send greeting/farewell messages to action bar by default. <br />Note: Setting to true will send messages to actionbar. <br />Note: This will only be set if there is no actionbar already set in claim. If so, it will use chat instead. | FALSE |
 | locale | Set the locale to use for GP messages. Available languages: de_DE, en_US, es_ES, fr_FR, pl_PL, ru_RU, zh_HK. The data is stored under assets in jar. <br />Note: The language code must be lowercase and the country code must be uppercase. | "en_US" |
 | locale-unicode-fix | Attempts to adjust unicode fonts to represent minecraft default fonts better. <br />Note: If you are using 'pl_PL' or 'ru_RU', this setting should be set to false. <br />Note: Any other languages that experience misalignment in chat menus should disable this setting. | TRUE |
@@ -102,7 +106,9 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | classic-database | Migrates GP bukkit classic database. | FALSE |
 | classic-playerdata-threshold | Controls the last active player day threshold in order to avoid migrating inactive GP playerdata. To disable, set value to 0. <br />Note: For example, with the default value of '180' the the migrator will only migrate playerdata for players that played within the past 180 days. <br />Note: This only handles a player's playerdata where accrued/bonus block information is stored. This setting has no effect on claim migration. <br />Note: This avoids storing inactive user data in LuckPerms which helps keep '/lp editor' view clean. | 180 |
 | griefdefender-file-to-database | Set to true to migrate from file format to database. <br />Note: The storage method must be set to hocon in order for this to work properly. <br />Note: After migration is complete, switch storage to database. <br />Note: This will NOT remove existing files in case you want to go back. | FALSE |
+| playerdata | Set to true to enable the legacy GriefDefender playerdata file migrator. <br /> Note: This setting is not for migrating GriefPrevention playerdata. Use 'classic' option instead. <br /> Note: Migrates legacy playerdata file format to permissions storage such as LuckPerms json or mysql storage. <br /> Note: Before turning this on, make sure you properly set 'context-storage-type' in the the playerdata section of this config. <br /> Note: It is HIGHLY recommended to backup your permissions database before running this migrator as all local playerdata files will be migrated to it. <br /> Note: Do NOT run this migrator on more than one server if multiple servers share the same permissions database. | false |
 | red-protect | Set to true to enable RedProtect data migrator. | FALSE |
+| residence | Set to true to enable Residence data migrator. | TRUE |
 | worldguard | Set to true to enable WorldGuard data migrator. <br />Note: Only cuboid regions are supported. <br />Note: It is recommended to backup data before using. | FALSE |
 
 ## Sponge
@@ -116,19 +122,37 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 # Optimization
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
+|async-claim-tool-actions | Whether to process player claim tool actions async for performance. (Default: true) <br /> Note: If you encounter any async thread issues, disable this setting. | TRUE |
+| async-player-claim-visuals | Whether to process player claim visuals async for performance. (Default: true) <br /> Note: If you encounter any async thread issues, disable this setting. | TRUE |
+| block-item-drops | Controls whether to ignore item drops from block sources. <br /> Note: This is only triggered when a player breaks a block. | TRUE |
+cache-entity-damage-expiration | Controls the amount of time, in seconds, for the permission cache of all entity damage actions in world. If the cache is accessed before expiration then the time is reset. <br /> Note: Setting this too high may result in wrong entity damage permission results. | 5 |
+| cache-permission-lookup-expiration | Controls the amount of time, in seconds, for the permission lookup cache of all actions in world. If the cache is accessed before expiration then the time is reset. <br /> Note: This cache will occur after special caches such as entity damage, explosions, and physics. <br /> Note: Setting this too high may result in players not seeing proper results with their actions. | 3 |
+| cache-physics-tracking-expiration |  Controls the amount of time, in seconds, for the permission cache of all block physic changes in world. <br /> Note: Blocks such as redstone will usually cache longer due to the repeated calls made. <br /> Note: Setting this too high may result in players not being tracked properly during block changes. | 5 |
 | dispenser-item-spawns | Controls whether dispener item spawns are ignored. | TRUE |
 | entity-damage-living-passive | Controls whether entity damage events that contain both a source/target living passive entity, such as two animals fighting, are ignored. | TRUE |
 | entity-damage-monster | Controls whether entity damage events that contain both a source/target monster are ignored. | TRUE |
-| entity-item-pickup-non-players | Controls whether entity item pickups made by non-players are ignored. | TRUE |
+| entity-damage-monster-other | Controls whether entity damage events that contain a monster and other entity are ignored. |
+| entity-damage-source-living-passive | Controls whether entity damage source or block that target a living passive are ignored. | TRUE |
+| entity-damage-source-monster | Controls whether entity damage source or block that target a monster are ignored. | TRUE |
+| entity-interact-block | Controls whether an entity interacting with a block is ignored. | TRUE |
+| entity-item-pickup-non-player | Controls whether entity item pickups made by non-players are ignored. | TRUE |
 | fall-non-player | Controls whether non-player falls are ignored. | TRUE |
-| monster-player-damage | Controls whether monster attacks against a player are ignored. <br />Note: This does not include explosion damage. <br />Note: If you need to prevent damage from monsters in claims then this should remain false. | FALSE |
-| player-monster-damage | Controls whether player attacks against a monster are ignored. <br />Note: This does not include explosion damage. | TRUE |
+| monster-player-damage | Controls whether monster attacks against a player are ignored. <br /> Note: This does not include explosion damage. <br /> Note: If you need to prevent damage from monsters in claims then this should remain false. | FALSE |
+| player-monster-damage | Controls whether player attacks against a monster are ignored. <br /> Note: This does not include explosion damage. | TRUE |
+| wilderness-ambient-spawns | Controls whether ambient spawns, such as bats, are ignored in wilderness. <br /> Note: If you want to control aquatic spawns in wilderness, set this to false. | TRUE |
+| wilderness-animal-spawns | Controls whether animal spawns, such as pigs, are ignored in wilderness. <br /> Note: If you want to control animal spawns in wilderness, set this to false. | TRUE |
+| wilderness-aquatic-spawns | Controls whether aquatic spawns, such as squids, are ignored in wilderness. <br /> Note: If you want to control aquatic spawns in wilderness, set this to false. | TRUE |
+| wilderness-liquid-flow | Controls whether liquid flow is ignored in wilderness. <br /> Note: If you want to control liquid flow in wilderness, set this to false. | TRUE |
+| wilderness-monster-spawns | Controls whether monster spawns, such as creepers, are ignored in wilderness. <br /> Note: If you want to control monster spawns in wilderness, set this to false. | TRUE |
+| xp-orb-drop | Controls whether experience orbs are ignored when dropped. | TRUE |
+
 
 # Permission
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | griefdefender-claim-group-priority | The claimgroup permission group priority. | -60 |
 | griefdefender-claim-priority | The claim permission group priority. | -60 |
+| griefdefender-default-priority | The deffault permission group priority. | -100 |
 | griefdefender-default-priority | The default permission group priority. | -80 |
 | griefdefender-option-priority | The option permission group priority. | 0 |
 | griefdefender-override-priority | The override permission group priority. | -40 |
@@ -136,8 +160,15 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 # Player Data
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| claim-block-system | Determines which claim block system to use for claims. <br />Note: If set to VOLUME, claim blocks will use the chunk count system to balance 3d claiming. <br />Note: If set to AREA, the standard 2d block count system will be used. | AREA |
-| context-storage-type | The context type used when storing playerdata within a permissions database. <br /> Available types are : global, server, world. (Default: global) <br /> Global will store data globally shared by all servers. <br /> Server will store data per server. Note: This requires servername to be properly set in permissions config. <br /> World will store data per world. | GLOBAL |
+| claim-block-system | Determines which claim block system to use for claims. (Default: AREA) <br />If set to VOLUME, claim blocks will use the chunk count system to balance 3d claiming. <br />If set to AREA, the standard 2d block count system will be used. | AREA |
+| context-storage-type | The context type used when storing playerdata within a permissions database. <br />Available types are : global, server, world. (Default: global) <br />Global will store data globally shared by all servers. <br />Server will store data per server. Note: This requires servername to be properly set in permissions config. <br />World will store data per world.  | GLOBAL |
+| migrate-area-rate | The rate to divide each accrued claim blocks total by. <br />Set to a value greater than -1 to enable. (Default: 256). <br />Note: This should only be used when migrating from volume (3D system) to area (2D system). <br /> In this system, a chunk costs 256 blocks. <br />This requires 'claim-block-system' to be set to AREA. | -1 |
+| migrate-volume-rate | The rate to multiply each accrued claim blocks total by. <br />Set to a value greater than -1 to enable. (Default: 256). <br />Note: This should only be used when migrating from area (2D system) to volume (3D system). <br />Each chunk is worth 65,536 blocks in the new system compared to 256 in old. <br />This requires 'claim-block-system' to be set to VOLUME. |-1 |
+| reset-accrued-claim-blocks | If enabled, resets all playerdata accrued claim blocks to match total cost of claims owned. <br />Example: If a player has 5 basic claims with a total cost of 1000, this will set their accrued claim blocks to 1000. <br />Note: This will also reset all bonus claim blocks to 0. It is highly recommended to backup before using. | FALSE |
+| reset-migrations | If enabled, resets all playerdata migration flags to allow for another migration. <br /> Note: Use this with caution as it can easily mess up claim block data. It is highly recommended to backup before using. | FALSE |
+
+## Provider
+Manages plugin providers that GD hooks into for extended functionality.
 
 
 # PvP
@@ -177,3 +208,8 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | error-corner-block | The visual corner block used to visualize an error in a claim. | minecraft:redstone_ore |
 | error-filler-block | The visual filler block used to visualize an error in a claim. | minecraft:diamond_block |
 | subdivision-accent-block | The visual accent block used for subdivision claims. | minecraft:white_wool or minecraft:wool for legacy versions |
+| subdivision-corner-block | The visual corner block used for subdivision claims. (Default: minecraft:iron_block) | minecraft:iron_block |
+| subdivision-filler-block | The visual filler block used for subdivision claims. (Default: minecraft:white_wool or minecraft:wool for legacy versions) | minecraft:white_wool |
+| town-accent-block | The visual accent block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
+| town-corner-block | The visual corner block used for town claims. (Default: minecraft:glowstone) | minecraft:glowstone |
+| town-filler-block | The visual filler block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
