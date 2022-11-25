@@ -11,13 +11,13 @@ export const en = sidebar({
 		  collapsable: false,
           children: ["", "Configuration", "Permissions", "Commands"],
         },
-		{
+{
 		  text: "Basics",
 		  icon: "search",
 		  prefix: "/wiki/basic/",
 		  collapsable: true,
 		  children: ["Claim-Management", "Claim-Types", "Custom-Alias-Creation", 
-		  "GUI", "Flag-Definitions-GUI", "Options", "PvP",
+		  "GUI", "Bedrock", "Flag-Definitions-GUI", "Options", "PvP",
 		  "Tags", "Tax-System", "Trust-System", "Rent-System"],
 		},
 		{

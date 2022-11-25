@@ -5,13 +5,14 @@ category: info
 icon: gui
 ---
 
-## GUI
+## Available Interfaces
 
 GriefDefender provides a [Chat](#Chat) and [Inventory](#Inventory) GUI for players.  
 Both GUI's can be accessed by executing the command `/gd`.  
 Use `/claimgui` to toggle between GUI's.  
 To default players to inventory GUI on login, grant the permission `griefdefender.login.inventory-gui` to them.  
 
+See more information for getting the setup right in [Bedrock](/wiki/basic/Bedrock)  
 
 ## Chat  
 
@@ -31,7 +32,7 @@ Clicking on a menu link will open the full screen menu.
 
 ![Main Menu Full](https://i.imgur.com/YQmihfG.png)  
 
-#### Claim  
+### Claim  
 
 Clicking on the `CLAIM` link will bring player to the following screen  
 
