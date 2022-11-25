@@ -7,7 +7,7 @@ icon: visual
 
 GriefDefender now supports WECUI!
 
-![WECUI Preview](https://i.imgur.com/96RHwkv.jpg)
+![WECUI Preview](https://i.IMGur.com/dYyUx6m.gif)
 
 In order to use WECUI, the following is required to be installed  
 
@@ -17,8 +17,16 @@ In order to use WECUI, the following is required to be installed
 * WECUI (Fabric Version) - [Download](https://github.com/EngineHub/WorldEditCUI)
 
 ***1.18+***  
-Pending PR https://github.com/EngineHub/WorldEditCUI/pull/53
- 
+* WECUI (Fabric Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a73250)
+* WECUI (Forge Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a73250)
+
+**1.17+**
+ * WECUI (Forge Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a73242)
+
+ **1.16+**
+* WECUI (Fabric Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a70886)
+  * WECUI (Forge Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a70886)
+
 ***1.14+***  
 * WECUI (Fabric Version) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
