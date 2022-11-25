@@ -9,6 +9,7 @@ If you are looking for a more robust Rent/Lease/Sell plugin, I have ported GP Re
 
 Source: [RealEstate](https://github.com/bloodmc/RealEstate)
 
+## Placeholder
 Placeholder                                           | Description | 
 -------------------------------------------------| --------------|
 ```%realestate_claim_rent_amount%```  | Returns the claim's rent amount
