@@ -117,8 +117,14 @@ Basic tool, you can use it to indicate the position of claims, and identify who 
 
 * Right clicking shows existing claim locations
 * Shift right clicking searches for all claims in a 100 block radius and shows their location
-* Left clicking hides the markers  
+* Left clicking hides the markers 
 
+### Item CustomModelData support
+
+The inspection and modification tools now support CustomModelData support. To use, add {key:value} after item identifier.  
+
+Ex.  
+`inspection-tool=minecraft:stick{CustomModelData:2}`
 
 ## Claim Identifiers
 
