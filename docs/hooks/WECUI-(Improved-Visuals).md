@@ -1,15 +1,15 @@
 ---
-title: WECUI
+title: WorldEdit CUI
 tag: Info
 category: hooks
 icon: visual
 ---
 
-GriefDefender now supports WECUI!
+GriefDefender now supports WorldEdit CUI!
 
 ![WECUI Preview](https://i.IMGur.com/dYyUx6m.gif)
 
-In order to use WECUI, the following is required to be installed  
+In order to use WorldEdit CUI, the following is required to be installed  
 
 ## Client 
 

@@ -7,7 +7,9 @@ icon: config
 
 GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience. 
 
-> :warning: Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated `global.conf` file. **All migration variables should ALWAYS be used AFTER a backup of your data is made.** :warning:
+:::: warning Warning
+Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated [global.conf](/wiki/advanced/Global-Config.html) file. **All migration variables should ALWAYS be used AFTER a backup of your data is made.**
+::::
 
 ---
 

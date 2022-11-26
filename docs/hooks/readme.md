@@ -10,6 +10,8 @@ GDHooks is an official GriefDefender addon designed to extend its support for ot
 [**Source**](https://github.com/bloodmc/GDHooks)  
 [**Permissions**](/hooks/gdhooks-perms)  
 
+You can also check in the [Global.config](/wiki/advanced/Global-Config.html) configuration the part of [providers](/wiki/advanced/Global-Config.html#provider)
+
 #### Supported By GDHooks
 
 ## Map

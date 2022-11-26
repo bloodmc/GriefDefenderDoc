@@ -8,9 +8,9 @@ icon: node-tree
 Grant ```griefdefender.user.*``` to your players and both ```griefdefender.user.*``` and ```griefdefender.admin.*``` to your staff/admins then deny permissions you do NOT want.  
 
 ### IMPORTANT
-:warning:  
-
+:::: warning Warning
 If you do NOT grant the permission nodes above and instead grant singular permission nodes, you will not be supported as this goes against our recommendation.  
+::::
 If you alter any admin permissions while in-game, make sure you run `/gdreload` as GD caches various permissions for performance gains.  
 Wildcard permission ```*``` is currently not supported. Use ```griefdefender.user.*``` and ```griefdefender.admin.*``` for admins instead. 
  
