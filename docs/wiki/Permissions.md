@@ -17,7 +17,7 @@ Wildcard permission ```*``` is currently not supported. Use ```griefdefender.use
 As GD makes heavy use of LP's `default` group, the following MUST be setup properly or GD will not function properly 
 
 - All non-griefdefender LP groups have a path in inheritance to the `default` group.  
-- The `default` group is inheriting GD's delivered groups : `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
+- The `default` group is inheriting GD's delivered groups : `griefdefender_claim, griefdefender_claim_group, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
 - The `default` group is NOT disabled. LP strongly recommends to never disable this group.  
 See [LuckPerms - Default Groups](https://luckperms.net/wiki/Default-Groups)
 
@@ -35,6 +35,13 @@ Note: This does not store permissions made through Flag Preset GUI.
 Note: This does not store permissions made through Flag Advanced GUI.  
 * `griefdefender_option` - Stores all option meta permissions applied via command or GUI.  
 * `griefdefender_override` - Stores all flag permissions that contain `gd_claim_override` context.  
+
+* `griefdefender_claim_group` - Stores all flag permissions applied to group claims via `/cf` command.  
+* `griefdefender_trust_accessor` - Stores all trust permissions that have accessor.  
+* `griefdefender_trust_builder` - Stores all trust permissions that have builder.  
+* `griefdefender_trust_container` - Stores all trust permissions that have container.  
+* `griefdefender_trust_manager` - Stores all trust permissions that have manager.  
+* `griefdefender_trust_resident` - Stores all trust permissions that have resident.  
 
 ### Useful MySQL DB queries
 

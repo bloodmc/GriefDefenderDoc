@@ -58,10 +58,10 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 # Context
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
+| enchantments | Whether potion effect contexts should be applied during permission checks. | false |
 |ignored-debug-contexts | A list of ignored context values during debug. |
 | player-equipment | Whether player equipment contexts should be applied during permission checks. | true |
 | potion-effects | Whether potion effect contexts should be applied during permission checks. | true |
-| enchantments | Whether potion effect contexts should be applied during permission checks. | false |
 
 # Economy
 | Variable | Description | Default Value |
@@ -156,6 +156,7 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 | griefdefender-default-priority | The default permission group priority. | -80 |
 | griefdefender-option-priority | The option permission group priority. | 0 |
 | griefdefender-override-priority | The override permission group priority. | -40 |
+| griefdefender-trust-priority | The trust permission group priority. | -70 |
 
 # Player Data
 | Variable | Description | Default Value |
@@ -176,6 +177,7 @@ Manages plugin providers that GD hooks into for extended functionality.
 | --------- | ----------- | ----------- |
 | allow-fly | Whether flying is allowed during PvP. | false |
 | combat-logout | Whether players should be killed if they logout while in pvp combat. | false |
+| deny-messages | Whether players receive pvp deny messages. | True |
 | enabled | Whether pvp protection is enabled for players. <br />Note: Turnings this off disables all PvP functionality in GriefDefender. | true |
 
 # Town
