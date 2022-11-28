@@ -27,7 +27,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Entity: entity-damage, entity-riding, entity-spawn, entity-teleport-from, entity-teleport-to
 * Explosions: explosion-block, explosion-entity
 * Interacts: interact-block-primary, interact-block-secondary, interact-entity-primary, interact-entity-secondary, interact-inventory, interact-inventory-click, interact-item-primary, interact-item-secondary
-* Item: item-drop, item-pickup, item-spawn, item-use
+* Item: item-drop, item-pickup, item-spawn, item-use, item-damage
 * Liquids: liquid-flow
 * Portals: portal-use
 * Projectiles: projectile-impact-block, projectile-impact-entity
