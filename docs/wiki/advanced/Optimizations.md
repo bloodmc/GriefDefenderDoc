@@ -89,8 +89,9 @@ optimization {
 Below you will find user contributed configs for servers that have worked heavily on improving GD performance for their needs
 
 ### IMPORTANT
-:warning:  These settings are tweaked for individual servers and may not work on yours. It is HIGHLY recommended to test these configs before using them in production.
-:warning:  
+:::: warning Warning
+These settings are tweaked for individual servers and may not work on yours. It is HIGHLY recommended to test these configs before using them in production.
+:::: 
 
 <details>
   <summary>Dino's Blacklist</summary>

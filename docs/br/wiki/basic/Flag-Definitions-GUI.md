@@ -1854,9 +1854,9 @@ Como exemplo, vamos supor que você queira negar o acesso do usuário para alter
 Você digitaria o seguinte em LuckPerms
 `/lp group <groupname> conjunto de permissões griefdefender.user.definition.flag.minecraft.user.damage-animals false`
 
-### Valores de sinalização
+### Valores de bandeiras
 
-Conforme mostrado abaixo, ambos os bandeiras de administrador/usuário começam como `true` ou `false` e representam o valor ativo atual da reivindicação em que você está.
+Conforme mostrado abaixo, ambos os bandeiras de administrador/usuário começam como `verdadeiro` ou `falso` e representam o valor ativo atual da reivindicação em que você está.
 
 ### ADMIN
 :warning: As bandeiras de administrador APENAS afetarão a reivindicação em que você está.
@@ -1868,10 +1868,10 @@ Por padrão, os administradores têm acesso a 2 modos `PRESET` e `ADVANCED`.
 O modo `PRESET` está diretamente ligado ao arquivo predefinido de definições de bandeira do minecraft. Cada grupo é lido na interface como uma guia junto com suas definições.
 Existem 2 grupos entregues com os quais o GD é fornecido, `USER` e `ADMIN`.
  
-Ambos os grupos aplicarão bandeiras para afirmar que você está de pé. Se você precisar de sinalizadbandeirasores definidos como padrão, configure-o na configuração conforme mostrado acima.
+Ambos os grupos aplicarão bandeiras para afirmar que você está de pé. Se você precisar de bandeiras definidos como padrão, configure-o na configuração conforme mostrado acima.
 
 
-Definição de Sinalização                                  | Valor padrão | Descrição |
+Definição de bandeira                                  | Valor padrão | Descrição |
 -------------------------------------------------|---------------|--------------|
 ```ambient-spawn``` |  true  | Controla se ambientes, como morcegos, aparecem.
 ```animal-block-modify``` |  true  | Controla se os animais podem modificar blocos, como coelhos comendo cenouras.
@@ -1934,7 +1934,7 @@ Como usuário, se você digitar o comando `/cf`, verá o seguinte
 
 ![INterface do jogador](https://i.imgur.com/LTeNaaD.png)
 
-Definição de Sinalização                                  | Valor padrão | Descrição | 
+Definição de bandeiras                                  | Valor padrão | Descrição | 
 -------------------------------------------------|---------------|--------------|
 ```block-fertilize``` | false | Controla se um jogador pode fertilizar um bloco com farinha de ossos.
 ```chest-access``` | false | Controla se um jogador pode acessar inventários de baús.

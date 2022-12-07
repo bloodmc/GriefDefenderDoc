@@ -15,7 +15,7 @@ Usando `/cf` Fornece uma interface do usuário para editar os bandeiras padrão 
 As bandeiras não se aplicam ao proprietário de uma reivindicação, isso inclui administradores de reivindicações selvagens ou administrativas.
 Use substituir se você deseja forçar bandeiras em todos os usuários em um tipo de reivindicação.
 
-Nota: Os comandos de sinalizador são apenas os Wrappers em torno da API da LuckPerms.Tudo definido via sinalizadores GD pode ser definido diretamente usando LP.Ver [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)  
+Nota: Os comandos de bandeira são apenas os Wrappers em torno da API da LuckPerms.Tudo definido via bandeira GD pode ser definido diretamente usando LP.Ver [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)  
 Nota: Para usar bandeiras com argumentos de comando, você deve ter a permissão `griefdefender.advanced.admin.flags.*`
 
 ## bandeiras de reivindicação padrão
@@ -33,7 +33,7 @@ Todos os bandeiras padrão podem ser personalizados por tipo de reivindicação.
 
 ## Contextos
 
-Todos os sinalizadores requerem um ou mais contextos quando aplicados como uma permissão no LuckPerms.
+Todas as bandeiras requerem um ou mais contextos quando aplicados como uma permissão no LuckPerms.
 Ver [Contextos](/br/wiki/advanced/Contexts.html) Em quais contextos você pode usar e como eles funcionam.
 
 ## Comandos
@@ -54,33 +54,33 @@ ___
 #### `/gd claim debug`
 **Aliases**: `cfd|claimflagdebug`
 
-Alterna o modo de depuração do sinalizador de declaração. Usado para testar sinalizadores em declarações como usuário sem permissões.
+Alterna o modo de depuração do bandeira de reivindicação. Usado para testar bandeira em reivindicação como usuário sem permissões.
 
 ___
 #### `/gd flag claim [<flag> <target> <value> [contexts]`
 **Atalho**: `cf|claimflag`
 
-Edita sinalizadores, pode ser aplicado a tipos de declaração ou declarações específicas.
+Edita bandeiras, pode ser aplicado a tipos de reivindicação ou uma reivindicação específicas.
 
-Observação: o motivo só tem suporte na declaração Wilderness ao usar o contexto de substituição para banir o uso em TODOS os tipos de declaração.
+Observação: o motivo só tem suporte na reivindicação de região selvagem (wilderness) ao usar o contexto de substituição para banir o uso em TODOS os tipos de reivindicação.
 
 ___
 #### `/gd flag group <group> [<flag> <target> <value> [contexts]`
 **Atalho**: `cfg|claimflaggroup`
 
-Edita sinalizadores que se aplicam a um grupo.
+Edita bandeiras que se aplicam a um grupo.
 
 ___
 #### `/gd flag player <player> [<flag> <target> <value> [contexts]`
 **Atalho**: `cfp|claimflagplayer`
 
-Edita sinalizadores que se aplicam a um jogador.
+Edita bandeiras que se aplicam a um jogador.
 
 ___
 #### `/gd flag reset`
 **Atalho**: `cfr|claimflagreset`
 
-Redefine uma reivindicação para sinalizar padrões, os padrões podem ser editados nas configurações.
+Redefine uma reivindicação para bandeiras padrões, os padrões podem ser editados nas configurações.
 
 ## Exemplos de uso
 
@@ -219,7 +219,7 @@ ou
 
 
 ## Controle de bandeira
-A seção de controle de sinalizador permite ativar/desativar a funcionalidade do sinalizador por flag.Por padrão, todos os sinalizadores estão ativados.Se você não tiver utilidade para um sinalizador específico, defina o sinalizador como falso nesta seção. 
+A seção de controle de bandeira permite ativar/desativar a funcionalidade de bandeiras por flag.Por padrão, todos as bandeiras estão ativados.Se você não tiver utilidade para uma bandeiras específico, defina o bandeira como falso nesta seção. 
 
 ```
 # Controls which flags are enabled.

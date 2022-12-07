@@ -7,7 +7,9 @@ icon: config
 
 GriefDefender's default config offers extended customization for your server. Below is a breakdown of all default variables for your convenience. 
 
-> :warning: Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated `global.conf` file. **All migration variables should ALWAYS be used AFTER a backup of your data is made.** :warning:
+:::: warning Warning
+Some options can cause irreparable changes to your data. Please ensure that you have read the sub-text found next to the variables in your generated [global.conf](/wiki/advanced/Global-Config.html) file. **All migration variables should ALWAYS be used AFTER a backup of your data is made.**
+::::
 
 ---
 
@@ -25,7 +27,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Entity: entity-damage, entity-riding, entity-spawn, entity-teleport-from, entity-teleport-to
 * Explosions: explosion-block, explosion-entity
 * Interacts: interact-block-primary, interact-block-secondary, interact-entity-primary, interact-entity-secondary, interact-inventory, interact-inventory-click, interact-item-primary, interact-item-secondary
-* Item: item-drop, item-pickup, item-spawn, item-use
+* Item: item-drop, item-pickup, item-spawn, item-use, item-damage
 * Liquids: liquid-flow
 * Portals: portal-use
 * Projectiles: projectile-impact-block, projectile-impact-entity
@@ -58,10 +60,10 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 # Context
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
+| enchantments | Whether potion effect contexts should be applied during permission checks. | false |
 |ignored-debug-contexts | A list of ignored context values during debug. |
 | player-equipment | Whether player equipment contexts should be applied during permission checks. | true |
 | potion-effects | Whether potion effect contexts should be applied during permission checks. | true |
-| enchantments | Whether potion effect contexts should be applied during permission checks. | false |
 
 # Economy
 | Variable | Description | Default Value |
@@ -156,6 +158,7 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 | griefdefender-default-priority | The default permission group priority. | -80 |
 | griefdefender-option-priority | The option permission group priority. | 0 |
 | griefdefender-override-priority | The override permission group priority. | -40 |
+| griefdefender-trust-priority | The trust permission group priority. | -70 |
 
 # Player Data
 | Variable | Description | Default Value |
@@ -176,6 +179,7 @@ Manages plugin providers that GD hooks into for extended functionality.
 | --------- | ----------- | ----------- |
 | allow-fly | Whether flying is allowed during PvP. | false |
 | combat-logout | Whether players should be killed if they logout while in pvp combat. | false |
+| deny-messages | Whether players receive pvp deny messages. | True |
 | enabled | Whether pvp protection is enabled for players. <br />Note: Turnings this off disables all PvP functionality in GriefDefender. | true |
 
 # Town

@@ -5,7 +5,9 @@ category: claim
 icon: rent
 ---
 
-:warning: The rent system is currently being overhauled for an upcoming version. If you are using a Bukkit platform, it is recommended to use RealEstate on discord :warning: 
+:::: danger  The rent system is currently being overhauled for an upcoming version.
+If you are using a Bukkit platform, it is recommended to use [RealEstate](/hooks/RealEstate.html) on discord
+::::
 
 ![Rent System](https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png)
 

@@ -4,7 +4,6 @@ module.exports = [
 		icon: "plugin",
 		prefix: "/hooks/",
 		collapsable: false,
-		children: ["", "Dynmap", "PlaceholderAPI", 
-		"RealEstate", "WECUI-(Improved-Visuals)"],
+		children: ["", "gdhooks-perms", "Dynmap", "mcMMO", "PlaceholderAPI", "RealEstate", "WECUI-(Improved-Visuals)"],
 	  },
 ];

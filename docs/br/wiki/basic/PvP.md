@@ -33,13 +33,13 @@ Nota: Faça esta alteração se você APENAS quiser que os administradores possa
 ### Permitir PvP globalmente, exceto reivindicações específicas
 
 Se você deseja permitir que os usuários ativem/desativem o PvP, faça o seguinte
-1. Execute o comando `/cf` para iniciar a GUI do sinalizador.
+1. Execute o comando `/cf` para iniciar a Interface de bandeira.
 2. Certifique-se de que a guia `PRESET` `USER` esteja selecionada.
 3. Alterne `pvp` para `falso`.
 
 ### Permitir que os usuários configurem o PvP como quiserem
 
-1. Execute o comando `/cf` para iniciar a GUI do sinalizador.
+1. Execute o comando `/cf` para iniciar a Interface do bandeiras.
 2. Certifique-se de que a guia `PRESET` `USER` esteja selecionada.
 3. Alterne `pvp` para `false` ou `true`.
 
