@@ -17,7 +17,7 @@ Wildcard permission ```*``` is currently not supported. Use ```griefdefender.use
 As GD makes heavy use of LP's `default` group, the following MUST be setup properly or GD will not function properly 
 
 - All non-griefdefender LP groups have a path in inheritance to the `default` group.  
-- The `default` group is inheriting GD's delivered groups : `griefdefender_claim, griefdefender_claim_group, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
+- The `default` group is inheriting GD's delivered groups : `griefdefender_claim` `griefdefender_claim_group` `griefdefender_default` `griefdefender_definition` `griefdefender_option` `griefdefender_override`
 - The `default` group is NOT disabled. LP strongly recommends to never disable this group.  
 See [LuckPerms - Default Groups](https://luckperms.net/wiki/Default-Groups)
 

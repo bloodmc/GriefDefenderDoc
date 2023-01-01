@@ -327,7 +327,7 @@ blacklist {
 - Os jogadores podem ativar as placas de pressão de madeira soltando um item neles
 - Os jogadores podem tosquiar a ovelha de outros jogadores
 - Os jogadores podem colar entidades em outras pessoas reivindicações (principalmente um problema se você usar um plug -in que aluga moradores e outras entidades que não é possível com o baunilha minecraft)
-- As trepadeiras podem matar entidades em reivindicações
+- Os creepers podem matar entidades em reivindicações
 - Os jogadores podem interagir com os quadros de itens apenas quando interagem com um item na mão (gire os itens)
 ```
 </details>

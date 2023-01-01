@@ -124,8 +124,8 @@ Basic tool, you can use it to indicate the position of claims, and identify who 
 The inspection and modification tools now support CustomModelData support. To use, add {key:value} after item identifier.  
 
 Ex.  
-`inspection-tool=minecraft:stick{CustomModelData:1}`
-`modification-tool="minecraft:golden_shovel{CustomModelData:2}`
+`inspection-tool=minecraft:stick{CustomModelData:1}`  
+`modification-tool="minecraft:golden_shovel{CustomModelData:2}`  
 
 ## Claim Identifiers
 

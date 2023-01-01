@@ -12,4 +12,4 @@ Compatible with almost all interactions of Forge mods, from [debugging](/wiki/ad
 Using [debugging](/wiki/advanced/Debugging.html) to create new [flags](/wiki/advanced/Flags.html) controls!
 
 ::: info Mods with presets available
-- Pixelmon ==> [Details](/mods/Pixelmon) | [Presets](/mods/Presets-Pixelmon)
+- Pixelmon ==> [Details](/mods/Pixelmon)

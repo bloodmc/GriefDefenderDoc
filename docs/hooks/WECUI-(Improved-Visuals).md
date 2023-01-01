@@ -34,13 +34,13 @@ In order to use WorldEdit CUI, the following is required to be installed
 * Liteloader Vanilla - [Download](https://www.liteloader.com/download)    OR    Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
 * WECUI (LiteLoader version) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)
 
-## Server
-* FastAsyncWorldEdit - [Download](https://intellectualsites.github.io/download/fawe.html)
-* WorldEdit - [Download](https://builds.enginehub.org/job/worldedit?branch=master)
-
 Simply place both WECUI and Fabric API jars into the mods client folder.
 
 If installed correctly, you should be able to see the same visuals as above when you right-click on a claim using a stick.
+
+## Server
+* FastAsyncWorldEdit - [Download](https://intellectualsites.github.io/download/fawe.html)
+* WorldEdit - [Download](https://builds.enginehub.org/job/worldedit?branch=master)
 
 ## Permission
 

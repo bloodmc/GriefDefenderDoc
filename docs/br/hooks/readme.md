@@ -7,22 +7,18 @@ icon: plugin
 
 GDHooks é um addon oficial do GriefDefender projetado para estender seu suporte para outros plugins. As versões estão disponíveis no discord ou você pode compilá-la no GitHub.
 
-[**Source**](https://github.com/bloodmc/GDHooks)  
-[**Wiki**](https://github.com/bloodmc/GDHooks/wiki)  
-
-::: info Mais informações sobre alguns Hooks
-- [Dynmap](./dynmap) | [PlaceholderAPI](./PlaceholderAPI) | [RealEstate](./RealEstate) | [WorldEdit CUI](WECUI-(Improved-Visuals))
-:::
+[**Código-Fonte**](https://github.com/bloodmc/GDHooks)  
+[**Permissões**](/br/hooks/gdhooks-perms)  
 
 #### Suportado por GDHooks
 
- **Mapas**
+## Mapas
 
 * [BlueMap]: [ [Github](https://github.com/BlueMap-Minecraft/BlueMap) | [Spigot](https://www.spigotmc.org/resources/83557/) | [Ore](https://ore.spongepowered.org/Blue/BlueMap) ]
 * [Dynmap]: [ [Github](https://github.com/webbukkit/dynmap) | [Spigot](https://www.spigotmc.org/resources/274/) ]
 * [Pl3xMap]: [ [Github](https://github.com/pl3xgaming/Pl3xMap) ]
 
-**Lojas**
+## Lojas
 
 * [BossShopPro]: [ [Spigot](https://www.spigotmc.org/resources/222/) | [Github](https://github.com/Blackixx/BossShopPro) ]
 * [ChestShop]: [ [Spigot](https://www.spigotmc.org/resources/51856/) | [Github](https://github.com/ChestShop-authors/ChestShop-3) ] 
@@ -34,7 +30,7 @@ GDHooks é um addon oficial do GriefDefender projetado para estender seu suporte
 * [Slabbo]: [ [Spigot](https://www.spigotmc.org/resources/81368/) | [Github](https://github.com/sevn65/Slaboo) ]
 * [UltimateShops]: [ [Lite](https://www.spigotmc.org/resources/61048/) | [Premium](https://www.spigotmc.org/resources/64925/) ]
 
-**Diversos**
+## Diversos
 
 * [CustomItems(Pago)]: [ [Spigot](https://www.spigotmc.org/resources/36128/) ]
 * [EliteMobs]: [ [Spigot](https://www.spigotmc.org/resources/40090/) | [Github](https://github.com/MagmaGuy/EliteMobs) ]
@@ -49,30 +45,30 @@ GDHooks é um addon oficial do GriefDefender projetado para estender seu suporte
 
 #### Suportado pelo lado do plug-in
 
-**Teletransportes**
+## Teletransportes
 * [BetterRTP]: [ [Spigot](https://www.spigotmc.org/resources/36081/) | [Github](https://github.com/SuperRonanCraft/BetterRTP) ]
 * [HyperDrive]: [ [Github](https://github.com/XZot1K/HyperDrive) | [Spigot](https://www.spigotmc.org/resources/17184/)
 * [WildernessTp]: [ [Spigot](https://www.spigotmc.org/resources/22853/) | [Github](https://github.com/AcmeProject/WildernessTp) ]
 
-**Proteções**
+## Proteções
 
 * [Furniture]: [ [Spigot](https://www.spigotmc.org/resources/9368/) | [Github](https://github.com/Ste3et/FurnitureLib) ] (Os móveis estão protegidos na reivindicação)
 * [Insights]: [ [Addon](https://github.com/galexrt/InsightsGriefDefenderAddon) | [Github](https://github.com/InsightsPlugin/Insights) | [Spigot](https://www.spigotmc.org/resources/56489/)] (Limitar Blocos em suas reivindicações)
 * [Printer]: [ [Spigot](https://www.spigotmc.org/resources/79811/) | [Github](https://github.com/bsalha1/Printer) ] (Anti-Printer ao lado das reivindicações)
 
-**Compartilhamento de dados**
+## Compartilhamento de dados
 * [FastAsyncWorldEdit]: [ [Github](https://github.com/IntellectualSites/FastAsyncWorldEdit) ] (Fornecendo mask,filter,protection)
 * [Plan]: [ [Github](https://github.com/plan-player-analytics/Plan) | [Spigot](https://www.spigotmc.org/resources/32536/) | [Ore](https://ore.spongepowered.org/AuroraLS3/Plan) ] (Obtendo os dados dos jogadores para a web)
 
 
-**Variados**
+## Variados
 * [BanFromClaim]: [ [Spigot](https://www.spigotmc.org/resources/70897/) | [Github](https://github.com/Baktus79/BanFromClaim) ] Permite jogadores banirem outros jogadores de sua(s) reivindicação(ões))
 * [CombatLogX]: [ [Github](https://github.com/SirBlobman/CombatLogX/blob/main/expansion/compatibility/GriefDefender/src/main/java/combatlogx/expansion/compatibility/region/grief/defender/GriefDefenderRegionHandler.java) | [Spigot](https://www.spigotmc.org/resources/31689/) ](Respeita as bandeiras do GriefDefender)
 * [Regionerator]: [ [Github](https://github.com/Jikoo/Regionerator) ] (Excluir a reivindicação quando sua região foi eliminada pelo Regionerator)
 * [[Parties](https://alessiodp.com/parties)]: [ [Spigot](https://bit.ly/parties-spigot) | [Bukkit](https://bit.ly/parties-bukkit) | [Github](https://github.com/AlessioDP/Parties) ] (Dar permissão nas reivindicações, aos Membros das Parties)
 
 
-#### Port disponíveis no Discord
+## Port disponíveis no Discord
 
 * [AdvancedRegionMarket]: [ [Spigot](https://www.spigotmc.org/resources/advancedregionmarket.58732/) ]
 * [RealEstate]: [ [Github](https://github.com/bloodmc/RealEstate) | [Spigot](https://www.spigotmc.org/resources/realestate.66966/) ]

@@ -9,6 +9,7 @@ Se você estiver procurando por um plugin de aluguel/locação/venda mais robust
 
 Fonte: [RealEstate](https://github.com/bloodmc/RealEstate)
 
+## Placeholder
 Placeholder                                           | Descrição | 
 -------------------------------------------------| --------------|
 ```%realestate_claim_rent_amount%```  | Retorna o valor do aluguel da reivindicação

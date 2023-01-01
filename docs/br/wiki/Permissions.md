@@ -15,7 +15,7 @@ Permissão suprema ```*``` atualmente não é suportado. Use ```griefdefender.us
 Como o GriefDefender faz uso intenso do grupo `default` do LuckPerms, o seguinte DEVE ser configurado corretamente ou o GD não funcionará corretamente
 
 - Todos os grupos do LP não-griefdefender têm um caminho que herdam para o grupo `default`  
-- O grupo `default` está herdando os grupos fornecidos pelo GD : `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
+- O grupo `default` está herdando os grupos fornecidos pelo GD : `griefdefender_claim` `griefdefender_claim_group` `griefdefender_default` `griefdefender_definition` `griefdefender_option` `griefdefender_override`
 - O grupo `default` NUNCA deve está desabilitado. LP recomenda nunca desabilitar este grupo.  
 Veja [LuckPerms - Default Groups](https://luckperms.net/wiki/Default-Groups)  
 
@@ -23,16 +23,23 @@ Veja [LuckPerms - Default Groups](https://luckperms.net/wiki/Default-Groups)
 
 Na primeira inicialização do servidor do GriefDefender, 5 grupos no LP serão criados automaticamente se ainda não existirem.
 
-* `griefdefender_claim` - Armazena todas as permissões de bandeiras aplicadas a reivindicações únicas por meio do comando `/cf`.  
-ex. Executando o comando `/cf block-place minecraft:wool true` teria a permissão armazenada neste grupo.  
-Nota: Isso não armazena permissões feitas por meio da Interface de predefinição de bandeiras. 
-* `griefdefender_default` - Armazena todas as permissões de bandeiras que contêm `gd_claim_default` contextos via o comando `/cf`. 
-ex. Executando o comando `/cf block-place minecraft:wool true default=user` teria a permissão armazenada neste grupo.  
-Nota: Isso não armazena permissões feitas por meio da Interface de predefinição de bandeiras.
-* `griefdefender_definition` - Armazena todas as permissões de definição de bandeiras aplicadas via Interface do `/cf`.
-Nota: Isso não armazena permissões feitas por meio do Bandeira Interface avançada. 
-* `griefdefender_option` - Armazena todas as meta permissões de opção aplicadas por meio de comando ou Interface.
-* `griefdefender_override` - Armazena todas as permissões de bandeiras que contêm `gd_claim_override` contexto.  
+* `griefdefender_claim` - Armazena todas as permissões de sinalização aplicadas a declarações únicas por meio do comando `/cf`.  
+ex. A execução do comando `/cf block-place minecraft:wool true` teria a permissão armazenada neste grupo.  
+Nota: Isso não armazena permissões feitas por meio da Interface de predefinição de bandeira.  
+* `griefdefender_default` - Armazena todas as permissões de sinalização que contêm contextos `gd_claim_default` por meio do comando `/cf`.  
+ex. A execução do comando `/cf block-place minecraft:wool true default=user` teria a permissão armazenada neste grupo.  
+Nota: Isso não armazena permissões feitas por meio da Interface de predefinição de bandeira.  
+* `griefdefender_definition` - Armazena todas as permissões de definição de sinalizador aplicadas por meio da Interfac3 `/cf`.
+Nota: Isso não armazena permissões feitas por meio da GUI avançada do sinalizador.  
+* `griefdefender_option` - Armazena todas as meta permissões de opção aplicadas via comando ou Interface.  
+* `griefdefender_override` - Armazena todas as permissões de sinalização que contêm o contexto `gd_claim_override`.  
+
+* `griefdefender_claim_group` - Armazena todas as permissões de sinalização aplicadas a reivindicações de grupo por meio do comando `/cf`.  
+* `griefdefender_trust_accessor` - Armazena todas as permissões de trust que têm accessor.  
+* `griefdefender_trust_builder` - Armazena todas as permissões de trust que têm builder.  
+* `griefdefender_trust_container` - Armazena todas as permissões de trust que têm container.  
+* `griefdefender_trust_manager` - Armazena todas as permissões de trust que têm manager.  
+* `griefdefender_trust_resident` - Armazena todas as permissões de trust que têm resident.  
 
 ### Consultas úteis de banco de dados MySQL
 

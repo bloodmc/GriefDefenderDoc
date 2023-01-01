@@ -5,33 +5,49 @@ category: hooks
 icon: visual
 ---
 
-GriefDefender agora suporta WorldEdit CUI (WECUI)!
+GriefDefender agora suporta WorldEdit CUI!
 
-![Pré-visualização](https://i.IMGur.com/dYyUx6m.gif)
+![WECUI Visualização](https://i.IMGur.com/dYyUx6m.gif)
 
-Para usar o WECUI, é necessário instalar o seguinte
+In order to use WorldEdit CUI, the following is required to be installed  
 
-**Cliente** 
+## Cliente 
 
-**1.19+**
+#### 1.19+
 * WECUI (Versão Fabric) - [Download](https://github.com/EngineHub/WorldEditCUI)
 
-***1.18+***  
-Solicitação de pull pendente https://github.com/EngineHub/WorldEditCUI/pull/53
- 
-***1.14+***  
+#### 1.18+ 
+* WECUI (Versão Fabric) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a73250)
+* WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a73250)
+
+#### 1.17+
+ * WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a73242)
+
+#### 1.16+
+* WECUI (Versão Fabric) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a70886)
+  * WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a70886)
+
+#### 1.14+
 * WECUI (Versão Fabric) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
-***1.12 e abaixo***  
-* Liteloader Vanilla - [Download](https://www.liteloader.com/download)    ou    Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
+#### 1.12 and under
+* Liteloader Vanilla - [Download](https://www.liteloader.com/download)    OU    Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
 * WECUI (Versão LiteLoader) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)
 
-**Servidor**
+Simplesmente coloque os jars WECUI e FabricAPI na pasta de mods.
+
+Se instalado corretamente, você poderá ver os mesmos visuais acima ao clicar com o botão direito do mouse em uma reivindicação usando um graveto.
+
+## Servidor
+* FastAsyncWorldEdit - [Download](https://intellectualsites.github.io/download/fawe.html)
 * WorldEdit - [Download](https://builds.enginehub.org/job/worldedit?branch=master)
 
+## Permissões
 
-Basta colocar os jars da API do WECUI e do Fabric na pasta mods.
+Permissão                                    | Descrição | 
+-------------------------------------------------| --------------|
+worldedit.cui | Permitir cliente em modo promíscuo
 
-Se instalado corretamente, você poderá ver os mesmos recursos visuais acima ao clicar com o botão direito do mouse em uma reivindicação usando um bastão.
+## Isenção de responsabilidade
 
-**Isenção de responsabilidade:** É um problema conhecido que os Shaders não se dão bem com esse recurso devido ao Optifine ter seu próprio pipeline de renderização. Shaders são provavelmente ainda mais personalizados e simplesmente quebram certas coisas. Os pacotes de recursos, por outro lado, funcionarão bem. Portanto, use por sua conta e risco.
+É um problema conhecido que os Shaders não se dão bem com esse recurso devido ao Optifine ter seu próprio pipeline de renderização. Shaders são provavelmente ainda mais personalizados e simplesmente quebram certas coisas. Os pacotes de recursos, por outro lado, funcionarão bem. Portanto, use por sua conta e risco.

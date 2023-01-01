@@ -9,6 +9,6 @@ module.exports = [
 		icon: "Options",
 		prefix: "/br/mods/",
 		collapsable: false,
-		children: ["Pixelmon", "Presets-Pixelmon"],
+		children: ["Pixelmon"],
 	  },
 ];

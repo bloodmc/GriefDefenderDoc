@@ -119,6 +119,13 @@ Ferramenta básica, você pode usá-la para indicar a posição das reivindicaç
 * Desligue o clique com o botão direito do clique em busca de todas as reivindicações em um raio de 100 blocos e mostra sua localização
 * Clique de cliques à esquerda oculta os marcadores
 
+### Suporte a CustomModelData
+
+The inspection and modification tools now support CustomModelData support. To use, add {key:value} after item identifier.  
+
+Ex.  
+`inspection-tool=minecraft:stick{CustomModelData:1}`  
+`modification-tool="minecraft:golden_shovel{CustomModelData:2}`  
 
 ## Identificadores de reivindicação
 
@@ -359,7 +366,7 @@ Para remover a entrada para um usuário específico
 Para desativar a criação de reivindicações para um grupo específico de usuários em um mundo chamado `valhalla`, Digite o seguinte comando
 `/lp group <group> permission set griefdefender.user.claim.create.* false world=valhalla`
 
-### DGD isável em um mundo específico
+### GD desativado em um mundo específico
 
 Para desativar a funcionalidade de GD em um mundo do mundo superior nomeado `valhalla`, vá para a pasta de configuração do GD e então `worlds`
 

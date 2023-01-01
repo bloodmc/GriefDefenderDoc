@@ -9,7 +9,7 @@ Para usar o Dynmap no GriefDefender, você deve ter GDHooks instalado.
 Veja [GDHooks](/br/hooks)  
 
 
-**Bukkit** 
+## Bukkit
  
 * Dynmap - [Download](https://www.spigotmc.org/resources/dynmap.274/) 
 
