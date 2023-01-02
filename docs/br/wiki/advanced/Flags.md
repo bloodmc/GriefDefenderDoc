@@ -179,6 +179,7 @@ Todas as informações fornecidas dentro () serão um dos exemplos.
 - **interact-item-primary** - Use para gerenciar a interação do clique com o botão esquerdo com os itens ()
 - **interact-item-secondary** - Use para gerenciar o clique com o botão direito do mouse com a interação com os itens ()
 - **inventory-item-move** - Use para gerenciar o movimento dos itens de funis.(Nota: atualmente não é usado devido ao impacto do desempenho)
+- **item-damage** - Usado para permitir ou negar danos a um item.
 - **item-drop** - Use para gerenciar jogadores soltando itens (jogador aleatório não pode deixar cair um bloco de sujeira)
 - **item-pickup** - Use para gerenciar itens de retirada (jogador aleatório não é para pegar um bloco de sujeira cair)
 - **item-spawn** - Use para gerenciar a desova de itens de blocos ou itens no mundo (como a caixa de presente Pixelmon)

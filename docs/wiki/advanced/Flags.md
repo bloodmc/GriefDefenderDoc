@@ -179,6 +179,7 @@ All Info provided inside () will be one of the examples.
 - **interact-item-primary** - Use to manage left-click interaction with items ()
 - **interact-item-secondary** - Use to manage right-click interaction with items ()
 - **inventory-item-move** - Use to manage item movement from hoppers.  (Note: Currently not used due to performance impact)
+- **item-damage** - Used to allow or deny damage to an item.
 - **item-drop** - Use to manage Players dropping items (Random Player not being able to drop a dirt block)
 - **item-pickup** - Use to manage picking up dropped items (Random Player not being to pick up a dropped dirt block)
 - **item-spawn** - Use to manage spawning of items from blocks or items in the world (Like Pixelmon Gift Box)
