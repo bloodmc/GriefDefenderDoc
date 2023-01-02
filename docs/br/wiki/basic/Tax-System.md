@@ -8,18 +8,18 @@ icon: tax
 ## Em geral
 A GD fornece um sistema taxas para os proprietários de reivindicações fiscais com base na quantidade de terra que possuem.
 
-Este sistema está desabilitado por padrão. Para habilitar, abra [`global.conf`](/wiki/advanced/Global-Config.html) e defina a configuração `tax-system` para `true`.
+Este sistema está desabilitado por padrão. Para habilitar, abra [`global.conf`](/br/wiki/advanced/Global-Config.html) e defina a configuração `tax-system` para `true`.
 
 ## Configuração
 
 ### Tempo de aplicação do imposto
 Por padrão, os impostos são cobrados dos proprietários de reivindicações em tempo real diariamente às 00:00, horário militar.
-Você pode configurar este tempo ajustando a configuração `tax-apply-hour` em [`global.conf`](/wiki/advanced/Global-Config.html).
+Você pode configurar este tempo ajustando a configuração `tax-apply-hour` em [`global.conf`](/br/wiki/advanced/Global-Config.html).
 
 ### Taxa de imposto
 Por padrão, os proprietários de reivindicações são cobrados uma taxa fixa de '0,1' em moeda por bloco que possuem.
 Por ex. Uma reivindicação de 10 x 10 seria cobrada como "0,1 * 100", que seria um total de "10".
-Você pode configurar esta taxa para todos os usuários ajustando `tax-rate` em [`global.conf`](/wiki/advanced/Global-Config.html) em `default-user-options`.
+Você pode configurar esta taxa para todos os usuários ajustando `tax-rate` em [`global.conf`](/br/wiki/advanced/Global-Config.html) em `default-user-options`.
 
 Observação: as reivindicações 2D são cobradas apenas como `comprimento * largura`. A altura não está incluída.
 Nota: as reivindicações 3D são cobradas `comprimento * largura * altura`.
@@ -28,7 +28,7 @@ Nota: as reivindicações 3D são cobradas `comprimento * largura * altura`.
 Se os proprietários de uma reivindicação não pagarem seus impostos, o GD congelará a reivindicação.
 Congelar a reivindicação impede que o titular da reivindicação interaja com a reivindicação até que ele pague o saldo fiscal completo.
 Por padrão, isso ocorre após 7 dias de saldo não pago.
-Esta configuração pode ser ajustada alterando `tax-expiration` em [`global.conf`](/wiki/advanced/Global-Config.html) em `default-user-options`.
+Esta configuração pode ser ajustada alterando `tax-expiration` em [`global.conf`](/br/wiki/advanced/Global-Config.html) em `default-user-options`.
 
 ### Exclusão da reivindicação por imposto
 Se o proprietário de uma reivindicação não pagar seus impostos após a configuração "expiração de impostos", o GD iniciará uma contagem regressiva para excluir a reivindicação.

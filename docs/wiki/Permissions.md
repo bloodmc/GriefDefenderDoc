@@ -12,7 +12,8 @@ Grant ```griefdefender.user.*``` to your players and both ```griefdefender.user.
 If you do NOT grant the permission nodes above and instead grant singular permission nodes, you will not be supported as this goes against our recommendation.  
 ::::
 If you alter any admin permissions while in-game, make sure you run `/gdreload` as GD caches various permissions for performance gains.  
-Wildcard permission ```*``` is currently not supported. Use ```griefdefender.user.*``` and ```griefdefender.admin.*``` for admins instead. 
+Wildcard permission ```*``` is currently not supported.  
+Use ```griefdefender.user.*``` and ```griefdefender.admin.*``` for admins instead. 
  
 As GD makes heavy use of LP's `default` group, the following MUST be setup properly or GD will not function properly 
 
@@ -65,7 +66,10 @@ SELECT * FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('
 
 #### Delete all user claim permissions
 
-:warning: Backup LuckPerms database before performing deletes. You have been WARNED! :warning:
+:::: warning Warning
+Backup LuckPerms database before performing deletes.  
+You have been WARNED!
+::::
 
 ```sql
 DELETE FROM minecraft.luckperms_group_permissions A, griefdefender.gd_claim_data B WHERE A.contexts LIKE CONCAT('%', BIN_TO_UUID(B.claim_uuid), '%') AND B.claim_type <> 'admin'

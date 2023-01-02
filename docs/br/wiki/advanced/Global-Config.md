@@ -5,6 +5,11 @@ category: info
 icon: config
 ---
 
+::: danger Desatualizado
+Esta parte da Wiki esta desatualizada para o português-brasil.  
+Utilize a [Wiki na lingua inglesa](/wiki/advanced/Global-Config.html)
+:::
+
 A configuração padrão do Griefdefender oferece personalização estendida para o seu servidor.Abaixo está um detalhamento de todas as variáveis padrão para sua conveniência.
 
 > :warning: Algumas opções podem causar alterações irreparáveis em seus dados.Certifique-se de ter lido o subtexto encontrado ao lado das variáveis em sua [`global.conf`](/br/wiki/advanced/Global-Config.html). **Todas as variáveis de migração sempre devem ser usadas após o backup de seus dados.** :warning:

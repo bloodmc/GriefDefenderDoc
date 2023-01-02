@@ -8,9 +8,12 @@ icon: node-tree
 Conceda ```griefdefender.user.*``` para seus jogadores e também ```griefdefender.user.*``` e ```griefdefender.admin.*```para sua equipe/administradores, então negue as permissões que você NÃO deseja dar a eles.
 
 ### IMPORTANTE
-:warning: Se você NÃO conceder os nodes de permissão acima e, em vez disso, conceder nodes de permissão únicos, você não terá suporte, pois isso vai contra nossa recomendação.
+:::: warning Aviso
+Se você NÃO conceder os nodes de permissão acima e, em vez disso, conceder nodes de permissão únicos, você não terá suporte, pois isso vai contra nossa recomendação.
+::::
 Se você alterar qualquer permissão de administrador durante o jogo, certifique-se de executar `/gdreload`, pois o GD armazena em cache várias permissões para ter ganhos de desempenho.
-Permissão suprema ```*``` atualmente não é suportado. Use ```griefdefender.user.*``` e ```griefdefender.admin.*``` para os administradores. 
+Permissão suprema ```*``` atualmente não é suportado.  
+Use ```griefdefender.user.*``` e ```griefdefender.admin.*``` para os administradores. 
  
 Como o GriefDefender faz uso intenso do grupo `default` do LuckPerms, o seguinte DEVE ser configurado corretamente ou o GD não funcionará corretamente
 
@@ -63,7 +66,10 @@ SELECT * FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('
 
 #### Excluir todas as permissões de reivindicação do usuário
 
-:warning: Faça backup do banco de dados LuckPerms antes de executar estas exclusões. VOCE FOI AVISADO! :warning:
+:::: warning Aviso
+Faça backup do banco de dados LuckPerms antes de executar estas exclusões.  
+VOCE FOI AVISADO!
+::::
 
 ```sql
 DELETE FROM minecraft.luckperms_group_permissions A, griefdefender.gd_claim_data B WHERE A.contexts LIKE CONCAT('%', BIN_TO_UUID(B.claim_uuid), '%') AND B.claim_type <> 'admin'

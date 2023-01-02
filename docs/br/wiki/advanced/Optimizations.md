@@ -334,5 +334,5 @@ blacklist {
 </details>
 
 ## Utilize Aikar's Flags
-O GriefDefender foi projetado para utilizar os recursos da melhor maneira, por isso é altamente recomendável que você use as bandeiras do Aikar  
+O GriefDefender foi projetado para utilizar os recursos da melhor maneira, por isso é altamente recomendável que você use as bandeiras do Aikar.  
 Veja em [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)  

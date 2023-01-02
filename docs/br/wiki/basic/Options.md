@@ -27,7 +27,7 @@ Grupo - `/cog <group> <option> <value> [contexts]`
 Todas as opções podem usar um ou mais contextos quando aplicadas como meta em LuckPerms.
 Veja [Contextos](/br/wiki/advanced/Contexts.html) sobre quais contextos você pode usar e como eles funcionam.
 
-### Exemplos  
+#### Exemplos  
 
 * Envie uma mensagem de boas-vindas aos jogadores que fizerem uma reivindicação como console. 
 `/claimoption player-command-enter "/tellraw %player% [\"\",{\"text\":\"Bem-vindo %player%!\",\"color\":\"gold\"},{\"text\":\"\\nVocê está visitando a reivindicação do %owner%s.\\nAproveite sua estadia!\\n\\n-\"}]" run_for=member run_as=console`  
@@ -89,7 +89,7 @@ DELETE FROM luckperms_user_permissions WHERE permission LIKE '%griefdefender\\\\
 ```
 
 
-Consulte https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta e https://luckperms.net/wiki/Meta-Commands para obter mais informações sobre como usá-lo diretamente no LuckPerms
+Consulte [LuckPerms - Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta) e [LuckPerms - Meta Commands](https://luckperms.net/wiki/Meta-Commands) para obter mais informações sobre como usá-lo diretamente no LuckPerms
 
 ## Opções globais
 

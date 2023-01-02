@@ -6,8 +6,9 @@ icon: trust
 ---
 
 ### IMPORTANT
-:warning:  
+:::: warning Aviso
 O trust NÃO é herdada por subdivisões com herdar ativado. Se um proprietário de reivindicação quiser confiar (trust) em um jogador em todas as reivindicações, incluindo subdivisões, o comando `/trustall` deverá ser usado.
+::::
 
 Existem quatro tipos diferentes de trust: Accessors, Builders, Containers, e Managers.
 

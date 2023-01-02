@@ -341,5 +341,5 @@ blacklist {
 </details>
 
 ## Use Aikar's Flags
-GriefDefender was designed to utilize resources in the best way, so it is highly recommended that you use Aikar's flags  
+GriefDefender was designed to utilize resources in the best way, so it is highly recommended that you use Aikar's flags.  
 See [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)  

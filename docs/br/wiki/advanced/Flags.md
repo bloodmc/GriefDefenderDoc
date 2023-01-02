@@ -15,21 +15,12 @@ Usando `/cf` Fornece uma interface do usuário para editar os bandeiras padrão 
 As bandeiras não se aplicam ao proprietário de uma reivindicação, isso inclui administradores de reivindicações selvagens ou administrativas.
 Use substituir se você deseja forçar bandeiras em todos os usuários em um tipo de reivindicação.
 
-Nota: Os comandos de bandeira são apenas os Wrappers em torno da API da LuckPerms.Tudo definido via bandeira GD pode ser definido diretamente usando LP.Ver [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)  
+Nota: Os comandos de bandeira são apenas os Wrappers em torno da API da LuckPerms.Tudo definido via bandeira GD pode ser definido diretamente usando LP.  
+Ver [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)  
 Nota: Para usar bandeiras com argumentos de comando, você deve ter a permissão `griefdefender.advanced.admin.flags.*`
 
 ## bandeiras de reivindicação padrão
 Todos os bandeiras padrão podem ser personalizados por tipo de reivindicação. Atualmente, o Griefdefender suporta bandeiras padrão para administrador, básico, cidade e regiaõ selvagem. Você pode modificar os padrões em `flags.conf` e `presets/minecraft.conf`.
-
-## Índice
-
-* [Comandos](/br/wiki/advanced/Flags.html#comandos)
-  * [Argumentos](/br/wiki/advanced/Flags.html#argumentos)
-  * [Lista de comandos](/br/wiki/advanced/Flags.html#lista-de-comandos)
-* [Exemplos de usos](/br/wiki/advanced/Flags.html#exemplos-de-uso)
-* [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)
-* [Bandeiras disponíveis](/br/wiki/advanced/Flags.html#bandeiras-disponiveis)
-
 
 ## Contextos
 
