@@ -4,7 +4,7 @@ tag: mods
 category: mods
 ---
 
-### Designed from the ground up for mods
+#### Designed from the ground up for mods
 
 [Archlight](https://github.com/IzzelAliz/Arclight)/[Mohist](https://mohistmc.com/) supported.
 

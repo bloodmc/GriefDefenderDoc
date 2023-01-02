@@ -9,12 +9,12 @@ GriefDefender agora suporta WorldEdit CUI!
 
 ![WECUI Visualização](https://i.IMGur.com/dYyUx6m.gif)
 
-In order to use WorldEdit CUI, the following is required to be installed  
+Para usar o WorldEdit CUI, é necessário ter instalado no cliente e no servidor
 
 ## Cliente 
 
 #### 1.19+
-* WECUI (Versão Fabric) - [Download](https://github.com/EngineHub/WorldEditCUI)
+* WECUI (Versão Fabric/Quilt) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3A73407)
 
 #### 1.18+ 
 * WECUI (Versão Fabric) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a73250)
@@ -25,16 +25,19 @@ In order to use WorldEdit CUI, the following is required to be installed
 
 #### 1.16+
 * WECUI (Versão Fabric) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a70886)
-  * WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a70886)
+* WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a70886)
 
 #### 1.14+
 * WECUI (Versão Fabric) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
 #### 1.12 and under
-* Liteloader Vanilla - [Download](https://www.liteloader.com/download)    OU    Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
-* WECUI (Versão LiteLoader) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)
+* Liteloader Vanilla - [Download](https://www.liteloader.com/download)
+Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)  
+WECUI (Versão LiteLoader) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)  
+<hr>
 
-Simplesmente coloque os jars WECUI e FabricAPI na pasta de mods.
+### FabricAPI/QuiltAPI
+Simplesmente coloque os jars WECUI e FabricAPI/QuiltAPI na pasta de mods.
 
 Se instalado corretamente, você poderá ver os mesmos visuais acima ao clicar com o botão direito do mouse em uma reivindicação usando um graveto.
 

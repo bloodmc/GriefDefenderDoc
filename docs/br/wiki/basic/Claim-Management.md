@@ -398,7 +398,7 @@ GriefDefender {
 
 ## Como lidar com explosões acima do nível da superfície
 
-Abrir o global.conf encontrado em `./plugins/griefdefender` em Bukkit e `./config/griefdefender` e em servidores de Sponge.
+Abrir o [global.conf](/br/wiki/advanced/Global-Config.html) encontrado em `./plugins/griefdefender` em Bukkit e `./config/griefdefender` e em servidores de Sponge.
 Você encontrará as seguintes configurações de configuração 
 
 * `explosion-block-surface-blacklist` - Permite que você faça uma fonte de bloco específica da lista negra, como TNT, acima do nível de superfície definido pela configuração `explosion-surface-block-level`. Para a lista negra de todos os blocos, use o ID `any`.
@@ -413,14 +413,14 @@ Para substituir um mundo chamado `valhalla` com tipo de ambiente `overworld`, tA
 
 #### Bukkit
 * Localize world.conf dentro de `./plugins/GriefDefender/worlds/normal/valhalla/world.conf`
-* Copiar reivindicações de criação de configurações de `global.conf` Para novo world.conf
+* Copiar reivindicações de criação de configurações de [`global.conf`](/br/wiki/advanced/Global-Config.html) Para novo world.conf
 * Abrir `./plugins/GriefDefender/options.conf`
 * Debaixo `default-user-options` definir `min-level` Para combinar a configuração de substituição
 * Debaixo `default-user-options` definir `max-level` Para combinar a configuração de substituição
 
 #### Sponge
 * Localize world.conf in `./config/GriefDefender/worlds/overworld/valhalla/world.conf`
-* Copiar reivindicações de criação de configurações de `global.conf` Para novo world.conf
+* Copiar reivindicações de criação de configurações de [`global.conf`](/br/wiki/advanced/Global-Config.html) Para novo world.conf
 * Abrir `./config/GriefDefender/options.conf`
 * Debaixo `default-user-options` definir `min-level` Para combinar a configuração de substituição
 * Debaixo `default-user-options` definir `max-level` Para combinar a configuração de substituição

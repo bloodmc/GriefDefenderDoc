@@ -4,7 +4,7 @@ tag: mods
 category: mods
 ---
 
-### Projetado desde o início para mods.
+#### Projetado desde o início para mods.
 
 [Archlight](https://github.com/IzzelAliz/Arclight)/[Mohist](https://mohistmc.com/) são suportados.
 

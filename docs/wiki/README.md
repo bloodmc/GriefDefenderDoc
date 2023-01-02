@@ -248,7 +248,7 @@ For example, if you want to use mysql, you would set this value to `mysql`.
 :warning: Before enabling economy mode, make sure to test on a TEST server to make sure all settings are working properly. :warning:
 
 By default, GD allows players to accrue claim blocks to be used for claim creation.  
-However, If you want all claims created to use economy directly instead of claim blocks then set `economy-mode` to `true` in `global.conf`.  
+However, If you want all claims created to use economy directly instead of claim blocks then set `economy-mode` to `true` in [`global.conf`](/wiki/advanced/Global-Config.html).  
 With `economy-mode` turned on, all claim creations will prompt players with a confirmation of claim cost. Once confirmed, the funds will be taken from the player account.  
 If you want to bypass these confirmations, set the permission `griefdefender.user.claim.economy.create-confirm` to `false`.
 

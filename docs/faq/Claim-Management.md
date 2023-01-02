@@ -145,7 +145,7 @@ They can use the command `/gdconfirm`
 
 ## 16. How do I prevent players from earning blocks while AFK?  
 
-1. Open `global.conf`.  
+1. Open [`global.conf`](/wiki/advanced/Global-Config.html).  
 2. Search for the following section  
 ```
 # The minimum threshold of movement (in blocks) required to receive accrued claim blocks. (Default: 0)

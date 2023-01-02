@@ -5,6 +5,8 @@ category: hooks
 icon: placeholder
 ---
 
+[PlaceholderAPI](https://github.com/PlaceholderAPI/PlaceholderAPI)/[Versão para Sponge](https://github.com/randombyte-developer/PlaceholderAPI/releases/) é um plugin para servidores Spigot que permite que os proprietários de servidores exibam informações de vários plugins com um formato uniforme.  
+
 Placeholder                                           | Descrição | 
 -------------------------------------------------| --------------|
 ```%griefdefender_claim_admin%```  | Retorna o valor total de reivindicações administrativa na reivindicação em que você está.

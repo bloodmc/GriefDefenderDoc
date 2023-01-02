@@ -80,7 +80,7 @@ notify-exit
 2. Remove WorldGuard jar from plugins
 3. Start the server at least once to generate GriefDefender configs.
 4. Stop server
-5. Edit global.conf under ./plugins/GriefDefender/
+5. Edit [global.conf](/wiki/advanced/Global-Config.html) under ./plugins/GriefDefender/
 6. Locate section
 ```
 # Set to true to enable WorldGuard data migrator.
