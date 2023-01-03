@@ -8,13 +8,13 @@ icon: tax
 ## General  
 GD provides a tax system to tax claim owners based on the amount of land they own.  
 
-This system is disabled by default. To enable, open up `global.conf` and set the `tax-system` setting to `true`.  
+This system is disabled by default. To enable, open up [`global.conf`](/wiki/advanced/Global-Config.html) and set the `tax-system` setting to `true`.  
 
 ## Configuration  
 
 ### Tax apply time
 By default, taxes are taken from claim owners in real-time daily at 00:00 military time.  
-You can configure this time by adjusting the setting `tax-apply-hour` in `global.conf`.  
+You can configure this time by adjusting the setting `tax-apply-hour` in [`global.conf`](/wiki/advanced/Global-Config.html).  
 
 ### Tax rate  
 By default, claim owners are charged a flat rate of `0.1` in currency per block they own.  

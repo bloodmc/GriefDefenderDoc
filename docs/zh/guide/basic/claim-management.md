@@ -187,7 +187,7 @@ GriefDefender {
 
 ## How to handle explosions above surface level
 
-Open up the global.conf found under `./plugins/griefdefender` on Bukkit and `./config/griefdefender` on Sponge servers.  
+Open up the [global.conf](/wiki/advanced/Global-Config.html) found under `./plugins/griefdefender` on Bukkit and `./config/griefdefender` on Sponge servers.  
 You will find the following config settings  
 
 * `explosion-block-surface-blacklist` - Allows you to blacklist specific block source, such as tnt, above the surface level defined by setting `explosion-surface-block-level`. To blacklist ALL blocks, use the id `any`.
@@ -202,14 +202,14 @@ To override a world named `valhalla` with environment type `overworld`, the foll
 
 #### Bukkit
 * Locate world.conf in `./plugins/GriefDefender/worlds/normal/valhalla/world.conf`
-* Copy claim create settings from `global.conf` to new world.conf
+* Copy claim create settings from [`global.conf`](/wiki/advanced/Global-Config.html) to new world.conf
 * Open `./plugins/GriefDefender/options.conf`
 * Under `default-user-options` set `min-level` to match override setting
 * Under `default-user-options` set `max-level` to match override setting
 
 #### Sponge
 * Locate world.conf in `./config/GriefDefender/worlds/overworld/valhalla/world.conf`
-* Copy claim create settings from `global.conf` to new world.conf
+* Copy claim create settings from [`global.conf`](/wiki/advanced/Global-Config.html) to new world.conf
 * Open `./config/GriefDefender/options.conf`
 * Under `default-user-options` set `min-level` to match override setting
 * Under `default-user-options` set `max-level` to match override setting
@@ -251,7 +251,7 @@ Note: These settings will only work for newly created claims. If the world has a
 
 **1. How do allow all users to create claims for free?**
 
-Set meta `griefdefender.initial-blocks` to a high value such as `999999999`. See https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#luckperms. You should also disable `claim-block-task` under claim category in `global.conf` so players do not accrue claim blocks.  
+Set meta `griefdefender.initial-blocks` to a high value such as `999999999`. See https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#luckperms. You should also disable `claim-block-task` under claim category in [`global.conf`](/wiki/advanced/Global-Config.html) so players do not accrue claim blocks.  
 
 **2. How do I transfer a claim to another player for free?**
 

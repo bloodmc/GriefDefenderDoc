@@ -195,7 +195,7 @@ Nota: Todas as seções de configuração são classificadas automaticamente em 
 GD suporta os seguintes idiomas : `de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK`
 
 O idioma padrão é `en_US`.  
-Para alterar o idioma, abra o `global.conf` e encontre `message` mude a linha `locale="en_US"` para `locale="pt_BR"`
+Para alterar o idioma, abra o [`global.conf`](/br/wiki/advanced/Global-Config.html) e encontre `message` mude a linha `locale="en_US"` para `locale="pt_BR"`
 
 ### Armazenamento
 
@@ -294,9 +294,9 @@ Depois que o GD estiver instalado e em execução, veja [Gestão de Reivindicaç
 
 ### Opções
 :warning: É MUITO IMPORTANTE que você veja [Opções](/br/wiki/basic/Options.html) antes de prosseguir. :warning:  
-:warning: Todas as opções persistentes (meta) definidas em LuckPerms terão prioridade sobre os padrões em `options.conf` :warning:
+:warning: Todas as opções persistentes (meta) definidas em LuckPerms terão prioridade sobre os padrões em [`global.conf`](/br/wiki/advanced/Global-Config.html)` :warning:
 
-Se você quiser definir configurações como com quantos blocos iniciais um jogador pode começar, limites de criação de reivindicação, etc., então você deve começar ajustando as opções padrão do GD encontradas em `options.conf`. Todas as configurações de opção padrão são aplicadas na inicialização do servidor.
+Se você quiser definir configurações como com quantos blocos iniciais um jogador pode começar, limites de criação de reivindicação, etc., então você deve começar ajustando as opções padrão do GD encontradas em [`global.conf`](/br/wiki/advanced/Global-Config.html). Todas as configurações de opção padrão são aplicadas na inicialização do servidor.
 
 [Paper]: https://papermc.io/downloads
 [Spigot]: https://www.spigotmc.org/wiki/buildtools/

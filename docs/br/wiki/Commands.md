@@ -87,7 +87,7 @@ Nota: Use `public` se quiser confiar em todos os jogadores.
 * [/gd abandon world [mundo]](#gd-abandon-world)
 * [/gd ban [hand | \<tipo\> \<target\> [message]]](#gd-ban)
 * [/gd claim clear \<alvo\> [identifier]](#gd-claim-clear) 
-* [/gd claim ignore](#gd-claim-ignore)
+* [/gd toggle ignore](#gd-toggle-ignore)
 * [/gd claim restore](#gd-claim-restore)
 * [/gd claim schematic \<create|delete\> \<name\>](#gd-claim-schematic)
 * [/gd delete claim [identifier]](#gd-delete-claim)
@@ -537,7 +537,7 @@ ___
 Exclui todas as reivindicação administrativas
 
 ___
-#### `/gd claim ignore`
+#### `/gd toggle ignore`
 **Atalho**: `ignoreclaims`  
 
 Alterna o ignorar as proteções das reivindicações

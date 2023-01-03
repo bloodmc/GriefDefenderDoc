@@ -6,8 +6,9 @@ icon: trust
 ---
 
 ### IMPORTANT
-:warning:  
-Trust is NOT inherited by subclaims that have inheritance turned on. If a claim owner wants to trust a player across all claims including subclaims, the `/trustall` command should be used.  
+:::: warning Warning
+Trust is NOT inherited by subclaims that have inheritance turned on. If a claim owner wants to trust a player across all claims including subclaims, the `/trustall` command should be used. 
+:::: 
 
 There four different types of trust: Accessors, Builders, Containers, and Managers.
 

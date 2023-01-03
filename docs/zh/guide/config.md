@@ -26,7 +26,7 @@ config/
     │   │   └── 由其他方式引入的世界(如 Mod/数据包...)
     │   └── 
     ├── flags.conf 阅览 标签页面
-    ├── global.conf 阅览 作用域
+    ├──[global.conf](/wiki/advanced/Global-Config.html)阅览 作用域
     └── options.conf 阅览 选项页面
 ```
 worlds/ --- [作用域](#作用域)
@@ -34,7 +34,7 @@ worlds/ --- [作用域](#作用域)
 <br>options.conf --- [选项页面](./advanced/options)
 
 ### 作用域
-默认的『全局』配置文件储存在 `global.conf`，
+默认的『全局』配置文件储存在 [`global.conf`](/wiki/advanced/Global-Config.html)，
 这些文件有详细的注释可以让你了解每个选项的作用。
 
 一共有 3 种类型的配置文件:
@@ -46,9 +46,9 @@ worlds/ --- [作用域](#作用域)
 维度配置文件是用来影响某个维度或一组世界的. 这些类型的配置文件将覆盖全局配置文件的设置. 世界配置文件仅用于修改单个世界.
 世界配置文件将**覆盖维度和全局配置文件**的设置。
 :::: info 例子
-你想在主世界更改`global.conf`已经定义过的圈地工具。
+你想在主世界更改[`global.conf`](/wiki/advanced/Global-Config.html)已经定义过的圈地工具。
 你会找到 worlds/minecraft(游戏原版)/normal(即普通世界生成)/world/world.conf
-仿制 global.conf 的结构，在里面输入
+仿制[global.conf](/wiki/advanced/Global-Config.html)的结构，在里面输入
 ```
 GriefDefender {
     claim {

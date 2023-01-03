@@ -5,11 +5,11 @@ category: info
 icon: optimization-timer
 ---
 
-O Griefdefender fornece controle interno para quase todas as ações do seu mundo Minecraft.No entanto, tentar controlar muito às vezes pode causar problemas de recursos, dependendo da carga do servidor.A solução para esse problema é usar a configuração de otimização interna encontrada em `global.conf` e aprendendo a usar [listas negras](/br/wiki/Configuration.html#blacklist-lista-negra). 
+O Griefdefender fornece controle interno para quase todas as ações do seu mundo Minecraft.No entanto, tentar controlar muito às vezes pode causar problemas de recursos, dependendo da carga do servidor.A solução para esse problema é usar a configuração de otimização interna encontrada em [`global.conf`](/br/wiki/advanced/Global-Config.html) e aprendendo a usar [listas negras](/br/wiki/Configuration.html#blacklist-lista-negra). 
 
 ### Configuração de otimização global
 
-Abaixo está um trecho das configurações de otimização que você pode encontrar em GD's `global.conf`
+Abaixo está um trecho das configurações de [otimização](/br/wiki/advanced/Global-Config.html#otimizacao) que você pode encontrar no GriefDefender na parte do [`global.conf`](/br/wiki/advanced/Global-Config.html)
 
 <details>
   <summary>Configuração de otimização global</summary>
@@ -82,8 +82,9 @@ optimization {
 Abaixo, você encontrará configurações contribuídas pelo usuário para servidores que trabalharam fortemente para melhorar o desempenho do GD para suas necessidades
 
 ### IMPORTANTE
-:warning:  Essas configurações são ajustadas para servidores individuais e podem não funcionar na sua.É altamente recomendável testar essas configurações antes de usá-las em seu servidor principal.
-:warning:  
+:::: warning Warning
+Essas configurações são ajustadas para servidores individuais e podem não funcionar na sua.É altamente recomendável testar essas configurações antes de usá-las em seu servidor principal.
+:::: 
 
 <details>
   <summary>Dino's Lista negra</summary>
@@ -327,7 +328,11 @@ blacklist {
 - Os jogadores podem ativar as placas de pressão de madeira soltando um item neles
 - Os jogadores podem tosquiar a ovelha de outros jogadores
 - Os jogadores podem colar entidades em outras pessoas reivindicações (principalmente um problema se você usar um plug -in que aluga moradores e outras entidades que não é possível com o baunilha minecraft)
-- As trepadeiras podem matar entidades em reivindicações
+- Os creepers podem matar entidades em reivindicações
 - Os jogadores podem interagir com os quadros de itens apenas quando interagem com um item na mão (gire os itens)
 ```
 </details>
+
+## Utilize Aikar's Flags
+O GriefDefender foi projetado para utilizar os recursos da melhor maneira, por isso é altamente recomendável que você use as bandeiras do Aikar.  
+Veja em [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)  

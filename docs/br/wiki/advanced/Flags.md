@@ -15,21 +15,12 @@ Usando `/cf` Fornece uma interface do usuário para editar os bandeiras padrão 
 As bandeiras não se aplicam ao proprietário de uma reivindicação, isso inclui administradores de reivindicações selvagens ou administrativas.
 Use substituir se você deseja forçar bandeiras em todos os usuários em um tipo de reivindicação.
 
-Nota: Os comandos de bandeira são apenas os Wrappers em torno da API da LuckPerms.Tudo definido via bandeira GD pode ser definido diretamente usando LP.Ver [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)  
+Nota: Os comandos de bandeira são apenas os Wrappers em torno da API da LuckPerms.Tudo definido via bandeira GD pode ser definido diretamente usando LP.  
+Ver [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)  
 Nota: Para usar bandeiras com argumentos de comando, você deve ter a permissão `griefdefender.advanced.admin.flags.*`
 
 ## bandeiras de reivindicação padrão
 Todos os bandeiras padrão podem ser personalizados por tipo de reivindicação. Atualmente, o Griefdefender suporta bandeiras padrão para administrador, básico, cidade e regiaõ selvagem. Você pode modificar os padrões em `flags.conf` e `presets/minecraft.conf`.
-
-## Índice
-
-* [Comandos](/br/wiki/advanced/Flags.html#comandos)
-  * [Argumentos](/br/wiki/advanced/Flags.html#argumentos)
-  * [Lista de comandos](/br/wiki/advanced/Flags.html#lista-de-comandos)
-* [Exemplos de usos](/br/wiki/advanced/Flags.html#exemplos-de-uso)
-* [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)
-* [Bandeiras disponíveis](/br/wiki/advanced/Flags.html#bandeiras-disponiveis)
-
 
 ## Contextos
 
@@ -179,6 +170,7 @@ Todas as informações fornecidas dentro () serão um dos exemplos.
 - **interact-item-primary** - Use para gerenciar a interação do clique com o botão esquerdo com os itens ()
 - **interact-item-secondary** - Use para gerenciar o clique com o botão direito do mouse com a interação com os itens ()
 - **inventory-item-move** - Use para gerenciar o movimento dos itens de funis.(Nota: atualmente não é usado devido ao impacto do desempenho)
+- **item-damage** - Usado para permitir ou negar danos a um item.
 - **item-drop** - Use para gerenciar jogadores soltando itens (jogador aleatório não pode deixar cair um bloco de sujeira)
 - **item-pickup** - Use para gerenciar itens de retirada (jogador aleatório não é para pegar um bloco de sujeira cair)
 - **item-spawn** - Use para gerenciar a desova de itens de blocos ou itens no mundo (como a caixa de presente Pixelmon)

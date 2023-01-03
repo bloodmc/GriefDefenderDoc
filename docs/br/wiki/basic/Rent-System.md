@@ -13,9 +13,9 @@ Se você estiver usando uma plataforma Bukkit, é recomendável usar RealEstate 
 
 Este novo sistema permitirá que você configure seu pedido de aluguel e ganhe algum dinheiro no caminho.
 
-# Como habilitar
+## Como habilitar
 
-Abra seu arquivo global.conf e na seção economia, você encontrará as seguintes linhas:
+Abra seu arquivo [global.conf](/br/wiki/advanced/Global-Config.html) e na seção economia, você encontrará as seguintes linhas:
 
 ```
         # The specific hour in day to attempt to get owed claim rent balances from delinquent renters. Note: This uses military time and accepts values between 0-23. Default: 0
@@ -45,7 +45,7 @@ Abra seu arquivo global.conf e na seção economia, você encontrará as seguint
         sign-update-interval=5
 ```
 
-# Em uso do jogo
+## Em uso do jogo
 
 Depois que você modificou a configuração corretamente e fez `/gdreload` ou (melhor) reiniciou o servidor, agora você pode estabelecer sua primeira reclamação para ser alugado.
 
@@ -62,7 +62,7 @@ aluguel
 [Tempo mínimo de aluguel] [Tempo máximo de aluguel]
 ```
 
-### Exemplo 1
+#### Exemplo 1
 ```
 GD
 aluguel
@@ -71,7 +71,7 @@ aluguel
 ```
 Este exemplo significa que você cobrará um mínimo de ***500*** para iniciar o aluguel (5 x 100) o que dará ao usuário 5 dias já pagos e seu pedido ficará disponível para aluguel por até **30 dias. **
 
-### Exemplo 2
+#### Exemplo 2
 ```
 GD
 aluguel
@@ -80,7 +80,7 @@ aluguel
 ```
 Este exemplo significa que você cobrará **10 por hora** e seu pedido ficará disponível para aluguel por até **60 dias.**
 
-### Exemplo 3
+#### Exemplo 3
 ```
 GD
 aluguel
@@ -111,29 +111,29 @@ O comando principal para lidar com aluguel é `/claimrent`
 A sintaxe é a seguinte
 `/claimrent [cancel|info|list|create <rate> [max]]`
 
-### Exemplo 1
+#### Exemplo 1
 
 Crie um aluguel por $ 10 por hora com um máximo de 1 dia 
 `/claimrent create 10h 1`
 
-### Exemplo 2
+#### Exemplo 2
 
 Crie um aluguel por US$ 10 por hora com aluguéis ilimitados
 `/claimrent create 10h`
 
-### Exemplo 3
+#### Exemplo 3
 
 Cancelar aluguel
 `/claimrent cancel`
 
 
-### Exemplo 4
+#### Exemplo 4
 
 Listar todos os aluguéis disponíveis
 `/claimrent list`
 
 
-### Exemplo 5
+#### Exemplo 5
 
 Listar informações de aluguel atuais
 `/claimrent info`

@@ -13,9 +13,9 @@ If you are using a Bukkit platform, it is recommended to use [RealEstate](/hooks
 
 This new system will allow you to set your claim up for rent and earn some money on the way. 
 
-# How to enable it
+## How to enable it
 
-Open your global.conf file and under economy section, you will find the following lines:
+Open your [global.conf](/wiki/advanced/Global-Config.html) file and under economy section, you will find the following lines:
 
 ```
         # The specific hour in day to attempt to get owed claim rent balances from delinquent renters. Note: This uses military time and accepts values between 0-23. Default: 0
@@ -45,7 +45,7 @@ Open your global.conf file and under economy section, you will find the followin
         sign-update-interval=5
 ```
 
-# In Game Use
+## In Game Use
 
 After you have properly modified the config and did `/gdreload` or (better) restarted the server, now you can establish your first claim to be rented.
 
@@ -62,7 +62,7 @@ rent
 [Min rent time] [Max rent time]
 ```
 
-### Example 1
+#### Example 1
 ```
 GD
 rent
@@ -71,7 +71,7 @@ rent
 ```
 This example means that you will charge a minimum of ***500*** to start the rental (5 x 100) which will give the user 5 days already paid and your claim will be available for rent up to **30 days.**  
 
-### Example 2
+#### Example 2
 ```
 GD
 rent
@@ -80,7 +80,7 @@ rent
 ```
 This example means that you will charge **10 per hour** and your claim will be available for rent up to **60 days.**
 
-### Example 3
+#### Example 3
 ```
 GD
 rent
@@ -111,29 +111,29 @@ The main command for handling rent is `/claimrent`
 Syntax is as follows  
 `/claimrent [cancel|info|list|create <rate> [max]]`
 
-### Example 1
+#### Example 1
 
 Create a rental for $10 per hour with a maximum of 1 day  
 `/claimrent create 10h 1`
 
-### Example 2
+#### Example 2
 
 Create a rental for $10 per hour with unlimited rentals  
 `/claimrent create 10h`
 
-### Example 3
+#### Example 3
 
 Cancel rental  
 `/claimrent cancel`
 
 
-### Example 4
+#### Example 4
 
 List all available rentals  
 `/claimrent list`
 
 
-### Example 5
+#### Example 5
 
 List current rental info  
 `/claimrent info`

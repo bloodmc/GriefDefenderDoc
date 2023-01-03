@@ -9,12 +9,12 @@ GriefDefender now supports WorldEdit CUI!
 
 ![WECUI Preview](https://i.IMGur.com/dYyUx6m.gif)
 
-In order to use WorldEdit CUI, the following is required to be installed  
+To use WorldEdit CUI, you need to have it installed on both the client and the server. 
 
 ## Client 
 
 #### 1.19+
-* WECUI (Fabric Version) - [Download](https://github.com/EngineHub/WorldEditCUI)
+* WECUI (Fabric/Quilt Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3A73407)
 
 #### 1.18+ 
 * WECUI (Fabric Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a73250)
@@ -25,22 +25,33 @@ In order to use WorldEdit CUI, the following is required to be installed
 
 #### 1.16+
 * WECUI (Fabric Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a70886)
-  * WECUI (Forge Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a70886)
+* WECUI (Forge Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a70886)
 
 #### 1.14+
 * WECUI (Fabric Version) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
 #### 1.12 and under
-* Liteloader Vanilla - [Download](https://www.liteloader.com/download)    OR    Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)
 * WECUI (LiteLoader version) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)
+
+Liteloader Vanilla - [Download](https://www.liteloader.com/download)  
+Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)  
+<hr>
+
+### FabricAPI/QuiltAPI
+Simply place both WECUI and FabricAPI/QuiltAPI jars into the mods client folder.
+
+If installed correctly, you should be able to see the same visuals as above when you right-click on a claim using a stick.
 
 ## Server
 * FastAsyncWorldEdit - [Download](https://intellectualsites.github.io/download/fawe.html)
 * WorldEdit - [Download](https://builds.enginehub.org/job/worldedit?branch=master)
 
-Simply place both WECUI and Fabric API jars into the mods client folder.
+### Server-side only
+WorldEditSelectionVisualizer (WESV) is essentially the famous WorldEdit CUI mod in the form of a bukkit plugin, which means that players don't need to install anything on their client. 
 
-If installed correctly, you should be able to see the same visuals as above when you right-click on a claim using a stick.
+* WorldEditSelectionVisualizer  - [Download](https://www.spigotmc.org/resources/17311/)
+
+![WESV Pre-visualização](https://www.spigotmc.org/attachments/cuboid-png.441993/)
 
 ## Permission
 

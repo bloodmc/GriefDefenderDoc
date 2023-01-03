@@ -21,20 +21,10 @@ Note: In order to use flags with command arguments, you must have the `griefdefe
 ## Default Claim Flags
 All default flags can be customized per claim type. Currently, GriefDefender supports default flags for Admin, Basic, Town and Wilderness. You can modify the defaults in `flags.conf` and `presets/minecraft.conf`.
 
-## Index
-
-* [Commands](/wiki/advanced/Flags.html#commands)
-  * [Arguments](/wiki/advanced/Flags.html#arguments)
-  * [Commandlist](/wiki/advanced/Flags.html#commandlist)
-* [Usage Examples](/wiki/advanced/Flags.html#usage-examples)
-* [Usage with LuckPerms](/wiki/advanced/Flags.html#usage-with-luckperms)
-* [Available Flags](/wiki/advanced/Flags.html#available-flags)
-
-
 ## Contexts
 
 All flags require one or more contexts when applied as a permission in LuckPerms.  
-See Contexts](/wiki/advanced/Contexts.html) on what contexts you can use and how they work.  
+See [Contexts](/wiki/advanced/Contexts.html) on what contexts you can use and how they work.  
 
 ## Commands
 
@@ -179,6 +169,7 @@ All Info provided inside () will be one of the examples.
 - **interact-item-primary** - Use to manage left-click interaction with items ()
 - **interact-item-secondary** - Use to manage right-click interaction with items ()
 - **inventory-item-move** - Use to manage item movement from hoppers.  (Note: Currently not used due to performance impact)
+- **item-damage** - Used to allow or deny damage to an item.
 - **item-drop** - Use to manage Players dropping items (Random Player not being able to drop a dirt block)
 - **item-pickup** - Use to manage picking up dropped items (Random Player not being to pick up a dropped dirt block)
 - **item-spawn** - Use to manage spawning of items from blocks or items in the world (Like Pixelmon Gift Box)

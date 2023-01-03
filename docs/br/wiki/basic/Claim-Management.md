@@ -119,6 +119,13 @@ Ferramenta básica, você pode usá-la para indicar a posição das reivindicaç
 * Desligue o clique com o botão direito do clique em busca de todas as reivindicações em um raio de 100 blocos e mostra sua localização
 * Clique de cliques à esquerda oculta os marcadores
 
+### Suporte a CustomModelData
+
+The inspection and modification tools now support CustomModelData support. To use, add {key:value} after item identifier.  
+
+Ex.  
+`inspection-tool=minecraft:stick{CustomModelData:1}`  
+`modification-tool="minecraft:golden_shovel{CustomModelData:2}`  
 
 ## Identificadores de reivindicação
 
@@ -359,7 +366,7 @@ Para remover a entrada para um usuário específico
 Para desativar a criação de reivindicações para um grupo específico de usuários em um mundo chamado `valhalla`, Digite o seguinte comando
 `/lp group <group> permission set griefdefender.user.claim.create.* false world=valhalla`
 
-### DGD isável em um mundo específico
+### GD desativado em um mundo específico
 
 Para desativar a funcionalidade de GD em um mundo do mundo superior nomeado `valhalla`, vá para a pasta de configuração do GD e então `worlds`
 
@@ -391,7 +398,7 @@ GriefDefender {
 
 ## Como lidar com explosões acima do nível da superfície
 
-Abrir o global.conf encontrado em `./plugins/griefdefender` em Bukkit e `./config/griefdefender` e em servidores de Sponge.
+Abrir o [global.conf](/br/wiki/advanced/Global-Config.html) encontrado em `./plugins/griefdefender` em Bukkit e `./config/griefdefender` e em servidores de Sponge.
 Você encontrará as seguintes configurações de configuração 
 
 * `explosion-block-surface-blacklist` - Permite que você faça uma fonte de bloco específica da lista negra, como TNT, acima do nível de superfície definido pela configuração `explosion-surface-block-level`. Para a lista negra de todos os blocos, use o ID `any`.
@@ -406,14 +413,14 @@ Para substituir um mundo chamado `valhalla` com tipo de ambiente `overworld`, tA
 
 #### Bukkit
 * Localize world.conf dentro de `./plugins/GriefDefender/worlds/normal/valhalla/world.conf`
-* Copiar reivindicações de criação de configurações de `global.conf` Para novo world.conf
+* Copiar reivindicações de criação de configurações de [`global.conf`](/br/wiki/advanced/Global-Config.html) Para novo world.conf
 * Abrir `./plugins/GriefDefender/options.conf`
 * Debaixo `default-user-options` definir `min-level` Para combinar a configuração de substituição
 * Debaixo `default-user-options` definir `max-level` Para combinar a configuração de substituição
 
 #### Sponge
 * Localize world.conf in `./config/GriefDefender/worlds/overworld/valhalla/world.conf`
-* Copiar reivindicações de criação de configurações de `global.conf` Para novo world.conf
+* Copiar reivindicações de criação de configurações de [`global.conf`](/br/wiki/advanced/Global-Config.html) Para novo world.conf
 * Abrir `./config/GriefDefender/options.conf`
 * Debaixo `default-user-options` definir `min-level` Para combinar a configuração de substituição
 * Debaixo `default-user-options` definir `max-level` Para combinar a configuração de substituição

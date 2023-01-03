@@ -107,4 +107,4 @@ playerdata {
 11. Start server  
 If done properly, GriefDefender will migrate all data from `plugins/GriefPreventionData` to `plugins/GriefDefender` including permission data.  
 Migration output should appear in console as it is migrating.  
-12. Disable the migrator in `global.conf` 
+12. Disable the migrator in [`global.conf`](/wiki/advanced/Global-Config.html)

@@ -22,12 +22,12 @@ Claim - `/claimoption <option> <value> [contexts]`
 Player - `/cop <player> <option> <value> [contexts]`  
 Group - `/cog <group> <option> <value> [contexts]`  
 
-### Contexts
+#### Contexts
 
 All options may use one or more contexts when applied as meta in LuckPerms.   
 See [Contexts](/wiki/advanced/Contexts.html) on what contexts you can use and how they work.   
 
-### Examples  
+#### Examples  
 
 * Send a welcome message to players entering a claim as console.  
 `/claimoption player-command-enter "/tellraw %player% [\"\",{\"text\":\"Welcome %player%!\",\"color\":\"gold\"},{\"text\":\"\\nYou are visiting %owner%s claim.\\nEnjoy your stay!\\n\\n-\"}]" run_for=member run_as=console`  

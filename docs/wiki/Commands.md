@@ -87,7 +87,7 @@ Note: Use `public` if you want to trust all users.
 * [/gd abandon world [world]](#gd-abandon-world)
 * [/gd ban [hand | \<type\> \<target\> [message]]](#gd-ban)
 * [/gd claim clear \<target\> [identifier]](#gd-claim-clear)
-* [/gd claim ignore](#gd-claim-ignore)
+* [/gd toggle ignore](#gd-toggle-ignore)
 * [/gd claim restore](#gd-claim-restore)
 * [/gd claim schematic \<create|delete\> \<name\>](#gd-claim-schematic)
 * [/gd delete claim [identifier]](#gd-delete-claim)

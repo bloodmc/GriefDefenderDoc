@@ -22,28 +22,47 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 
 ## Shop
 
+* [TradeShop]: [ [Spigot](https://www.spigotmc.org/resources/32762/) ]
 * [BossShopPro]: [ [Spigot](https://www.spigotmc.org/resources/222/) | [Github](https://github.com/Blackixx/BossShopPro) ]
 * [ChestShop]: [ [Spigot](https://www.spigotmc.org/resources/51856/) | [Github](https://github.com/ChestShop-authors/ChestShop-3) ] 
 * [DynamicShop]: [ [Spigot](https://www.spigotmc.org/resources/65603/) | [Github](https://github.com/7sat/SSDynamicShop) ]
 * [InsaneShops(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/67352/) ]
 * [QuickShop]: [ [Spigot](https://www.spigotmc.org/resources/62575/) | [Github](https://github.com/Ghost-chu/QuickShop-Reremake) ]
 * [ShopChest]: [ [Spigot](https://www.spigotmc.org/resources/11431/) | [Github](https://github.com/EpicEricEE/ShopChest) ]
-* [Shop]: [ [Spigot](https://www.spigotmc.org/resources/shop-a-simple-intuitive-shop-plugin.9628/) ]
+* [Shop]: [ [Spigot](https://www.spigotmc.org/resources/9628/) ]
 * [Slabbo]: [ [Spigot](https://www.spigotmc.org/resources/81368/) | [Github](https://github.com/sevn65/Slaboo) ]
 * [UltimateShops]: [ [Lite](https://www.spigotmc.org/resources/61048/) | [Premium](https://www.spigotmc.org/resources/64925/) ]
 
+## Clans
+
+* [Ultimate Clans]: [ [Spigot](https://www.spigotmc.org/resources/85615/)
+* [SimpleClans]: [ [Spigot](https://www.spigotmc.org/resources/71242/) | [Github](https://github.com/RoinujNosde/SimpleClans) ]
+* [Guilds]: [ [Spigot](https://www.spigotmc.org/resources/66176/) ]
+* [Towny]: [ [Spigot](https://www.spigotmc.org/resources/72694/) | [Github](https://github.com/TownyAdvanced/Towny) ]
+
+### Clans - Sponge
+* [MCClans]: [ [Github](https://github.com/LemADEC/mcclans-core-sponge) ]
+
 ## Misc
 
+* [Aurelium]: [ [Spigot](https://www.spigotmc.org/resources/81069/) ]
+* [Brewery]: [ [Spigot](https://www.spigotmc.org/resources/3082/) ]
+* [ExcellentCrates]: [ [Spigot](https://www.spigotmc.org/resources/48732/) ]
+* [Chat Manager]: [ [Spigot](https://www.spigotmc.org/resources/52245/) ]
+* [ChocoFly]: [ [Spigot](https://www.spigotmc.org/resources/95180/)]
 * [CustomItems(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/36128/) ]
+* [FancyWayStones]: [ [Spigot](https://www.spigotmc.org/resources/94376/) ]
+* [OreRegenerator]: [ [Spigot](https://www.spigotmc.org/resources/71743/) ]
+* [Nova]: [ [Spigot](https://www.spigotmc.org/resources/93648/)]
+* [Slimefun]: [ [Github](https://github.com/Slimefun/Slimefun4/releases) ]
+* [VoteParty]: [ [Spigot](https://www.spigotmc.org/resources/987/) ]
 * [EliteMobs]: [ [Spigot](https://www.spigotmc.org/resources/40090/) | [Github](https://github.com/MagmaGuy/EliteMobs) ]
-* [FurnitureLib]: [ [Spigot](https://www.spigotmc.org/resources/furniturelibary-protectionlib.9368/) | [Github](https://github.com/Ste3et/FurnitureLib) ]
+* [FurnitureLib]: [ [Spigot](https://www.spigotmc.org/resources/9368/) | [Github](https://github.com/Ste3et/FurnitureLib) ]
 * [MMOItems(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/39267/) ]
-* [McMMO]: [ [Spigot](https://www.spigotmc.org/resources/64348/updates) | [Github](https://github.com/mcMMO-Dev/mcMMO) ]
+* [[McMMO](https://mcmmo.org/)]: [ [Spigot](https://www.spigotmc.org/resources/64348/) | [Github](https://github.com/mcMMO-Dev/mcMMO) ]
 * [MyPet]: [ [Spigot](https://www.spigotmc.org/resources/mypet.12725/) | [Github](https://github.com/xXKeyleXx/MyPet) ]
 * [MythicMobs]: [ [Free](https://www.spigotmc.org/resources/5702/) | [Premium](https://www.spigotmc.org/resources/58415/) ]
 * [RevoltCrates(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/81681/) ]
-* [SimpleClans]: [ [Spigot](https://www.spigotmc.org/resources/71242/) | [Github](https://github.com/RoinujNosde/SimpleClans) ]
-* [Towny]: [ [Spigot](https://www.spigotmc.org/resources/72694/) | [Github](https://github.com/TownyAdvanced/Towny) ]
 
 #### Supported By Plugin Side
 
@@ -64,6 +83,7 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 
 
 ## Misc
+* [RoyaleEconomy(Paid)]: [ [Polymart](https://polymart.org/resource/royaleeconomy-1-8-1-17.113) ]
 * [BanFromClaim]: [ [Spigot](https://www.spigotmc.org/resources/70897/) | [Github](https://github.com/Baktus79/BanFromClaim) ] (Ban claims' relative players)
 * [CombatLogX]: [ [Github](https://github.com/SirBlobman/CombatLogX/blob/main/expansion/compatibility/GriefDefender/src/main/java/combatlogx/expansion/compatibility/region/grief/defender/GriefDefenderRegionHandler.java) | [Spigot](https://www.spigotmc.org/resources/31689/) ](Respect GD's flag)
 * [Regionerator]: [ [Github](https://github.com/Jikoo/Regionerator) ] (Delete Claim when its region was eratored by Regionerator)
@@ -72,8 +92,9 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 
 ##  Ports available on Discord
 
-* [AdvancedRegionMarket]: [ [Spigot](https://www.spigotmc.org/resources/advancedregionmarket.58732/) ]
-* [RealEstate]: [ [Github](https://github.com/bloodmc/RealEstate) | [Spigot](https://www.spigotmc.org/resources/realestate.66966/) ]
+* [AdvancedRegionMarket]: [ [Spigot](https://www.spigotmc.org/resources/58732/) ]
+* [RealEstate]: [ [Github](https://github.com/bloodmc/RealEstate) | [Spigot](https://www.spigotmc.org/resources/66966/) ]
+* [Builders Wand]: [ [Spigot](https://www.spigotmc.org/resources/51577/) ]
 
 
 ##### WIP

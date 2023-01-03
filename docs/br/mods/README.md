@@ -4,7 +4,7 @@ tag: mods
 category: mods
 ---
 
-### Projetado desde o início para mods.
+#### Projetado desde o início para mods.
 
 [Archlight](https://github.com/IzzelAliz/Arclight)/[Mohist](https://mohistmc.com/) são suportados.
 
@@ -12,4 +12,4 @@ compatível com quase todas as interações de mods Forge, a partir da [depuraç
 Utilizando o [depuração](/br/wiki/advanced/Debugging.html) para criar novas [bandeiras](/br/wiki/advanced/Flags.html) de controles!
 
 ::: info Mods com preset disponíveis
-- Pixelmon ==> [Detalhes](/br/mods/Pixelmon) | [Presets](/br/mods/Presets-Pixelmon)
+- Pixelmon ==> [Detalhes](/br/mods/Pixelmon)

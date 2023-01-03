@@ -25,7 +25,7 @@ Right click on the page and select "Save as", save as `en_US.conf` in `config/gr
 
 After doing both, `/gdreload`  
 
-Execute command `/cf` and you should see a new preset named `mcmmo`. Click that to load and configure per claim as needed.  
+Execute command `/claimoption` and you should see a new preset named `mcmmo`. Click that to load and configure per claim as needed.  
 
 Note: If you do not see the preset in GUI, make sure the files above end in `.conf`.  
 

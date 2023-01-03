@@ -22,7 +22,7 @@ Veja [LuckPerms - Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes
 2. Remova o jar do GriefPrevention dos plugins
 3. Inicie o servidor para gerar as configurações do GriefDefender.
 4. Pare (stop) o servidor
-5. Edite global.conf em ./plugins/GriefDefender/
+5. Edite [global.conf](/br/wiki/advanced/Global-Config.html) em ./plugins/GriefDefender/
 6. Localize a seção
 ```
 # List of migrators that convert old or other protection data into the current GD claim data format.
