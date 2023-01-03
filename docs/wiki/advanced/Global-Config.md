@@ -153,7 +153,7 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 # Permission
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| griefdefender-claim-group-priority | The claimgroup permission group priority. | -60 |
+| griefdefender-claim-group-priority | The claimgroup permission group priority. | -80 |
 | griefdefender-claim-priority | The claim permission group priority. | -60 |
 | griefdefender-default-priority | The deffault permission group priority. | -100 |
 | griefdefender-default-priority | The default permission group priority. | -80 |
@@ -171,8 +171,24 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 | reset-accrued-claim-blocks | If enabled, resets all playerdata accrued claim blocks to match total cost of claims owned. <br />Example: If a player has 5 basic claims with a total cost of 1000, this will set their accrued claim blocks to 1000. <br />Note: This will also reset all bonus claim blocks to 0. It is highly recommended to backup before using. | FALSE |
 | reset-migrations | If enabled, resets all playerdata migration flags to allow for another migration. <br /> Note: Use this with caution as it can easily mess up claim block data. It is highly recommended to backup before using. | FALSE |
 
-## Provider
+# Provider
 Manages plugin providers that GD hooks into for extended functionality.
+| Variable | Description | Default Value |
+| BlueMap | Toggles whether GDhooks communicates with the BlueMap | true |
+| BossShopPro | Toggles whether GDhooks communicates with the BossShopPro | true |
+| ChestShop | Toggles whether GDhooks communicates with the ChestShop | true |
+| DynamicShop | Toggles whether GDhooks communicates with the DynamicShop | true |
+| Dynmap | Toggles whether GDhooks communicates with the Dynmap | true |
+| InsaneShops | Toggles whether GDhooks communicates with the InsaneShops | true |
+| MyPet | Toggles whether GDhooks communicates with the MyPet | true |
+| MythicMobs | Toggles whether GDhooks communicates with the MythicMobs | true |
+| QuickShop | Toggles whether GDhooks communicates with the QuickShop | true |
+| RevoltCrates | Toggles whether GDhooks communicates with the RevoltCrates | true |
+| Shop | Toggles whether GDhooks communicates with the Shop | true |
+| ShopChest | Toggles whether GDhooks communicates with the ShopChest | true |
+| Slabbo | Toggles whether GDhooks communicates with the Slabbo | true |
+| Slimefun | Toggles whether GDhooks communicates with the Slimefun | true |
+| UltimateShops | Toggles whether GDhooks communicates with the UltimateShops | true |
 
 
 # PvP
@@ -218,3 +234,7 @@ Manages plugin providers that GD hooks into for extended functionality.
 | town-accent-block | The visual accent block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
 | town-corner-block | The visual corner block used for town claims. (Default: minecraft:glowstone) | minecraft:glowstone |
 | town-filler-block | The visual filler block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
+
+# World
+| Variable | Description | Default Value |
+| protected-worlds| A list of worlds by name or resource location that GriefDefender should protect. If empty, GriefDefender will protect all worlds. | | [] |

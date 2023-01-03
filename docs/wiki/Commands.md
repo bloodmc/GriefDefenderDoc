@@ -72,8 +72,8 @@ If using an identifier for another player, the format is `<playername>:<identifi
 
 Note: Use `public` if you want to trust all users.
 
-* [/gd trust player \<player\>|public <accessor|container|builder|manager> ](#gd-trust-player)
-* [/gd trust group \<group\>|public <accessor|container|builder|manager> ](#gd-trust-group)
+* [/gd trust player \<player\>|public <accessor|resident|container|builder|manager> ](#gd-trust-player)
+* [/gd trust group \<group\>|public <accessor|resident|container|builder|manager> ](#gd-trust-group)
 * [/gd trustall player \<player\>|public](#gd-trustall-player)
 * [/gd trustall group \<group\>|public](#gd-trustall-group)
 * [/gd untrust player \<player\>|public ](#gd-untrust-player)
