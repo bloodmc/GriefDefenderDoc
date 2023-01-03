@@ -8,6 +8,7 @@ icon: rent
 If you are looking for a more robust Rent/Lease/Sell plugin, I have ported GP RealEstate to GriefDefender.
 
 Source: [RealEstate](https://github.com/bloodmc/RealEstate)
+Wiki: [Github](https://github.com/EtienneDx/RealEstate/wiki)
 
 ## Placeholder
 Placeholder                                           | Description | 

@@ -46,6 +46,8 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 ## Misc
 
 * [Aurelium]: [ [Spigot](https://www.spigotmc.org/resources/81069/) ]
+* [Brewery]: [ [Spigot](https://www.spigotmc.org/resources/3082/) ]
+* [ExcellentCrates]: [ [Spigot](https://www.spigotmc.org/resources/48732/) ]
 * [Chat Manager]: [ [Spigot](https://www.spigotmc.org/resources/52245/) ]
 * [ChocoFly]: [ [Spigot](https://www.spigotmc.org/resources/95180/)]
 * [CustomItems(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/36128/) ]
