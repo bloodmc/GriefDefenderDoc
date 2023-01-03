@@ -28,21 +28,29 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 * [InsaneShops(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/67352/) ]
 * [QuickShop]: [ [Spigot](https://www.spigotmc.org/resources/62575/) | [Github](https://github.com/Ghost-chu/QuickShop-Reremake) ]
 * [ShopChest]: [ [Spigot](https://www.spigotmc.org/resources/11431/) | [Github](https://github.com/EpicEricEE/ShopChest) ]
-* [Shop]: [ [Spigot](https://www.spigotmc.org/resources/shop-a-simple-intuitive-shop-plugin.9628/) ]
+* [Shop]: [ [Spigot](https://www.spigotmc.org/resources/9628/) ]
 * [Slabbo]: [ [Spigot](https://www.spigotmc.org/resources/81368/) | [Github](https://github.com/sevn65/Slaboo) ]
 * [UltimateShops]: [ [Lite](https://www.spigotmc.org/resources/61048/) | [Premium](https://www.spigotmc.org/resources/64925/) ]
+
+## Clans
+
+* [Ultimate Clans]: [ [Spigot](https://www.spigotmc.org/resources/85615/)
+* [SimpleClans]: [ [Spigot](https://www.spigotmc.org/resources/71242/) | [Github](https://github.com/RoinujNosde/SimpleClans) ]
+* [Guilds]: [ [Spigot](https://www.spigotmc.org/resources/66176/) ]
+
+### Clans - Sponge
+* [MCClans]: [ [Github](https://github.com/LemADEC/mcclans-core-sponge) ]
 
 ## Misc
 
 * [CustomItems(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/36128/) ]
 * [EliteMobs]: [ [Spigot](https://www.spigotmc.org/resources/40090/) | [Github](https://github.com/MagmaGuy/EliteMobs) ]
-* [FurnitureLib]: [ [Spigot](https://www.spigotmc.org/resources/furniturelibary-protectionlib.9368/) | [Github](https://github.com/Ste3et/FurnitureLib) ]
+* [FurnitureLib]: [ [Spigot](https://www.spigotmc.org/resources/9368/) | [Github](https://github.com/Ste3et/FurnitureLib) ]
 * [MMOItems(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/39267/) ]
-* [McMMO]: [ [Spigot](https://www.spigotmc.org/resources/64348/updates) | [Github](https://github.com/mcMMO-Dev/mcMMO) ]
+* [[McMMO](https://mcmmo.org/)]: [ [Spigot](https://www.spigotmc.org/resources/64348/) | [Github](https://github.com/mcMMO-Dev/mcMMO) ]
 * [MyPet]: [ [Spigot](https://www.spigotmc.org/resources/mypet.12725/) | [Github](https://github.com/xXKeyleXx/MyPet) ]
 * [MythicMobs]: [ [Free](https://www.spigotmc.org/resources/5702/) | [Premium](https://www.spigotmc.org/resources/58415/) ]
 * [RevoltCrates(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/81681/) ]
-* [SimpleClans]: [ [Spigot](https://www.spigotmc.org/resources/71242/) | [Github](https://github.com/RoinujNosde/SimpleClans) ]
 * [Towny]: [ [Spigot](https://www.spigotmc.org/resources/72694/) | [Github](https://github.com/TownyAdvanced/Towny) ]
 
 #### Supported By Plugin Side
@@ -72,8 +80,9 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 
 ##  Ports available on Discord
 
-* [AdvancedRegionMarket]: [ [Spigot](https://www.spigotmc.org/resources/advancedregionmarket.58732/) ]
-* [RealEstate]: [ [Github](https://github.com/bloodmc/RealEstate) | [Spigot](https://www.spigotmc.org/resources/realestate.66966/) ]
+* [AdvancedRegionMarket]: [ [Spigot](https://www.spigotmc.org/resources/58732/) ]
+* [RealEstate]: [ [Github](https://github.com/bloodmc/RealEstate) | [Spigot](https://www.spigotmc.org/resources/66966/) ]
+* [Builders Wand]: [ [Spigot](https://www.spigotmc.org/resources/51577/) ]
 
 
 ##### WIP
