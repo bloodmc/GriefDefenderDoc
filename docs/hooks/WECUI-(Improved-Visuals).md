@@ -38,13 +38,20 @@ Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.
 <hr>
 
 ### FabricAPI/QuiltAPI
-Simply place both WECUI and Fabric API jars into the mods client folder.
+Simply place both WECUI and FabricAPI/QuiltAPI jars into the mods client folder.
 
 If installed correctly, you should be able to see the same visuals as above when you right-click on a claim using a stick.
 
 ## Server
 * FastAsyncWorldEdit - [Download](https://intellectualsites.github.io/download/fawe.html)
 * WorldEdit - [Download](https://builds.enginehub.org/job/worldedit?branch=master)
+
+## Server-side only
+WorldEditSelectionVisualizer (WESV) is essentially the famous WorldEdit CUI mod in the form of a bukkit plugin, which means that players don't need to install anything on their client. 
+
+* WorldEditSelectionVisualizer  - [Download](https://www.spigotmc.org/resources/17311/)
+
+![WESV Pre-visualização](https://www.spigotmc.org/attachments/cuboid-png.441993/)
 
 ## Permission
 

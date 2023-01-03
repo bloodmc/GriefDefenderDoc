@@ -22,6 +22,7 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 
 ## Shop
 
+* [TradeShop]: [ [Spigot](https://www.spigotmc.org/resources/32762/) ]
 * [BossShopPro]: [ [Spigot](https://www.spigotmc.org/resources/222/) | [Github](https://github.com/Blackixx/BossShopPro) ]
 * [ChestShop]: [ [Spigot](https://www.spigotmc.org/resources/51856/) | [Github](https://github.com/ChestShop-authors/ChestShop-3) ] 
 * [DynamicShop]: [ [Spigot](https://www.spigotmc.org/resources/65603/) | [Github](https://github.com/7sat/SSDynamicShop) ]
@@ -37,13 +38,22 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 * [Ultimate Clans]: [ [Spigot](https://www.spigotmc.org/resources/85615/)
 * [SimpleClans]: [ [Spigot](https://www.spigotmc.org/resources/71242/) | [Github](https://github.com/RoinujNosde/SimpleClans) ]
 * [Guilds]: [ [Spigot](https://www.spigotmc.org/resources/66176/) ]
+* [Towny]: [ [Spigot](https://www.spigotmc.org/resources/72694/) | [Github](https://github.com/TownyAdvanced/Towny) ]
 
 ### Clans - Sponge
 * [MCClans]: [ [Github](https://github.com/LemADEC/mcclans-core-sponge) ]
 
 ## Misc
 
+* [Aurelium]: [ [Spigot](https://www.spigotmc.org/resources/81069/) ]
+* [Chat Manager]: [ [Spigot](https://www.spigotmc.org/resources/52245/) ]
+* [ChocoFly]: [ [Spigot](https://www.spigotmc.org/resources/95180/)]
 * [CustomItems(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/36128/) ]
+* [FancyWayStones]: [ [Spigot](https://www.spigotmc.org/resources/94376/) ]
+* [OreRegenerator]: [ [Spigot](https://www.spigotmc.org/resources/71743/) ]
+* [Nova]: [ [Spigot](https://www.spigotmc.org/resources/93648/)]
+* [Slimefun]: [ [Github](https://github.com/Slimefun/Slimefun4/releases) ]
+* [VoteParty]: [ [Spigot](https://www.spigotmc.org/resources/987/) ]
 * [EliteMobs]: [ [Spigot](https://www.spigotmc.org/resources/40090/) | [Github](https://github.com/MagmaGuy/EliteMobs) ]
 * [FurnitureLib]: [ [Spigot](https://www.spigotmc.org/resources/9368/) | [Github](https://github.com/Ste3et/FurnitureLib) ]
 * [MMOItems(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/39267/) ]
@@ -51,7 +61,6 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 * [MyPet]: [ [Spigot](https://www.spigotmc.org/resources/mypet.12725/) | [Github](https://github.com/xXKeyleXx/MyPet) ]
 * [MythicMobs]: [ [Free](https://www.spigotmc.org/resources/5702/) | [Premium](https://www.spigotmc.org/resources/58415/) ]
 * [RevoltCrates(Paid)]: [ [Spigot](https://www.spigotmc.org/resources/81681/) ]
-* [Towny]: [ [Spigot](https://www.spigotmc.org/resources/72694/) | [Github](https://github.com/TownyAdvanced/Towny) ]
 
 #### Supported By Plugin Side
 
@@ -72,6 +81,7 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 
 
 ## Misc
+* [RoyaleEconomy(Paid)]: [ [Polymart](https://polymart.org/resource/royaleeconomy-1-8-1-17.113) ]
 * [BanFromClaim]: [ [Spigot](https://www.spigotmc.org/resources/70897/) | [Github](https://github.com/Baktus79/BanFromClaim) ] (Ban claims' relative players)
 * [CombatLogX]: [ [Github](https://github.com/SirBlobman/CombatLogX/blob/main/expansion/compatibility/GriefDefender/src/main/java/combatlogx/expansion/compatibility/region/grief/defender/GriefDefenderRegionHandler.java) | [Spigot](https://www.spigotmc.org/resources/31689/) ](Respect GD's flag)
 * [Regionerator]: [ [Github](https://github.com/Jikoo/Regionerator) ] (Delete Claim when its region was eratored by Regionerator)

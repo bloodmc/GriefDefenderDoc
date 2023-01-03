@@ -45,6 +45,13 @@ Se instalado corretamente, você poderá ver os mesmos visuais acima ao clicar c
 * FastAsyncWorldEdit - [Download](https://intellectualsites.github.io/download/fawe.html)
 * WorldEdit - [Download](https://builds.enginehub.org/job/worldedit?branch=master)
 
+## Versão apenas Server-side
+WorldEditSelectionVisualizer (WESV) é essencialmente o famoso mod WorldEdit CUI na forma de um plugin bukkit, o que significa que os jogadores não precisam instalar nada em seu cliente.  
+
+* WorldEditSelectionVisualizer  - [Download](https://www.spigotmc.org/resources/17311/)
+
+![WESV Pre-visualização](https://www.spigotmc.org/attachments/cuboid-png.441993/)
+
 ## Permissões
 
 Permissão                                    | Descrição | 
