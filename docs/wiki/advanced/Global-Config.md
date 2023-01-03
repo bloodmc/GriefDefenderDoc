@@ -174,6 +174,7 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 # Provider
 Manages plugin providers that GD hooks into for extended functionality.
 | Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
 | BlueMap | Toggles whether GDhooks communicates with the BlueMap | true |
 | BossShopPro | Toggles whether GDhooks communicates with the BossShopPro | true |
 | ChestShop | Toggles whether GDhooks communicates with the ChestShop | true |
@@ -237,4 +238,5 @@ Manages plugin providers that GD hooks into for extended functionality.
 
 # World
 | Variable | Description | Default Value |
-| protected-worlds| A list of worlds by name or resource location that GriefDefender should protect. If empty, GriefDefender will protect all worlds. | | [] |
+| --------- | ----------- | ----------- |
+| protected-worlds | A list of worlds by name or resource location that GriefDefender should protect. If empty, GriefDefender will protect all worlds. | [ ] |
