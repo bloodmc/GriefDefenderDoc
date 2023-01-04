@@ -31,7 +31,9 @@ Se estiver usando um identificador para outro jogador, o formato é `<jogador>:<
 * [/gd claim greeting \<mensagem\> [identifer]](#gd-claim-greeting)
 * [/gd claim id \<identifier\>](#gd-claim-id)
 * [/gd claim info [identifier]](#gd-claim-info)
-* [/gd claim inherit](#gd-claim-inherit)
+* [/gd toggle inherit](#gd-toggle-inherit)
+* [/gd toggle notifications](#gd-toggle-notifications)
+* [/gd toggle tool](#gd-toggle-tool)
 * [/gd claim inspect [\<area\>|\<hide\>|\<hideall\>]](#gd-claim-inspect)
 * [/gd claim list [\<jogador\> [mundo]]](#gd-claim-list)
 * [/gd claim displayname [name]](#gd-claim-displayname)
@@ -111,6 +113,7 @@ Nota: Use `public` se quiser confiar em todos os jogadores.
 ### Diversos
 
 * [/gd version](#gd-version)
+* [/gd toggle gui](#gd-toggle-gui)
 
 
 # Detalhe do comando
@@ -188,8 +191,8 @@ ___
 Obtém informações sobre uma reivindicação em que você está ou pelo ID da reivindicação.
 
 ___
-#### `/gd claim inherit`
-**Atalho**: `inherit`  
+#### `/gd toggle inherit`
+**Atalho**: `claiminherit`  
 
 Alterna o modo de herdar da reivindicação principal
 
@@ -372,6 +375,17 @@ ___
 
 Redefine a reivindicação para as bandeiras padrões do servidor.
 
+___
+#### `/gd toggle notifications`
+**Atalho**: `claimnotifications`
+
+Para ativar/desativar as mensagens de saudação/despedida em reivindicações confiáveis.
+
+___
+#### `/gd toggle tool`
+**Atalho**: `claimtool`
+
+Para ativar/desativar a ferramenta de reivindicação.
 
 ### Options
 ___
@@ -611,3 +625,7 @@ ___
 #### `/gd version`
 
 Lista as informações da versão do GD.
+___
+#### `/gd toggle gui`
+
+Alterna a interface entre Bate-Papo e Inventário

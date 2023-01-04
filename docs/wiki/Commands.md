@@ -541,7 +541,7 @@ ___
 Deletes all administrative claims
 
 ___
-#### `/gd claim ignore`
+#### `/gd toggle ignore`
 **Aliases**: `ignoreclaims`  
 
 Toggles ignore claims mode
