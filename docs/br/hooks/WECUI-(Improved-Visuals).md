@@ -50,7 +50,7 @@ WorldEditSelectionVisualizer (WESV) é essencialmente o famoso mod WorldEdit CUI
 
 * WorldEditSelectionVisualizer  - [Download](https://www.spigotmc.org/resources/17311/)
 
-![WESV Pre-visualização](https://www.spigotmc.org/attachments/cuboid-png.441993/)
+![WESV Pre-visualização](/cuboid_wesv.webp)
 
 ## Permissões
 
