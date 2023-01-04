@@ -31,7 +31,9 @@ If using an identifier for another player, the format is `<playername>:<identifi
 * [/gd claim greeting \<message\> [identifer]](#gd-claim-greeting)
 * [/gd claim id \<identifier\>](#gd-claim-id)
 * [/gd claim info [identifier]](#gd-claim-info)
-* [/gd claim inherit](#gd-claim-inherit)
+* [/gd toggle inherit](#gd-toggle-inherit)
+* [/gd toggle notifications](#gd-toggle-notifications)
+* [/gd toggle tool](#gd-toggle-tool)
 * [/gd claim inspect [\<area\>|\<hide\>|\<hideall\>]](#gd-claim-inspect)
 * [/gd claim list [\<player\> [world]]](#gd-claim-list)
 * [/gd claim displayname [name]](#gd-claim-displayname)
@@ -111,6 +113,7 @@ Note: Use `public` if you want to trust all users.
 ### Misc
 
 * [/gd version](#gd-version)
+* [/gd toggle gui](#gd-toggle-gui)
 
 
 # Command Detail
@@ -189,7 +192,7 @@ Gets information about a claim you are standing in or by claim id.
 
 ___
 #### `/gd claim inherit`
-**Aliases**: `inherit`  
+**Aliases**: `claiminherit`  
 
 Toggles parent claim inherit mode
 
@@ -371,6 +374,18 @@ ___
 **Aliases**: `cfr`
 
 Resets a claim to flag defaults.
+
+___
+#### `/gd toggle notifications`
+**Aliases**: `claimnotifications`
+
+To enable/disable greeting/farewell messages on trusted claims.
+
+___
+#### `/gd toggle tool`
+**Aliases**: `claimtool`
+
+To enable/disable the claim tool.
 
 
 ### Options
@@ -611,3 +626,9 @@ ___
 #### `/gd version`
 
 Lists version information.
+
+___
+#### `/gd toggle gui`
+**Aliases**: `claimgui`
+
+Toggle interface between Chat/Inventory.
