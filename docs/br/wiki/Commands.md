@@ -72,8 +72,8 @@ Se estiver usando um identificador para outro jogador, o formato é `<jogador>:<
 
 Nota: Use `public` se quiser confiar em todos os jogadores.
 
-* [/gd trust player \<jogador\>|public <accessor|resident|container|builder|manager> ](#gd-trust-player)
-* [/gd trust group \<grupo\>|public <accessor|resident|container|builder|manager> ](#gd-trust-group)
+* [/gd trust player \<jogador\>|public <resident|accessor|container|builder|manager> ](#gd-trust-player)
+* [/gd trust group \<grupo\>|public <resident|accessor|container|builder|manager> ](#gd-trust-group)
 * [/gd trustall player \<jogador\>|public](#gd-trustall-player)
 * [/gd trustall group \<grupo\>|public](#gd-trustall-group)
 * [/gd untrust player \<jogador\>|public ](#gd-untrust-player)
@@ -400,6 +400,7 @@ Obtém/Define opções para um jogador que reivindica que você está de pé.
 Nota: `public` é para todos os usuários.
 ___
 #### `/gd trust player`
+*Resident*: `Concede a um jogador/grupo a capacidade de criar reivindicações, inclui confiança de acesso.`
 *Accessor*: `Concede uma entrada de jogador para sua(s) reivindicação(ões) e uso de sua cama`  
 *Container*: `Concede a um jogador acesso aos recipientes (mesa de trabalho), colheitas, animais, cama, botões e alavancas da sua reivindicação`  
 *Builder*: `Concede a um jogador acesso de edição às suas reivindicações`  
@@ -411,6 +412,7 @@ Concede a um jogador acesso à(s) sua(s) reivindicação(ões).
 
 ___
 #### `/gd trust group`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a group entry to your claim(s) and use of your bed`  
 *Container*: `Grants a group access to your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a group edit access to your claim(s)`  
@@ -422,6 +424,7 @@ Concede a um grupo acesso às suas reivindicações
 
 ___
 #### `/gd trustall player`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a player entry to ALL your claim(s) and use of your bed`  
 *Container*: `Grants a player access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a player edit access to ALL your claim(s)`  
@@ -433,6 +436,7 @@ Concede a um jogador acesso a ***TODAS*** as suas reivindicações.
 
 ___
 #### `/gd trustall group`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a group entry to ALL your claim(s) and use of your bed`  
 *Container*: `Grants a group access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a group edit access to ALL your claim(s)`  

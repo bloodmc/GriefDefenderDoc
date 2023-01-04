@@ -38,11 +38,11 @@ Note: This does not store permissions made through Flag Advanced GUI.
 * `griefdefender_override` - Stores all flag permissions that contain `gd_claim_override` context.  
 
 * `griefdefender_claim_group` - Stores all flag permissions applied to group claims via `/cf` command.  
+* `griefdefender_trust_resident` - Stores all trust permissions that have resident.  
 * `griefdefender_trust_accessor` - Stores all trust permissions that have accessor.  
 * `griefdefender_trust_builder` - Stores all trust permissions that have builder.  
 * `griefdefender_trust_container` - Stores all trust permissions that have container.  
 * `griefdefender_trust_manager` - Stores all trust permissions that have manager.  
-* `griefdefender_trust_resident` - Stores all trust permissions that have resident.  
 
 ### Useful MySQL DB queries
 
@@ -167,6 +167,7 @@ _*See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for informat
 | griefdefender.admin.claim.command.option.player | Allows to set player options in claims |
 | griefdefender.admin.claim.option | Allows to set options in claims |
 | griefdefender.admin.option.perk.fly.owner | Allows owners to fly in their own claim |
+| griefdefender.admin.option.perk.fly.resident | Allows users to fly in claims where they have resident trust |
 | griefdefender.admin.option.perk.fly.accessor | Allows users to fly in claims where they have accessor trust |
 | griefdefender.admin.option.perk.fly.builder | Allows users to fly in claims where they have builder trust |
 | griefdefender.admin.option.perk.fly.container | Allows users to fly in claims where they have container trust |
@@ -184,6 +185,7 @@ _*See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for informat
 | griefdefender.user.claim.command.untrust.player | Allows to revoke player trust |
 | griefdefender.user.claim.command.untrustall.group | Allows to revoke group trust to all claims|
 | griefdefender.user.claim.command.untrustall.player | Allows to revoke player trust to all claims |
+| griefdefender.user.claim.trust.resident | Allows to add residents |
 | griefdefender.user.claim.trust.accessor | Allows to add accessors |
 | griefdefender.user.claim.trust.container | Allows to add containers |
 | griefdefender.user.claim.trust.builder | Allows to add builders |

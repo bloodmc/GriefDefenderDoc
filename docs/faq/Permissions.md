@@ -9,8 +9,8 @@ icon: faq
 
 Simply apply one of the following trust permissions to luckperms group
 
-**ACCESSOR** - `griefdefender.trust.1.2.3.4`  
 **RESIDENT** - `griefdefender.trust.resident`  
+**ACCESSOR** - `griefdefender.trust.1.2.3.4`  
 **CONTAINER** - `griefdefender.trust.1.2.3`  
 **BUILDER** - `griefdefender.trust.1.2`  
 **MANAGER** - `griefdefender.trust.1`  
