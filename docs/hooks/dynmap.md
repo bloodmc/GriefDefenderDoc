@@ -5,9 +5,9 @@ category: hooks
 icon: map
 ---
 
-In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.  
-See [GDHooks](/hooks) 
+In order to use GriefDefender's [Dynmap](https://www.spigotmc.org/resources/274/) provider, you must have [GDHooks](/hooks) installed.  
 
+![Dynmap Pre-visualização](/dynmap_gd.webp)
 
 ## Bukkit
  

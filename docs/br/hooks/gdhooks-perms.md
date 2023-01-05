@@ -5,8 +5,8 @@ category: hooks
 icon: node-tree
 ---
 
-Se você quiser um início rápido, aplique `gdhooks.user.*` aos seus jogadores e `gdhooks.user.*` e `gdhooks.admin.*` à seus moderadores/admins.
-Obviamente, essas permissões são bastante grosseiras e, se você quiser um controle mais preciso, leia todas as permissões abaixo e atribua de acordo.
+Se você quiser um início rápido, aplique `gdhooks.user.*` aos seus jogadores e `gdhooks.user.*` e `gdhooks.admin.*` à seus moderadores/admins.  
+Obviamente, essas permissões são bastante grosseiras e, se você quiser um controle mais preciso, leia todas as permissões abaixo e atribua de acordo.  
 
 ## Permissões Jogador
 
