@@ -15,69 +15,69 @@ Below is a snippet of the [optimization](/wiki/advanced/Global-Config.html#optim
   <summary>Global Optimization Config</summary>
 
 ```
-optimization {
-        # Whether to process player claim tool actions async for performance. (Default: true)
-        # Note: If you encounter any async thread issues, disable this setting.
-        async-claim-tool-actions=true
-        # Whether to process player claim visuals async for performance. (Default: true)
-        # Note: If you encounter any async thread issues, disable this setting.
-        async-player-claim-visuals=true
-        # Controls whether to ignore item drops from block sources.
-        # Note: This is only triggered when a player breaks a block.
-        block-item-drops=true
-        # Controls the amount of time, in seconds, for the permission cache of all entity damage actions in world. If the cache is accessed before expiration then the time is reset.
-        # Note: Setting this too high may result in wrong entity damage permission results.
-        cache-entity-damage-expiration=5
-        # Controls the amount of time, in seconds, for the permission lookup cache of all actions in world. If the cache is accessed before expiration then the time is reset.
-        # Note: This cache will occur after special caches such as entity damage, explosions, and physics.
-        # Note: Setting this too high may result in players not seeing proper results with their actions.
-        cache-permission-lookup-expiration=3
-        # Controls the amount of time, in seconds, for the permission cache of all block physic changes in world.
-        # Note: Blocks such as redstone will usually cache longer due to the repeated calls made.
-        # Note: Setting this too high may result in players not being tracked properly during block changes.
-        cache-physics-tracking-expiration=5
-        # Controls whether dispener item spawns are ignored.
-        dispenser-item-spawns=true
-        # Controls whether entity damage events that contain both a source/target living passive entity, such as two animals fighting, are ignored.
-        entity-damage-living-passive=true
-        # Controls whether entity damage events that contain both a source/target monster are ignored.
-        entity-damage-monster=true
-        # Controls whether entity damage events that contain a monster and other entity are ignored.
-        entity-damage-monster-other=true
-        # Controls whether entity damage source or block that target a living passive are ignored.
-        entity-damage-source-living-passive=true
-        # Controls whether entity damage source or block that target a monster are ignored.
-        entity-damage-source-monster=true
-        # Controls whether an entity interacting with a block is ignored.
-        entity-interact-block=true
-        # Controls whether entity item pickups made by non-players are ignored.
-        entity-item-pickup-non-player=true
-        # Controls whether non-player falls are ignored.
-        fall-non-player=true
-        # Controls whether monster attacks against a player are ignored.
-        # Note: This does not include explosion damage.
-        # Note: If you need to prevent damage from monsters in claims then this should remain false.
-        monster-player-damage=false
-        # Controls whether player attacks against a monster are ignored.
-        # Note: This does not include explosion damage.
-        player-monster-damage=true
-        # Controls whether ambient spawns, such as bats, are ignored in wilderness.
-        # Note: If you want to control aquatic spawns in wilderness, set this to false.
-        wilderness-ambient-spawns=true
-        # Controls whether animal spawns, such as pigs, are ignored in wilderness.
-        # Note: If you want to control animal spawns in wilderness, set this to false.
-        wilderness-animal-spawns=true
-        # Controls whether aquatic spawns, such as squids, are ignored in wilderness.
-        # Note: If you want to control aquatic spawns in wilderness, set this to false.
-        wilderness-aquatic-spawns=true
-        # Controls whether liquid flow is ignored in wilderness.
-        # Note: If you want to control liquid flow in wilderness, set this to false.
-        wilderness-liquid-flow=true
-        # Controls whether monster spawns, such as creepers, are ignored in wilderness.
-        # Note: If you want to control monster spawns in wilderness, set this to false.
-        wilderness-monster-spawns=true
-        # Controls whether experience orbs are ignored when dropped.
-        xp-orb-drop=true
+    optimization {
+    # Whether to process player claim tool actions async for performance. (Default: true)
+    # Note: If you encounter any async thread issues, disable this setting.
+    async-claim-tool-actions=true
+    # Whether to process player claim visuals async for performance. (Default: true)
+    # Note: If you encounter any async thread issues, disable this setting.
+    async-player-claim-visuals=true
+    # Controls whether to ignore item drops from block sources.
+    # Note: This is only triggered when a player breaks a block.
+    block-item-drops=true
+    # Controls the amount of time, in seconds, for the permission cache of all entity damage actions in world. If the cache is accessed before expiration then the time is reset.
+    # Note: Setting this too high may result in wrong entity damage permission results.
+    cache-entity-damage-expiration=5
+    # Controls the amount of time, in seconds, for the permission lookup cache of all actions in world. If the cache is accessed before expiration then the time is reset.
+    # Note: This cache will occur after special caches such as entity damage, explosions, and physics.
+    # Note: Setting this too high may result in players not seeing proper results with their actions.
+    cache-permission-lookup-expiration=3
+    # Controls the amount of time, in seconds, for the permission cache of all block physic changes in world.
+    # Note: Blocks such as redstone will usually cache longer due to the repeated calls made.
+    # Note: Setting this too high may result in players not being tracked properly during block changes.
+    cache-physics-tracking-expiration=5
+    # Controls whether dispener item spawns are ignored.
+    dispenser-item-spawns=true
+    # Controls whether entity damage events that contain both a source/target living passive entity, such as two animals fighting, are ignored.
+    entity-damage-living-passive=true
+    # Controls whether entity damage events that contain both a source/target monster are ignored.
+    entity-damage-monster=true
+    # Controls whether entity damage events that contain a monster and other entity, except players, are ignored.
+    entity-damage-monster-other=true
+    # Controls whether entity damage source or block that target a living passive are ignored.
+    entity-damage-source-living-passive=true
+    # Controls whether entity damage source or block that target a monster are ignored.
+    entity-damage-source-monster=true
+    # Controls whether an entity interacting with a block is ignored.
+    entity-interact-block=true
+    # Controls whether entity item pickups made by non-players are ignored.
+    entity-item-pickup-non-player=true
+    # Controls whether non-player falls are ignored.
+    fall-non-player=true
+    # Controls whether monster attacks against a player are ignored.
+    # Note: This does not include explosion damage.
+    # Note: If you need to prevent damage from monsters in claims then this should remain false.
+    monster-player-damage=false
+    # Controls whether player attacks against a monster are ignored.
+    # Note: This does not include explosion damage.
+    player-monster-damage=true
+    # Controls whether ambient spawns, such as bats, are ignored in wilderness.
+    # Note: If you want to control aquatic spawns in wilderness, set this to false.
+    wilderness-ambient-spawns=true
+    # Controls whether animal spawns, such as pigs, are ignored in wilderness.
+    # Note: If you want to control animal spawns in wilderness, set this to false.
+    wilderness-animal-spawns=true
+    # Controls whether aquatic spawns, such as squids, are ignored in wilderness.
+    # Note: If you want to control aquatic spawns in wilderness, set this to false.
+    wilderness-aquatic-spawns=true
+    # Controls whether liquid flow is ignored in wilderness.
+    # Note: If you want to control liquid flow in wilderness, set this to false.
+    wilderness-liquid-flow=true
+    # Controls whether monster spawns, such as creepers, are ignored in wilderness.
+    # Note: If you want to control monster spawns in wilderness, set this to false.
+    wilderness-monster-spawns=true
+    # Controls whether experience orbs are ignored when dropped.
+    xp-orb-drop=true
     }
 ```
 
