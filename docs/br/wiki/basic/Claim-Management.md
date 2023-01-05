@@ -361,6 +361,8 @@ Para remover a entrada para um usuário específico
 
 ## Como desativar a funcionalidade de reivindicação/GD
 
+:warning: Veja em [global.conf](/wiki/advanced/Global-Config.html) na secção [`World`](/wiki/advanced/Global-Config.html#world) para proteção de mundos ou recursos.
+
 ### Desative a reivindicação em um mundo específico
 
 Para desativar a criação de reivindicações para um grupo específico de usuários em um mundo chamado `valhalla`, Digite o seguinte comando

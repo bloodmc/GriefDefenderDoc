@@ -360,6 +360,7 @@ To remove entry for a specific user
 
 ## How to disable claiming/GD functionality
 
+:warning: See [global.conf](/wiki/advanced/Global-Config.html) in the [`World`](/wiki/advanced/Global-Config.html#world) section for protecting worlds or resources
 ### Disable claiming in a specific world
 
 To disable creating claims for a specific group of users in a world called `valhalla`, enter the following command  
