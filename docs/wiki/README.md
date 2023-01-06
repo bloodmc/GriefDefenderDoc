@@ -27,7 +27,7 @@ Check their [Luckperms - Where to start](https://luckperms.net/wiki/Default-Grou
 
 @tab:active Bukkit
 :warning: If using `spark`, update to [latest version](https://ci.lucko.me/job/spark/) :warning:   
-:warning: Set `spawn-protection` to `0` in `server.properties` to allow GD to protect spawn. 
+:warning: Set [`spawn-protection`](https://minecraft.fandom.com/wiki/Server.properties#spawn-protection) to `0` in [`server.properties`](https://minecraft.fandom.com/wiki/Server.properties) to allow GD to protect spawn. 
 If this is not set properly, the server will block actions before GD has a chance to see it. :warning:
 1. Install latest [LuckPerms](https://luckperms.net/download).
 2. Get latest version on [Spigot](https://www.spigotmc.org/resources/68900/).
