@@ -31,7 +31,7 @@ Para usar o WorldEdit CUI, é necessário ter instalado no cliente e no servidor
 * WECUI (Versão Fabric) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
 #### 1.12 and under
-* Liteloader Vanilla - [Download](https://www.liteloader.com/download)
+* Liteloader Vanilla - [Download](https://www.liteloader.com/download)  
 Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)  
 WECUI (Versão LiteLoader) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)  
 <hr>

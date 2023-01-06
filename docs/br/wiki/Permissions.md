@@ -24,6 +24,10 @@ Veja [LuckPerms - Default Groups](https://luckperms.net/wiki/Default-Groups)
 
 ## LuckPerms
 
+::: tip Para grandes Networks
+Se você gerencia uma grande rede de servidores minecraft e está usando um banco de dados Luckperms centralizado, certifique-se de seguir [Luckperms - Syncing data between servers](https://luckperms.net/wiki/Syncing-data-between-servers) se quiser que as atualizações do Luckperms sejam sincronizadas em todos os servidores instantaneamente.
+:::
+
 Na primeira inicialização do servidor do GriefDefender, 5 grupos no LP serão criados automaticamente se ainda não existirem.
 
 * `griefdefender_claim` - Armazena todas as permissões de sinalização aplicadas a declarações únicas por meio do comando `/cf`.  
