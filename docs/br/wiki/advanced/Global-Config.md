@@ -16,8 +16,8 @@ A configuração padrão do Griefdefender oferece personalização estendida par
 
 ---
 
-## Dependência do plug-in
-Observe, variáveis de custo (como cidades' `creation-cost`) **requer** um plugin de econômia. Da mesma forma, o McClans só é necessário se você planeja usar sua integração entre os plugins.**Não**, no entanto, é necessário usar as reivindicações da cidade de Griefdefender.
+## Dependência de plug-ins
+Observe, variáveis de custo (como cidades' `creation-cost`) **requer** um plugin de econômia (Exemplo: [Vault](https://www.spigotmc.org/resources/34315/), [EssentialsX](https://www.spigotmc.org/resources/9089/)). Da mesma forma, o McClans só é necessário se você planeja usar sua integração entre os plugins.**Não**, no entanto, é necessário usar as reivindicações da cidade de Griefdefender.
 
 Por exemplo, adicionar bloqueio de bloco à lista se traduzirá em `griefdefender.user.flag.block-break` sendo verificado como verdadeiro, permitindo que o jogador edite a bandeira de sua reivindicação com o bloqueio de sua reivindicação com `/cf`, `/cfg`, e `/cfp`. 
 

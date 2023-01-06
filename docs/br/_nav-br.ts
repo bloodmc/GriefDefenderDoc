@@ -5,7 +5,7 @@ export const br = navbar([
   { text: "Wiki", link: "/br/wiki/", icon: "edit" },
   { text: "Hooks", link: "/br/hooks/", icon: "plugin"},
   { text: "API", link: "/br/api", icon: "api" },
-  { text: "Mods", link: "/br/mods/", icon: "toolbox" },
+  { text: "Mods", link: "/br/mods/", icon: "tools" },
   { text: "FAQ", link: "/br/faq/", icon: "faq" },
   {
 	text: "Support",

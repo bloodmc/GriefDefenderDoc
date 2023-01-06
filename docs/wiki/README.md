@@ -18,7 +18,7 @@ Get latest [LuckPerms](https://luckperms.net/download) for Bukkit & Sponge API 8
 ::: warning
 GD makes heavy use of LP's `default` group. Make sure your LP groups are inheriting the `default` group 
 or GD will not function properly. LP also strongly recommends to never disable this group.
-Check their [wiki](https://luckperms.net/wiki/Default-Groups#where-to-start) 
+Check their [Luckperms - Where to start](https://luckperms.net/wiki/Default-Groups#where-to-start) 
 :::
 
 ### Installation

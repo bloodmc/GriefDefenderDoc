@@ -8,7 +8,7 @@ icon: gui
 Para servidores que permitem a entrada de jogadores de Bedrock, esta página fornecerá as etapas necessárias para garantir que seus jogadores de bedrock não tenham problemas.  
 
 ## Configuração no LuckPerms
-Defina `allow-invalid-usernames` para `true` na configuração do [LuckPerm](https://luckperms.net/) encontrado no arquivo `config.yml`.
+Defina [`allow-invalid-usernames`](https://luckperms.net/wiki/Configuration#allow-invalid-usernames) para `true` na configuração do [LuckPerm](https://luckperms.net/) encontrado no arquivo `config.yml`.
 
 ## Interface de inventário
 GriefDefender fornece duas interfaces para jogadores : [Bate-papo](/wiki/basic/GUI.html#chat) e [Inventário](/wiki/basic/GUI.html#inventory). A Interface do bate-papo não funcionará corretamente com os jogadores do Bedrock, pois eles não conseguem interagir/clicar no bate-papo. 

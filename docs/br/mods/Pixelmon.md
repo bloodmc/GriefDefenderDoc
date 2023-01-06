@@ -22,7 +22,7 @@ Nota: Este comando deve ser executado por um administrador com permissão `grief
 
   Clique com o botão direito na página e selecione "Salvar como...", salve como `pixelmon.conf` em config/griefdefender/presets
 
-* [lang/presets/pixelmon/en_US.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.conf)
+* [lang/presets/pixelmon/en_US.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.conf) ([zh_CN](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/zh_CN.conf)/[pt_BR](#))
 
   Clique com o botão direito na página e selecione "Salvar como...", salve como `en_US.conf` em config/griefdefender/lang/presets/pixelmon
 

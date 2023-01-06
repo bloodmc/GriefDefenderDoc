@@ -89,7 +89,7 @@ DELETE FROM luckperms_user_permissions WHERE permission LIKE '%griefdefender\\\\
 ```
 
 
-See [Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta) and [Meta Commands](https://luckperms.net/wiki/Meta-Commands) for more information on how to use it directly in LuckPerms
+See [Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta) and [Luckperms - Meta Commands](https://luckperms.net/wiki/Meta-Commands) for more information on how to use it directly in LuckPerms
 
 ## Global Options
 

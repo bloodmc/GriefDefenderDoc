@@ -15,7 +15,7 @@ Please ensure that you have read the sub-text found next to the variables in you
 ---
 
 ## Plugin Dependency
-Do note, cost variables (such as Towns' `creation-cost`) **require** an Economy plugin. Similarly, MCClans is only needed if you plan on using it's integration across plugins. It is **not**, however, required to use GriefDefender's Town claims.
+Do note, cost variables (such as Towns' `creation-cost`) **require** an Economy plugin (Example: [Vault](https://www.spigotmc.org/resources/34315/), [EssentialsX](https://www.spigotmc.org/resources/9089/)). Similarly, MCClans is only needed if you plan on using it's integration across plugins. It is **not**, however, required to use GriefDefender's Town claims.
 
 For example, adding block-break to the list will translate into `griefdefender.user.flag.block-break` being checked as true, therefore allowing the player to edit his claim's block-break flag with `/cf`, `/cfg`, and `/cfp`. 
 
