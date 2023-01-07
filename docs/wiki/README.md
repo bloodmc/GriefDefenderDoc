@@ -48,11 +48,23 @@ to check if GriefDefender was loaded sucessfully you can check console for `[Gri
 
 @tab Forge
 
-Coming soon!
+:warning: Coming soon!
+1. Install latest [LuckPerms - Forge](https://luckperms.net/download).
+2. Get porper version of GD for Forge X.XX.X from Discord.
+3. Drop the jar into `mods`
+4. Now start your server once to generate all configuration files, 
+to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`.
+5. Next shut down your server and start configuring your server.
 
 @tab Fabric
 
-Coming soon!
+:warning: Coming soon!
+1. Install latest [LuckPerms - Fabric](https://luckperms.net/download).
+2. Get porper version of GD for Forge X.XX.X from Discord.
+3. Drop the jar into `mods`
+4. Now start your server once to generate all configuration files, 
+to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`.
+5. Next shut down your server and start configuring your server.
 
 :::
 
@@ -182,7 +194,7 @@ Note: All configuration sections are automatically sorted alphabetically. This c
 GD supports the following languages : `de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK`
 
 The default language is `en_US`.  
-To change the lang, open `global.conf` and under `message` category change `locale="en_US"` to the language you want.  
+To change the lang, open [`global.conf`](/wiki/advanced/Global-Config.html) and under `message` category change `locale="en_US"` to the language you want.  
 
 ### Storage
 
@@ -252,7 +264,7 @@ However, If you want all claims created to use economy directly instead of claim
 With `economy-mode` turned on, all claim creations will prompt players with a confirmation of claim cost. Once confirmed, the funds will be taken from the player account.  
 If you want to bypass these confirmations, set the permission `griefdefender.user.claim.economy.create-confirm` to `false`.
 
-After this setting is turned on, open up `options.conf` and configure the following options to a value greater than `0`
+After this setting is turned on, open up [`options.conf`](/wiki/basic/Options.html) and configure the following options to a value greater than `0`
 * `economy-block-cost`  
 * `economy-sell-return` 
 
@@ -281,9 +293,9 @@ Once GD is installed and running, see [Claim Management](/wiki/basic/Claim-Manag
 
 ### Options
 :warning: It is VERY IMPORTANT you follow [Options](/wiki/basic/Options.html) before proceeding. :warning:  
-:warning: All persisted options(meta) set in LuckPerms will take priority over defaults in `options.conf` :warning:
+:warning: All persisted options(meta) set in LuckPerms will take priority over defaults in [`options.conf`](/wiki/basic/Options.html) :warning:
 
-If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in `options.conf`.  All default option settings are applied at server startup.  
+If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in [`options.conf`](/wiki/basic/Options.html).  All default option settings are applied at server startup.  
 
 [Paper]: https://papermc.io/downloads
 [Spigot]: https://www.spigotmc.org/wiki/buildtools/

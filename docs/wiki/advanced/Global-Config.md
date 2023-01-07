@@ -33,6 +33,9 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Portals: portal-use
 * Projectiles: projectile-impact-block, projectile-impact-entity
 
+<hr>
+Version based on release file: GriefDefender 2.3.2-DEV4
+<hr>
 
 # Claim
 | Variable | Description | Default Value |
@@ -102,7 +105,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | wilderness-default-message | Controls whether wilderness default enter message is sent to players. | TRUE |
 
 # Migrators
-## Bukkit
+# Bukkit
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | classic | Set to true to enable the classic migrator. <br />Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format.<br />Note: It is recommended to backup data before using. | FALSE | 
@@ -114,13 +117,23 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | residence | Set to true to enable Residence data migrator. | TRUE |
 | worldguard | Set to true to enable WorldGuard data migrator. <br />Note: Only cuboid regions are supported. <br />Note: It is recommended to backup data before using. | FALSE |
 
-## Sponge
+# Sponge
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | griefprevention-bukkit | Set to true to enable the griefprevention bukkit migrator. <br />Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format. <br />Note: It is recommended to backup data before using. | FALSE |
 | griefprevention-sponge | Set to true to enable the griefprevention sponge migrator. <br />Note: Migrates GP sponge claim data to current format. <br />Note: It is recommended to backup data before using. | FALSE |
 | red-protect | Set to true to enable RedProtect data migrator. <br />Note: All RedProtect data will be converted into basic claim data. | FALSE |
 | worldguard | Set to true to enable WorldGuard data migrator. <br />Note: Only cuboid regions are supported. <br />Note: It is recommended to backup data before using. | FALSE |
+
+# Mod
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| entity-move-event | Allows GD's enter-claim and exit-claim to support non-player movement such as monsters and animals. | Default: false |
+| block-id-convert-list | # Used to override generic block id's to their actual id during TE and item usage if available. Add the target block id to list if you want to force a conversion when detected. # Note: This is useful for mods such as IC2 which uses the generic id 'ic2:te' for its multi-block. | "gregtech:machine", "ic2:te" |
+| fakeplayer-identifiers | Contains a list of strings used to identify a fakeplayer by UUID or name. To use, add the fakeplayer UUID or name. | ["41C82C87-7AfB-4024-BA57-13D2C99CAE77", BFC3377F-C3C9-3382-9DA6-79B50A9AFE57, "0D0C4CA0-4FF1-11E4-916C-0800200C9A66", "[Minecraft]", "OpenModsFakethis*"] |
+| mod-id-map | Used to map an unknown mod item/block/entity to a mod id. To use, add the mod package with a mapping to a mod id. Ex. 'com.pixelmonmod.*', 'pixelmon' would map an entity containing class name 'com.pixelmonmod.*' to 'pixelmon' | "com.pixelmonmod.*"=pixelmon |
+| tile-id-nbt-map | Used to override generic tileentity id's to their actual id during TE usage. Add the target TE id as key and NBT key where ID is stored as value. | "gregtech:machine"=MetaId |
+ 
 
 # Optimization
 | Variable | Description | Default Value |

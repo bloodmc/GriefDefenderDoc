@@ -11,7 +11,7 @@ Options, also known as Meta, are a way to configure plugins using player/group c
 
 
 ## Configuration  
-Default values can be changed in `options.conf`  
+Default values can be changed in [`options.conf`](/wiki/basic/Options.html)  
 See [Option Config](/wiki/Configuration.html#options)  
 
 ## Built-in Commands
@@ -38,7 +38,7 @@ See [Contexts](/wiki/advanced/Contexts.html) on what contexts you can use and ho
 * Deny player hunger in claim player is in.  
 `/claimoption player-deny-hunger true`  
 
-Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.conf`.
+Note: If you get a message stating the option is not enabled, enable it under `option-control` in [`options.conf`](/wiki/basic/Options.html).
 Note: Using `/claimoption` with no arguments opens up the GUI and displays all claim options for claim you are standing in including default options that affect all claims.  
 
 ## LuckPerms

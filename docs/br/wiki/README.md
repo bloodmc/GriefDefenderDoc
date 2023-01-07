@@ -38,7 +38,7 @@ Verifique na [Luckperms - Where to start](https://luckperms.net/wiki/Default-Gro
 
 @tab:active Bukkit
 :warning: Se estiver usando `spark`, Atualize para a [última versão](https://ci.lucko.me/job/spark/) :warning:   
-:warning: Defina [`spawn-protection`](https://minecraft.fandom.com/wiki/Server.properties#spawn-protection) para `0` dentro [`server.properties`](https://minecraft.fandom.com/wiki/Server.properties) para permitir que GD proteja o spawn. 
+:warning: Defina [`spawn-protection`](https://minecraft.fandom.com/pt/wiki/Server.properties#spawn-protection) para `0` dentro [`server.properties`](https://minecraft.fandom.com/pt/wiki/Server.properties) para permitir que GD proteja o spawn. 
 Se isso não for definido corretamente, o servidor bloqueará as ações antes que o GD tenha a chance de vê-lo. :warning:
 1. Instale o [LuckPerms](https://luckperms.net/) mais recente.
 2. Obtenha a versão mais recente do [GriefDefender](https://www.spigotmc.org/resources/68900/).
@@ -58,12 +58,22 @@ para verificar se o GriefDefender foi carregado com sucesso você pode verificar
 4. Em seguida, desligue o servidor e comece a configurar.
 
 @tab Forge
-
-Em breve!
+:warning: Em breve!
+1. Instale o [LuckPerms - Forge](https://luckperms.net/) mais recente.
+2. Obtenha a versão adequada do GriefDefender para o Forge X.XX.X no Discord.
+3. Coloque o arquivo jar em `mods`
+4. Agora inicie seu servidor uma vez para gerar todos os arquivos de configuração,
+para verificar se o GriefDefender foi carregado com sucesso você pode verificar se o console mostrou `[GriefDefender] Loaded successfully`.
+5. Em seguida, desligue o servidor e comece a configurar.
 
 @tab Fabric
-
-Em breve!
+:warning: Em breve! 
+1. Instale o [LuckPerms - Fabric](https://luckperms.net/) mais recente.
+2. Obtenha a versão adequada do GriefDefender para o Forge X.XX.X no Discord.
+3. Coloque o arquivo jar em `mods`
+4. Agora inicie seu servidor uma vez para gerar todos os arquivos de configuração,
+para verificar se o GriefDefender foi carregado com sucesso você pode verificar se o console mostrou `[GriefDefender] Loaded successfully`.
+5. Em seguida, desligue o servidor e comece a configurar.
 
 :::
 
