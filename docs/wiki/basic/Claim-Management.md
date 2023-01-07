@@ -9,7 +9,7 @@ GriefDefender is a plugin that provides self-service region protection functiona
 
 All the examples are with the defaults at the time of writing this in mind.
 
-For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](/faq/)
+For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](/faq/Claim-Management.html)
 
 ## Claim Creation
 
