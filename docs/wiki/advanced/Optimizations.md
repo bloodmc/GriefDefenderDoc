@@ -344,7 +344,7 @@ blacklist {
 
 <hr>
 
-## FITFC's Optimization
+# FITFC's Optimization
 
 ** Recommendation: if you are going to create new flags, remove this optimization and leave the GD default, as the optimizations remove some events from gddebug.
 

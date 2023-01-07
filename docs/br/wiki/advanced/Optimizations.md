@@ -93,6 +93,8 @@ Abaixo, você encontrará configurações contribuídas pelo usuário para servi
 Essas configurações são ajustadas para servidores individuais e podem não funcionar na sua.É altamente recomendável testar essas configurações antes de usá-las em seu servidor principal.
 :::: 
 
+# Dino's Otimização
+
 <details>
   <summary>Dino's Lista negra</summary>
 
@@ -342,7 +344,7 @@ blacklist {
 
 <hr>
 
-## FITFC's Optimization
+# FITFC's Optimization
 
 ** Recomendação: se for criar novos flags, remova esta otimização e deixe padrão do GD, pois as otimizações removem alguns eventos do gddebug.
 
