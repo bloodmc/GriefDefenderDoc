@@ -346,7 +346,8 @@ blacklist {
 
 # FITFC's Optimization
 
-** Recommendation: if you are going to create new flags, remove this optimization and leave the GD default, as the optimizations remove some events from gddebug.
+** Recommendation: if you are going to create new flags, remove this optimization and leave the GD default, as the optimizations remove some events from gddebug.  
+These optimizations were focused on a server that tries its best to get close to vanilla - Last revision 1.19.3  
 
 <details>
   <summary>FIT's Blacklist</summary>
@@ -400,6 +401,8 @@ GriefDefender {
             "minecraft:grass_block",
             "minecraft:mycelium",
             "minecraft:twisting_vines",
+            "minecraft:brown_mushroom",
+            "minecraft:budding_amethyst",
             "minecraft:weeping_vines",
             "minecraft:kelp"
         ]
@@ -486,7 +489,9 @@ GriefDefender {
         item-drop=[]
         item-pickup=[]
         item-spawn=[]
-        item-use=[]
+        item-use=[
+            "#food"
+        ]
         leaf-decay=[]
         liquid-flow=[]
         portal-use=[]
@@ -495,6 +500,13 @@ GriefDefender {
             "minecraft:ender_pearl"
         ]
     }
+    # A global list of source id's that are ignored by events. 
+    # Note: This only affects events where the id specified is the source.
+    global-source=[]
+    # A global list of target id's that are ignored by events. 
+    # Note: This only affects events where the id specified is the target.
+    global-target=[]
+}
 ```
 </details>
 

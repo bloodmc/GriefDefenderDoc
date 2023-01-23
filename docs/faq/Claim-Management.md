@@ -2,7 +2,6 @@
 title: Claim-Management
 tag: faq
 category: faq
-icon: faq
 ---
 
 ## 1. How do allow all users to create claims for free?**

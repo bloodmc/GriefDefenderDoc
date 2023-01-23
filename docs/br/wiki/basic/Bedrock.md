@@ -11,7 +11,7 @@ Para servidores que permitem a entrada de jogadores de Bedrock, esta página for
 Defina [`allow-invalid-usernames`](https://luckperms.net/wiki/Configuration#allow-invalid-usernames) para `true` na configuração do [LuckPerm](https://luckperms.net/) encontrado no arquivo `config.yml`.
 
 ## Interface de inventário
-GriefDefender fornece duas interfaces para jogadores : [Bate-papo](/wiki/basic/GUI.html#chat) e [Inventário](/wiki/basic/GUI.html#inventory). A Interface do bate-papo não funcionará corretamente com os jogadores do Bedrock, pois eles não conseguem interagir/clicar no bate-papo. 
+GriefDefender fornece duas interfaces para jogadores : [Bate-papo](/br/wiki/basic/GUI.html#bate-papo) e [Inventário](/br/wiki/basic/GUI.html#inventario). A Interface do bate-papo não funcionará corretamente com os jogadores do Bedrock, pois eles não conseguem interagir/clicar no bate-papo. 
 
 Todos os jogadores de Bedrock devem receber a permissão `griefdefender.login.inventory-gui` para padronizar a Interface do Inventário ao executar o comando `/gd`.  
 

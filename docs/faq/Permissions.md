@@ -2,7 +2,6 @@
 title: Permissions
 tag: faq
 category: faq
-icon: faq
 ---
 
 ## 1. How do I grant a specific group trust to ALL claims globally?
