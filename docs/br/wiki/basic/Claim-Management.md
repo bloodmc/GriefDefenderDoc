@@ -5,7 +5,7 @@ category: claim
 icon: manage
 ---
 
-GriefDefender é um plugin que fornece funcionalidade de proteção de região de automática, oferecendo opções adicionais para ajustar aspectos como portas, baús e permissões de construção para jogadores ou grupos de jogadores! Abaixo algumas instruções básicas para gerenciamento de reivindicações para um controle mais personalizado sobre suas reivindicações para o seu servidor, confira a [página de definição de bandeiras](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI).
+GriefDefender é um plugin que fornece funcionalidade de proteção de região de automática, oferecendo opções adicionais para ajustar aspectos como portas, baús e permissões de construção para jogadores ou grupos de jogadores! Abaixo algumas instruções básicas para gerenciamento de reivindicações para um controle mais personalizado sobre suas reivindicações para o seu servidor, confira a [página de definição de bandeiras](/br/wiki/basic/Flag-Definitions-GUI.html).
 
 Todos os exemplos estão com os padrões no momento em que escrevo isso em mente.
 

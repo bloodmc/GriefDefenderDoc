@@ -1,184 +1,255 @@
 ---
-title: Configuração global
+title: Global Config
 tag: Info
 category: info
 icon: config
 ---
 
-::: danger Desatualizado
-Esta parte da Wiki esta desatualizada para o português-brasil.  
-Utilize a [Wiki na lingua inglesa](/wiki/advanced/Global-Config.html)
-:::
+A configuração padrão do GriefDefender oferece personalização estendida para o seu servidor. Abaixo está um detalhamento de todas as variáveis padrão para sua conveniência.  
 
-A configuração padrão do Griefdefender oferece personalização estendida para o seu servidor.Abaixo está um detalhamento de todas as variáveis padrão para sua conveniência.
-
-> :warning: Algumas opções podem causar alterações irreparáveis em seus dados.Certifique-se de ter lido o subtexto encontrado ao lado das variáveis em sua [`global.conf`](/br/wiki/advanced/Global-Config.html). **Todas as variáveis de migração sempre devem ser usadas após o backup de seus dados.** :warning:
+:::: warning Algumas opções podem causar alterações irreparáveis em seus dados
+Certifique-se de ter lido o subtexto encontrado ao lado das variáveis em seu arquivo [global.conf](/wiki/advanced/Global-Config.html)  
+**Todas as variáveis de migração SEMPRE devem ser usadas APÓS o backup de seus dados ser feito.**
+::::
 
 ---
 
-## Dependência de plug-ins
-Observe, variáveis de custo (como cidades' `creation-cost`) **requer** um plugin de econômia (Exemplo: [Vault](https://www.spigotmc.org/resources/34315/), [EssentialsX](https://www.spigotmc.org/resources/9089/)). Da mesma forma, o McClans só é necessário se você planeja usar sua integração entre os plugins.**Não**, no entanto, é necessário usar as reivindicações da cidade de Griefdefender.
+## Dependência do plug-in
+Observe que as variáveis de custo (como a `creation-cost` das cidades) **requer** um plug-in de Economia (Exemplo: [Vault](https://www.spigotmc.org/resources/34315/), [EssentialsX](https://www.spigotmc.org/resources/9089/)). Da mesma forma, MCClans só é necessário se você planeja usar sua integração entre plugins. No entanto, **não** é necessário usar as reivindicações de GriefDefender's Town.
 
-Por exemplo, adicionar bloqueio de bloco à lista se traduzirá em `griefdefender.user.flag.block-break` sendo verificado como verdadeiro, permitindo que o jogador edite a bandeira de sua reivindicação com o bloqueio de sua reivindicação com `/cf`, `/cfg`, e `/cfp`. 
+Por exemplo, adicionar quebra de bloco à lista se traduzirá em `griefdefender.user.flag.block-break` sendo verificado como verdadeiro, permitindo assim ao jogador editar o sinalizador de quebra de bloco de sua reivindicação com `/cf`, `/cfg `, e `/cfp`. 
 
 ## Configuração modular
-O Griefdefender permite a habilitação modular.De acordo com os arquivos de configuração padrão, no entanto, todos os módulos estão ativados.Desativar um módulo tornará todas as bandeiras inutilizáveis.Faça isso apenas se você não planeja usar a administração da bandeira da referida bandeira de Griefdefender.Você pode optar por desativar o seguinte:
-* Block-Changes: block-break, block-grow, block-modify, block-place, block-pre, block-spread
-* Collisions: collide-block, collide-entity
-* Commands: command-execute
-* Movements: enter-claim, exit-claim
-* Entity: entity-damage, entity-riding, entity-spawn, entity-teleport-from, entity-teleport-to
-* Explosions: explosion-block, explosion-entity
-* Interacts: interact-block-primary, interact-block-secondary, interact-entity-primary, interact-entity-secondary, interact-inventory, interact-inventory-click, interact-item-primary, interact-item-secondary
+GriefDefender permite configuração modular. No entanto, de acordo com os arquivos de configuração padrão, todos os módulos são ativados. Desativar um módulo tornará todos as bandeiras inutilizáveis. Só faça isso se você não planeja usar o gerenciamento de bandeira do GriefDefender. Você pode optar por desabilitar o seguinte:
+* Mudanças nos blocos: block-break, block-grow, block-modify, block-place, block-pre, block-spread
+* Colisões: collide-block, collide-entity
+* Comandos: command-execute
+* Movimento: enter-claim, exit-claim
+* Entidade: entity-damage, entity-riding, entity-spawn, entity-teleport-from, entity-teleport-to
+* Explosão: explosion-block, explosion-entity
+* Interações: interact-block-primary, interact-block-secondary, interact-entity-primary, interact-entity-secondary, interact-inventory, interact-inventory-click, interact-item-primary, interact-item-secondary
 * Item: item-drop, item-pickup, item-spawn, item-use, item-damage
-* Liquids: liquid-flow
-* Portals: portal-use
-* Projectiles: projectile-impact-block, projectile-impact-entity
+* Líquidos: liquid-flow
+* Portal: portal-use
+* Projéteis: projectile-impact-block, projectile-impact-entity
 
+<hr>
+Versão baseada no arquivo de lançamento: GriefDefender 2.3.2-DEV4
+<hr>
 
-# Reivindicação
+# Claim
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| auto-chest-claim-block-radius | O raio usado (em blocos) para reivindicação criada automaticamente quando um baú é colocado.Definido como -1 para desativar a criação de reivindicação de peito. | 4 |
-| auto-nature-restore | Se as reivindicações de sobrevivência serão restauradas automaticamente à natureza quando excluídas automaticamente.. | FALSE |
-| auto-schematic-restore | Se as reivindicações de sobrevivência serão restauradas automaticamente ao seu esquema de criação de reivindicações no abandono/expiração. <br /> Nota: Ativar esse recurso fará com que todas as reivindicações criadas recentemente criem automaticamente um esquema especial que será usado para restaurar a reivindicação sobre abandono/expiração.<br />NOTA: Ativar esse recurso desativará a capacidade de redimensionar as reivindicações. <br /> Nota: É altamente recomendável desativar a construção no deserto antes de usar esse recurso para evitar que os jogadores explorem.<br />Nota: Também é recomendável usar apenas esse recurso em mundos recém -criados, onde não existem dados de jogadores existentes.<br />Nota: Isso não afeta as exclusões.Se os administradores quiserem restaurar de volta ao esquema original, eles podem selecionar '__restore__' usando o comando/claimschematic .| FALSE |
-| border-block-radius | Defina a borda da reivindicação do raio especificado (em blocos), centrado na reivindicação.Se definido como 1, adiciona um raio adicional de 1 bloco protegido em torno da reivindicação. <br />Nota: Não é recomendável definir esse valor muito alto, pois o desempenho pode se degradar devido a pesquisas de reivindicação mais profundas. | 0 |
-| claim-block-task | Se a tarefa de bloco de reivindicação deve ser executada para acumular blocos para os jogadores. <br />Nota: Se no modo de economia, use a configuração 'use-claim-block-task' na categoria de economia. <br />Nota: Para configurar a quantidade acumulada, consulte 'blocks-accrued-per-hour' opção em [Configuração Global](/br/wiki/advanced/Global-Config.html#reivindicacao) | FALSE |
-| claim-block-task-move-threshold | O limiar mínimo de movimento (em blocos) necessário para receber blocos de reivindicação acumulados. <br />Nota: A tarefa do bloco de reivindicações é executada a cada 5 minutos, que é a hora de cada jogador mover a quantidade necessária de blocos. | 0 |
-| claim-create-radius-limit | O limite do raio para o comando /claimcreate . | 256 |
-| claims-enabled | Se a reivindicação está ativada ou não.(0 = desativado, 1 = ativado). | 1 |
-| expiration-cleanup-interval | O intervalo em minutos para a limpeza de reivindicações expiradas.Definido como 0 para desativar. | 63 |
-| explosion-block-surface-blacklist | Uma lista de IDs de origem que não podem causar danos à explosão a blocos acima do nível do mar. | [ ] |
-| explosion-entity-surface-blacklist | Uma lista de IDs que não podem causar danos à explosão a entidades acima do nível do mar. | [ ] |
-| explosion-surface-block-level | O nível de bloco 'Y' que é considerado a superfície para explosões. | 0 |
-| inspection-tool | O item usado para inspecionar reivindicações com um clique com o botão direito do mouse. <br />Nota: Defina como citações esvazias se você deseja atribuir nenhum item e usar o modo '/claim' exclusivamente. | "minecraft:stick" |
-| modification-tool | O item usado para criar/redimensionar reivindicações com um clique direito.<br />Nota: Defina como citações esvazias se você quiser atribuir nenhum item e usar '/claim' modo exclusivamente. | "minecraft:golden_shovel" |
-| piston-protection-in-claims | Se a proteção do pistão deve ser ativada dentro das reivindicações.NOTA: Isso não afeta os pistões cruzando em outra reivindicação, que é sempre protegida.Isso apenas determina se o GD deve ou não processar pistões se não se cruzar para outra reivindicação. | false |
-| player-trapped-cooldown | O tempo de espera, em segundos, ao usar para usar o '/trapped' . | 300 |
-| protect-tamed-entities | Se as entidades domadas devem ser protegidas em reivindicações. | true |
-| reserved-claim-names | Uma lista de nomes de reivindicações reservados para uso apenas pelos administradores. | [ ] |
-| restrict-world-max-height | Se deve restringir a reivindicação à altura mundial máxima. | true |
+| auto-chest-claim-block-radius | Raio usado (em blocos) para reivindicação criada automaticamente quando um baú é colocado. Defina como -1 para desativar a criação de reivindicação de baú. | 4 |
+| auto-nature-restore | Se as reivindicações de sobrevivência serão restauradas automaticamente à natureza quando excluídas automaticamente. | FALSE |
+| auto-schematic-restore | Se as reivindicações de sobrevivência serão restauradas automaticamente para seu esquema de criação de reivindicação no abandono/expiração. <br />Observação: habilitar este recurso fará com que TODAS as reivindicações recém-criadas criem automaticamente um esquema especial que será usado para restaurar a reivindicação no abandono/expiração.<br />Observação: ativar este recurso desativará a capacidade de redimensionar as reivindicações.< br />Observação: É ALTAMENTE recomendado desabilitar a construção no deserto antes de usar este recurso para evitar que os jogadores explorem.<br />Observação: Também é recomendado usar APENAS este recurso em mundos recém-criados onde não há dados de jogador existentes .<br />Observação: isso NÃO afeta as exclusões. Se os administradores quiserem restaurar o esquema original, eles podem selecionar '__restore__' usando o comando /claimschematic.| FALSE |
+| border-block-radius | Defina a borda da reivindicação de raio especificado (em blocos), centralizada na reivindicação. Se definido como 1, adiciona um raio adicional de 1 bloco protegido ao redor da reivindicação. <br />Observação: não é recomendável definir esse valor muito alto, pois o desempenho pode diminuir devido a pesquisas de reivindicação mais profundas. | 0 |
+| claim-block-task | Se a tarefa de reivindicação de bloco deve ser executada para acumular blocos para os jogadores. <br />Observação: Se estiver no modelo econômico, use a configuração 'use-claim-block-task' na categoria economy. <br />Observação: Para configurar o valor acumulado, consulte a opção 'blocks-accrued-per-hour' em [Global](/br/wiki/basic/Options.html#global-options) | FALSE |
+| claim-block-task-move-threshold | O limite mínimo de movimento (em blocos) necessário para receber os blocos de reivindicação acumulados. <br />Nota: A tarefa de reivindicar blocos é executada a cada 5 minutos, que é o tempo que cada jogador terá para mover a quantidade necessária de blocos. | 0 |
+| claim-create-radius-limit | O limite de raio para o comando /claimcreate. | 256 |
+| claims-enabled | Se a reivindicação está ativada ou não. (0 = Desativado, 1 = Ativado). | 1 |
+| expiration-cleanup-interval | O intervalo em minutos para limpar reivindicações expiradas. Defina como 0 para desativar. | 63 |
+| explosion-block-surface-blacklist | Uma lista de IDs de origem que não podem causar dano de explosão a blocos acima do nível do mar. | [ ] |
+| explosion-entity-surface-blacklist | Uma lista de id's que não podem causar dano de explosão a entidades acima do nível do mar. | [ ] |
+| explosion-surface-block-level | O nível do bloco 'Y' que é considerado a superfície para explosões. | 0 |
+| inspection-tool | O item usado para inspecionar reivindicação com um clique com o botão direito. <br />Observação: coloque aspas vazias se não quiser atribuir nenhum item e usar o modo '/claim' exclusivamente. | "minecraft:stick" |
+| modification-tool | O item usado para criar/redimensionar reivindicações com um clique direito.<br />Nota: Coloque entre aspas vazias se não quiser atribuir nenhum item e use o modo '/claim' exclusivamente. | "minecraft:golden_shovel" |
+| piston-protection-in-claims | Se a proteção do pistão deve ser habilitada nas reivindicações. Nota: Isso não afeta o cruzamento dos pistões para outra reivindicação, que está sempre protegida. Isso apenas determina se o GD deve ou não processar pistões se não cruzar para outra reivindicação. | false |
+| player-trapped-cooldown | O intervalo de uso, em segundos, ao usar o comando '/trapped'. | 300 |
+| protect-tamed-entities | Se as entidades domesticadas devem ser protegidas em reivindicações. | true |
+| reserved-claim-names | Uma lista de nomes de declarações reservadas para uso somente por administradores. | [ ] |
+| restrict-world-max-height | Se deve restringir a reivindicação à altura máxima do mundo. | true |
+| teleports-use-border-event | Se os teletransportes acionam eventos de borda de reivindicação. Predefinição: True. <br />Nota: Defina como False se você deseja que 'enter-claim' e 'exit-claim' não sejam acionados por teletransportes. | TRUE |
 
 # Context
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| player-equipment | Se os contextos do equipamento do jogador devem ser aplicados durante as verificações de permissão. | true |
-| potion-effects | Se os contextos de efeito de poção devem ser aplicados durante as verificações de permissão. | true |
 | enchantments | Se os contextos de efeito de poção devem ser aplicados durante as verificações de permissão. | false |
+|ignored-debug-contexts | Uma lista de valores de contexto ignorados durante a depuração. |
+| player-equipment | Se os contextos de equipamento do jogador devem ser aplicados durante as verificações de permissão. | true |
+| potion-effects | Se os contextos de efeito de poção devem ser aplicados durante as verificações de permissão. | true |
 
 # Economy
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| bank-system | Se deve ativar o sistema bancário para reivindicações.Definido como true para ativar. | FALSE |
-| bank-transaction-log-limit | A quantidade de transações a se manter para a história. | 60 |
-| economy-mode | Usa economia em vez de blocos de reivindicação de jogadores para criação de reivindicações.Se for verdade, desativa o sistema de blocos de reivindicações em favor da economia. <br />NOTE: Usando este modo desativa o '/buyblocks' O comando como criação de reivindicações puxará fundos diretamente do equilíbrio econômico de um jogador. <br />Nota: Se os jogadores tiverem reivindicações existentes de configurações anteriores, um administrador deve usar o '/ecomigrateblocks' comando para converter restante em moeda. | FALSE |
-| rent-delinquent-task-apply-hour | A hora específica de dia para tentar obter saldos de aluguel de reivindicações de devida de locatários inadimplentes. <br />Nota: Isso usa tempo militar e aceita valores entre 0-23. | 0 |
-| rent-max-time-limit | Controla o limite máximo de tempo (horas ou dias) que um proprietário de reivindicação pode ter seu aluguel max definido para. <br />Nota: Isso afeta apenas os aluguéis de reclamações que têm um máximo especificado.Se nenhum máximo for especificado pelo proprietário da reivindicação, um locatário poderá alugar o tempo que quiser. | false |
-| rent-restore-day-warning | Controla em que dia um jogador deve começar a receber avisos sobre sua reivindicação alugada que se aproxima de expiração. <br />Ex.Se definido como '5', Isso começará a enviar as mensagens dos jogadores no login e na hora do aluguel de aplicar, quando restam 5 dias antes do vencimento. <br />Nota: Isso só se aplica se o proprietário tiver 'rent-restore' Opção ativado e o proprietário do aluguel define um máximo. | 5 |
-| rent-schematic-restore-admin | Controla se as reivindicações de administrador alugadas usarão um esquema para restauração. <br />Nota: Se definido, a reivindicação criará um esquema no início do aluguel e a restaurará quando terminar. <br />Nota: Isso se aplica apenas a aluguel com uma data máxima definida. | false |
+| bank-system | Habilitar ou não o sistema bancário para sinistros. Defina como verdadeiro para ativar. | FALSE |
+| bank-transaction-log-limit | A quantidade de transações a serem mantidas para o histórico. | 60 |
+|currency-symbol | O símbolo de moeda para mensagens de economia. Predefinição: $ | $ |
+| economy-mode | Usa economia em vez de blocos de reivindicação de jogador para criação de reivindicação. Se verdadeiro, desativa o sistema de bloqueio de reivindicações em favor da economia. <br />Observação: Usar este modo desativa o comando '/buyblocks', pois a criação de reivindicação retirará fundos diretamente do saldo econômico do jogador. <br />Observação: Se os jogadores tiverem blocos de reivindicação existentes de configurações anteriores, um administrador deve usar o comando '/ecomigrateblocks' para converter o restante em moeda. | FALSE |
+| rent-delinquent-task-apply-hour | A hora específica do dia para tentar obter os saldos de aluguel devidos dos locatários inadimplentes. <br />Nota: Este usa tempo militar e aceita valores entre 0-23. | 0 |
+| rent-max-time-limit | Controla o limite máximo de tempo (horas ou dias) para o qual um proprietário de reivindicação pode definir seu aluguel máximo. <br />Observação: Isso afeta apenas os aluguéis reivindicados com um máximo especificado. Se nenhum máximo for especificado pelo proprietário da reivindicação, o locatário poderá alugar pelo tempo que desejar. | false |
+| rent-restore-day-warning | Controla o dia em que um jogador deve começar a receber avisos sobre a expiração de seu aluguel alugado. <br />Ex. Se definido como '5', isso começará a enviar mensagens aos jogadores no login e na hora de aplicar o aluguel, quando faltam 5 dias para o vencimento. <br />Observação: Isso só se aplica se o proprietário tiver a opção 'restaurar aluguel' habilitada e o proprietário do aluguel definir um máximo. | 5 |
+| rent-schematic-restore-admin | Controla se as reivindicações de administração alugadas usarão um esquema para restauração. <br />Observação: Se definida, a reivindicação criará um esquema no início do aluguel e o restaurará quando terminar. <br />Observação: Isso se aplica APENAS a locações com data máxima definida. | false |
 | rent-sign | Se as placas de aluguel estão ativados. | FALSE |
 | rent-system | Controla se o sistema de aluguel está ativado. | FALSE |
-| rent-task-interval | O intervalo em minutos para verificar os pagamentos de aluguel de reivindicações que são devidos. Definido como '0' para desativar | 1 |
-| rent-transaction-log-limit | A quantidade de transações a se manter para a história. | 60 |
+| rent-task-interval | O intervalo em minutos para verificar os pagamentos de aluguel devidos. Defina como '0' para desativar | 1 |
+| rent-transaction-log-limit | A quantidade de transações a serem mantidas para o histórico. | 60 |
 | sell-sign | Se as placas de venda estão ativados. | false |
-| sign-update-interval | O intervalo em minutos para atualizar dados de sinal. Definido como '0' para desativar | 1 |
-| tax-apply-hour | A hora específica em dia para aplicar impostos a todas as reivindicações. <br />Nota: Isso usa tempo militar e aceita valores entre 0-23. | 0 |
-| tax-system | Se deve permitir o sistema tributário para reivindicações.Definido como true para ativar. | FALSE |
-| tax-transaction-log-limit | A quantidade de transações a se manter para a história. | 60 |
+| sign-update-interval | O intervalo em minutos para atualizar os dados da placa. Defina como '0' para desativar | 1 |
+| tax-apply-hour | A hora específica do dia para aplicar o imposto a todas as reivindicações. <br />Nota: Este usa tempo militar e aceita valores entre 0-23. | 0 |
+| tax-system | Se deve habilitar o sistema tributário para reclamações. Defina como verdadeiro para ativar. | FALSE |
+| tax-transaction-log-limit | A quantidade de transações a serem mantidas para o histórico. | 60 |
 
 
 # Message
-| Variable | Description | Default Value |
-| --------- | ----------- | ----------- |
-| deny-message-action-bar | Controla se deseja enviar mensagens de negar de reivindicação para a barra de ação. <br />Nota: A configuração para false enviará mensagens para bate -papo. | TRUE |
-| enable-exit-chat-messages | Controla se as mensagens de bate -papo de saída são exibidas quando as mensagens de entrada e saída estão sendo enviadas para um jogador ao mesmo tempo. Por exemplo, se uma mensagem de título Enter e Sair estiver configurada em uma reivindicação, o título de saída será enviado para conversar seEssa configuração é verdadeira. | FALSE |
-| enter-claim-player-messages | Controla se deseja exibir o nome do playername e a reivindicação de exibição como inserir a mensagem se não estiver definida. <br /> Defina como '1' para enviar mensagens para conversar. <br /> Defina como '2' para enviar mensagens para o ActionBar. <br />  Definido como '3' para enviar mensagens ao título. <br /> Definido como 0 para desativar. | 2 |
-| enter-exit-chat-show-gd-prefix | Se o prefixo GD deve ser mostrado em mensagens de bate -papo ENTER/EXIT. | TRUE |
-| greeting-farewell-action-bar | Controla se deseja enviar mensagens de saudação/despedida para a barra de ação por padrão. <br />Nota: A configuração para True enviará mensagens para o ActionBar. <br />NOTA: Isso será definido apenas se não houver ação de ação definida na reivindicação.Nesse caso, ele usará o bate -papo. | FALSE |
-| locale | Defina o local a ser usado para mensagens GP.Idiomas disponíveis: de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK. Os dados são armazenados em ativos em jar. <br />NOTA: O código do idioma deve ser minúsculo e o código do país deve ser maiúsculo. | "en_US" |
-| locale-unicode-fix | Tentativas de ajustar as fontes Unicode para representar melhor as fontes padrão do Minecraft. <br />Nota: Se você estiver usando 'pl_pl' ou 'ru_ru', essa configuração deve ser definida como falsa. <br />Nota: Quaisquer outros idiomas que sofrem desalinhamento nos menus de bate -papo devem desativar essa configuração. | TRUE |
-| wilderness-default-message | Controla se o padrão do deserto, a mensagem, digite a mensagem é enviada aos jogadores. | TRUE |
-
-# Migrador
-## Bukkit
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| classic | Defina como true para ativar o migrador clássico. <br />Nota: Migra dados de reclamações clássicos do GP Bukkit e dados GPFLAGS, se disponíveis, para o formato atual. <br /> Nota: Recomenda -se fazer backup de dados antes de usar. | FALSE | 
-| classic-database | Migra o banco de dados clássico do GP Bukkit. | FALSE |
-| classic-playerdata-threshold | Controla o último limite do dia do jogador ativo para evitar a migração de dados de player gp inativos.Para desativar, defina o valor para 0. <br />NOTA: Por exemplo, com o valor padrão de '180', o migrador migrará apenas os dados do jogador para jogadores que jogaram nos últimos 180 dias. <br />Nota: Isso apenas lida com o Data de jogador de um jogador, onde as informações acumuladas/bônus são armazenadas.Essa configuração não tem efeito na migração de reivindicações.<br /> NOTA: Isso evita armazenar dados inativos do usuário no LuckPerms, o que ajuda a manter a visualização ' /LP' /LP '. | 180 |
-| griefdefender-file-to-database | Defina como true para migrar do formato de arquivo para o banco de dados. <br />Nota: O método de armazenamento deve ser definido como Hocon para que isso funcione corretamente. <br />NOTA: Após a migração ser concluída, mude de armazenamento para o banco de dados. <br />Nota: Isso não removerá arquivos existentes, caso você queira voltar. | FALSE |
-| red-protect | Defina como true para ativar o Redprotect Data Migrator. | FALSE |
-| worldguard | Defina como true para ativar o migrador de dados mundiais. <br />Nota: Apenas regiões cubóides são suportadas. <br />Nota: é recomendável fazer backup de dados antes de usar. | FALSE |
+| deny-message-action-bar | Controla se deve enviar mensagens de negação de reivindicação para a barra de ação. <br />Observação: definir como falso enviará mensagens para o bate-papo. | TRUE |
+| enable-exit-chat-messages | Controla se as mensagens de saída do bate-papo são exibidas quando as mensagens de entrada e saída estão sendo enviadas para um jogador ao mesmo tempo. Por exemplo, se uma mensagem de título de entrada e saída for configurada em uma reivindicação, o título de saída será enviado para o bate-papo se esta configuração é true. | FALSE |
+| enter-claim-player-messages | Controla se deve exibir o nome do jogador e reivindicar o nome de exibição como mensagem de entrada, se não estiver definido. <br />Defina como '1' para enviar mensagens para o bate-papo. <br />Defina como '2' para enviar mensagens para a barra de ação. <br />Defina como '3' para enviar mensagens para o título. <br /> Defina como 0 para desativar. | 2 |
+| enter-exit-chat-show-gd-prefix | Se o prefixo GD deve ser mostrado nas mensagens de bate-papo de entrada/saída. | TRUE |
+| gd-prefix | Controla o prefixo usado ao enviar mensagens. | [&bGD&r]  |
+| greeting-farewell-action-bar | Controla se deseja enviar mensagens de saudação/despedida para a barra de ação por padrão. <br />Observação: definir como verdadeiro enviará mensagens para a barra de ação. <br />Observação: Isso só será definido se não houver nenhuma barra de ação definida na reivindicação. Nesse caso, ele usará o bate-papo. | FALSE |
+| locale | Defina a localidade a ser usada para mensagens GP. Idiomas disponíveis: de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK. Os dados são armazenados em ativos no jar. <br />Observação: O código do idioma deve estar em minúsculas e o código do país em maiúsculas. | "en_US" |
+| locale-unicode-fix | Tenta ajustar as fontes unicode para representar melhor as fontes padrão do minecraft. <br />Nota: Se você estiver usando 'pl_PL' ou 'ru_RU', esta configuração deve ser definida como false. <br />Observação: Qualquer outro idioma que apresente desalinhamento nos menus de bate-papo deve desativar essa configuração. | TRUE |
+| wilderness-default-message | Controla se a mensagem de entrada padrão do deserto é enviada aos jogadores. | TRUE |
 
-## Sponge
+# Migrators
+# Bukkit
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| griefprevention-bukkit | Defina como true para permitir o migrador de Bukkit de GriefPrevenção. <br />Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format. <br />Note: It is recommended to backup data before using. | FALSE |
-| griefprevention-sponge | Defina como True para permitir o migrador de esponja de prevenção de luto. <br />Nota: migra dados de reivindicação de esponja GP para o formato atual. <br />Nota: Recomenda -se fazer backup de dados antes de usar. | FALSE |
-| red-protect | Defina como true para ativar o migrador de dados redprotect. <br />NOTA: Todos os dados redprotectos serão convertidos em dados básicos de reivindicação. | FALSE |
-| worldguard | Defina como true para ativar o migrador de dados mundiais. <br />Nota: Apenas regiões cubóides são suportadas.<br /> Nota: é recomendável fazer backup de dados antes de usar. | FALSE |
+| classic | Defina como true para ativar o migrador clássico. <br />Observação: Migra os dados de reivindicação clássica do GP e os dados GPFlags, se disponíveis, para o formato atual.<br />Nota: Recomenda-se fazer backup dos dados antes de usar. | FALSE | 
+| classic-database | Migra o banco de dados do GP clássico. | FALSE |
+| classic-playerdata-threshold | Controla o limite do último dia do jogador ativo para evitar a migração dos dados do jogador GP inativo. Para desativar, defina o valor como 0. <br />Observação: por exemplo, com o valor padrão de '180', o migrador migrará apenas os dados dos jogadores que jogaram nos últimos 180 dias. <br />Nota: Isso lida apenas com os dados do jogador de um jogador, onde as informações acumuladas/bloco de bônus são armazenadas. Essa configuração não tem efeito na migração de reivindicação. <br />Observação: Isso evita o armazenamento de dados de usuários inativos em LuckPerms, o que ajuda a manter a exibição do 'editor/lp' limpa. | 180 |
+| griefdefender-file-to-database | Defina como true para migrar do formato de arquivo para o banco de dados. <br />Observação: O método de armazenamento deve ser definido como hocon para que funcione corretamente. <br />Observação: após a conclusão da migração, alterne o armazenamento para o banco de dados. <br />Observação: isso NÃO removerá os arquivos existentes caso você queira voltar. | FALSE |
+| playerdata | Defina como true para habilitar o migrador de arquivo playerdata herdado do GriefDefender. <br /> Nota: Esta configuração não é para migrar os dados do jogador GriefPrevention. Em vez disso, use a opção 'clássica'. <br /> Nota: Migra o formato de arquivo playerdata herdado para armazenamento de permissões, como LuckPerms json ou armazenamento mysql. <br /> Nota: Antes de ativar isso, certifique-se de definir corretamente 'context-storage-type' na seção de dados do jogador desta configuração. <br /> Nota: É ALTAMENTE recomendado fazer backup de seu banco de dados de permissões antes de executar este migrador, pois todos os arquivos playersdata locais serão migrados para ele. <br /> Nota: NÃO execute este migrador em mais de um servidor se vários servidores compartilharem o mesmo banco de dados de permissões. | false |
+| red-protect | Defina como true para habilitar o migrador de dados RedProtect. | FALSE |
+| residence | Defina como verdadeiro para habilitar o migrador de dados de residência. | TRUE |
+| worldguard | Defina como true para ativar o migrador de dados WorldGuard. <br />Observação: Apenas regiões cubóides são suportadas. <br />Nota: Recomenda-se fazer backup dos dados antes de usar. | FALSE |
 
-# Otimização
+# Sponge
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| dispenser-item-spawns | Controla se os itens de dispensar geradores são ignorados. | TRUE |
-| entity-damage-living-passive | Controla se os eventos de dano da entidade que contêm uma entidade passiva de origem/alvo vivos, como dois animais lutando, são ignorados. | TRUE |
-| entity-damage-monster | Controla se os eventos de dano da entidade que contêm um monstro de origem/alvo são ignorados. | TRUE |
-| entity-item-pickup-non-players | Controla se os captadores de itens de entidade fabricados por não jogadores são ignorados. | TRUE |
-| fall-non-player | Controla se as quedas não-jogadores são ignoradas. | TRUE |
-| monster-player-damage | Ccontrola se monstro ataques contra um jogador são ignorados. <br />Nota: Isso não inclui danos causados pela explosão. <br />NOTA: Se você precisar evitar danos causados por monstros em reivindicações, isso deve permanecer falso. | FALSE |
-| player-monster-damage | Controla se os ataques de jogadores contra um monstro são ignorados. <br />NOTA: Isso não inclui danos à explosão. | TRUE |
+| griefprevention-bukkit |Defina como true para ativar o migrador bukkit de prevenção de luto. <br />Observação: Migra os dados de reivindicação clássicos do GP bukkit e os dados GPFlags, se disponíveis, para o formato atual. <br />Nota: Recomenda-se fazer backup dos dados antes de usar. | FALSE |
+| griefprevention-sponge | Defina como true para ativar o migrador de esponja de prevenção de luto. <br />Observação: Migra os dados de solicitação de esponja GP para o formato atual. <br />Nota: Recomenda-se fazer backup dos dados antes de usar. | FALSE |
+| red-protect | Defina como true para habilitar o migrador de dados RedProtect. <br />Nota: Todos os dados do RedProtect serão convertidos em dados básicos de sinistros. | FALSE |
+| worldguard | Defina como true para ativar o migrador de dados WorldGuard. <br />Observação: Apenas regiões cubóides são suportadas. <br />Nota: Recomenda-se fazer backup dos dados antes de usar. | FALSE |
 
-# Permissão
+# Mod
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| griefdefender-claim-group-priority | A prioridade do grupo de permissão de reivindicação. | -60 |
+| entity-move-event | Permite que a reivindicação de entrada e saída de GD suporte o movimento de não-jogadores, como monstros e animais. | Default: false |
+| block-id-convert-list | # Usado para substituir id de bloco genérico para seu id real durante TE e uso de item, se disponível. Adicione o ID do bloco de destino à lista se desejar forçar uma conversão quando detectado. # Nota: Isso é útil para mods como o IC2, que usa o id genérico 'ic2:te' para seu bloco múltiplo. | "gregtech:machine", "ic2:te" |
+| fakeplayer-identifiers | Contém uma lista de strings usadas para identificar um fakeplayer por UUID ou nome. Para usar, adicione o UUID ou nome do fakeplayer. | ["41C82C87-7AfB-4024-BA57-13D2C99CAE77", BFC3377F-C3C9-3382-9DA6-79B50A9AFE57, "0D0C4CA0-4FF1-11E4-916C-0800200C9A66", "[Minecraft]", "OpenModsFakethis*"] |
+| mod-id-map | Usado para mapear um item/bloco/entidade de mod desconhecido para um id de mod. Para usar, adicione o pacote mod com um mapeamento para um id de mod. Ex. 'com.pixelmonmod.*', 'pixelmon' mapearia uma entidade contendo o nome da classe 'com.pixelmonmod.*' para 'pixelmon' | "com.pixelmonmod.*"=pixelmon |
+| tile-id-nbt-map | Usado para substituir IDs genéricos de tileentity por seus IDs reais durante o uso do TE. Adicione o id TE de destino como chave e a chave NBT onde o ID é armazenado como valor. | "gregtech:machine"=MetaId |
+ 
+
+# Optimization
+| Variável | Descrição | Valor padrão |
+| --------- | ----------- | ----------- |
+|async-claim-tool-actions | Se as ações da ferramenta de reivindicação do jogador devem ser processadas de forma assíncrona para desempenho. (Padrão: true) <br /> Observação: se você encontrar algum problema de encadeamento assíncrono, desative essa configuração. | TRUE |
+| async-player-claim-visuals | Se os visuais de reivindicação do jogador devem ser processados de forma assíncrona para desempenho. (Padrão: true) <br /> Observação: se você encontrar algum problema de encadeamento assíncrono, desative essa configuração. | TRUE |
+| block-item-drops | Controla se deve ignorar quedas de itens de fontes de bloco. <br /> Nota: Isso só é acionado quando um jogador quebra um bloco. | TRUE |
+cache-entity-damage-expiration | Controla a quantidade de tempo, em segundos, para o cache de permissão de todas as ações de dano de entidade no mundo. Se o cache for acessado antes da expiração, o tempo será redefinido. <br /> Observação: definir um valor muito alto pode resultar em resultados de permissão de dano de entidade incorretos. | 5 |
+| cache-permission-lookup-expiration | Controla a quantidade de tempo, em segundos, para o cache de pesquisa de permissão de todas as ações no mundo. Se o cache for acessado antes da expiração, o tempo será redefinido. <br /> Nota: Este cache ocorrerá após caches especiais, como dano de entidade, explosões e física. <br /> Nota: Definir isso muito alto pode fazer com que os jogadores não vejam os resultados adequados com suas ações. | 3 |
+| cache-physics-tracking-expiration |  Controla a quantidade de tempo, em segundos, para o cache de permissão de todas as alterações físicas do bloco no mundo. <br /> Nota: Blocos como redstone geralmente armazenam em cache por mais tempo devido às chamadas repetidas feitas. <br /> Nota: Definir um valor muito alto pode fazer com que os jogadores não sejam rastreados corretamente durante as mudanças de bloco. | 5 |
+| dispenser-item-spawns | Controla se os spawns de itens dispensadores são ignorados. | TRUE |
+| entity-damage-living-passive | Controla se os eventos de dano de entidade que contêm uma entidade passiva viva de origem/alvo, como dois animais lutando, são ignorados. | TRUE |
+| entity-damage-monster | Controla se os eventos de dano de entidade que contêm um monstro de origem/alvo são ignorados. | TRUE |
+| entity-damage-monster-other | Controla se os eventos de dano de entidade que contêm um monstro e outra entidade são ignorados. |
+| entity-damage-source-living-passive | Controla se a fonte de dano da entidade ou o bloco que visa um passivo vivo é ignorado. | TRUE |
+| entity-damage-source-monster | Controla se a fonte de dano da entidade ou o bloco que visa um monstro é ignorado. | TRUE |
+| entity-interact-block | Controla se uma entidade interagindo com um bloco é ignorada. | TRUE |
+| entity-item-pickup-non-player | Controla se as coletas de itens de entidade feitas por não jogadores são ignoradas. | TRUE |
+| fall-non-player | Controla se as quedas de não jogadores são ignoradas. | TRUE |
+| monster-player-damage | Controla se os ataques de monstros contra um jogador são ignorados. <br /> Nota: Isso não inclui dano de explosão. <br /> Nota: Se você precisa evitar dano de monstros em reivindicações, isso deve permanecer falso. | FALSE |
+| player-monster-damage | Controla se os ataques do jogador contra um monstro são ignorados. <br /> Nota: Isso não inclui dano de explosão. | TRUE |
+| wilderness-ambient-spawns | Controla se os spawns do ambiente, como morcegos, são ignorados na selva. <br /> Nota: Se você deseja controlar os spawns aquáticos em regiões selvagens, defina como falso. | TRUE |
+| wilderness-animal-spawns |Controla se as crias de animais, como porcos, são ignoradas na selva. <br /> Nota: Se você deseja controlar a desova de animais na selva, defina como falso. | TRUE |
+| wilderness-aquatic-spawns | Controla se os spawns aquáticos, como lulas, são ignorados na selva. <br /> Nota: Se você deseja controlar os spawns aquáticos na natureza, defina isso como false. | TRUE |
+| wilderness-liquid-flow | Controla se o fluxo de líquido é ignorado no deserto. <br /> Nota: Se você deseja controlar o fluxo de líquido na natureza, defina isso como false. | TRUE |
+| wilderness-monster-spawns | Controla se os spawns de monstros, como creepers, são ignorados na selva. <br /> Nota: Se você deseja controlar a geração de monstros na natureza, defina isso como false. | TRUE |
+| xp-orb-drop | Controla se orbes de experiência são ignorados quando descartados. | TRUE |
+
+
+# Permission
+| Variável | Descrição | Valor padrão |
+| --------- | ----------- | ----------- |
+| griefdefender-claim-group-priority | A prioridade do grupo de permissões do grupo de reivindicações. | -80 |
 | griefdefender-claim-priority | A prioridade do grupo de permissão de reivindicação. | -60 |
+| griefdefender-default-priority | A prioridade padrão do grupo de permissões. | -100 |
 | griefdefender-default-priority | A prioridade do grupo de permissão padrão. | -80 |
 | griefdefender-option-priority | A prioridade do grupo de permissão de opção. | 0 |
 | griefdefender-override-priority | A prioridade do grupo de permissão de substituição. | -40 |
+| griefdefender-trust-priority | A prioridade do grupo de permissão de confiança. | -70 |
 
 # Player Data
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| claim-block-system | Determina qual sistema de bloco de reclamação usar para reivindicações.<br /> NOTA: Se definido como volume, os blocos de reclamação usarão o sistema de contagem de pedaços para equilibrar a reivindicação 3D.<br /> NOTA: Se definido como área, o sistema de contagem de blocos 2D padrão será usado. | AREA |
-| context-storage-type | O tipo de contexto usado ao armazenar os dados do player em um banco de dados de permissões.<br /> Os tipos disponíveis são: global, servidor, mundo.(Padrão: global) <br /> O Global armazenará dados compartilhados globalmente por todos os servidores.<br /> O servidor armazenará dados por servidor.Nota: Isso exige que o servidor seja definido corretamente na configuração de permissões.<br /> O mundo armazenará dados por mundo. | GLOBAL |
+| claim-block-system | Determina qual sistema de bloqueio de sinistros usar para sinistros. (Padrão: AREA) <br />Se definido como VOLUME, os blocos de reivindicação usarão o sistema de contagem de pedaços para balancear a reivindicação 3D. <br />Se definido como AREA, o sistema padrão de contagem de blocos 2d será usado. | AREA |
+| context-storage-type | O tipo de contexto usado ao armazenar dados do jogador em um banco de dados de permissões. <br />Os tipos disponíveis são: global, servidor, mundo. (Padrão: global) <br />Global armazenará dados globalmente compartilhados por todos os servidores. <br />Servidor armazenará dados por servidor. Observação: isso requer que o nome do servidor seja definido corretamente na configuração de permissões. <br />O mundo armazenará dados por mundo.  | GLOBAL |
+| migrate-area-rate | A taxa para dividir o total de cada bloco de reivindicação acumulado. <br />Defina um valor maior que -1 para habilitar. (Padrão: 256). <br />Nota: Só deve ser usado ao migrar de volume (sistema 3D) para área (sistema 2D). <br /> Nesse sistema, um chunk custa 256 blocos. <br />Isso requer que 'claim-block-system' seja definido como AREA. | -1 |
+| migrate-volume-rate |A taxa para multiplicar cada total de blocos de sinistros acumulados. <br />Defina um valor maior que -1 para habilitar. (Padrão: 256). <br />Observação: Só deve ser usado ao migrar de área (sistema 2D) para volume (sistema 3D). <br />Cada bloco vale 65.536 blocos no novo sistema, em comparação com 256 no antigo. <br />Isso requer que 'claim-block-system' seja definido como VOLUME. |-1 |
+| reset-accrued-claim-blocks | Se ativado, redefine todos os blocos de reivindicações acumulados de dados do jogador para corresponder ao custo total das reivindicações possuídas. <br />Exemplo: Se um jogador tiver 5 reivindicações básicas com um custo total de 1000, isso definirá seus blocos de reivindicação acumulados para 1000. <br />Nota: Isso também redefinirá todos os blocos de reivindicação de bônus para 0. É altamente recomendável recomendado fazer backup antes de usar. | FALSE |
+| reset-migrations | Se ativado, redefine todos os sinalizadores de migração de dados do jogador para permitir outra migração. <br /> Observação: use isso com cuidado, pois pode atrapalhar facilmente os dados do bloco de reivindicação. É altamente recomendável fazer backup antes de usar. | FALSE |
+
+# Provider
+Gerencia provedores de plug-ins aos quais o GD se conecta para funcionalidade estendida.
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| BlueMap |Alterna se o GDhooks se comunica com o BlueMap | true |
+| BossShopPro | Alterna se o GDhooks se comunica com o BossShopPro | true |
+| ChestShop | Alterna se o GDhooks se comunica com o ChestShop | true |
+| DynamicShop | Alterna se o GDhooks se comunica com o DynamicShop | true |
+| Dynmap | Alterna se o GDhooks se comunica com o Dynmap | true |
+| InsaneShops | Alterna se o GDhooks se comunica com o InsaneShops | true |
+| MyPet | Alterna se o GDhooks se comunica com o MyPet | true |
+| MythicMobs | Alterna se o GDhooks se comunica com o MythicMobs | true |
+| QuickShop | Alterna se o GDhooks se comunica com o QuickShop | true |
+| RevoltCrates | Alterna se o GDhooks se comunica com o RevoltCrates | true |
+| Shop | Alterna se o GDhooks se comunica com o Shop | true |
+| ShopChest | Alterna se o GDhooks se comunica com o ShopChest | true |
+| Slabbo | Alterna se o GDhooks se comunica com o Slabbo | true |
+| Slimefun | Alterna se o GDhooks se comunica com o Slimefun | true |
+| UltimateShops | Alterna se o GDhooks se comunica com o UltimateShops | true |
 
 
 # PvP
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| allow-fly | Se o vôo é permitido durante o PVP. | false |
-| combat-logout | Se os jogadores devem ser mortos se fizerem o logout enquanto estiver em combate pvp. | false |
-| enabled | Se a proteção de PVP está ativada para jogadores.<br /> NOTA: ATUALIZAÇÕES ESTE DESLIGADO DESPLECIVA TODA A FUNCIONALIZADA PVP EM GRIEFDEFENDER. | true |
+| allow-fly | Se voar é permitido durante o PvP. | false |
+| combat-logout | Se os jogadores devem ser mortos se saírem durante o combate pvp. | false |
+| deny-messages | Se os jogadores recebem mensagens de negação de pvp. | True |
+| enabled  | Se a proteção pvp está habilitada para os jogadores. <br />Nota: Desativar isso desabilita todas as funcionalidades PvP no GriefDefender. | true |
 
-# Cidade
+# Town
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| auto-nature-restore | Se as cidades de sobrevivência serão restauradas automaticamente à natureza quando excluídas automaticamente. | FALSE |
-| clan-require-town | Requer que uma cidade seja de propriedade da McClans.<br /> Nota: isso é apenas para Sponge. | TRUE |
-| cleanup-task-interval | O intervalo em minutos para restaurar blocos em uma cidade vencida. | 5 |
-| creation-cost | A quantidade necessária de fundos para criar uma cidade.<br /> NOTA: Isso requer um plug -in de economia. | 0.0 |
+| auto-nature-restore | Whether survival towns will be automatically restored to nature when auto-deleted. | FALSE |
+| clan-require-town | Requires a town to be owned for MCClans. <br />Note: This is for Sponge only. | TRUE |
+| cleanup-task-interval | The interval in minutes for restoring blocks in an expired town. | 5 |
+| creation-cost | The required amount of funds to create a town. <br />Note: This requires an Economy plugin. | 0.0 |
 
 # Visual
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| active-claim-visual-time | O tempo ativo, em segundos, para manter o visual de uma reivindicação mostrado a um jogador.<br /> NOTA: Se o valor for <= 0, GD usará o valor padrão. | 60 |
-| active-create-block-visual-time | O tempo ativo, em segundos, para manter o visual de Criar Block de uma reivindicação mostrado a um jogador.<br /> NOTA: Isso se aplica apenas durante a criação de reivindicações.<br /> Nota: Se o valor for <= 0, GD usará o valor padrão. | 180 |
-| client-visuals-per-tick | A quantidade de visuais em bloco que um cliente pode receber por tique -taxas ao mostrar/ocultar reclamações. | 12 |
-| cuboid-level-visuals-2d | Se deve usar visuais de cubóides, em reivindicações 2D, durante a inspeção com níveis de reivindicação Min/Max do Proprietário entre 0 e 255 ou 0 e 319 para MC 1.17+.<br /> Nota: os visuais do WECUI não estão associados a esta opção.<br /> NOTA: Se ativado, isso enviará muitas atualizações de bloco para os jogadores, causando mais tensão do cliente, dependendo do tamanho da reivindicação.Use com cuidado.| FALSE |
-| fill-spacing | O espaço entre cada bloco visual de enchimento. | 10 |
-| hide-borders-when-using-wecui | Se deve ocultar as fronteiras do bloco de brilho/ouro ao usar o WECUI. | FALSE |
-| hide-fillers-when-using-wecui | Se deve ocultar os preenchimentos de bloco ao usar o wecui. | TRUE |
-| hide-wecui-drag-visuals-2d | Se o drag visual deve ser mostrado ao criar uma reivindicação no modo 2D. | TRUE |
-| claim-create-block | O bloco visual usado durante a criação de reivindicações. | minecraft:diamond_block |
-| admin-accent-block | O bloco de sotaque visual usado para reivindicações de administrador. | minecraft:pumpkin |
-| admin-corner-block | O bloco de canto visual usado para reivindicações de administrador. | minecraft:glowstone |
-| admin-filler-block | O bloco de preenchimento visual usado para reivindicações de administrador. | minecraft:pumpkin |
-| basic-accent-block | O bloco de sotaque visual usado para reivindicações básicas. | minecraft:gold_block |
+| active-claim-visual-time | O tempo ativo, em segundos, para manter os visuais de uma reivindicação mostrados a um jogador. <br />Observação: Se o valor for <= 0, o GD usará o valor padrão. | 60 |
+| ativo-criar-bloco-visual-time | O tempo ativo, em segundos, para manter o visual do bloco de criação de uma reivindicação mostrado a um jogador. <br />Observação: isso se aplica apenas durante a criação da reivindicação. <br />Observação: Se o valor for <= 0, o GD usará o valor padrão. | 180 |
+| client-visuals-per-tick | A quantidade de visuais de bloco que um cliente pode receber por tick ao mostrar/ocultar reivindicações. | 12 |
+| cuboid-level-visuals-2d |Se deve usar visuais cubóides, em reivindicações 2D, durante a inspeção com níveis mínimos/máximos de reivindicação do proprietário entre 0 e 255 ou 0 e 319 para MC 1.17+. <br />Nota: Os visuais WECUI não estão associados a esta opção. <br />Observação: Se ativado, isso enviará muitas atualizações de bloqueio aos jogadores, causando mais tensão no cliente, dependendo do tamanho da reivindicação. Use com cuidado. | FALSE |
+| fill-spacing | O espaço entre cada bloco visual de preenchimento. | 10 |
+| hide-borders-when-using-wecui | Se deve ocultar as bordas do bloco Glowstone/Gold ao usar o WECUI. | FALSE |
+| hide-fillers-when-using-wecui | Se deve ocultar os preenchimentos de bloco ao usar WECUI. | TRUE |
+| hide-wecui-drag-visuals-2d | Se os visuais de arrastar devem ser exibidos durante a criação de uma reivindicação no modo 2D. | TRUE |
+| claim-create-block |O bloco visual usado durante a criação da declaração. | minecraft:diamond_block |
+| admin-accent-block | O bloco de destaque visual usado para declarações de administrador. | minecraft:pumpkin |
+| admin-corner-block | O bloco de canto visual usado para declarações de administrador. | minecraft:glowstone |
+| admin-filler-block | O bloco de preenchimento visual usado para declarações de administrador. | minecraft:pumpkin |
+| basic-accent-block | O bloco de destaque visual usado para reivindicações básicas. | minecraft:gold_block |
 | basic-corner-block | O bloco de canto visual usado para reivindicações básicas. | minecraft:glowstone |
 | basic-filler-block | O bloco de preenchimento visual usado para reivindicações básicas. | minecraft:gold_block |
-| error-accent-block | O bloco de sotaque visual usado para visualizar um erro em uma reivindicação. | minecraft:netherrack |
+| error-accent-block | O bloco de destaque visual usado para visualizar um erro em uma reivindicação. | minecraft:netherrack |
 | error-corner-block | O bloco de canto visual usado para visualizar um erro em uma reivindicação. | minecraft:redstone_ore |
-| error-filler-block | O bloco de preenchimento visual usado para visualizar um erro em uma reivindicação. | minecraft:diamond_block |
-| subdivision-accent-block | O bloco de sotaque visual usado para reivindicações de subdivisão. | minecraft:white_wool or minecraft:wool for legacy versions |
+| error-filler-block | O bloco de preenchimento visual usado para visualizar um erro em uma reclamação. | minecraft:diamond_block |
+| subdivision-accent-block | O bloco de destaque visual usado para reivindicações de subdivisão. | minecraft:white_wool or minecraft:wool para versões legadas |
+| subdivision-corner-block | O bloco de canto visual usado para reivindicações de subdivisão. (Default: minecraft:iron_block) | minecraft:iron_block |
+| subdivision-filler-block |O bloco de preenchimento visual usado para reivindicações de subdivisão. (Default: minecraft:white_wool ou minecraft:wool para versões legadas) | minecraft:white_wool |
+| town-accent-block | O bloco de destaque visual usado para reivindicações da cidade. (Default: minecraft:emerald_block) | minecraft:emerald_block |
+| town-corner-block | O bloco de canto visual usado para reivindicações da cidade. (Default: minecraft:glowstone) | minecraft:glowstone |
+| town-filler-block | O bloco de preenchimento visual usado para reivindicações da cidade. (Default: minecraft:emerald_block) | minecraft:emerald_block |
+
+# World
+| Variável | Descrição | Valor padrão |
+| --------- | ----------- | ----------- |
+| protected-worlds |Uma lista de mundos por nome ou localização de recursos que o GriefDefender deve proteger. Se vazio, GriefDefender protegerá todos os mundos. | [ ] |

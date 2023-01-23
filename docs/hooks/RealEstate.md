@@ -16,3 +16,10 @@ Placeholder                                           | Description |
 ```%realestate_claim_rent_amount%```  | Returns the claim's rent amount
 ```%realestate_claim_sell_amount%```       |    Returns the claim's sales value
 ```%realestate_claim_lease_amount%```    |    Returns the claim's lease amount
+
+## Config
+
+Settings                                           | Default Value | Description | 
+-------------------------------------------------|---------------|--------------|
+``` AllowAdminClaims ``` | false | Allow admin claims to be used by RealEstate. |
+```AllowTownClaims``` | false | Allow town claims to be used by RealEstate. |
