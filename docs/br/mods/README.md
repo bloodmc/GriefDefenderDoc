@@ -13,4 +13,3 @@ Utilizando o [depuração](/br/wiki/advanced/Debugging.html) para criar novas [b
 
 ::: info Mods com preset disponíveis
 - Pixelmon ==> [Detalhes](/br/mods/Pixelmon)
-- Mekanism ==> [Em breve](#)

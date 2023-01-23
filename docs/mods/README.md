@@ -13,4 +13,3 @@ Using [debugging](/wiki/advanced/Debugging.html) to create new [flags](/wiki/adv
 
 ::: info Mods with presets available
 - Pixelmon ==> [Details](/mods/Pixelmon)
-- Mekanism ==> [Coming soon](#)
