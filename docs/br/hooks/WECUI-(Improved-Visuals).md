@@ -49,6 +49,7 @@ Se instalado corretamente, você poderá ver os mesmos visuais acima ao clicar c
 WorldEditSelectionVisualizer (WESV) é essencialmente o famoso mod WorldEdit CUI na forma de um plugin bukkit, o que significa que os jogadores não precisam instalar nada em seu cliente.  
 
 * WorldEditSelectionVisualizer  - [Download](https://www.spigotmc.org/resources/17311/)
+* WorldEditSUI - [Download](https://www.spigotmc.org/resources/60726/)
 
 ![WESV Pre-visualização](/cuboid_wesv.webp)
 
