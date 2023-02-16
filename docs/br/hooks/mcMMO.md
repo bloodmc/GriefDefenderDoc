@@ -19,7 +19,7 @@ Gerencie em `/claimoption` ou mais informações na seção dedicada [Opções](
 
 Clique com o botão direito na página e selecione "Salvar como", salve como `mcmmo.conf` em `config/griefdefender/presets`
 
-* [lang/presets/mcmmo/en_US.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.conf) ([pt_BR](#))
+* [lang/presets/mcmmo/en_US.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.conf) ([pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/pt_BR.conf))
 
 Clique com o botão direito na página e selecione "Salvar como", salve como `en_US.conf` em `config/griefdefender/lang/presets/mcmmo`    
 
