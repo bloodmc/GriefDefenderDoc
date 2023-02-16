@@ -87,7 +87,7 @@ Versão baseada no arquivo de lançamento: GriefDefender 2.3.2-DEV4
 | sell-sign | Se as placas de venda estão ativados. | false |
 | sign-update-interval | O intervalo em minutos para atualizar os dados da placa. Defina como '0' para desativar | 1 |
 | tax-apply-hour | A hora específica do dia para aplicar o imposto a todas as reivindicações. <br />Nota: Este usa tempo militar e aceita valores entre 0-23. | 0 |
-| tax-system | Se deve habilitar o sistema tributário para reclamações. Defina como verdadeiro para ativar. | FALSE |
+| tax-system | Se deve habilitar o sistema tributário para reivindicação. Defina como verdadeiro para ativar. | FALSE |
 | tax-transaction-log-limit | A quantidade de transações a serem mantidas para o histórico. | 60 |
 
 
@@ -186,7 +186,7 @@ cache-entity-damage-expiration | Controla a quantidade de tempo, em segundos, pa
 
 # Provider
 Gerencia provedores de plug-ins aos quais o GD se conecta para funcionalidade estendida.
-| Variable | Description | Default Value |
+| Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
 | BlueMap |Alterna se o GDhooks se comunica com o BlueMap | true |
 | BossShopPro | Alterna se o GDhooks se comunica com o BossShopPro | true |
@@ -216,10 +216,10 @@ Gerencia provedores de plug-ins aos quais o GD se conecta para funcionalidade es
 # Town
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| auto-nature-restore | Whether survival towns will be automatically restored to nature when auto-deleted. | FALSE |
-| clan-require-town | Requires a town to be owned for MCClans. <br />Note: This is for Sponge only. | TRUE |
-| cleanup-task-interval | The interval in minutes for restoring blocks in an expired town. | 5 |
-| creation-cost | The required amount of funds to create a town. <br />Note: This requires an Economy plugin. | 0.0 |
+| auto-nature-restore | Se as cidades de sobrevivência serão restauradas automaticamente à natureza quando excluídas automaticamente. | FALSE |
+| clan-require-town | Requer uma cidade para ser possuída por MCClans. <br />Nota: Isto é apenas para Sponge. | TRUE |
+| cleanup-task-interval | O intervalo em minutos para restaurar blocos em uma cidade expirada. | 5 |
+| creation-cost | A quantidade necessária de fundos para criar uma cidade. <br />Nota: Isso requer um plug-in Economy. | 0.0 |
 
 # Visual
 | Variável | Descrição | Valor padrão |
@@ -241,7 +241,7 @@ Gerencia provedores de plug-ins aos quais o GD se conecta para funcionalidade es
 | basic-filler-block | O bloco de preenchimento visual usado para reivindicações básicas. | minecraft:gold_block |
 | error-accent-block | O bloco de destaque visual usado para visualizar um erro em uma reivindicação. | minecraft:netherrack |
 | error-corner-block | O bloco de canto visual usado para visualizar um erro em uma reivindicação. | minecraft:redstone_ore |
-| error-filler-block | O bloco de preenchimento visual usado para visualizar um erro em uma reclamação. | minecraft:diamond_block |
+| error-filler-block | O bloco de preenchimento visual usado para visualizar um erro em uma reivindicação. | minecraft:diamond_block |
 | subdivision-accent-block | O bloco de destaque visual usado para reivindicações de subdivisão. | minecraft:white_wool or minecraft:wool para versões legadas |
 | subdivision-corner-block | O bloco de canto visual usado para reivindicações de subdivisão. (Default: minecraft:iron_block) | minecraft:iron_block |
 | subdivision-filler-block |O bloco de preenchimento visual usado para reivindicações de subdivisão. (Default: minecraft:white_wool ou minecraft:wool para versões legadas) | minecraft:white_wool |

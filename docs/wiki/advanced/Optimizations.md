@@ -346,8 +346,10 @@ blacklist {
 
 # FITFC's Optimization
 
-** Recommendation: if you are going to create new flags, remove this optimization and leave the GD default, as the optimizations remove some events from gddebug.  
+:::: note Recommendation
+if you are going to create new flags, remove this optimization and leave the GD default, as the optimizations remove some events from gddebug.  
 These optimizations were focused on a server that tries its best to get close to vanilla - Last revision 1.19.3  
+::::
 
 <details>
   <summary>FIT's Blacklist</summary>
@@ -373,30 +375,65 @@ GriefDefender {
     flag-id-blacklist {
         block-break=[]
         block-grow=[
+            "minecraft:oak_leaves",
+            "minecraft:spruce_leaves",
+            "minecraft:birch_leaves",
+            "minecraft:jungle_leaves",
+            "minecraft:acacia_leaves",
+            "minecraft:dark_oak_leaves",
+            "minecraft:mangrove_leaves",
+            "minecraft:azalea_leaves",
+            "minecraft:flowering_azalea_leaves",
+            "minecraft:oak_log",
+            "minecraft:spruce_log",
+            "minecraft:birch_log",
+            "minecraft:jungle_log",
+            "minecraft:acacia_log",
+            "minecraft:dark_oak_log",
+            "minecraft:mangrove_log",
+            "minecraft:oak_sapling",
+            "minecraft:spruce_sapling",
+            "minecraft:birch_sapling",
+            "minecraft:jungle_sapling",
+            "minecraft:acacia_sapling",
+            "minecraft:dark_oak_sapling",
             "minecraft:pumpkin",
+            "minecraft:melon",
             "minecraft:wheat",
             "minecraft:sugar_cane",
-            "minecraft:minecraft:cactus",
-            "#mushroom",
-            "minecraft:grass"
+            "minecraft:beetroots",
+            "minecraft:cactus",
+            "minecraft:carrots",
+            "minecraft:potatoes",
+            "minecraft:#mushroom",
+            "minecraft:grass",
+            "minecraft:podzol",
+            "minecraft:sweet_berry_bush",
+            "minecraft:air"
         ]
         block-modify=[
             "minecraft:deepslate_redstone_ore",
             "minecraft:redstone_ore",
             "minecraft:frosted_ice",
             "minecraft:grass_block",
+            "minecraft:dirt",
             "minecraft:weathered_*",
             "minecraft:netherrack",
             "minecraft:big_dripleaf",
             "minecraft:farmland",
             "minecraft:warped_nylium",
             "minecraft:ice",
-            "minecraft:sheep"
+            "minecraft:villager",
+            "minecraft:sheep",
+            "minecraft:fox",
+            "minecraft:sweet_berry_bush"
         ]
-        block-place=[]
+        block-place=[
+            "minecraft:snow"
+        ]
         block-pre=[]
         block-spread=[
-            "#minecraft:bamboo_plantable_on",
+            "minecraft:bamboo",
             "minecraft:vine",
             "minecraft:grass_block",
             "minecraft:mycelium",
@@ -404,7 +441,8 @@ GriefDefender {
             "minecraft:brown_mushroom",
             "minecraft:budding_amethyst",
             "minecraft:weeping_vines",
-            "minecraft:kelp"
+            "minecraft:kelp",
+            "minecraft:air"
         ]
         collide-block=[
             "minecraft:big_dripleaf"
@@ -412,9 +450,21 @@ GriefDefender {
         collide-entity=[]
         command-execute=[]
         command-execute-pvp=[]
-        enter-claim=[]
+        enter-claim=[
+            "#minecraft:monster",
+            "minecraft:minecart",
+            "minecraft:hopper_minecart",
+            "minecraft:chest_minecart",
+            "minecraft:furnace_minecart",
+            "minecraft:tnt_minecart"
+        ]
         entity-chunk-spawn=[]
-        entity-damage=[]
+        entity-damage=[
+            "minecraft:fire",
+            "minecraft:lava",
+            "minecraft:fall",
+            "minecraft:freeze"
+        ]
         entity-riding=[]
         entity-spawn=[
             "minecraft:armor_stand",
@@ -437,11 +487,16 @@ GriefDefender {
             "minecraft:fireworks",
             "minecraft:turtle",
             "minecraft:glow_squid",
+            "minecraft:tropical_fish",
+            "#minecraft:fishes",
+            "#minecraft:ambient",
             "minecraft:fishing_bobber",
             "minecraft:salmon",
             "minecraft:snowball",
             "minecraft:trident",
-            "minecraft:xp_orb"
+            "minecraft:xp_orb",
+            "minecraft:enderman",
+            "spawnreason:village_defense"
         ]
         entity-teleport-from=[
             "minecraft:plugin"
@@ -449,25 +504,20 @@ GriefDefender {
         entity-teleport-to=[
             "minecraft:plugin"
         ]
-        exit-claim=[]
+        exit-claim=[
+            "#minecraft:monster",
+            "minecraft:minecart",
+            "minecraft:hopper_minecart",
+            "minecraft:chest_minecart",
+            "minecraft:furnace_minecart",
+            "minecraft:tnt_minecart"
+        ]
         explosion-block=[]
         explosion-entity=[]
         interact-block-primary=[]
-        interact-block-secondary=[
-            "minecraft:minecraft:crafting_table",
-            "minecraft:stonecutter",
-            "minecraft:grindstone",
-            "minecraft:smithing_table",
-            "minecraft:cartography_table",
-            "minecraft:loom",
-            "minecraft:ender_chest",
-            "minecraft:enchanting_table",
-            "minecraft:sweet_berry_bush",
-            "minecraft:cave_vines_plant"
-        ]
+        interact-block-secondary=[]
         interact-entity-primary=[]
         interact-entity-secondary=[
-            "minecraft:villager",
             "minecraft:falling_block"
         ]
         interact-inventory=[
@@ -483,13 +533,21 @@ GriefDefender {
         interact-inventory-click=[]
         interact-item-primary=[]
         interact-item-secondary=[
-            "minecraft:ender_pearl"
+            "minecraft:ender_pearl",
+            "minecraft:firework_rocket",
+            "minecraft:#food",
+            "minecraft:spyglass",
+            "#food"
         ]
         inventory-item-move=[]
         item-drop=[]
         item-pickup=[]
         item-spawn=[]
         item-use=[
+            "minecraft:#food",
+            "minecraft:any",
+            "#any",
+            "minecraft:player",
             "#food"
         ]
         leaf-decay=[]
@@ -529,8 +587,8 @@ flag-control {
         entity-damage=true
         entity-riding=true
         entity-spawn=true
-        entity-teleport-from=true
-        entity-teleport-to=true
+        entity-teleport-from=false
+        entity-teleport-to=false
         exit-claim=true
         explosion-block=true
         explosion-entity=true
