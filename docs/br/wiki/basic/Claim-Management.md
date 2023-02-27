@@ -121,11 +121,16 @@ Ferramenta básica, você pode usá-la para indicar a posição das reivindicaç
 
 ### Suporte a CustomModelData
 
-The inspection and modification tools now support CustomModelData support. To use, add {key:value} after item identifier.  
+As ferramentas de inspeção e modificação agora oferecem suporte a CustomModelData. Para usar, adicione {key:value} após o identificador do item.  
 
-Ex.  
-`inspection-tool=minecraft:stick{CustomModelData:1}`  
-`modification-tool="minecraft:golden_shovel{CustomModelData:2}`  
+Procure a linha `inspection-tool="minecraft:stick"` e `modification-tool="minecraft:golden_shovel"`  no [`global.conf`](/br/wiki/advanced/Global-Config.html)  
+
+Altere para:  
+`inspection-tool="minecraft:stick{CustomModelData:1}"`  
+`modification-tool="minecraft:golden_shovel{CustomModelData:2}"`  
+
+Dê o item a si mesmo com este comando:  
+`/summon item ~ ~ ~ {Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:1}}}`  
 
 ## Identificadores de reivindicação
 

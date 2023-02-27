@@ -52,8 +52,8 @@ Version based on release file: GriefDefender 2.3.2-DEV4
 | explosion-block-surface-blacklist | A list of source id's that cannot cause explosion damage to blocks above sea level. | [ ] |
 | explosion-entity-surface-blacklist | A list of id's that cannot cause explosion damage to entities above sea level. | [ ] |
 | explosion-surface-block-level | The 'Y' block level that is considered the surface for explosions. | 0 |
-| inspection-tool | The item used to inspect claims with a right-click. <br />Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | "minecraft:stick" |
-| modification-tool | The item used to create/resize claims with a right click.<br />Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | "minecraft:golden_shovel" |
+| inspection-tool | The item used to inspect claims with a right-click. <br />Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | ["minecraft:stick"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
+| modification-tool | The item used to create/resize claims with a right click.<br />Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | ["minecraft:golden_shovel"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
 | piston-protection-in-claims | Whether piston protection should be enabled within claims. Note: This does not affect pistons crossing into another claim, that is always protected. This only determines whether or not GD should process pistons if it doesn't cross into another claim. | false |
 | player-trapped-cooldown | The cooldown time, in seconds, when using the '/trapped' command. | 300 |
 | protect-tamed-entities | Whether tamed entities should be protected in claims. | true |

@@ -52,8 +52,8 @@ Versão baseada no arquivo de lançamento: GriefDefender 2.3.2-DEV4
 | explosion-block-surface-blacklist | Uma lista de IDs de origem que não podem causar dano de explosão a blocos acima do nível do mar. | [ ] |
 | explosion-entity-surface-blacklist | Uma lista de id's que não podem causar dano de explosão a entidades acima do nível do mar. | [ ] |
 | explosion-surface-block-level | O nível do bloco 'Y' que é considerado a superfície para explosões. | 0 |
-| inspection-tool | O item usado para inspecionar reivindicação com um clique com o botão direito. <br />Observação: coloque aspas vazias se não quiser atribuir nenhum item e usar o modo '/claim' exclusivamente. | "minecraft:stick" |
-| modification-tool | O item usado para criar/redimensionar reivindicações com um clique direito.<br />Nota: Coloque entre aspas vazias se não quiser atribuir nenhum item e use o modo '/claim' exclusivamente. | "minecraft:golden_shovel" |
+| inspection-tool | O item usado para inspecionar reivindicação com um clique com o botão direito. <br />Observação: coloque aspas vazias se não quiser atribuir nenhum item e usar o modo '/claim' exclusivamente. | ["minecraft:stick"](/br/wiki/basic/Claim-Management.html#suporte-a-custommodeldata) |
+| modification-tool | O item usado para criar/redimensionar reivindicações com um clique direito.<br />Nota: Coloque entre aspas vazias se não quiser atribuir nenhum item e use o modo '/claim' exclusivamente. | ["minecraft:golden_shovel"](/br/wiki/basic/Claim-Management.html#suporte-a-custommodeldata) |
 | piston-protection-in-claims | Se a proteção do pistão deve ser habilitada nas reivindicações. Nota: Isso não afeta o cruzamento dos pistões para outra reivindicação, que está sempre protegida. Isso apenas determina se o GD deve ou não processar pistões se não cruzar para outra reivindicação. | false |
 | player-trapped-cooldown | O intervalo de uso, em segundos, ao usar o comando '/trapped'. | 300 |
 | protect-tamed-entities | Se as entidades domesticadas devem ser protegidas em reivindicações. | true |
