@@ -348,6 +348,7 @@ Run the command `/cf command-execute essentials:sethome false default=user`
 
 1. Admins need to assign all players the following perk permissions
 ```
+griefdefender.admin.option.perk.fly.resident
 griefdefender.admin.option.perk.fly.accessor
 griefdefender.admin.option.perk.fly.builder
 griefdefender.admin.option.perk.fly.container

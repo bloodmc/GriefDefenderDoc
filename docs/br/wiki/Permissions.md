@@ -24,6 +24,10 @@ Veja [LuckPerms - Default Groups](https://luckperms.net/wiki/Default-Groups)
 
 ## LuckPerms
 
+::: tip Para grandes Networks
+Se você gerencia uma grande rede de servidores minecraft e está usando um banco de dados Luckperms centralizado, certifique-se de seguir [Luckperms - Syncing data between servers](https://luckperms.net/wiki/Syncing-data-between-servers) se quiser que as atualizações do Luckperms sejam sincronizadas em todos os servidores instantaneamente.
+:::
+
 Na primeira inicialização do servidor do GriefDefender, 5 grupos no LP serão criados automaticamente se ainda não existirem.
 
 * `griefdefender_claim` - Armazena todas as permissões de sinalização aplicadas a declarações únicas por meio do comando `/cf`.  
@@ -38,11 +42,11 @@ Nota: Isso não armazena permissões feitas por meio da GUI avançada do sinaliz
 * `griefdefender_override` - Armazena todas as permissões de sinalização que contêm o contexto `gd_claim_override`.  
 
 * `griefdefender_claim_group` - Armazena todas as permissões de sinalização aplicadas a reivindicações de grupo por meio do comando `/cf`.  
+* `griefdefender_trust_resident` - Armazena todas as permissões de trust que têm resident.  
 * `griefdefender_trust_accessor` - Armazena todas as permissões de trust que têm accessor.  
 * `griefdefender_trust_builder` - Armazena todas as permissões de trust que têm builder.  
 * `griefdefender_trust_container` - Armazena todas as permissões de trust que têm container.  
 * `griefdefender_trust_manager` - Armazena todas as permissões de trust que têm manager.  
-* `griefdefender_trust_resident` - Armazena todas as permissões de trust que têm resident.  
 
 ### Consultas úteis de banco de dados MySQL
 
@@ -167,7 +171,8 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.admin.claim.command.option.player | Apermite definir opções do jogador em reivindicações |
 | griefdefender.admin.claim.option | Permite definir opções nas reivindicações |
 | griefdefender.admin.option.perk.fly.owner | Permite que os proprietários voem em sua própria reivindicação |
-| griefdefender.admin.option.perk.fly.accessor | Permite que os usuários voem em reivindicações onde eles têm trust de acessor |
+| griefdefender.admin.option.perk.fly.resident | Permite que os usuários voem em reivindicações onde eles têm trust de resident |
+| griefdefender.admin.option.perk.fly.accessor | Permite que os usuários voem em reivindicações onde eles têm trust de accessor |
 | griefdefender.admin.option.perk.fly.builder | Permite que os usuários voem em reivindicações em que tenham trust de builder |
 | griefdefender.admin.option.perk.fly.container | Permite que os usuários voem em reivindicações em que tenham trust de container |
 | griefdefender.admin.option.perk.fly.manager | Permite que os usuários voem em reivindicações onde eles têm trust do manager |
@@ -184,6 +189,7 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.user.claim.command.untrust.player | Permite remover o trust do jogador |
 | griefdefender.user.claim.command.untrustall.group | Permite remover otrust do grupo para todas as reivindicações|
 | griefdefender.user.claim.command.untrustall.player | Permite remover o trust do jogador em todas as reivindicações |
+| griefdefender.user.claim.trust.resident | Permite adicionar resident |
 | griefdefender.user.claim.trust.accessor | Permite adicionar accessor |
 | griefdefender.user.claim.trust.container | Permite adicionar containers |
 | griefdefender.user.claim.trust.builder | Permite adicionar builders |

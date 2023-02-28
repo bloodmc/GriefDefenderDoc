@@ -5,7 +5,7 @@ category: claim
 icon: manage
 ---
 
-GriefDefender é um plugin que fornece funcionalidade de proteção de região de automática, oferecendo opções adicionais para ajustar aspectos como portas, baús e permissões de construção para jogadores ou grupos de jogadores! Abaixo algumas instruções básicas para gerenciamento de reivindicações para um controle mais personalizado sobre suas reivindicações para o seu servidor, confira a [página de definição de bandeiras](https://github.com/bloodmc/GriefDefender/wiki/Flag-Definitions-GUI).
+GriefDefender é um plugin que fornece funcionalidade de proteção de região de automática, oferecendo opções adicionais para ajustar aspectos como portas, baús e permissões de construção para jogadores ou grupos de jogadores! Abaixo algumas instruções básicas para gerenciamento de reivindicações para um controle mais personalizado sobre suas reivindicações para o seu servidor, confira a [página de definição de bandeiras](/br/wiki/basic/Flag-Definitions-GUI.html).
 
 Todos os exemplos estão com os padrões no momento em que escrevo isso em mente.
 
@@ -121,11 +121,16 @@ Ferramenta básica, você pode usá-la para indicar a posição das reivindicaç
 
 ### Suporte a CustomModelData
 
-The inspection and modification tools now support CustomModelData support. To use, add {key:value} after item identifier.  
+As ferramentas de inspeção e modificação agora oferecem suporte a CustomModelData. Para usar, adicione {key:value} após o identificador do item.  
 
-Ex.  
-`inspection-tool=minecraft:stick{CustomModelData:1}`  
-`modification-tool="minecraft:golden_shovel{CustomModelData:2}`  
+Procure a linha `inspection-tool="minecraft:stick"` e `modification-tool="minecraft:golden_shovel"`  no [`global.conf`](/br/wiki/advanced/Global-Config.html)  
+
+Altere para:  
+`inspection-tool="minecraft:stick{CustomModelData:1}"`  
+`modification-tool="minecraft:golden_shovel{CustomModelData:2}"`  
+
+Dê o item a si mesmo com este comando:  
+`/summon item ~ ~ ~ {Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:1}}}`  
 
 ## Identificadores de reivindicação
 
@@ -360,6 +365,8 @@ Para remover a entrada para um usuário específico
 
 
 ## Como desativar a funcionalidade de reivindicação/GD
+
+:warning: Veja em [global.conf](/wiki/advanced/Global-Config.html) na secção [`World`](/wiki/advanced/Global-Config.html#world) para proteção de mundos ou recursos.
 
 ### Desative a reivindicação em um mundo específico
 

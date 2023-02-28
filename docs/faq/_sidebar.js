@@ -1,7 +1,10 @@
 module.exports = [
-	"/wiki",
-	"Claim-Management", 
-	"Flag-Definitions", 
-	"Options",
-	"Permissions"
+	{
+		text: "Common Questions",
+		icon: "faq",
+		prefix: "/faq/",
+		collapsable: false,
+		children: ["", "Claim-Management", "Flag-Definitions", 
+		"Options", "Permissions"],
+	  },
 ];

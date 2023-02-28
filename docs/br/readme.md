@@ -41,7 +41,7 @@ features:
 
   - title: Suporte a Mods
     icon: tools
-    details: Projetado desde o início para mods. Híbrido e Sponge.
+    details: Projetado desde o início para mods. Forge/Híbridos/Sponge.
     link: /br/mods/
 
   - title: Taxas. Aluguel e vendas

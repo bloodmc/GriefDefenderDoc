@@ -29,7 +29,7 @@ Estamos traduzindo e revisando a Wiki e a tradução do plugin, para manter a co
 ::: warning
 GriefDefender faz uso pesado do grupo `default` do LuckPerms. Certifique-se de que seus grupos de LP estão herdando o grupo `default` 
 caso não, o GD não irá funcionará corretamente. LP também recomenda nunca desabilitar este grupo.
-Verifique na [wiki](https://luckperms.net/wiki/Default-Groups#where-to-start) 
+Verifique na [Luckperms - Where to start](https://luckperms.net/wiki/Default-Groups#where-to-start) 
 :::
 
 ### Instalação
@@ -38,7 +38,7 @@ Verifique na [wiki](https://luckperms.net/wiki/Default-Groups#where-to-start)
 
 @tab:active Bukkit
 :warning: Se estiver usando `spark`, Atualize para a [última versão](https://ci.lucko.me/job/spark/) :warning:   
-:warning: Defina `spawn-protection` para `0` dentro `server.properties` para permitir que GD proteja o spawn. 
+:warning: Defina [`spawn-protection`](https://minecraft.fandom.com/pt/wiki/Server.properties#spawn-protection) para `0` dentro [`server.properties`](https://minecraft.fandom.com/pt/wiki/Server.properties) para permitir que GD proteja o spawn. 
 Se isso não for definido corretamente, o servidor bloqueará as ações antes que o GD tenha a chance de vê-lo. :warning:
 1. Instale o [LuckPerms](https://luckperms.net/) mais recente.
 2. Obtenha a versão mais recente do [GriefDefender](https://www.spigotmc.org/resources/68900/).
@@ -58,12 +58,22 @@ para verificar se o GriefDefender foi carregado com sucesso você pode verificar
 4. Em seguida, desligue o servidor e comece a configurar.
 
 @tab Forge
-
-Em breve!
+:warning: Em breve!
+1. Instale o [LuckPerms - Forge](https://luckperms.net/) mais recente.
+2. Obtenha a versão adequada do GriefDefender para o Forge X.XX.X no Discord.
+3. Coloque o arquivo jar em `mods`
+4. Agora inicie seu servidor uma vez para gerar todos os arquivos de configuração,
+para verificar se o GriefDefender foi carregado com sucesso você pode verificar se o console mostrou `[GriefDefender] Loaded successfully`.
+5. Em seguida, desligue o servidor e comece a configurar.
 
 @tab Fabric
-
-Em breve!
+:warning: Em breve! 
+1. Instale o [LuckPerms - Fabric](https://luckperms.net/) mais recente.
+2. Obtenha a versão adequada do GriefDefender para o Forge X.XX.X no Discord.
+3. Coloque o arquivo jar em `mods`
+4. Agora inicie seu servidor uma vez para gerar todos os arquivos de configuração,
+para verificar se o GriefDefender foi carregado com sucesso você pode verificar se o console mostrou `[GriefDefender] Loaded successfully`.
+5. Em seguida, desligue o servidor e comece a configurar.
 
 :::
 
@@ -261,11 +271,11 @@ Por exemplo, se você quiser usar mysql, você deve definir este valor para `mys
 :warning: Antes de ativar o modelo econômico, certifique-se de testar em um servidor de TESTE para garantir que todas as configurações estejam funcionando corretamente. :warning:
 
 Por padrão, o GD permite que os jogadores acumulem blocos de reivindicações para serem usados na criação de reivindicações.
-No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em `global.conf`.  
+No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em [`global.conf`](/br/wiki/advanced/Global-Config.html).  
 Com `economy-mode` ativado, todas as criações de reivindicação solicitarão aos jogadores uma confirmação do custo da reivindicação. Uma vez confirmado, o dinheiro será retirado da conta do jogador. 
 Se você quiser ignorar essas confirmações, defina a permissão `griefdefender.user.claim.economy.create-confirm` para `false`.
 
-Depois que essa configuração for ativada, abra `options.conf`e configure as seguintes opções para um valor maior que `0`
+Depois que essa configuração for ativada, abra [`global.conf`](/br/wiki/advanced/Global-Config.html) e configure as seguintes opções para um valor maior que `0`
 * `economy-block-cost`  
 * `economy-sell-return` 
 

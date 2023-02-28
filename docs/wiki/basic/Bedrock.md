@@ -8,7 +8,7 @@ icon: gui
 For servers allowing Bedrock players to join, this page will provide necessary steps to make sure your bedrock players have no issues.  
 
 ## LuckPerms setup
-Set `allow-invalid-usernames` to `true` in [LuckPerm's](https://luckperms.net/) `config.yml`.
+Set [`allow-invalid-usernames`](https://luckperms.net/wiki/Configuration#allow-invalid-usernames) to `true` in [LuckPerm's](https://luckperms.net/) `config.yml`.
 
 ## Inventory GUI
 GriefDefender provides 2 GUI's for players : [Chat](/wiki/basic/GUI.html#chat) and [Inventory](/wiki/basic/GUI.html#inventory). The Chat GUI will not function properly with Bedrock players as they are unable to click chat.  

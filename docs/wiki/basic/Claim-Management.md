@@ -9,7 +9,7 @@ GriefDefender is a plugin that provides self-service region protection functiona
 
 All the examples are with the defaults at the time of writing this in mind.
 
-For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](/faq/)
+For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](/faq/Claim-Management.html)
 
 ## Claim Creation
 
@@ -123,9 +123,14 @@ Basic tool, you can use it to indicate the position of claims, and identify who 
 
 The inspection and modification tools now support CustomModelData support. To use, add {key:value} after item identifier.  
 
-Ex.  
-`inspection-tool=minecraft:stick{CustomModelData:1}`  
-`modification-tool="minecraft:golden_shovel{CustomModelData:2}`  
+Search the line `inspection-tool="minecraft:stick"` and `inspection-tool="minecraft:golden_shovel"` on [`global.conf`](/wiki/advanced/Global-Config.html)
+
+Change to:  
+`inspection-tool="minecraft:stick{CustomModelData:1}"`  
+`modification-tool="minecraft:golden_shovel{CustomModelData:2}"`  
+
+Give yourself stick with this data :  
+`/summon item ~ ~ ~ {Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:1}}}`  
 
 ## Claim Identifiers
 
@@ -360,6 +365,7 @@ To remove entry for a specific user
 
 ## How to disable claiming/GD functionality
 
+:warning: See [global.conf](/wiki/advanced/Global-Config.html) in the [`World`](/wiki/advanced/Global-Config.html#world) section for protecting worlds or resources
 ### Disable claiming in a specific world
 
 To disable creating claims for a specific group of users in a world called `valhalla`, enter the following command  

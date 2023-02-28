@@ -208,7 +208,7 @@ The following icon flags are available to use with an icon
 
 ### Options  
 
-The `options.conf` file controls all default claim and player settings.  
+The [`options.conf`](/wiki/basic/Options.html) file controls all default claim and player settings.  
 
 
 #### Default Options   
