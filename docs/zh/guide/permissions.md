@@ -2,15 +2,21 @@
 title: 权限
 tags: 信息
 category: 信息
-icon: condition
+icon: node-tree
 ---
 
-
-如果您想快速使用，将 ```griefdefender.user.*``` 授权至您的玩家。
-<br>GD 不支持 `*` 或 `OP` 作为管理员权限，请使用 ```griefdefender.user.*``` 和 ```griefdefender.admin.*``` 来授予管理员权限。
+:::: note
+推荐将 ```griefdefender.user.*``` 授权至您的玩家，
+在授予基础权限后再进行微调。
+<br>GD 不建议 `*` 或 `OP` 作为管理员权限，
+请使用 ```griefdefender.user.*``` 和 ```griefdefender.admin.*``` 来授予管理员权限。
+<br>如果你使用了 `*` 作为权限，请将 `griefdefender.login.inventory-gui` 设置为 `false` 来使用聊天界面交互。
+::::
 
 ```
-/lp group <权限组> permission set griefdefender.user.*
+/lp group default permission set griefdefender.user.*
+/lp group <管理员权限组> permission set griefdefender.admin.*
+/lp group <管理员权限组> permission set ggriefdefender.login.inventory-gui false
 ```
 
 在大多数情况下，建议使用上面的通用权限，如果您想要更精细的控制，请阅览下面的所有权限并相应地关掉一些不需要的权限。
@@ -22,7 +28,7 @@ icon: condition
 就目前而言，GD 大量使用了 LP 的 `default` 权限组，以下现象是必须出现的，请不要删除权限组，否则很可能插件将不能正常使用。
 
 - 所有非 GriefDefender 的权限组继承自 `default` 权限组。  
-- `default` 权限组继承自以下 GD 创建的权限组： `griefdefender_claim, griefdefender_default, griefdefender_definition, griefdefender_option, griefdefender_override`
+- `default` 权限组继承自所有  `griefdefender_` GD 创建的权限组。
 - `default` 权限组不应该被禁用。LP 强烈建议不要禁用此组。 
 详见 https://luckperms.net/wiki/Default-Groups  
 - 一般情况下不要将 `griefdefender.flag.xxx` 当作权限授予玩家，其作为内部领地权限检查使用！(使用准则参考[特殊用例](./usecases.md))
@@ -32,7 +38,7 @@ icon: condition
 
 ## 领地相关
 :::: warning
-注意：此处文档与最新版不符，请参阅 [英文文档](https://github.com/bloodmc/GriefDefender/wiki/Permissions)
+注意：此处文档与最新版不符，请参阅 [英文文档](http://localhost:8080/wiki/Permissions.html#claims)
 ::::
 | 权限节点 | 描述 |
 | --------- | ----------- |

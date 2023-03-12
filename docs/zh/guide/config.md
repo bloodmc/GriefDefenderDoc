@@ -2,7 +2,7 @@
 title: 配置
 tags: 信息
 category: 信息
-icon: tool
+icon: config
 ---
 
 ### 文件

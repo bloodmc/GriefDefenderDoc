@@ -1,14 +1,12 @@
 ## How to add GD API as dependency
 
-Note: Add jar as a `compileOnly` dependency.  (Do not include GD's API in your jar or any of its dependencies as it is provided by GriefDefender)
+::: tabs
 
-
-### Groovy
+@tab:active Groovy(Gradle)
 ```
 compileOnly group: 'com.griefdefender', name: 'api', version: '2.1.0-SNAPSHOT'
 ```
 
-#### Repository
 ```
 maven 
 {
@@ -17,8 +15,7 @@ maven
 }
 ```
 
-
-### Maven
+@tab Maven
 ```
 <dependency>
     <groupId>com.griefdefender</groupId>
@@ -28,13 +25,14 @@ maven
 </dependency>
 ```
 
-#### Repository
 ```
 <repository>
     <id>griefdefender</id>
     <url>https://repo.glaremasters.me/repository/bloodshot</url>
 </repository>
 ```
+
+:::
 
 Note: Latest API snapshots can be found on [maven repo](https://repo.glaremasters.me/#browse/browse:bloodshot:com%2Fgriefdefender%2Fapi%2F2.1.0-SNAPSHOT)
 

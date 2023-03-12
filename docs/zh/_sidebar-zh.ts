@@ -17,7 +17,7 @@ export const zh = sidebar({
 		  icon: "search",
 		  prefix: "/zh/guide/basic/",
 		  collapsable: true,
-		  children: ["claim-types", "trust-system", "claim-management", "options", "pvp", "tags", "claim-rent-system"],
+		  children: ["claim-types", "trust-system", "claim-management", "pvp", "tags", "claim-rent-system"],
 		},
 		{
 		  text: "进阶",
@@ -29,13 +29,13 @@ export const zh = sidebar({
 		  text: "杂项",
 		  icon: "grid",
 		  prefix: "/zh/guide/misc/",
-		  children: ["debuging"],
+		  children: ["debugging"],
 		},
 		{
 		  text: "联动",
 		  icon: "plugin",
 		  prefix: "/zh/hooks/",
-		  children: ["gdhooks", "dynmap", "placeholder", "wecui"],
+		  children: ["", "dynmap", "placeholder", "wecui"],
 		},
     ],
 });
