@@ -19,7 +19,7 @@ You can configure this time by adjusting the setting `tax-apply-hour` in [`globa
 ### Tax rate  
 By default, claim owners are charged a flat rate of `0.1` in currency per block they own.  
 For ex. A claim that is 10x10 would be charged `0.1 * 100` which would be a total of `10`.  
-You can configure this rate for all users by adjusting `tax-rate` in `options.conf` under `default-user-options`.  
+You can configure this rate for all users by adjusting `tax-rate` in [`options.conf`](/wiki/basic/Options.html) under `default-user-options`.  
 
 Note: 2D claims are only charged `length * width`. Height is not included.  
 Note: 3D claims are charged `length * width * height`.  
@@ -28,7 +28,7 @@ Note: 3D claims are charged `length * width * height`.
 If a claim owners fails to pay his/her taxes then the GD will freeze the claim.  
 Freezing the claim stops the claim owner from interacting with their claim until they pay their complete tax balance.  
 By default, this occurs after 7 days of an unpaid balance.  
-This setting can be adjusted by changing `tax-expiration` in `options.conf` under `default-user-options`.  
+This setting can be adjusted by changing `tax-expiration` in [`options.conf`](/wiki/basic/Options.html) under `default-user-options`.  
 
 ### Tax claim deletion  
 If a claim owner fails to pay their taxes after configured setting `tax-expiration` then GD will start a countdown to delete the claim.  

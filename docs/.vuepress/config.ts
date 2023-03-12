@@ -48,7 +48,7 @@ export default defineUserConfig({
           placeholder: 'Pesquisar',
           frontmatter: {
             tag: 'tag',
-            category: 'category',
+            category: 'categoria',
           }
         }
       },

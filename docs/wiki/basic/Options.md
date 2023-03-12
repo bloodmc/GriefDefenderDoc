@@ -11,7 +11,7 @@ Options, also known as Meta, are a way to configure plugins using player/group c
 
 
 ## Configuration  
-Default values can be changed in `options.conf`  
+Default values can be changed in [`options.conf`](/wiki/basic/Options.html)  
 See [Option Config](/wiki/Configuration.html#options)  
 
 ## Built-in Commands
@@ -38,7 +38,7 @@ See [Contexts](/wiki/advanced/Contexts.html) on what contexts you can use and ho
 * Deny player hunger in claim player is in.  
 `/claimoption player-deny-hunger true`  
 
-Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.conf`.
+Note: If you get a message stating the option is not enabled, enable it under `option-control` in [`options.conf`](/wiki/basic/Options.html).
 Note: Using `/claimoption` with no arguments opens up the GUI and displays all claim options for claim you are standing in including default options that affect all claims.  
 
 ## LuckPerms
@@ -89,7 +89,7 @@ DELETE FROM luckperms_user_permissions WHERE permission LIKE '%griefdefender\\\\
 ```
 
 
-See [Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta) and [Meta Commands](https://luckperms.net/wiki/Meta-Commands) for more information on how to use it directly in LuckPerms
+See [Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta) and [Luckperms - Meta Commands](https://luckperms.net/wiki/Meta-Commands) for more information on how to use it directly in LuckPerms
 
 ## Global Options
 
@@ -114,6 +114,7 @@ Option                                           | Default Value | Description |
 ```griefdefender.initial-blocks```       |   120         | The number of bonus starter claim blocks a player has initially. <br />Note: This number is not counted as part of accrued blocks. <br />Note: If using 'wilderness-cuboids', this value is 25600 by default.
 ```griefdefender.max-accrued-blocks```   |   80000       | The limit on accrued blocks (over time). doesn't limit purchased or admin-gifted blocks. <br />Note: If using 'wilderness-cuboids', this value is 20480000 by default. <br />Note: This setting will affect `/scb` command.
 ```griefdefender.max-bonus-blocks```   |   -1      | The maximum amount of bonus blocks a player can obtain. <br />Note: Set to -1 or less to make unlimited. <br />Note: This setting will affect commands `/acb` and `/buyclaimblocks`, use with caution.
+```griefdefender.max-claimable-blocks``` |   -1      | The maximum amount of blocks a user can claim. <br />Note: Set this to -1 to make it unlimited. |
 ```griefdefender.radius-inspect``` | 100 | The radius in blocks used to search for nearby claims while inspecting.
 
 ## Claim Options
@@ -130,7 +131,7 @@ Option                                           | Default Value | Description |
 ```griefdefender.abandon-delay```  | 0 | The number of days to delay before allowing a player to abandon a newly created claim.
 ```griefdefender.create-mode```    | area | The default claiming mode set for players on login. (area = 2D, volume = 3D)
 ```griefdefender.create-limit```         |   -1           | Maximum number of claims per player. (-1 = unlimited)
-```griefdefender.min-level```<br>```griefdefender.max-level```    |   0/255          | The minimum/maximum level that a claim can be created in.
+```griefdefender.min-level```<br>```griefdefender.max-level```    |   -64/320          | The minimum/maximum level that a claim can be created in.
 ```griefdefender.min-size-x```<br>```griefdefender.max-size-x```    |   10/5000          | The min/max size in blocks that the x-axis can be.
 ```griefdefender.min-size-y```<br>```griefdefender.max-size-y```    |   5/256          | The min/max size in blocks that the y-axis can be.
 ```griefdefender.min-size-z```<br>```griefdefender.max-size-z```    |   10/5000          | The min/max size in blocks that the z-axis can be.

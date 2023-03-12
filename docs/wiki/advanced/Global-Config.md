@@ -15,7 +15,7 @@ Please ensure that you have read the sub-text found next to the variables in you
 ---
 
 ## Plugin Dependency
-Do note, cost variables (such as Towns' `creation-cost`) **require** an Economy plugin. Similarly, MCClans is only needed if you plan on using it's integration across plugins. It is **not**, however, required to use GriefDefender's Town claims.
+Do note, cost variables (such as Towns' `creation-cost`) **require** an Economy plugin (Example: [Vault](https://www.spigotmc.org/resources/34315/), [EssentialsX](https://www.spigotmc.org/resources/9089/)). Similarly, MCClans is only needed if you plan on using it's integration across plugins. It is **not**, however, required to use GriefDefender's Town claims.
 
 For example, adding block-break to the list will translate into `griefdefender.user.flag.block-break` being checked as true, therefore allowing the player to edit his claim's block-break flag with `/cf`, `/cfg`, and `/cfp`. 
 
@@ -33,6 +33,9 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Portals: portal-use
 * Projectiles: projectile-impact-block, projectile-impact-entity
 
+<hr>
+Version based on release file: GriefDefender 2.3.2-DEV4
+<hr>
 
 # Claim
 | Variable | Description | Default Value |
@@ -49,8 +52,8 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | explosion-block-surface-blacklist | A list of source id's that cannot cause explosion damage to blocks above sea level. | [ ] |
 | explosion-entity-surface-blacklist | A list of id's that cannot cause explosion damage to entities above sea level. | [ ] |
 | explosion-surface-block-level | The 'Y' block level that is considered the surface for explosions. | 0 |
-| inspection-tool | The item used to inspect claims with a right-click. <br />Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | "minecraft:stick" |
-| modification-tool | The item used to create/resize claims with a right click.<br />Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | "minecraft:golden_shovel" |
+| inspection-tool | The item used to inspect claims with a right-click. <br />Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | ["minecraft:stick"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
+| modification-tool | The item used to create/resize claims with a right click.<br />Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | ["minecraft:golden_shovel"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
 | piston-protection-in-claims | Whether piston protection should be enabled within claims. Note: This does not affect pistons crossing into another claim, that is always protected. This only determines whether or not GD should process pistons if it doesn't cross into another claim. | false |
 | player-trapped-cooldown | The cooldown time, in seconds, when using the '/trapped' command. | 300 |
 | protect-tamed-entities | Whether tamed entities should be protected in claims. | true |
@@ -97,12 +100,12 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | enter-exit-chat-show-gd-prefix | Whether GD prefix should be shown in enter/exit chat messages. | TRUE |
 | gd-prefix | Controls the prefix used when sending messages. | [&bGD&r]  |
 | greeting-farewell-action-bar | Controls whether to send greeting/farewell messages to action bar by default. <br />Note: Setting to true will send messages to actionbar. <br />Note: This will only be set if there is no actionbar already set in claim. If so, it will use chat instead. | FALSE |
-| locale | Set the locale to use for GP messages. Available languages: de_DE, en_US, es_ES, fr_FR, pl_PL, ru_RU, zh_HK. The data is stored under assets in jar. <br />Note: The language code must be lowercase and the country code must be uppercase. | "en_US" |
+| locale | Set the locale to use for GP messages. Available languages: de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK. The data is stored under assets in jar. <br />Note: The language code must be lowercase and the country code must be uppercase. | "en_US" |
 | locale-unicode-fix | Attempts to adjust unicode fonts to represent minecraft default fonts better. <br />Note: If you are using 'pl_PL' or 'ru_RU', this setting should be set to false. <br />Note: Any other languages that experience misalignment in chat menus should disable this setting. | TRUE |
 | wilderness-default-message | Controls whether wilderness default enter message is sent to players. | TRUE |
 
 # Migrators
-## Bukkit
+# Bukkit
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | classic | Set to true to enable the classic migrator. <br />Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format.<br />Note: It is recommended to backup data before using. | FALSE | 
@@ -114,13 +117,23 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 | residence | Set to true to enable Residence data migrator. | TRUE |
 | worldguard | Set to true to enable WorldGuard data migrator. <br />Note: Only cuboid regions are supported. <br />Note: It is recommended to backup data before using. | FALSE |
 
-## Sponge
+# Sponge
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | griefprevention-bukkit | Set to true to enable the griefprevention bukkit migrator. <br />Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format. <br />Note: It is recommended to backup data before using. | FALSE |
 | griefprevention-sponge | Set to true to enable the griefprevention sponge migrator. <br />Note: Migrates GP sponge claim data to current format. <br />Note: It is recommended to backup data before using. | FALSE |
 | red-protect | Set to true to enable RedProtect data migrator. <br />Note: All RedProtect data will be converted into basic claim data. | FALSE |
 | worldguard | Set to true to enable WorldGuard data migrator. <br />Note: Only cuboid regions are supported. <br />Note: It is recommended to backup data before using. | FALSE |
+
+# Mod
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| entity-move-event | Allows GD's enter-claim and exit-claim to support non-player movement such as monsters and animals. | Default: false |
+| block-id-convert-list | # Used to override generic block id's to their actual id during TE and item usage if available. Add the target block id to list if you want to force a conversion when detected. # Note: This is useful for mods such as IC2 which uses the generic id 'ic2:te' for its multi-block. | "gregtech:machine", "ic2:te" |
+| fakeplayer-identifiers | Contains a list of strings used to identify a fakeplayer by UUID or name. To use, add the fakeplayer UUID or name. | ["41C82C87-7AfB-4024-BA57-13D2C99CAE77", BFC3377F-C3C9-3382-9DA6-79B50A9AFE57, "0D0C4CA0-4FF1-11E4-916C-0800200C9A66", "[Minecraft]", "OpenModsFakethis*"] |
+| mod-id-map | Used to map an unknown mod item/block/entity to a mod id. To use, add the mod package with a mapping to a mod id. Ex. 'com.pixelmonmod.*', 'pixelmon' would map an entity containing class name 'com.pixelmonmod.*' to 'pixelmon' | "com.pixelmonmod.*"=pixelmon |
+| tile-id-nbt-map | Used to override generic tileentity id's to their actual id during TE usage. Add the target TE id as key and NBT key where ID is stored as value. | "gregtech:machine"=MetaId |
+ 
 
 # Optimization
 | Variable | Description | Default Value |
@@ -153,7 +166,7 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 # Permission
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| griefdefender-claim-group-priority | The claimgroup permission group priority. | -60 |
+| griefdefender-claim-group-priority | The claimgroup permission group priority. | -80 |
 | griefdefender-claim-priority | The claim permission group priority. | -60 |
 | griefdefender-default-priority | The deffault permission group priority. | -100 |
 | griefdefender-default-priority | The default permission group priority. | -80 |
@@ -171,8 +184,25 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 | reset-accrued-claim-blocks | If enabled, resets all playerdata accrued claim blocks to match total cost of claims owned. <br />Example: If a player has 5 basic claims with a total cost of 1000, this will set their accrued claim blocks to 1000. <br />Note: This will also reset all bonus claim blocks to 0. It is highly recommended to backup before using. | FALSE |
 | reset-migrations | If enabled, resets all playerdata migration flags to allow for another migration. <br /> Note: Use this with caution as it can easily mess up claim block data. It is highly recommended to backup before using. | FALSE |
 
-## Provider
+# Provider
 Manages plugin providers that GD hooks into for extended functionality.
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| BlueMap | Toggles whether GDhooks communicates with the BlueMap | true |
+| BossShopPro | Toggles whether GDhooks communicates with the BossShopPro | true |
+| ChestShop | Toggles whether GDhooks communicates with the ChestShop | true |
+| DynamicShop | Toggles whether GDhooks communicates with the DynamicShop | true |
+| Dynmap | Toggles whether GDhooks communicates with the Dynmap | true |
+| InsaneShops | Toggles whether GDhooks communicates with the InsaneShops | true |
+| MyPet | Toggles whether GDhooks communicates with the MyPet | true |
+| MythicMobs | Toggles whether GDhooks communicates with the MythicMobs | true |
+| QuickShop | Toggles whether GDhooks communicates with the QuickShop | true |
+| RevoltCrates | Toggles whether GDhooks communicates with the RevoltCrates | true |
+| Shop | Toggles whether GDhooks communicates with the Shop | true |
+| ShopChest | Toggles whether GDhooks communicates with the ShopChest | true |
+| Slabbo | Toggles whether GDhooks communicates with the Slabbo | true |
+| Slimefun | Toggles whether GDhooks communicates with the Slimefun | true |
+| UltimateShops | Toggles whether GDhooks communicates with the UltimateShops | true |
 
 
 # PvP
@@ -218,3 +248,8 @@ Manages plugin providers that GD hooks into for extended functionality.
 | town-accent-block | The visual accent block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
 | town-corner-block | The visual corner block used for town claims. (Default: minecraft:glowstone) | minecraft:glowstone |
 | town-filler-block | The visual filler block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
+
+# World
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| protected-worlds | A list of worlds by name or resource location that GriefDefender should protect. If empty, GriefDefender will protect all worlds. | [ ] |

@@ -31,8 +31,7 @@ To use WorldEdit CUI, you need to have it installed on both the client and the s
 * WECUI (Fabric Version) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
 #### 1.12 and under
-* WECUI (LiteLoader version) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)
-
+* WECUI (LiteLoader version) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)  
 Liteloader Vanilla - [Download](https://www.liteloader.com/download)  
 Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)  
 <hr>
@@ -50,8 +49,9 @@ If installed correctly, you should be able to see the same visuals as above when
 WorldEditSelectionVisualizer (WESV) is essentially the famous WorldEdit CUI mod in the form of a bukkit plugin, which means that players don't need to install anything on their client. 
 
 * WorldEditSelectionVisualizer  - [Download](https://www.spigotmc.org/resources/17311/)
+* WorldEditSUI - [Download](https://www.spigotmc.org/resources/60726/)
 
-![WESV Pre-visualização](https://www.spigotmc.org/attachments/cuboid-png.441993/)
+![WESV Preview](/cuboid_wesv.webp)
 
 ## Permission
 

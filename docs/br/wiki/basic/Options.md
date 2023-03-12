@@ -38,7 +38,7 @@ Veja [Contextos](/br/wiki/advanced/Contexts.html) sobre quais contextos você po
 * Negue a fome do jogador ao reivindicar que o jogador está dentro.
 `/claimoption player-deny-hunger true`
 
-Nota: Se você receber uma mensagem informando que a opção não está habilitada, habilite-a em `option-control` em `options.conf`. Veja [Controle de opções](Options.html#comandos-embutidos)
+Nota: Se você receber uma mensagem informando que a opção não está habilitada, habilite-a em `option-control` em [`options.conf`](/br/wiki/basic/Options.html). Veja [Controle de opções](Options.html#comandos-embutidos)
 Nota: O uso de `/claimoption` sem argumentos abre a Interface e exibe todas as opções de reivindicação para a reivindicação em que você está, incluindo opções padrão que afetam todas as reivindicações.
 
 ## LuckPerms
@@ -114,6 +114,7 @@ Opção                                           | Valor padrão | Descrição 
 ```griefdefender.initial-blocks```       |   120         | O número de blocos de reivindicação inicial de bônus que um jogador possui inicialmente. <br />Nota: Este número não é contado como parte dos blocos acumulados. <br />Nota: Se estiver usando 'wilderness-cuboids', este valor é 25600 por padrão.
 ```griefdefender.max-accrued-blocks```   |   80000       | O limite de blocos acumulados (ao longo do tempo). não limita blocos comprados ou concedidos por administradores. <br />Nota: Se estiver usando 'wilderness-cuboids', este valor é 20480000 por padrão. <br />Nota: Esta configuração afetará o comando `/scb`.
 ```griefdefender.max-bonus-blocks```   |   -1      | A quantidade máxima de blocos de bônus que um jogador pode obter. <br />Nota: Defina como -1 ou menos para tornar ilimitado. <br />Nota: Esta configuração afetará os comandos `/acb` e `/buyclaimblocks`, use com cuidado.
+```griefdefender.max-claimable-blocks``` |   -1      | A quantida máxima de blocos que um usuario pode reivindicar. <br />Nota: Defina como -1 para torna ilimitado. |
 ```griefdefender.radius-inspect``` | 100 | O raio em quarteirões usado para pesquisar reivindicações próximas durante a inspeção.
 
 ## Opções de reivindicação
@@ -130,7 +131,7 @@ Opção                                           | Valor padrão | Descrição 
 ```griefdefender.abandon-delay```  | 0 | O número de dias de atraso antes de permitir que um jogador abandone uma reivindicação recém-criada.
 ```griefdefender.create-mode```    | area | O modo de reivindicação padrão definido para jogadores no login. (area = 2D, volume = 3D)
 ```griefdefender.create-limit```         |   -1           | Número máximo de reivindicação por jogador. (-1 = ilimitado)
-```griefdefender.min-level```<br>```griefdefender.max-level```    |   0/255          | O nível mínimo/máximo em que uma reivindicação pode ser criada.
+```griefdefender.min-level```<br>```griefdefender.max-level```    |   -64/320          | O nível mínimo/máximo em que uma reivindicação pode ser criada.
 ```griefdefender.min-size-x```<br>```griefdefender.max-size-x```    |   10/5000          | O tamanho mínimo/máximo em blocos que o eixo x pode ter.
 ```griefdefender.min-size-y```<br>```griefdefender.max-size-y```    |   5/256          | O tamanho mínimo/máximo em blocos que o eixo y pode ter.
 ```griefdefender.min-size-z```<br>```griefdefender.max-size-z```    |   10/5000          | O tamanho mínimo/máximo em blocos que o eixo z pode ter.

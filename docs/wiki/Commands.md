@@ -31,7 +31,9 @@ If using an identifier for another player, the format is `<playername>:<identifi
 * [/gd claim greeting \<message\> [identifer]](#gd-claim-greeting)
 * [/gd claim id \<identifier\>](#gd-claim-id)
 * [/gd claim info [identifier]](#gd-claim-info)
-* [/gd claim inherit](#gd-claim-inherit)
+* [/gd toggle inherit](#gd-toggle-inherit)
+* [/gd toggle notifications](#gd-toggle-notifications)
+* [/gd toggle tool](#gd-toggle-tool)
 * [/gd claim inspect [\<area\>|\<hide\>|\<hideall\>]](#gd-claim-inspect)
 * [/gd claim list [\<player\> [world]]](#gd-claim-list)
 * [/gd claim displayname [name]](#gd-claim-displayname)
@@ -72,8 +74,8 @@ If using an identifier for another player, the format is `<playername>:<identifi
 
 Note: Use `public` if you want to trust all users.
 
-* [/gd trust player \<player\>|public <accessor|container|builder|manager> ](#gd-trust-player)
-* [/gd trust group \<group\>|public <accessor|container|builder|manager> ](#gd-trust-group)
+* [/gd trust player \<player\>|public <resident|accessor|container|builder|manager> ](#gd-trust-player)
+* [/gd trust group \<group\>|public <resident|accessor|container|builder|manager> ](#gd-trust-group)
 * [/gd trustall player \<player\>|public](#gd-trustall-player)
 * [/gd trustall group \<group\>|public](#gd-trustall-group)
 * [/gd untrust player \<player\>|public ](#gd-untrust-player)
@@ -111,6 +113,7 @@ Note: Use `public` if you want to trust all users.
 ### Misc
 
 * [/gd version](#gd-version)
+* [/gd toggle gui](#gd-toggle-gui)
 
 
 # Command Detail
@@ -189,7 +192,7 @@ Gets information about a claim you are standing in or by claim id.
 
 ___
 #### `/gd claim inherit`
-**Aliases**: `inherit`  
+**Aliases**: `claiminherit`  
 
 Toggles parent claim inherit mode
 
@@ -372,6 +375,18 @@ ___
 
 Resets a claim to flag defaults.
 
+___
+#### `/gd toggle notifications`
+**Aliases**: `claimnotifications`
+
+To enable/disable greeting/farewell messages on trusted claims.
+
+___
+#### `/gd toggle tool`
+**Aliases**: `claimtool`
+
+To enable/disable the claim tool.
+
 
 ### Options
 ___
@@ -400,6 +415,7 @@ Gets/Sets options for a player in claim you are standing in.
 Note: `public` is for all users.
 ___
 #### `/gd trust player`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a player entry to your claim(s) and use of your bed`  
 *Container*: `Grants a player access to your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a player edit access to your claim(s)`  
@@ -411,6 +427,7 @@ Grants a player access to your claim(s).
 
 ___
 #### `/gd trust group`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a group entry to your claim(s) and use of your bed`  
 *Container*: `Grants a group access to your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a group edit access to your claim(s)`  
@@ -422,6 +439,7 @@ Grants a group access to your claim(s)
 
 ___
 #### `/gd trustall player`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a player entry to ALL your claim(s) and use of your bed`  
 *Container*: `Grants a player access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a player edit access to ALL your claim(s)`  
@@ -433,6 +451,7 @@ Grants a player access to ***ALL*** your claim(s).
 
 ___
 #### `/gd trustall group`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a group entry to ALL your claim(s) and use of your bed`  
 *Container*: `Grants a group access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a group edit access to ALL your claim(s)`  
@@ -537,7 +556,7 @@ ___
 Deletes all administrative claims
 
 ___
-#### `/gd claim ignore`
+#### `/gd toggle ignore`
 **Aliases**: `ignoreclaims`  
 
 Toggles ignore claims mode
@@ -607,3 +626,9 @@ ___
 #### `/gd version`
 
 Lists version information.
+
+___
+#### `/gd toggle gui`
+**Aliases**: `claimgui`
+
+Toggle interface between Chat/Inventory.

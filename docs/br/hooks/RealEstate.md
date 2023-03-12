@@ -16,3 +16,10 @@ Placeholder                                           | Descrição |
 ```%realestate_claim_rent_amount%```  | Retorna o valor do aluguel da reivindicação
 ```%realestate_claim_sell_amount%```       |    Retorna o valor de venda da reivindicação
 ```%realestate_claim_lease_amount%```    |    Retorna o valor do arrendamento da reivindicação
+
+## Config
+
+Settings                                           | Valor Padrão | Descrição | 
+-------------------------------------------------|---------------|--------------|
+``` AllowAdminClaims ``` | false | Permitir que as reivindicações administrativas sejam usadas pelo RealEstate. |
+```AllowTownClaims``` | false | Permitir que as reivindicações da cidade sejam usadas pelo RealEstate. |

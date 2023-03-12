@@ -31,7 +31,9 @@ Se estiver usando um identificador para outro jogador, o formato é `<jogador>:<
 * [/gd claim greeting \<mensagem\> [identifer]](#gd-claim-greeting)
 * [/gd claim id \<identifier\>](#gd-claim-id)
 * [/gd claim info [identifier]](#gd-claim-info)
-* [/gd claim inherit](#gd-claim-inherit)
+* [/gd toggle inherit](#gd-toggle-inherit)
+* [/gd toggle notifications](#gd-toggle-notifications)
+* [/gd toggle tool](#gd-toggle-tool)
 * [/gd claim inspect [\<area\>|\<hide\>|\<hideall\>]](#gd-claim-inspect)
 * [/gd claim list [\<jogador\> [mundo]]](#gd-claim-list)
 * [/gd claim displayname [name]](#gd-claim-displayname)
@@ -72,8 +74,8 @@ Se estiver usando um identificador para outro jogador, o formato é `<jogador>:<
 
 Nota: Use `public` se quiser confiar em todos os jogadores.
 
-* [/gd trust player \<jogador\>|public <accessor|container|builder|manager> ](#gd-trust-player)
-* [/gd trust group \<grupo\>|public <accessor|container|builder|manager> ](#gd-trust-group)
+* [/gd trust player \<jogador\>|public <resident|accessor|container|builder|manager> ](#gd-trust-player)
+* [/gd trust group \<grupo\>|public <resident|accessor|container|builder|manager> ](#gd-trust-group)
 * [/gd trustall player \<jogador\>|public](#gd-trustall-player)
 * [/gd trustall group \<grupo\>|public](#gd-trustall-group)
 * [/gd untrust player \<jogador\>|public ](#gd-untrust-player)
@@ -111,6 +113,7 @@ Nota: Use `public` se quiser confiar em todos os jogadores.
 ### Diversos
 
 * [/gd version](#gd-version)
+* [/gd toggle gui](#gd-toggle-gui)
 
 
 # Detalhe do comando
@@ -188,8 +191,8 @@ ___
 Obtém informações sobre uma reivindicação em que você está ou pelo ID da reivindicação.
 
 ___
-#### `/gd claim inherit`
-**Atalho**: `inherit`  
+#### `/gd toggle inherit`
+**Atalho**: `claiminherit`  
 
 Alterna o modo de herdar da reivindicação principal
 
@@ -372,6 +375,17 @@ ___
 
 Redefine a reivindicação para as bandeiras padrões do servidor.
 
+___
+#### `/gd toggle notifications`
+**Atalho**: `claimnotifications`
+
+Para ativar/desativar as mensagens de saudação/despedida em reivindicações confiáveis.
+
+___
+#### `/gd toggle tool`
+**Atalho**: `claimtool`
+
+Para ativar/desativar a ferramenta de reivindicação.
 
 ### Options
 ___
@@ -400,6 +414,7 @@ Obtém/Define opções para um jogador que reivindica que você está de pé.
 Nota: `public` é para todos os usuários.
 ___
 #### `/gd trust player`
+*Resident*: `Concede a um jogador/grupo a capacidade de criar reivindicações, inclui confiança de acesso.`
 *Accessor*: `Concede uma entrada de jogador para sua(s) reivindicação(ões) e uso de sua cama`  
 *Container*: `Concede a um jogador acesso aos recipientes (mesa de trabalho), colheitas, animais, cama, botões e alavancas da sua reivindicação`  
 *Builder*: `Concede a um jogador acesso de edição às suas reivindicações`  
@@ -411,6 +426,7 @@ Concede a um jogador acesso à(s) sua(s) reivindicação(ões).
 
 ___
 #### `/gd trust group`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a group entry to your claim(s) and use of your bed`  
 *Container*: `Grants a group access to your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a group edit access to your claim(s)`  
@@ -422,6 +438,7 @@ Concede a um grupo acesso às suas reivindicações
 
 ___
 #### `/gd trustall player`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a player entry to ALL your claim(s) and use of your bed`  
 *Container*: `Grants a player access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a player edit access to ALL your claim(s)`  
@@ -433,6 +450,7 @@ Concede a um jogador acesso a ***TODAS*** as suas reivindicações.
 
 ___
 #### `/gd trustall group`
+*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`
 *Accessor*: `Grants a group entry to ALL your claim(s) and use of your bed`  
 *Container*: `Grants a group access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
 *Builder*: `Grants a group edit access to ALL your claim(s)`  
@@ -607,3 +625,7 @@ ___
 #### `/gd version`
 
 Lista as informações da versão do GD.
+___
+#### `/gd toggle gui`
+
+Alterna a interface entre Bate-Papo e Inventário

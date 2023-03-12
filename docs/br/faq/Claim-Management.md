@@ -110,6 +110,7 @@ Execute o comando `/cf command-execute essentials:sethome false default=user`
 
 1. Os administradores precisam atribuir a todos os jogadores as seguintes permissões de privilégio
 ```
+griefdefender.admin.option.perk.fly.resident
 griefdefender.admin.option.perk.fly.accessor
 griefdefender.admin.option.perk.fly.builder
 griefdefender.admin.option.perk.fly.container

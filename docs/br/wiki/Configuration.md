@@ -208,7 +208,7 @@ As seguintes bandeiras de ícone estão disponíveis para uso com um ícone
 
 ### options (Opções)  
 
-O arquivo `options.conf` controla todas as configurações padrões de reivindicação e jogador.
+O arquivo [`options.conf`](/br/wiki/basic/Options.html) controla todas as configurações padrões de reivindicação e jogador.
 
 
 #### Opções padrão
