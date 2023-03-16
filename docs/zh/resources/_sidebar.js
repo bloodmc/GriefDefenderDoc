@@ -5,7 +5,7 @@ module.exports = [
     {
 		title: "联动",
 		icon: "plugin",
-		collapsable: false,
+		collapsible: false,
 		prefix: "../hooks/",
 		children: ["gdhooks", "dynmap", "placeholder", "wecui"],
 	},

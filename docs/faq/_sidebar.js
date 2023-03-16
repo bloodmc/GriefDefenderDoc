@@ -3,7 +3,7 @@ module.exports = [
 		text: "Common Questions",
 		icon: "faq",
 		prefix: "/faq/",
-		collapsable: false,
+		collapsible: false,
 		children: ["", "Claim-Management", "Flag-Definitions", 
 		"Options", "Permissions"],
 	  },

@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme";
-import { nextSearchPlugin } from "vuepress-plugin-next-search";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
+
 
 export default defineUserConfig({
   base: "/",
@@ -25,33 +26,23 @@ export default defineUserConfig({
   },
 
   plugins: [[
-    nextSearchPlugin({
-      locales: {
-        '/': {
-          fullText: true,
-          placeholder: 'search',
-          frontmatter: {
-            tag: 'tag',
-            category: 'category',
-          }
+    searchProPlugin({
+      customFields: [
+        {
+          getter: (page) => page.frontmatter.category,
+          formatter: {
+            "/": "Category: $content",
+            "/zh/": "分类：$content",
+          },
         },
-        '/zh/': {
-          fullText: true,
-          placeholder: '搜索',
-          frontmatter: {
-            tag: '标签',
-            category: '分类',
-          }
+        {
+          getter: (page) => page.frontmatter.tag,
+          formatter: {
+            "/": "Tag: $content",
+            "/zh/": "标签：$content",
+          },
         },
-        '/br/': {
-          fullText: true,
-          placeholder: 'Pesquisar',
-          frontmatter: {
-            tag: 'tag',
-            category: 'categoria',
-          }
-        }
-      },
+      ],
     }),
   ]],
   theme,

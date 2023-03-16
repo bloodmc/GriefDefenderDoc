@@ -9,14 +9,14 @@ export const zh = sidebar({
           text: "开始",
           icon: "settings",
           prefix: "/zh/guide/",
-		  collapsable: false,
+		  collapsible: false,
           children: ["", "install", "permissions", "config"],
         },
 		{
 		  text: "基础",
 		  icon: "search",
 		  prefix: "/zh/guide/basic/",
-		  collapsable: true,
+		  collapsible: true,
 		  children: ["claim-types", "trust-system", "claim-management", "pvp", "tags", "claim-rent-system"],
 		},
 		{

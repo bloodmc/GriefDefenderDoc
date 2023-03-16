@@ -3,7 +3,7 @@ module.exports = [
 		text: "Hooks",
 		icon: "plugin",
 		prefix: "/hooks/",
-		collapsable: false,
+		collapsible: false,
 		children: ["", "gdhooks-perms", "Dynmap", "mcMMO", "PlaceholderAPI", "RealEstate", "WECUI-(Improved-Visuals)"],
 	  },
 ];

@@ -8,7 +8,7 @@ module.exports = [
 		text: "Mods",
 		icon: "Options",
 		prefix: "/mods/",
-		collapsable: false,
+		collapsible: false,
 		children: ["Pixelmon"],
 	  },
 ];
