@@ -2,29 +2,42 @@
 title: 安装
 tags: 安装
 category: 配置
-icon: install
+icon: start
 ---
 
-### 装前预备
-#### 插件前置
-* [LuckPerms](https://luckperms.github.io/) --- 一个权限插件，GD 高强度依赖。(仅支持 v5) 
+### 安装
+::: tabs
+
+@tab:active Bukkit(包含 Paper 及其分系)  
+:warning: 在 `server.properties` 中将 `spawn-protection` 设置为 `0` 以让插件接管保护。
+如果该项不正确设置会导致出现各类奇怪问题。 :warning:
+1. 安装最新版 [LuckPerms](https://luckperms.net/download).
+2. 在 [Spigot](https://www.spigotmc.org/resources/68900/) 获取最新版 GD。
+3. 将 jar 丢进 `./plugins`
+4. 启动服务器生成全部配置并检查日志是否出现 `[GriefDefender] Loaded successfully`，若出现即初始化成功。
+5. 关闭服务器并开始配置。
+
+@tab Sponge(API7 & API8)
+
+:warning: LuckPerms 自 v5.3.98 不再支持 API7，如果你在运行 1.12.2 版本的 Sponge 
+使用[此版本LP](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98)。
+1. 从 Discord 获取 GD 针对 Sponge API 7/8 的不同版本。
+2. 将 jar 丢进 `mods` 或 `mods/plugins`。
+3. 启动服务器生成全部配置并检查日志是否出现 `[GriefDefender] Loaded successfully`，若出现即初始化成功。
+4. 关闭服务器并开始配置。
+
+@tab Forge(1.18+)
+
+Coming soon!
+
+@tab Fabric(1.19)
+
+Coming soon!
+
+:::
 :::: warning 
 GD 大量使用了 LP 的 `default` 权限组，请不要删除 `default` 中有关 GriefDefender 的父组，任何不恰当的更改都会导致 GD 无法正常使用。:warning:
 ::::
-#### 运行平台
-
-* SpongeVanllia(最新) & SpongeForge(1.12.2/1.16.5)
-* Bukkit 及其分系(诸如 Spigot, Paper 此类) `v2 支持 1.12.2-1.19.x, v1 支持 1.8-1.16.5`
-* 默认支持 Purpur 等 Paper 的分支，但测试其基准 Paper。
-
-### 安装
-:::: warning
-在 `server.properties` 中设置 `spawn-protection` 为 `0` 以允许 GD 接管出生保护. 如果此项设置错误, GD 将无法正常接管出生保护.   
-::::
-
-从 [SpigotMC](https://www.spigotmc.org/resources/griefdefender.68900/) 下载最新的 GriefDefender，而 Sponge 版通过 Discord 分发。
-
-现在启动你的服务器以生成所有的配置文件，检查 GriefDefender 是否成功加载，你可以检查控制台是否出现 `[GriefDefender] Loaded successfully`. 接下来关闭你的服务器并开始配置流程.
 
 ### 配置
 

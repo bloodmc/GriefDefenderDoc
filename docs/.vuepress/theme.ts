@@ -66,7 +66,6 @@ export default hopeTheme({
   plugins: {
     blog: false,
     mdEnhance: {
-	  enableAll: false,
 	  tabs: true,
       presentation: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
