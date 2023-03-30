@@ -124,11 +124,11 @@ Essas permissões permitem que o jogador com confiável voe em reivindicações 
 
 ## 14. É possível copiar bandeiras de uma reivindicação de administrador para outra reivindicação de administrador?**
 
-1. Use `/gd` navegue até `REIVINDICAÇÃO` depois `GRUPO-REIVINIDICAÇÃO`.
+1. Use `/gd` navegue até `REIVINDICAÇÃO` depois `GRUPO-REIVINDICAÇÃO`.
 2. Clique em na aba `ADMIN`
 3. Clique no botão `+`
 4. Insira o nome do grupo de reivindicações.
-5. Vá para uma reivindicação administrativa que você deseja juntar ao grupo e navegue de volta para `GRUPO-REIVINIDICAÇÃO` no menu gd.
+5. Vá para uma reivindicação administrativa que você deseja juntar ao grupo e navegue de volta para `GRUPO-REIVINDICAÇÃO` no menu gd.
 6. Clique emna aba `ADMIN`
 7. Clique em `Unir-se`
 

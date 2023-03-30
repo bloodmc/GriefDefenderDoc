@@ -103,7 +103,7 @@ Para usar as opções GD em comandos LP, use o formato de meta-chave`griefdefend
 
 Opção                                           | Valor padrão | Descrição | 
 -------------------------------------------------|---------------|--------------|
-```griefdefender.abandon-return-ratio```       |   1.0         | A porção de blocos de reivinidcação devolvida a um jogador quando uma reivinidcação é abandonada. Nota: Ao usar o Modelo Econômico, esta é a proporção de fundos devolvidos ao abandonar uma reivinidcação.
+```griefdefender.abandon-return-ratio```       |   1.0         | A porção de blocos de reivindicação devolvida a um jogador quando uma reivindicação é abandonada. Nota: Ao usar o Modelo Econômico, esta é a proporção de fundos devolvidos ao abandonar uma reivindicação.
 ```griefdefender.accrued-blocks```       |   0        | O número total de blocos de reivindicação acumulados por um jogador. <br />Nota: Isso não conta para blocos de bônus e não tem uso/efeito sendo definido em um grupo.
 ```griefdefender.blocks-accrued-per-hour```    |   120         | Blocos ganhos por hora. Por padrão, cada jogador 'ativo' deve receber 6 blocos a cada 5 minutos. Nota: O jogador deve ter movido pelo menos 3 blocos desde a última verificação. Se estiver usando 'wilderness-cuboids', esse valor é 30720 por padrão com 1536 blocos a cada 5 minutos para os jogadores. A configuração mínima é 12 devido ao intervalo de verificação de 5 minutos, configurá-lo para baixo resultará em nenhum acúmulo de blocos.
 ```griefdefender.bonus-blocks```       |   0        | O número total de blocos de reivindicação de bônus dados a um jogador e não tem uso/efeito sendo definido em um grupo.

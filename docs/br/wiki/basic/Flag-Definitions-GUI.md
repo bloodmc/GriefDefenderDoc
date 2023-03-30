@@ -1842,7 +1842,7 @@ Essas subseções funcionam da seguinte forma
 * Ao alternar uma definição de bandeira dentro de `OWNER` na interface, todos os jogadores confiáveis, incluindo o proprietário, serão afetados.
 * Todas as permissões do bandeira de reivindicação serão definidas no usuário do LP que possui a reivindicação.
 Observação: para reivindicações de área selvagem, todas as permissões de bandeira de reivindicação são definidas no usuário LP selvagem `_GDWorld_` com UUID `00000000-0000-0000-0000-000000000000`
-Observação: para reivinidcalções administrativa, todas as permissões de bandeira de reivindicação são definidas no usuário administrador do LP `_GDAdmin_` com UUID `11111111-1111-1111-1111-111111111111`
+Observação: para reivindicações administrativa, todas as permissões de bandeira de reivindicação são definidas no usuário administrador do LP `_GDAdmin_` com UUID `11111111-1111-1111-1111-111111111111`
 
 
 ### Permissões  
