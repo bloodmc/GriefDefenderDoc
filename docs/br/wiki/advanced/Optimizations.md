@@ -348,7 +348,7 @@ blacklist {
 
 :::: note Recomendação
 Se for criar novos flags, remova esta otimização e deixe padrão do GD, pois as otimizações removem alguns eventos do gddebug.  
-Essas otimizações tiveram foco em um servidor que tenta ao máximo chegar próximo do vanilla - Ultima revisão 1.19.3  
+Essas otimizações tiveram foco em um servidor que tenta ao máximo chegar próximo do vanilla - Ultima revisão 1.19.4  
 ::::
 
 <details>
@@ -375,6 +375,7 @@ GriefDefender {
     flag-id-blacklist {
         block-break=[]
         block-grow=[
+    # Arvores geram barulhos, oque pode causar um ligeiro lag no servidor, caso queira controlar, comente.
             "minecraft:oak_leaves",
             "minecraft:spruce_leaves",
             "minecraft:birch_leaves",
@@ -397,6 +398,7 @@ GriefDefender {
             "minecraft:jungle_sapling",
             "minecraft:acacia_sapling",
             "minecraft:dark_oak_sapling",
+    # Plantas geram barulhos, oque pode causar um ligeiro lag no servidor, caso queira controlar, comente.
             "minecraft:pumpkin",
             "minecraft:melon",
             "minecraft:wheat",
@@ -414,6 +416,7 @@ GriefDefender {
         block-modify=[
             "minecraft:deepslate_redstone_ore",
             "minecraft:redstone_ore",
+    # frosted_ice é em relação ao encantamento de passos gelados, comente para retirar a permissão do jogador gerar minecraft:ice nas águas.
             "minecraft:frosted_ice",
             "minecraft:grass_block",
             "minecraft:dirt",
@@ -429,11 +432,13 @@ GriefDefender {
             "minecraft:sweet_berry_bush"
         ]
         block-place=[
-            "minecraft:snow"
+    # Habilite caso você tenha lag com o RealisticSeasons, porém isso permitirá que outros jogadores consigam colocar minecraft:snow na reivindicação de outros.
+            #"minecraft:snow"
         ]
         block-pre=[]
         block-spread=[
             "minecraft:bamboo",
+    # caso queira usar o /claimflags a secção do vine-growth, comente o minecraft:vine.
             "minecraft:vine",
             "minecraft:grass_block",
             "minecraft:mycelium",
@@ -467,6 +472,7 @@ GriefDefender {
         ]
         entity-riding=[]
         entity-spawn=[
+    # minecraft:armor_stand alguns plugins como plugins de Holograma/Damage Indicators geram essas entidades, oque acabam gerando lag no GD por ter muito evento para verificar, caso utilize, comente.
             "minecraft:armor_stand",
             "minecraft:axolotl",
             "minecraft:bat",
@@ -495,14 +501,15 @@ GriefDefender {
             "minecraft:snowball",
             "minecraft:trident",
             "minecraft:xp_orb",
-            "minecraft:enderman",
             "spawnreason:village_defense"
         ]
         entity-teleport-from=[
-            "minecraft:plugin"
+    # Caso você use algum plugin de teletransporte que esteja dando dando problemas como plugins de elevador, habilite isso.
+            #"minecraft:plugin"
         ]
         entity-teleport-to=[
-            "minecraft:plugin"
+    # Caso você use algum plugin de teletransporte que esteja dando dando problemas como plugins de elevador, habilite isso.
+            #"minecraft:plugin"
         ]
         exit-claim=[
             "#minecraft:monster",
