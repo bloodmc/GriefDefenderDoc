@@ -414,6 +414,7 @@ GriefDefender {
             "minecraft:air"
         ]
         block-modify=[
+    # Os minerios de redstone mudam de estado para criar o brilho.
             "minecraft:deepslate_redstone_ore",
             "minecraft:redstone_ore",
     # frosted_ice é em relação ao encantamento de passos gelados, comente para retirar a permissão do jogador gerar minecraft:ice nas águas.
