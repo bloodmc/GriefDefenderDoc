@@ -89,11 +89,11 @@ Abaixo está um trecho das configurações de [otimização](/br/wiki/advanced/G
 Abaixo, você encontrará configurações contribuídas pelo usuário para servidores que trabalharam fortemente para melhorar o desempenho do GD para suas necessidades
 
 ### IMPORTANTE
-:::: warning Warning
+:::: warning Atenção
 Essas configurações são ajustadas para servidores individuais e podem não funcionar na sua.É altamente recomendável testar essas configurações antes de usá-las em seu servidor principal.
 :::: 
 
-# Dino's Otimização
+## Dino's Otimização
 
 <details>
   <summary>Dino's Blacklist</summary>
@@ -344,7 +344,7 @@ blacklist {
 
 <hr>
 
-# FITFC's Otimização
+## FITFC's Otimização
 
 :::: note Recomendação
 Se for criar novos flags, remova esta otimização e deixe padrão do GD, pois as otimizações removem alguns eventos do gddebug.  
@@ -441,6 +441,9 @@ GriefDefender {
             "minecraft:bamboo",
     # caso queira usar o /claimflags a secção do vine-growth, comente o minecraft:vine.
             "minecraft:vine",
+            "minecraft:cave_vines",
+            "minecraft:cave_air",
+            "minecraft:glow_lichen",
             "minecraft:grass_block",
             "minecraft:mycelium",
             "minecraft:twisting_vines",
@@ -538,7 +541,17 @@ GriefDefender {
             "minecraft:ender_chest",
             "minecraft:enchanting_table"
         ]
-        interact-inventory-click=[]
+        interact-inventory-click=[
+            "minecraft:crafting",
+            "minecraft:crafting_table",
+            "minecraft:stonecutter",
+            "minecraft:grindstone",
+            "minecraft:smithing_table",
+            "minecraft:cartography_table",
+            "minecraft:loom",
+            "minecraft:ender_chest",
+            "minecraft:enchanting_table"
+        ]
         interact-item-primary=[]
         interact-item-secondary=[
             "minecraft:ender_pearl",

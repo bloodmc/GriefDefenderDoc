@@ -292,7 +292,7 @@ For `<group>` use your default group, use `default` if you don't have one.
 Once GD is installed and running, see [Claim Management](/wiki/basic/Claim-Management.html) to learn how to create a protection claim and manage it.
 
 ### Options
-:warning: It is VERY IMPORTANT you follow [Options](/wiki/basic/Options.html) before proceeding. :warning:  
+:warning: It is VERY IMPORTANT you follow [`options.conf`](/wiki/basic/Options.html) before proceeding. :warning:  
 :warning: All persisted options(meta) set in LuckPerms will take priority over defaults in [`options.conf`](/wiki/basic/Options.html) :warning:
 
 If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in [`options.conf`](/wiki/basic/Options.html).  All default option settings are applied at server startup.  

@@ -42,7 +42,7 @@ O modo de reivindicação tem a seguinte funcionalidade
 
 * Clique-Esquerdo para inspecionar as reivindicações existentes com base no cursor do mouse. O primeiro acerto do bloco não aéreo será a reivindicação que ele inspeciona.
 * Shift + Clique-Esquerdo para verificar as reivindicações existentes ao seu redor.
-* Clique-Direito para criar uma nova reivindicação. Isso requer 2 pontos de bloqueio para ser concluído. Se estiver no modo 2D, basta selecionar 2 pontos em formato quadrado. Se estiver no modo 3D, faça o mesmo que 2D, mas a altura do bloco será importante, então escolha a posição de bloco mais baixa e mais alta que você deseja que sua reivindicação seja.
+* Clique-Direito para criar uma nova reivindicação. Isso requer 2 pontos de conjunto de canto para ser concluído. Se estiver no modo 2D, basta selecionar 2 pontos em formato quadrado. Se estiver no modo 3D, faça o mesmo que 2D, mas a altura do bloco será importante, então escolha a posição de bloco mais baixa e mais alta que você deseja que sua reivindicação seja.
 
 
 Assim que você tiver a ferramenta de reivindicação adequada equipada ou estiver em `/claimmode`, é hora de decidir qual tipo de reivindicação você deseja criar.
@@ -300,43 +300,43 @@ NOTA: Retirar uma reivindicação de um grupo, fará com que a reivindicação u
 Para obter informações gerais sobre o uso de reivindicações `/claiminfo` enquanto estava de pé neles.Passe o mouse sobre as coisas para encontrar vários detalhes que você pode alterar diretamente sem inserir nenhum comando.
 Também existem comandos para alterar o nome da reivindicação, a saudação e a despedida.  
 
-![Detalhes reivindicados](https://i.imgur.com/6erpZLa.png)
+![Detalhes reivindicados](/br/claiminfo.webp)
 
 Campo                              | Descrição |
 -----------------------------------|-------------|
-```Type```| O tipo de reivindicação.<br /> NOTA: Os tipos de reivindicação 2D protegem o Bedrock para o céu por padrão.<br /> NOTA: Os tipos de reivindicação 3D incluem altura (eixo y) e protegem apenas a área selecionada no momento da criação de reivindicações.
+```Tipo```| O tipo de reivindicação.<br /> NOTA: Os tipos de reivindicação 2D protegem da Rocha-mãe (minecraft:bedrock) ao céu por padrão.<br /> NOTA: Os tipos de reivindicação 3D incluem altura (eixo y) e protegem apenas a área selecionada no momento da criação de reivindicações.
 ```ID```|O identificador de reivindicação amigável exclusiva.Veja [Identificadores de reivindicação](#identificadores-de-reivindicacao)
-```Display Name```| O nome da exibição da reivindicação.Veja [Nomes de exibição de reivindicações](#nomes-de-exibicao-de-reivindicacoes). <br />Nota: Os nomes de exibição suportam a formatação, não são únicos e podem ser definidos como qualquer coisa.
-```Owner```| O dono da reivindicação.
-```Claim Group```| O grupo de reivindicações que essa reivindicação faz parte.Veja [Grupos de reivindicação](#grupos-de-reivindicacao)
+```Nome de exibição```| O nome da exibição da reivindicação.Veja [Nomes de exibição de reivindicações](#nomes-de-exibicao-de-reivindicacoes). <br />Nota: Os nomes de exibição suportam a formatação, não são únicos e podem ser definidos como qualquer coisa.
+```Dono```| O dono da reivindicação.
+```Grupo de reivinidcações```| O grupo de reivindicações que essa reivindicação faz parte.Veja [Grupos de reivindicação](#grupos-de-reivindicacao)
 ```Spawn```| Os usuários da Spawn de reivindicação se teletransportarão ao usar a reivindicação de teletransporte na Interface.
-```Inherit```| Se a reivindicação herda as permissões de bandeira da reivindicação principal.<br /> Nota: Use `/claiminherit` para alternar o valor.
-```Expired```| Se a reivindicação expirou devido à inatividade.
-```For Sale```| Se a reivindicação está atualmente à venda.
+```Herdar```| Se a reivindicação herda as permissões de bandeira da reivindicação principal.<br /> Nota: Use `/claiminherit` para alternar o valor.
+```Expirado```| Se a reivindicação expirou devido à inatividade.
+```A venda```| Se a reivindicação está atualmente à venda.
 ```Raid```| Se a reivindicação apóia as ataques da vila.
-```Deny Messages```| Se a reivindicação mostra mensagens de negação de proteção. (Mensagem que diz que não tem permissão para quebrar/colocar/interagir com item ou entidade)
-```Greeting```| A mensagem de entrada de reivindicação de reivindicação.<br /> Nota: Use `/claimgreeting \<message\>|clear|none`.
-```Farewell```| A mensagem de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimfarewell \<message\>|clear|none`.
-```Enter Title```| A reivindicação entra no título de reivindicação.<br /> Nota: Use `/claimtitle enter main \<title\>|clear|none`.
-```Enter Subtitle```| A reivindicação entra no título de reivindicação.<br /> Nota: Use `/claimtitle enter sub \<title\>|clear|none`.
-```Exit Title```| O título de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimtitle exit main \<title\>|clear|none`.
-```Exit Subtitle```| O título de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimtitle exit sub \<title\>|clear|none`.
+```Msg de sem permissão```| Se a reivindicação mostra mensagens de negação de proteção. (Mensagem que diz que não tem permissão para quebrar/colocar/interagir com item ou entidade)
+```Saudação```| A mensagem de entrada de reivindicação de reivindicação.<br /> Nota: Use `/claimgreeting \<message\>|clear|none`.
+```Despedida```| A mensagem de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimfarewell \<message\>|clear|none`.
+```Entrada Título```| A reivindicação entra no título de reivindicação.<br /> Nota: Use `/claimtitle enter main \<title\>|clear|none`.
+```Entrada Subtítulo```| A reivindicação entra no título de reivindicação.<br /> Nota: Use `/claimtitle enter sub \<title\>|clear|none`.
+```Saída Título```| O título de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimtitle exit main \<title\>|clear|none`.
+```Saída Subtítulo```| O título de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimtitle exit sub \<title\>|clear|none`.
 
 
-![Detalhes reivindicados](https://i.imgur.com/65dcUwY.png)
+![Detalhes reivindicados](/br/claiminfo_detalhes.webp)
 
 Campo                              | Descrição |
 -----------------------------------|-------------|
-```World```| O nome do mundo.
-```Area``` | O tamanho da reivindicação.<br /> Nota: as reivindicações 2D incluem o eixo x e z.<br /> Nota: as reivindicações 3D incluem eixo x, y e z.
-```Blocks```| O valor total dos blocos 2D ou 3D utilizados por reivindicação.
-```Created```| A reivindicação de data foi criada.
-```Last Active```| A última data ativa que o proprietário da reivindicação foi visto.<br /> NOTA: Isso é usado pela tarefa de limpeza de reivindicações para determinar se seu tempo para excluir a reivindicação com base na inatividade.
+```Mundo```| O nome do mundo.
+```Área``` | O tamanho da reivindicação.<br /> Nota: as reivindicações 2D incluem o eixo x e z.<br /> Nota: as reivindicações 3D incluem eixo x, y e z.
+```Blocos```| O valor total dos blocos 2D ou 3D utilizados por reivindicação.
+```Criado```| A reivindicação de data foi criada.
+```Visto por último```| A última data ativa que o proprietário da reivindicação foi visto.<br /> NOTA: Isso é usado pela tarefa de limpeza de reivindicações para determinar se seu tempo para excluir a reivindicação com base na inatividade.
 ```UUID```| A reivindicação de identificador exclusivo.
-```Lesser Boundary Corner```| O menor canto de limite da reivindicação.
-```Greater Boundary Corner```| O maior canto de limite da reivindicação.
-```North Corners```| As posições de reivindicação de canto do bloco norte.<br /> NOTA: Se o jogador tiver acesso ao Teleport, clicando em `nw` ou` ne` será teletransportado para a posição norte.<br /> NOTA: A teletransporte para os cantos é útil se os jogadores desejam redimensionar as reivindicações usando a ferramenta de modificação.
-```South Corners```| As posições de reivindicação do canto do bloco sul.<br /> NOTA: Se o jogador tiver acesso ao Teleport, clicar em `SW` ou` SE` será teleportado para a posição sul.<br /> NOTA: A teletransporte para os cantos é útil se os jogadores desejam redimensionar as reivindicações usando a ferramenta de modificação.
+```Canto com menor altura```| O menor canto de limite da reivindicação.
+```Canto com maior altura```| O maior canto de limite da reivindicação.
+```Canto Norte```| As posições de reivindicação de canto do bloco norte.<br /> NOTA: Se o jogador tiver acesso ao Teleport, clicando em `nw` ou` ne` será teletransportado para a posição norte.<br /> NOTA: A teletransporte para os cantos é útil se os jogadores desejam redimensionar as reivindicações usando a ferramenta de modificação.
+```Canto Sul```| As posições de reivindicação do canto do bloco sul.<br /> NOTA: Se o jogador tiver acesso ao Teleport, clicar em `SW` ou` SE` será teleportado para a posição sul.<br /> NOTA: A teletransporte para os cantos é útil se os jogadores desejam redimensionar as reivindicações usando a ferramenta de modificação.
 
 
 ## Controle de entrada de reivindicação
@@ -347,7 +347,7 @@ Você pode dar a outros jogadores acesso à sua reivindicação básica usando o
 
 ### Exigem confiança para os jogadores entrarem
 
-Alternar a definição de bandeira do usuário `plparaer-enter` to `false`
+Alternar a definição de bandeira do usuário `player-enter` para `false`
 
 Uma vez feito o exposto, jogadores não confiados não poderão inserir sua reivindicação.
 
@@ -366,7 +366,7 @@ Para remover a entrada para um usuário específico
 
 ## Como desativar a funcionalidade de reivindicação/GD
 
-:warning: Veja em [global.conf](/wiki/advanced/Global-Config.html) na secção [`World`](/wiki/advanced/Global-Config.html#world) para proteção de mundos ou recursos.
+:warning: Veja em [global.conf](/wiki/advanced/Global-Config.html) na secção [`World`](/br/wiki/advanced/Global-Config.html#world) para proteção de mundos ou recursos.
 
 ### Desative a reivindicação em um mundo específico
 
