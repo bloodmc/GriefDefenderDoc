@@ -2,17 +2,15 @@
 title: API
 ---
 
-## Como adicionar a Interface de Programação de Aplicação (API) do GriefDefender como dependência
+## Como adicionar API do GriefDefender como dependência
 
-Nota: Adicione jar como uma dependência `compileOnly`. (Não inclua a API do GD em seu jar ou qualquer uma de suas dependências, pois é fornecida pelo GriefDefender)
+::: tabs
 
-
-### Groovy
+@tab:active Groovy(Gradle)
 ```
 compileOnly group: 'com.griefdefender', name: 'api', version: '2.1.0-SNAPSHOT'
 ```
 
-#### Repositório
 ```
 maven 
 {
@@ -21,8 +19,7 @@ maven
 }
 ```
 
-
-### Maven
+@tab Maven
 ```
 <dependency>
     <groupId>com.griefdefender</groupId>
@@ -32,13 +29,14 @@ maven
 </dependency>
 ```
 
-#### Repositório
 ```
 <repository>
     <id>griefdefender</id>
     <url>https://repo.glaremasters.me/repository/bloodshot</url>
 </repository>
 ```
+
+:::
 
 Nota: As snapshots mais recentes da API podem ser encontrados no [repositório maven](https://repo.glaremasters.me/#browse/browse:bloodshot:com%2Fgriefdefender%2Fapi%2F2.1.0-SNAPSHOT)
 

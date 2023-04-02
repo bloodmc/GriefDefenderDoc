@@ -9,7 +9,7 @@ GriefDefender é alimentado por permissões. Cada ação feita em um mundo é ve
 
 Sintaxe
 `/gddebug record [filtro]`  
-Observação: o único filtro integrado é `claim`, que isolará toda a depuração na reclamação em que você está. Fora isso, o filtro pode ser qualquer palavra que você desejar.
+Observação: o único filtro integrado é `claim`, que isolará toda a depuração na reivindicação em que você está. Fora isso, o filtro pode ser qualquer palavra que você desejar.
 
 Para registrar todas as verificações de permissão de bandeira, insira
 

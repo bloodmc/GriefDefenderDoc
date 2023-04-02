@@ -47,7 +47,7 @@ Abra seu arquivo [global.conf](/br/wiki/advanced/Global-Config.html) e na seçã
 
 ## Em uso do jogo
 
-Depois que você modificou a configuração corretamente e fez `/gdreload` ou (melhor) reiniciou o servidor, agora você pode estabelecer sua primeira reclamação para ser alugado.
+Depois que você modificou a configuração corretamente e fez `/gdreload` ou (melhor) reiniciou o servidor, agora você pode estabelecer sua primeira reivindicação para ser alugado.
 
 Este sistema atualmente funciona bem para reivindicações Básicas, Urbanas e Subdivididas.
 
