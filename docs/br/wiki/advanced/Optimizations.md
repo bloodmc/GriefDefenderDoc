@@ -477,7 +477,9 @@ GriefDefender {
             "minecraft:fall",
             "minecraft:freeze"
         ]
-        entity-riding=[]
+        entity-riding=[
+            "minecraft:horse",
+        ]
         entity-spawn=[
     # minecraft:armor_stand alguns plugins como plugins de Holograma/Damage Indicators geram essas entidades, oque acabam gerando lag no GD por ter muito evento para verificar, caso utilize, comente.
             "minecraft:armor_stand",

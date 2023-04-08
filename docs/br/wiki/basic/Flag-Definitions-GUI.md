@@ -108,7 +108,7 @@ Para localizar um valor para `used_item` ou qualquer outro contexto, localize a 
 
 Outra maneira de encontrar um id que você está procurando é verificar um wiki executado pela comunidade para ele
 
-Veja https://minecraft-ids.grahamedgecombe.com/
+Veja [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/)
 
 
 ### Configuração de predefinição de definição de bandeira do Minecraft
