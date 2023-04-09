@@ -108,7 +108,7 @@ To locate a value for `used_item` or any other context, locate the Context colum
 
 Another way to find an id you are looking for is to check a community run wiki for it
 
-See https://minecraft-ids.grahamedgecombe.com/
+See [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/)
 
 
 ### Minecraft Flag Definition Preset Config  

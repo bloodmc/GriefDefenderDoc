@@ -17,6 +17,7 @@ Context                                          |     Value     | Description |
 ```gd_claim```            |   ```<claim_uuid>```  | Applies flag to claim with specified uuid.
 ```gd_claim_default```    |   ```admin```<br>```basic```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Applies flag as a default to all claims of type specified. <br />Note: Use `global` as value to apply to all types.<br/>Note: Use `user` as value to apply to all types EXCEPT wilderness.
 ```gd_claim_override```   |   ```admin```<br>```basic```<br>```claim```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Applies flag as an override to all claims of type specified. <br />Note: Use `global` as value to apply to all types.<br/>Note: Use `user` as value to apply to all types EXCEPT wilderness.
+```gd_rent```             |   ```rent```         | Apply flag for rental claims.
 ```source```   |   `<source_id>`  | Applies flag to a specific source. <br />Example: `minecraft:creeper`
 ```target```   |   `<target_id>`  | Applies flag to a specific target. <br />Example: `minecraft:player` <br />Note: Target is **ALWAYS** required after the flag in /cf command usage, but more than one target can be specified with use of context.
 ```state```   |   `<state>`  | Applies flag to a specific block state. <br />Example: `powered:true` <br /> See https://minecraft.gamepedia.com/Block_states for a list of all vanilla block states.

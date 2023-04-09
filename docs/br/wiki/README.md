@@ -303,8 +303,8 @@ Para `<grupo>` use seu grupo padrão, use `default` se você não tiver um.
 Depois que o GD estiver instalado e em execução, veja [Gestão de Reivindicações](/br/wiki/basic/Claim-Management.html) para saber como criar uma proteção de terrra e gerenciá-lo.
 
 ### Opções
-:warning: É MUITO IMPORTANTE que você veja [Opções](/br/wiki/basic/Options.html) antes de prosseguir. :warning:  
-:warning: Todas as opções persistentes (meta) definidas em LuckPerms terão prioridade sobre os padrões em [`options.conf`](/br/wiki/basic/Options.html)` :warning:
+:warning: É MUITO IMPORTANTE que você veja [`options.conf`](/br/wiki/basic/Options.html) antes de prosseguir. :warning:  
+:warning: Todas as opções persistentes (meta) definidas em LuckPerms terão prioridade sobre os padrões em [`options.conf`](/br/wiki/basic/Options.html) :warning:
 
 Se você quiser definir configurações como com quantos blocos iniciais um jogador pode começar, limites de criação de reivindicação, etc., então você deve começar ajustando as opções padrão do GD encontradas em [`options.conf`](/br/wiki/basic/Options.html). Todas as configurações de opção padrão são aplicadas na inicialização do servidor.
 

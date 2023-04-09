@@ -344,11 +344,11 @@ blacklist {
 
 <hr>
 
-# FITFC's Optimization
+## FITFC's Optimization
 
 :::: note Recommendation
 if you are going to create new flags, remove this optimization and leave the GD default, as the optimizations remove some events from gddebug.  
-These optimizations were focused on a server that tries its best to get close to vanilla - Last revision 1.19.3  
+These optimizations were focused on a server that tries its best to get close to vanilla - Last revision 1.19.4  
 ::::
 
 <details>
@@ -375,6 +375,7 @@ GriefDefender {
     flag-id-blacklist {
         block-break=[]
         block-grow=[
+    # Trees generate noise, which can cause a slight lag on the server, if you want to control it, comment.
             "minecraft:oak_leaves",
             "minecraft:spruce_leaves",
             "minecraft:birch_leaves",
@@ -384,6 +385,7 @@ GriefDefender {
             "minecraft:mangrove_leaves",
             "minecraft:azalea_leaves",
             "minecraft:flowering_azalea_leaves",
+            "minecraft:cherry_leaves",
             "minecraft:oak_log",
             "minecraft:spruce_log",
             "minecraft:birch_log",
@@ -391,12 +393,15 @@ GriefDefender {
             "minecraft:acacia_log",
             "minecraft:dark_oak_log",
             "minecraft:mangrove_log",
+            "minecraft:cherry_log",
+            "minecraft:cherry_sapling",
             "minecraft:oak_sapling",
             "minecraft:spruce_sapling",
             "minecraft:birch_sapling",
             "minecraft:jungle_sapling",
             "minecraft:acacia_sapling",
             "minecraft:dark_oak_sapling",
+    # Plants generate noise, which can cause a slight lag on the server, if you want to control it, comment.
             "minecraft:pumpkin",
             "minecraft:melon",
             "minecraft:wheat",
@@ -412,8 +417,10 @@ GriefDefender {
             "minecraft:air"
         ]
         block-modify=[
+    # Redstone ores change state to create the glow.
             "minecraft:deepslate_redstone_ore",
             "minecraft:redstone_ore",
+    # frosted ice is in relation to the enchantment of icy steps, only to remove the player's permission to generate minecraft:ice in the waters.
             "minecraft:frosted_ice",
             "minecraft:grass_block",
             "minecraft:dirt",
@@ -429,12 +436,17 @@ GriefDefender {
             "minecraft:sweet_berry_bush"
         ]
         block-place=[
-            "minecraft:snow"
+    # Enable it if you experience lag with RealisticSeasons, however this will allow other players to be able to claim minecraft:snow for others.
+            #"minecraft:snow"
         ]
         block-pre=[]
         block-spread=[
             "minecraft:bamboo",
+    # if you want to use /claimflags in the vine-growth section, comment minecraft:vine.
             "minecraft:vine",
+            "minecraft:cave_vines",
+            "minecraft:cave_air",
+            "minecraft:glow_lichen",
             "minecraft:grass_block",
             "minecraft:mycelium",
             "minecraft:twisting_vines",
@@ -465,8 +477,11 @@ GriefDefender {
             "minecraft:fall",
             "minecraft:freeze"
         ]
-        entity-riding=[]
+        entity-riding=[
+            "minecraft:horse",
+        ]
         entity-spawn=[
+    # minecraft:armor_stand Some plugins like Hologram/Damage Indicators plugins generate these entities, which end up generating lag in GD because there are too many events to check, if you use it, comment.
             "minecraft:armor_stand",
             "minecraft:axolotl",
             "minecraft:bat",
@@ -495,14 +510,15 @@ GriefDefender {
             "minecraft:snowball",
             "minecraft:trident",
             "minecraft:xp_orb",
-            "minecraft:enderman",
             "spawnreason:village_defense"
         ]
         entity-teleport-from=[
-            "minecraft:plugin"
+    # If you use any teleport plugins that are giving you problems like elevator plugins, enable this.
+            #"minecraft:plugin"
         ]
         entity-teleport-to=[
-            "minecraft:plugin"
+    # If you use any teleport plugins that are giving you problems like elevator plugins, enable this.
+            #"minecraft:plugin"
         ]
         exit-claim=[
             "#minecraft:monster",
@@ -530,7 +546,17 @@ GriefDefender {
             "minecraft:ender_chest",
             "minecraft:enchanting_table"
         ]
-        interact-inventory-click=[]
+        interact-inventory-click=[
+            "minecraft:crafting",
+            "minecraft:crafting_table",
+            "minecraft:stonecutter",
+            "minecraft:grindstone",
+            "minecraft:smithing_table",
+            "minecraft:cartography_table",
+            "minecraft:loom",
+            "minecraft:ender_chest",
+            "minecraft:enchanting_table"
+        ]
         interact-item-primary=[]
         interact-item-secondary=[
             "minecraft:ender_pearl",

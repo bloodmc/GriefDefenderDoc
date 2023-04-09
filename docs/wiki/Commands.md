@@ -11,7 +11,7 @@ Arguments Key: \<required\> [optional]
 
 ### Claim Identifier  
 
-Many commands support the new argument `[identifier]` which is the claim id set by the claim owner.  If you do not want to be required to stand in a claim for a specific command, set the claim identifier using `/gd claim id <identifier>` then pass the identifier at the end of the command.  
+Many commands support the new argument [`[identifier]`](/wiki/basic/Claim-Management.html#claim-identifiers) which is the claim id set by the claim owner.  If you do not want to be required to stand in a claim for a specific command, set the claim identifier using `/gd claim id <identifier>` then pass the identifier at the end of the command.  
 If using an identifier for an admin claim, the format is `admin:<identifier>`     
 If using an identifier for wilderness, the format is `wilderness:<identifier>`  
 If using an identifier for another player, the format is `<playername>:<identifier>`  

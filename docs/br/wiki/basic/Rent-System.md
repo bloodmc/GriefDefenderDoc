@@ -6,7 +6,7 @@ icon: rent
 ---
 
 :::: danger O sistema de aluguel está sendo reformulado para uma versão futura.
-Se você estiver usando uma plataforma Bukkit, é recomendável usar RealEstate que se encontra no nosso discord ou [aqui](/br/hooks/RealEstate.html)
+Se você estiver usando uma plataforma Bukkit, é recomendável usar [RealEstate](/br/hooks/RealEstate.html) que se encontra no nosso discord
 ::::
 
 ![Sistema de aluguel](https://media.discordapp.net/attachments/709505646457913426/709992848963141632/2019-12-18_22.png)

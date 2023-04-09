@@ -41,7 +41,7 @@ features:
 
   - title: Mod Support
     icon: tools
-    details: Designed from the ground up for mods. Forge/Hybrid/Sponge.
+    details: Designed from the ground up for mods. Forge/Fabric/Hybrid/Sponge.
     link: /mods/
 
   - title: Taxes. Rental and sales
