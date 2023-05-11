@@ -293,9 +293,10 @@ Once GD is installed and running, see [Claim Management](/wiki/basic/Claim-Manag
 
 ### Options
 :warning: It is VERY IMPORTANT you follow [`options.conf`](/wiki/basic/Options.html) before proceeding. :warning:  
-:warning: All persisted options(meta) set in LuckPerms will take priority over defaults in [`options.conf`](/wiki/basic/Options.html) :warning:
+:warning: All persisted options [meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta) set in LuckPerms will take priority over defaults in [`options.conf`](/wiki/basic/Options.html) :warning:
 
-If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in [`options.conf`](/wiki/basic/Options.html).  All default option settings are applied at server startup.  
+If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in [`options.conf`](/wiki/basic/Options.html#global-options).  
+All default option settings are applied at server startup.  
 
 [Paper]: https://papermc.io/downloads
 [Spigot]: https://www.spigotmc.org/wiki/buildtools/

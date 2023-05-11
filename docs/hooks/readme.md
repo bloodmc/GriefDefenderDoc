@@ -18,7 +18,7 @@ You can also check in the [Global.config](/wiki/advanced/Global-Config.html) con
 
 * [BlueMap]: [ [Github](https://github.com/BlueMap-Minecraft/BlueMap) | [Spigot](https://www.spigotmc.org/resources/83557/) | [Ore](https://ore.spongepowered.org/Blue/BlueMap) ]
 * [Dynmap]: [ [Github](https://github.com/webbukkit/dynmap) | [Spigot](https://www.spigotmc.org/resources/274/) ]
-* [Pl3xMap]: [ [Github](https://github.com/pl3xgaming/Pl3xMap) ]
+* [Pl3xMap]: [ [Github](https://github.com/pl3xgaming/Pl3xMap) | [Spigot](https://www.spigotmc.org/resources/109697/) | [Modrinth](https://modrinth.com/plugin/pl3xmap)]
 
 ## Shop
 

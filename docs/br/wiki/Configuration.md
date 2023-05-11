@@ -277,7 +277,7 @@ vanilla-fallback-values {
 ```
 
 
-### Armazenamento  
+### Storage (Armazenamento)  
 
-O arquivo `storage.conf` controla as configurações de armazenamento do GriefDefender.
+O arquivo [`storage.conf`](/br/wiki/basic/Storage.html) controla as configurações de armazenamento do GriefDefender.
 

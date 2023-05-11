@@ -5,6 +5,11 @@ category: storage
 icon: database
 ---
 
+::: tip Links Úteis
+[Permissões](/br/wiki/Permissions.html)/[LuckPerms](/br/wiki/Permissions.html#luckperms)  
+Onde é armazenado os arquivos [Tipos](/br/wiki/basic/Claim-Management.html#tipos-1)/[GRUPO-REIVINDICAÇÃO](/br/wiki/basic/Claim-Management.html#tipos-2)  
+:::
+
 #### Opções possíveis
 **Bancos de dados remotos** - exigem conexão com um servidor de armazenamento  
 
@@ -12,12 +17,12 @@ icon: database
 * MariaDB (preferido sobre MySQL)  
 * PostgreSQL  
 
-#### Arquivos de texto legível e editável  
+#### Arquivo de texto legível e editável  
 
-* HOCON  
+* [HOCON](/br/wiki/#hocon)  
 A opção padrão é ``storage-method=hocon`` 
 
-**Configurando o banco de dados**  
+**Configurando o banco de dados** 
 
 #### Endereço do banco de dados   
 O endereço e a porta do banco de dados. Use o formato `host:porta`.  
@@ -25,7 +30,7 @@ Porta padrão do MySQL e MariaDB é 3306
 `address=localhost`
 
 #### Sempre ler e escrever no banco de dados  
-:warning: *Essa opção pode ter impactos no desempenho dependendo da maquina hospedada.*    
+:warning: *Essa opção pode ter impactos no desempenho dependendo da máquina hospedada.*    
 Ative esta configuração para forçar o GD a sempre ler e gravar no banco de dados.  
 Ative esta configuração se precisar compartilhar dados de banco de dados em vários servidores.  
 Isso desabilitará o cache de dados de reivindicação integrado do GD, portanto, o desempenho dependerá do banco de dados.  
