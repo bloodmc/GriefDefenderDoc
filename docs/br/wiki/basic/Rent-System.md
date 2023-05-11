@@ -15,6 +15,10 @@ Este novo sistema permitirá que você configure seu pedido de aluguel e ganhe a
 
 ## Como habilitar
 
+:::: danger Quem tem o RealEstate habilitado
+Caso você utilize o [RealEstate](/br/hooks/RealEstate.html) mantenha esse desabilitado para evitar problemas.
+::::
+
 Abra seu arquivo [global.conf](/br/wiki/advanced/Global-Config.html) e na seção economia, você encontrará as seguintes linhas:
 
 ```

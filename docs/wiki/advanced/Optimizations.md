@@ -7,6 +7,10 @@ icon: optimization-timer
 
 GriefDefender provides built-in control for nearly every action in your minecraft world. However, attempting to control too much can sometimes cause resource issues depending on your server load. The solution to this issue is to make use of built-in optimization configuration found in [`global.conf`](/wiki/advanced/Global-Config.html) and by learning how to use [blacklists](/wiki/Configuration.html#blacklist). 
 
+## Use Aikar's Flags
+GriefDefender was designed to utilize resources in the best way, so it is highly recommended that you use Aikar's flags.  
+See [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags) 
+
 ### Global Optimization config
 
 Below is a snippet of the [optimization](/wiki/advanced/Global-Config.html#optimization) settings you can find in GD's [`global.conf`](/wiki/advanced/Global-Config.html)
@@ -682,7 +686,3 @@ flag-control {
 - Other problems are being cataloged
 ```
 </details>
-
-## Use Aikar's Flags
-GriefDefender was designed to utilize resources in the best way, so it is highly recommended that you use Aikar's flags.  
-See [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)  

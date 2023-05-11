@@ -20,7 +20,7 @@ export const br = sidebar({
 		  collapsible: true,
 		  children: ["Claim-Management", "Claim-Types", "Custom-Alias-Creation", 
 		  "GUI", "Bedrock", "Flag-Definitions-GUI", "Options", "PvP",
-		  "Tags", "Tax-System", "Trust-System", "Rent-System"],
+		  "Tags", "Tax-System", "Trust-System", "Rent-System", "Storage"],
 		},
 		{
 		  text: "Uso avançado",

@@ -9,7 +9,11 @@ O Griefdefender fornece controle interno para quase todas as ações do seu mund
 
 ### Configuração de otimização global
 
-Abaixo está um trecho das configurações de [otimização](/br/wiki/advanced/Global-Config.html#otimizacao) que você pode encontrar no GriefDefender na parte do [`global.conf`](/br/wiki/advanced/Global-Config.html)
+Abaixo está um trecho das configurações de [otimização](/br/wiki/advanced/Global-Config.html#otimizacao) que você pode encontrar no GriefDefender na parte do [`global.conf`](/br/wiki/advanced/Global-Config.html) 
+
+## Utilize Aikar's Flags
+O GriefDefender foi projetado para utilizar os recursos da melhor maneira, por isso é altamente recomendável que você use as bandeiras do Aikar.  
+Veja em [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)  
 
 <details>
   <summary>Configuração de otimização global</summary>
@@ -682,7 +686,3 @@ flag-control {
 - Outros problemas estão sendo catalogados
 ```
 </details>
-
-## Utilize Aikar's Flags
-O GriefDefender foi projetado para utilizar os recursos da melhor maneira, por isso é altamente recomendável que você use as bandeiras do Aikar.  
-Veja em [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)  
