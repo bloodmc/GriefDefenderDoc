@@ -6,7 +6,7 @@ category: faq
 
 ## 1. How do allow all users to create claims for free?**
 
-Set `requires-claim-blocks` to `false` in `global.conf` within claim `creation-settings` section.  
+Set `requires-claim-blocks` to `false` in  [`global.conf`](/wiki/advanced/Global-Config.html) within claim `creation-settings` section.  
 
 ## 2. How do I transfer a claim to another player for free?**
 

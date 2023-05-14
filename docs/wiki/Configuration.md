@@ -279,5 +279,5 @@ vanilla-fallback-values {
 
 ### Storage  
 
-The [`storage.conf`](/wiki/basic/Storage.html)` file controls GriefDefender storage settings.  
+The [`storage.conf`](/wiki/basic/Storage.html) file controls GriefDefender storage settings.  
 

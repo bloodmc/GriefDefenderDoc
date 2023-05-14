@@ -26,7 +26,7 @@ config/
     │   │   └── 由其他方式引入的世界(如 Mod/数据包...)
     │   └── 
     ├── flags.conf 阅览 标签页面
-    ├──[global.conf](/wiki/advanced/Global-Config.html)阅览 作用域
+    ├──global.conf 阅览 作用域
     └── options.conf 阅览 选项页面
 ```
 worlds/ --- [作用域](#作用域)

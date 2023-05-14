@@ -19,7 +19,7 @@ See https://github.com/lucko/LuckPerms/wiki/Prefixes,-Suffixes-&-Meta#meta for m
 2. Remove GriefPrevention jar from plugins
 3. Start the server to generate GriefDefender configs.
 4. Stop server
-5. Edit global.conf under ./plugins/GriefDefender/
+5. Edit [`global.conf`](/wiki/advanced/Global-Config.html) under ./plugins/GriefDefender/
 6. Locate section
 ```
 # List of migrators that convert old or other protection data into the current GD claim data format.
@@ -45,17 +45,17 @@ migrator {
 8. Start Server  
 If done properly, GriefDefender will migrate all data from `plugins/GriefPreventionData` to `plugins/GriefDefender`.  
 Migration output should appear in console as it is migrating.  
-9. Disable the migrator in `global.conf` 
+9. Disable the migrator in [`global.conf`](/wiki/advanced/Global-Config.html)  
 
 ## Sponge
 
-:warning: The migrator will not copy the `global.conf` as there have been many changes to it in GriefDefender. You will have to manually copy the settings you want from GP's `global.conf` to GD.
+:warning: The migrator will not copy the [`global.conf`](/wiki/advanced/Global-Config.html) as there have been many changes to it in GriefDefender. You will have to manually copy the settings you want from GP's [`global.conf`](/wiki/advanced/Global-Config.html) to GD.
 
 1. Add GriefDefender jar to mods or plugins folder
 2. Remove GriefPrevention jar from mods/plugins folder
 3. Start the server to generate GriefDefender configs.
 4. Stop server
-5. Edit global.conf under ./plugins/GriefDefender/
+5. Edit [`global.conf`](/wiki/advanced/Global-Config.html) under ./plugins/GriefDefender/
 6. Locate section
 ```
 # List of migrators that convert old or other protection data into the current GD claim data format.

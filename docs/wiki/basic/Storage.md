@@ -1,40 +1,47 @@
 ---
-title: Banco de Dados
+title: Storage
 tag: storage
 category: storage
 icon: database
 ---
 
-#### Opções possíveis
-**Bancos de dados remotos** - exigem conexão com um servidor de armazenamento  
+::: tip Useful links
+[Permissions](/wiki/Permissions.html)/[LuckPerms](/wiki/Permissions.html#luckperms)  
+Where are the files stored  
+[Types](/wiki/basic/Claim-Management.html#types-1)/[Claim Groups](/wiki/basic/Claim-Management.html#typos-2)  
+:::
+
+### Possible Options
+**Remote Databases** - require connection to a storage server  
 
 * MySQL  
-* MariaDB (preferido sobre MySQL)  
+* MariaDB (preferred over MySQL)  
 * PostgreSQL  
 
-#### Arquivos de texto legíveis e editáveis  
+### Readable and editable text files  
 
-* HOCON  
-A opção padrão é ``storage-method=hocon`` 
+* [HOCON](/wiki/#hocon)  
+The default option is `storage-method=hocon`  
 
-**Configurando o banco de dados**  
+**Configuring the database**  
 
-#### Endereço do banco de dados   
-O endereço e a porta do banco de dados. Use o formato `host:porta`.  
-Porta padrão do MySQL e MariaDB é 3306  
+### Database Address   
+The database address and port. Use format `host:porta`.  
+MySQL and MariaDB default port to 3306 
 `address=localhost`
 
-#### Sempre ler e escrever no banco de dados  
-:warning: Ative esta configuração para forçar o GD a sempre ler e gravar no banco de dados.  
-Ative esta configuração se precisar compartilhar dados de banco de dados em vários servidores.  
-Isso desabilitará o cache de dados de reivindicação integrado do GD, portanto, o desempenho dependerá do banco de dados.  
-`always-read-write-db=false`
+### Always read and write to the database  
+:warning: *This option may have performance impacts depending on the hosted machine.*    
+Enable this setting to force GD to always read and write from database.  
+Enable this setting if you need to share database data across multiple servers.  
+This will disable GD's built-in claim data cache so performance will depend on database.  
+`always-read-write-db=false`  
 
-#### Nome do banco de dados  
+### Database Name  
 `database-name=griefdefender`
 
-#### Hikari para MySQL  
-hikari                                           | Valor padrão |
+### Hikari for MySQL  
+hikari                                           | Default Value |
 -------------------------------------------------|---------------|
 alwaysSendSetIsolation | false | 
 cacheCallableStmts | true |
@@ -49,22 +56,22 @@ rewriteBatchedStatements | true |
 useLocalSessionState | true |
 useServerPrepStmts | true |
 
-#### Senha do banco de dados  
-Coloque a senha do seu banco de dados.  
-`password="SuaSenha"`
+### Database Password   
+Enter your database password.  
+`password="YourPassword"`
 
-#### Configurações do pool para o banco de dados  
-pool-settings                                           | Valor padrão | Valor padrão |
+### Pool settings for the database  
+pool-settings                                           | Default value | Valor padrão |
 -------------------------------------------------|---------------|---------------|
-connection-timeout | 5000 |O número máximo de milissegundos para aguardar uma conexão antes do tempo limite. |
+connection-timeout | 5000 | The maximum number of milliseconds to wait for a connection before timeout. |
 keepalive-time | 0  |  |
-max-lifetime   | 30 |  O tempo de vida máximo de uma conexão em milissegundos. |
-max-pool-size  | 10 | O tamanho máximo do pool. (Padrão: 10) |
-min-idle       | 10 | O número mínimo de conexões ociosas. (Padrão: 10) |
+max-lifetime   | 30 |  The maximum lifetime of a connection in milliseconds. |
+max-pool-size  | 10 | The maximum pool size. (Default: 10) |
+min-idle       | 10 | The minimum number of idle connections. (Default: 10) |
 
-O prefixo para todas as tabelas SQL GriefDefender. (Padrão: 'gd_')  
+The prefix for all GriefDefender SQL tables. (Default: 'gd_')  
 `table-prefix="gd_"`  
 
-#### Nome do Banco de dados  
-O nome de usuário do banco de dados. (Padrão: root)  
+### Database Name  
+The database username. (Default: root)  
 `username=root`  

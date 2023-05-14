@@ -246,7 +246,7 @@ config/
 
 #### lista negra  
 
-O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu `blacklist.conf` e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
+O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu [`blacklist.conf`](/br/wiki/Configuration.html#blacklist-lista-negra) e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
 
 Veja a [Lista negra](/br/wiki/Configuration.html#blacklist-lista-negra) para obter mais informações sobre como configurar.
 
@@ -256,7 +256,7 @@ Veja a [Lista negra](/br/wiki/Configuration.html#blacklist-lista-negra) para obt
 :warning: Se especificar a porta em `address` envolvido com aspas ou GD não será carregado. :warning:  
 
 Se você deseja alternar para o armazenamento de banco de dados, faça o seguinte
-1. Abra o arquivo `storage.conf`  
+1. Abra o arquivo [`storage.conf`](/br/wiki/basic/Storage.html)  
 2. Altere `storage-method` para um formato de banco de dados suportado.
 Por exemplo, se você quiser usar mysql, você deve definir este valor para `mysql`.
 3. Defina `address` para o endereço e porta do banco de dados. Certifique-se de usar aspas ao especificar uma porta. Ex. `"localhost:1000"`  

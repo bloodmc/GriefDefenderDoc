@@ -11,7 +11,7 @@ This new system will allow you to set your claim up for rent and earn some money
 
 # How to enable it
 
-Open your global.conf file and under economy section, you will find the following lines:
+Open your [`global.conf`](/wiki/advanced/Global-Config.html) file and under economy section, you will find the following lines:
 
 ```
         # The specific hour in day to attempt to get owed claim rent balances from delinquent renters. Note: This uses military time and accepts values between 0-23. Default: 0

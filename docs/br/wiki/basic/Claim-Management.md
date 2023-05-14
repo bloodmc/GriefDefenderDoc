@@ -17,8 +17,8 @@ Um jogador pode criar reivindicações em dois tipos de modos.
 
 ### 2D 
 
-Em modo 2D cria uma reivindicação por `AREA` (X e Z). Ele cria a reivindicação da rocha-mãe (bedrock) (ponto mais baixo do bloco) ao céu (máximo Y nível 320) no mundo em que você está. Este modo é o mais amigável, pois não exige que o jogador se preocupe com a altura do bloco ou outros jogadores reivindicando acima ou abaixo de suas reivindicações. Por padrão, todos os jogadores usam esse modo como padrão, a menos que a meta-opção `griefdefender.create-mode` esteja definida para um modo diferente.
-Veja https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#claim-options para obter mais informações sobre opções de reivindicação. 
+Em modo 2D cria uma reivindicação por `AREA` (X e Z). Ele cria a reivindicação da rocha-mãe (bedrock) (ponto mais baixo do bloco) ao céu (máximo Y nível 320) no mundo em que você está. Este modo é o mais amigável, pois não exige que o jogador se preocupe com a altura do bloco ou outros jogadores reivindicando acima ou abaixo de suas reivindicações. Por padrão, todos os jogadores usam esse modo como padrão, a menos que a meta-opção `griefdefender.create-mode` esteja definida para um modo diferente.  
+Veja [Opções](/br/wiki/basic/Options.html#opcoes-de-reivindicacao) para obter mais informações sobre opções de reivindicação.  
 
 ### 3D
 

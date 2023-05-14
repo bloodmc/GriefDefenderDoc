@@ -235,7 +235,7 @@ config/
 
 #### Blacklist  
 
-GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your `blacklist.conf` and remove any id's you do not want to blacklist for your server.  
+GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your [`blacklist.conf`](/wiki/Configuration.html#blacklist) and remove any id's you do not want to blacklist for your server.  
 
 See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to configure.  
 
@@ -245,7 +245,7 @@ See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to conf
 :warning: If specifying port in `address` surround with quotes or GD will not load. :warning:  
 
 If you want to switch to database storage, do the following
-1. Open `storage.conf` file.  
+1. Open [`storage.conf`](/wiki/basic/Storage.html) file.  
 2. Change `storage-method` value to a supported database format.  
 For example, if you want to use mysql, you would set this value to `mysql`.
 3. Set `address` to DB address and port. Make sure to use quotes if specifying a port. Ex. `"localhost:1000"`  
