@@ -90,11 +90,12 @@ Veja em [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)
 
 ### Contribuições de otimização
 
-Abaixo, você encontrará configurações contribuídas pelo usuário para servidores que trabalharam fortemente para melhorar o desempenho do GD para suas necessidades
+Abaixo, você encontrará configurações contribuídas pelos usuários para servidores que trabalharam fortemente para melhorar o desempenho do GD para suas necessidades
 
 ### IMPORTANTE
 :::: warning Atenção
-Essas configurações são ajustadas para servidores individuais e podem não funcionar na sua.É altamente recomendável testar essas configurações antes de usá-las em seu servidor principal.
+Essas configurações são ajustadas para servidores individuais e podem não funcionar na sua.É altamente recomendável testar essas configurações antes de usá-las em seu servidor principal.  
+O sistema de blacklist suporta [`tags`](/br/wiki/basic/Tags.html)  
 :::: 
 
 ## Dino's Otimização
@@ -361,15 +362,24 @@ Essas otimizações tiveram foco em um servidor que tenta ao máximo chegar pró
 ```
 GriefDefender {
     # A global list of entity damage sources that are ignored in events by default.
+    # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
     entity-damage-source-blacklist=[
+        "block_explosion",
         contact,
         cramming,
+        "dragon_breath",
         drowning,
+        dryout,
         "falling_block",
-        flyintowall,
+        fall,
+        fire,
+        "fly_into_wall",
+        lava,
+        melting,
         "fire_tick",
         "hot_floor",
         poison,
+        "sonic_boom",
         starvation,
         suffocation,
         suicide,
@@ -535,6 +545,7 @@ GriefDefender {
         explosion-block=[]
         explosion-entity=[]
         interact-block-primary=[]
+        # Evitar adicionar qualquer coisa em interact-block-secondary, pois cria vulnerabilidades na proteção.
         interact-block-secondary=[]
         interact-entity-primary=[]
         interact-entity-secondary=[
