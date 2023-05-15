@@ -1,7 +1,7 @@
 ---
 title: Claim Management
 category: Claim
-tags: management
+tag: management
 icon: operate
 ---
 

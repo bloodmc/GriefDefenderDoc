@@ -164,7 +164,7 @@ Veja [Configuração global](/br/wiki/advanced/Global-Config.html)
 
 ### GUI (Interface) 
 
-O arquivo `gui.conf` é responsável por todas as configurações relacionadas ao bate-papo e Interface de Inventário.
+O arquivo [`gui.conf`](/br/wiki/basic/GUI.html) é responsável por todas as configurações relacionadas ao [bate-papo](/br/wiki/basic/GUI.html#Bate-Papo) e [Interface de Inventário](/br/wiki/basic/GUI.html#Inventario).
 
 #### Seção de bate-papo
 
@@ -277,7 +277,7 @@ vanilla-fallback-values {
 ```
 
 
-### Armazenamento  
+### Storage (Armazenamento)  
 
-O arquivo `storage.conf` controla as configurações de armazenamento do GriefDefender.
+O arquivo [`storage.conf`](/br/wiki/basic/Storage.html) controla as configurações de armazenamento do GriefDefender.
 

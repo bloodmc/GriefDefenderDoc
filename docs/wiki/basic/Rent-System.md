@@ -15,6 +15,10 @@ This new system will allow you to set your claim up for rent and earn some money
 
 ## How to enable it
 
+:::: danger Who has RealEstate enabled
+If you use [RealEstate](/hooks/RealEstate.html) keep this disabled to avoid problems.
+::::
+
 Open your [global.conf](/wiki/advanced/Global-Config.html) file and under economy section, you will find the following lines:
 
 ```

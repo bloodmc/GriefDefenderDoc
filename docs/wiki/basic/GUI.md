@@ -154,5 +154,5 @@ The available icons work as follows
 `DEBUG` - Debugs the current claim user is in.  
 Note: The debug icon is for admins only.  
 
-All inventory GUI configuration can be found in the `gui.conf` file within `./plugins/GriefDefender/` folder.  
+All inventory GUI configuration can be found in the [`gui.conf`](/wiki/basic/GUI.html) file within `./plugins/GriefDefender/` folder.  
 See [Inventory section](/wiki/Configuration.html#gui) for more information.  

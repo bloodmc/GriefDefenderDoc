@@ -19,7 +19,7 @@ export const br = sidebar({
 		  prefix: "/br/wiki/basic/",
 		  collapsible: true,
 		  children: ["Claim-Management", "Claim-Types", "Custom-Alias-Creation", 
-		  "GUI", "Bedrock", "Flag-Definitions-GUI", "Options", "PvP",
+		  "GUI", "Bedrock", "Flag-Definitions-GUI", "Options", "Storage", "PvP",
 		  "Tags", "Tax-System", "Trust-System", "Rent-System"],
 		},
 		{

@@ -1,6 +1,6 @@
 ---
 title: 安装
-tags: 安装
+tag: 安装
 category: 配置
 icon: start
 ---

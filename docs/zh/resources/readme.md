@@ -1,6 +1,6 @@
 ---
 title: Resources
-tags: Index
+tag: Index
 ---
 
 :::: info

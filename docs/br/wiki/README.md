@@ -5,16 +5,12 @@ category: info
 icon: type
 ---
 
-:::: warning This document translation is provided by the community
-Thanks to community translator, we have the documentation written in serval languages.
-But as you know, documents are time-sensitive, we cannot guarantee that the translated 
-documents will be kept up-to-date. So please refer to this document **with thanks to the translator** 
-and always follow the official document when you get into trouble!
+:::: warning A tradução deste documento é fornecida pela comunidade
+Graças ao tradutor da comunidade, temos a documentação escrita em linguagens servais.
+Mas, como você sabe, os documentos são sensíveis ao tempo, não podemos garantir que a tradução
+os documentos serão mantidos atualizados. Portanto, consulte este documento **com agradecimentos ao tradutor** 
+e sempre siga o documento oficial quando tiver problemas!
 :::: 
-
-:::: info Revisão e Tradução para o Português-Brasil 
-Estamos traduzindo e revisando a Wiki e a tradução do plugin, para manter a coerencia entre ambas traduções.
-::::
 
 ## Começando
 
@@ -246,7 +242,7 @@ config/
 
 #### lista negra  
 
-O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu `blacklist.conf` e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
+O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu [`blacklist.conf`](/br/wiki/Configuration.html#blacklist-lista-negra) e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
 
 Veja a [Lista negra](/br/wiki/Configuration.html#blacklist-lista-negra) para obter mais informações sobre como configurar.
 
@@ -256,7 +252,7 @@ Veja a [Lista negra](/br/wiki/Configuration.html#blacklist-lista-negra) para obt
 :warning: Se especificar a porta em `address` envolvido com aspas ou GD não será carregado. :warning:  
 
 Se você deseja alternar para o armazenamento de banco de dados, faça o seguinte
-1. Abra o arquivo `storage.conf`  
+1. Abra o arquivo [`storage.conf`](/br/wiki/basic/Storage.html)  
 2. Altere `storage-method` para um formato de banco de dados suportado.
 Por exemplo, se você quiser usar mysql, você deve definir este valor para `mysql`.
 3. Defina `address` para o endereço e porta do banco de dados. Certifique-se de usar aspas ao especificar uma porta. Ex. `"localhost:1000"`  
@@ -271,7 +267,7 @@ Por exemplo, se você quiser usar mysql, você deve definir este valor para `mys
 :warning: Antes de ativar o modelo econômico, certifique-se de testar em um servidor de TESTE para garantir que todas as configurações estejam funcionando corretamente. :warning:
 
 Por padrão, o GD permite que os jogadores acumulem blocos de reivindicações para serem usados na criação de reivindicações.
-No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em [`global.conf`](/br/wiki/advanced/Global-Config.html).  
+No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em [`global.conf`](/br/wiki/advanced/Global-Config.html#economy).  
 Com `economy-mode` ativado, todas as criações de reivindicação solicitarão aos jogadores uma confirmação do custo da reivindicação. Uma vez confirmado, o dinheiro será retirado da conta do jogador. 
 Se você quiser ignorar essas confirmações, defina a permissão `griefdefender.user.claim.economy.create-confirm` para `false`.
 
@@ -304,9 +300,10 @@ Depois que o GD estiver instalado e em execução, veja [Gestão de Reivindicaç
 
 ### Opções
 :warning: É MUITO IMPORTANTE que você veja [`options.conf`](/br/wiki/basic/Options.html) antes de prosseguir. :warning:  
-:warning: Todas as opções persistentes (meta) definidas em LuckPerms terão prioridade sobre os padrões em [`options.conf`](/br/wiki/basic/Options.html) :warning:
+:warning: Todas as opções persistentes [meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta) definidas em LuckPerms terão prioridade sobre os padrões em [`options.conf`](/br/wiki/basic/Options.html) :warning:
 
-Se você quiser definir configurações como com quantos blocos iniciais um jogador pode começar, limites de criação de reivindicação, etc., então você deve começar ajustando as opções padrão do GD encontradas em [`options.conf`](/br/wiki/basic/Options.html). Todas as configurações de opção padrão são aplicadas na inicialização do servidor.
+Se você quiser definir configurações como com quantos blocos iniciais um jogador pode começar, limites de criação de reivindicação, etc... então você deve começar ajustando as opções padrão do GD encontradas em [`options.conf`](br/wiki/basic/Options.html#opcoes-globais).  
+Todas as configurações de opção padrão são aplicadas na inicialização do servidor.
 
 [Paper]: https://papermc.io/downloads
 [Spigot]: https://www.spigotmc.org/wiki/buildtools/

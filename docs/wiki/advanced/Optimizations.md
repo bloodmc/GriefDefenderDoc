@@ -7,6 +7,10 @@ icon: optimization-timer
 
 GriefDefender provides built-in control for nearly every action in your minecraft world. However, attempting to control too much can sometimes cause resource issues depending on your server load. The solution to this issue is to make use of built-in optimization configuration found in [`global.conf`](/wiki/advanced/Global-Config.html) and by learning how to use [blacklists](/wiki/Configuration.html#blacklist). 
 
+## Use Aikar's Flags
+GriefDefender was designed to utilize resources in the best way, so it is highly recommended that you use Aikar's flags.  
+See [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags) 
+
 ### Global Optimization config
 
 Below is a snippet of the [optimization](/wiki/advanced/Global-Config.html#optimization) settings you can find in GD's [`global.conf`](/wiki/advanced/Global-Config.html)
@@ -90,7 +94,8 @@ Below you will find user contributed configs for servers that have worked heavil
 
 ### IMPORTANT
 :::: warning Warning
-These settings are tweaked for individual servers and may not work on yours. It is HIGHLY recommended to test these configs before using them in production.
+These settings are tweaked for individual servers and may not work on yours. It is HIGHLY recommended to test these configs before using them in production.  
+The blacklist system supports [`tags`](/wiki/basic/Tags.html)  
 :::: 
 
 ## Dino's Optimization
@@ -100,21 +105,30 @@ These settings are tweaked for individual servers and may not work on yours. It 
 
 ```
 blacklist {
-        # A global list of entity damage sources that are ignored in events by default.
-        entity-damage-source-blacklist=[
-            contact,
-            cramming,
-            drowning,
-            "falling_block",
-            flyintowall,
-            "fire_tick",
-            "hot_floor",
-            poison,
-            starvation,
-            suffocation,
-            suicide,
-            void
-        ]
+    # A global list of entity damage sources that are ignored in events by default.
+    # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+    entity-damage-source-blacklist=[
+        "block_explosion",
+        contact,
+        cramming,
+        "dragon_breath",
+        drowning,
+        dryout,
+        "falling_block",
+        fall,
+        fire,
+        "fly_into_wall",
+        lava,
+        melting,
+        "fire_tick",
+        "hot_floor",
+        poison,
+        "sonic_boom",
+        starvation,
+        suffocation,
+        suicide,
+        void
+    ]
         # A list of id's ignored by flags.
         flag-id-blacklist {
             block-break=[]
@@ -531,6 +545,7 @@ GriefDefender {
         explosion-block=[]
         explosion-entity=[]
         interact-block-primary=[]
+        # Evite adicionar qualquer coisa em interact-block-secondary, pois cria vulnerabilidades na proteção.
         interact-block-secondary=[]
         interact-entity-primary=[]
         interact-entity-secondary=[
@@ -682,7 +697,3 @@ flag-control {
 - Other problems are being cataloged
 ```
 </details>
-
-## Use Aikar's Flags
-GriefDefender was designed to utilize resources in the best way, so it is highly recommended that you use Aikar's flags.  
-See [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)  

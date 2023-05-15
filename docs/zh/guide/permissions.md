@@ -1,6 +1,6 @@
 ---
 title: 权限
-tags: 信息
+tag: 信息
 category: 信息
 icon: node-tree
 ---

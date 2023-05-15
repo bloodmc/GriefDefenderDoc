@@ -125,7 +125,7 @@ This column contains the User or Group that the event is attributed to. eg; `def
 
 #### `Contexts`
 
-This column contains any contexts present when an event was record. eg; `used_item` when using an item on something, or tags etc. See [Contexts Page](https://github.com/bloodmc/GriefDefender/wiki/Contexts) for more details.
+This column contains any contexts present when an event was record. eg; `used_item` when using an item on something, or [`tags`](/wiki/basic/Tags.html) etc. See [Contexts Page](https://github.com/bloodmc/GriefDefender/wiki/Contexts) for more details.
 
 #### `Result`
 

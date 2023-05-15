@@ -47,7 +47,7 @@ migrator {
 ```
 7a. If migrating from GP file-format, set classic to `true`  
 OR  
-:warning: This step requires `storage.conf` to be configured for GD database.  
+:warning: This step requires [`storage.conf`](/wiki/basic/Storage.html) to be configured for GD database.  
 7b. If migrating from GP database, configure `classic-database` section.  
 8. Start Server  
 If done properly, GriefDefender will migrate all data from `plugins/GriefPreventionData` to `plugins/GriefDefender`.  

@@ -14,23 +14,23 @@ Para usar o WorldEdit CUI, é necessário ter instalado no cliente e no servidor
 ## Cliente 
 
 #### 1.19+
-* WECUI (Versão Fabric/Quilt) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3A73407)
+* WECUI (Versão Fabric/Quilt) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files)
 
 #### 1.18+ 
-* WECUI (Versão Fabric) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a73250)
-* WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a73250)
+* WECUI (Versão Fabric) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files)
+* WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files)
 
 #### 1.17+
- * WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a73242)
+ * WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files)
 
 #### 1.16+
-* WECUI (Versão Fabric) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/all?filter-game-version=1738749986%3a70886)
-* WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files/all?filter-game-version=1738749986%3a70886)
+* WECUI (Versão Fabric) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files)
+* WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files)
 
 #### 1.14+
 * WECUI (Versão Fabric) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
-#### 1.12 and under
+#### 1.12 e abaixo
 * Liteloader Vanilla - [Download](https://www.liteloader.com/download)  
 Liteloader Forge - [Download](https://jenkins.liteloader.com/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar)  
 WECUI (Versão LiteLoader) - [Download](https://minecraft.curseforge.com/projects/worldeditcui)  

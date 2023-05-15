@@ -153,5 +153,5 @@ Os ícones disponíveis funcionam da seguinte forma
 `Depurar` - Depura o usuário da reivindicação atual.
 Observação: o ícone de depuração é apenas para administradores.
 
-Toda a configuração da Interface do inventário pode ser encontrada no arquivo `gui.conf` dentro da pasta `./plugins/GriefDefender/`.
+Toda a configuração da Interface do inventário pode ser encontrada no arquivo [`gui.conf`](/br/wiki/basic/GUI.html) dentro da pasta `./plugins/GriefDefender/`.
 Consulte [Seção de inventário](/br/wiki/Configuration.html#secao-de-inventario) para obter mais informações.

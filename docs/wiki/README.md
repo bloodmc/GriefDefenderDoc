@@ -235,7 +235,7 @@ config/
 
 #### Blacklist  
 
-GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your `blacklist.conf` and remove any id's you do not want to blacklist for your server.  
+GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your [`blacklist.conf`](/wiki/Configuration.html#blacklist) and remove any id's you do not want to blacklist for your server.  
 
 See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to configure.  
 
@@ -245,7 +245,7 @@ See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to conf
 :warning: If specifying port in `address` surround with quotes or GD will not load. :warning:  
 
 If you want to switch to database storage, do the following
-1. Open `storage.conf` file.  
+1. Open [`storage.conf`](/wiki/basic/Storage.html) file.  
 2. Change `storage-method` value to a supported database format.  
 For example, if you want to use mysql, you would set this value to `mysql`.
 3. Set `address` to DB address and port. Make sure to use quotes if specifying a port. Ex. `"localhost:1000"`  
@@ -260,7 +260,7 @@ For example, if you want to use mysql, you would set this value to `mysql`.
 :warning: Before enabling economy mode, make sure to test on a TEST server to make sure all settings are working properly. :warning:
 
 By default, GD allows players to accrue claim blocks to be used for claim creation.  
-However, If you want all claims created to use economy directly instead of claim blocks then set `economy-mode` to `true` in [`global.conf`](/wiki/advanced/Global-Config.html).  
+However, If you want all claims created to use economy directly instead of claim blocks then set `economy-mode` to `true` in [`global.conf`](/wiki/advanced/Global-Config.html#economy).  
 With `economy-mode` turned on, all claim creations will prompt players with a confirmation of claim cost. Once confirmed, the funds will be taken from the player account.  
 If you want to bypass these confirmations, set the permission `griefdefender.user.claim.economy.create-confirm` to `false`.
 
@@ -293,9 +293,10 @@ Once GD is installed and running, see [Claim Management](/wiki/basic/Claim-Manag
 
 ### Options
 :warning: It is VERY IMPORTANT you follow [`options.conf`](/wiki/basic/Options.html) before proceeding. :warning:  
-:warning: All persisted options(meta) set in LuckPerms will take priority over defaults in [`options.conf`](/wiki/basic/Options.html) :warning:
+:warning: All persisted options [meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta) set in LuckPerms will take priority over defaults in [`options.conf`](/wiki/basic/Options.html) :warning:
 
-If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in [`options.conf`](/wiki/basic/Options.html).  All default option settings are applied at server startup.  
+If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in [`options.conf`](/wiki/basic/Options.html#global-options).  
+All default option settings are applied at server startup.  
 
 [Paper]: https://papermc.io/downloads
 [Spigot]: https://www.spigotmc.org/wiki/buildtools/

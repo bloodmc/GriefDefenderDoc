@@ -77,7 +77,7 @@ Redefine uma reivindicação para bandeiras padrões, os padrões podem ser edit
 
 As bandeiras podem ser aplicadas a Jogadores, Grupos com ou sem um contexto de reivindicação específico. Eles também podem ser aplicados diretamente a todas as Reivindicações Básicas|Selvagens|Admin. Mais exemplos podem ser encontrados no jogo, apenas execute `/cf` e passe o mouse sobre as diferentes bandeiras!
 
-### Example 1
+#### Example 1
 
 Para evitar que qualquer fonte quebre os blocos de lã de cal, na reivindicação em que você está.
 `/cf block-break minecraft:wool.5 false`
@@ -85,37 +85,37 @@ Para evitar que qualquer fonte quebre os blocos de lã de cal, na reivindicaçã
 Especificar nenhum modid sempre será o padrão para minecraft. O formato para blocos é `modid:blockid.meta`, se meta sn não for especificado 0 for usado.
 
 
-### Example 2
+#### Example 2
 
 Para permitir que o Pixelmon Pokeballs interaja com qualquer bloco em todas as reivindicações básicas, deve ser executado em uma reivindicação básica.
 
 `/cf projectile-impact-block any true source=pixelmon:occupiedpokeball override=basic`
 
-### Example 3
+#### Example 3
 
 Para impedir que apenas os jogadores usem portais que estão no grupo "preso" em todas as reivindicações de administrador.Tem que executar em pé em uma reivindicação de administrador.
 
 `/cfg Jailed portal-use any false source=minecraft:player override=admin`
 
-### Example 4
+#### Example 4
 
 Para impedir que um jogador chamado "Notch" deva à direita de qualquer cama, na reivindicação em que você está de pé.
 
 `/cfp notch interact-block-secondary minecraft:bed false`
 
-### Example 5
+#### Example 5
 Para impedir que o comando de Pixelmon '/shop select' seja executado, na reivindicação em que você está de pé.
 
 `/cf command-execute pixelmon:shop[select] false`
 
-### Example 6
+#### Example 6
 Para evitar um item específico a ser clicado com o botão direito do mouse em uma entidade.
 
 `/cf interact-entity-secondary entity_id false used_item=<item_id>`
 
 Nota: Use `interact-entity-primary` para o clique esquerdo
 
-### Example 7
+#### Example 7
 Para evitar um item específico a ser clicado com o botão direito do mouse em um bloco.
 
 `/cf interact-block-secondary block_id false used_item=<item_id>`
@@ -124,7 +124,7 @@ Nota: Use `interact-block-primary` para o clique esquerdo
 
 ## Usando com LuckPerms
 
-### Example 1
+#### Example 1
 Desativar danos ao animal em todas as reivindicações básicas do grupo `starters`
 
 GD:  
@@ -199,7 +199,7 @@ O GD fornece alguns tipos de grupo de contexto que podem ser usados para especif
 - #pet
 - #vehicle
 
-### Example 1
+#### Example 1
 
 Para impedir que todos os monstros inseram reivindicações de administrador por padrão.
 `/cf enter-claim #monster false default=admin`  

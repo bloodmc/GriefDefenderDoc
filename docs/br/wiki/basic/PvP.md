@@ -26,7 +26,7 @@ Nota: Faça esta alteração se você APENAS quiser que os administradores possa
 
 1. Execute o comando `/cfp <jogador> entity-damage player false source=player`
 
-### Disable PvP for a specific group of users
+### Desabilitar PvP para um grupo específico de usuários
 
 1. Execute o comando `/cfg <grupo> entity-damage player false source=player` 
 

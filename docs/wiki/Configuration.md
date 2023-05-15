@@ -164,7 +164,7 @@ See [Global Config](/wiki/advanced/Global-Config.html)
 
 ### Gui  
 
-The `gui.conf` file is responsible for all settings related to Chat and Inventory GUI.  
+The [`gui.conf`](/wiki/basic/GUI.html) file is responsible for all settings related to [Chat](/wiki/basic/GUI.html#Chat) and [Inventory](/wiki/basic/GUI.html#Inventory) GUI.  
 
 #### Chat section  
 
@@ -279,5 +279,5 @@ vanilla-fallback-values {
 
 ### Storage  
 
-The `storage.conf` file controls GriefDefender storage settings.  
+The [`storage.conf`](/wiki/basic/Storage.html) file controls GriefDefender storage settings.  
 
