@@ -5,7 +5,7 @@ category: claim
 icon: trust
 ---
 
-### IMPORTANT
+### IMPORTANTE
 :::: warning Aviso
 O trust NÃO é herdada por subdivisões com herdar ativado. Se um proprietário de reivindicação quiser confiar (trust) em um jogador em todas as reivindicações, incluindo subdivisões, o comando `/trustall` deverá ser usado.
 ::::
@@ -32,17 +32,17 @@ Concede a um jogador acesso à(s) sua(s) reivindicação(ões)
 
 Concede a um grupo acesso às suas reivindicações
 
-### Remove Trust Player
+### Remover Trust de um jogador
 **Command**: `/gd trust player <jogador> none`  
 
 Remove o acesso de um jogador a todas as suas reivindicações.
 
-### Remover grupo do trust
+### Remover trust de um grupo
 **Command**: `/gd trust group <grupo> none`  
 
 Remove o acesso de um grupo a todas as suas reivindicações.
 
-## List Trusted (Lista de confiança)
+## Lista de jogadores com trust
 **Command**: `/trustlist` 
 
 Lista os jogadores atualmente confiáveis e o tipo de trust que ele tem.
