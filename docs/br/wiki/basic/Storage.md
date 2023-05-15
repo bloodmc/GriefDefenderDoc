@@ -61,7 +61,7 @@ Coloque a senha do seu banco de dados.
 `password="SuaSenha"`
 
 ### Configurações do pool para o banco de dados  
-pool-settings                                           | Valor padrão | Valor padrão |
+pool-settings                                           | Valor padrão | Descrição |
 -------------------------------------------------|---------------|---------------|
 connection-timeout | 5000 |O número máximo de milissegundos para aguardar uma conexão antes do tempo limite. |
 keepalive-time | 0  |  |

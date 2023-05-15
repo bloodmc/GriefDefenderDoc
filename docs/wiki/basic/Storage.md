@@ -61,7 +61,7 @@ Enter your database password.
 `password="YourPassword"`
 
 ### Pool settings for the database  
-pool-settings                                           | Default value | Valor padrão |
+pool-settings                                           | Default value | Description |
 -------------------------------------------------|---------------|---------------|
 connection-timeout | 5000 | The maximum number of milliseconds to wait for a connection before timeout. |
 keepalive-time | 0  |  |

@@ -5,16 +5,12 @@ category: info
 icon: type
 ---
 
-:::: warning This document translation is provided by the community
-Thanks to community translator, we have the documentation written in serval languages.
-But as you know, documents are time-sensitive, we cannot guarantee that the translated 
-documents will be kept up-to-date. So please refer to this document **with thanks to the translator** 
-and always follow the official document when you get into trouble!
+:::: warning A tradução deste documento é fornecida pela comunidade
+Graças ao tradutor da comunidade, temos a documentação escrita em linguagens servais.
+Mas, como você sabe, os documentos são sensíveis ao tempo, não podemos garantir que a tradução
+os documentos serão mantidos atualizados. Portanto, consulte este documento **com agradecimentos ao tradutor** 
+e sempre siga o documento oficial quando tiver problemas!
 :::: 
-
-:::: info Revisão e Tradução para o Português-Brasil 
-Estamos traduzindo e revisando a Wiki e a tradução do plugin, para manter a coerencia entre ambas traduções.
-::::
 
 ## Começando
 
@@ -271,7 +267,7 @@ Por exemplo, se você quiser usar mysql, você deve definir este valor para `mys
 :warning: Antes de ativar o modelo econômico, certifique-se de testar em um servidor de TESTE para garantir que todas as configurações estejam funcionando corretamente. :warning:
 
 Por padrão, o GD permite que os jogadores acumulem blocos de reivindicações para serem usados na criação de reivindicações.
-No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em [`global.conf`](/br/wiki/advanced/Global-Config.html).  
+No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em [`global.conf`](/br/wiki/advanced/Global-Config.html#economy).  
 Com `economy-mode` ativado, todas as criações de reivindicação solicitarão aos jogadores uma confirmação do custo da reivindicação. Uma vez confirmado, o dinheiro será retirado da conta do jogador. 
 Se você quiser ignorar essas confirmações, defina a permissão `griefdefender.user.claim.economy.create-confirm` para `false`.
 
