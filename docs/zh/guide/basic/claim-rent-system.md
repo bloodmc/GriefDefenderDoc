@@ -1,7 +1,7 @@
 ---
 title: Rent System
 category: Economy
-tags: rent
+tag: rent
 icon: view
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: WECUI
-tags: plugin
+tag: plugin
 category: Dev
 ---
 

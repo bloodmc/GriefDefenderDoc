@@ -1,6 +1,6 @@
 ---
 title: Dynmap
-tags: plugin
+tag: plugin
 category: Dev
 ---
 In order to use GriefDefender's Dynmap provider, you must have GDHooks installed.  

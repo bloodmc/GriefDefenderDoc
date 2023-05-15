@@ -76,7 +76,7 @@ Resets a claim to flag defaults, the defaults can be edited in the configs.
 
 Flags can be applied to Players, Groups with or without a specific claim context. They can also be applied to all Basic|Wilderness|Admin Claims directly. More examples can be found in-game, just run `/cf` and hover over the different flags!
 
-### Example 1
+#### Example 1
 
 To prevent any source from breaking lime wool blocks, in the claim you are standing in.  
 `/cf block-break minecraft:wool.5 false`
@@ -84,37 +84,37 @@ To prevent any source from breaking lime wool blocks, in the claim you are stand
 Specifying no modid will always default to minecraft. The format for blocks is `modid:blockid.meta`, if meta sn't specified 0 is used.
 
 
-### Example 2
+#### Example 2
 
 To allow Pixelmon Pokeballs to interact with any blocks in all basic claims, has to be run while standing in a basic claim.
 
 `/cf projectile-impact-block any true source=pixelmon:occupiedpokeball override=basic`
 
-### Example 3
+#### Example 3
 
 To prevent only players from using portals that are in the group "Jailed" in all admin claims. Has to execute while standing in an admin claim.
 
 `/cfg Jailed portal-use any false source=minecraft:player override=admin`
 
-### Example 4
+#### Example 4
 
 To prevent a player called "notch" from rightlicking any bed, in the claim you are standing in.
 
 `/cfp notch interact-block-secondary minecraft:bed false`
 
-### Example 5
+#### Example 5
 To prevent pixelmon's command '/shop select' from being run, in the claim you are standing in.
 
 `/cf command-execute pixelmon:shop[select] false`
 
-### Example 6
+#### Example 6
 To prevent a specific item to be right-clicked on an entity.
 
 `/cf interact-entity-secondary entity_id false used_item=<item_id>`
 
 Note: Use `interact-entity-primary` for left-click
 
-### Example 7
+#### Example 7
 To prevent a specific item to be right-clicked on a block.
 
 `/cf interact-block-secondary block_id false used_item=<item_id>`
@@ -123,7 +123,7 @@ Note: Use `interact-block-primary` for left-click
 
 ## Usage with LuckPerms
 
-### Example 1
+#### Example 1
 Disable animal damage in all basic claim's for group `starters`
 
 GD:  
@@ -198,7 +198,7 @@ GD provides a few context group types that can be used to specify all of a type 
 - #pet
 - #vehicle
 
-### Example 1
+#### Example 1
 
 To prevent all monsters from entering admin claims by default.  
 `/cf enter-claim #monster false default=admin`  

@@ -1,6 +1,6 @@
 ---
 title: Placeholder
-tags: plugin
+tag: plugin
 category: Dev
 ---
 

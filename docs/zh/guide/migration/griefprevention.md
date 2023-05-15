@@ -1,6 +1,6 @@
 ---
 title: GriefPrevention
-tags: Merge
+tag: Merge
 category: Migration
 ---
 

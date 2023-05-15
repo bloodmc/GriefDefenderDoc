@@ -1,7 +1,7 @@
 ---
 title: 标签组系统
 category: Tag
-tags: QOL
+tag: QOL
 icon: list
 ---
 
