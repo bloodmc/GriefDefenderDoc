@@ -58,6 +58,7 @@ Você também pode verificar em [Global.conf](/br/wiki/advanced/Global-Config.ht
 * [Slimefun]: [ [Github](https://github.com/Slimefun/Slimefun4/releases) ]
 * [VoteParty]: [ [Spigot](https://www.spigotmc.org/resources/987/) ]
 * [EliteMobs]: [ [Spigot](https://www.spigotmc.org/resources/40090/) | [Github](https://github.com/MagmaGuy/EliteMobs) ]
+* [[ItemsAdder](https://spigot.devs.beer/itemsadder/)]: [ [Premium](https://www.spigotmc.org/resources/73355/) ]
 * [FurnitureLib]: [ [Spigot](https://www.spigotmc.org/resources/9368/) | [Github](https://github.com/Ste3et/FurnitureLib) ]
 * [MMOItems]: [ [Pago](https://www.spigotmc.org/resources/39267/) | [Gitlab](https://gitlab.com/phoenix-dvpmt/mmoitems) ]
 * [[McMMO](https://mcmmo.org/)]: [ [Spigot](https://www.spigotmc.org/resources/64348/) | [Github](https://github.com/mcMMO-Dev/mcMMO) ]
@@ -84,6 +85,7 @@ Você também pode verificar em [Global.conf](/br/wiki/advanced/Global-Config.ht
 
 
 ## Variados
+* [Anti Block Climbing Glitch]: [ [Spigot](https://www.spigotmc.org/resources/108935/) | [Github](https://github.com/fernet1911/AntiBlockClimbingGlitch) ]
 * [RoyaleEconomy]: [ [Polymart](https://polymart.org/resource/royaleeconomy-1-8-1-17.113) ]
 * [BanFromClaim]: [ [Spigot](https://www.spigotmc.org/resources/70897/) | [Github](https://github.com/Baktus79/BanFromClaim) ] - Bane/Chuta jogadores da reivindicação.
 * [CombatLogX]: [ [Spigot](https://www.spigotmc.org/resources/31689/) | [Github](https://github.com/SirBlobman/CombatLogX/blob/main/expansion/compatibility/GriefDefender/src/main/java/combatlogx/expansion/compatibility/region/grief/defender/GriefDefenderRegionHandler.java) ] - Respeite as definições de bandeira do GriefDefender

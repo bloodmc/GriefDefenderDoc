@@ -5,6 +5,6 @@ module.exports = [
 		prefix: "/faq/",
 		collapsible: false,
 		children: ["", "Claim-Management", "Flag-Definitions", 
-		"Options", "Permissions"],
+		"Options", "Permissions", "plugin-comp"],
 	  },
 ];
