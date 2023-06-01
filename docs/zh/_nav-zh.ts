@@ -11,7 +11,7 @@ export const zh = navbar([
     icon: "support",
     children: [
 	  { text: "Patreon", link: "https://www.patreon.com/bloodmc" },
-      { text: "Spigot", link: "https://www.spigotmc.org/resources/griefdefender.68900/" }
+      { text: "Spigot", link: "https://www.spigotmc.org/resources/68900/" }
 	]
   },
 ]);
