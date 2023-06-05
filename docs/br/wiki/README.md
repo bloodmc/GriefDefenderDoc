@@ -120,7 +120,7 @@ Nota: Todas as seções de configuração são classificadas automaticamente em 
 #### Notepad++ Realce de sintaxe
 
 1. Copie o xml abaixo `Hocon NPP lang` em um arquivo chamado `npp-lang-hocon.xml`
-2. Abra Notepad++.
+2. Abra [Notepad++](https://notepad-plus-plus.org/).
 3. Clique em Linguagem > Linguagem definida pelo usuário…
 4. Na parte superior, clique em Importar.
 5. Encontre o arquivo e abra-o.

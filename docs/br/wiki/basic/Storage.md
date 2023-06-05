@@ -1,5 +1,5 @@
 ---
-title: Banco de Dados
+title: Armazenamento
 tag: storage
 category: storage
 icon: database
@@ -17,6 +17,7 @@ Onde é armazenado os arquivos
 * MySQL  
 * MariaDB (preferido sobre MySQL)  
 * PostgreSQL  
+* SQLite  
 
 ### Arquivo de texto legível e editável  
 

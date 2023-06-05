@@ -20,67 +20,67 @@ Veja em [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)
 
 ```
     optimization {
-    # Whether to process player claim tool actions async for performance. (Default: true)
-    # Note: If you encounter any async thread issues, disable this setting.
+    # Se as ações da ferramenta de reivindicação do jogador devem ser processadas de forma assíncrona para desempenho. (Padrão: verdadeiro)
+    # Observação: se você encontrar algum problema de encadeamento assíncrono, desative essa configuração.
     async-claim-tool-actions=true
-    # Whether to process player claim visuals async for performance. (Default: true)
-    # Note: If you encounter any async thread issues, disable this setting.
+    # Se os visuais de reivindicação do jogador devem ser processados de forma assíncrona para desempenho. (Padrão: verdadeiro)
+    # Observação: se você encontrar algum problema de encadeamento assíncrono, desative essa configuração.
     async-player-claim-visuals=true
-    # Controls whether to ignore item drops from block sources.
-    # Note: This is only triggered when a player breaks a block.
+    # Controla se deve ignorar quedas de itens de fontes de bloco.
+    # Nota: Isso só é acionado quando um jogador quebra um bloco.
     block-item-drops=true
-    # Controls the amount of time, in seconds, for the permission cache of all entity damage actions in world. If the cache is accessed before expiration then the time is reset.
-    # Note: Setting this too high may result in wrong entity damage permission results.
+    # Controla a quantidade de tempo, em segundos, para o cache de permissão de todas as ações de dano de entidade no mundo. Se o cache for acessado antes da expiração, o tempo será redefinido.
+    # Observação: Definir um valor muito alto pode resultar em resultados de permissão de dano de entidade incorretos.
     cache-entity-damage-expiration=5
-    # Controls the amount of time, in seconds, for the permission lookup cache of all actions in world. If the cache is accessed before expiration then the time is reset.
-    # Note: This cache will occur after special caches such as entity damage, explosions, and physics.
-    # Note: Setting this too high may result in players not seeing proper results with their actions.
+    # Controla a quantidade de tempo, em segundos, para o cache de pesquisa de permissão de todas as ações no mundo. Se o cache for acessado antes da expiração, o tempo será redefinido.
+    # Nota: Este cache ocorrerá após caches especiais, como dano de entidade, explosões e física.
+    # Nota: Definir muito alto pode fazer com que os jogadores não vejam os resultados adequados com suas ações.
     cache-permission-lookup-expiration=3
-    # Controls the amount of time, in seconds, for the permission cache of all block physic changes in world.
-    # Note: Blocks such as redstone will usually cache longer due to the repeated calls made.
-    # Note: Setting this too high may result in players not being tracked properly during block changes.
+    # Controla a quantidade de tempo, em segundos, para o cache de permissão de todas as alterações físicas do bloco no mundo.
+    # Nota: Blocos como redstone geralmente armazenam em cache por mais tempo devido às chamadas repetidas feitas.
+    # Nota: Definir um valor muito alto pode fazer com que os jogadores não sejam rastreados corretamente durante as mudanças de bloco.
     cache-physics-tracking-expiration=5
-    # Controls whether dispener item spawns are ignored.
+    # Controla se os spawns de itens dispensadores são ignorados.
     dispenser-item-spawns=true
-    # Controls whether entity damage events that contain both a source/target living passive entity, such as two animals fighting, are ignored.
+    # Controla se os eventos de dano de entidade que contêm uma entidade passiva viva de origem/alvo, como dois animais lutando, são ignorados.
     entity-damage-living-passive=true
-    # Controls whether entity damage events that contain both a source/target monster are ignored.
+    # Controla se os eventos de dano de entidade que contêm um monstro de origem/alvo são ignorados.
     entity-damage-monster=true
-    # Controls whether entity damage events that contain a monster and other entity, except players, are ignored.
+    # Controla se os eventos de dano de entidade que contêm um monstro e outra entidade, exceto jogadores, são ignorados.
     entity-damage-monster-other=true
-    # Controls whether entity damage source or block that target a living passive are ignored.
+    # Controla se a fonte de dano de entidade ou bloco que tem como alvo um passivo vivo são ignorados.
     entity-damage-source-living-passive=true
-    # Controls whether entity damage source or block that target a monster are ignored.
+    # Controla se a fonte de dano de entidade ou bloco que tem como alvo um monstro são ignorados.
     entity-damage-source-monster=true
-    # Controls whether an entity interacting with a block is ignored.
+    # Controla se uma entidade interagindo com um bloco é ignorada.
     entity-interact-block=true
-    # Controls whether entity item pickups made by non-players are ignored.
+    # Controla se as coletas de itens de entidade feitas por não-jogadores são ignoradas.
     entity-item-pickup-non-player=true
-    # Controls whether non-player falls are ignored.
+    # Controla se as quedas de não-jogadores são ignoradas.
     fall-non-player=true
-    # Controls whether monster attacks against a player are ignored.
-    # Note: This does not include explosion damage.
-    # Note: If you need to prevent damage from monsters in claims then this should remain false.
+    # Controla se os ataques de monstros contra um jogador são ignorados.
+    # Nota: Isso não inclui dano de explosão.
+    # Nota: Se você precisa evitar dano de monstros em reivindicações, isso deve permanecer falso.
     monster-player-damage=false
-    # Controls whether player attacks against a monster are ignored.
-    # Note: This does not include explosion damage.
+    # Controla se os ataques do jogador contra um monstro são ignorados.
+    # Nota: Isso não inclui dano de explosão.
     player-monster-damage=true
-    # Controls whether ambient spawns, such as bats, are ignored in wilderness.
-    # Note: If you want to control aquatic spawns in wilderness, set this to false.
+    # Controla se os spawns do ambiente, como morcegos, são ignorados na selva.
+    # Nota: Se você deseja controlar os spawns aquáticos em regiões selvagens, defina como false.
     wilderness-ambient-spawns=true
-    # Controls whether animal spawns, such as pigs, are ignored in wilderness.
-    # Note: If you want to control animal spawns in wilderness, set this to false.
+    # Controla se as crias de animais, como porcos, são ignoradas na selva.
+    # Nota: Se você deseja controlar a desova de animais na natureza, defina como falso.
     wilderness-animal-spawns=true
-    # Controls whether aquatic spawns, such as squids, are ignored in wilderness.
-    # Note: If you want to control aquatic spawns in wilderness, set this to false.
+    # Controla se os spawns aquáticos, como lulas, são ignorados na selva.
+    # Nota: Se você deseja controlar os spawns aquáticos em regiões selvagens, defina como false.
     wilderness-aquatic-spawns=true
-    # Controls whether liquid flow is ignored in wilderness.
-    # Note: If you want to control liquid flow in wilderness, set this to false.
+    # Controla se o fluxo de líquido é ignorado no deserto.
+    # Nota: Se você deseja controlar o fluxo de líquido em áreas selvagens, defina como falso.
     wilderness-liquid-flow=true
-    # Controls whether monster spawns, such as creepers, are ignored in wilderness.
-    # Note: If you want to control monster spawns in wilderness, set this to false.
+    # Controla se os spawns de monstros, como creepers, são ignorados na selva.
+    # Nota: Se você deseja controlar a geração de monstros na natureza, defina como falso.
     wilderness-monster-spawns=true
-    # Controls whether experience orbs are ignored when dropped.
+    # Controla se os orbes de experiência são ignorados quando descartados.
     xp-orb-drop=true
     }
 ```
@@ -361,7 +361,7 @@ Essas otimizações tiveram foco em um servidor que tenta ao máximo chegar pró
 
 ```
 GriefDefender {
-    # A global list of entity damage sources that are ignored in events by default.
+    # Uma lista global de fontes de dano de entidade que são ignoradas em eventos por padrão.
     # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
     entity-damage-source-blacklist=[
         "block_explosion",
@@ -385,7 +385,7 @@ GriefDefender {
         suicide,
         void
     ]
-    # A list of id's ignored by flags.
+    # Uma lista de id's ignorados por bandeiras.
     flag-id-blacklist {
         block-break=[]
         block-grow=[
@@ -429,6 +429,7 @@ GriefDefender {
             "minecraft:podzol",
             "minecraft:sweet_berry_bush",
             "minecraft:air"
+    # Caso queira bloquear o crescimento das colheitas pelo /claimflags, comente daqui para cima.
         ]
         block-modify=[
     # Os minerios de redstone mudam de estado para criar o brilho.
@@ -599,11 +600,11 @@ GriefDefender {
             "minecraft:ender_pearl"
         ]
     }
-    # A global list of source id's that are ignored by events. 
-    # Note: This only affects events where the id specified is the source.
+    # Uma lista global de IDs de origem que são ignorados por eventos.
+    # Nota: Isso afeta apenas eventos em que o id especificado é a origem.
     global-source=[]
-    # A global list of target id's that are ignored by events. 
-    # Note: This only affects events where the id specified is the target.
+    # Uma lista global de IDs de destino que são ignorados por eventos.
+    # Nota: Isso afeta apenas eventos em que o id especificado é o destino.
     global-target=[]
 }
 ```

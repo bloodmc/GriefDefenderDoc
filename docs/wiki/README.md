@@ -113,7 +113,7 @@ Note: All configuration sections are automatically sorted alphabetically. This c
 #### Notepad++ Syntax highlighting  
 
 1. Copy xml below from `Hocon NPP lang` into a file called `npp-lang-hocon.xml`
-2. Open Notepad++.
+2. Open [Notepad++](https://notepad-plus-plus.org/).
 3. Click Language > Define your language…
 4. At the top, click Import.
 5. Find the file and open it.  

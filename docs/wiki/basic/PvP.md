@@ -1,5 +1,5 @@
 ---
-title: PVP
+title: PvP
 tag: misc
 category: Misc
 icon: swords

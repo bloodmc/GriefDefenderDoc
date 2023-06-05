@@ -107,27 +107,19 @@ The blacklist system supports [`tags`](/wiki/basic/Tags.html)
 blacklist {
     # A global list of entity damage sources that are ignored in events by default.
     # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
-    entity-damage-source-blacklist=[
-        "block_explosion",
-        contact,
-        cramming,
-        "dragon_breath",
-        drowning,
-        dryout,
-        "falling_block",
-        fall,
-        fire,
-        "fly_into_wall",
-        lava,
-        melting,
-        "fire_tick",
-        "hot_floor",
-        poison,
-        "sonic_boom",
-        starvation,
-        suffocation,
-        suicide,
-        void
+        entity-damage-source-blacklist=[
+            contact,
+            cramming,
+            drowning,
+            "falling_block",
+            flyintowall,
+            "fire_tick",
+            "hot_floor",
+            poison,
+            starvation,
+            suffocation,
+            suicide,
+            void
     ]
         # A list of id's ignored by flags.
         flag-id-blacklist {
@@ -371,15 +363,24 @@ These optimizations were focused on a server that tries its best to get close to
 ```
 GriefDefender {
     # A global list of entity damage sources that are ignored in events by default.
+    # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
     entity-damage-source-blacklist=[
+        "block_explosion",
         contact,
         cramming,
+        "dragon_breath",
         drowning,
+        dryout,
         "falling_block",
-        flyintowall,
+        fall,
+        fire,
+        "fly_into_wall",
+        lava,
+        melting,
         "fire_tick",
         "hot_floor",
         poison,
+        "sonic_boom",
         starvation,
         suffocation,
         suicide,
@@ -429,6 +430,7 @@ GriefDefender {
             "minecraft:podzol",
             "minecraft:sweet_berry_bush",
             "minecraft:air"
+    # If you want to block crop growth via /claimflags, comment above.
         ]
         block-modify=[
     # Redstone ores change state to create the glow.
@@ -545,7 +547,7 @@ GriefDefender {
         explosion-block=[]
         explosion-entity=[]
         interact-block-primary=[]
-        # Evite adicionar qualquer coisa em interact-block-secondary, pois cria vulnerabilidades na proteção.
+        # Avoid adding anything in interact-block-secondary as it creates vulnerabilities in the protection.
         interact-block-secondary=[]
         interact-entity-primary=[]
         interact-entity-secondary=[
