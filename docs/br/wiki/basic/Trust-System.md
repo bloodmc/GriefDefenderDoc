@@ -19,14 +19,14 @@ Existem quatro tipos diferentes de trust: Residents, Accessors, Builders, Contai
 | `<grupo>` | O grupo em que confiar. Nota: Se você quiser confiar em todos, use `public`. |
 | `<tipo>`  | O tipo de confiança [none, resident, accessor, builder, container, manager]. Nota: Se você deseja remover a confiança, use `none`. <br>*None*: `Remove o acesso de um jogador/grupo à sua reivindicação`<br>*Accessor*: `Concede a um jogador/grupo acesso para interagir com todos os blocos, exceto inventário`<br>*Resident*: `Concede a um jogador/grupo a capacidade de criar reivindicações, inclui confiança de acesso.`<br>*Container*: `Concede a um jogador/grupo acesso para interagir com todos os blocos, incluindo inventário, inclui confiança de acesso.`<br>*Builder*: `Concede a um jogador/grupo acesso a tudo acima, exceto Residente, incluindo a capacidade de colocar e quebrar blocos`<br>*Manager*: `Concede a um jogador/grupo acesso a todos os itens acima, incluindo a capacidade de modificar a reivindicação`  |
 
-### Trust Player
+### Trust Jogador
 **Command**: `/gd trust player <jogador> <tipo>`  
 **Alias**: `trust`  
 **Example**: `/gd trust player Kratos basic`  
 
 Concede a um jogador acesso à(s) sua(s) reivindicação(ões)
 
-### Trust Group
+### Trust Grupo
 **Command**: `/gd trust group <grupo> <tipo>`  
 **Alias**: `trust`  
 

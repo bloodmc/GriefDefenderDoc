@@ -247,7 +247,7 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.admin.flag-defaults | Permite editar padrões de bandeiras |
 | griefdefender.admin.flag-overrides | Permite editar sobreposição de bandeira |
 
-## outras-opções
+## Outras-Opções
 | Node de permissão | Descrição |
 | --------- | ----------- |
 | griefdefender.admin.claim.command.option.group.base | Permite definir opções de grupo em reivindicações |
