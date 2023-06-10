@@ -13,6 +13,9 @@ Para usar o WorldEdit CUI, é necessário ter instalado no cliente e no servidor
 
 ## Cliente 
 
+#### 1.20+
+* WECUI (Versão Fabric/Quilt) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files)
+
 #### 1.19+
 * WECUI (Versão Fabric/Quilt) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files)
 
@@ -26,9 +29,6 @@ Para usar o WorldEdit CUI, é necessário ter instalado no cliente e no servidor
 #### 1.16+
 * WECUI (Versão Fabric) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files)
 * WECUI (Versão Forge) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files)
-
-#### 1.14+
-* WECUI (Versão Fabric) - [Download](https://github.com/mikroskeem/WorldEditCUI#installation) 
 
 #### 1.12 e abaixo
 * Liteloader Vanilla - [Download](https://www.liteloader.com/download)  

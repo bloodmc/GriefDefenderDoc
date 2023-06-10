@@ -13,3 +13,5 @@ A seguir estão as páginas de perguntas frequentes com seus respectivos tópico
 [Opções - Em construção](./Options)  
 
 [Permissões](./Permissions)
+
+[Resolve problemas com outros plugins](./plugin-comp)

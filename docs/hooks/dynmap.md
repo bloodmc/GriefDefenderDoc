@@ -11,7 +11,7 @@ In order to use GriefDefender's [Dynmap](https://www.spigotmc.org/resources/274/
 
 ## Bukkit
  
-* Dynmap - [Download](https://www.spigotmc.org/resources/dynmap.274/) 
+* Dynmap - [Download](https://www.spigotmc.org/resources/274/) 
 
 <details>
   <summary>Sample Dynmap Configuration</summary>

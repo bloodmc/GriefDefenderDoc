@@ -31,7 +31,7 @@ features:
 
   - title: Database support
     icon: database
-    details: Supports MySQL，Maria DB， PostgreSQL and SQLite.
+    details: Supports MySQL，MariaDB, PostgreSQL and SQLite.
     link: /wiki/#database
 
   - title: Interactive UI

@@ -13,3 +13,5 @@ The following are FAQ pages for their respective topics
 [Options - WIP](./Options)  
 
 [Permissions](./Permissions)
+
+[Resolves issues with other plugins](./plugin-comp)

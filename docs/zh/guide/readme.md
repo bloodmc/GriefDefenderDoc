@@ -19,5 +19,5 @@ GriefDefender 是一个功能丰富的插件，直截了当的翻译并不能让
 <br>[GriefDefender 服主交流群](https://jq.qq.com/?_wv=1027&k=thsjkzxK) --- 向他人询问问题，或给予别人帮助
 - 官方链接
 <br>[GitHub](https://github.com/bloodmc/GriefDefender)
-<br>[SpigotMC](https://www.spigotmc.org/resources/griefdefender.68900/)
+<br>[SpigotMC](https://www.spigotmc.org/resources/68900/)
 <br>[GriefDefender 文档源码](https://github.com/bloodmc/GriefDefenderDoc)

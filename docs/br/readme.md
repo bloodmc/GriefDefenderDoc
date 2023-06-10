@@ -31,7 +31,7 @@ features:
 
   - title: Suporte a banco de dados
     icon: database
-    details: Suporta MySQL, Maria DB, PostgreSQL e SQLite.
+    details: Suporta MySQL, MariaDB, PostgreSQL e SQLite.
     link: /br/wiki/#banco-de-dados
 
   - title: IU interativa

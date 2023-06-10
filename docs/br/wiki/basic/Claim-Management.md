@@ -9,7 +9,12 @@ GriefDefender é um plugin que fornece funcionalidade de proteção de região d
 
 Todos os exemplos estão com os padrões no momento em que escrevo isso em mente.
 
-Para obter exemplos detalhados de como gerenciar certos aspectos de suas reivindicações, consulte a seção [Gerenciamento de reivindicações](/br/faq/Claim-Management.html) no [FAQ](/br/faq/)
+Para obter exemplos detalhados de como gerenciar certos aspectos de suas reivindicações, consulte a seção [Gerenciamento de reivindicações](/br/faq/Claim-Management.html) no [FAQ](/br/faq/)  
+[1. Como permitir que todos os jogadores criem reivindicações gratuitamente?](/br/faq/Claim-Management.html#_1-como-permitir-que-todos-os-jogadores-criem-reivindicacoes-gratuitamente)  
+[9. Como faço para impedir que um jogador execute um comando por exemplo sethome em uma reivindicação](/br/faq/Claim-Management.html#_9-como-faco-para-impedir-que-um-jogador-execute-um-comando-por-exemplo-sethome-em-uma-reivindicacao)  
+[10. Como permitir que meus administradores ignorem a proteção da reivindicação ?](/br/faq/Claim-Management.html#_10-como-permitir-que-meus-administradores-ignorem-a-protecao-da-reivindicacao)  
+[12. Como permito que os jogadores voem (fly) em suas próprias reivindicações?](/br/faq/Claim-Management.html#_12-como-permito-que-os-jogadores-voem-fly-em-suas-proprias-reivindicacoes)  
+[13. Como dou aos donos de reivindicações a capacidade de permitir que outros jogadores voem em suas reivindicações?](/br/faq/Claim-Management.html#_13-como-dou-aos-donos-de-reivindicacoes-a-capacidade-de-permitir-que-outros-jogadores-voem-em-suas-reivindicacoes)  
 
 ## Criação de Reivindicação
 

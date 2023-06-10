@@ -1,5 +1,5 @@
 ---
-title: Custom-Alias-Creation
+title: Custom Alias Creation
 tag: Misc
 category: misc
 icon: quill
@@ -9,7 +9,7 @@ icon: quill
 
 One of the multiple uses that you can implement in your server is creating alias commands that will enhance the ability and improve the use of these advanced options, making them more accessible for everyone with shorter commands.
 
-For this, you may need to install an alias plugin like [`CustomCommands`](https://www.spigotmc.org/resources/14363/)/[`MyCommand`](https://www.spigotmc.org/resources/22272/), or the `commands.yml` inside of the server folder. 
+For this, you may need to install an alias plugin like [`CustomCommands`](https://www.spigotmc.org/resources/14363/)/[`MyCommand`](https://www.spigotmc.org/resources/22272/), or the [`commands.yml`](https://bukkit.fandom.com/wiki/Commands.yml) inside of the server folder. 
 
 Here is one example of using the brand new fly-speed option. This example was developed using CMI alias system built-in, but as mentioned before, you can use any.
 

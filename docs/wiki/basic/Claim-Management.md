@@ -9,7 +9,13 @@ GriefDefender is a plugin that provides self-service region protection functiona
 
 All the examples are with the defaults at the time of writing this in mind.
 
-For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](/faq/Claim-Management.html)
+For detailed examples of how to manage certain aspects of your claim(s) see the **Claim Management** section on the [FAQ Page](/faq/Claim-Management.html)  
+[1. How do allow all users to create claims for free?](/faq/Claim-Management.html#_1-how-do-allow-all-users-to-create-claims-for-free)  
+[9. How do I stop a player from executing a command in a claim like sethome](/faq/Claim-Management.html#_9-how-do-i-stop-a-player-from-executing-a-command-in-a-claim-like-sethome)  
+[10. How do I allow my admins to bypass protection ?](/faq/Claim-Management.html#_10-how-do-i-allow-my-admins-to-bypass-protection)  
+[12. How do I allow players to fly in their own claims?](/faq/Claim-Management.html#_12-how-do-i-allow-players-to-fly-in-their-own-claims)  
+[13. How do I give claim owners the ability to allow other players to fly in their claims?](/faq/Claim-Management.html#_13-how-do-i-give-claim-owners-the-ability-to-allow-other-players-to-fly-in-their-claims)  
+
 
 ## Claim Creation
 

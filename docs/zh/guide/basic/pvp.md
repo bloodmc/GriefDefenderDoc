@@ -1,5 +1,5 @@
 ---
-title: PVP
+title: PvP
 category: Conf
 tag: PVP
 icon: group

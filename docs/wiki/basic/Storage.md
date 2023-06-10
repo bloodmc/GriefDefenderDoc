@@ -17,6 +17,7 @@ Where are the files stored
 * MySQL  
 * MariaDB (preferred over MySQL)  
 * PostgreSQL  
+* SQLite  
 
 ### Readable and editable text files  
 
@@ -26,7 +27,7 @@ The default option is `storage-method=hocon`
 **Configuring the database**  
 
 ### Database Address   
-The database address and port. Use format `host:porta`.  
+The database address and port. Use format `host:port`.  
 MySQL and MariaDB default port to 3306 
 `address=localhost`
 
