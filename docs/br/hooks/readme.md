@@ -58,7 +58,8 @@ Você também pode verificar em [Global.conf](/br/wiki/advanced/Global-Config.ht
 * [Slimefun]: [ [Github](https://github.com/Slimefun/Slimefun4/releases) ]
 * [VoteParty]: [ [Spigot](https://www.spigotmc.org/resources/987/) ]
 * [EliteMobs]: [ [Spigot](https://www.spigotmc.org/resources/40090/) | [Github](https://github.com/MagmaGuy/EliteMobs) ]
-* [[ItemsAdder](https://spigot.devs.beer/itemsadder/)]: [ [Premium](https://www.spigotmc.org/resources/73355/) ]
+* [[ItemsAdder](https://spigot.devs.beer/itemsadder/)]: [ [Premium](https://www.spigotmc.org/resources/73355/) ]  
+Nota: Qualquer bloco ou item criado por ItemsAdder deve aparecer como `itemsadder:<nome>`  
 * [FurnitureLib]: [ [Spigot](https://www.spigotmc.org/resources/9368/) | [Github](https://github.com/Ste3et/FurnitureLib) ]
 * [MMOItems]: [ [Pago](https://www.spigotmc.org/resources/39267/) | [Gitlab](https://gitlab.com/phoenix-dvpmt/mmoitems) ]
 * [[McMMO](https://mcmmo.org/)]: [ [Spigot](https://www.spigotmc.org/resources/64348/) | [Github](https://github.com/mcMMO-Dev/mcMMO) ]
