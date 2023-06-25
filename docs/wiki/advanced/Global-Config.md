@@ -34,7 +34,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Projectiles: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.3.2-DEV4
+Version based on release file: GriefDefender 2.3.9-DEV2
 <hr>
 
 # Claim
@@ -44,6 +44,7 @@ Version based on release file: GriefDefender 2.3.2-DEV4
 | auto-nature-restore | Whether survival claims will be automatically restored to nature when auto-deleted. | FALSE |
 | auto-schematic-restore | Whether survival claims will be automatically restored to its claim creation schematic on abandon/expiration. <br />Note: Enabling this feature will cause ALL newly created claims to automatically create a special schematic that will be used to restore claim on abandon/expiration.<br />Note: Enabling this feature will disable ability to resize claims.<br />Note: It is HIGHLY recommended to disable building in the wilderness before using this feature to avoid players exploiting.<br />Note: It is also recommended to ONLY use this feature in newly created worlds where there is no existing player data.<br />Note: This does NOT affect deletions. If admins want to restore back to original schematic, they can select '__restore__' by using /claimschematic command.| FALSE |
 | border-block-radius | Set claim border of specified radius (in blocks), centered on claim. If set to 1, adds an additional 1 block protected radius around claim. <br />Note: It is not recommended to set this value too high as performance can degrade due to deeper claim searches. | 0 |
+| child-inherit-trust | Whether children claims should inherit parent trust when inheritance is turned on. Default: False. | FALSE |
 | claim-block-task | Whether claim block task should run to accrue blocks for players. <br />Note: If in economy-mode, use setting 'use-claim-block-task' under economy category. <br />Note: To configure amount accrued, see 'blocks-accrued-per-hour' option at [Global Options](/wiki/basic/Options.html#global-options) | FALSE |
 | claim-block-task-move-threshold | The minimum threshold of movement (in blocks) required to receive accrued claim blocks. <br />Note: The claim block task runs every 5 minutes which is the time each player will get to move the required amount of blocks. | 0 |
 | claim-create-radius-limit | The radius limit for the /claimcreate command. | 256 |
@@ -141,7 +142,9 @@ Version based on release file: GriefDefender 2.3.2-DEV4
 |async-claim-tool-actions | Whether to process player claim tool actions async for performance. (Default: true) <br /> Note: If you encounter any async thread issues, disable this setting. | TRUE |
 | async-player-claim-visuals | Whether to process player claim visuals async for performance. (Default: true) <br /> Note: If you encounter any async thread issues, disable this setting. | TRUE |
 | block-item-drops | Controls whether to ignore item drops from block sources. <br /> Note: This is only triggered when a player breaks a block. | TRUE |
+| cache-db-player-claim-block-lookup-expiration | Controls the amount of time, in seconds, for the permission cache of all entity damage actions in world. If the cache is accessed before expiration then the time is reset. <br />Note: Setting this too high may result in wrong entity damage permission results. | 5 |
 cache-entity-damage-expiration | Controls the amount of time, in seconds, for the permission cache of all entity damage actions in world. If the cache is accessed before expiration then the time is reset. <br /> Note: Setting this too high may result in wrong entity damage permission results. | 5 |
+| cache-entity-spawn-expiration | Controls the amount of time, in seconds, for the permission lookup cache of all actions in world. If the cache is accessed before expiration then the time is reset. <br />Note: This cache will occur after special caches such as entity damage, explosions, and physics. <br />Note: Setting this too high may result in players not seeing proper results with their actions. | 5 |
 | cache-permission-lookup-expiration | Controls the amount of time, in seconds, for the permission lookup cache of all actions in world. If the cache is accessed before expiration then the time is reset. <br /> Note: This cache will occur after special caches such as entity damage, explosions, and physics. <br /> Note: Setting this too high may result in players not seeing proper results with their actions. | 3 |
 | cache-physics-tracking-expiration |  Controls the amount of time, in seconds, for the permission cache of all block physic changes in world. <br /> Note: Blocks such as redstone will usually cache longer due to the repeated calls made. <br /> Note: Setting this too high may result in players not being tracked properly during block changes. | 5 |
 | dispenser-item-spawns | Controls whether dispener item spawns are ignored. | TRUE |
@@ -228,7 +231,7 @@ Manages plugin providers that GD hooks into for extended functionality.
 | active-create-block-visual-time | The active time, in seconds, to keep a claim's create block visual shown to a player. <br />Note: This only applies during claim creation. <br />Note: If value is <= 0, GD will use the default value. | 180 |
 | client-visuals-per-tick | The amount of block visuals a client can receive per tick when showing/hiding claims. | 12 |
 | cuboid-level-visuals-2d | Whether to use cuboid visuals, in 2D claims, during inspection with owner min/max claim levels between 0 and 255 or 0 and 319 for MC 1.17+. <br />Note: WECUI visuals are not associated to this option. <br />Note: If enabled, this will send many block updates to players causing more client strain depending on size of claim. Use with caution. | FALSE |
-| fill-spacing | The space between each filler visual block. | 10 |
+| filler-spacing | The space between each filler visual block. | 10 |
 | hide-borders-when-using-wecui | Whether to hide the glowstone/gold block borders when using WECUI. | FALSE |
 | hide-fillers-when-using-wecui | Whether to hide the block fillers when using WECUI. | TRUE |
 | hide-wecui-drag-visuals-2d | Whether drag visuals should be shown while creating a claim in 2D mode. | TRUE |

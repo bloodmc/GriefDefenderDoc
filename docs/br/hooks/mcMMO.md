@@ -55,6 +55,8 @@ Os seguintes contextos são suportados por este sinalizador
 
 ## Opções
 
+As seguintes opções foram adicionadas:  
+
 * `death-penalty` - Controla se a pena de morte será ou não aplicada na reivindicação.
 * `xp-gain-modifier` - Controla o modificador de ganho de xp aplicado ao jogador na reivindicação.
 Os seguintes contextos são suportados por esta opção
