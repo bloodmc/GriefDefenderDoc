@@ -104,7 +104,7 @@ A primeira seção deste arquivo é `default-claim-flags` que é responsável po
 
 Existem 2 tipos configurados neste arquivo
 
-`user` - Isso configura as permissões de bandeira transitório padrão para todas as reivindicações, EXCETO deserto.
+`user` - Isso configura as permissões de bandeira transitório padrão para todas as reivindicações, EXCETO de Região Selvagem.  
 `wilderness` - Isso configura as permissões de bandeira transitório padrão para todas as reivindicações de região selvagem.
 
 
@@ -112,9 +112,9 @@ Existem 2 tipos configurados neste arquivo
 A seção de controle de bandeiras permite ativar/desativar a funcionalidade de bandeira por bandeira. Por padrão, todos as bandeiras estão habilitados. Se você não tem uso para uma bandeira específica, defina a bandeira como false nesta seção. Ao desabilitar uma bandeira, isso fará com que o GriefDefender ignore todos os eventos relacionados a bandeira.
 
 ```
-# Controls which flags are enabled.
-# Note: Disabling a flag will cause GD to bypass all functionality for it.
-# Note: If you want full protection, it is recommended to keep everything enabled.
+# Controla quais bandeiras estão habilitados.
+# Nota: Desativar um sinalizador fará com que o GD ignore todas as funcionalidades dele.
+# Observação: se você deseja proteção total, é recomendável manter tudo ativado.
 flag-control {
     block-break=true
     block-grow=true
@@ -168,25 +168,25 @@ O arquivo [`gui.conf`](/br/wiki/basic/GUI.html) é responsável por todas as con
 
 #### Seção de bate-papo
 
-`capture-clear-timeout` - O tempo limite em segundos quando a interface do bate-papo limpará todos os bate-papos capturados.
-`capture-idle-timeout` - O tempo limite ocioso em segundos quando a interface do bate-papo para de capturar o bate-papo.
-`protocol-lib` - Se deve usar ProtocolLib, se detectado, para capturar todas as mensagens direcionadas a um jogador.
+`capture-clear-timeout` - O tempo limite em segundos quando a interface do bate-papo limpará todos os bate-papos capturados.  
+`capture-idle-timeout` - O tempo limite ocioso em segundos quando a interface do bate-papo para de capturar o bate-papo.  
+`protocol-lib` - Se deve usar ProtocolLib, se detectado, para capturar todas as mensagens direcionadas a um jogador.  
 
 #### Seção geral  
 
-`command-input-idle-timeout` - O tempo limite de inatividade em segundos quando uma interface de comando para de aguardar a entrada do jogador.
+`command-input-idle-timeout` - O tempo limite de inatividade em segundos quando uma interface de comando para de aguardar a entrada do jogador.  
 
 
 #### Seção de inventário
 
 A seção de inventário controla quais ícones e títulos serão usados ao carregar a interface do inventário GD para os jogadores.
 
-`enchanted` - Controla se o ícone terá um efeito encantado.
-`id` - O id do item do ícone. Ex. `minecraft:diamond_shovel`
-`title` - O título do ícone a ser exibido ao passar o mouse.
-`lore` - O lore do ícone.
-`quantity` - O valor da quantidade do item.
-`meta` - O identificador do item associado ao ícone. <br />Observação: Meta é usado em vez de um identificador de material quando necessário para ser compatível com as versões do MC ou para itens modificados que não possuem um identificador de nome associado.
+`enchanted` - Controla se o ícone terá um efeito encantado.  
+`id` - O id do item do ícone. Ex. `minecraft:diamond_shovel`  
+`title` - O título do ícone a ser exibido ao passar o mouse.  
+`lore` - O lore do ícone.  
+`quantity` - O valor da quantidade do item.  
+`meta` - O identificador do item associado ao ícone. <br />Observação: Meta é usado em vez de um identificador de material quando necessário para ser compatível com as versões do MC ou para itens modificados que não possuem um identificador de nome associado.  
 
 `icon-flags`  
 As bandeiras de ícone são um atributo especial de um ícone e são armazenados como tal 
@@ -197,13 +197,13 @@ icon-flags=[
 ```  
 As seguintes bandeiras de ícone estão disponíveis para uso com um ícone
 
-`HIDE_ENCHANTS` - Controla se deve mostrar encantamentos.
-`HIDE_ATTRIBUTES` - Controla se os atributos devem ser exibidos.
-`HIDE_UNBREAKABLE` - Controla se deve mostrar o estado inquebrável.
-`HIDE_DESTROYS` - Controla se deve mostrar o que pode quebrar ou destruir.
-`HIDE_PLACED_ON` - Controla se mostra o que pode ser construído ou colocado.
-`HIDE_POTION_EFFECTS` - Controla se os efeitos da poção devem ser exibidos.
-`HIDE_DYE` - Controla se os corantes devem ser exibidos.
+`HIDE_ENCHANTS` - Controla se deve mostrar encantamentos.  
+`HIDE_ATTRIBUTES` - Controla se os atributos devem ser exibidos.  
+`HIDE_UNBREAKABLE` - Controla se deve mostrar o estado inquebrável.  
+`HIDE_DESTROYS` - Controla se deve mostrar o que pode quebrar ou destruir.  
+`HIDE_PLACED_ON` - Controla se mostra o que pode ser construído ou colocado.  
+`HIDE_POTION_EFFECTS` - Controla se os efeitos da poção devem ser exibidos.  
+`HIDE_DYE` - Controla se os corantes devem ser exibidos.  
 
 
 ### options (Opções)  
@@ -213,30 +213,30 @@ O arquivo [`options.conf`](/br/wiki/basic/Options.html) controla todas as config
 
 #### Opções padrão
 
-`default-user-basic-options` - Controla os limites de tamanho mínimo/máximo para reivindicação básicas.
-O limite mínimo básico padrão é `5x5x5`.
-Nota: Y não é usado a menos que a reivindicação seja uma reivindicação 3D.
-Nota: Um valor de '0' significa sem limite.
+`default-user-basic-options` - Controla os limites de tamanho mínimo/máximo para reivindicação básicas.  
+O limite mínimo básico padrão é `5x5x5`.  
+Nota: Y não é usado a menos que a reivindicação seja uma reivindicação 3D.  
+Nota: Um valor de '0' significa sem limite.  
 
 
-`default-user-subdivision-options` - Controla os limites de tamanho mínimo/máximo para subdivisão.
-O limite mínimo de subdivisão padrão é `5x5x5`.
-O limite máximo de subdivisão padrão é `1000x0x1000` onde `0` representa nenhum limite de altura.
-Nota: Y não é usado a menos que a reivindicação seja uma reivindicação 3D.
-Nota: Um valor de '0' significa sem limite.
+`default-user-subdivision-options` - Controla os limites de tamanho mínimo/máximo para subdivisão.  
+O limite mínimo de subdivisão padrão é `5x5x5`.  
+O limite máximo de subdivisão padrão é `1000x0x1000` onde `0` representa nenhum limite de altura.  
+Nota: Y não é usado a menos que a reivindicação seja uma reivindicação 3D.  
+Nota: Um valor de '0' significa sem limite.  
 
 
-`default-user-town-options` - Controla os limites de tamanho mínimo/máximo de reivindicação para reivindicações de cidade.
-O limite de cidade padrão é `32x32x32`.
-Nota: Y não é usado a menos que a reivindicação seja uma reivindicação 3D.
-Nota: Um valor de '0' significa sem limite.
+`default-user-town-options` - Controla os limites de tamanho mínimo/máximo de reivindicação para reivindicações de cidade.  
+O limite de cidade padrão é `32x32x32`.  
+Nota: Y não é usado a menos que a reivindicação seja uma reivindicação 3D.  
+Nota: Um valor de '0' significa sem limite.  
 
 
 `default-user-options` - Controla as opções padrão do jogador, como `player-deny-flight` nas reivindicação.
-Observação: a aplicação de uma opção a uma seção de tipo de reivindicação específica, conforme mostrado acima, substituirá a opção nesta seção.
+Observação: a aplicação de uma opção a uma seção de tipo de reivindicação específica, conforme mostrado acima, substituirá a opção nesta seção.  
 
 #### Controle de opções
-A seção de controle de opções permite ativar/desativar a funcionalidade de opções. Por padrão, todas as opções de jogador/pvp e spawn estão desabilitadas. Para habilitar essa funcionalidade, você precisará definir a opção correspondente como true.
+A seção de controle de opções permite ativar/desativar a funcionalidade de opções. Por padrão, todas as opções de jogador/pvp e spawn estão desabilitadas. Para habilitar essa funcionalidade, você precisará definir a opção correspondente como true.  
 
 Aqui estão as opções entregues que podem ser controladas
 ```

@@ -8,7 +8,7 @@ icon: image-text
 # Contexts
 
 Contexts are a fundamental part of how GriefDefender is able to apply protection to claims. In order to understand how it works, you must first understand what a Context is.  
-See [Contexts](/wiki/advanced/Contexts.html)
+See [LuckPerms - Context](https://luckperms.net/wiki/Context)
 
 Now that you have a basic understanding of what a context is and how they work with permissions, below is a list of contexts that GD uses with its flag and option command.
 

@@ -51,7 +51,7 @@ Isso o definirá internamente como um jogador não trust para todas as reivindic
 2. Fique na reivindicação de região selvagem.
 3. Execute o comando `/cpp <NomeDoJogador> <Permissão> false`
 
-  - ### To deny a specific group permission in wilderness
+  - ### Para negar a permissão de um grupo específico em região selvagem
 
 1. Atribua permissão a todos os jogadores no LuckPerms.
 2. Fique na reivindicação de região selvagem.
@@ -68,7 +68,7 @@ Nota: As mesmas etapas podem ser aplicadas a qualquer reivindicação.
 ex. Para negar a permissão `essentials.sethome` para o grupo `default`  
 `/cpg default essentials.sethome false`  
 
-  - ### Deny the permission on a single player in claim.  
+  - ### Negue a permissão a um único jogador na reivindicação.
 
 1. Fique na reivindicação onde você deseja negar a permissão.
 2. Execute o comando `/cpp <NomeDoJogador> <Permissão> false`  
@@ -148,8 +148,8 @@ Eles podem usar o comando `/gdconfirm`
 1. Abra [`global.conf`](/br/wiki/advanced/Global-Config.html).  
 2. Procure a seguinte seção 
 ```
-# The minimum threshold of movement (in blocks) required to receive accrued claim blocks. (Default: 0)
-# Note: The claim block task runs every 5 minutes which is the time each player will get to move the required amount of blocks.
+# O limite mínimo de movimento (em blocos) necessário para receber os blocos de reivindicação acumulados. (Padrão: 0)
+# Observação: a tarefa de reivindicar bloco é executada a cada 5 minutos, que é o tempo que cada jogador terá para mover a quantidade necessária de blocos.
 claim-block-task-move-threshold=0
 ```
 3. Defina em `claim-block-task-move-threshold` a quantidade de blocos que o jogador terá que se movimentar no período de 5 minutos para não ser considerado AFK.

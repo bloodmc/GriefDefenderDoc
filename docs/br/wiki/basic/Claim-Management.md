@@ -394,15 +394,15 @@ Dentro desta pasta será uma pasta de configuração chamada `world.conf`. Edite
 
 ```
 # 1.2.7
-# # If you need help with the configuration or have any issues related to GriefDefender,
-# # create a ticket on https://github.com/bloodmc/GriefDefender/issues.
-# # Note: If you have not purchased GriefDefender, please consider doing so to get 
-# # exclusive access to Discord for prompt support.
+# # Se precisar de ajuda com a configuração ou tiver algum problema relacionado ao GriefDefender,
+# # crie um ticket em https://github.com/bloodmc/GriefDefender/issues.
+# # Nota: Se você não comprou o GriefDefender, considere fazê-lo para obter
+# # acesso exclusivo ao Discord para suporte imediato.
 # 
 
 GriefDefender {
     claim {
-        # Whether claiming is enabled or not. (0 = Disabled, 1 = Enabled)
+        # Se a reivindicação está ativada ou não. (0 = Desativado, 1 = Ativado)
         claims-enabled=0
     }
 }
@@ -443,25 +443,25 @@ Se bem feito, deve parecer parecido com
 GriefDefender {
     claim {
         creation-settings {
-            # Whether claims can expire by default. (Default: True)
+            # Se as reivindicações podem expirar por padrão. (Padrão: True)
             expirable=true
-            # Whether claims should inherit their parent on creation. (Default: True)
-            # Note: This setting does not affect a claim whose parent is a town.
+            # Se as reivindicações devem herdar permissões na criação. (Padrão: True)
+            # Observação: essa configuração não afeta uma reivindicação cujo pai seja uma cidade.
             inherit-parent=true
-            # The maximum world height override used during claim creation.
-            # Note: Requires 'override-world-height' to be enabled.
+            # A substituição de altura mundial máxima usada durante a criação da reivindicação.
+            # Nota: Requer 'override-world-height' para ser habilitado.
             max-world-height-override=319
-            # The minimum world height override used during claim creation.
-            # Note: Requires 'override-world-height' to be enabled.
+            # A substituição de altura mundial mínima usada durante a criação da reivindicação.
+            # Nota: Requer 'override-world-height' para ser ativado.
             min-world-height-override=-64
-            # Whether claim heights are taken from config instead of world. (Default: False)
-            # Note: Enable this setting if using custom datapack that alters the default world height.
+            # Se as alturas de reivindicação são obtidas da configuração em vez do mundo. (Padrão: False)
+            # Nota: Ative esta configuração se estiver usando um pacote de dados personalizado que altera a altura padrão do mundo.
             override-world-height=true
-            # Whether claims requires claim blocks on creation. (Default: True)
+            # Se as declarações requerem blocos de reivindicação na criação. (Padrão: True)
             requires-claim-blocks=true
-            # Whether claims can be resized on creation. (Default: True)
+            # Se as reivindicações podem ser redimensionadas na criação. (Padrão: True)
             resizable=true
-            # Whether claims can show deny messages to players by default. (Default: True)
+            # Se as reivindicações podem mostrar mensagens de negação aos jogadores por padrão. (Padrão: True)
             show-deny-messages=true
         }
     }

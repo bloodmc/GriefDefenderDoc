@@ -128,6 +128,17 @@ Mote: Enter `public` to trust all.
 
 If trusting a group, you will be required to enter a group name in the format `group <name>`. Erase `<name>` and enter a valid LP group.  
 
+## Controls the types of trust that will appear in the GUI
+
+All players now default to PUBLIC flags in GUI. The previous flag group types `OWNER, ACCESSOR, CONTAINER, BUILDER, MANAGER`  
+will now require the following permissions:  
+`griefdefender.advanced.user.gui.flag.group.owner` Shows in the GUI the control for Owner.  
+`griefdefender.advanced.user.gui.flag.group.accessor` Shows in the GUI the control for Accessor.  
+`griefdefender.advanced.user.gui.flag.group.container` Shows in the GUI the control for Container.  
+`griefdefender.advanced.user.gui.flag.group.builder` Shows in the GUI the control for Builder.  
+`griefdefender.advanced.user.gui.flag.group.manager` Shows in the GUI the control for Manager.  
+
+![Interface with all permissions](/gd_gui_trustcontrol.webp)  
 
 
 ## Inventory  
