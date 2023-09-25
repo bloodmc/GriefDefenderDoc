@@ -25,7 +25,7 @@ Group - `/cog <group> <option> <value> [contexts]`
 #### Contexts
 
 All options may use one or more contexts when applied as meta in LuckPerms.   
-See [Contexts](/wiki/advanced/Contexts.html) on what contexts you can use and how they work.   
+See [LuckPerms - Context](https://luckperms.net/wiki/Context) on what contexts you can use and how they work.   
 
 #### Examples  
 

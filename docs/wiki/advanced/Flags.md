@@ -24,7 +24,7 @@ All default flags can be customized per claim type. Currently, GriefDefender sup
 ## Contexts
 
 All flags require one or more contexts when applied as a permission in LuckPerms.  
-See [Contexts](/wiki/advanced/Contexts.html) on what contexts you can use and how they work.  
+See [LuckPerms - Context](https://luckperms.net/wiki/Context) on what contexts you can use and how they work.  
 
 ## Commands
 

@@ -60,7 +60,7 @@ contexts=[
 ```
 These are the definition contexts that will be used with all permissions defined within `permissions=[...]`.  
 It currently only supports context keys `gd_claim_default`, `gd_claim_override`, or `gd_claim`.  
-See [Contexts](/wiki/advanced/Contexts.html) to learn how contexts work.  
+See [LuckPerms - Context](https://luckperms.net/wiki/Context) to learn how contexts work.  
 Note: These contexts do NOT apply in GUI. It is only used during server startup.  GUI will always apply flags to the claim player is standing in.
 
 #### Default value  

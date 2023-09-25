@@ -12,4 +12,10 @@ Compatible with almost all interactions of Forge mods, from [debugging](/wiki/ad
 Using [debugging](/wiki/advanced/Debugging.html) to create new [flags](/wiki/advanced/Flags.html) controls!
 
 ::: info Mods with presets available
-- Pixelmon ==> [Details](/mods/Pixelmon)
+- Pixelmon [Details](/mods/Pixelmon) | [Optimization](/mods/Pixelmon.html#fitfc-s-optimization-for-pixelmon)
+:::
+
+::: danger Mods with incompatibility
+Note: Some mods bypass events due to the platform not supporting the action or the mod not following standards, causing GD to not be able to capture these events to control them.  
+[Snow! Real Magic! - CurseForge](https://www.curseforge.com/minecraft/mc-mods/snow-real-magic) (Problem with Mixins)
+:::

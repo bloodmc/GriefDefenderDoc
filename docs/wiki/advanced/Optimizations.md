@@ -354,7 +354,8 @@ blacklist {
 
 :::: note Recommendation
 if you are going to create new flags, remove this optimization and leave the GD default, as the optimizations remove some events from gddebug.  
-These optimizations were focused on a server that tries its best to get close to vanilla - Last revision 1.19.4  
+These optimizations were focused on a server that tries its best to get close to vanilla - Last revision 1.20.1  
+* [Optimization for PixelMon](/mods/Pixelmon.html#fitfc-s-optimization-for-pixelmon)
 ::::
 
 <details>
@@ -436,7 +437,7 @@ GriefDefender {
     # Redstone ores change state to create the glow.
             "minecraft:deepslate_redstone_ore",
             "minecraft:redstone_ore",
-    # frosted ice is in relation to the enchantment of icy steps, only to remove the player's permission to generate minecraft:ice in the waters.
+    # frosted ice is in relation to the enchantment of Frost Walker, only to remove the player's permission to generate minecraft:ice in the waters.
             "minecraft:frosted_ice",
             "minecraft:grass_block",
             "minecraft:dirt",
@@ -449,6 +450,7 @@ GriefDefender {
             "minecraft:villager",
             "minecraft:sheep",
             "minecraft:fox",
+        # Comment if you want players/foxes not to get minecraft:sweet_berry
             "minecraft:sweet_berry_bush"
         ]
         block-place=[
@@ -473,12 +475,14 @@ GriefDefender {
             "minecraft:air"
         ]
         collide-block=[
+    # This makes the big dripleaf interact with the player always, if you want to control it, comment.
             "minecraft:big_dripleaf"
         ]
         collide-entity=[]
         command-execute=[]
         command-execute-pvp=[]
         enter-claim=[
+    # Monsters and Minecart generate a lot of noise, if you want to control it, comment them all.
             "#minecraft:monster",
             "minecraft:minecart",
             "minecraft:hopper_minecart",
@@ -494,11 +498,13 @@ GriefDefender {
             "minecraft:freeze"
         ]
         entity-riding=[
+    # Horses by default already have mount protection.
             "minecraft:horse",
         ]
         entity-spawn=[
     # minecraft:armor_stand Some plugins like Hologram/Damage Indicators plugins generate these entities, which end up generating lag in GD because there are too many events to check, if you use it, comment.
             "minecraft:armor_stand",
+    # comment out all peaceful animals to control their spawn in /cf
             "minecraft:axolotl",
             "minecraft:bat",
             "minecraft:squid",
@@ -512,6 +518,7 @@ GriefDefender {
             "minecraft:cat",
             "minecraft:fox",
             "minecraft:horse",
+    # comment out all aquatic animals to control their spawn in /cf
             "minecraft:cod",
             "minecraft:dolphin",
             "minecraft:firework_rocket",
@@ -526,6 +533,9 @@ GriefDefender {
             "minecraft:snowball",
             "minecraft:trident",
             "minecraft:xp_orb",
+    # comment if you want to control phantom spawn in claims.
+            "minecraft:phantom",
+            "minecraft:sniffer",
             "spawnreason:village_defense"
         ]
         entity-teleport-from=[
@@ -547,13 +557,14 @@ GriefDefender {
         explosion-block=[]
         explosion-entity=[]
         interact-block-primary=[]
-        # Avoid adding anything in interact-block-secondary as it creates vulnerabilities in the protection.
+    # Avoid adding anything in interact-block-secondary as it creates vulnerabilities in the protection.
         interact-block-secondary=[]
         interact-entity-primary=[]
         interact-entity-secondary=[
             "minecraft:falling_block"
         ]
         interact-inventory=[
+    # This makes the inventory of these blocks public, comment if you want to control.
             "minecraft:crafting_table",
             "minecraft:stonecutter",
             "minecraft:grindstone",
@@ -564,6 +575,7 @@ GriefDefender {
             "minecraft:enchanting_table"
         ]
         interact-inventory-click=[
+    # This makes the inventory of these blocks public, comment if you want to control.
             "minecraft:crafting",
             "minecraft:crafting_table",
             "minecraft:stonecutter",
@@ -695,7 +707,189 @@ flag-control {
 - Do not block teleportation caused by plugins
 - big_dripleaf moves when a player interacts with it
 - Does not disable vine/grass/crop growth
-- Is it possible to get fruits from sweet_berry and cave_vines_plan
+- Is it possible to get fruits from sweet_berry
 - Other problems are being cataloged
 ```
+</details>
+
+## GriefDefender Default
+
+<hr>
+Version based on build file: GriefDefender 2.3.9-DEV5
+<hr>
+
+<details>
+  <summary>GD Blacklist</summary>
+
+```
+GriefDefender {
+    # A global list of entity damage sources that are ignored in events by default.
+    entity-damage-source-blacklist=[
+        contact,
+        cramming,
+        drowning,
+        "falling_block",
+        flyintowall,
+        fire,
+        "fire_tick",
+        "hot_floor",
+        poison,
+        starvation,
+        suffocation,
+        suicide,
+        void
+    ]
+    # A list of id's ignored by flags.
+    flag-id-blacklist {
+        block-break=[
+            "minecraft:fire"
+        ]
+        block-grow=[]
+        block-modify=[
+            "minecraft:weathered_*",
+            "minecraft:netherrack",
+            "minecraft:farmland",
+            "minecraft:sheep",
+            "minecraft:dirt",
+            "minecraft:frosted_ice"
+        ]
+        block-place=[]
+        block-spread=[
+            "minecraft:vine",
+            "minecraft:grass_block",
+            "minecraft:mycelium",
+            "minecraft:twisting_vines",
+            "minecraft:weeping_vines",
+            "minecraft:kelp"
+        ]
+        collide-block=[]
+        collide-entity=[]
+        command-execute=[]
+        command-execute-pvp=[]
+        enter-claim=[]
+        entity-chunk-spawn=[]
+        entity-damage=[]
+        entity-riding=[]
+        entity-spawn=[]
+        entity-teleport-from=[]
+        entity-teleport-to=[]
+        exit-claim=[]
+        explosion-block=[]
+        explosion-entity=[]
+        interact-block-primary=[]
+        interact-block-secondary=[]
+        interact-entity-primary=[]
+        interact-entity-secondary=[
+            "minecraft:villager",
+            "minecraft:falling_block"
+        ]
+        interact-inventory=[]
+        interact-inventory-click=[]
+        interact-item-primary=[]
+        interact-item-secondary=[]
+        inventory-item-move=[]
+        item-damage=[]
+        item-drop=[]
+        item-pickup=[]
+        item-spawn=[]
+        item-use=[]
+        leaf-decay=[]
+        liquid-flow=[]
+        portal-use=[]
+        projectile-impact-block=[]
+        projectile-impact-entity=[
+            "minecraft:ender_pearl"
+        ]
+    }
+    # A global list of source id's that are ignored by events. 
+    # Note: This only affects events where the id specified is the source.
+    global-source=[]
+    # A global list of target id's that are ignored by events. 
+    # Note: This only affects events where the id specified is the target.
+    global-target=[]
+}
+```
+
+</details>
+
+<details>
+  <summary>GD Flag Control</summary>
+
+```
+flag-control {
+        block-break=true
+        block-grow=false
+        block-modify=true
+        block-place=true
+        block-spread=true
+        collide-block=true
+        collide-entity=true
+        command-execute=true
+        command-execute-pvp=false
+        enter-claim=true
+        entity-chunk-spawn=false
+        entity-damage=true
+        entity-riding=true
+        entity-spawn=true
+        entity-teleport-from=true
+        entity-teleport-to=true
+        exit-claim=true
+        explosion-block=true
+        explosion-entity=true
+        interact-block-primary=false
+        interact-block-secondary=true
+        interact-entity-primary=true
+        interact-entity-secondary=true
+        interact-inventory=true
+        interact-inventory-click=false
+        interact-item-primary=false
+        interact-item-secondary=true
+        inventory-item-move=true
+        item-damage=true
+        item-drop=true
+        item-pickup=false
+        item-spawn=true
+        item-use=true
+        leaf-decay=false
+        liquid-flow=true
+        portal-use=false
+        projectile-impact-block=true
+        projectile-impact-entity=true
+    }
+```
+
+</details>
+
+
+
+<details>
+  <summary>GD Option Control</summary>
+
+```
+option-control {
+        player-command-enter=false
+        player-command-exit=false
+        player-deny-flight=false
+        player-deny-godmode=false
+        player-deny-hunger=false
+        player-fly-speed=false
+        player-gamemode=false
+        player-health-regen=false
+        player-item-drop-lock=false
+        player-keep-inventory=false
+        player-keep-level=false
+        player-teleport-cost=false
+        player-teleport-delay=false
+        player-walk-speed=false
+        player-weather=false
+        pvp=false
+        pvp-combat-command=false
+        pvp-combat-teleport=false
+        pvp-combat-timeout=false
+        pvp-item-drop-lock=false
+        raid=false
+        spawn-limit=false
+    }
+```
+
 </details>

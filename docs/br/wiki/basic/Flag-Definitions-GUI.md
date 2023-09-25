@@ -7,8 +7,8 @@ icon: screen
 
 ## Visão geral
 
-O sistema de definição de bandeiras fornece aos usuários e administradores a capacidade de gerenciar seus bandeiras de reivindicação em um [Bate-papo](/br/wiki/basic/GUI.html#bate-papo) ou [Inventário](/br/wiki/basic/GUI.html#inventario) interface.
-GriefDefender oferece um pacote de definições de bandeiras por padrão para fornecer a melhor compatibilidade entre servidores.
+O sistema de definição de bandeiras fornece aos usuários e administradores a capacidade de gerenciar seus bandeiras de reivindicação em um [Bate-papo](/br/wiki/basic/GUI.html#bate-papo) ou [Inventário](/br/wiki/basic/GUI.html#inventario) interface.  
+GriefDefender oferece um pacote de definições de bandeiras por padrão para fornecer a melhor compatibilidade entre servidores.  
 Os dados de definição de bandeira vanilla entregues podem ser encontrados no seguinte local
 ### Sponge
 `./config/GriefDefender/presets/minecraft.conf`
@@ -17,14 +17,14 @@ Os dados de definição de bandeira vanilla entregues podem ser encontrados no s
 
 
 
-Os administradores têm controle total para adicionar/remover/personalizar definições de bandeiras.
+Os administradores têm controle total para adicionar/remover/personalizar definições de bandeiras.  
 
-Para adicionar uma definição de bandeira a uma predefinição de minecraft entregue existente, abra o arquivo `./presets/minecraft.conf`.
-Nesta seção, você verá 2 grupos entregues `admin` e `user`.
+Para adicionar uma definição de bandeira a uma predefinição de minecraft entregue existente, abra o arquivo `./presets/minecraft.conf`.  
+Nesta seção, você verá 2 grupos entregues `admin` e `user`.  
 
-Todas as definições de bandeiras localizadas no grupo `admin` são acessíveis apenas por administradores. Isso se deve à configuração do `admin-group` ser definida como `true`.
-Todas as definições de bandeiras localizadas no grupo `user` são acessíveis por todos os usuários.
-Você pode adicionar/remover/mover definições de bandeiras como quiser e até mesmo criar novos arquivos predefinidos do zero que serão lidos quando a interface for carregada.
+Todas as definições de bandeiras localizadas no grupo `admin` são acessíveis apenas por administradores.  Isso se deve à configuração do `admin-group` ser definida como `true`.  
+Todas as definições de bandeiras localizadas no grupo `user` são acessíveis por todos os usuários.  
+Você pode adicionar/remover/mover definições de bandeiras como quiser e até mesmo criar novos arquivos predefinidos do zero que serão lidos quando a interface for carregada.  
 
 ### Adicionar nova definição de bandeira
 
@@ -48,8 +48,8 @@ Vamos quebrar este exemplo
 
 #### Nome
 
-`ambient-spawn` - Este é o nome da sua definição que será exibida aos usuários quando eles a abrirem na interface do bandeira. Pode ser o que você quiser.
-Nota: Estes não são bandeiras de núcleo GD reais, mas sim uma `flag definition` e não podem ser usados com o comando `/cf`. Se você quiser alternar uma definição de bandeira com um comando, use `/claimflagdefinition` ou `/gd flag definition`
+`ambient-spawn` - Este é o nome da sua definição que será exibida aos usuários quando eles a abrirem na interface do bandeira. Pode ser o que você quiser.  
+Nota: Estes não são bandeiras de núcleo GD reais, mas sim uma `flag definition` e não podem ser usados com o comando `/cf`. Se você quiser alternar uma definição de bandeira com um comando, use `/claimflagdefinition` ou `/gd flag definition`  
 
 #### Contextos  
 
