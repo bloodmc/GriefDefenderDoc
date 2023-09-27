@@ -19,7 +19,7 @@ Contexto                                          |     Valor     | Descrição 
 ```gd_rent```             |   ```rent```         | Aplica bandeira para reivindicações de aluguéis.
 ```source```   |   `<source_id>`  | Aplica bandeira a uma fonte específica. <br />Exemplo: `minecraft:creeper`
 ```target```   |   `<target_id>`  | Aplica bandeira a um destino específico. <br />Exemplo: `minecraft:player` <br />Nota: O destino é **SEMPRE** necessário após a bandeira no uso do comando /cf, mas mais de um destino pode ser especificado com o uso do contexto.
-```state```   |   `<state>`  | Aplica bandeira a um estado de bloco específico. <br />Exemplo: `powered:true` <br /> Veja https://minecraft.gamepedia.com/Block_states para uma lista de todos os estados de bloco vanilla.
+```state```   |   `<state>`  | Aplica bandeira a um estado de bloco específico. <br />Exemplo: `powered:true` <br /> Veja https://minecraft.wiki/w/Block_states para uma lista de todos os estados de bloco vanilla.
 ```used_item``` |   `<item_id>`  | Aplica a bandeira a um item usado específico. <br />Exemplo: `minecraft:diamond_sword`
 ```boots```   |   `<item_id>`   | Aplica a bandeira a botas desgastadas específicas. <br />Exemplo: `minecraft:diamond_boots`
 ```chestplate```   |   `<item_id>`   | Aplica a bandeira a um peitoral desgastado específico. <br />Exemplo: `minecraft:diamond_chestplate`

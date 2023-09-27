@@ -11,7 +11,7 @@ Here are a few examples on how to configure PvP
 Note: These examples assume a clean installation with no modified settings.
 
 ### Disable PvP on server
-To disable PvP on server, open [`server.properties`](https://minecraft.fandom.com/wiki/Server.properties) and set `pvp` to false (On Sponge, set PVP to false in the Sponge config).
+To disable PvP on server, open [`server.properties`](https://minecraft.wiki/w/Server.properties#pvp) and set `pvp` to false (On Sponge, set PVP to false in the Sponge config).
 
 ### Disable PvP globally except specific claims
 
