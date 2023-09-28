@@ -57,7 +57,12 @@ This command supports the following arguments `hand | <type> <target> [worldname
 | global-target | A global list of target id's that are ignored by events. <br />Note: This only affects events where the id specified is the target. | [ ] |
 | entity-damage-source-blacklist | A global list of entity damage sources that are ignored in events by default. | [contact,cramming,drowning,<br />"falling_block",flyintowall,"fire_tick",<br />"hot_floor",poison,starvation,suffocation,<br />suicide,void] |
 
-The blacklist controls events from interacting with items, blocks, or entities on either a per-flag or global basis. Blacklists are extremely useful as it allows you to force GD to ignore actions in a world you do not need protected. By doing this, you prevent GD from wasting resources when it attempts to protect. To determine what you want to prevent GD from controlling, you will need to run a [GDDebug](/wiki/advanced/Debugging.html) in order to gather the data needed for the config. See [User Contributions](/wiki/advanced/Optimizations.html#optimization-contributions) for some examples on how to use it.  
+The blacklist controls events from interacting with items, blocks, or entities on either a per-flag or global basis. Blacklists are extremely useful as it allows you to force GD to ignore actions in a world you do not need protected. By doing this, you prevent GD from wasting resources when it attempts to protect. To determine what you want to prevent GD from controlling, you will need to run a [GDDebug](/wiki/advanced/Debugging.html) in order to gather the data needed for the config.  
+::: tip Useful links
+See some ready-made tips and optimizations in our guide!  
+[Use Aikar's Flags](/wiki/advanced/Optimizations.html#use-aikar-s-flags)  
+[Optimization contributions](/wiki/advanced/Optimizations.html#optimization-contributions)  
+:::
 
 It supports wildcards `?` and `*` where `?` represents a single character and `*` represents zero or more characters.
 For more info you can go to [Apache's wildcard matcher.](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String))

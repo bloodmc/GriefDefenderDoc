@@ -86,9 +86,9 @@ notify-exit
 5. Edite [global.conf](/wiki/advanced/Global-Config.html) em ./plugins/GriefDefender/
 6. Localize a seção
 ```
-# Set to true to enable WorldGuard data migrator.
-# Note: Only cuboid regions are supported.
-# Note: It is recommended to backup data before using.
+# Defina como verdadeiro para ativar o migrador de dados WorldGuard.
+# Nota: Apenas regiões cubóides são suportadas.
+# Nota: É recomendado fazer backup dos dados antes de usar.
 worldguard=false
 ```
 7. Definir worldguard para o 'true'

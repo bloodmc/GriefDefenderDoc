@@ -17,7 +17,7 @@ Aqui está um exemplo de como usar a nova opção de velocidade de vôo. Este ex
  CustomAlias:
   fspeed:
     Cmds:
-    - cop [playerName] player-fly-speed $1 context[default=global]
+    - cop [NomeDoJogador] player-fly-speed $1 context[default=global]
     Perm: true
 ```
 Isso resultará em um jogador executando `/fspeed 0.5` e tendo seu vôo atualizado imediatamente, em vez de usar a entrada mais longa.

@@ -34,7 +34,7 @@ Verifique na [Luckperms - Where to start](https://luckperms.net/wiki/Default-Gro
 
 @tab:active Bukkit
 :warning: Se estiver usando `spark`, Atualize para a [última versão](https://ci.lucko.me/job/spark/) :warning:   
-:warning: Defina [`spawn-protection`]https://minecraft.wiki/w/Server.properties#spawn-protection) para `0` dentro [`server.properties`](https://minecraft.wiki/w/Server.properties) para permitir que GD proteja o spawn. 
+:warning: Defina [`spawn-protection`](https://minecraft.wiki/w/Server.properties#spawn-protection) para `0` dentro [`server.properties`](https://minecraft.wiki/w/Server.properties) para permitir que GD proteja o spawn. 
 Se isso não for definido corretamente, o servidor bloqueará as ações antes que o GD tenha a chance de vê-lo. :warning:
 1. Instale o [LuckPerms](https://luckperms.net/) mais recente.
 2. Obtenha a versão mais recente do [GriefDefender](https://www.spigotmc.org/resources/68900/).
@@ -266,23 +266,25 @@ Por exemplo, se você quiser usar mysql, você deve definir este valor para `mys
 ### Modelo econômico
 :warning: Antes de ativar o modelo econômico, certifique-se de testar em um servidor de TESTE para garantir que todas as configurações estejam funcionando corretamente. :warning:
 
-Por padrão, o GD permite que os jogadores acumulem blocos de reivindicações para serem usados na criação de reivindicações.
+Por padrão, o GD permite que os jogadores acumulem blocos de reivindicações para serem usados na criação de reivindicações.  
 No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em [`global.conf`](/br/wiki/advanced/Global-Config.html#economy).  
-Com `economy-mode` ativado, todas as criações de reivindicação solicitarão aos jogadores uma confirmação do custo da reivindicação. Uma vez confirmado, o dinheiro será retirado da conta do jogador. 
-Se você quiser ignorar essas confirmações, defina a permissão `griefdefender.user.claim.economy.create-confirm` para `false`.
+Com `economy-mode` ativado, todas as criações de reivindicação solicitarão aos jogadores uma confirmação do custo da reivindicação. Uma vez confirmado, o dinheiro será retirado da conta do jogador.  
+Se você quiser ignorar essas confirmações, defina a permissão `griefdefender.user.claim.economy.create-confirm` para `false`.  
 
-Depois que essa configuração for ativada, abra [`options.conf`](/br/wiki/basic/Options.html) e configure as seguintes opções para um valor maior que `0`
+Depois que essa configuração for ativada, abra [`options.conf`](/br/wiki/basic/Options.html) e configure as seguintes opções para um valor maior que `0`  
 * `economy-block-cost`  
-* `economy-sell-return` 
+* `economy-sell-return`  
 
 Nota: Se você quiser usar o `/buyclaimblocks` ou  `/sellclaimblocks` comandos então você DEVE configurar as 2 opções acima também. Esses comandos não requerem `economy-mode` para ser ligado.
  
 ### Permissões
 
 :warning: É MUITO IMPORTANTE que você siga o [Permissões - Importante](/br/wiki/Permissions.html#importante) antes de proceder. :warning:  
-:warning: Se você deseja remover permissões de usuário que não se aplicam ao seu servidor, é ALTAMENTE recomendado manter `griefdefender.user.*` aplicado a eles e simplesmente negar as permissões que você não possui. Se você remover o `griefdefender.user.*` e tentar aplicar todas as permissões do GD manualmente, você terá muitos problemas.
+:warning: Se você deseja remover permissões de usuário que não se aplicam ao seu servidor, é ALTAMENTE recomendado manter `griefdefender.user.*` aplicado a eles e simplesmente negar as permissões que você não possui.  
+Se você remover o `griefdefender.user.*` e tentar aplicar todas as permissões do GD manualmente, você terá muitos problemas.  
 
-Depois de instalar o GriefDefender corretamente, você precisa dar permissão aos seus jogadores para reivindicar terrenos, eles não são dados por padrão. A única permissão necessária para a configuração básica do GD é `griefdefender.user.*`. Para configuração básica de administração, dê aos administradores a permissão `griefdefender.admin.*` e `griefdefender.user.*`.
+Depois de instalar o GriefDefender corretamente, você precisa dar permissão aos seus jogadores para reivindicar terrenos, eles não são dados por padrão. A única permissão necessária para a configuração básica do GD é `griefdefender.user.*`.  
+Para configuração básica de administração, dê aos administradores a permissão `griefdefender.admin.*` e `griefdefender.user.*`.  
 
 Se você quiser ajustar mais permissões, você pode encontrar todas as permissões [aqui](/br/wiki/Permissions.html) e para uma lista com todas as permissões de comando e de uso [aqui](/br/wiki/Permissions.html#reivindicacoes). 
 

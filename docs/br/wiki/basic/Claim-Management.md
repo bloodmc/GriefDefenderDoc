@@ -152,21 +152,21 @@ Existem 4 tipos de identificadores de reivindicação
 #### Admin
 
 Os identificadores de reivindicação do administrador são únicos em todas as reivindicações de administrador.
-Esses identificadores podem ser acessados via comandos com formato `admin:<identifier>`  
+Esses identificadores podem ser acessados via comandos com formato `admin:<Identificador>`  
 
 #### Do utilizador
 
 Os identificadores de reivindicação do usuário são únicos em todas as reivindicações pessoais do usuário.
-Esses identificadores podem ser acessados via comandos com formato `<identifier>`  
+Esses identificadores podem ser acessados via comandos com formato `<Identificador>`  
 
 #### Região selvagem
 
 Os identificadores de reivindicação da deserto são únicos em todas as reivindicações do deserto.
-Esses identificadores podem ser acessados via comandos com formato `wilderness:<identifier>`
+Esses identificadores podem ser acessados via comandos com formato `wilderness:<Identificador>`
 
 #### Outro usuário
 
-Os administradores podem acessar os identificadores de reivindicação pessoal de qualquer jogador usando o formato `<player_name>:<identifier>` em um comando.
+Os administradores podem acessar os identificadores de reivindicação pessoal de qualquer jogador usando o formato `<Nome_do_Jogador>:<Identificador>` em um comando.
 
 ### Armazenamento
 
@@ -206,7 +206,7 @@ Os dados são armazenados em `./GriefDefender/snapshots/user/<player_uuid>/<snap
 #### Reivindicação
 
 A reivindicação de snapshots locais são acessíveis apenas na reivindicação em que o instantâneo foi criado.
-Os dados são armazenados em `./GriefDefender/worlds/<dimension_type>/<world_name>/snapshots/<claim_uuid>/<snapshotname>.conf`
+Os dados são armazenados em `./GriefDefender/worlds/<dimension_type>/<nome_do_mundo>/snapshots/<claim_uuid>/<snapshotname>.conf`
 
 ### Interface
 
@@ -320,8 +320,8 @@ Campo                              | Descrição |
 ```A venda```| Se a reivindicação está atualmente à venda.
 ```Raid```| Se a reivindicação apóia as ataques da vila.
 ```Msg de sem permissão```| Se a reivindicação mostra mensagens de negação de proteção. (Mensagem que diz que não tem permissão para quebrar/colocar/interagir com item ou entidade)
-```Saudação```| A mensagem de entrada de reivindicação de reivindicação.<br /> Nota: Use `/claimgreeting \<message\>|clear|none`.
-```Despedida```| A mensagem de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimfarewell \<message\>|clear|none`.
+```Saudação```| A mensagem de entrada de reivindicação de reivindicação.<br /> Nota: Use `/claimgreeting \<Mensagem\>|clear|none`.
+```Despedida```| A mensagem de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimfarewell \<Mensagem\>|clear|none`.
 ```Entrada Título```| A reivindicação entra no título de reivindicação.<br /> Nota: Use `/claimtitle enter main \<title\>|clear|none`.
 ```Entrada Subtítulo```| A reivindicação entra no título de reivindicação.<br /> Nota: Use `/claimtitle enter sub \<title\>|clear|none`.
 ```Saída Título```| O título de saída da reivindicação de reivindicação.<br /> Nota: Use `/claimtitle exit main \<title\>|clear|none`.

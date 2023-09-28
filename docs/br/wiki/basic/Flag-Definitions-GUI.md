@@ -119,46 +119,46 @@ Para mais informações sobre o que você pode fazer com a configuração de ban
   <summary>Predefinição de Minecraft</summary>
 
 ```
-# A collection of flag definitions designed for vanilla minecraft.
-# Each group defined will be displayed in the flag GUI for users.
-# Groups can have the following settings : 
-#    enabled=<true|false>: Whether the group is enabled.
-#    admin-group=<true|false>: Whether this group is considered for admin use only.
-#    Note: GUI toggles in PRESETS will always apply to current claim only.
-#    Note: If you assign users the permission 'griefdefender.admin.advanced-flags', they will be able to access admin presets within the claim tab.
-#          It is recommended not to assign this permission to users for best experience.
-#    value=<true|false>: This is used to set a default value for the flag definition. It is only used in conjunction with 'override=<type>, default=<type> settings.
-#    contexts=["key=value"]: A list of definition contexts that will be applied to all permissions.
-# Note: This is primary used with 'default' and 'override' contexts. Ex. contexts=["default=global"]
-# Note: You must specify one of the following contexts :'gd_claim_default=<type>' or 'gd_claim_override=<type>''
-# Note: Context values support wildcards '?' and '*' by using Apache's wildcard matcher.
-#  The wildcard '?' represents a single character.
-#  The wildcard '*' represents zero or more characters.
-# Each group will have an associated permission in order to be viewable.
-# The user groups will use the permission : 'griefdefender.user.custom.flag.<preset>.<group>
-# The admin groups will use the permission : 'griefdefender.admin.custom.flag.<preset>.<group>
-# Within each group, you can define flag definitions.
-# Each flag definition must be defined in the following format:
-#  enabled: Controls whether the definition is enabled. Accepts a value of 'true' or 'false'
-#  default-value: The default value to assign flag definition.
-#  description: The flag description to display on hover. Uses the legacy text format.
-#  permissions: The list of permissions to link to definition. Permissions can accept various contexts such as :
-#    flag=<linked-flag>: This context is used to link the permission to a GD specific flag. Ex. 'flag=block-break' would link permission to GD's block-break flag
-#    source=<id>: This context is used to specify a source id such as 'minecraft:creeper'.
-#    target=<id>: This context is used to specify a target id such as 'minecraft:chest'.
-#    state=<properties>: This context is used to specify a blockstate property such as 'state=lit:true'.
-# Note: All flag definitions that contain a definition context of 'gd_claim_default' or 'gd_claim_override' will be applied to permissions during server startup.
-# Note: Required if no source or target context is specified, the permission will default to ALL.
-# Note: Commonly used contexts are : flag, source, target, state, used_item, item_name, world, server
-# These contexts may change, See https://github.com/bloodmc/GriefDefender/wiki/Contexts for latest information.
+# Uma coleção de definições de bandeiras projetadas para minecraft vanilla.
+# Cada grupo definido será exibido na GUI do sinalizador para os usuários.
+# Os grupos podem ter as seguintes configurações:
+# enabled=<true|false>: se o grupo está habilitado.
+# admin-group=<true|false>: Se este grupo é considerado apenas para uso administrativo.
+# Nota: as alternâncias da GUI em PRESETS sempre serão aplicadas apenas à reivindicação atual.
+# Nota: Se você atribuir aos usuários a permissão 'griefdefender.admin.advanced-flags', eles poderão acessar as predefinições de administrador na guia de reivindicação.
+# É recomendado não atribuir esta permissão aos usuários para melhor experiência.
+# value=<true|false>: Isso é usado para definir um valor padrão para a definição do sinalizador. Ele é usado apenas em conjunto com as configurações 'override=<type>, default=<type>.
+# contexts=["key=value"]: Uma lista de contextos de definição que serão aplicados a todas as permissões.
+# Nota: Isto é usado principalmente com contextos 'padrão' e 'substituir'. Ex. contextos=["padrão=global"]
+# Nota: Você deve especificar um dos seguintes contextos:'gd_claim_default=<type>' ou 'gd_claim_override=<type>''
+# Nota: Os valores de contexto suportam caracteres curinga '?' e '*' usando o correspondente curinga do Apache.
+# O curinga '?' representa um único caractere.
+# O curinga '*' representa zero ou mais caracteres.
+# Cada grupo terá uma permissão associada para poder ser visualizado.
+# Os grupos de usuários usarão a permissão: 'griefdefender.user.custom.flag.<preset>.<group>
+# Os grupos de administração usarão a permissão: 'griefdefender.admin.custom.flag.<preset>.<group>
+# Dentro de cada grupo, você pode definir definições de sinalizadores.
+# Cada definição de flag deve ser definida no seguinte formato:
+# habilitado: Controla se a definição está habilitada. Aceita um valor de 'true' ou 'false'
+# default-value: O valor padrão para atribuir a definição do sinalizador.
+# description: A descrição do sinalizador a ser exibida ao passar o mouse. Usa o formato de texto herdado.
+# permissões: a lista de permissões para vincular à definição. As permissões podem aceitar vários contextos, como:
+# flag=<linked-flag>: Este contexto é usado para vincular a permissão a um sinalizador específico do GD. Ex. 'flag=block-break' vincularia a permissão ao sinalizador de quebra de bloco do GD
+# source=<id>: Este contexto é usado para especificar um ID de origem como 'minecraft:creeper'.
+# target=<id>: Este contexto é usado para especificar um ID de destino como 'minecraft:chest'.
+# state=<properties>: Este contexto é usado para especificar uma propriedade blockstate como 'state=lit:true'.
+# Nota: Todas as definições de sinalizadores que contêm um contexto de definição de 'gd_claim_default' ou 'gd_claim_override' serão aplicadas às permissões durante a inicialização do servidor.
+# Nota: Obrigatório se nenhum contexto de origem ou destino for especificado, a permissão será padronizada como ALL.
+# Nota: Os contextos comumente usados são: flag, source, target, state, used_item, item_name, world, server
+# Esses contextos podem mudar. Consulte https://github.com/bloodmc/GriefDefender/wiki/Contexts para obter as informações mais recentes.
 
 minecraft {
     enabled=true
     groups {
         admin {
-            # Set to true if this flag group is for admin use only.
-            # Note: If admin group, the permission is 'griefdefender.admin.custom.flag.<groupname>
-            # Note: If user group (admin set false), the permission is 'griefdefender.user.custom.flag.<groupname>
+            # Defina como verdadeiro se este grupo de sinalizadores for apenas para uso administrativo.
+            # Nota: Se for grupo admin, a permissão é 'griefdefender.admin.custom.flag.<groupname>
+            # Nota: Se o grupo de usuários (admin definido como falso), a permissão é 'griefdefender.user.custom.flag.<groupname>
             admin-group=true
             definitions {
                 ambient-spawn {

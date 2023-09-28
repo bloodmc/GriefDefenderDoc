@@ -25,25 +25,25 @@ Veja [LuckPerms - Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes
 5. Edite [global.conf](/br/wiki/advanced/Global-Config.html) em ./plugins/GriefDefender/
 6. Localize a seção
 ```
-# List of migrators that convert old or other protection data into the current GD claim data format.
-# Note: It is recommended to backup data before using.
+# Lista de migradores que convertem dados de proteção antigos ou outros dados de proteção no formato atual de dados de reivindicação GD.
+# Nota: É recomendado fazer backup dos dados antes de usar.
 migrator {
-        # Set to true to enable the classic migrator.
-        # Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format.
-        # Note: It is recommended to backup data before using.
+        # Defina como true para ativar o migrador clássico.
+        # Nota: Migra dados de declaração clássica do GP bukkit e dados GPFlags, se disponíveis, para o formato atual.
+        # Nota: Recomenda-se fazer backup dos dados antes de usar.
         classic=false
         classic-database {
-            # The database address and port. Use format host:port.
+            # O endereço e a porta do banco de dados. Use o formato host:porta.
             address=localhost
-            # The GriefPrevention database name.
+            # O nome do banco de dados GriefPrevention.
             database=""
-            # Set to true to enable the classic database migrator.
-            # Note: Migrates GriefPrevention bukkit classic database data and GPFlags data, if available, to current format.
-            # Note: It is recommended to backup data before using.
+            # Defina como true para ativar o migrador de banco de dados clássico.
+            # Nota: Migra dados do banco de dados clássico do bukkit GriefPrevention e dados GPFlags, se disponíveis, para o formato atual.
+            # Nota: Recomenda-se fazer backup dos dados antes de usar.
             enabled=false
-            # The GriefPrevention database password
+            # A senha do banco de dados GriefPrevention
             password=""
-            # The GriefPrevention database username.
+            # O nome de usuário do banco de dados GriefPrevention.
             username=""
         }
 }
@@ -69,29 +69,29 @@ O resultado da migração deve aparecer no console durante o processo.
 5. Edite  [`global.conf`](/br/wiki/advanced/Global-Config.html) em ./plugins/GriefDefender/
 6. Localize a seção
 ```
-# List of migrators that convert old or other protection data into the current GD claim data format.
-# Note: It is recommended to backup data before using.
+# Lista de migradores que convertem dados de proteção antigos ou outros dados de proteção no formato atual de dados de reivindicação GD.
+# Nota: É recomendado fazer backup dos dados antes de usar.
 migrator {
-    # Set to true to enable the griefprevention bukkit migrator.
-    # Note: Migrates GP bukkit classic claim data and GPFlags data, if available, to current format.
-    # Note: It is recommended to backup data before using.
+    # Defina como true para ativar o migrador bukkit de prevenção de luto.
+    # Nota: Migra dados de declaração clássica do GP bukkit e dados GPFlags, se disponíveis, para o formato atual.
+    # Nota: É recomendado fazer backup dos dados antes de usar.
     griefprevention-bukkit=false
-    # Set to true to enable the griefprevention sponge migrator.
-    # Note: Migrates GP sponge claim data to current format.
-    # Note: It is recommended to backup data before using.
+    # Defina como true para ativar o migrador de esponja de prevenção do luto.
+    # Nota: Migra dados de reivindicação de esponja GP para o formato atual.
+    # Nota: É recomendado fazer backup dos dados antes de usar.
     griefprevention-sponge=false
-    # Set to true to enable the legacy playerdata file migrator.
-    # Note: Migrates legacy playerdata file format to permissions storage such as LuckPerms json or mysql storage.
-    # Note: Before turning this on, make sure you properly set 'context-storage-type' in the the playerdata section of this config.
-    # Note: It is HIGHLY recommended to backup your permissions database before running this migrator as all local playerdata files will be migrated to it.
-    # Note: Do NOT run this migrator on more than one server if multiple servers share the same permissions database.
+    # Defina como verdadeiro para ativar o migrador de arquivo playerdata legado.
+    # Nota: Migra o formato de arquivo playerdata herdado para armazenamento de permissões, como LuckPerms json ou armazenamento mysql.
+    # Nota: Antes de ativar isso, certifique-se de definir corretamente o 'context-storage-type' na seção playerdata desta configuração.
+    # Nota: É ALTAMENTE recomendado fazer backup do seu banco de dados de permissões antes de executar este migrador, pois todos os arquivos locais do playerdata serão migrados para ele.
+    # Nota: NÃO execute este migrador em mais de um servidor se vários servidores compartilharem o mesmo banco de dados de permissões.
     playerdata=false
-    # Set to true to enable RedProtect data migrator.
-    # Note: All RedProtect data will be converted into basic claim data.
+    # Defina como verdadeiro para ativar o migrador de dados RedProtect.
+    # Nota: Todos os dados do RedProtect serão convertidos em dados básicos de reivindicação.
     red-protect=false
-    # Set to true to enable WorldGuard data migrator.
-    # Note: Only cuboid regions are supported.
-    # Note: It is recommended to backup data before using.
+    # Defina como verdadeiro para ativar o migrador de dados WorldGuard.
+    # Nota: Apenas regiões cubóides são suportadas.
+    # Nota: É recomendado fazer backup dos dados antes de usar.
     worldguard=false
 }
 ```
@@ -101,15 +101,15 @@ Observação: certifique-se de ler o comentário com atenção, pois há coisas 
 9. Localize a seção
 ```
 playerdata {
-    # Determines which claim block system to use for claims. (Default: AREA)
-    # If set to VOLUME, claim blocks will use the chunk count system to balance 3d claiming.
-    # If set to AREA, the standard 2d block count system will be used.
+    # Determina qual sistema de bloqueio de declarações usar para declarações. (Padrão: AREA)
+    # Se definido como VOLUME, os blocos de reivindicação usarão o sistema de contagem de blocos para equilibrar a reivindicação 3D.
+    # Se definido como AREA, o sistema padrão de contagem de blocos 2D será usado.
     claim-block-system=AREA
-    # The context type used when storing playerdata within a permissions database.
-    # Available types are : global, server, world. (Default: global)
-    # Global will store data globally shared by all servers.
-    # Server will store data per server. Note: This requires servername to be properly set in permissions config.
-    # World will store data per world.
+    # O tipo de contexto usado ao armazenar playerdata em um banco de dados de permissões.
+    # Os tipos disponíveis são: global, servidor, mundo. (Padrão: global)
+    # Global armazenará dados compartilhados globalmente por todos os servidores.
+    # O servidor armazenará dados por servidor. Nota: Isso requer que o nome do servidor seja definido corretamente na configuração de permissões.
+    # World armazenará dados por mundo.
     context-storage-type=global
     ...
 }

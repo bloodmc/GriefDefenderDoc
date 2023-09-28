@@ -35,7 +35,7 @@ Contexto                                          |     Valor     | Descrição 
 ```run_as```   |   ```console```<br>```player```   | Execute o comando como console ou player. <br />Nota: Este contexto só se aplica a `griefdefender.player-command-enter` e `griefdefender.player-command-exit` opções
 ```run_for```   |   ```member```<br>```owner```<br>```public```   | Execute o comando apenas para membros com trust na reivindicação, apenas para o proprietário da reivindicação ou apenas para todos, exceto o proprietário da reivindicação. Mais de um pode ser usado ao mesmo tempo para usuários efetuados desejados. <br />Nota: Este contexto só se aplica às opções `griefdefender.player-command-enter` e `griefdefender.player-command-exit`
 ```server```   |   `<server_name>`  | Aplica bandeira a um servidor específico.<br />Nota: Isso usa o nome do servidor especificado no plugin de permissões. Se nenhum contexto de servidor for especificado ou o nome do servidor não estiver definido, o padrão será `global`.
-```world```   |   `<world_name>`  | Aplica bandeira a um mundo específico.
+```world```   |   `<nome_do_mundo>`  | Aplica bandeira a um mundo específico.
 
 Nota: Cada permissão de bandeira ou opção SEMPRE conterá um dos seguintes contextos principais `gd_claim`, `gd_claim_default` ou `gd_claim_override`.
 Nota: Ao usar contextos com comandos `/cf`, `/claimoption` ou `flags.conf`, você pode usar os seguintes aliases para chaves de contexto
