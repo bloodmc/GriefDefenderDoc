@@ -20,7 +20,7 @@ Context                                          |     Value     | Description |
 ```gd_rent```             |   ```rent```         | Apply flag for rental claims.
 ```source```   |   `<source_id>`  | Applies flag to a specific source. <br />Example: `minecraft:creeper`
 ```target```   |   `<target_id>`  | Applies flag to a specific target. <br />Example: `minecraft:player` <br />Note: Target is **ALWAYS** required after the flag in /cf command usage, but more than one target can be specified with use of context.
-```state```   |   `<state>`  | Applies flag to a specific block state. <br />Example: `powered:true` <br /> See https://minecraft.gamepedia.com/Block_states for a list of all vanilla block states.
+```state```   |   `<state>`  | Applies flag to a specific block state. <br />Example: `powered:true` <br /> See https://minecraft.wiki/w/Block_states for a list of all vanilla block states.
 ```used_item``` |   `<item_id>`  | Applies flag to a specific used item. <br />Example: `minecraft:diamond_sword`
 ```boots```   |   `<item_id>`   | Applies flag to specific worn boots. <br />Example: `minecraft:diamond_boots`
 ```chestplate```   |   `<item_id>`   | Applies flag to a specific worn chestplate. <br />Example: `minecraft:diamond_chestplate`

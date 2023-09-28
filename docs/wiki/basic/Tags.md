@@ -22,7 +22,7 @@ etc..
 
 This would become tedious very quickly and clutter up your permissions.  
 
-With the tag system, you can use the delivered tag for all standing signs named [#standing_signs](https://minecraft.gamepedia.com/Tag#blocks_standing_signs)
+With the tag system, you can use the delivered tag for all standing signs named [#standing_signs](https://minecraft.wiki/w/Tag#blocks_standing_signs)
 
 So the above commands would become one single command
 
@@ -34,15 +34,15 @@ This gives the user extreme flexibility for protecting not just one thing but ma
 Note: Tag names will ALWAYS begin with the character `#`  
 
 Now let's assume you have special needs and the delivered vanilla tags do not provide everything for your server.  
-This is where a [Data Pack](https://minecraft.gamepedia.com/Data_Pack) would come into play.  
+This is where a [Data Pack](https://minecraft.wiki/w/Data_pack) would come into play.  
 
-A [Data Pack](https://minecraft.gamepedia.com/Data_Pack) allows a server admin to enhance the minecraft experience with custom advancements, recipes, loot tables, tags, and more. 
+A [Data Pack](https://minecraft.wiki/w/Data_pack) allows a server admin to enhance the minecraft experience with custom advancements, recipes, loot tables, tags, and more. 
 
 To create a datapack to use custom tags for your server , the following would have to be done  
 
 1. Navigate to world folder you want to use datapack in.  
 Ex. `./world/datapacks`  
-2. Create a datapack by following instructions [here](https://minecraft.gamepedia.com/Data_Pack)  
+2. Create a datapack by following instructions [here](https://minecraft.wiki/w/Data_pack)  
 Note: The datapacks folder structure should be setup as follows within the world folder  
 ```
 datapacks/

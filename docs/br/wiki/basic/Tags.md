@@ -22,7 +22,7 @@ etc..
 
 Isso se tornaria tedioso muito rapidamente e atrapalharia suas permissões.
 
-Com o sistema de tags, você pode usar a tag entregue para todos os placas permanentes chamados [Veja a página](https://minecraft.wiki/w/Tag)
+Com o sistema de tags, você pode usar a tag entregue para todos os placas permanentes chamados [#standing_signs](https://minecraft.wiki/w/Tag#blocks_standing_signs)
 
 Então os comandos acima se tornariam um único comando
 
