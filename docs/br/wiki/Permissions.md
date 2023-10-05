@@ -196,6 +196,15 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.user.claim.trust.manager | Permite adicionar managers |
 | griefdefender.user.claim.trust.remove | Permite untrust de jogadores |
 
+## Interface de Trust
+| Node de permissão | Descrição |
+| --------- | ----------- |
+| griefdefender.advanced.user.gui.flag.group.owner | Adiciona interface para controlar o trust de owner (dono) |
+| griefdefender.advanced.user.gui.flag.group.accessor | Adiciona interface para controlar o trust de accessor |
+| griefdefender.advanced.user.gui.flag.group.container | Adiciona interface para controlar o trust de container |
+| griefdefender.advanced.user.gui.flag.group.builder | Adiciona interface para controlar o trust de builder |
+| griefdefender.advanced.user.gui.flag.group.manager | Adiciona interface para controlar o trust de manager |
+
 # Permissões administrativas
 
 | Node de permissão | Descrição |

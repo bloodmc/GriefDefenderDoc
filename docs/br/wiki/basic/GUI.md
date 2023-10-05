@@ -127,7 +127,15 @@ Mote: Digite `public` para confiar em todos.
 
 Se confiar em um grupo, você deverá inserir um nome de grupo no formato `grupo <nome>`. Apague `<nome>` e insira um grupo LP válido.
 
+## Controla os tipos de confiança que aparecerão na Interface
 
+Todos os jogadores agora usam PÚBLICO na Interface, por padrão. Os outros tipos de grupo de controladores anteriores `OWNER, ACCESSOR, CONTAINER, BUILDER, MANAGER`  
+agora exigirá as seguintes permissões:    
+`griefdefender.advanced.user.gui.flag.group.owner` Mostra a Interface para controle do Owner.  
+`griefdefender.advanced.user.gui.flag.group.accessor` Mostra a Interface para controle do Accessor.  
+`griefdefender.advanced.user.gui.flag.group.container` Mostra a Interface para controle do Container.  
+`griefdefender.advanced.user.gui.flag.group.builder` Mostra a Interface para controle do Builder.  
+`griefdefender.advanced.user.gui.flag.group.manager` Mostra a Interface para controle do Manager.  
 
 ## Inventario
 
