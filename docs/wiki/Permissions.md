@@ -196,14 +196,14 @@ _*See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for informat
 | griefdefender.user.claim.trust.manager | Allows to add managers |
 | griefdefender.user.claim.trust.remove | Allows to untrust players |
 
-## Interface de Trust
-| Node de permissão | Descrição |
+## Trust interface
+| Permission Node | Description |
 | --------- | ----------- |
-| griefdefender.advanced.user.gui.flag.group.owner | Adiciona interface para controlar o trust de owner (dono) |
-| griefdefender.advanced.user.gui.flag.group.accessor | Adiciona interface para controlar o trust de accessor |
-| griefdefender.advanced.user.gui.flag.group.container | Adiciona interface para controlar o trust de container |
-| griefdefender.advanced.user.gui.flag.group.builder | Adiciona interface para controlar o trust de builder |
-| griefdefender.advanced.user.gui.flag.group.manager | Adiciona interface para controlar o trust de manager |
+| griefdefender.advanced.user.gui.flag.group.owner | Adds a button to the interface to control the trust of owner |
+| griefdefender.advanced.user.gui.flag.group.accessor | Adds a button to the interface to control the trust of accessor |
+| griefdefender.advanced.user.gui.flag.group.container | Adds a button to the interface to control the trust of container |
+| griefdefender.advanced.user.gui.flag.group.builder | Adds a button to the interface to control the trust of builder |
+| griefdefender.advanced.user.gui.flag.group.manager | Adds a button to the interface to control the trust of manager |
 
 # Admin Permissions
 
