@@ -269,29 +269,32 @@ Manages plugin providers that GD hooks into for extended functionality.
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | active-claim-visual-time | The active time, in seconds, to keep a claim's visuals shown to a player. <br />Note: If value is <= 0, GD will use the default value. | 60 |
-| active-create-block-visual-time | The active time, in seconds, to keep a claim's create block visual shown to a player. <br />Note: This only applies during claim creation. <br />Note: If value is <= 0, GD will use the default value. | 180 |
-| client-visuals-per-tick | The amount of block visuals a client can receive per tick when showing/hiding claims. | 12 |
-| cuboid-level-visuals-2d | Whether to use cuboid visuals, in 2D claims, during inspection with owner min/max claim levels between 0 and 255 or 0 and 319 for MC 1.17+. <br />Note: WECUI visuals are not associated to this option. <br />Note: If enabled, this will send many block updates to players causing more client strain depending on size of claim. Use with caution. | FALSE |
-| filler-spacing | The space between each filler visual block. | 10 |
-| hide-borders-when-using-wecui | Whether to hide the glowstone/gold block borders when using WECUI. | FALSE |
-| hide-fillers-when-using-wecui | Whether to hide the block fillers when using WECUI. | TRUE |
-| hide-wecui-drag-visuals-2d | Whether drag visuals should be shown while creating a claim in 2D mode. | TRUE |
-| claim-create-block | The visual block used during claim creation. | minecraft:diamond_block |
-| admin-accent-block | The visual accent block used for admin claims. | minecraft:pumpkin |
-| admin-corner-block | The visual corner block used for admin claims. | minecraft:glowstone |
-| admin-filler-block | The visual filler block used for admin claims. | minecraft:pumpkin |
-| basic-accent-block | The visual accent block used for basic claims. | minecraft:gold_block |
-| basic-corner-block | The visual corner block used for basic claims. | minecraft:glowstone |
-| basic-filler-block | The visual filler block used for basic claims. | minecraft:gold_block |
-| error-accent-block | The visual accent block used to visualize an error in a claim. | minecraft:netherrack |
-| error-corner-block | The visual corner block used to visualize an error in a claim. | minecraft:redstone_ore |
-| error-filler-block | The visual filler block used to visualize an error in a claim. | minecraft:diamond_block |
-| subdivision-accent-block | The visual accent block used for subdivision claims. | minecraft:white_wool or minecraft:wool for legacy versions |
-| subdivision-corner-block | The visual corner block used for subdivision claims. (Default: minecraft:iron_block) | minecraft:iron_block |
-| subdivision-filler-block | The visual filler block used for subdivision claims. (Default: minecraft:white_wool or minecraft:wool for legacy versions) | minecraft:white_wool |
-| town-accent-block | The visual accent block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
-| town-corner-block | The visual corner block used for town claims. (Default: minecraft:glowstone) | minecraft:glowstone |
-| town-filler-block | The visual filler block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
+| active-create-block-visual-time | # The active time, in seconds, to keep a claim's create block visual shown to a player. (Default: 180) # Note: This only applies during claim creation. # Note: If value is <= 0, GD will use the default value.
+| admin-accent-block | # The visual accent block used for admin claims. (Default: minecraft:pumpkin) | minecraft:pumpkin |
+| admin-corner-block | # The visual corner block used for admin claims. (Default: minecraft:glowstone) | minecraft:glowstone |
+| admin-filler-block | # The visual filler block used for admin claims. (Default: minecraft:pumpkin) | minecraft:pumpkin |
+| basic-accent-block | # The visual accent block used for basic claims. (Default: minecraft:gold_block) | minecraft:gold_block |
+| basic-corner-block | # The visual corner block used for basic claims. (Default: minecraft:glowstone) | minecraft:glowstone |
+| basic-filler-block | # The visual filler block used for basic claims. (Default: minecraft:gold_block) | minecraft:gold_block |
+| claim-create-block | # The visual block used during claim creation. (Default: minecraft:diamond_block) | minecraft:diamond_block |
+| client-visuals-per-tick | # The amount of block visuals a client can receive per tick when showing/hiding claims. Default: 12 | 12 |
+| cuboid-level-visuals-2d | # Whether to use cuboid visuals, in 2D claims, during inspection with owner min/max claim levels between 0 and 255. # Note: WECUI visuals are not associated to this option. # Note: If enabled, this will send many block updates to players causing more client strain depending on size of claim. Use with caution. | false |
+| error-accent-block | # The visual accent block used to visualize an error in a claim. (Default: minecraft:netherrack) | minecraft:netherrack |
+| error-corner-block | # The visual corner block used to visualize an error in a claim. (Default: minecraft:redstone_ore) | minecraft:redstone_ore |
+| error-filler-block | # The visual filler block used to visualize an error in a claim. (Default: minecraft:netherrack) | minecraft:netherrack |
+| filler-spacing | # The space between each filler visual block. | 10 |
+| hide-borders-when-using-wecui | # Whether to hide the glowstone/gold block borders when using WECUI. | false |
+| hide-fillers-when-using-wecui | # Whether to hide the block fillers when using WECUI. | true |
+| hide-wecui-drag-visuals-2d | # Whether drag visuals should be shown while creating a claim in 2D mode. | true |
+| nature-accent-block | # The visual accent block used while in restore nature mode. (Default: minecraft:diamond_block) | minecraft:diamond_block |
+| nature-corner-block | # The visual corner block used while in restore nature mode. (Default: minecraft:diamond_block) | minecraft:diamond_block |
+| subdivision-accent-block | # The visual accent block used for subdivision claims. (Default: minecraft:white_wool or minecraft:wool for legacy versions) | minecraft:white_wool |
+| subdivision-corner-block | # The visual corner block used for subdivision claims. (Default: minecraft:iron_block) | minecraft:iron_block |
+| subdivision-corner-block | # The visual corner block used for subdivision claims. (Default: minecraft:iron_block) | minecraft:iron_block |
+| subdivision-filler-block | # The visual filler block used for subdivision claims. (Default: minecraft:white_wool or minecraft:wool for legacy versions) | minecraft:white_wool |
+| town-accent-block | # The visual accent block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
+| town-corner-block | # The visual corner block used for town claims. (Default: minecraft:glowstone) | minecraft:glowstone |
+| town-filler-block | # The visual filler block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
 
 # World
 | Variable | Description | Default Value |
