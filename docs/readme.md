@@ -36,7 +36,7 @@ features:
 
   - title: Interactive UI
     icon: smallscreen
-    details: Clickable texts in chat .Handle everything there.
+    details: Clickable texts in chat. Handle everything there.
     link: /wiki/basic/GUI.html#chat
 
   - title: Mod Support
