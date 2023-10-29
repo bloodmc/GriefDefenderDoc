@@ -28,7 +28,7 @@ Veja [Opções](/br/wiki/basic/Options.html#opcoes-de-reivindicacao) para obter 
 ### 3D
 
 Em modo 3D cria uma reivindicação por `VOLUME` (X, Y e Z). É o mesmo que 2D, exceto que respeita a altura do bloco de suas seleções. Este modo é ideal para subdivisões (reivindicações em modo subdivisão ou de marcação de lã branca). Por exemplo, se você deseja criar um edifício com andares, pode usar este modo para que a altura seja respeitada.
-Nota: Para mudar para este modo, use o comando `/cuboid` ou `/gd cuboid`. Para sair de volta ao modo 2D, digite o mesmo comando.
+Nota: Para mudar para este modo, use o comando `/cuboid` ou `/gd toggle cuboid`. Para sair de volta ao modo 2D, digite o mesmo comando.
 
 ### Forçar os jogadores a usar o padrão 3D no login
 

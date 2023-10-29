@@ -29,7 +29,7 @@ See [Claim Options](/wiki/basic/Options.html#claim-options) for more info on cla
 ### 3D
 
 A 3D claim creates a claim by `VOLUME` (X, Y, and Z). It is the same as 2D except it respects the block height from your selections. This mode is ideal perfect for subdivisions (child claims). For example, if you wanted to create a building with floors you could use this mode so the height is respected.  
-Note: To switch to this mode, use the command `/cuboid` or  `/gd cuboid`. To exit back to 2D mode, enter the same command.
+Note: To switch to this mode, use the command `/cuboid` or  `/gd toggle cuboid`. To exit back to 2D mode, enter the same command.
 
 ### Force players to default to 3D on login
 

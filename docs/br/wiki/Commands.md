@@ -45,7 +45,7 @@ Se estiver usando um identificador para outro jogador, o formato é `<jogador>:<
 * [/gd claim we](#gd-claim-we)
 * [/gd claimgroup admin [\<join\>|\<unjoin\>|\<create\>|\<delete\>]](#gd-claimgroup-admin)
 * [/gd claimgroup player [\<join\>|\<unjoin\>|\<create\>|\<delete\>]](#gd-claimgroup-player)
-* [/gd cuboid](#gd-cuboid)
+* [/gd toggle cuboid](#gd-toggle-cuboid)
 * [/gd mode basic](#gd-mode-basic)
 * [/gd mode subdivide](#gd-mode-subdivide)
 * [/gd mode town](#gd-mode-town)
@@ -271,7 +271,7 @@ Usado para gerenciar grupos de reivindicações de jogadores.
 
 
 ___
-#### `/gd cuboid`
+#### `/gd toggle cuboid`
 **Atalho**: `cuboid`  
 
 Alterna o modo de reivindicações do cuboide 3D.

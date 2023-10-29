@@ -40,61 +40,61 @@ Version based on release file: GriefDefender 2.4.3
 # claim
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| auto-chest-claim-block-radius | adius used (in blocks) for auto-created claim when a chest is placed. Set to 0 to disable chest claim creation | 4 |
-| border-block-radius | # Set claim border of specified radius (in blocks), centered on claim. If set to 1, adds an additional 1 block protected radius around claim. # Note: It is not recommended to set this value too high as performance can degrade due to deeper claim searches. | 0 |
-| child-inherit-permissions | # Whether children claims should inherit parent permissions when inheritance is turned on. (Default: False)   # Note: This will impact performance as each child claim will need to perform additional permission lookups on parent claims. | false |
-| child-inherit-trust | # Whether children claims should inherit parent trust when inheritance is turned on. (Default: False) | false |
-| claim-block-task | # Whether claim block task should run to accrue blocks for players. (Default: True) # Note: If in economy-mode, use setting 'use-claim-block-task' under economy category. # Note: To configure amount accrued, see 'blocks-accrued-per-hour' option at https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#global-options | true |
-| claim-block-task-move-threshold | # The minimum threshold of movement (in blocks) required to receive accrued claim blocks. (Default: 0) # Note: The claim block task runs every 5 minutes which is the time each player will get to move the required amount of blocks. | 0 |
+| auto-chest-claim-block-radius | Radius used (in blocks) for auto-created claim when a chest is placed. Set to 0 to disable chest claim creation | 4 |
+| border-block-radius | Set claim border of specified radius (in blocks), centered on claim. If set to 1, adds an additional 1 block protected radius around claim. <br  /> Note: It is not recommended to set this value too high as performance can degrade due to deeper claim searches. | 0 |
+| child-inherit-permissions | Whether children claims should inherit parent permissions when inheritance is turned on. (Default: False)   <br  /> Note: This will impact performance as each child claim will need to perform additional permission lookups on parent claims. | false |
+| child-inherit-trust | Whether children claims should inherit parent trust when inheritance is turned on. (Default: False) | false |
+| claim-block-task | Whether claim block task should run to accrue blocks for players. (Default: True) <br  /> Note: If in economy-mode, use setting 'use-claim-block-task' under economy category. <br  /> Note: To configure amount accrued, see 'blocks-accrued-per-hour' option at https://github.com/bloodmc/GriefDefender/wiki/Options-(Meta)#global-options | true |
+| claim-block-task-move-threshold | The minimum threshold of movement (in blocks) required to receive accrued claim blocks. (Default: 0) <br  /> Note: The claim block task runs every 5 minutes which is the time each player will get to move the required amount of blocks. | 0 |
 | claim-create-radius-limit | The radius limit for the /claimcreate command. (Default: 256) | 256 |
-| claims-enabled | # Whether claiming is enabled or not. (0 = Disabled, 1 = Enabled) | 1 |
+| claims-enabled | Whether claiming is enabled or not. (0 = Disabled, 1 = Enabled) | 1 |
 
 # creation-settings
- Controls claim creation default settings. # Note: Admins are able to alter these settings per claim by using '/claiminfo' then clicking 'Admin Settings'.  
+ Controls claim creation default settings. <br  /> Note: Admins are able to alter these settings per claim by using '/claiminfo' then clicking 'Admin Settings'.  
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| expirable |  # Whether claims can expire by default. (Default: True) | true |
-| inherit-parent | # Whether claims should inherit their parent on creation. (Default: False) # Note: This setting does not affect a claim whose parent is a town. | false |
-| max-world-height-override | # The maximum world height override used during claim creation. # Note: Requires 'override-world-height' to be enabled. | 255 |
-| min-world-height-override | # The minimum world height override used during claim creation. # Note: Requires 'override-world-height' to be enabled. | 0 |
-| override-world-height | # Whether claim heights are taken from config instead of world. (Default: False) # Note: Enable this setting if using custom datapack that alters the default world height. | false |
-| requires-claim-blocks | # Whether claims requires claim blocks on creation. (Default: True) | true |
-| resizable | # Whether claims can be resized on creation. (Default: True) | true |
-| show-deny-messages | # Whether claims can show deny messages to players by default. (Default: True) | true |
+| expirable | Whether claims can expire by default. (Default: True) | true |
+| inherit-parent | Whether claims should inherit their parent on creation. (Default: False) <br  /> Note: This setting does not affect a claim whose parent is a town. | false |
+| max-world-height-override | The maximum world height override used during claim creation. <br  /> Note: Requires 'override-world-height' to be enabled. | 255 |
+| min-world-height-override | The minimum world height override used during claim creation. <br  /> Note: Requires 'override-world-height' to be enabled. | 0 |
+| override-world-height | Whether claim heights are taken from config instead of world. (Default: False) <br  /> Note: Enable this setting if using custom datapack that alters the default world height. | false |
+| requires-claim-blocks | Whether claims requires claim blocks on creation. (Default: True) | true |
+| resizable | Whether claims can be resized on creation. (Default: True) | true |
+| show-deny-messages | Whether claims can show deny messages to players by default. (Default: True) | true |
 
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| explosion-block-surface-blacklist | # A list of source id's that cannot cause explosion damage to blocks above sea level. # Ex. If you add "minecraft:creeper" to the list, creepers would not be able to cause blocks to explode above sea level.  # Note: This will have higher priority than 'explosion-block' flag. # Note: All id's added to the list must be surrounded in quotes. Ex. ["minecraft:creeper"] | [] |
-| explosion-entity-surface-blacklist | # A list of id's that cannot cause explosion damage to entities above sea level. # Ex. If you add "minecraft:creeper" to the list, creepers would not be able to hurt entities above sea level. # Note: This will have higher priority than 'explosion-entity' flag. # Note: All id's added to the list must be surrounded in quotes. Ex. ["minecraft:creeper"] | [] |
-| explosion-surface-block-level | # The 'Y' block level that is considered the surface for explosions. (Default: 63) | 63 |
-| inspection-tool | # The item used to inspect claims with a right-click. # Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. |  ["minecraft:stick"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
-| modification-tool | # The item used to create/resize claims with a right click. # Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | ["minecraft:golden_shovel"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
-| piston-protection-in-claims | # Whether piston protection should be enabled within claims. Note: This does not affect pistons crossing into another claim, that is always protected. This only determines whether or not GD should process pistons if it doesn't cross into another claim. | false |
-| player-trapped-cooldown | # The cooldown time, in seconds, when using the '/trapped' command. (Default: 300) | 300 |
-| protect-tamed-entities | # Whether tamed entities should be protected in claims. Default: true | true |
+| explosion-block-surface-blacklist | A list of source id's that cannot cause explosion damage to blocks above sea level. <br  /> Ex. If you add "minecraft:creeper" to the list, creepers would not be able to cause blocks to explode above sea level.  <br  /> Note: This will have higher priority than 'explosion-block' flag. <br  /> Note: All id's added to the list must be surrounded in quotes. Ex. ["minecraft:creeper"] | [] |
+| explosion-entity-surface-blacklist | A list of id's that cannot cause explosion damage to entities above sea level. <br  /> Ex. If you add "minecraft:creeper" to the list, creepers would not be able to hurt entities above sea level. <br  /> Note: This will have higher priority than 'explosion-entity' flag. <br  /> Note: All id's added to the list must be surrounded in quotes. Ex. ["minecraft:creeper"] | [] |
+| explosion-surface-block-level | The 'Y' block level that is considered the surface for explosions. (Default: 63) | 63 |
+| inspection-tool | The item used to inspect claims with a right-click. <br  /> Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. |  ["minecraft:stick"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
+| modification-tool | The item used to create/resize claims with a right click. <br  /> Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | ["minecraft:golden_shovel"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
+| piston-protection-in-claims | Whether piston protection should be enabled within claims. Note: This does not affect pistons crossing into another claim, that is always protected. This only determines whether or not GD should process pistons if it doesn't cross into another claim. | false |
+| player-trapped-cooldown | The cooldown time, in seconds, when using the '/trapped' command. (Default: 300) | 300 |
+| protect-tamed-entities | Whether tamed entities should be protected in claims. Default: true | true |
 
 # removal-settings
 Controls claim removal/expiration settings.  
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| admin-feature | # If enabled, all expired claims will become admin claims giving all users build trust. The claim will remain in this state until 'expiration-admin-keep' time runs out. (Default: False) | false |
-| admin-feature-keep | # The time in minutes for keeping an expired claim as an admin claim. When time expires, the admin claim will be deleted allowing any player to re-claim area. (Default: 1440) | 1440 |
-| admin-feature-message-claimblock-threshold | # The minimum claim size, in claimblocks, required for an expiration announcement message to be sent to all players. (Default: 5000) | 5000 |
-| admin-feature-message-show-coords | # Whether the admin expiration message should show the coordinates for players to see. (Default: False) | false |
-| auto-nature-restore | # Whether survival claims will be automatically restored to world generated state when expired.  # Note: This only supports world generated blocks. Consider using 'auto-schematic-restore' if using a custom world. | false |
-| auto-schematic-restore | # Whether survival claims will be automatically restored to its claim creation schematic on abandon/expiration. # Note: Enabling this feature will cause ALL newly created claims to automatically create a special schematic that will be used to restore claim on abandon/expiration. # Note: Enabling this feature will disable ability to resize claims. # Note: It is HIGHLY recommended to disable building in the wilderness before using this feature to avoid players exploiting. # Note: It is also recommended to ONLY use this feature in newly created worlds where there is no existing player data. # Note: This does NOT affect deletions. If admins want to restore back to original schematic, they can select '__restore__' by using /claimschematic command. | false |
-| cleanup-interval |  # The interval in minutes for cleaning up expired claims. Default: 0. Set to 0 to disable. | 0 |
+| admin-feature | If enabled, all expired claims will become admin claims giving all users build trust. The claim will remain in this state until 'expiration-admin-keep' time runs out. (Default: False) | false |
+| admin-feature-keep | The time in minutes for keeping an expired claim as an admin claim. When time expires, the admin claim will be deleted allowing any player to re-claim area. (Default: 1440) | 1440 |
+| admin-feature-message-claimblock-threshold | The minimum claim size, in claimblocks, required for an expiration announcement message to be sent to all players. (Default: 5000) | 5000 |
+| admin-feature-message-show-coords | Whether the admin expiration message should show the coordinates for players to see. (Default: False) | false |
+| auto-nature-restore | Whether survival claims will be automatically restored to world generated state when expired.  <br  /> Note: This only supports world generated blocks. Consider using 'auto-schematic-restore' if using a custom world. | false |
+| auto-schematic-restore | Whether survival claims will be automatically restored to its claim creation schematic on abandon/expiration. <br  /> Note: Enabling this feature will cause ALL newly created claims to automatically create a special schematic that will be used to restore claim on abandon/expiration. <br  /> Note: Enabling this feature will disable ability to resize claims. <br  /> Note: It is HIGHLY recommended to disable building in the wilderness before using this feature to avoid players exploiting. <br  /> Note: It is also recommended to ONLY use this feature in newly created worlds where there is no existing player data. <br  /> Note: This does NOT affect deletions. If admins want to restore back to original schematic, they can select '__restore__' by using /claimschematic command. | false |
+| cleanup-interval |  The interval in minutes for cleaning up expired claims. Default: 0. Set to 0 to disable. | 0 |
 
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| reserved-claim-names | # A list of reserved claim names for use only by administrators. # Note: Names support wildcards '?' and '*' by using Apache's wildcard matcher. # The wildcard '?' represents a single character. # The wildcard '*' represents zero or more characters. # For more information on usage, see https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String) | [] |
-| restrict-world-max-height | # Whether to restrict claiming to world max height. (Default: True) | true |
-| teleports-use-border-event | # Whether teleports trigger claim border events. Default: True. # Note: Set to False if you want 'enter-claim' and 'exit-claim' to not be triggered by teleports. | true | 
+| reserved-claim-names | A list of reserved claim names for use only by administrators. <br  /> Note: Names support wildcards '?' and '*' by using Apache's wildcard matcher. <br  /> The wildcard '?' represents a single character. <br  /> The wildcard '*' represents zero or more characters. <br  /> For more information on usage, see https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String) | [] |
+| restrict-world-max-height | Whether to restrict claiming to world max height. (Default: True) | true |
+| teleports-use-border-event | Whether teleports trigger claim border events. Default: True. <br  /> Note: Set to False if you want 'enter-claim' and 'exit-claim' to not be triggered by teleports. | true | 
 
 # command
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| root-command-aliases | # The default root command aliases. # Note: If you want to supply additional aliases. | "gd griefdefender" |
+| root-command-aliases | The default root command aliases. <br  /> Note: If you want to supply additional aliases. | "gd griefdefender" |
 
 # context
 | Variable | Description | Default Value |
@@ -107,33 +107,33 @@ Controls claim removal/expiration settings.
 # economy
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| bank-system | # Whether to enable the bank system for claims. Set to true to enable. | false |
-| bank-transaction-log-limit | # The amount of transactions to keep for history. Default: 60 | 60 |
-| currency-symbol | # The currency symbol for economy messages. Default: $ | $ |
-| economy-mode | # Uses economy instead of player claim blocks for claim creation. # If true, disables the claim block system in favor of economy.  # Note: Using this mode disables the '/buyblocks' command as claim creation will pull funds directly from a player's economy balance. # Note: If players have existing claimblocks from past configurations, an admin must use the '/ecomigrateblocks' command to convert remainder to currency. | false |
+| bank-system | Whether to enable the bank system for claims. Set to true to enable. | false |
+| bank-transaction-log-limit | The amount of transactions to keep for history. Default: 60 | 60 |
+| currency-symbol | The currency symbol for economy messages. Default: $ | $ |
+| economy-mode | Uses economy instead of player claim blocks for claim creation. # If true, disables the claim block system in favor of economy.  <br  /> Note: Using this mode disables the '/buyblocks' command as claim creation will pull funds directly from a player's economy balance. <br  /> Note: If players have existing claimblocks from past configurations, an admin must use the '/ecomigrateblocks' command to convert remainder to currency. | false |
 
 # rent
 Use [RealEstate](/hooks/RealEstate.html) this is being discontinued
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | rent-blacklist | | |
-| rent-delinquent-task-apply-hour | # The specific hour in day to attempt to get owed claim rent balances from delinquent renters. Note: This uses military time and accepts values between 0-23. Default: 0 | 0 |
-| rent-max-time-limit | # Controls the maximum time limit(hours or days) that a claim owner can have their rental max set to. # Note: This only affects claim rentals that have a max specified. If no max is specified by the claim owner, a renter may rent as long as they want. | 100 |
-| rent-restore-day-warning | # Controls which day a player should start to receive warnings about their rented claim nearing expiration. # Ex. If set to '5', this will begin to send players messaging on login and at the rent apply hour when 5 days are remaining before expiration. # Note: This only applies if the owner has 'rent-restore' option enabled and the rent owner sets a max. | 5 |
-| rent-schematic-restore-admin | # Controls whether rented admin claims will use a schematic for restoration. # Note: If set, the claim will create a schematic on rental start and restore it back when rental ends. | false | 
-| rent-sign | # Whether rent signs are enabled. | false |
-| rent-system | # Controls whether the rent system is enabled. Note: This is currently experimental, use with caution. | false |
-| rent-task-interval | # The interval in minutes for checking claim rent payments that are due. Default: 1. Set to 0 to disable. | 1 |
-| rent-transaction-log-limit | # The amount of transactions to keep for history. Default: 60 | 60 |
+| rent-delinquent-task-apply-hour | The specific hour in day to attempt to get owed claim rent balances from delinquent renters. Note: This uses military time and accepts values between 0-23. Default: 0 | 0 |
+| rent-max-time-limit | Controls the maximum time limit(hours or days) that a claim owner can have their rental max set to. <br  /> Note: This only affects claim rentals that have a max specified. If no max is specified by the claim owner, a renter may rent as long as they want. | 100 |
+| rent-restore-day-warning | Controls which day a player should start to receive warnings about their rented claim nearing expiration. <br  /> Ex. If set to '5', this will begin to send players messaging on login and at the rent apply hour when 5 days are remaining before expiration. <br  /> Note: This only applies if the owner has 'rent-restore' option enabled and the rent owner sets a max. | 5 |
+| rent-schematic-restore-admin | Controls whether rented admin claims will use a schematic for restoration. <br  /> Note: If set, the claim will create a schematic on rental start and restore it back when rental ends. | false | 
+| rent-sign | Whether rent signs are enabled. | false |
+| rent-system | Controls whether the rent system is enabled. Note: This is currently experimental, use with caution. | false |
+| rent-task-interval | The interval in minutes for checking claim rent payments that are due. Default: 1. Set to 0 to disable. | 1 |
+| rent-transaction-log-limit | The amount of transactions to keep for history. Default: 60 | 60 |
 
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| sell-sign | # Whether sell signs are enabled. | false |
-| sign-update-interval | # The interval in minutes for updating sign data. Default: 1. Set to 0 to disable. | 1 |
-| tax-apply-hour | # The specific hour in day to apply tax to all claims. Note: This uses military time and accepts values between 0-23. Default: 0 | 0 |
-| tax-system | # Whether to enable the tax system for claims. Set to true to enable. | false |
-| tax-transaction-log-limit | # The amount of transactions to keep for history. Default: 60 | 60 |
-| use-claim-block-task | # Claim blocks earned will be converted to economy based on 'economy-block-cost'. # (Default: false) # Note: This setting can only be used if 'economy-mode' is true. | false |
+| sell-sign | Whether sell signs are enabled. | false |
+| sign-update-interval | The interval in minutes for updating sign data. Default: 1. Set to 0 to disable. | 1 |
+| tax-apply-hour | The specific hour in day to apply tax to all claims. Note: This uses military time and accepts values between 0-23. Default: 0 | 0 |
+| tax-system | Whether to enable the tax system for claims. Set to true to enable. | false |
+| tax-transaction-log-limit | The amount of transactions to keep for history. Default: 60 | 60 |
+| use-claim-block-task | Claim blocks earned will be converted to economy based on 'economy-block-cost'. <br  /> (Default: false) <br  /> Note: This setting can only be used if 'economy-mode' is true. | false |
 
 # Message
 | Variable | Description | Default Value |
@@ -170,7 +170,7 @@ Use [RealEstate](/hooks/RealEstate.html) this is being discontinued
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | entity-move-event | Allows GD's enter-claim and exit-claim to support non-player movement such as monsters and animals. | Default: false |
-| block-id-convert-list | # Used to override generic block id's to their actual id during TE and item usage if available. Add the target block id to list if you want to force a conversion when detected. # Note: This is useful for mods such as IC2 which uses the generic id 'ic2:te' for its multi-block. | "gregtech:machine", "ic2:te" |
+| block-id-convert-list | Used to override generic block id's to their actual id during TE and item usage if available. Add the target block id to list if you want to force a conversion when detected. <br  /> Note: This is useful for mods such as IC2 which uses the generic id 'ic2:te' for its multi-block. | "gregtech:machine", "ic2:te" |
 | fakeplayer-identifiers | Contains a list of strings used to identify a fakeplayer by UUID or name. To use, add the fakeplayer UUID or name. | ["41C82C87-7AfB-4024-BA57-13D2C99CAE77", BFC3377F-C3C9-3382-9DA6-79B50A9AFE57, "0D0C4CA0-4FF1-11E4-916C-0800200C9A66", "[Minecraft]", "OpenModsFakethis*"] |
 | mod-id-map | Used to map an unknown mod item/block/entity to a mod id. To use, add the mod package with a mapping to a mod id. Ex. 'com.pixelmonmod.*', 'pixelmon' would map an entity containing class name 'com.pixelmonmod.*' to 'pixelmon' | "com.pixelmonmod.*"=pixelmon |
 | tile-id-nbt-map | Used to override generic tileentity id's to their actual id during TE usage. Add the target TE id as key and NBT key where ID is stored as value. | "gregtech:machine"=MetaId |
@@ -269,32 +269,32 @@ Manages plugin providers that GD hooks into for extended functionality.
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | active-claim-visual-time | The active time, in seconds, to keep a claim's visuals shown to a player. <br />Note: If value is <= 0, GD will use the default value. | 60 |
-| active-create-block-visual-time | # The active time, in seconds, to keep a claim's create block visual shown to a player. (Default: 180) # Note: This only applies during claim creation. # Note: If value is <= 0, GD will use the default value.
-| admin-accent-block | # The visual accent block used for admin claims. (Default: minecraft:pumpkin) | minecraft:pumpkin |
-| admin-corner-block | # The visual corner block used for admin claims. (Default: minecraft:glowstone) | minecraft:glowstone |
-| admin-filler-block | # The visual filler block used for admin claims. (Default: minecraft:pumpkin) | minecraft:pumpkin |
-| basic-accent-block | # The visual accent block used for basic claims. (Default: minecraft:gold_block) | minecraft:gold_block |
-| basic-corner-block | # The visual corner block used for basic claims. (Default: minecraft:glowstone) | minecraft:glowstone |
-| basic-filler-block | # The visual filler block used for basic claims. (Default: minecraft:gold_block) | minecraft:gold_block |
-| claim-create-block | # The visual block used during claim creation. (Default: minecraft:diamond_block) | minecraft:diamond_block |
-| client-visuals-per-tick | # The amount of block visuals a client can receive per tick when showing/hiding claims. Default: 12 | 12 |
-| cuboid-level-visuals-2d | # Whether to use cuboid visuals, in 2D claims, during inspection with owner min/max claim levels between 0 and 255. # Note: WECUI visuals are not associated to this option. # Note: If enabled, this will send many block updates to players causing more client strain depending on size of claim. Use with caution. | false |
-| error-accent-block | # The visual accent block used to visualize an error in a claim. (Default: minecraft:netherrack) | minecraft:netherrack |
-| error-corner-block | # The visual corner block used to visualize an error in a claim. (Default: minecraft:redstone_ore) | minecraft:redstone_ore |
-| error-filler-block | # The visual filler block used to visualize an error in a claim. (Default: minecraft:netherrack) | minecraft:netherrack |
-| filler-spacing | # The space between each filler visual block. | 10 |
-| hide-borders-when-using-wecui | # Whether to hide the glowstone/gold block borders when using WECUI. | false |
-| hide-fillers-when-using-wecui | # Whether to hide the block fillers when using WECUI. | true |
-| hide-wecui-drag-visuals-2d | # Whether drag visuals should be shown while creating a claim in 2D mode. | true |
-| nature-accent-block | # The visual accent block used while in restore nature mode. (Default: minecraft:diamond_block) | minecraft:diamond_block |
-| nature-corner-block | # The visual corner block used while in restore nature mode. (Default: minecraft:diamond_block) | minecraft:diamond_block |
-| subdivision-accent-block | # The visual accent block used for subdivision claims. (Default: minecraft:white_wool or minecraft:wool for legacy versions) | minecraft:white_wool |
-| subdivision-corner-block | # The visual corner block used for subdivision claims. (Default: minecraft:iron_block) | minecraft:iron_block |
-| subdivision-corner-block | # The visual corner block used for subdivision claims. (Default: minecraft:iron_block) | minecraft:iron_block |
-| subdivision-filler-block | # The visual filler block used for subdivision claims. (Default: minecraft:white_wool or minecraft:wool for legacy versions) | minecraft:white_wool |
-| town-accent-block | # The visual accent block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
-| town-corner-block | # The visual corner block used for town claims. (Default: minecraft:glowstone) | minecraft:glowstone |
-| town-filler-block | # The visual filler block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
+| active-create-block-visual-time | The active time, in seconds, to keep a claim's create block visual shown to a player. (Default: 180) <br  /> Note: This only applies during claim creation. <br  /> Note: If value is <= 0, GD will use the default value.
+| admin-accent-block | The visual accent block used for admin claims. (Default: minecraft:pumpkin) | minecraft:pumpkin |
+| admin-corner-block | The visual corner block used for admin claims. (Default: minecraft:glowstone) | minecraft:glowstone |
+| admin-filler-block | The visual filler block used for admin claims. (Default: minecraft:pumpkin) | minecraft:pumpkin |
+| basic-accent-block | The visual accent block used for basic claims. (Default: minecraft:gold_block) | minecraft:gold_block |
+| basic-corner-block | The visual corner block used for basic claims. (Default: minecraft:glowstone) | minecraft:glowstone |
+| basic-filler-block | The visual filler block used for basic claims. (Default: minecraft:gold_block) | minecraft:gold_block |
+| claim-create-block | The visual block used during claim creation. (Default: minecraft:diamond_block) | minecraft:diamond_block |
+| client-visuals-per-tick | The amount of block visuals a client can receive per tick when showing/hiding claims. Default: 12 | 12 |
+| cuboid-level-visuals-2d | Whether to use cuboid visuals, in 2D claims, during inspection with owner min/max claim levels between 0 and 255. <br  /> Note: WECUI visuals are not associated to this option. <br  /> Note: If enabled, this will send many block updates to players causing more client strain depending on size of claim. Use with caution. | false |
+| error-accent-block | The visual accent block used to visualize an error in a claim. (Default: minecraft:netherrack) | minecraft:netherrack |
+| error-corner-block | The visual corner block used to visualize an error in a claim. (Default: minecraft:redstone_ore) | minecraft:redstone_ore |
+| error-filler-block | The visual filler block used to visualize an error in a claim. (Default: minecraft:netherrack) | minecraft:netherrack |
+| filler-spacing | The space between each filler visual block. | 10 |
+| hide-borders-when-using-wecui | Whether to hide the glowstone/gold block borders when using WECUI. | false |
+| hide-fillers-when-using-wecui | Whether to hide the block fillers when using WECUI. | true |
+| hide-wecui-drag-visuals-2d | Whether drag visuals should be shown while creating a claim in 2D mode. | true |
+| nature-accent-block | The visual accent block used while in restore nature mode. (Default: minecraft:diamond_block) | minecraft:diamond_block |
+| nature-corner-block | The visual corner block used while in restore nature mode. (Default: minecraft:diamond_block) | minecraft:diamond_block |
+| subdivision-accent-block | The visual accent block used for subdivision claims. (Default: minecraft:white_wool or minecraft:wool for legacy versions) | minecraft:white_wool |
+| subdivision-corner-block | The visual corner block used for subdivision claims. (Default: minecraft:iron_block) | minecraft:iron_block |
+| subdivision-corner-block | The visual corner block used for subdivision claims. (Default: minecraft:iron_block) | minecraft:iron_block |
+| subdivision-filler-block | The visual filler block used for subdivision claims. (Default: minecraft:white_wool or minecraft:wool for legacy versions) | minecraft:white_wool |
+| town-accent-block | The visual accent block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
+| town-corner-block | The visual corner block used for town claims. (Default: minecraft:glowstone) | minecraft:glowstone |
+| town-filler-block | The visual filler block used for town claims. (Default: minecraft:emerald_block) | minecraft:emerald_block |
 
 # World
 | Variable | Description | Default Value |
