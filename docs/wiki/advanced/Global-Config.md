@@ -34,7 +34,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Projectiles: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.4.3
+Version based on release file: GriefDefender 2.4.7-DEV1
 <hr>
 
 # claim
@@ -71,7 +71,7 @@ Version based on release file: GriefDefender 2.4.3
 | modification-tool | The item used to create/resize claims with a right click. <br  /> Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | ["minecraft:golden_shovel"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
 | piston-protection-in-claims | Whether piston protection should be enabled within claims. Note: This does not affect pistons crossing into another claim, that is always protected. This only determines whether or not GD should process pistons if it doesn't cross into another claim. | false |
 | player-trapped-cooldown | The cooldown time, in seconds, when using the '/trapped' command. | 300 |
-| protect-tamed-entities | Whether tamed entities should be protected in claims. | true |
+| protect-tamed-entities | Whether tamed entities should be protected in claims from non-owners. | true |
 
 # removal-settings
 Controls claim removal/expiration settings.  
@@ -100,7 +100,7 @@ Controls claim removal/expiration settings.
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | enchantments | Whether potion effect contexts should be applied during permission checks. | false |
-|ignored-debug-contexts | A list of ignored context values during debug. |  |
+|ignored-debug-contexts | A list of ignored context values during debug. | [] |
 | player-equipment | Whether player equipment contexts should be applied during permission checks. | true |
 | potion-effects | Whether potion effect contexts should be applied during permission checks. | true |
 
@@ -208,7 +208,7 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 # permission
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| griefdefender-claim-group-priority | | -80 |
+| griefdefender-claim-group-priority | | -75 |
 | griefdefender-claim-priority | | -60 |
 | griefdefender-default-priority | | -100 |
 | griefdefender-definition-priority | | -80 |
@@ -269,7 +269,7 @@ Manages plugin providers that GD hooks into for extended functionality.
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | active-claim-visual-time | The active time, in seconds, to keep a claim's visuals shown to a player. <br />Note: If value is <= 0, GD will use the default value. | 60 |
-| active-create-block-visual-time | The active time, in seconds, to keep a claim's create block visual shown to a player. <br  /> Note: This only applies during claim creation. <br  /> Note: If value is <= 0, GD will use the default value.
+| active-create-block-visual-time | The active time, in seconds, to keep a claim's create block visual shown to a player. <br  /> Note: This only applies during claim creation. <br  /> Note: If value is <= 0, GD will use the default value. | 180 |
 | admin-accent-block | The visual accent block used for admin claims. | minecraft:pumpkin |
 | admin-corner-block | The visual corner block used for admin claims. | minecraft:glowstone |
 | admin-filler-block | The visual filler block used for admin claims. | minecraft:pumpkin |

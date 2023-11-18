@@ -34,7 +34,7 @@ GriefDefender permite configuração modular. No entanto, de acordo com os arqui
 * Projéteis: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.4.3
+Version based on release file: GriefDefender 2.4.7-DEV1
 <hr>
 
 # claim
@@ -66,12 +66,12 @@ Controla as configurações padrão de criação de declarações. <br /> Obs: o
 | --------- | ----------- | ----------- |
 | explosion-block-surface-blacklist | Uma lista de IDs de origem que não podem causar danos por explosão em blocos acima do nível do mar. <br /> Ex. Se você adicionar "minecraft:creeper" à lista, as trepadeiras não serão capazes de fazer com que os blocos explodam acima do nível do mar. <br /> Nota: Isto terá maior prioridade do que o sinalizador 'explosion-block'. <br /> Nota: Todos os id's adicionados à lista devem estar entre aspas. Ex. ["minecraft:creeper"] | [] |
 | explosion-entity-surface-blacklist | Uma lista de identificações que não podem causar danos de explosão a entidades acima do nível do mar. <br /> Ex. Se você adicionar "minecraft:creeper" à lista, as trepadeiras não seriam capazes de ferir entidades acima do nível do mar. <br /> Nota: Isto terá maior prioridade do que o sinalizador ''explosion-entity'. <br /> Nota: Todos os id's adicionados à lista devem estar entre aspas. Ex. ["minecraft:creeper"] | [] |
-| explosion-surface-block-level | The 'Y' block level that is considered the surface for explosions. | 63 |
+| explosion-surface-block-level | O nível do bloco 'Y' que é considerado a superfície para explosões. | 63 |
 | inspection-tool | O item usado para inspecionar reclamações com um clique com o botão direito. <br /> Nota: Defina aspas vazias se não quiser atribuir nenhum item e usar exclusivamente o modo '/claim'. |  ["minecraft:stick"](/br/wiki/basic/Claim-Management.html#suporte-a-custommodeldata) |
 | modification-tool | O item usado para criar/redimensionar declarações com um clique direito. <br /> Nota: Defina aspas vazias se não quiser atribuir nenhum item e usar exclusivamente o modo '/claim'. | ["minecraft:golden_shovel"](/br/wiki/basic/Claim-Management.html#suporte-a-custommodeldata) |
 | piston-protection-in-claims | Se a proteção do pistão deve ser habilitada nas reivindicações. Nota: Isto não afeta os pistões que passam para outra reivindicação, que está sempre protegida. Isso apenas determina se a GD deve ou não processar pistões se não passar para outra reivindicação. | false |
 | player-trapped-cooldown | O tempo de espera, em segundos, ao usar o comando '/trapped'. | 300 |
-| protect-tamed-entities | Se as entidades domesticadas devem ser protegidas nas reivindicações. | true |
+| protect-tamed-entities | Se as entidades domesticadas devem ser protegidas em reivindicações de não-proprietários. | true |
 
 # removal-settings
 Controla as configurações de remoção/expiração de reivindicações.
@@ -100,7 +100,7 @@ Controla as configurações de remoção/expiração de reivindicações.
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
 | enchantments | Se os contextos de efeito de poção devem ser aplicados durante as verificações de permissão. | false |
-|ignored-debug-contexts | Uma lista de valores de contexto ignorados durante a depuração. |  |
+|ignored-debug-contexts | Uma lista de valores de contexto ignorados durante a depuração. | [] |
 | player-equipment | Se os contextos de equipamento do jogador devem ser aplicados durante as verificações de permissão. | true |
 | potion-effects | Se os contextos de efeito de poção devem ser aplicados durante as verificações de permissão. | true |
 
@@ -208,7 +208,7 @@ cache-entity-damage-expiration | Controla a quantidade de tempo, em segundos, pa
 # permission
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| griefdefender-claim-group-priority | | -80 |
+| griefdefender-claim-group-priority | | -75 |
 | griefdefender-claim-priority | | -60 |
 | griefdefender-default-priority | | -100 |
 | griefdefender-definition-priority | | -80 |
@@ -269,7 +269,7 @@ Gerencia provedores de plug-ins aos quais o GD se conecta para funcionalidade es
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
 | active-claim-visual-time | O tempo ativo, em segundos, para manter o visual de uma reivindicação mostrado ao jogador. <br />Nota: Se o valor for <= 0, GD usará o valor padrão. | 60 |
-| active-create-block-visual-time | O tempo ativo, em segundos, para manter o visual do bloco de criação de uma reivindicação mostrado a um jogador. <br /> Obs: isso se aplica somente durante a criação da reivindicação. <br /> Nota: Se o valor for <= 0, GD usará o valor padrão.
+| active-create-block-visual-time | O tempo ativo, em segundos, para manter o visual do bloco de criação de uma reivindicação mostrado a um jogador. <br /> Obs: isso se aplica somente durante a criação da reivindicação. <br /> Nota: Se o valor for <= 0, GD usará o valor padrão. | 180 |
 | admin-accent-block | O bloco de destaque visual usado para declarações administrativas. | minecraft:pumpkin |
 | admin-corner-block | O bloco de canto visual usado para reivindicações administrativas. | minecraft:glowstone |
 | admin-filler-block | O bloco de preenchimento visual usado para declarações administrativas. | minecraft:pumpkin |

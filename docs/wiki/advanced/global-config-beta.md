@@ -34,7 +34,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Projectiles: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.4.3
+Version based on release file: GriefDefender 2.4.7-DEV1
 <hr>
 
 # claim
@@ -71,7 +71,7 @@ Version based on release file: GriefDefender 2.4.3
 | modification-tool | The item used to create/resize claims with a right click. <br  /> Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | ["minecraft:golden_shovel"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
 | piston-protection-in-claims | Whether piston protection should be enabled within claims. Note: This does not affect pistons crossing into another claim, that is always protected. This only determines whether or not GD should process pistons if it doesn't cross into another claim. | false |
 | player-trapped-cooldown | The cooldown time, in seconds, when using the '/trapped' command. | 300 |
-| protect-tamed-entities | Whether tamed entities should be protected in claims. | true |
+| protect-tamed-entities | Whether tamed entities should be protected in claims from non-owners. | true |
 
 # removal-settings
 Controls claim removal/expiration settings.  
@@ -208,7 +208,7 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 # permission
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
-| griefdefender-claim-group-priority | | -80 |
+| griefdefender-claim-group-priority | | -75 |
 | griefdefender-claim-priority | | -60 |
 | griefdefender-default-priority | | -100 |
 | griefdefender-definition-priority | | -80 |
