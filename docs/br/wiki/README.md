@@ -34,7 +34,7 @@ Verifique na [Luckperms - Where to start](https://luckperms.net/wiki/Default-Gro
 
 @tab:active Bukkit
 :warning: Se estiver usando `spark`, Atualize para a [última versão](https://ci.lucko.me/job/spark/) :warning:   
-:warning: Defina [`spawn-protection`](https://minecraft.wiki/w/Server.properties#spawn-protection) para `0` dentro [`server.properties`](https://minecraft.wiki/w/Server.properties) para permitir que GD proteja o spawn. 
+:warning: Defina [`spawn-protection`](https://pt.minecraft.wiki/w/Server.properties#spawn-protection) para `0` dentro [`server.properties`](https://pt.minecraft.wiki/w/Server.properties) para permitir que GD proteja o spawn. 
 Se isso não for definido corretamente, o servidor bloqueará as ações antes que o GD tenha a chance de vê-lo. :warning:
 1. Instale o [LuckPerms](https://luckperms.net/) mais recente.
 2. Obtenha a versão mais recente do [GriefDefender](https://www.spigotmc.org/resources/68900/).

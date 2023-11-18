@@ -104,9 +104,9 @@ Um exemplo de saída é mostrado abaixo, seguido por uma explicação de cada co
 
 Esta coluna contém a bandeira base com o qual o evento foi verificado. por exemplo; `block-place` quando um bloco foi colocado no mundo.
 
-#### `Definition`
+#### `Flag Definition`
 
-Esta coluna contém a Definition (Encontrado na pasta `GriefDefender/Presets` dentro dos arquivos `.conf`) que mostra o origem da verificação do evento no presets.  
+Esta coluna contém a Flag Definition (Encontrado na pasta `GriefDefender/Presets` dentro dos arquivos `.conf`) que mostra o origem da verificação do evento no presets.  
 
 #### `Trust`
 
