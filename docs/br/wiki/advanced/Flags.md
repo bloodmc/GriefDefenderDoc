@@ -184,7 +184,7 @@ Todas as informações fornecidas dentro () serão um dos exemplos.
 ## Tipos de grupo de contexto GD personalizado
 
 O GD fornece alguns tipos de grupo de contexto que podem ser usados para especificar todo o tipo de algo, por exemplo, todos os monstros.
-> ** Nota: Começando com as versões MC 1.14+, GD se integra ao sistema de tags da Vanilla.É altamente recomendável usar o sistema de tags de baunilha.Consulte https://minecraft.gamepedia.com/tag para obter mais informações e https://minecraft.gamepedia.com/tutorials/creating_a_data_pack para obter mais informações.
+> ** Nota: Começando com as versões MC 1.14+, GD se integra ao sistema de tags da Vanilla.É altamente recomendável usar o sistema de tags de vanilla.Consulte https://pt.minecraft.wiki/w/Tag#Usos para obter mais informações e https://minecraft.wiki/w/Tutorials/Creating_a_data_pack para obter mais informações.
 
 ### Tags disponíveis
 

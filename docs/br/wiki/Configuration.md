@@ -55,9 +55,14 @@ Este comando suporta os seguintes argumentos `hand | <tipo> <alvo> [NomeDoMundo]
 | flag-id-blacklist | Uma lista de IDs ignorados por bandeiras. | [ ] |
 | global-source | Uma lista global de IDs de origem que são ignorados por eventos. <br />Nota: Isso afeta apenas eventos em que o id especificado é a source (origem). | [ ] |
 | global-target | Uma lista global de IDs de destino que são ignorados por eventos. <br />Observação: isso afeta apenas eventos em que o id especificado é o target (destino). | [ ] |
-| entity-damage-source-blacklist | Uma lista global de fontes de danos à entidade que são ignoradas em eventos por padrão. | [contact,cramming,drowning,<br />"falling_block",flyintowall,"fire_tick",<br />"hot_floor",envenenado,fome,sufocamento,<br />suicídio,void] |
+| entity-damage-source-blacklist | Uma lista global de fontes de danos à entidade que são ignoradas em eventos por padrão. | [contact,cramming,drowning,<br />"falling_block",flyintowall,"fire_tick",<br />"hot_floor",poison,starvation,suffocation,<br />suicide,void] |
 
-A blacklist controla eventos de interação com itens, blocos ou entidades em uma base por-bandeira ou global. As listas negras são extremamente úteis, pois permitem forçar o GD a ignorar ações em um mundo que você não precisa proteger. Ao fazer isso, você evita que o GD desperdice recursos ao tentar proteger. Para determinar o que você deseja impedir que o GD controle, você precisará executar o [GDDebug](/br/wiki/advanced/Debugging.html) para coletar os dados necessários para a configuração. Veja [Contribuições do usuário](/br/wiki/advanced/Optimizations.html#contribuicoes-de-otimizacao) para alguns exemplos de como usá-lo.  
+A blacklist controla eventos de interação com itens, blocos ou entidades em uma base por-bandeira ou global. As listas negras são extremamente úteis, pois permitem forçar o GD a ignorar ações em um mundo que você não precisa proteger. Ao fazer isso, você evita que o GD desperdice recursos ao tentar proteger. Para determinar o que você deseja impedir que o GD controle, você precisará executar o [GDDebug](/br/wiki/advanced/Debugging.html) para coletar os dados necessários para a configuração.  
+::: tip Links Úteis
+Veja algumas dicas e otimizações já prontas no nosso guia!  
+[Utilize Aikar's Flags](/br/wiki/advanced/Optimizations.html#utilize-aikar-s-flags)  
+[Contribuições de otimização](/br/wiki/advanced/Optimizations.html#contribuicoes-de-otimizacao) 
+:::
 
 Ele suporta curingas `?` e `*` onde `?` representa um único caractere e `*` representa zero ou mais caracteres.
 Para mais informações, você pode acessar [correspondência de curingas do Apache.](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String))

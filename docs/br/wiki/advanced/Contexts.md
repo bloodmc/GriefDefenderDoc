@@ -19,7 +19,7 @@ Contexto                                          |     Valor     | Descrição 
 ```gd_rent```             |   ```rent```         | Aplica bandeira para reivindicações de aluguéis.
 ```source```   |   `<source_id>`  | Aplica bandeira a uma fonte específica. <br />Exemplo: `minecraft:creeper`
 ```target```   |   `<target_id>`  | Aplica bandeira a um destino específico. <br />Exemplo: `minecraft:player` <br />Nota: O destino é **SEMPRE** necessário após a bandeira no uso do comando /cf, mas mais de um destino pode ser especificado com o uso do contexto.
-```state```   |   `<state>`  | Aplica bandeira a um estado de bloco específico. <br />Exemplo: `powered:true` <br /> Veja https://minecraft.gamepedia.com/Block_states para uma lista de todos os estados de bloco vanilla.
+```state```   |   `<state>`  | Aplica bandeira a um estado de bloco específico. <br />Exemplo: `powered:true` <br /> Veja https://pt.minecraft.wiki/w/Block_states para uma lista de todos os estados de bloco vanilla.
 ```used_item``` |   `<item_id>`  | Aplica a bandeira a um item usado específico. <br />Exemplo: `minecraft:diamond_sword`
 ```boots```   |   `<item_id>`   | Aplica a bandeira a botas desgastadas específicas. <br />Exemplo: `minecraft:diamond_boots`
 ```chestplate```   |   `<item_id>`   | Aplica a bandeira a um peitoral desgastado específico. <br />Exemplo: `minecraft:diamond_chestplate`
@@ -35,7 +35,7 @@ Contexto                                          |     Valor     | Descrição 
 ```run_as```   |   ```console```<br>```player```   | Execute o comando como console ou player. <br />Nota: Este contexto só se aplica a `griefdefender.player-command-enter` e `griefdefender.player-command-exit` opções
 ```run_for```   |   ```member```<br>```owner```<br>```public```   | Execute o comando apenas para membros com trust na reivindicação, apenas para o proprietário da reivindicação ou apenas para todos, exceto o proprietário da reivindicação. Mais de um pode ser usado ao mesmo tempo para usuários efetuados desejados. <br />Nota: Este contexto só se aplica às opções `griefdefender.player-command-enter` e `griefdefender.player-command-exit`
 ```server```   |   `<server_name>`  | Aplica bandeira a um servidor específico.<br />Nota: Isso usa o nome do servidor especificado no plugin de permissões. Se nenhum contexto de servidor for especificado ou o nome do servidor não estiver definido, o padrão será `global`.
-```world```   |   `<world_name>`  | Aplica bandeira a um mundo específico.
+```world```   |   `<nome_do_mundo>`  | Aplica bandeira a um mundo específico.
 
 Nota: Cada permissão de bandeira ou opção SEMPRE conterá um dos seguintes contextos principais `gd_claim`, `gd_claim_default` ou `gd_claim_override`.
 Nota: Ao usar contextos com comandos `/cf`, `/claimoption` ou `flags.conf`, você pode usar os seguintes aliases para chaves de contexto

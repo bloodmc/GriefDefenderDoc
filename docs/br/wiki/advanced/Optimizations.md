@@ -12,7 +12,7 @@ O Griefdefender fornece controle interno para quase todas as ações do seu mund
 Abaixo está um trecho das configurações de [otimização](/br/wiki/advanced/Global-Config.html#otimizacao) que você pode encontrar no GriefDefender na parte do [`global.conf`](/br/wiki/advanced/Global-Config.html) 
 
 ## Utilize Aikar's Flags
-O GriefDefender foi projetado para utilizar os recursos da melhor maneira, por isso é altamente recomendável que você use as bandeiras do Aikar.  
+Os sinalizadores do Aikar são um conjunto otimizado de sinalizadores que podem aumentar o desempenho do seu servidor com pouco esforço de sua parte. Por padrão, o coletor de lixo do Java não é otimizado para executar servidores Minecraft, mas os sinalizadores do Aikar são um conjunto de sinalizadores ajustados que é projetado especificamente para executar servidores Minecraft. Esses sinalizadores reduzirão os tempos de pausa do servidor devido à coleta de lixo e farão com que a JVM evite longos ciclos de coleta de lixo de geração antiga.  
 Veja em [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)  
 
 <details>

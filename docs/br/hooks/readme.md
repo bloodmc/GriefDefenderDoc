@@ -47,6 +47,7 @@ Você também pode verificar em [Global.conf](/br/wiki/advanced/Global-Config.ht
 ## Diversos
 
 * [Aurelium]: [ [Spigot](https://www.spigotmc.org/resources/81069/) | [Github](https://github.com/Archy-X/AureliumSkills) ]
+* [Oraxen]: [ [Pago](https://www.spigotmc.org/resources/72448/) | [Github](https://github.com/oraxen/oraxen) ]
 * [Brewery]: [ [Spigot](https://www.spigotmc.org/resources/3082/) | [Github](https://github.com/DieReicheErethons/Brewery) ]
 * [ExcellentCrates]: [ [Spigot](https://www.spigotmc.org/resources/48732/) | [Github](https://github.com/nulli0n/ExcellentCrates-spigot) ]
 * [Chat Manager]: [ [Spigot](https://www.spigotmc.org/resources/52245/) | [Github](https://github.com/Crazy-Crew/ChatManager) ]

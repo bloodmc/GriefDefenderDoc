@@ -8,8 +8,8 @@ icon: optimization-timer
 GriefDefender provides built-in control for nearly every action in your minecraft world. However, attempting to control too much can sometimes cause resource issues depending on your server load. The solution to this issue is to make use of built-in optimization configuration found in [`global.conf`](/wiki/advanced/Global-Config.html) and by learning how to use [blacklists](/wiki/Configuration.html#blacklist). 
 
 ## Use Aikar's Flags
-GriefDefender was designed to utilize resources in the best way, so it is highly recommended that you use Aikar's flags.  
-See [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags) 
+Aikar's flags are an optimized set of flags that can increase your server's performance with little effort on your part. By default, Java's garbage collector is not optimized for running Minecraft servers, but Aikar's flags is a set of tuned flags that is specifically designed for running Minecraft servers. These flags will reduce your server's pause times due to garbage collection and will cause the JVM to avoid lengthy old-gen garbage collection cycles.  
+See [PaperMC - Aikar's Flags](https://docs.papermc.io/paper/aikars-flags)  
 
 ### Global Optimization config
 

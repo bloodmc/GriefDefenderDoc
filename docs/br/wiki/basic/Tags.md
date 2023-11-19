@@ -22,7 +22,7 @@ etc..
 
 Isso se tornaria tedioso muito rapidamente e atrapalharia suas permissões.
 
-Com o sistema de tags, você pode usar a tag entregue para todos os placas permanentes chamados [#standing_signs](https://minecraft.gamepedia.com/Tag#blocks_standing_signs)
+Com o sistema de tags, você pode usar a tag entregue para todos os placas permanentes chamados [#standing_signs](https://minecraft.wiki/w/Tag#blocks_standing_signs)
 
 Então os comandos acima se tornariam um único comando
 
@@ -34,15 +34,15 @@ Isso dá ao usuário extrema flexibilidade para proteger não apenas uma coisa, 
 Observação: os nomes das tags SEMPRE começarão com o caractere `#`
 
 Agora vamos supor que você tenha necessidades especiais e as tags vanilla entregues não forneçam tudo para o seu servidor.
-É aqui que um [Pacote de Dados](https://minecraft.fandom.com/pt/wiki/Pacote_de_dados) entraria em jogo.
+É aqui que um [Pacote de Dados](https://pt.minecraft.wiki/w/Data_pack) entraria em jogo.
 
-Um [Pacote de Dados](https://minecraft.fandom.com/pt/wiki/Pacote_de_dados) permite que um administrador de servidor aprimore a experiência de minecraft com avanços personalizados, receitas, tabelas de saque, tags e muito mais.
+Um [Pacote de Dados](https://pt.minecraft.wiki/w/Data_pack) permite que um administrador de servidor aprimore a experiência de minecraft com avanços personalizados, receitas, tabelas de saque, tags e muito mais.
 
 Para criar um pacote de dados parause custom tags for your server , the following would have to be done  
 
 1. Navegue até a pasta mundial na qual deseja usar o pacote de dados.
 Ex. `./world/datapacks`
-2. Crie um pacote de dados seguindo as instruções [aqui](https://minecraft.fandom.com/pt/wiki/Pacote_de_dados)  
+2. Crie um pacote de dados seguindo as instruções [aqui](https://pt.minecraft.wiki/w/Data_pack)  
 Nota: A estrutura da pasta datapacks deve ser configurada da seguinte forma dentro da pasta world 
 ```
 datapacks/
@@ -62,7 +62,7 @@ Nota: Um exemplo real pode ser encontrado na raiz do jar do servidor minecraft d
 ```
 3. Crie quantas tags quiser dentro do seu pacote de dados e adicione quaisquer outros dados personalizados que você precisar dentro dele.
 4. Inicie o servidor
-5. Verifique se seu pacote de dados foi carregado executando o comando `/datapack list enabled`. Veja [Comando DataPack](https://minecraft.fandom.com/pt/wiki/Pacote_de_dados) para mais informações
+5. Verifique se seu pacote de dados foi carregado executando o comando `/datapack list enabled`. Veja [Comando DataPack](https://pt.minecraft.wiki/w/Data_pack) para mais informações
 Nota: Se seu pacote de dados não estiver habilitado, sua estrutura de pacote de dados mostrada na etapa 2 provavelmente está errada.
 
 Se você conseguiu carregar seu pacote de dados com sucesso, o GD carregará automaticamente todas as tags em seu registro de contexto para você usar com bandeiras.

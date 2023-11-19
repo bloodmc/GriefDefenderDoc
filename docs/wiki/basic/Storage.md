@@ -57,6 +57,11 @@ rewriteBatchedStatements | true |
 useLocalSessionState | true |
 useServerPrepStmts | true |
 
+### Load Claims Asynchronous
+Whether database claims should be loaded asynchronous during server startup. (Default: true)  
+Set setting to 'false' if having issues with players joining before claims have fully loaded.  
+`load-claims-async=true`
+
 ### Database Password   
 Enter your database password.  
 `password="YourPassword"`

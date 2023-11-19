@@ -183,7 +183,7 @@ All Info provided inside () will be one of the examples.
 ## Custom GD context group types
 
 GD provides a few context group types that can be used to specify all of a type of something, for instance all monsters.  
-> **Note: Starting with MC versions 1.14+, GD integrates with vanilla's tag system. It is highly recommended to use the vanilla tag system. See https://minecraft.gamepedia.com/Tag for more information and https://minecraft.gamepedia.com/Tutorials/Creating_a_data_pack for more info.
+> **Note: Starting with MC versions 1.14+, GD integrates with vanilla's tag system. It is highly recommended to use the vanilla tag system. See https://minecraft.wiki/w/Tag for more information and https://minecraft.wiki/w/Tutorials/Creating_a_data_pack for more info.
 
 ### Available Keys
 

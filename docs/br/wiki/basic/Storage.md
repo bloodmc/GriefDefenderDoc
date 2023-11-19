@@ -57,6 +57,11 @@ rewriteBatchedStatements | true |
 useLocalSessionState | true |
 useServerPrepStmts | true |
 
+### Carregar as Reivindicações de forma Assíncronas
+Se as reivindicações do banco de dados devem ser carregadas de forma assíncrona durante a inicialização do servidor. (Padrão: true)  
+Defina a configuração como 'false' se tiver problemas com a entrada de jogadores antes que as reivindicações sejam totalmente carregadas.  
+`load-claims-async=true`
+
 ### Senha do banco de dados  
 Coloque a senha do seu banco de dados.  
 `password="SuaSenha"`

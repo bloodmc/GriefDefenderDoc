@@ -104,6 +104,10 @@ An example of output is shown below, followed by an explanation of each column.
 
 This column contains the base flag that the event was checked against. eg; `block-place` when a block was placed in the world.
 
+#### `Flag Definition`
+
+This column contains the Flag Definition (Found in the `GriefDefender/Presets` folder within the `.conf` files) that shows the source of the event check in the presets.
+
 #### `Trust`
 
 This column contains the level of trust an event was checked against, if any. eg; A claim owner has all Trust levels, flags do not apply to them unless override.
