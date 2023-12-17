@@ -121,6 +121,7 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.claim.command.trapped | Teleports the player to a safe location if stuck and unable to build |
 | griefdefender.user.claim.command.unlock-drops | Allows other players to pickup any items dropped from death |
 | griefdefender.user.claim.command.worldedit-claim | Allows to use a worldedit selection to create a claim. |
+| griefdefender.user.claim.command.claim-tool  | Allows whether players can use the claim tool. |
 | griefdefender.user.claim.create.base  | Allows to create a basic claim |
 | griefdefender.user.claim.create.basic | Allows to create/resize basic claims |
 | griefdefender.user.claim.create.subdivision | Allows to create/resize subdivision claims |
@@ -141,7 +142,6 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.town.command.info.others | Allows to get information about others town claims |
 | griefdefender.user.town.command.name | Allows to set a town claimname |
 | griefdefender.user.town.command.tag | Allows to set the tag of your town |
-| griefdefender.user.town.command.tax |  |
 
 ## Flags
 | Permission Node | Description |
@@ -204,12 +204,17 @@ _*See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for informat
 | griefdefender.advanced.user.gui.flag.group.container | Adds a button to the interface to control the trust of container |
 | griefdefender.advanced.user.gui.flag.group.builder | Adds a button to the interface to control the trust of builder |
 | griefdefender.advanced.user.gui.flag.group.manager | Adds a button to the interface to control the trust of manager |
+| griefdefender.advanced.user.gui.flag.group.resident | Allows user to see RESIDENT tab in flag GUI. |
 
 # Admin Permissions
 
 | Permission Node | Description |
 | --------- | ----------- |
+| griefdefender.advanced.admin.flag | Determines if user can use a specific flag as argument in a flag command. |
 | griefdefender.advanced.admin.flags | Allows usage of advanced mode in flag GUI |
+| griefdefender.advanced.admin.flags.arg | Allows user to use flag commands /cf, /cfg, /cfp with arguments. |
+| griefdefender.advanced.admin.option | Determines if user can use a specific option as argument in an option command. |
+| griefdefender.advanced.admin.options.arg | Allows user to use option commands /co, /cog, /cop with arguments |
 | griefdefender.admin.bypass.ban | Allows bypass of bans |
 | griefdefender.admin.bypass.border-check | Allows bypass of claim border checks |
 | griefdefender.admin.bypass.option | Allows bypass of options |
@@ -249,12 +254,19 @@ _*See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for informat
 | griefdefender.admin.command.reload | Allows to reload GP |
 | griefdefender.admin.command.restore-claim.base | Allows to restore claim to its natural state |
 | griefdefender.admin.command.restore-nature.base | Allows to switch shovel tool to restoration mode. |
-| griefdefender.admin.command.restore-nature.aggressive |  |
-| griefdefender.admin.command.restore-nature.fill |  |
 | griefdefender.admin.command.set-accrued-claim-blocks | Allows to edit amount of accrued claim blocks |
 | griefdefender.admin.custom.flag | Allows to use advanced claim flags in GUI |
 | griefdefender.admin.flag-defaults | Allows to edit flag defaults |
 | griefdefender.admin.flag-overrides | Allows to edit flag overrides |
+
+## Snapshot
+| griefdefender.advanced.user.claim.command.snapshot | Allows user to use /claimsnapshot command. |
+| griefdefender.advanced.user.claim.command.player | Allows user to use /claimgroup command. |
+| griefdefender.advanced.user.snapshot.create.user | Allows user to create claim snapshots stored with user. |
+| griefdefender.advanced.user.snapshot.create.claim | Allows user to create claim snapshots stored with claim. |
+| griefdefender.advanced.admin.snapshot.create.admin | Allows user to create admin claim snapshots. |
+| griefdefender.advanced.admin.snapshot.create.public | Allows user to create public claim snapshots that all users with public view access can see. |
+| griefdefender.advanced.user.snapshot.view-public | Allows user to view/use public claim snapshots. |
 
 ## Options
 | Permission Node | Description |
