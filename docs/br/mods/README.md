@@ -17,5 +17,8 @@ Utilizando o [depuração](/br/wiki/advanced/Debugging.html) para criar novas [b
 
 ::: danger Mods com incompatibilidade
 Nota: Alguns mods ignoram eventos devido a plataforma não suportar a ação ou o mod não seguir os padrões, fazendo com que o GD não consiga capturar esses eventos para controlá-los.    
-[Snow! Real Magic! - CurseForge](https://www.curseforge.com/minecraft/mc-mods/snow-real-magic) (Problema com Mixins)
+[Snow! Real Magic! - Modrinth](https://modrinth.com/mod/snow-real-magic) (Problema com Mixins)  
+[Lycanites Mobs - CurseForge](https://www.curseforge.com/minecraft/mc-mods/lycanites-mobs) (Controle de spawn de mobs)  
+Para consertar vá em `config/lycanitesmobs/spawners/`  
+procure `ignoreForgeCanSpawnEvent` em cada arquivo e mude para `false`  
 :::

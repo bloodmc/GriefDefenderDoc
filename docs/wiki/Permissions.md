@@ -180,7 +180,6 @@ _*See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for informat
 ## Trust
 | Permission Node | Description |
 | --------- | ----------- |
-| griefdefender.user.claim.command.trust.group | Allows to grant group trust |
 | griefdefender.user.claim.command.trust.player | Allows to grant player trust |
 | griefdefender.user.claim.command.trust.list | Allows to list trusted players |
 | griefdefender.user.claim.command.trustall.group | Allows to grant group trust to all claims|
@@ -215,6 +214,7 @@ _*See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for informat
 | griefdefender.admin.bypass.option | Allows bypass of options |
 | griefdefender.admin.bypass.override.resize | Allows bypass of claim resize restrictions |
 | griefdefender.admin.bypass.override.limit | Allows bypass of claim creation limit restrictions |
+| griefdefender.admin.claim.command.trust.group | Allows to grant group trust |
 | griefdefender.admin.claim.command.adjust-claim-blocks | Allows to edit amount of bonus claim blocks |
 | griefdefender.admin.claim.command.admin-mode | Allows to use admin claim shovel mode |
 | griefdefender.admin.claim.command.ban | Allows to ban or unban an item, block, or entity id from all usage |

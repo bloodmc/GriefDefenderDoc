@@ -180,7 +180,6 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 ## Trust
 | Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.user.claim.command.trust.group | Permite conceder trust ao grupo |
 | griefdefender.user.claim.command.trust.player | Permite conceder trust ao jogador |
 | griefdefender.user.claim.command.trust.list | Permite listar jogadores com trust |
 | griefdefender.user.claim.command.trustall.group | Permite conceder trust de grupo a todas as reivindicações|
@@ -215,6 +214,7 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.admin.bypass.option | Permite bypass de opções |
 | griefdefender.admin.bypass.override.resize | Permite ignorar as restrições de redimensionamento da reivindicação |
 | griefdefender.admin.bypass.override.limit | Permite ignorar as restrições de limite de criação de reivindicações |
+| griefdefender.admin.claim.command.trust.group | Permite conceder trust ao grupo |
 | griefdefender.admin.claim.command.adjust-claim-blocks | Permite editar a quantidade de blocos de bônus de reivindicação |
 | griefdefender.admin.claim.command.admin-mode | Permite usar o modo de reivindicação administrativa |
 | griefdefender.admin.claim.command.ban | Permite banir ou desbanir um item, bloco ou id de entidade de todos os usos |

@@ -17,5 +17,8 @@ Using [debugging](/wiki/advanced/Debugging.html) to create new [flags](/wiki/adv
 
 ::: danger Mods with incompatibility
 Note: Some mods bypass events due to the platform not supporting the action or the mod not following standards, causing GD to not be able to capture these events to control them.  
-[Snow! Real Magic! - CurseForge](https://www.curseforge.com/minecraft/mc-mods/snow-real-magic) (Problem with Mixins)
+[Snow! Real Magic! - Modrinth](https://modrinth.com/mod/snow-real-magic) (Problem with Mixins)  
+[Lycanites Mobs - CurseForge](https://www.curseforge.com/minecraft/mc-mods/lycanites-mobs) (Mob spawn control)  
+To fix it go to `config/lycanitesmobs/spawners/`  
+look for `ignoreForgeCanSpawnEvent` in each file and change it to `false`  
 :::
