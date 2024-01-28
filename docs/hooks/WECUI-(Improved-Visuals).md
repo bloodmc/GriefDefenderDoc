@@ -23,9 +23,6 @@ To use WorldEdit CUI, you need to have it installed on both the client and the s
 * WECUI (Fabric Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files)
 * WECUI (Forge Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files)
 
-#### 1.17+
- * WECUI (Forge Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files)
-
 #### 1.16+
 * WECUI (Fabric Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files)
 * WECUI (Forge Version) - [Download](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-forge-edition-3/files)

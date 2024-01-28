@@ -23,3 +23,29 @@ Settings                                           | Valor Padrão | Descrição
 -------------------------------------------------|---------------|--------------|
 ``` AllowAdminClaims ``` | false | Permitir que as reivindicações administrativas sejam usadas pelo RealEstate. |
 ```AllowTownClaims``` | false | Permitir que as reivindicações da cidade sejam usadas pelo RealEstate. |
+
+## Permissões
+
+Use as permissões acima para ajustar os limites do usuário/grupo. Por padrão, nenhum limite é definido em LP. Se você deseja definir global, use a configuração RE ajustando o seguinte.  
+
+Permissões                                           | Descrição | 
+-------------------------------------------------| --------------|
+RealEstate.Default.Limit.Lease.Buyer | Quantas reivindicações um jogador pode conceder ao mesmo tempo por padrão. |
+RealEstate.Default.Limit.Rent.Buyer | Quantas reivindicações um jogador pode alugar ao mesmo tempo por padrão. |
+RealEstate.Default.Limit.Sell.Buyer | Quantas reivindicações um jogador pode comprar no total por padrão. |
+RealEstate.Default.Limit.Lease.Owner | Quantas reivindicações um jogador faz para locação ao mesmo tempo por padrãot. |
+RealEstate.Default.Limit.Rent.Owner | Quantas reivindicações um jogador faz para alugar ao mesmo tempo por padrão. |
+RealEstate.Default.Limit.Sell.Owner | Quantas reivindicações um jogador colocou à venda ao mesmo tempo por padrão. |
+
+## LuckPerms meta
+
+As seguintes opções (LP meta) serão registradas na inicialização.  
+
+LuckPerms meta                                           | Descrição | 
+-------------------------------------------------| --------------|
+realestate.owner-lease-limit | Quantas reivindicações um jogador pode fazer para locação ao mesmo tempo por padrão. |
+realestate.owner-rent-limit | Quantas reivindicações um jogador pode fazer para alugar ao mesmo tempo por padrão. |
+realestate.owner-sell-limit | Quantas reivindicações um jogador pode colocar à venda ao mesmo tempo por padrão. |
+realestate.buyer-lease-limit | Quantas reivindicações um jogador pode conceder ao mesmo tempo por padrão. |
+realestate.buyer-rent-limit | Quantas reivindicações um jogador pode alugar ao mesmo tempo por padrão. |
+realestate.buyer-sell-limit | Quantas reivindicações um jogador pode comprar no total por padrão. |

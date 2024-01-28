@@ -715,7 +715,7 @@ flag-control {
 ## GriefDefender Default
 
 <hr>
-Version based on build file: GriefDefender 2.3.9-DEV5
+Version based on build file: GriefDefender 2.5.5
 <hr>
 
 <details>
@@ -816,7 +816,7 @@ GriefDefender {
   <summary>GD Flag Control</summary>
 
 ```
-flag-control {
+    flag-control {
         block-break=true
         block-grow=false
         block-modify=true
@@ -866,10 +866,11 @@ flag-control {
   <summary>GD Option Control</summary>
 
 ```
-option-control {
+    option-control {
         player-command-enter=false
         player-command-exit=false
         player-deny-flight=false
+        player-deny-glide=false
         player-deny-godmode=false
         player-deny-hunger=false
         player-fly-speed=false
@@ -891,5 +892,4 @@ option-control {
         spawn-limit=false
     }
 ```
-
 </details>

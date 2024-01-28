@@ -47,7 +47,7 @@ features:
   - title: Taxas. Aluguel e vendas
     icon: moneybag
     details: Aumente sua economia alugando ou vendendo suas reivindicações e muito mais.
-    link: /br/wiki/basic/Rent-System.html
+    link: /br/wiki/basic/Tax-System.html
 
   - title: Sistema de permissão
     icon: sheild

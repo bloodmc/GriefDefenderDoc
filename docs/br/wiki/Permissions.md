@@ -48,6 +48,20 @@ Nota: Isso não armazena permissões feitas por meio da GUI avançada do sinaliz
 * `griefdefender_trust_container` - Armazena todas as permissões de trust que têm container.  
 * `griefdefender_trust_manager` - Armazena todas as permissões de trust que têm manager.  
 
+## Peso (weight) padrão do node no Luckperms
+`griefdefender_option` deve ter `0` no peso (weight)  
+`griefdefender_override` deve ter `-40` no peso (weight)  
+`griefdefender_claim` deve ter `-60` no peso (weight)  
+`griefdefender_trust_manager` deve ter `-70` no peso (weight)  
+`griefdefender_trust_builder` deve ter `-71` no peso (weight)  
+`griefdefender_trust_container` deve ter `-72` no peso (weight)  
+`griefdefender_trust_accessor` deve ter `-73` no peso (weight)  
+`griefdefender_trust_resident` deve ter `-74` no peso (weight)  
+`griefdefender_claim_group` deve ter `-75` no peso (weight)  
+`griefdefender_definition` deve ter `-80` no peso (weight)  
+`griefdefender_default` deve ter `-100` no peso (weight)  
+
+
 ### Consultas úteis de banco de dados MySQL
 
 :warning: Substitua `minecraft` com o nome do banco de dados LuckPerms e `griefdefender` com nome de banco de dados GD
@@ -121,6 +135,7 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.claim.command.trapped | Teletransporte o jogador para um local seguro se estiver preso e incapaz de construir |
 | griefdefender.user.claim.command.unlock-drops | Permite que outros jogadores peguem qualquer item caído da morte |
 | griefdefender.user.claim.command.worldedit-claim | Permite usar uma seleção worldedit para criar uma reivindicação. |
+| griefdefender.user.claim.command.claim-tool  | Permite se os jogadores podem  usar a ferramenta de reivindicação. |
 | griefdefender.user.claim.create.base  | Permite criar uma reivindicação básica |
 | griefdefender.user.claim.create.basic | Permite criar/redimensionar uma reivindicação básicas |
 | griefdefender.user.claim.create.subdivision | Permite criar/redimensionar uma subdivisão |
@@ -141,7 +156,6 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.town.command.info.others | Permite ver informações sobre outras reivindicações da cidade |
 | griefdefender.user.town.command.name | Permite definir um nome para a cidade (claimname) |
 | griefdefender.user.town.command.tag | Permite definir a tag da sua cidade |
-| griefdefender.user.town.command.tax |  |
 
 ## Bandeiras
 | Permission Node | Description |
@@ -180,7 +194,6 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 ## Trust
 | Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.user.claim.command.trust.group | Permite conceder trust ao grupo |
 | griefdefender.user.claim.command.trust.player | Permite conceder trust ao jogador |
 | griefdefender.user.claim.command.trust.list | Permite listar jogadores com trust |
 | griefdefender.user.claim.command.trustall.group | Permite conceder trust de grupo a todas as reivindicações|
@@ -204,17 +217,23 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.advanced.user.gui.flag.group.container | Adiciona interface para controlar o trust de container |
 | griefdefender.advanced.user.gui.flag.group.builder | Adiciona interface para controlar o trust de builder |
 | griefdefender.advanced.user.gui.flag.group.manager | Adiciona interface para controlar o trust de manager |
+| griefdefender.advanced.user.gui.flag.group.resident | Adiciona interface para controlar o trust de resident. |
 
 # Permissões administrativas
 
 | Node de permissão | Descrição |
 | --------- | ----------- |
-| griefdefender.advanced.admin.flags | Permite o uso do modo avançado na Interface do bandeiras |
+| griefdefender.advanced.admin.flag | Determina se o usuário pode usar um sinalizador específico como argumento em um comando de sinalizador. |
+| griefdefender.advanced.admin.flags | Permite o uso do modo avançado na GUI do sinalizador |
+| griefdefender.advanced.admin.flags.arg | Permite que o usuário use comandos de sinalização /cf, /cfg, /cfp com argumentos. |
+| griefdefender.advanced.admin.option | Determina se o usuário pode usar uma opção específica como argumento em um comando de opção. |
+| griefdefender.advanced.admin.options.arg | Permite ao usuário usar comandos de opção /co, /cog, /cop com argumentos |
 | griefdefender.admin.bypass.ban | Permite ignorar o banimento de reivindicação |
 | griefdefender.admin.bypass.border-check | Permite ignorar a verificações de fronteira de reivindicação |
 | griefdefender.admin.bypass.option | Permite bypass de opções |
 | griefdefender.admin.bypass.override.resize | Permite ignorar as restrições de redimensionamento da reivindicação |
 | griefdefender.admin.bypass.override.limit | Permite ignorar as restrições de limite de criação de reivindicações |
+| griefdefender.admin.claim.command.trust.group | Permite conceder trust ao grupo |
 | griefdefender.admin.claim.command.adjust-claim-blocks | Permite editar a quantidade de blocos de bônus de reivindicação |
 | griefdefender.admin.claim.command.admin-mode | Permite usar o modo de reivindicação administrativa |
 | griefdefender.admin.claim.command.ban | Permite banir ou desbanir um item, bloco ou id de entidade de todos os usos |
@@ -249,12 +268,21 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.admin.command.reload | Permite recarregar GP |
 | griefdefender.admin.command.restore-claim.base | Permite restaurar a reivindicação ao seu estado natural |
 | griefdefender.admin.command.restore-nature.base | Permite alternar a ferramenta de pá para o modo de restauração. |
-| griefdefender.admin.command.restore-nature.aggressive |  |
-| griefdefender.admin.command.restore-nature.fill |  |
 | griefdefender.admin.command.set-accrued-claim-blocks | Permite editar a quantidade de blocos de reivindicação acumulados |
 | griefdefender.admin.custom.flag | Permite usar bandeiras de reivindicação avançados na Interface |
 | griefdefender.admin.flag-defaults | Permite editar padrões de bandeiras |
 | griefdefender.admin.flag-overrides | Permite editar sobreposição de bandeira |
+
+## Snapshot
+| Node de permissão | Descrição |
+| --------- | ----------- |
+| griefdefender.advanced.user.claim.command.snapshot | Permite que o usuário use o comando /claimsnapshot. |
+| griefdefender.advanced.user.claim.command.player | Permite que o usuário use o comando /claimgroup. |
+| griefdefender.advanced.user.snapshot.create.user | Permite que o usuário crie instantâneos de reivindicações armazenados com o usuário. |
+| griefdefender.advanced.user.snapshot.create.claim | Permite que o usuário crie instantâneos de reivindicação armazenados com reivindicação. |
+| griefdefender.advanced.admin.snapshot.create.admin | Permite que o usuário crie instantâneos de reivindicação de administrador. |
+| griefdefender.advanced.admin.snapshot.create.public | Permite que o usuário crie instantâneos de reivindicação públicas que todos os usuários com acesso de visualização pública possam ver. |
+| griefdefender.advanced.user.snapshot.view-public | Permite que o usuário visualize/use instantâneos de reivindicações públicas. |
 
 ## Outras-Opções
 | Node de permissão | Descrição |

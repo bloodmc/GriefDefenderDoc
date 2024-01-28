@@ -34,7 +34,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Projectiles: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.4.7-DEV1
+Version based on release file: GriefDefender 2.5.5
 <hr>
 
 # claim
@@ -42,7 +42,7 @@ Version based on release file: GriefDefender 2.4.7-DEV1
 | --------- | ----------- | ----------- |
 | auto-chest-claim-block-radius | Radius used (in blocks) for auto-created claim when a chest is placed. Set to 0 to disable chest claim creation | 4 |
 | border-block-radius | Set claim border of specified radius (in blocks), centered on claim. If set to 1, adds an additional 1 block protected radius around claim. <br  /> Note: It is not recommended to set this value too high as performance can degrade due to deeper claim searches. | 0 |
-| child-inherit-permissions | Whether children claims should inherit parent permissions when inheritance is turned on.   <br  /> Note: This will impact performance as each child claim will need to perform additional permission lookups on parent claims. | false |
+| child-inherit-permissions | Whether children claims should inherit parent permissions when inheritance is turned on.   <br  /> Note: This will impact performance as each child claim will need to perform additional permission lookups on parent claims. <br  /> Note: This does NOT affect towns. | false |
 | child-inherit-trust | Whether children claims should inherit parent trust when inheritance is turned on. | false |
 | claim-block-task | Whether claim block task should run to accrue blocks for players. <br  /> Note: If in economy-mode, use setting 'use-claim-block-task' under economy category. <br  /> Note: To configure amount accrued, see 'blocks-accrued-per-hour' option at [Options - griefdefender.blocks-accrued-per-hour](/wiki/basic/Options.html#global-options) | true |
 | claim-block-task-move-threshold | The minimum threshold of movement (in blocks) required to receive accrued claim blocks.  <br  /> Note: The claim block task runs every 5 minutes which is the time each player will get to move the required amount of blocks. | 0 |
@@ -84,12 +84,23 @@ Controls claim removal/expiration settings.
 | auto-nature-restore | Whether survival claims will be automatically restored to world generated state when expired.  <br  /> Note: This only supports world generated blocks. Consider using 'auto-schematic-restore' if using a custom world. | false |
 | auto-schematic-restore | Whether survival claims will be automatically restored to its claim creation schematic on abandon/expiration. <br  /> Note: Enabling this feature will cause ALL newly created claims to automatically create a special schematic that will be used to restore claim on abandon/expiration. <br  /> Note: Enabling this feature will disable ability to resize claims. <br  /> Note: It is HIGHLY recommended to disable building in the wilderness before using this feature to avoid players exploiting. <br  /> Note: It is also recommended to ONLY use this feature in newly created worlds where there is no existing player data. <br  /> Note: This does NOT affect deletions. If admins want to restore back to original schematic, they can select '__restore__' by using /claimschematic command. | false |
 | cleanup-interval |  The interval in minutes for cleaning up expired claims. Set to 0 to disable. | 0 |
+| expiration-inactivity | If 'true', claims will expire after owner inactivity exceeds set amount of 'expiration' days. <br /> If 'false', claims will expire after set amount of 'expiration' days has passed. <br /> Note: If this setting is changed to 'false', ALL existing claims will be affected. Use with CAUTION. | true |
 
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | reserved-claim-names | A list of reserved claim names for use only by administrators. <br  /> Note: Names support wildcards '?' and '*' by using Apache's wildcard matcher. <br  /> The wildcard '?' represents a single character. <br  /> The wildcard '*' represents zero or more characters. <br  /> For more information on usage, see [https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch) | [] |
+| respawns-use-border-event | Whether respawns trigger claim border events. Default: True. <br  /> Note: Set to False if you want 'enter-claim' and 'exit-claim' to not be triggered by respawns. | true |
 | restrict-world-max-height | Whether to restrict claiming to world max height. | true |
 | teleports-use-border-event | Whether teleports trigger claim border events. <br  /> Note: Set to False if you want 'enter-claim' and 'exit-claim' to not be triggered by teleports. | true | 
+
+# temporary-settings
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| claim-block-id | The block identifier used to create temporary claims that will expire based on amount of days set in 'expiration' option. (Default: minecraft:campfire) <br /> Note: Temporary claim will be created when right-clicked with 'modification-tool'. | "minecraft:campfire" |
+| claim-chunk-radius | The radius, in chunks, used to determine how large a temporary claim should be. (Default: 3) <br /> Note: This value must be an odd number such as 1,3,5,7, or 9. If even number is used, the value will be increased by 1. | 3 |
+claim-create-limit | The amount of temporary claims a single player can have at one time. (Default: 5) | 5 |
+| expiration-days | The amount in days that a temporary claim will expire. | 9 |
+| use-temporary-claims | If enabled, allows players to create temporary claims that expire after a set amount of time. (Default: true) | false |
 
 # command
 | Variable | Description | Default Value |
@@ -161,6 +172,7 @@ Use [RealEstate](/hooks/RealEstate.html) this is being discontinued
 | username | The GriefPrevention database username | "" |
 | classic-playerdata-threshold | Controls the last active player day threshold in order to avoid migrating inactive GP playerdata. To disable, set value to 0. <br />Note: For example, with the default value of '180' the the migrator will only migrate playerdata for players that played within the past 180 days. <br />Note: This only handles a player's playerdata where accrued/bonus block information is stored. This setting has no effect on claim migration. <br />Note: This avoids storing inactive user data in LuckPerms which helps keep '/lp editor' view clean. | 180 |
 | griefdefender-file-to-database | Set to true to migrate from file format to database. <br />Note: The storage method must be set to hocon in order for this to work properly. <br />Note: After migration is complete, switch storage to database. <br />Note: This will NOT remove existing files in case you want to go back. | FALSE |
+| luckperms-playerdata | <br /> Set to true to migrate player accrued/bonus block data from LP to GD. <br /> Note: It is recommended to backup data before using. <br /> Note: Only enable this setting if using GD 2.4.8+ and have not migrated GD playerdata from LP. <br /> Note: If using GD database storage, Do NOT run this migrator on more than one server if multiple servers share the same GD database. | false |
 | playerdata | Set to true to enable the legacy GriefDefender playerdata file migrator. <br /> Note: This setting is not for migrating GriefPrevention playerdata. Use 'classic' option instead. <br /> Note: Migrates legacy playerdata file format to permissions storage such as LuckPerms json or mysql storage. <br /> Note: Before turning this on, make sure you properly set 'context-storage-type' in the the playerdata section of this config. <br /> Note: It is HIGHLY recommended to backup your permissions database before running this migrator as all local playerdata files will be migrated to it. <br /> Note: Do NOT run this migrator on more than one server if multiple servers share the same permissions database. | false |
 | red-protect | Set to true to enable RedProtect data migrator. | FALSE |
 | residence | Set to true to enable Residence data migrator. | TRUE |
@@ -224,7 +236,8 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | claim-block-system | Determines which claim block system to use for claims. <br />If set to VOLUME, claim blocks will use the chunk count system to balance 3d claiming. <br />If set to AREA, the standard 2d block count system will be used. | AREA |
-| context-storage-type | The context type used when storing playerdata within a permissions database. <br />Available types are : global, server, world. <br />Global will store data globally shared by all servers. <br />Server will store data per server. Note: This requires servername to be properly set in permissions config. <br />World will store data per world.  | GLOBAL |
+| context-storage-type | The context type used when storing playerdata within GD's database. <br />Available types are : global, server, world. <br />Global will store data globally shared by all servers. <br />Server will store data per server. Note: This requires servername to be properly set in permissions config. <br />World will store data per world.  | GLOBAL |
+| force-server-only | <br /> If set to true, GD will only calculate player block data for claims loaded on THIS server. It will not include other servers with same LP server context. <br /> Note: This setting is only used with GD DB storage. <br /> Note: Use with CAUTION!
 | migrate-area-rate | The rate to divide each accrued claim blocks total by. <br />Set to a value greater than -1 to enable. <br />Note: This should only be used when migrating from volume (3D system) to area (2D system). <br /> In this system, a chunk costs 256 blocks. <br />This requires 'claim-block-system' to be set to AREA. | -1 |
 | migrate-volume-rate | The rate to multiply each accrued claim blocks total by. <br />Set to a value greater than -1 to enable. <br />Note: This should only be used when migrating from area (2D system) to volume (3D system). <br />Each chunk is worth 65,536 blocks in the new system compared to 256 in old. <br />This requires 'claim-block-system' to be set to VOLUME. |-1 |
 | reset-accrued-claim-blocks | If enabled, resets all playerdata accrued claim blocks to match total cost of claims owned. <br />Example: If a player has 5 basic claims with a total cost of 1000, this will set their accrued claim blocks to 1000. <br />Note: This will also reset all bonus claim blocks to 0. It is highly recommended to backup before using. | FALSE |
