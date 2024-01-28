@@ -34,7 +34,7 @@ GriefDefender permite configuração modular. No entanto, de acordo com os arqui
 * Projéteis: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.4.7-DEV1
+Version based on release file: GriefDefender 2.5.3
 <hr>
 
 # claim
@@ -42,7 +42,7 @@ Version based on release file: GriefDefender 2.4.7-DEV1
 | --------- | ----------- | ----------- |
 | auto-chest-claim-block-radius | Raio usado (em blocos) para reivindicação criada automaticamente quando um baú é colocado. Defina como 0 para desativar a criação de reivindicação de baú. | 4 |
 | border-block-radius | Defina a borda da reivindicação com um raio especificado (em blocos), centralizado na reivindicação. Se definido como 1, adiciona um raio protegido adicional de 1 bloco ao redor da reivindicação. <br  /> Obs: não é recomendável definir esse valor muito alto, pois o desempenho pode ser prejudicado devido a pesquisas mais profundas de declarações. | 0 |
-| child-inherit-permissions | Se as declarações filhas devem herdar as permissões dos pais quando a herança está ativada.   <br  /> Obs: isso afetará o desempenho, pois cada declaração filha precisará realizar pesquisas de permissão adicionais nas declarações pai. | false |
+| child-inherit-permissions | Se as declarações filhas devem herdar as permissões dos pais quando a herança está ativada.   <br  /> Obs: isso afetará o desempenho, pois cada declaração filha precisará realizar pesquisas de permissão adicionais nas declarações pai. <br  /> Note: This does NOT affect towns. | false |
 | child-inherit-trust | Se as reivindicações dos filhos devem herdar a confiança dos pais quando a herança está ativada. | false |
 | claim-block-task | Se a tarefa de reivindicação de bloqueio deve ser executada para acumular bloqueios para os jogadores. <br /> Nota: Se estiver no modo econômico, use a configuração 'use-claim-block-task' na categoria econômica. <br /> Obs: para configurar o valor acumulado, consulte a opção 'blocks-accrued-per-hour' em [Opções - griefdefender.blocks-accrued-per-hour](/br/wiki/basic/Options.html#opcoes-globais) | true |
 | claim-block-task-move-threshold | O limite mínimo de movimentação (em blocos) necessário para receber bloqueios de reivindicações acumuladas. <br /> Nota: A tarefa de reivindicação de bloco é executada a cada 5 minutos, que é o tempo que cada jogador terá para mover a quantidade necessária de blocos. | 0 |
@@ -84,12 +84,24 @@ Controla as configurações de remoção/expiração de reivindicações.
 | auto-nature-restore | Se as reivindicações de sobrevivência serão automaticamente restauradas ao estado gerado mundialmente quando expirarem. <br /> Nota: Isto suporta apenas blocos gerados mundialmente. Considere usar 'auto-schematic-restore' se estiver usando um mundo personalizado. | false |
 | auto-schematic-restore | Se as reivindicações de sobrevivência serão restauradas automaticamente para seu esquema de criação de reivindicações no abandono/expiração. <br /> Nota: A ativação deste recurso fará com que TODAS as reivindicações recém-criadas criem automaticamente um esquema especial que será usado para restaurar a reivindicação em caso de abandono/expiração. <br  /> Obs: a ativação desse recurso desativará a capacidade de redimensionar reivindicações. <br /> Nota: É ALTAMENTE recomendado desativar a construção na natureza antes de usar este recurso para evitar a exploração dos jogadores. <br /> Nota: Também é recomendado usar esse recurso SOMENTE em mundos recém-criados onde não existam dados de jogadores. <br /> Nota: Isto NÃO afeta as exclusões. Se os administradores quiserem restaurar o esquema original, eles podem selecionar '__restore__' usando o comando /claimschematic. | false |
 | cleanup-interval | O intervalo em minutos para limpeza de reivindicações expiradas. Defina como 0 para desativar. | 0 |
+| expiration-inactivity | If 'true', claims will expire after owner inactivity exceeds set amount of 'expiration' days. <br /> If 'false', claims will expire after set amount of 'expiration' days has passed. <br /> Note: If this setting is changed to 'false', ALL existing claims will be affected. Use with CAUTION. | true |
 
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
 | reserved-claim-names | Uma lista de nomes de declarações reservados para uso somente por administradores. <br /> Nota: Os nomes suportam curingas '?' e '*' usando o correspondente curinga do Apache. <br /> O curinga '?' representa um único caractere. <br /> O curinga '*' representa zero ou mais caracteres. <br /> Para obter mais informações sobre o uso, consulte [https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch) | [] |
+| respawns-use-border-event | Whether respawns trigger claim border events. Default: True. <br  /> Note: Set to False if you want 'enter-claim' and 'exit-claim' to not be triggered by respawns. | true |
 | restrict-world-max-height | Se deve restringir a reivindicação à altura máxima mundial. | true |
 | teleports-use-border-event | Se os teletransportes acionam eventos de reivindicação de fronteira. <br  /> Note: Set to False if you want 'enter-claim' and 'exit-claim' to not be triggered by teleports. | true | 
+
+
+# temporary-settings
+| Variável | Descrição | Valor padrão |
+| --------- | ----------- | ----------- |
+| claim-block-id | The block identifier used to create temporary claims that will expire based on amount of days set in 'expiration' option. (Default: minecraft:campfire) <br /> Note: Temporary claim will be created when right-clicked with 'modification-tool'. | "minecraft:campfire" |
+| claim-chunk-radius | The radius, in chunks, used to determine how large a temporary claim should be. (Default: 3) <br /> Note: This value must be an odd number such as 1,3,5,7, or 9. If even number is used, the value will be increased by 1. | 3 |
+claim-create-limit | The amount of temporary claims a single player can have at one time. (Default: 5) | 5 |
+| expiration-days | The amount in days that a temporary claim will expire. | 9 |
+| use-temporary-claims | If enabled, allows players to create temporary claims that expire after a set amount of time. (Default: true) | false |
 
 # command
 | Variável | Descrição | Valor padrão |
@@ -161,6 +173,7 @@ Use [RealEstate](/br/hooks/RealEstate.html) isso está sendo descontinuado
 | username | O nome de usuário do banco de dados GriefPrevention | "" |
 | classic-playerdata-threshold | Controla o limite do último dia do jogador ativo para evitar a migração de dados de jogadores GP inativos. Para desativar, defina o valor como 0. <br />Nota: Por exemplo, com o valor padrão de '180', o migrador migrará apenas os dados dos jogadores dos jogadores que jogaram nos últimos 180 dias. <br />Nota: Isto apenas lida com os dados do jogador onde as informações acumuladas/blocos de bônus são armazenadas. Esta configuração não tem efeito na migração de declarações. <br />Nota: Isso evita o armazenamento de dados de usuários inativos no LuckPerms, o que ajuda a manter a visualização do '/lp editor' limpa. | 180 |
 | griefdefender-file-to-database | Defina como verdadeiro para migrar do formato de arquivo para o banco de dados. <br />Nota: O método de armazenamento deve ser definido como hocon para que funcione corretamente. <br />Obs: após a conclusão da migração, alterne o armazenamento para banco de dados. <br />Nota: Isto NÃO removerá os arquivos existentes caso você queira voltar. | FALSE |
+| luckperms-playerdata | <br /> Set to true to migrate player accrued/bonus block data from LP to GD. <br /> Note: It is recommended to backup data before using. <br /> Note: Only enable this setting if using GD 2.4.8+ and have not migrated GD playerdata from LP. <br /> Note: If using GD database storage, Do NOT run this migrator on more than one server if multiple servers share the same GD database. | false |
 | playerdata | Defina como verdadeiro para ativar o migrador de arquivos legado GriefDefender playerdata. <br /> Nota: Esta configuração não é para migrar dados do jogador GriefPrevention. Use a opção 'clássica'. <br /> Nota: Migra o formato de arquivo playerdata herdado para armazenamento de permissões, como LuckPerms json ou armazenamento mysql. <br /> Nota: Antes de ativar isso, certifique-se de definir corretamente o 'context-storage-type' na seção playerdata desta configuração. <br /> Nota: É ALTAMENTE recomendado fazer backup do seu banco de dados de permissões antes de executar este migrador, pois todos os arquivos playerdata locais serão migrados para ele. <br /> Nota: NÃO execute este migrador em mais de um servidor se vários servidores compartilharem o mesmo banco de dados de permissões. | false |
 | red-protect | Defina como verdadeiro para ativar o migrador de dados RedProtect. | FALSE |
 | residence | Defina como verdadeiro para ativar o migrador de dados residenciais. | TRUE |
@@ -224,7 +237,8 @@ cache-entity-damage-expiration | Controla a quantidade de tempo, em segundos, pa
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
 | claim-block-system | Determina qual sistema de bloqueio de declarações usar para declarações. <br />Se definido como VOLUME, os blocos de reivindicação usarão o sistema de contagem de blocos para equilibrar a reivindicação 3D. <br />Se definido como AREA, o sistema padrão de contagem de blocos 2d será usado. | AREA |
-| context-storage-type | O tipo de contexto usado ao armazenar playerdata em um banco de dados de permissões. <br />Os tipos disponíveis são: global, servidor, mundo. <br />Global armazenará dados compartilhados globalmente por todos os servidores. <br />O servidor armazenará dados por servidor. Nota: Isso requer que o nome do servidor seja definido corretamente na configuração de permissões. <br />O mundo armazenará dados por mundo.  | GLOBAL |
+| context-storage-type | O tipo de contexto usado ao armazenar playerdata no banco de dados do GD. <br />Os tipos disponíveis são: global, servidor, mundo. <br />Global armazenará dados compartilhados globalmente por todos os servidores. <br />O servidor armazenará dados por servidor. Nota: Isso requer que o nome do servidor seja definido corretamente na configuração de permissões. <br />O mundo armazenará dados por mundo.  | GLOBAL |
+| force-server-only | <br /> If set to true, GD will only calculate player block data for claims loaded on THIS server. It will not include other servers with same LP server context. <br /> Note: This setting is only used with GD DB storage. <br /> Note: Use with CAUTION!
 | migrate-area-rate | A taxa pela qual dividir o total de cada sinistro acumulado. <br />Defina um valor maior que -1 para ativar. <br />Nota: Isto só deve ser usado ao migrar do volume (sistema 3D) para a área (sistema 2D). <br /> Neste sistema, um pedaço custa 256 blocos. <br />Isto requer que 'claim-block-system' seja definido como AREA. | -1 |
 | migrate-volume-rate | A taxa pela qual multiplicar o total de cada sinistro acumulado. <br />Defina um valor maior que -1 para ativar. <br />Nota: Isto só deve ser usado ao migrar de área (sistema 2D) para volume (sistema 3D). <br />Cada pedaço vale 65.536 blocos no novo sistema, em comparação com 256 no antigo. <br />Isto requer que 'claim-block-system' seja definido como VOLUME. |-1 |
 | reset-accrued-claim-blocks | Se ativado, redefine todos os bloqueios de reivindicações acumuladas de dados do jogador para corresponder ao custo total das reivindicações possuídas. <br />Exemplo: Se um jogador tiver 5 reivindicações básicas com um custo total de 1.000, isso definirá seus blocos de reivindicações acumulados para 1.000. <br />Nota: Isso também redefinirá todos os bloqueios de reivindicações de bônus para 0. É altamente recomendado fazer backup antes de usar. | FALSE |
