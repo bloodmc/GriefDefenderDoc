@@ -48,6 +48,19 @@ Note: This does not store permissions made through Flag Advanced GUI.
 * `griefdefender_trust_container` - Stores all trust permissions that have container.  
 * `griefdefender_trust_manager` - Stores all trust permissions that have manager.  
 
+## Luckperms default node weight
+`griefdefender_option` should have `0` weight  
+`griefdefender_override` should have `-40` weight  
+`griefdefender_claim` should have `-60` weight  
+`griefdefender_trust_manager` should have `-70` weight  
+`griefdefender_trust_builder` should have `-71` weight  
+`griefdefender_trust_container` should have `-72` weight  
+`griefdefender_trust_accessor` should have `-73` weight  
+`griefdefender_trust_resident` should have `-74` weight  
+`griefdefender_claim_group` should have `-75` weight  
+`griefdefender_definition` should have `-80` weight  
+`griefdefender_default` should have `-100` weight  
+
 ### Useful MySQL DB queries
 
 :warning: Replace `minecraft` with LuckPerms DB name and `griefdefender` with GD DB name
@@ -260,6 +273,8 @@ _*See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for informat
 | griefdefender.admin.flag-overrides | Allows to edit flag overrides |
 
 ## Snapshot
+| Permission Node | Description |
+| --------- | ----------- |
 | griefdefender.advanced.user.claim.command.snapshot | Allows user to use /claimsnapshot command. |
 | griefdefender.advanced.user.claim.command.player | Allows user to use /claimgroup command. |
 | griefdefender.advanced.user.snapshot.create.user | Allows user to create claim snapshots stored with user. |

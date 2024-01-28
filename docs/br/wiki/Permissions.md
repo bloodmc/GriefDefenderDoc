@@ -48,6 +48,20 @@ Nota: Isso não armazena permissões feitas por meio da GUI avançada do sinaliz
 * `griefdefender_trust_container` - Armazena todas as permissões de trust que têm container.  
 * `griefdefender_trust_manager` - Armazena todas as permissões de trust que têm manager.  
 
+## Peso (weight) padrão do node no Luckperms
+`griefdefender_option` deve ter `0` no peso (weight)  
+`griefdefender_override` deve ter `-40` no peso (weight)  
+`griefdefender_claim` deve ter `-60` no peso (weight)  
+`griefdefender_trust_manager` deve ter `-70` no peso (weight)  
+`griefdefender_trust_builder` deve ter `-71` no peso (weight)  
+`griefdefender_trust_container` deve ter `-72` no peso (weight)  
+`griefdefender_trust_accessor` deve ter `-73` no peso (weight)  
+`griefdefender_trust_resident` deve ter `-74` no peso (weight)  
+`griefdefender_claim_group` deve ter `-75` no peso (weight)  
+`griefdefender_definition` deve ter `-80` no peso (weight)  
+`griefdefender_default` deve ter `-100` no peso (weight)  
+
+
 ### Consultas úteis de banco de dados MySQL
 
 :warning: Substitua `minecraft` com o nome do banco de dados LuckPerms e `griefdefender` com nome de banco de dados GD
@@ -260,6 +274,8 @@ _*Veja [Interface de definições de bandeiras](/br/wiki/basic/Flag-Definitions-
 | griefdefender.admin.flag-overrides | Permite editar sobreposição de bandeira |
 
 ## Snapshot
+| Node de permissão | Descrição |
+| --------- | ----------- |
 | griefdefender.advanced.user.claim.command.snapshot | Permite que o usuário use o comando /claimsnapshot. |
 | griefdefender.advanced.user.claim.command.player | Permite que o usuário use o comando /claimgroup. |
 | griefdefender.advanced.user.snapshot.create.user | Permite que o usuário crie instantâneos de reivindicações armazenados com o usuário. |

@@ -34,7 +34,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Projectiles: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.5.3
+Version based on release file: GriefDefender 2.5.5
 <hr>
 
 # claim

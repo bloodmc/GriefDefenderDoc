@@ -34,7 +34,7 @@ GriefDefender permite configuração modular. No entanto, de acordo com os arqui
 * Projéteis: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.5.3
+Version based on release file: GriefDefender 2.5.5
 <hr>
 
 # claim

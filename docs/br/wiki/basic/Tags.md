@@ -5,6 +5,8 @@ category: Misc
 icon: tag
 ---
 
+## Sistema de tags nativo do Minecraft 1.13+
+
 Um `Tag` é um novo sistema introduzido no Minecraft 1.13 que permite aos usuários agrupar um ou mais itens, blocos e identificadores de entidade em um único grupo conhecido como tag. GriefDefender se integra ao sistema de tags e expõe todas as tags disponíveis como contextos que podem ser aplicados com uma bandeira ou opção.
 
 Por exemplo, digamos que você queira permitir a interação com os seguintes placas permanentes
@@ -68,3 +70,32 @@ Nota: Se seu pacote de dados não estiver habilitado, sua estrutura de pacote de
 Se você conseguiu carregar seu pacote de dados com sucesso, o GD carregará automaticamente todas as tags em seu registro de contexto para você usar com bandeiras.
 
 Para verificar se as tags estão funcionando com ações específicas no GriefDefender, execute o comando `/gddebug` e verifique a coluna de contexto que exibirá quaisquer tags se usadas.
+
+## GriefDefedender tem um sistema de tags
+
+O GriefDefender conta com um mapa de tags encontrado no arquivo [tag.conf](/br/wiki/basic/Tags.html)  
+Um mapa de tags para bloco/item/entidade para uma lista de um ou mais identificadores.  
+Sempre armazene chaves de tags com o prefixo '#'.  
+Por exemplo, '#shulker_boxes'.  
+
+```
+tags {
+    "#shulker_boxes"=[
+        "minecraft:silver_shulker_box",
+        "minecraft:brown_shulker_bo",
+        "minecraft:yellow_shulker_bo",
+        "minecraft:green_shulker_box",
+        "minecraft:purple_shulker_box",
+        "minecraft:orange_shulker_box",
+        "minecraft:lime_shulker_box",
+        "minecraft:white_shulker_box",
+        "minecraft:gray_shulker_box",
+        "minecraft:blue_shulker_box",
+        "minecraft:magenta_shulker_box",
+        "minecraft:cyan_shulker_box",
+        "minecraft:pink_shulker_box",
+        "minecraft:red_shulker_box",
+        "minecraft:light_blue_shulker_box"
+    ]
+}
+```
