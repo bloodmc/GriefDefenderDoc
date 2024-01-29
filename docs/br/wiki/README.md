@@ -54,7 +54,7 @@ para verificar se o GriefDefender foi carregado com sucesso você pode verificar
 4. Em seguida, desligue o servidor e comece a configurar.
 
 @tab Forge
-:warning: Em breve!
+:warning: Agora disponível para Forge 1.18.2+. Deve ser um patreon para acessar. Para se tornar um patreon, visite minha página no patreon [aqui](https://www.patreon.com/bloodmc)
 1. Instale o [LuckPerms - Forge](https://luckperms.net/) mais recente.
 2. Obtenha a versão adequada do GriefDefender para o Forge X.XX.X no Discord.
 3. Coloque o arquivo jar em `mods`
@@ -63,7 +63,7 @@ para verificar se o GriefDefender foi carregado com sucesso você pode verificar
 5. Em seguida, desligue o servidor e comece a configurar.
 
 @tab Fabric
-:warning: Em breve! 
+:warning: Agora disponível para Forge 1.18.2+. Deve ser um patreon para acessar. Para se tornar um patreon, visite minha página no patreon [aqui](https://www.patreon.com/bloodmc)
 1. Instale o [LuckPerms - Fabric](https://luckperms.net/) mais recente.
 2. Obtenha a versão adequada do GriefDefender para o Forge X.XX.X no Discord.
 3. Coloque o arquivo jar em `mods`
@@ -77,19 +77,22 @@ para verificar se o GriefDefender foi carregado com sucesso você pode verificar
 
 > **NOTA: Existem também algumas opções que devem ser definidas usando seu sistema de permissão, você pode ler mais sobre elas no [Opções na página da wiki](/br/wiki/advanced/Contexts.html).**
 
-Todos os arquivos de configuração podem ser encontrados em uma pasta chamada`GriefDefender` na configuração do seu servidor ou na pasta de plugins.  
+Todos os arquivos de configuração podem ser encontrados em uma pasta chamada `GriefDefender` na configuração do seu servidor ou na pasta de plugins.  
 
 ```
 plugins/
 └── GriefDefender/
     ├── ...
     ├── bans.conf
+    ├── blacklist.conf
     ├── claimnames.conf
     ├── flags.conf
     ├── global.conf
     ├── gui.conf
     ├── options.conf
     └── storage.conf
+    ├── storage.conf
+    └── tag.conf
 ```
 
 Você pode alterar várias configurações no [arquivo de configuração](/br/wiki/advanced/Global-Config.html). O arquivo tem anotações detalhadas que deixam claro o que cada opção faz. Existem três tipos de configurações:
@@ -104,7 +107,7 @@ Dimension arquivos de configuração são usados ​​para afetar uma determina
 
 World configurações substituem a dimensão e as configurações globais.
 
-Os dados da reivindicação podem ser encontrados dentro da pasta da dimensão em que a reivindicação está, por exemplo, todas as reivindicações do mundo superior são salvas dentro
+Os dados da reivindicação podem ser encontrados no armazenamento de banco de dados relevante ou dentro da pasta da dimensão em que a reivindicação está (se estiver usando armazenamento de arquivos), por exemplo. todas as reivindicações mundiais do mundo são salvas dentro 
 
 `config/GriefDefender/worlds/minecraft/overworld/world/ClaimData` para Sponge  
 `plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData` para Bukkit  
@@ -217,6 +220,7 @@ Todos os dados do arquivo serão armazenados em uma pasta chamada `GriefDefender
 config/
 └── GriefDefender/
     ├── claimgroups/
+    ├── GlobalPlayerData/
     ├── lang/
     ├── presets/
     ├── snapshots/
@@ -228,7 +232,7 @@ config/
     │   │   │   │   ├── SchematicData/
     │   │   │   │   └── world.conf
     │   │   │   └── dimension.conf
-    │   │   └── outros...
+    │   │   └── other...
     │   └── 
     ├── bans.conf
     ├── blacklist.conf
@@ -237,15 +241,9 @@ config/
     ├── global.conf
     ├── gui.conf
     ├── options.conf
-    └── storage.conf
+    ├── storage.conf
+    └── tag.conf
 ```
-
-#### lista negra  
-
-O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu [`blacklist.conf`](/br/wiki/Configuration.html#blacklist-lista-negra) e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
-
-Veja a [Lista negra](/br/wiki/Configuration.html#blacklist-lista-negra) para obter mais informações sobre como configurar.
-
 
 #### Banco de dados  
 
@@ -262,6 +260,21 @@ Por exemplo, se você quiser usar mysql, você deve definir este valor para `mys
 7. Ajuste quaisquer outras configurações conforme necessário.
 
 
+### Bedrock  
+
+Se o seu servidor permitir a entrada de jogadores do Bedrock, leia a página [Bedrock](/br/wiki/basic/Bedrock.html) para configurar o GD corretamente.  
+
+
+### Interface  
+
+GD padroniza os usuários para conversar com a GUI. Se você deseja que os usuários usem a GUI de inventário como padrão, eles devem ter a permissão `griefdefender.login.inventory-gui`. Consulte a página da [Interface](/br/wiki/basic/GUI.html) para obter mais informações.  
+
+
+### lista negra  
+
+O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu [`blacklist.conf`](/br/wiki/Configuration.html#blacklist-lista-negra) e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
+
+Veja a [Lista negra](/br/wiki/Configuration.html#blacklist-lista-negra) para obter mais informações sobre como configurar.
 
 ### Modelo econômico
 :warning: Antes de ativar o modelo econômico, certifique-se de testar em um servidor de TESTE para garantir que todas as configurações estejam funcionando corretamente. :warning:

@@ -18,7 +18,7 @@ Use ```griefdefender.user.*``` e ```griefdefender.admin.*``` para os administrad
 Como o GriefDefender faz uso intenso do grupo `default` do LuckPerms, o seguinte DEVE ser configurado corretamente ou o GD não funcionará corretamente
 
 - Todos os grupos do LP não-griefdefender têm um caminho que herdam para o grupo `default`  
-- O grupo `default` está herdando os grupos fornecidos pelo GD : `griefdefender_claim` `griefdefender_claim_group` `griefdefender_default` `griefdefender_definition` `griefdefender_option` `griefdefender_override`
+- O grupo `default` está herdando os grupos entregues pelo GD : `griefdefender_option` `griefdefender_override`
 - O grupo `default` NUNCA deve está desabilitado. LP recomenda nunca desabilitar este grupo.  
 Veja [LuckPerms - Default Groups](https://luckperms.net/wiki/Default-Groups)  
 

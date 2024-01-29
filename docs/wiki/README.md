@@ -253,12 +253,12 @@ For example, if you want to use mysql, you would set this value to `mysql`.
 
 ### Bedrock  
 
-If your server allows bedrock users to join, make sure to read [Bedrock](https://docs.griefdefender.com/wiki/basic/Bedrock.html) page in order to configure GD properly.  
+If your server allows bedrock users to join, make sure to read [Bedrock](/wiki/basic/Bedrock.html) page in order to configure GD properly.  
 
 
 ### GUI  
 
-GD defaults users to chat GUI. If you want users to default to inventory GUI, they must have the permission `griefdefender.login.inventory-gui`. See [GUI](https://docs.griefdefender.com/wiki/basic/GUI.html) page for more info.  
+GD defaults users to chat GUI. If you want users to default to inventory GUI, they must have the permission `griefdefender.login.inventory-gui`. See [GUI](/wiki/basic/GUI.html) page for more info.  
 
 
 ### Blacklist  
