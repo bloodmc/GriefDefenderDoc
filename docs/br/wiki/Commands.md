@@ -175,7 +175,7 @@ ___
 **Requer**: Plug-in de economia.  
 
 Compra blocos de reivindicações adicionais com moeda.
-Nota: `economy-block-cost` deve ser definido com um número superior a 0 em `options.conf` para que este comando funcione.
+Nota: `economy-block-cost` deve ser definido com um número superior a 0 em [`options.conf`](/br/wiki/basic/Options.html) para que este comando funcione.
 
 ___
 #### `/gd buy claim`
@@ -190,7 +190,7 @@ ___
 **Atalho**: `claimbank`  
 **Argumentos**: `<withdraw|deposit> <quantidade> <nome> [identificador]`  
 **Permissão**: `griefdefender.user.claim.command.bank`  
-**Requer**: Plugin de economia que suporta bancos virtuais e configuração `bank-system` definida como `true` em `global.conf`  
+**Requer**: Plugin de economia que suporta bancos virtuais e configuração `bank-system` definida como `true` em [`global.conf`](/br/wiki/advanced/Global-Config.html)  
 
 Usado para sacar ou depositar dinheiro para uso em uma reivindicação que você está enfrentando, a menos que um [Identificadores de reivindicação](/br/wiki/basic/Claim-Management.html#identificadores-de-reivindicacao) seja especificado.
 
@@ -232,7 +232,7 @@ ___
 
 Define o nome de exibição da sua reivindicação.  
 Nota: Use `clear` como argumento para limpar o nome de exibição.  
-Nota: Este comando verifica nomes reservados definidos pelos administradores em `global.conf`. Se um nome reservado for encontrado, ele não será definido, a menos que seja definido por um administrador.  
+Nota: Este comando verifica nomes reservados definidos pelos administradores em [`global.conf`](/br/wiki/advanced/Global-Config.html). Se um nome reservado for encontrado, ele não será definido, a menos que seja definido por um administrador.  
 
 ___
 #### `/gd claim expand`
@@ -268,7 +268,7 @@ ___
 **Permissão**: `griefdefender.user.claim.command.id`  
 
 Define o identificador amigável da sua reivindicação.  
-Nota: Este comando verifica nomes reservados definidos pelos administradores em `global.conf`. Se um nome reservado for encontrado, ele não será definido, a menos que seja definido por um administrador.  
+Nota: Este comando verifica nomes reservados definidos pelos administradores em [`global.conf`](/br/wiki/advanced/Global-Config.html). Se um nome reservado for encontrado, ele não será definido, a menos que seja definido por um administrador.  
 
 ___
 #### `/gd claim info`
@@ -316,7 +316,7 @@ ___
 **Atalho**: `claimrent`  
 **Argumentos**: `[create <rate> [max_days]|list|cancel]`  
 **Permissão**: `griefdefender.user.claim.command.rent`  
-**Requer**: Plugin de economia e `rent-system` serão habilitados em `global.conf`  
+**Requer**: Plugin de economia e `rent-system` serão habilitados em [`global.conf`](/br/wiki/advanced/Global-Config.html)  
 
 Usado para alugar/listar reivindicações.  
 Nota: Este comando é usado apenas para sistema de aluguel GD integrado. Recomenda-se usar RealEstate.
@@ -336,14 +336,14 @@ ___
 **Requer**: Plugin de economia se `player-teleport-cost` for usado.  
 
 Teletransporta você para reivindicar spawn, se disponível.  
-Nota: Para atrasar o teletransporte, defina a opção `player-teleport-delay` maior que `0` em `options.conf`.  
-Nota: Para cobrar moeda no teletransporte, defina `player-teleport-cost` para um valor superior a 0 em `options.conf`.
+Nota: Para atrasar o teletransporte, defina a opção `player-teleport-delay` maior que `0` em [`options.conf`](/br/wiki/basic/Options.html).  
+Nota: Para cobrar moeda no teletransporte, defina `player-teleport-cost` para um valor superior a 0 em [`options.conf`](/br/wiki/basic/Options.html).
 
 ___
 #### `/gd claim tax`
 **Argumentos**: `balance|force|reset|resetall|pay <quantidade>]`   
 **Permissão**: `griefdefender.user.claim.command.claim.tax`  
-**Requer**: Plugin de economia e configuração `tax-system` a serem habilitados em `global.conf`. É altamente recomendável testar esse recurso antes de ligá-lo.  
+**Requer**: Plugin de economia e configuração `tax-system` a serem habilitados em [`global.conf`](/br/wiki/advanced/Global-Config.html). É altamente recomendável testar esse recurso antes de ligá-lo.  
 
 Usado para gerenciar impostos de uma reivindicação. Consulte [Sistema de taxas](/br/wiki/basic/Tax-System.html) para obter mais informações.  
 Nota: O argumento `force` permite que um administrador pague o saldo fiscal de uma reivindicação para outro jogador.  
@@ -469,7 +469,7 @@ ___
 **Requer**: Economy plugin.  
 
 Venda seus blocos de reivindicação por dinheiro do servidor.  
-Nota: `economy-block-sell-return` deve ser definido como superior a 0 em `options.conf` para que este comando funcione.  
+Nota: `economy-block-sell-return` deve ser definido como superior a 0 em [`options.conf`](/br/wiki/basic/Options.html) para que este comando funcione.  
 
 ___
 #### `/gd sell claim`

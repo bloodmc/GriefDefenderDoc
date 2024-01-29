@@ -101,7 +101,7 @@ Controla as configurações de remoção/expiração de reivindicações.
 | claim-chunk-radius | The radius, in chunks, used to determine how large a temporary claim should be. (Default: 3) <br /> Note: This value must be an odd number such as 1,3,5,7, or 9. If even number is used, the value will be increased by 1. | 3 |
 claim-create-limit | The amount of temporary claims a single player can have at one time. (Default: 5) | 5 |
 | expiration-days | The amount in days that a temporary claim will expire. | 9 |
-| use-temporary-claims | If enabled, allows players to create temporary claims that expire after a set amount of time. (Default: true) | false |
+| use-temporary-claims | If enabled, allows players to create temporary claims that expire after a set amount of time. (Default: false) | false |
 
 # command
 | Variável | Descrição | Valor padrão |

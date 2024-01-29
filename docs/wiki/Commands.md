@@ -175,7 +175,7 @@ ___
 **Requires**: Economy plugin  
 
 Purchases additional claim blocks with currency. 
-Note: `economy-block-cost` must be set higher than 0 in `options.conf` for this command to work.
+Note: `economy-block-cost` must be set higher than 0 in [`options.conf`](/wiki/basic/Options.html) for this command to work.
 
 ___
 #### `/gd buy claim`
@@ -190,7 +190,7 @@ ___
 **Aliases**: `claimbank`  
 **Arguments**: `<withdraw|deposit> <amount> <name> [identifier]`  
 **Permission**: `griefdefender.user.claim.command.bank`  
-**Requires**: Economy plugin that supports virtual banks and config setting`bank-system` set to `true` in `global.conf`  
+**Requires**: Economy plugin that supports virtual banks and config setting`bank-system` set to `true` in [`global.conf`](/wiki/advanced/Global-Config.html)  
 
 Used to withdraw or deposit money for use in claim you are standing in unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
 
@@ -232,7 +232,7 @@ ___
 
 Sets the display name of your claim.  
 Note: Use `clear` as argument to clear display name.  
-Note: This command checks for reserved names set by admins in `global.conf`. If a reserved name is found, it will not be set unless set by an admin.  
+Note: This command checks for reserved names set by admins in [`global.conf`](/wiki/advanced/Global-Config.html). If a reserved name is found, it will not be set unless set by an admin.  
 
 ___
 #### `/gd claim expand`
@@ -268,7 +268,7 @@ ___
 **Permission**: `griefdefender.user.claim.command.id`  
 
 Sets the friendly identifier of your claim.  
-Note: This command checks for reserved names set by admins in `global.conf`. If a reserved name is found, it will not be set unless set by an admin.
+Note: This command checks for reserved names set by admins in [`global.conf`](/wiki/advanced/Global-Config.html). If a reserved name is found, it will not be set unless set by an admin.
 
 ___
 #### `/gd claim info`
@@ -316,7 +316,7 @@ ___
 **Aliases**: `claimrent`  
 **Arguments**: `[create <rate> [max_days]|list|cancel]`  
 **Permission**: `griefdefender.user.claim.command.rent`  
-**Requires**: Economy plugin and `rent-system` to be enabled in `global.conf`  
+**Requires**: Economy plugin and `rent-system` to be enabled in [`global.conf`](/wiki/advanced/Global-Config.html)  
 
 Used to rent/list claims.  
 Note: This command is only used for built-in GD rent system. It is recommended to use RealEstate instead.
@@ -336,14 +336,14 @@ ___
 **Requires**: Economy plugin if `player-teleport-cost` is used.  
 
 Teleports you to claim spawn, if available.  
-Note: To delay teleport, set option `player-teleport-delay` higher than `0` in `options.conf`.  
-Note: To charge currency on teleport, set `player-teleport-cost` to a value higher than 0 in `options.conf`.
+Note: To delay teleport, set option `player-teleport-delay` higher than `0` in [`options.conf`](/wiki/basic/Options.html).  
+Note: To charge currency on teleport, set `player-teleport-cost` to a value higher than 0 in [`options.conf`](/wiki/basic/Options.html).
 
 ___
 #### `/gd claim tax`
 **Arguments**: `balance|force|reset|resetall|pay <amount>]`   
 **Permission**: `griefdefender.user.claim.command.claim.tax`  
-**Requires**: Economy plugin and config setting `tax-system` to be enabled in `global.conf`. It is highly recommended to test this feature before turning on.  
+**Requires**: Economy plugin and config setting `tax-system` to be enabled in [`global.conf`](/wiki/advanced/Global-Config.html). It is highly recommended to test this feature before turning on.  
 
 Used to manage taxes of a claim.  See [Tax System](/wiki/basic/Tax-System.html) for more info.  
 Note: The argument `force` allows an admin to pay a claim's tax balance for another player.    
@@ -470,7 +470,7 @@ ___
 **Requires**: Economy plugin.  
 
 Sell your claim blocks for server money.  
-Note: `economy-block-sell-return` must be set higher than 0 in `options.conf` for this command to work.
+Note: `economy-block-sell-return` must be set higher than 0 in [`options.conf`](/wiki/basic/Options.html) for this command to work.
 
 ___
 #### `/gd sell claim`
