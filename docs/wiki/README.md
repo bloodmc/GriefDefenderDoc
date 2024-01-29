@@ -48,9 +48,9 @@ to check if GriefDefender was loaded sucessfully you can check console for `[Gri
 
 @tab Forge
 
-:warning: Coming soon!
+:warning: Now available for Forge 1.18.2+. Must be a patreon to access. To become a patreon, visit my patreon page [here](https://www.patreon.com/bloodmc)
 1. Install latest [LuckPerms - Forge](https://luckperms.net/download).
-2. Get porper version of GD for Forge X.XX.X from Discord.
+2. Get proper version of GD for Forge X.XX.X from Discord.
 3. Drop the jar into `mods`
 4. Now start your server once to generate all configuration files, 
 to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`.
@@ -58,7 +58,7 @@ to check if GriefDefender was loaded sucessfully you can check console for `[Gri
 
 @tab Fabric
 
-:warning: Coming soon!
+:warning: Now available for Fabric 1.19.2+. Must be a patreon to access. To become a patreon, visit my patreon page [here](https://www.patreon.com/bloodmc)
 1. Install latest [LuckPerms - Fabric](https://luckperms.net/download).
 2. Get porper version of GD for Forge X.XX.X from Discord.
 3. Drop the jar into `mods`
@@ -79,12 +79,14 @@ plugins/
 └── GriefDefender/
     ├── ...
     ├── bans.conf
+    ├── blacklist.conf
     ├── claimnames.conf
     ├── flags.conf
     ├── global.conf
     ├── gui.conf
     ├── options.conf
-    └── storage.conf
+    ├── storage.conf
+    └── tag.conf
 ```
 
 You can change a number of settings in the [config file](/wiki/advanced/Global-Config.html). The file has detailed annotations that should make it clear what each option does. There are three types of configs:
@@ -97,7 +99,7 @@ Global configuration files can affect all of a server’s worlds and dimensions.
 Dimension configuration files are used to affect a certain dimension or group of worlds. These types of configs will override the global config files. World configuration files are used to modify individual worlds only.   
 World configs override dimension and global configs.
 
-Claim data can be found inside the folder of the dimension the claim is in, e.g. all overworld world claims are saved inside 
+Claim data can be found relevant DB storage or inside the folder of the dimension the claim is in (if using file storage), e.g. all overworld world claims are saved inside 
 
 `config/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Sponge  
 `plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Bukkit  
@@ -198,7 +200,6 @@ To change the lang, open [`global.conf`](/wiki/advanced/Global-Config.html) and 
 
 ### Storage
 
-:warning: All player accrued/bonus block data is stored in LuckPerms as meta. Use `/lp editor` to view current data. :warning:   
 
 #### File  
 
@@ -210,6 +211,7 @@ All file data will be stored in a folder called `GriefDefender` in your servers 
 config/
 └── GriefDefender/
     ├── claimgroups/
+    ├── GlobalPlayerData/
     ├── lang/
     ├── presets/
     ├── snapshots/
@@ -230,15 +232,9 @@ config/
     ├── global.conf
     ├── gui.conf
     ├── options.conf
-    └── storage.conf
+    ├── storage.conf
+    └── tag.conf
 ```
-
-#### Blacklist  
-
-GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your [`blacklist.conf`](/wiki/Configuration.html#blacklist) and remove any id's you do not want to blacklist for your server.  
-
-See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to configure.  
-
 
 #### Database  
 
@@ -253,6 +249,23 @@ For example, if you want to use mysql, you would set this value to `mysql`.
 5. Set `username` to DB username.  
 6. Set `password` to DB password surrounded by quotes.  
 7. Adjust any other settings as needed.  
+
+
+### Bedrock  
+
+If your server allows bedrock users to join, make sure to read [Bedrock](https://docs.griefdefender.com/wiki/basic/Bedrock.html) page in order to configure GD properly.  
+
+
+### GUI  
+
+GD defaults users to chat GUI. If you want users to default to inventory GUI, they must have the permission `griefdefender.login.inventory-gui`. See [GUI](https://docs.griefdefender.com/wiki/basic/GUI.html) page for more info.  
+
+
+### Blacklist  
+
+GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your [`blacklist.conf`](/wiki/Configuration.html#blacklist) and remove any id's you do not want to blacklist for your server.  
+
+See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to configure.  
 
 
 
