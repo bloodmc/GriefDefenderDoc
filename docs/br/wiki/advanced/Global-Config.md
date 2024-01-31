@@ -84,24 +84,24 @@ Controla as configurações de remoção/expiração de reivindicações.
 | auto-nature-restore | Se as reivindicações de sobrevivência serão automaticamente restauradas ao estado gerado mundialmente quando expirarem. <br /> Nota: Isto suporta apenas blocos gerados mundialmente. Considere usar 'auto-schematic-restore' se estiver usando um mundo personalizado. | false |
 | auto-schematic-restore | Se as reivindicações de sobrevivência serão restauradas automaticamente para seu esquema de criação de reivindicações no abandono/expiração. <br /> Nota: A ativação deste recurso fará com que TODAS as reivindicações recém-criadas criem automaticamente um esquema especial que será usado para restaurar a reivindicação em caso de abandono/expiração. <br  /> Obs: a ativação desse recurso desativará a capacidade de redimensionar reivindicações. <br /> Nota: É ALTAMENTE recomendado desativar a construção na natureza antes de usar este recurso para evitar a exploração dos jogadores. <br /> Nota: Também é recomendado usar esse recurso SOMENTE em mundos recém-criados onde não existam dados de jogadores. <br /> Nota: Isto NÃO afeta as exclusões. Se os administradores quiserem restaurar o esquema original, eles podem selecionar '__restore__' usando o comando /claimschematic. | false |
 | cleanup-interval | O intervalo em minutos para limpeza de reivindicações expiradas. Defina como 0 para desativar. | 0 |
-| expiration-inactivity | If 'true', claims will expire after owner inactivity exceeds set amount of 'expiration' days. <br /> If 'false', claims will expire after set amount of 'expiration' days has passed. <br /> Note: If this setting is changed to 'false', ALL existing claims will be affected. Use with CAUTION. | true |
+| expiration-inactivity | Se for "verdadeiro", as reivindicações expirarão depois que a inatividade do proprietário exceder a quantidade definida de dias de "expiração". <br /> Se for 'falso', as reivindicações expirarão após a quantidade definida de dias de 'expiração' ter passado. <br /> Nota: Se esta configuração for alterada para 'falsa', TODAS as reivindicações existentes serão afetadas. Use com cuidado. | true |
 
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
 | reserved-claim-names | Uma lista de nomes de declarações reservados para uso somente por administradores. <br /> Nota: Os nomes suportam curingas '?' e '*' usando o correspondente curinga do Apache. <br /> O curinga '?' representa um único caractere. <br /> O curinga '*' representa zero ou mais caracteres. <br /> Para obter mais informações sobre o uso, consulte [https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch(java.lang.String,%20java.lang.String](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FilenameUtils.html#wildcardMatch) | [] |
-| respawns-use-border-event | Whether respawns trigger claim border events. Default: True. <br  /> Note: Set to False if you want 'enter-claim' and 'exit-claim' to not be triggered by respawns. | true |
+| respawns-use-border-event |Se os respawns acionam eventos de fronteira de reivindicação.  <br  /> Nota: Defina como False se quiser que 'enter-claim' e 'exit-claim' não sejam acionados por respawns. | true |
 | restrict-world-max-height | Se deve restringir a reivindicação à altura máxima mundial. | true |
-| teleports-use-border-event | Se os teletransportes acionam eventos de reivindicação de fronteira. <br  /> Note: Set to False if you want 'enter-claim' and 'exit-claim' to not be triggered by teleports. | true | 
+| teleports-use-border-event | Se os teletransportes acionam eventos de reivindicação de fronteira. <br  /> Nota: Defina como False se quiser que 'enter-claim' e 'exit-claim' não sejam acionados por teletransportes. | true | 
 
 
 # temporary-settings
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
-| claim-block-id | The block identifier used to create temporary claims that will expire based on amount of days set in 'expiration' option. (Default: minecraft:campfire) <br /> Note: Temporary claim will be created when right-clicked with 'modification-tool'. | "minecraft:campfire" |
-| claim-chunk-radius | The radius, in chunks, used to determine how large a temporary claim should be. (Default: 3) <br /> Note: This value must be an odd number such as 1,3,5,7, or 9. If even number is used, the value will be increased by 1. | 3 |
-claim-create-limit | The amount of temporary claims a single player can have at one time. (Default: 5) | 5 |
-| expiration-days | The amount in days that a temporary claim will expire. | 9 |
-| use-temporary-claims | If enabled, allows players to create temporary claims that expire after a set amount of time. (Default: false) | false |
+| claim-block-id | O identificador de bloco usado para criar reivindicações temporárias que expirarão com base na quantidade de dias definida na opção 'expiração'. <br /> Note: Temporary claim will be created when right-clicked with 'modification-tool'. | "minecraft:campfire" |
+| claim-chunk-radius | O raio, em partes, usado para determinar o tamanho que uma reivindicação temporária deve ter. <br /> Nota: Este valor deve ser um número ímpar, como 1,3,5,7 ou 9. Se for usado um número par, o valor será aumentado em 1. | 3 |
+claim-create-limit | A quantidade de reivindicações temporárias que um único jogador pode ter ao mesmo tempo. | 5 |
+| expiration-days | O valor em dias que uma reivindicação temporária irá expirar. | 9 |
+| use-temporary-claims | Se ativado, permite que os jogadores criem reivindicações temporárias que expiram após um determinado período de tempo. | false |
 
 # command
 | Variável | Descrição | Valor padrão |
@@ -173,7 +173,7 @@ Use [RealEstate](/br/hooks/RealEstate.html) isso está sendo descontinuado
 | username | O nome de usuário do banco de dados GriefPrevention | "" |
 | classic-playerdata-threshold | Controla o limite do último dia do jogador ativo para evitar a migração de dados de jogadores GP inativos. Para desativar, defina o valor como 0. <br />Nota: Por exemplo, com o valor padrão de '180', o migrador migrará apenas os dados dos jogadores dos jogadores que jogaram nos últimos 180 dias. <br />Nota: Isto apenas lida com os dados do jogador onde as informações acumuladas/blocos de bônus são armazenadas. Esta configuração não tem efeito na migração de declarações. <br />Nota: Isso evita o armazenamento de dados de usuários inativos no LuckPerms, o que ajuda a manter a visualização do '/lp editor' limpa. | 180 |
 | griefdefender-file-to-database | Defina como verdadeiro para migrar do formato de arquivo para o banco de dados. <br />Nota: O método de armazenamento deve ser definido como hocon para que funcione corretamente. <br />Obs: após a conclusão da migração, alterne o armazenamento para banco de dados. <br />Nota: Isto NÃO removerá os arquivos existentes caso você queira voltar. | FALSE |
-| luckperms-playerdata | <br /> Set to true to migrate player accrued/bonus block data from LP to GD. <br /> Note: It is recommended to backup data before using. <br /> Note: Only enable this setting if using GD 2.4.8+ and have not migrated GD playerdata from LP. <br /> Note: If using GD database storage, Do NOT run this migrator on more than one server if multiple servers share the same GD database. | false |
+| luckperms-playerdata | <br /> Defina como verdadeiro para migrar dados acumulados do jogador/bloco de bônus de LP para GD. <br /> Nota: Recomenda-se fazer backup dos dados antes de usar. <br /> Nota: Habilite esta configuração apenas se estiver usando GD 2.4.8+ e não tiver migrado os dados do jogador GD do LP. <br /> Nota: Se estiver usando armazenamento de banco de dados GD, NÃO execute este migrador em mais de um servidor se vários servidores compartilharem o mesmo banco de dados GD. | false |
 | playerdata | Defina como verdadeiro para ativar o migrador de arquivos legado GriefDefender playerdata. <br /> Nota: Esta configuração não é para migrar dados do jogador GriefPrevention. Use a opção 'clássica'. <br /> Nota: Migra o formato de arquivo playerdata herdado para armazenamento de permissões, como LuckPerms json ou armazenamento mysql. <br /> Nota: Antes de ativar isso, certifique-se de definir corretamente o 'context-storage-type' na seção playerdata desta configuração. <br /> Nota: É ALTAMENTE recomendado fazer backup do seu banco de dados de permissões antes de executar este migrador, pois todos os arquivos playerdata locais serão migrados para ele. <br /> Nota: NÃO execute este migrador em mais de um servidor se vários servidores compartilharem o mesmo banco de dados de permissões. | false |
 | red-protect | Defina como verdadeiro para ativar o migrador de dados RedProtect. | FALSE |
 | residence | Defina como verdadeiro para ativar o migrador de dados residenciais. | TRUE |
@@ -305,7 +305,7 @@ Gerencia provedores de plug-ins aos quais o GD se conecta para funcionalidade es
 | subdivision-accent-block | O bloco de acento visual usado para reivindicações de subdivisão. | minecraft:white_wool ou minecraft:wool para versão legacy |
 | subdivision-corner-block | O bloco de canto visual usado para reivindicações de subdivisão. | minecraft:iron_block |
 | subdivision-corner-block | O bloco de canto visual usado para reivindicações de subdivisão. | minecraft:iron_block |
-| subdivision-filler-block | The visual filler block used for subdivision claims. | inecraft:white_wool ou minecraft:wool para versão legacy |
+| subdivision-filler-block | O bloco de preenchimento visual usado para reivindicações de subdivisão. | inecraft:white_wool ou minecraft:wool para versão legacy |
 | town-accent-block | O bloco de destaque visual usado para reivindicações da cidade. | minecraft:emerald_block |
 | town-corner-block | O bloco de canto visual usado para reivindicações da cidade. | minecraft:glowstone |
 | town-filler-block | O bloco de preenchimento visual usado para reivindicações da cidade. | minecraft:emerald_block |
