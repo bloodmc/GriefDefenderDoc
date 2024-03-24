@@ -147,7 +147,7 @@ ___
     `griefdefender.user.claim.command.abandon.town` - Required if abandoning town.  
 **Note**: This is only used for user claims NOT admin claims. See [/gd delete claim [identifier]](#gd-delete-claim)  
 
-Abandons the claim you are standing on unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+Abandons the claim you are standing on unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
 Note: This command will only work on claims with no children. If you want to abandon a claim with children, you must use
 [/gd abandon top](#gd-abandon-top) instead.
 
@@ -164,7 +164,7 @@ ___
 **Arguments**: `[identifier]`   
 **Permission**: `griefdefender.user.claim.command.abandon-top-level`  
 
-Abandons the claim you are standing on and all its subdivisions unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+Abandons the claim you are standing on and all its subdivisions unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
 Note: If used on a town claim, it will also include all basic children claims owned by the town owner.
 
 ___
@@ -175,7 +175,7 @@ ___
 **Requires**: Economy plugin  
 
 Purchases additional claim blocks with currency. 
-Note: `economy-block-cost` must be set higher than 0 in `options.conf` for this command to work.
+Note: `economy-block-cost` must be set higher than 0 in [`options.conf`](/wiki/basic/Options.html) for this command to work.
 
 ___
 #### `/gd buy claim`
@@ -190,9 +190,9 @@ ___
 **Aliases**: `claimbank`  
 **Arguments**: `<withdraw|deposit> <amount> <name> [identifier]`  
 **Permission**: `griefdefender.user.claim.command.bank`  
-**Requires**: Economy plugin that supports virtual banks and config setting`bank-system` set to `true` in `global.conf`  
+**Requires**: Economy plugin that supports virtual banks and config setting`bank-system` set to `true` in [`global.conf`](/wiki/advanced/Global-Config.html)  
 
-Used to withdraw or deposit money for use in claim you are standing in unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+Used to withdraw or deposit money for use in claim you are standing in unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
 
 
 ___
@@ -201,7 +201,7 @@ ___
 **Arguments**: `<amount> [direction] [identifier]`  
 **Permission**: `griefdefender.user.claim.command.contract`  
 
-Contracts/Shrinks the claim you are standing in, unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified, from the direction specified or facing.  
+Contracts/Shrinks the claim you are standing in, unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified, from the direction specified or facing.  
 
 ___
 #### `/gd claim create`
@@ -232,7 +232,7 @@ ___
 
 Sets the display name of your claim.  
 Note: Use `clear` as argument to clear display name.  
-Note: This command checks for reserved names set by admins in `global.conf`. If a reserved name is found, it will not be set unless set by an admin.  
+Note: This command checks for reserved names set by admins in [`global.conf`](/wiki/advanced/Global-Config.html). If a reserved name is found, it will not be set unless set by an admin.  
 
 ___
 #### `/gd claim expand`
@@ -240,7 +240,7 @@ ___
 **Arguments**: `<amount> [direction] [identifier]`  
 **Permission**: `griefdefender.user.claim.command.expand`  
  
-Expands the claim you are standing in, unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified, in the direction specified or facing.  
+Expands the claim you are standing in, unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified, in the direction specified or facing.  
 
 ___
 #### `/gd claim farewell`
@@ -248,7 +248,7 @@ ___
 **Arguments**: `<message>|clear|none [identifier]`  
 **Permission**: `griefdefender.user.claim.command.farewell`  
 
-Sets the farewell message of the claim you are standing in, unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified.  
+Sets the farewell message of the claim you are standing in, unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.  
 Note: To unset, use `/gd claim farewell clear`
 
 ___
@@ -268,7 +268,7 @@ ___
 **Permission**: `griefdefender.user.claim.command.id`  
 
 Sets the friendly identifier of your claim.  
-Note: This command checks for reserved names set by admins in `global.conf`. If a reserved name is found, it will not be set unless set by an admin.
+Note: This command checks for reserved names set by admins in [`global.conf`](/wiki/advanced/Global-Config.html). If a reserved name is found, it will not be set unless set by an admin.
 
 ___
 #### `/gd claim info`
@@ -288,7 +288,7 @@ ___
     `griefdefender.user.claim.command.info.others.last-active` - Required to see last active in claims not owned by you.  
     `griefdefender.user.claim.command.info.others.claim-uuid` - Required to see claim UUID in claims not owned by you.  
 
-Gets information about the claim you are standing in unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+Gets information about the claim you are standing in unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
 
 
 ___
@@ -316,7 +316,7 @@ ___
 **Aliases**: `claimrent`  
 **Arguments**: `[create <rate> [max_days]|list|cancel]`  
 **Permission**: `griefdefender.user.claim.command.rent`  
-**Requires**: Economy plugin and `rent-system` to be enabled in `global.conf`  
+**Requires**: Economy plugin and `rent-system` to be enabled in [`global.conf`](/wiki/advanced/Global-Config.html)  
 
 Used to rent/list claims.  
 Note: This command is only used for built-in GD rent system. It is recommended to use RealEstate instead.
@@ -336,16 +336,16 @@ ___
 **Requires**: Economy plugin if `player-teleport-cost` is used.  
 
 Teleports you to claim spawn, if available.  
-Note: To delay teleport, set option `player-teleport-delay` higher than `0` in `options.conf`.  
-Note: To charge currency on teleport, set `player-teleport-cost` to a value higher than 0 in `options.conf`.
+Note: To delay teleport, set option `player-teleport-delay` higher than `0` in [`options.conf`](/wiki/basic/Options.html).  
+Note: To charge currency on teleport, set `player-teleport-cost` to a value higher than 0 in [`options.conf`](/wiki/basic/Options.html).
 
 ___
 #### `/gd claim tax`
 **Arguments**: `balance|force|reset|resetall|pay <amount>]`   
 **Permission**: `griefdefender.user.claim.command.claim.tax`  
-**Requires**: Economy plugin and config setting `tax-system` to be enabled in `global.conf`. It is highly recommended to test this feature before turning on.  
+**Requires**: Economy plugin and config setting `tax-system` to be enabled in [`global.conf`](/wiki/advanced/Global-Config.html). It is highly recommended to test this feature before turning on.  
 
-Used to manage taxes of a claim.  See [Tax System](https://docs.griefdefender.com/wiki/basic/Tax-System.html) for more info.  
+Used to manage taxes of a claim.  See [Tax System](/wiki/basic/Tax-System.html) for more info.  
 Note: The argument `force` allows an admin to pay a claim's tax balance for another player.    
 Note: The argument `reset` will reset tax owed in claim. Requires `griefdefender.admin.claim.command.admin-mode` or ability to ignore claim type.  
 Note: The argument `resetall` will reset tax owed in all claims. Requires `griefdefender.admin.claim.command.admin-mode` or ability to ignore claim type.
@@ -366,7 +366,7 @@ ___
 **Arguments**: `<player> [identifier]`  
 **Permission**: `griefdefender.user.claim.command.transfer`  
 
-Transfer the claim you're standing in, unless [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified, to target player.
+Transfer the claim you're standing in, unless [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified, to target player.
 
 ___
 #### `/gd claim we`
@@ -387,7 +387,7 @@ ___
 **Arguments**: `join <group> [<identifier>]|unjoin [<identifier>]|create <group>|delete <group>`  
 **Permission**: `griefdefender.admin.claim.command.group`  
 
-Used to manage global admin claim groups. See [Claim Groups](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-groups) for more info.
+Used to manage global admin claim groups. See [Claim Groups](/wiki/basic/Claim-Management.html#claim-groups) for more info.
 
 ___
 #### `/gd confirm`
@@ -470,7 +470,7 @@ ___
 **Requires**: Economy plugin.  
 
 Sell your claim blocks for server money.  
-Note: `economy-block-sell-return` must be set higher than 0 in `options.conf` for this command to work.
+Note: `economy-block-sell-return` must be set higher than 0 in [`options.conf`](/wiki/basic/Options.html) for this command to work.
 
 ___
 #### `/gd sell claim`
@@ -671,7 +671,7 @@ ___
 **Arguments**: `<group> [<accessor|builder|container|manager|resident>] [identifier]`  
 **Permission**: `griefdefender.admin.claim.command.trust.group`  
 
-Grants a LP group access to the claim you are standing in unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+Grants a LP group access to the claim you are standing in unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
 
 ___
 #### `/gd trustall player`
@@ -793,7 +793,7 @@ ___
 **Example**: To clear all pigs in current claim :  
 `/gd claim clear minecraft:pig`  
 
-Allows clearing of entities within one or more claims in claim you are standing on unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+Allows clearing of entities within one or more claims in claim you are standing on unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
 
 ___
 #### `/gd claim reserve`
@@ -830,7 +830,7 @@ ___
 **Example**: To record all flag actions in claim you are standing in :  
 `/gddebug record claim` then `/gddebug paste` to retrieve link.  
 
-Toggles admin claim debugging mode to record actions in claim. See [Debugging](https://docs.griefdefender.com/wiki/advanced/Debugging.html) for more info.  
+Toggles admin claim debugging mode to record actions in claim. See [Debugging](/wiki/advanced/Debugging.html) for more info.  
 Note: Use `claim` filter to only include debug in claim you are standing in.
 
 ___
@@ -864,7 +864,7 @@ ___
 **Aliases**: `deletetop`  
 **Permission**: `griefdefender.admin.claim.command.delete-claims`  
 
-Deletes the claim you are standing on and all its subdivisions unless a [claim identifier](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-identifiers) is specified.  
+Deletes the claim you are standing on and all its subdivisions unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.  
 Note: If used on a town claim, it will also include all basic children claims owned by the town owner.
 
 ___
@@ -984,7 +984,7 @@ ___
 **Arguments**: `join <group> [<identifier>]|unjoin [<identifier>]|create <group>|delete <group>`  
 **Permission**: `griefdefender.advanced.user.claim.command.player`  
 
-Used to manage player claim groups. See [Claim Groups](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-groups) for more info.
+Used to manage player claim groups. See [Claim Groups](/wiki/basic/Claim-Management.html#claim-groups) for more info.
 
 ___
 #### `/gd snapshot`
@@ -992,7 +992,7 @@ ___
 **Arguments**: `<apply|create|delete> <name> [contexts]`  
 **Permission**: `griefdefender.advanced.user.claim.command.snapshot`  
 
-Manages claim snapshots used to backup/restore/replace a claim's permission, option, trust, or claim data. See [Claim Snapshots](https://docs.griefdefender.com/wiki/basic/Claim-Management.html#claim-snapshots) for more info.
+Manages claim snapshots used to backup/restore/replace a claim's permission, option, trust, or claim data. See [Claim Snapshots](/wiki/basic/Claim-Management.html#claim-snapshots) for more info.
 
 
 ### Misc
