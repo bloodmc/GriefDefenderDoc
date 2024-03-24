@@ -5,31 +5,35 @@ category: claim
 icon: screen
 ---
 
-## Overview
+## Config
 
-The flag definition system provides both users and admins the ability to manage their claim flags in a [chat](/wiki/basic/GUI.html#chat) or [inventory](/wiki/basic/GUI.html#inventoryy) GUI.  
+The flag definition system provides both users and admins the ability to manage their claim flags in a [chat](/wiki/basic/GUI.html#chat) or [inventory](/wiki/basic/GUI.html#inventory) GUI.  
 GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.  
 The delivered vanilla flag definition data can be found in the following location
-### Fabric|Forge|Sponge
-`./config/GriefDefender/presets/minecraft.conf`
-### Bukkit|Hybrid
-`./plugins/GriefDefender/presets/minecraft.conf`
+
+Fabric, Forge, and Sponge preset vanilla config is located in  
+
+`./config/GriefDefender/presets/minecraft.conf`  
+
+Bukkit and Hybrid preset vanilla config is located in  
+
+`./plugins/GriefDefender/presets/minecraft.conf`  
 
 
 
-Admins are given full control to add/remove/customize flag definitions.  
+Admins are given full control to add/remove/customize flag definitions.   
 
-To add a flag definition to an existing delivered minecraft preset, open the `./presets/minecraft.conf` file.
-Within this section, you will see 2 delivered groups `admin` and `user`.  
+To add a flag definition to an existing delivered minecraft preset, open the `./presets/minecraft.conf` file.  
+Within this section, you will see 2 delivered groups `admin` and `user`.   
 
 All flag definitions located within the `admin` group are accessible by only admins. This is due to the `admin-group` setting be set to `true`.  
 All flag definitions located within the `user` group are accessible by all users.  
 You can add/remove/move flag definitions as you please and even create new preset files from scratch which will get read when GUI is loaded.  
 
-### Add new flag definition
+### Flag Definition
 
-If you want to add a flag to the 'admin' section, do the following
-1. Clone an existing flag definition. We will use `villager-trade` for this example.
+If you want to add a flag to the 'admin' section, do the following  
+1. Clone an existing flag definition. We will use `villager-trade` for this example.  
 
 ```
 villager-trade {
@@ -54,7 +58,7 @@ villager-trade {
 }
 ```
 
-Lets break this example down
+Lets break this example down  
 
 #### Name  
 
@@ -63,9 +67,9 @@ Note: These are not actual GD core flags but rather a `flag definition` and cann
 
 #### Contexts  
 
-:::: warning Important
-Contexts set in flag definition do NOT apply when toggled in GUI. They are only used during server startup.  GUI will always apply flags to the claim player is standing in by using the `gd_claim` context.
-::::
+:::: warning Important  
+Contexts set in flag definition do NOT apply when toggled in GUI. They are only used during server startup.  GUI will always apply flags to the claim player is standing in by using the `gd_claim` context.  
+::::  
 
 ```
 contexts=[
@@ -75,40 +79,40 @@ contexts=[
 These are the definition contexts that will be used with all permissions defined within `permissions=[...]`.  
 It currently only supports context keys `gd_claim_default` and `gd_claim_override`.  
 
-`gd_claim_default` - This context is used with most definitions. It instructs GD to apply the definition at server startup to all existing/new claims. 
-This context accepts the following values : 
-`admin` - Only apply definition to admin claims. 
-`basic` - Only apply definition to basic claims.
-`subdivision` - Only apply definition to subdivisions.
-`town`  - Only apply definition to towns.
-`global`  - Apply definition to ALL claims including wilderness.
-`user` - Apply definition to ALL claims excluding wilderness.
+`gd_claim_default` - This context is used with most definitions. It instructs GD to apply the definition at server startup to all existing/new claims.   
+This context accepts the following values :   
+`admin` - Only apply definition to admin claims.   
+`basic` - Only apply definition to basic claims.  
+`subdivision` - Only apply definition to subdivisions.  
+`town`  - Only apply definition to towns.  
+`global`  - Apply definition to ALL claims including wilderness.  
+`user` - Apply definition to ALL claims excluding wilderness.  
 
-Note: The default context ALWAYS applies permissions as transient in LuckPerms. In otherwords, the permissions only exist in memory while server is running. If the flag definition is toggled in GD GUI or set by an admin via command or editor, it will take priority over defaults as it will persist in LP storage.
-Note: Toggled flags in GUI will be stored in `griefdefender_definition` and will take priority over the `default-value` set in definition. Removing these permissions from `griefdefender_definition` will force GD to fallback to the default values of definitions in preset.
+Note: The default context ALWAYS applies permissions as transient in LuckPerms. In otherwords, the permissions only exist in memory while server is running. If the flag definition is toggled in GD GUI or set by an admin via command or editor, it will take priority over defaults as it will persist in LP storage.  
+Note: Toggled flags in GUI will be stored in `griefdefender_definition` and will take priority over the `default-value` set in definition. Removing these permissions from `griefdefender_definition` will force GD to fallback to the default values of definitions in preset.  
 
 
 `gd_claim_override` - This context is used with a few definitions. It instructs GD to apply the definition at server startup as an override to all existing/new claims.  
-This context accepts the following values : 
-`admin` - Only apply definition to admin claims. 
-`basic` - Only apply definition to basic claims.
-`subdivision` - Only apply definition to subdivisions.
-`town`  - Only apply definition to towns.
-`global`  - Apply definition to ALL claims including wilderness.
-`user` - Apply definition to ALL claims excluding wilderness.
+This context accepts the following values :  
+`admin` - Only apply definition to admin claims.  
+`basic` - Only apply definition to basic claims.  
+`subdivision` - Only apply definition to subdivisions.  
+`town`  - Only apply definition to towns.  
+`global`  - Apply definition to ALL claims including wilderness.  
+`user` - Apply definition to ALL claims excluding wilderness.  
 
-Note: This context has higher priority than `gd_claim_default`. During server startup, GD will apply any flag definition using the override context as a persistent permission in the `griefdefender_override` LP group which has the highest priority of GD flag groups.
+Note: This context has higher priority than `gd_claim_default`. During server startup, GD will apply any flag definition using the override context as a persistent permission in the `griefdefender_override` LP group which has the highest priority of GD flag groups.  
 
-See [GriefDefender - Context](https://docs.griefdefender.com/wiki/advanced/Contexts.html) for more information on how contexts work in GD.
+See [GriefDefender - Context](https://docs.griefdefender.com/wiki/advanced/Contexts.html) for more information on how contexts work in GD.  
 See [LuckPerms - Context](https://luckperms.net/wiki/Context) for more information on how contexts work with LP.  
 
 #### Default Groups
 
-The `default-groups` section allows admins to segment specific LP groups with their own default values. These permissions will always be applied as persistent in LP which means they will exist in storage.
+The `default-groups` section allows admins to segment specific LP groups with their own default values. These permissions will always be applied as persistent in LP which means they will exist in storage.  
 
 ##### Example 1
 
-If you want to provide default values based on trust you could do the following :
+If you want to provide default values based on trust you could do the following :  
 
 ```
 default-groups {
@@ -117,8 +121,8 @@ default-groups {
 }
 ```
 
-This would prevent users with accessor and container trust from interacting with villagers by default. However, a claim owner could override this default by toggling the `villager-trade` flag under `ACCESSOR` or `CONTAINER` menu in GUI.
-Note: By default, users will only be able to control `PUBLIC` flags in GUI. In order for a user to control user trust flags, they must be assigned the following permissions :
+This would prevent users with accessor and container trust from interacting with villagers by default. However, a claim owner could override this default by toggling the `villager-trade` flag under `ACCESSOR` or `CONTAINER` menu in GUI.  
+Note: By default, users will only be able to control `PUBLIC` flags in GUI. In order for a user to control user trust flags, they must be assigned the following permissions :  
 
 ```
 griefdefender.advanced.user.gui.flag.group.owner
@@ -128,12 +132,12 @@ griefdefender.advanced.user.gui.flag.group.container
 griefdefender.advanced.user.gui.flag.group.manager
 ```
 
-Note: These LP groups are actually prefixed with `griefdefender_` but GD allows you to omit the prefix. Other LP groups require the full group name.
+Note: These LP groups are actually prefixed with `griefdefender_` but GD allows you to omit the prefix. Other LP groups require the full group name.  
 
 
 ##### Example 2
 
-Deny users in `novice` group to interact with all villagers in claims by default.
+Deny users in `novice` group to interact with all villagers in claims by default.  
 
 ```
 default-groups {
@@ -141,12 +145,12 @@ default-groups {
 }
 ```
 
-Even though the `default-value` is set to `true` by default, this setting would instruct GD to deny any user part of the `novice` group from interacting with villagers.
+Even though the `default-value` is set to `true` by default, this setting would instruct GD to deny any user part of the `novice` group from interacting with villagers.  
 
 
 ##### Example 3
 
-Set default that affects all claim owners in existing claims.
+Set default that affects all claim owners in existing claims.  
 
 ```
 default-groups {
@@ -154,24 +158,24 @@ default-groups {
 }
 ```
 
-The manager trust group has a special use case for the `default-groups` section. It not only affects users with manager trust but also affects owners. Admins can utilize this group to control claim owner defaults.
+The manager trust group has a special use case for the `default-groups` section. It not only affects users with manager trust but also affects owners. Admins can utilize this group to control claim owner defaults.  
 
-Note: If you want to restrict claim owners from overriding this default value, you should deny the permission `griefdefender.advanced.user.gui.flag.group.manager` so they are not able to see the group in GUI.
+Note: If you want to restrict claim owners from overriding this default value, you should deny the permission `griefdefender.advanced.user.gui.flag.group.manager` so they are not able to see the group in GUI.  
 
 #### Default value  
 
 `default-value=true` - This is the default-value GD will use when applying the definition during startup.  
-GD will only apply this value during startup as a transient permission to the if the context is `gd_claim_default` . If the context is `gd_claim_override` then it will apply the value as a persistent permission to the `griefdefender_override` group.
-If the definition does not contain one of these contexts then the default value is ignored.
+GD will only apply this value during startup as a transient permission to the if the context is `gd_claim_default` . If the context is `gd_claim_override` then it will apply the value as a persistent permission to the `griefdefender_override` group.  
+If the definition does not contain one of these contexts then the default value is ignored.  
 
 #### Enabled  
 
-`enabled=true` - This controls whether the definition is enabled in GD. If set to `false`, the definition will not be applied at server startup and will NOT be shown to users in GUI.
+`enabled=true` - This controls whether the definition is enabled in GD. If set to `false`, the definition will not be applied at server startup and will NOT be shown to users in GUI.  
 
 #### Icon
 
-This setting controls the icon settings that will be used when the flag definition is displayed in the inventory GUI. It does NOT affect anything within the Chat GUI.
-The following icon settings can be used within the icon section :
+This setting controls the icon settings that will be used when the flag definition is displayed in the inventory GUI. It does NOT affect anything within the Chat GUI.  
+The following icon settings can be used within the icon section :  
 
 Key            |  Type | Description | 
 ---------------|---------------|--------------|
@@ -184,28 +188,38 @@ Key            |  Type | Description |
 ```title``` | String | Controls the hover title displayed when hovering over icon. <br> Ex. ```&6villager-trade```.
 
 #### Owner mode
-:::: warning Important
-In order for players to utilize owner mode, they must have the following permission `griefdefender.advanced.user.gui.flag.group.owner`. If a player does not have this permission, they will not see the owner section in GUI.
-::::
+:::: warning Important  
+In order for players to utilize owner mode, they must have the following permission `griefdefender.advanced.user.gui.flag.group.owner`. If a player does not have this permission, they will not see the owner section in GUI.  
+::::  
 
-Owner mode is only applicable when a flag definition action can be caused by a player. For example, `fall-player-damage` affects whether a player can receive damage when falling. If this flag is set under the `PUBLIC` section, it will only affect non-trusted users. However, if the flag definition has `owner-mode` set to `true` then this flag will also be displayed under the `OWNER` section allowing claim owners to control whether or not they should receive fall damage in their claims.
+Owner mode is only applicable when a flag definition action can be caused by a player.  
+For example, `fall-player-damage` affects whether a player can receive damage when falling. If this flag is set under the `PUBLIC` section, it will only affect non-trusted users. However, if the flag definition has `owner-mode` set to `true` then this flag will also be displayed under the `OWNER` section allowing claim owners to control whether or not they should receive fall damage in their claims.  
 
-Note: In most cases, `owner-mode` is set to false and not used.
+Note: In most cases, `owner-mode` is set to false and not used.  
 
 
 #### Permissions  
 
 ```
 permissions=[
-    "flag=entity-spawn, target=#ambient"
+    "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
 ]
 ```
-These are the flag permissions to assign this definition. Permissions can hold one or more flag entries. To add an additional line, add a `,` at end of previous then insert a new line.  
-Each line requires a `flag=<flag_name>` entry followed by either source or target  context.  
-If you want to apply a permission to all possible targets then don't include `target` as GD will automatically apply to all targets.  
-If you want to apply a permission to all possible sources then don't include `source` as GD will automatically apply to all sources.  
 
-The most common contexts for permissions are as follows
+This flag definition only contains 1 permission entry.  
+
+`flag=interact-entity-secondary` - Uses the base flag `interact-entity-secondary` which is triggered when a player right-clicks on an entity in the world.  
+`target=minecraft:villager` - Sets the target to villager.  
+`source=minecraft:player` - Sets the source to player.  
+
+In order for this definition to be triggered, a player must right-click on a villager in the world.  
+
+Permissions can hold one or more flag entries. To add an additional line, add a `,` at end of previous then insert a new line.     
+Each line requires a `flag=<flag_name>` entry followed by either source or target  context.  
+If you want to apply a permission to all possible targets then don't include `target` as GD will automatically apply to all targets.   
+If you want to apply a permission to all possible sources then don't include `source` as GD will automatically apply to all sources.   
+
+The most common contexts for permissions are as follows  
 ```
 source
 target
@@ -216,19 +230,19 @@ state
 world
 ```
 
-The accepted context value must be a valid identifier. To locate the proper value in game, do the following
+The accepted context value must be a valid identifier. To locate the proper value in game, do the following  
 
-1. Run command `/gddebug record claim` - This will start a debug session in the claim you are in.
-2. Perform an action you want to manage via flag definition.
-3. Run command `/gddebug paste` - This will display a web link to view debug results.
-4. Open link, and you will see a list of actions GD checked for the claim. You will a `source` and `target` column which will contain the values you need.
+1. Run command `/gddebug record claim` - This will start a debug session in the claim you are in.  
+2. Perform an action you want to manage via flag definition.  
+3. Run command `/gddebug paste` - This will display a web link to view debug results.  
+4. Open link, and you will see a list of actions GD checked for the claim. You will a `source` and `target` column which will contain the values you need.  
 
-To locate a value for `used_item` or any other context, locate the Context column and you will see a list of all support contexts for the specific line action.
+To locate a value for `used_item` or any other context, locate the Context column and you will see a list of all support contexts for the specific line action.  
 
-Another way to find an id you are looking for is to check a community run wiki for it
+Another way to find an id you are looking for is to check a community run wiki for it  
 
-See [Contexts](https://docs.griefdefender.com/wiki/advanced/Contexts.html) for more information on how contexts work.
-See [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/)
+See [Contexts](/wiki/advanced/Contexts.html) for more information on how contexts work.  
+See [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/)  
 
 
 ### Minecraft Flag Definition Preset Config  
@@ -2216,22 +2230,26 @@ In order to display the flag definition GUI, a user command must execute the fol
 The GUI will then be displayed on screen in either CHAT or as an inventory GUI.  
 This depends on what permission the user has set and the toggle status of `/claimgui`.  See the [Main GUI](/wiki/basic/GUI.html) page for more details.  
 
-Once the flag definition GUI has been displayed, the user will see 2 subsections labeled `PUBLIC` and `OWNER`.  
-These subsections work as follows  
+All flag definitions will have a value of `true` or `false` and will represent the current active value for the claim you are in.
+
+Once the flag definition GUI has been displayed, the user will see a subsection labeled `PUBLIC` and additional subsections based on permissions.  
+These subsections work as follows  :
 
 ### PUBLIC  
 
-* All flag definitions will always support the `PUBLIC` type and thus will always be listed under it. 
-* When toggling a flag definition within `PUBLIC` in GUI, all non-trusted players will be affected.  
-* All permissions will be set on LP group `griefdefender_definition`  
+The public section of GUI controls flag permissions for non-trusted users. Toggling flags under this section will NOT affect trusted users or claim owner.
+
+Note: All flag definitions will always support the `PUBLIC` type and thus will always be listed under it.  
+Note: All permissions will be set on LP group `griefdefender_definition`  
 
 ### OWNER  
 
-* A flag definition will only be displayed under `OWNER` if the flag definition has `owner-mode` set to `true`.  
-* When toggling a flag definition within `OWNER` in GUI, all trusted players including owner will be affected.  
-* All claim flag permissions will be set on LP user that owns the claim.   
+The owner section of GUI controls flag permissions for trusted users including the claim owner.  
+
+Note: A flag definition will only be displayed under `OWNER` if the flag definition has `owner-mode` set to `true`.  
+Note: All claim flag permissions will be set on LP user that owns the claim.   
 Note: For wilderness claims, all claim flag permissions are set on the LP wilderness user `_GDWorld_` with UUID `00000000-0000-0000-0000-000000000000`  
-Note: For admin claims, all claim flag permissions are set on the LP admin user `_GDAdmin_` with UUID `11111111-1111-1111-1111-111111111111`  
+Note: For admin claims, all claim flag permissions are set on the LP admin user `_GDAdmin_` with UUID `11111111-1111-1111-1111-111111111111`   
 
 
 ### Permissions  
@@ -2242,8 +2260,6 @@ The following permission controls the user's ability to toggle flag definitions 
 As an example, lets assume you want to deny user access to toggle the `damage-animals` flag in GUI.  
 You would enter the following in LuckPerms  
 `/lp group <groupname> permission set griefdefender.user.definition.flag.minecraft.user.damage-animals false`
-
-### Flag Values
 
 As shown below, both admin/user flags start off as either `true` or `false` and will represent the current active value of claim you are in.  
 
