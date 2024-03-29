@@ -4,7 +4,7 @@ icon: home
 title: Project home
 heroImage: /logo.png
 heroText: GriefDefender
-tagline: A protection plugin designed for Bukkit and Sponge! 
+tagline: A protection plugin designed for Bukkit, Fabric, Forge and Sponge! 
 actions:
   - text: How to Use 💡
     link: /wiki/
