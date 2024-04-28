@@ -21,4 +21,6 @@ Nota: Alguns mods ignoram eventos devido a plataforma não suportar a ação ou 
 [Lycanites Mobs - CurseForge](https://www.curseforge.com/minecraft/mc-mods/lycanites-mobs) (Controle de spawn de mobs)  
 Para consertar vá em `config/lycanitesmobs/spawners/`  
 procure `ignoreForgeCanSpawnEvent` em cada arquivo e mude para `false`  
+[Multi Mine](https://www.curseforge.com/minecraft/mc-mods/multi-mine) (Problema com eventos)  
+[BetterEnd](https://modrinth.com/mod/betterend) (Problema com Mixins)  
 :::
