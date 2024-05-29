@@ -5,88 +5,221 @@ category: claim
 icon: screen
 ---
 
-## Visão geral
+## Configuração
 
 O sistema de definição de bandeiras fornece aos usuários e administradores a capacidade de gerenciar seus bandeiras de reivindicação em um [Bate-papo](/br/wiki/basic/GUI.html#bate-papo) ou [Inventário](/br/wiki/basic/GUI.html#inventario) interface.  
 GriefDefender oferece um pacote de definições de bandeiras por padrão para fornecer a melhor compatibilidade entre servidores.  
 Os dados de definição de bandeira vanilla entregues podem ser encontrados no seguinte local
-### Sponge
-`./config/GriefDefender/presets/minecraft.conf`
-### Bukkit
-`./plugins/GriefDefender/presets/minecraft.conf`
+
+Fabric, Forge e Sponge está localizada em  
+
+`./config/GriefDefender/presets/minecraft.conf`  
+
+Bukkit & Hybrid está localizada em  
+
+`./plugins/GriefDefender/presets/minecraft.conf`  
 
 
 
-Os administradores têm controle total para adicionar/remover/personalizar definições de bandeiras.  
+Os administradores recebem controle total para adicionar/remover/personalizar definições de bandeiras.   
 
 Para adicionar uma definição de bandeira a uma predefinição de minecraft entregue existente, abra o arquivo `./presets/minecraft.conf`.  
 Nesta seção, você verá 2 grupos entregues `admin` e `user`.  
 
-Todas as definições de bandeiras localizadas no grupo `admin` são acessíveis apenas por administradores.  Isso se deve à configuração do `admin-group` ser definida como `true`.  
-Todas as definições de bandeiras localizadas no grupo `user` são acessíveis por todos os usuários.  
-Você pode adicionar/remover/mover definições de bandeiras como quiser e até mesmo criar novos arquivos predefinidos do zero que serão lidos quando a interface for carregada.  
+Todas as definições de bandeiras localizadas dentro do `admin` grupo são acessíveis apenas por administradores. Isto é devido ao `admin-group` configuração seja definida como `true`.  
+Todas as definições de bandeiras localizadas dentro do `user` grupo são acessíveis a todos os usuários.  
+Você pode adicionar/remover/mover definições de bandeiras como desejar e até mesmo criar novos arquivos predefinidos do zero que serão lidos quando a GUI for carregada.  
 
-### Adicionar nova definição de bandeira
+### Definição de bandeira
 
-Se você quiser adicionar um bandeira à seção 'admin', faça o seguinte
-1. Clone uma definição de bandeira existente. Usaremos `ambient-spawn` para este exemplo.
+Se você quiser adicionar um bandeira à seção 'admin', faça o seguinte  
+1. Clone uma definição de bandeira existente. Nós vamos usar `villager-trade` para este exemplo.  
 
 ```
-ambient-spawn {
+villager-trade {
     contexts=[
         "gd_claim_default=user"
     ]
+    default-groups {}
     default-value=true
     enabled=true
+    icon {
+        enchanted=false
+        icon-flags=[
+            "hide_attributes"
+        ]
+        id="minecraft:emerald"
+        title="&6villager-trade"
+    }
+    owner-mode=false
     permissions=[
-        "flag=entity-spawn, target=#ambient"
+        "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
     ]
 }
 ```
 
-Vamos quebrar este exemplo
+Vamos analisar este exemplo  
 
-#### Nome
+#### Name  
 
-`ambient-spawn` - Este é o nome da sua definição que será exibida aos usuários quando eles a abrirem na interface do bandeira. Pode ser o que você quiser.  
-Nota: Estes não são bandeiras de núcleo GD reais, mas sim uma `flag definition` e não podem ser usados com o comando `/cf`. Se você quiser alternar uma definição de bandeira com um comando, use `/claimflagdefinition` ou `/gd flag definition`  
+`villager-trade` - Este é o nome da sua definição que será exibida aos usuários quando eles a abrirem na GUI do bandeira. Pode ser o que você quiser.  
+Nota: Estes não são bandeiras principais do GD reais, mas sim um `flag definition` e não pode ser usado com o `/cf` comando. Se você quiser alternar uma definição de bandeira com um comando, use `/claimflagdefinition` ou `/gd flag definition`  
 
 #### Contextos  
 
+:::: warning Importante  
+Os contextos definidos na definição do bandeira NÃO se aplicam quando alternados na GUI. Eles são usados apenas durante a inicialização do servidor. A GUI sempre aplicará bandeiras à reivindicação do jogador usando o contexto `gd_claim`.  
+::::  
+
 ```
 contexts=[
-        "gd_claim_default=user"
-    ]
+    "gd_claim_default=user"
+]
 ```
-Estes são os contextos de definição que serão usados com todas as permissões definidas em `permissions=[...]`.
-Atualmente suporta apenas chaves de contexto `gd_claim_default`, `gd_claim_override` ou `gd_claim`.
-Consulte [Contextos](/br/wiki/advanced/Contexts.html) para saber como funcionam os contextos.
-Nota: Esses contextos NÃO se aplicam à interface. Ele é usado apenas durante a inicialização do servidor. A interface sempre aplicará bandeiras ao jogador de reivindicação em que está.
+Estes são os contextos de definição que serão usados com todas as permissões definidas dentro `permissions=[...]`.  
+Atualmente só suporta chaves de contexto `gd_claim_default` e `gd_claim_override`.  
 
-#### Valor padrão
+`gd_claim_default` - Este contexto é usado com a maioria das definições. Ele instrui GD a aplicar a definição na inicialização do servidor a todas as declarações existentes/novas.   
+Este contexto aceita os seguintes valores :   
+`admin` - Aplicar definição apenas a declarações administrativas.   
+`basic` - Aplicar definição apenas a reivindicações básicas.  
+`subdivision` - Aplicar definição apenas a subdivisões.  
+`town`  - Aplicar definição apenas a cidades.  
+`global`  - Aplique a definição a TODAS as reivindicações, incluindo áreas selvagens.  
+`user` - Aplicar definição a TODAS as reivindicações, exceto áreas selvagens.  
 
-`default-value=true` - Este é o valor padrão que o GD usará ao aplicar a definição durante a inicialização.
-O GD só aplicará este valor durante a inicialização como uma permissão temporária se os contextos incluirem `gd_claim_default` ou `gd_claim_override`.
-Se a definição não contiver um desses contextos, o valor padrão será ignorado.
+Nota: O contexto padrão SEMPRE aplica permissões como transitórias em LuckPerms. Em outras palavras, as permissões só existem na memória enquanto o servidor está em execução. Se a definição do bandeira for alternada na GUI do GD ou definida por um administrador via comando ou editor, ela terá prioridade sobre os padrões, pois persistirá no armazenamento LP.  
+Nota: Flags alternados na GUI serão armazenados em `griefdefender_definition` ae terá prioridade sobre o `default-value` definido em definição. Removendo essas permissões de `griefdefender_definition` forçará o GD a retornar aos valores padrão das definições predefinidas.  
 
-#### Enabled  
 
-`enabled=true` - Isso controla se a definição está habilitada no GD ou desabilitada. Se definido como `false`, a definição será ignorada.
+`gd_claim_override` - Este contexto é usado com algumas definições. Ele instrui GD a aplicar a definição na inicialização do servidor como uma substituição para todas as declarações existentes/novas.  
+Este contexto aceita os seguintes valores :  
+`admin` - Aplicar definição apenas a declarações administrativas.  
+`basic` - Aplicar definição apenas a reivindicações básicas.  
+`subdivision` - Aplicar definição apenas a subdivisões.  
+`town`  - Aplicar definição apenas a cidades.  
+`global`  - Aplicar definição a TODAS as reivindicações, incluindo áreas selvagens.  
+`user` - Aplicar definição a TODAS as reivindicações, exceto áreas selvagens.  
+
+Nota: Este contexto tem maior prioridade do que `gd_claim_default`. Durante a inicialização do servidor, GD aplicará qualquer definição de bandeira usando o contexto de substituição como uma permissão persistente no grupo LP `griefdefender_override` que tem a prioridade mais alta dos grupos de bandeiras GD.  
+
+Veja [GriefDefender - Contexto](/br/wiki/advanced/Contexts.html) para obter mais informações sobre como os contextos funcionam no GD.  
+Veja [LuckPerms - Context](https://luckperms.net/wiki/Context) para obter mais informações sobre como os contextos funcionam com LP.  
+
+#### Grupos padrão
+
+A seção `default-groups` permite que administradores segmentem grupos LP específicos com seus próprios valores padrão. Essas permissões sempre serão aplicadas como persistentes no LP, o que significa que existirão no armazenamento.  
+
+##### Exemplo 1
+
+Se você deseja fornecer valores padrão com base na confiança, você pode fazer o seguinte :  
+
+```
+default-groups {
+    accessor=false,
+    container=false
+}
+```
+
+Isso impediria que usuários com acessor e contêiner confiáveis interagissem com os moradores por padrão. No entanto, o proprietário de uma reivindicação pode substituir esse padrão alternando o bandeira `villager-trade` no menu `ACCESSOR` ou `CONTAINER` na GUI.  
+Nota: Por padrão, os usuários só poderão controlar bandeiras `PUBLIC` na GUI. Para que um usuário controle os bandeiras de confiança do usuário, ele deve receber as seguintes permissões: 
+
+```
+griefdefender.advanced.user.gui.flag.group.owner
+griefdefender.advanced.user.gui.flag.group.accessor
+griefdefender.advanced.user.gui.flag.group.builder
+griefdefender.advanced.user.gui.flag.group.container
+griefdefender.advanced.user.gui.flag.group.manager
+```
+
+Nota: Na verdade, esses grupos LP são prefixados com `griefdefender_`, mas GD permite que você omita o prefixo. Outros grupos LP requerem o nome completo do grupo.  
+
+
+##### Exemplo 2
+
+Por padrão, proibir que os usuários do grupo `novato` interajam com todos os moradores nas reivindicações.  
+
+```
+default-groups {
+    novice=false
+}
+```
+
+Mesmo que o `valor padrão` seja definido como `true` por padrão, esta configuração instruiria GD a negar a qualquer usuário do grupo `novato` a interação com os aldeões.  
+
+
+##### Exemplo 3
+
+Defina o padrão que afeta todos os proprietários de reivindicações existentes.  
+
+```
+default-groups {
+    manager=false
+}
+```
+
+O grupo confiável do gerenciador tem um caso de uso especial para a seção `default-groups`. Isso não afeta apenas os usuários com confiança dos gerentes, mas também os proprietários. Os administradores podem utilizar este grupo para controlar os padrões do proprietário da reivindicação.  
+
+Nota: Se você deseja impedir que os proprietários de declarações substituam esse valor padrão, você deve negar a permissão `griefdefender.advanced.user.gui.flag.group.manager` para que eles não possam ver o grupo na GUI.  
+
+#### Valor padrão  
+
+`default-value=true` - Este é o valor padrão que o GD usará ao aplicar a definição durante a inicialização.  
+GD só aplicará este valor durante a inicialização como uma permissão transitória se o contexto for `gd_claim_default` . Se o contexto for `gd_claim_override` então ele aplicará o valor como uma permissão persistente ao grupo `griefdefender_override`.  
+Se a definição não contiver um desses contextos, o valor padrão será ignorado.  
+
+#### Habilitado  
+
+`enabled=true` - Isto controla se a definição está habilitada no GD. Se definido como `false`, a definição não será aplicada na inicialização do servidor e NÃO será mostrada aos usuários na GUI.  
+
+#### Ícone
+
+Esta configuração controla as configurações do ícone que serão usadas quando a definição do bandeira for exibida na GUI do inventário. Isso NÃO afeta nada na GUI do Chat.
+As seguintes configurações de ícone podem ser usadas na seção de ícones:  
+
+Chave            |  Tipo | Descrição | 
+---------------|---------------|--------------|
+```enchanted``` | Boolean      | Controls whether the icon glows when displayed.
+```icon-flags``` | List  | Controls what shows up on overlay of the icon via flags. Accepts the following flag values : <br>    ```hide_attributes``` - Controls whether icon attributes are displayed. <br> ```hide_destroys``` - Controls whether to show what can break or destroy. <br>  ```hide_dye``` - Controls whether to show dyes. <br>  ```hide_enchants``` - Controls whether to show enchants. <br> ```hide_placed_on``` - Controls whether to show what can be built or placed on.<br>```hide_potion_effects``` - Controls whether to show potion effects.<br>```hide_unbreakable``` - Controls whether to show the unbreakable state.
+```lore``` | String | Controls the lore displayed when hovering over icon.
+```quantity``` | Integer | Controls the quantity displayed with icon.
+```model-data``` | Integer | Controls the custom model data associated with icon.
+```id``` | String | The identifier used for the icon. <br> Ex. ```minecraft:emerald``` <br> See [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/) for a complete list of identifiers that can be used for icons.
+```title``` | String | Controls the hover title displayed when hovering over icon. <br> Ex. ```&6villager-trade```.
+
+#### Owner mode
+:::: warning Importante  
+Para que os jogadores utilizem o modo proprietário, eles devem ter a seguinte permissão `griefdefender.advanced.user.gui.flag.group.owner`. Se um jogador não tiver essa permissão, ele não verá a seção do proprietário na GUI.  
+::::  
+
+O modo proprietário só é aplicável quando uma ação de definição de bandeira pode ser causada por um jogador.  
+Por exemplo, `fall-player-damage` afeta se um jogador pode receber dano ao cair. Se este bandeira for definido na seção `PUBLIC`, afetará apenas usuários não confiáveis. No entanto, se a definição do bandeira tiver `owner-mode` definido como `true`, então este bandeira também será exibido na seção `OWNER`, permitindo que os proprietários de sinistros controlem se devem ou não receber danos por queda em seus sinistros.  
+
+Nota: Na maioria dos casos, `owner-mode` está definido como falso e não é usado.  
 
 
 #### Permissões  
 
 ```
 permissions=[
-    "flag=entity-spawn, target=#ambient"
+    "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
 ]
 ```
-Essas são as permissões de bandeira para atribuir essa definição. As permissões podem conter uma ou mais entradas de bandeira. Para adicionar uma linha adicional, adicione um `,` no final do anterior e insira uma nova linha.
-Cada linha requer uma entrada `flag=<flag_name>` seguida pelo contexto de origem ou destino.
-Se você deseja aplicar uma permissão a todos os destinos possíveis, não inclua `target`, pois o GD será aplicado automaticamente a todos os destinos.
-Se você deseja aplicar uma permissão a todas as fontes possíveis, não inclua `source`, pois o GD será aplicado automaticamente a todas as fontes.
 
-Os contextos mais comuns para permissões são os seguintes
+Esta definição de bandeira contém apenas 1 entrada de permissão.  
+
+`flag=interact-entity-secondary` - Usa o bandeira base `interact-entity-secondary` que é acionado quando um jogador clica com o botão direito em uma entidade no mundo.  
+`target=minecraft:villager` - Define o alvo para o aldeão.  
+`source=minecraft:player` - Define a fonte para o player.  
+
+Para que esta definição seja acionada, o jogador deve clicar com o botão direito em um aldeão no mundo.  
+
+As permissões podem conter uma ou mais entradas de bandeiras. Para adicionar uma linha adicional, adicione um `,` no final da linha anterior e insira uma nova linha.     
+Cada linha requer uma entrada `flag=<flag_name>` seguida pelo contexto de origem ou de destino.  
+Se você deseja aplicar uma permissão a todos os alvos possíveis, não inclua `target`, pois o GD será aplicado automaticamente a todos os alvos.   
+Se você deseja aplicar uma permissão a todas as fontes possíveis, então não inclua `source`, pois o GD será aplicado automaticamente a todas as fontes.   
+
+Os contextos mais comuns para permissões são os seguintes  
 ```
 source
 target
@@ -97,81 +230,88 @@ state
 world
 ```
 
-O valor de contexto aceito deve ser um identificador válido. Para localizar o valor adequado no jogo, faça o seguinte
+O valor de contexto aceito deve ser um identificador válido. Para localizar o valor adequado no jogo, faça o seguinte  
 
-1. Execute o comando `/gddebug record Claim` - Isso iniciará uma sessão de depuração na reivindicação em que você está.
-2. Execute uma ação que você deseja gerenciar por meio da definição de bandeira.
-3. Execute o comando `/gddebug paste` - Isso exibirá um link da web para visualizar os resultados da depuração.
-4. Abra o link e você verá uma lista de ações que o GD verificou para a reivindicação. Você terá uma coluna `source` e `target` que conterá os valores que você precisa.
+1. Execute o comando `/gddebug record claim` - Isso iniciará uma sessão de depuração na reivindicação em que você está.  
+2. Execute uma ação que você deseja gerenciar por meio da definição do bandeira.  
+3. Execute o comando `/gddebug paste` - Isso exibirá um link da web para visualizar os resultados da depuração.  
+4. Abra o link e você verá uma lista de ações que o GD verificou para a reivindicação. Você terá uma coluna `source` e `target` que conterá os valores que você precisa.  
 
-Para localizar um valor para `used_item` ou qualquer outro contexto, localize a coluna Contexto e você verá uma lista de todos os contextos de suporte para a ação de linha específica.
+Para localizar um valor para `used_item` ou qualquer outro contexto, localize a coluna Context e você verá uma lista de todos os contextos de suporte para a ação de linha específica.  
 
-Outra maneira de encontrar um id que você está procurando é verificar um wiki executado pela comunidade para ele
+Outra maneira de encontrar o ID que você está procurando é verificar um wiki da comunidade para ele  
 
-Veja [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/)
+Veja [Contexts](/br/wiki/advanced/Contexts.html) para obter mais informações sobre como os contextos funcionam.  
+Veja [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/)  
 
 
-### Configuração de predefinição de definição de bandeira do Minecraft
+### Configuração predefinida de definição de bandeira do Minecraft  
 
-Para mais informações sobre o que você pode fazer com a configuração de bandeiras, veja abaixo
+Para obter mais informações sobre o que você pode fazer com a configuração dos bandeiras, veja abaixo
 
 <details>
-  <summary>Predefinição de Minecraft</summary>
+  <summary>Minecraft Preset</summary>
 
 ```
-# Uma coleção de definições de bandeiras projetadas para minecraft vanilla.
-# Cada grupo definido será exibido na GUI do sinalizador para os usuários.
-# Os grupos podem ter as seguintes configurações:
-# enabled=<true|false>: se o grupo está habilitado.
-# admin-group=<true|false>: Se este grupo é considerado apenas para uso administrativo.
-# Nota: as alternâncias da GUI em PRESETS sempre serão aplicadas apenas à reivindicação atual.
-# Nota: Se você atribuir aos usuários a permissão 'griefdefender.admin.advanced-flags', eles poderão acessar as predefinições de administrador na guia de reivindicação.
-# É recomendado não atribuir esta permissão aos usuários para melhor experiência.
-# value=<true|false>: Isso é usado para definir um valor padrão para a definição do sinalizador. Ele é usado apenas em conjunto com as configurações 'override=<type>, default=<type>.
-# contexts=["key=value"]: Uma lista de contextos de definição que serão aplicados a todas as permissões.
-# Nota: Isto é usado principalmente com contextos 'padrão' e 'substituir'. Ex. contextos=["padrão=global"]
-# Nota: Você deve especificar um dos seguintes contextos:'gd_claim_default=<type>' ou 'gd_claim_override=<type>''
-# Nota: Os valores de contexto suportam caracteres curinga '?' e '*' usando o correspondente curinga do Apache.
-# O curinga '?' representa um único caractere.
-# O curinga '*' representa zero ou mais caracteres.
-# Cada grupo terá uma permissão associada para poder ser visualizado.
-# Os grupos de usuários usarão a permissão: 'griefdefender.user.custom.flag.<preset>.<group>
-# Os grupos de administração usarão a permissão: 'griefdefender.admin.custom.flag.<preset>.<group>
-# Dentro de cada grupo, você pode definir definições de sinalizadores.
-# Cada definição de flag deve ser definida no seguinte formato:
-# habilitado: Controla se a definição está habilitada. Aceita um valor de 'true' ou 'false'
-# default-value: O valor padrão para atribuir a definição do sinalizador.
-# description: A descrição do sinalizador a ser exibida ao passar o mouse. Usa o formato de texto herdado.
-# permissões: a lista de permissões para vincular à definição. As permissões podem aceitar vários contextos, como:
-# flag=<linked-flag>: Este contexto é usado para vincular a permissão a um sinalizador específico do GD. Ex. 'flag=block-break' vincularia a permissão ao sinalizador de quebra de bloco do GD
-# source=<id>: Este contexto é usado para especificar um ID de origem como 'minecraft:creeper'.
-# target=<id>: Este contexto é usado para especificar um ID de destino como 'minecraft:chest'.
-# state=<properties>: Este contexto é usado para especificar uma propriedade blockstate como 'state=lit:true'.
-# Nota: Todas as definições de sinalizadores que contêm um contexto de definição de 'gd_claim_default' ou 'gd_claim_override' serão aplicadas às permissões durante a inicialização do servidor.
-# Nota: Obrigatório se nenhum contexto de origem ou destino for especificado, a permissão será padronizada como ALL.
-# Nota: Os contextos comumente usados são: flag, source, target, state, used_item, item_name, world, server
-# Esses contextos podem mudar. Consulte https://github.com/bloodmc/GriefDefender/wiki/Contexts para obter as informações mais recentes.
+# A collection of definitions designed for vanilla minecraft.
+# Each group defined will be displayed in the flag or option GUI for users.
+# Groups can have the following settings : 
+# enabled=<true|false>: Whether the group is enabled.
+# admin-group=<true|false>: Whether this group is considered for admin use only.
+# Note: GUI toggles in PRESETS will always apply to current claim only.
+#    It is recommended not to assign this permission to users for best experience.
+# value=<true|false>: This is used to set a default value for the definition. It is only used in conjunction with 'override=<type>, default=<type> settings.
+# contexts=["key=value"]: A list of definition contexts that will be applied to all permissions.
+# Note: This is primary used with 'default' and 'override' contexts. Ex. contexts=["default=global"]
+# Note: You must specify one of the following contexts :'gd_claim_default=<type>' or 'gd_claim_override=<type>''
+# Note: Context values support wildcards '?' and '*' by using Apache's wildcard matcher.
+# The wildcard '?' represents a single character.
+# The wildcard '*' represents zero or more characters.
+# Each group will have an associated permission in order to be viewable.
+# The user groups will use the permission : 'griefdefender.user.definition.flag.<preset>.<group>' and 'griefdefender.user.definition.option.<preset>.<group>'
+# The admin groups will use the permission : 'griefdefender.admin.definition.flag.<preset>.<group>' and 'griefdefender.admin.definition.option.<preset>.<group>'
+# Within each group, you can define definitions.
+# Each flag definition must be defined in the following format:
+# enabled: Controls whether the definition is enabled. Accepts a value of 'true' or 'false'
+# default-value: The default value to assign flag definition.
+# description: The flag description to display on hover. Uses the legacy text format.
+# permissions: The list of permissions to link to definition. Permissions can accept various contexts such as :
+# flag=<linked-flag>: This context is used to link the permission to a GD specific flag. Ex. 'flag=block-break' would link permission to GD's block-break flag
+# source=<id>: This context is used to specify a source id such as 'minecraft:creeper'.
+# target=<id>: This context is used to specify a target id such as 'minecraft:chest'.
+# state=<properties>: This context is used to specify a blockstate property such as 'state=lit:true'.
+# Note: All definitions that contain a definition context of 'gd_claim_default' or 'gd_claim_override' will be applied to permissions during server startup.
+# Note: Required if no source or target context is specified, the permission will default to ALL.
+# Note: Commonly used contexts are : flag, source, target, state, used_item, item_name, world, server
+# These contexts may change, See https://github.com/bloodmc/GriefDefender/wiki/Contexts for latest information.
 
 minecraft {
+    # The plugin id's that this preset depends on in order to load. Note: Plugin id's should be separated by comma. Note: Leave blank if only using GriefDefender flags/options.
+    depend=""
     enabled=true
     groups {
         admin {
-            # Defina como verdadeiro se este grupo de sinalizadores for apenas para uso administrativo.
-            # Nota: Se for grupo admin, a permissão é 'griefdefender.admin.custom.flag.<groupname>
-            # Nota: Se o grupo de usuários (admin definido como falso), a permissão é 'griefdefender.user.custom.flag.<groupname>
+            # Set to true if this definition group is for admin use only.
+            # Note: If admin group, the permission is 'griefdefender.admin.custom.flag.<groupname>
+            # Note: If user group (admin set false), the permission is 'griefdefender.user.definition.flag.<preset>.<group>.<flagname>
             admin-group=true
             definitions {
                 ambient-spawn {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:bat_spawn_egg"
                         title="&6ambient-spawn"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-spawn, target=#ambient"
                     ]
@@ -180,13 +320,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:chorus_plant"
                         title="&6animal-block-modify"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=block-break, source=#animal",
                         "flag=block-modify, source=#animal"
@@ -196,13 +341,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:pig_spawn_egg"
                         title="&6animal-spawn"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-spawn, target=#animal"
                     ]
@@ -211,13 +361,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:squid_spawn_egg"
                         title="&6aquatic-spawn"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-spawn, target=#aquatic"
                     ]
@@ -226,13 +381,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:armor_stand"
                         title="&6armorstand-use"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-item-secondary, target=minecraft:armor_stand, source=minecraft:player",
                         "flag=entity-damage, target=minecraft:armor_stand, source=minecraft:player",
@@ -244,13 +404,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:chorus_fruit"
                         title="&6chorus-fruit-teleport"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=item-use, target=minecraft:chorus_fruit, source=minecraft:player"
                     ]
@@ -259,13 +424,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:command_block"
                         title="&6commandblock-block-break"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=block-break, source=minecraft:command_block, source=minecraft:chain_command_block, source=minecraft:repeating_command_block"
                     ]
@@ -274,13 +444,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:command_block"
                         title="&6commandblock-block-place"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=block-place, source=minecraft:command_block, source=minecraft:chain_command_block, source=minecraft:repeating_command_block"
                     ]
@@ -289,13 +464,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:creeper_head"
                         title="&6creeper-block-explosion"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=explosion-block, source=minecraft:creeper"
                     ]
@@ -304,13 +484,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:creeper_head"
                         title="&6creeper-entity-explosion"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=explosion-entity, source=minecraft:creeper"
                     ]
@@ -319,47 +504,64 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:end_crystal"
                         title="&6endcrystal-use"
                     }
+                    owner-mode=true
                     permissions=[
-                        "flag=projectile-impact-entity, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player",
-                        "flag=interact-item-secondary, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player",
-                        "flag=entity-damage, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player",
-                        "flag=interact-entity-secondary, target=minecraft:end_crystal, source=minecraft:arrow, source=minecraft:player"
+                        "flag=projectile-impact-entity, target=minecraft:end_crystal, source=minecraft:arrow",
+                        "flag=interact-item-secondary, target=minecraft:end_crystal, source=minecraft:player",
+                        "flag=entity-damage, target=minecraft:end_crystal, source=minecraft:player",
+                        "flag=interact-entity-secondary, target=minecraft:end_crystal, source=minecraft:player"
                     ]
                 }
                 entity-armorstand-damage {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=true
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:armor_stand"
                         title="&6entity-armorstand-damage"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-damage, target=minecraft:armor_stand, source=minecraft:player",
-                        "flag=projectile-impact-entity, target=minecraft:armor_stand, source=minecraft:player"
+                        "flag=projectile-impact-entity, target=minecraft:armor_stand, source=minecraft:player",
+                        "flag=entity-damage, source=#monster, target=minecraft:armor_stand",
+                        "flag=projectile-impact-entity, source=#monster, target=minecraft:armor_stand"
                     ]
                 }
                 entity-itemframe-damage {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=true
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:item_frame"
                         title="&6entity-itemframe-damage"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-damage, target=minecraft:glow_item_frame, target=minecraft:item_frame",
                         "flag=projectile-impact-entity, target=minecraft:glow_item_frame, target=minecraft:item_frame"
@@ -369,6 +571,7 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
@@ -376,6 +579,7 @@ minecraft {
                         id="minecraft:experience_bottle"
                         title="&6exp-drop"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-spawn, target=minecraft:xp_orb"
                     ]
@@ -384,28 +588,38 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=true
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:feather"
-                        title="&6fall-player-damage"
+                        title="&6fall-entity-damage"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-damage, source=minecraft:fall"
                     ]
                 }
                 fall-player-damage {
                     contexts=[
-                        "gd_claim_override=user"
+                        "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:feather"
                         title="&6fall-player-damage"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-damage, target=minecraft:player, source=minecraft:fall"
                     ]
@@ -414,13 +628,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:sand"
                         title="&6falling-block-break"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-break, source=minecraft:fall"
                     ]
@@ -429,28 +648,38 @@ minecraft {
                     contexts=[
                         "gd_claim_default=global"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:magma_block"
                         title="&6fire-block-damage"
                     }
+                    owner-mode=true
                     permissions=[
-                        "flag=block-break, source=minecraft:fire"
+                        "flag=block-modify, source=minecraft:fire"
                     ]
                 }
                 fire-entity-damage {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:magma_cream"
                         title="&6fire-entity-damage"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-damage, source=minecraft:fire",
                         "flag=entity-damage, source=minecraft:fire_tick",
@@ -458,33 +687,22 @@ minecraft {
                         "flag=entity-damage, source=minecraft:lava"
                     ]
                 }
-                lead-interact {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:lead"
-                        title="&6lead-interact"
-                    }
-                    permissions=[
-                        "flag=interact-item-secondary, target=minecraft:lead, source=minecraft:player",
-                        "flag=interact-entity-secondary, target=minecraft:leash_knot, source=minecraft:player"
-                    ]
-                }
                 lightning-damage {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:dead_bush"
                         title="&6lightning-damage"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-damage, source=minecraft:lightning_bolt"
                     ]
@@ -493,13 +711,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:skeleton_skull"
                         title="&6monster-animal-damage"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=entity-damage, source=#monster, target=#animal",
                         "flag=entity-damage, source=#monster, target=#aquatic",
@@ -510,13 +733,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:zombie_head"
                         title="&6monster-player-damage"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=entity-damage, source=#monster, target=minecraft:player",
                         "flag=projectile-impact-entity, source=#monster, target=minecraft:player"
@@ -526,13 +754,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:zombie_spawn_egg"
                         title="&6monster-spawn"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-spawn, target=#monster"
                     ]
@@ -541,13 +774,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:piston"
                         title="&6piston-item-spawn"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=item-spawn, source=minecraft:piston",
                         "flag=item-spawn, source=minecraft:sticky_piston"
@@ -557,13 +795,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:sticky_piston"
                         title="&6piston-use"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=block-break, source=minecraft:piston",
                         "flag=block-place, source=minecraft:piston",
@@ -575,6 +818,7 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
@@ -582,6 +826,7 @@ minecraft {
                         id="minecraft:diamond_pickaxe"
                         title="&6player-block-break"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=block-break, source=minecraft:player"
                     ]
@@ -590,13 +835,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:stone_button"
                         title="&6player-block-interact"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-block-secondary, source=minecraft:player"
                     ]
@@ -605,13 +855,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:grass_block"
                         title="&6player-block-place"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=block-place, source=minecraft:player"
                     ]
@@ -620,47 +875,103 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:cactus"
                         title="&6player-damage"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=entity-damage, target=minecraft:player",
                         "flag=projectile-impact-entity, target=minecraft:player"
                     ]
                 }
-                player-damage-pillager {
+                player-deny-flight {
                     contexts=[
                         "gd_claim_default=user"
                     ]
-                    default-value=true
+                    default-groups {}
+                    default-value="false"
                     enabled=true
                     icon {
                         enchanted=false
-                        id="minecraft:red_banner"
-                        title="&6player-damage"
+                        id="minecraft:feather"
+                        title="&6player-deny-flight"
                     }
                     permissions=[
-                        "flag=entity-damage, source=minecraft:player, target=minecraft:pillager",
-                        "flag=projectile-impact-entity, source=minecraft:player, target=minecraft:pillager",
-                        "flag=entity-damage, source=minecraft:arrow, target=minecraft:pillager",
-                        "flag=projectile-impact-entity, source=minecraft:arrow, target=minecraft:pillager"
+                        "option=player-deny-flight"
+                    ]
+                }
+                player-deny-glide {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="false"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:elytra"
+                        title="&6player-deny-glide"
+                    }
+                    permissions=[
+                        "option=player-deny-glide"
+                    ]
+                }
+                player-deny-godmode {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="false"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:totem_of_undying"
+                        title="&6player-deny-godmode"
+                    }
+                    permissions=[
+                        "option=player-deny-godmode"
+                    ]
+                }
+                player-deny-hunger {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="false"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:cooked_beef"
+                        title="&6player-deny-hunger"
+                    }
+                    permissions=[
+                        "option=player-deny-hunger"
                     ]
                 }
                 player-enderpearl-interact {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:ender_pearl"
                         title="&6player-enderpearl-interact"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-item-secondary, source=minecraft:player, target=minecraft:ender_pearl"
                     ]
@@ -669,13 +980,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=global"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:end_portal_frame"
                         title="&6player-endportal-use"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-teleport-from, source=minecraft:end_portal, target=minecraft:player"
                     ]
@@ -684,13 +1000,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:carrot_on_a_stick"
                         title="&6player-entity-interact"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-entity-secondary, source=minecraft:player"
                     ]
@@ -699,43 +1020,122 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:iron_door"
                         title="&6player-exit"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=exit-claim, source=minecraft:player"
+                    ]
+                }
+                player-fly-speed {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="0"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:firework_rocket"
+                        title="&6player-fly-speed"
+                    }
+                    permissions=[
+                        "option=player-fly-speed"
+                    ]
+                }
+                player-gamemode {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value=undefined
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:emerald_block"
+                        title="&6player-gamemode"
+                    }
+                    permissions=[
+                        "option=player-gamemode"
+                    ]
+                }
+                player-health-regen {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="0"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:glistering_melon_slice"
+                        title="&6player-health-regen"
+                    }
+                    permissions=[
+                        "option=player-health-regen"
                     ]
                 }
                 player-item-drop {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:dropper"
                         title="&6player-item-drop"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=item-drop, source=minecraft:player"
+                    ]
+                }
+                player-item-drop-lock {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="false"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:piston"
+                        title="&6player-item-drop-lock"
+                    }
+                    permissions=[
+                        "option=player-item-drop-lock"
                     ]
                 }
                 player-item-pickup {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:hopper"
                         title="&6player-item-pickup"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=item-pickup, source=minecraft:player"
                     ]
@@ -744,13 +1144,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:item_frame"
                         title="&6player-itemframe-interact"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-entity-secondary, target=minecraft:glow_item_frame, target=minecraft:item_frame, source=minecraft:player"
                     ]
@@ -759,59 +1164,122 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:item_frame"
                         title="&6player-itemhanging-place"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-item-secondary, target=#hanging, source=minecraft:player"
                     ]
                 }
-                player-monster-damage {
+                player-keep-inventory {
                     contexts=[
                         "gd_claim_default=user"
                     ]
-                    default-value=true
+                    default-groups {}
+                    default-value=undefined
                     enabled=true
                     icon {
                         enchanted=false
-                        id="minecraft:zombie_head"
-                        title="&6monster-player-damage"
+                        id="minecraft:ender_chest"
+                        title="&6player-keep-inventory"
                     }
                     permissions=[
-                        "flag=entity-damage, target=#monster, source=minecraft:player",
-                        "flag=projectile-impact-entity, target=#monster, source=minecraft:player"
+                        "option=player-keep-inventory"
+                    ]
+                }
+                player-keep-level {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value=undefined
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:experience_bottle"
+                        title="&6player-keep-level"
+                    }
+                    permissions=[
+                        "option=player-keep-level"
                     ]
                 }
                 player-netherportal-use {
                     contexts=[
                         "gd_claim_default=global"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:obsidian"
                         title="&6player-netherportal-use"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-teleport-from, source=minecraft:nether_portal, target=minecraft:player"
+                    ]
+                }
+                player-teleport-cost {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="0"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:ender_eye"
+                        title="&6player-teleport-cost"
+                    }
+                    permissions=[
+                        "option=player-teleport-cost"
+                    ]
+                }
+                player-teleport-delay {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="0"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:clock"
+                        title="&6player-teleport-delay"
+                    }
+                    permissions=[
+                        "option=player-teleport-delay"
                     ]
                 }
                 player-teleport-from {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:magenta_glazed_terracotta"
                         title="&6entity-itemframe-damage"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-teleport-from, target=minecraft:player"
                     ]
@@ -820,13 +1288,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=true
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:magenta_glazed_terracotta"
                         title="&6entity-itemframe-damage"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-teleport-to, target=minecraft:player"
                     ]
@@ -835,59 +1308,123 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:tripwire_hook"
                         title="&6player-villager-damage"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=entity-damage, target=minecraft:villager, source=minecraft:player",
                         "flag=projectile-impact-entity, target=minecraft:villager, source=minecraft:player"
+                    ]
+                }
+                player-walk-speed {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="0"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:leather_boots"
+                        title="&6player-walk-speed"
+                    }
+                    permissions=[
+                        "option=player-walk-speed"
+                    ]
+                }
+                player-weather {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value=undefined
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:lightning_rod"
+                        title="&6player-weather"
+                    }
+                    permissions=[
+                        "option=player-weather"
+                    ]
+                }
+                pvp-combat-command {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="false"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:command_block"
+                        title="&6pvp-combat-command"
+                    }
+                    permissions=[
+                        "option=pvp-combat-command"
+                    ]
+                }
+                pvp-combat-teleport {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value="false"
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        id="minecraft:ender_pearl"
+                        title="&6pvp-combat-teleport"
+                    }
+                    permissions=[
+                        "option=pvp-combat-teleport"
                     ]
                 }
                 ravager-block-break {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:ravager_spawn_egg"
                         title="&6ravager-block-break"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-break, source=minecraft:ravager"
-                    ]
-                }
-                safarinet-use {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:ghast_spawn_egg"
-                        title="&6safarinet-use"
-                    }
-                    permissions=[
-                        "flag=interact-item-secondary, target=minecraft:ghast_spawn_egg, source=minecraft:player"
                     ]
                 }
                 silverfish-block-infest {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:infested_cobblestone"
-                        title="&6fall-player-damage"
+                        title="&6silverfish-block-infest"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-modify, source=minecraft:silverfish"
                     ]
@@ -896,13 +1433,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:tnt"
                         title="&6tnt-block-explosion"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=explosion-block, source=minecraft:tnt"
                     ]
@@ -911,13 +1453,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:tnt"
                         title="&6tnt-entity-explosion"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=explosion-entity, source=minecraft:tnt"
                     ]
@@ -926,60 +1473,78 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:egg"
                         title="&6turtle-egg-hatch"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-place, source=minecraft:turtle, target=minecraft:turtle_egg",
-                        "flag=block-break, source=minecraft:turtle_egg, target=minecraft:turtle_egg"
+                        "flag=block-break, source=minecraft:turtle_egg, target=minecraft:turtle_egg",
+                        "flag=block-modify, source=minecraft:turtle_egg, target=minecraft:turtle_egg",
+                        "flag=entity-damage, source=minecraft:turtle_egg, target=minecraft:turtle_egg"
                     ]
                 }
                 villager-farm {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:composter"
                         title="&6villager-farm"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-break, source=minecraft:villager, target=#crops",
                         "flag=block-place, source=minecraft:villager, target=#crops"
                     ]
                 }
-                villager-trade {
+                villager-raid {
                     contexts=[
                         "gd_claim_default=user"
                     ]
-                    default-value=true
+                    default-groups {}
+                    default-value="false"
                     enabled=true
                     icon {
                         enchanted=false
-                        id="minecraft:emerald"
-                        title="&6villager-trade"
+                        id="minecraft:crossbow"
+                        title="&6villager-raid"
                     }
                     permissions=[
-                        "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
+                        "option=raid"
                     ]
                 }
                 wither-block-break {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:wither_skeleton_skull"
                         title="&6wither-block-break"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-break, source=minecraft:wither"
                     ]
@@ -988,19 +1553,24 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:nether_star"
                         title="&6wither-entity-damage"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=entity-damage, source=minecraft:wither"
                     ]
                 }
             }
-            # Whether flag definition group is enabled.
+            # Whether definition group is enabled.
             enabled=true
             icon {
                 enchanted=false
@@ -1009,38 +1579,49 @@ minecraft {
             }
         }
         user {
-            # Set to true if this flag group is for admin use only.
+            # Set to true if this definition group is for admin use only.
             # Note: If admin group, the permission is 'griefdefender.admin.custom.flag.<groupname>
-            # Note: If user group (admin set false), the permission is 'griefdefender.user.custom.flag.<groupname>
+            # Note: If user group (admin set false), the permission is 'griefdefender.user.definition.flag.<preset>.<group>.<flagname>
             admin-group=false
             definitions {
                 block-fertilize {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:bone_meal"
                         title="&6block-fertilize"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=block-grow, used_item=minecraft:bone_meal, target=#crops, source=minecraft:player",
-                        "flag=block-grow, used_item=minecraft:bone_meal, target=#plants, source=minecraft:player"
+                        "flag=block-grow, used_item=minecraft:bone_meal, target=#plants, source=minecraft:player",
+                        "flag=interact-item-secondary, target=minecraft:bonemeal, source=minecraft:player"
                     ]
                 }
                 block-trampling {
                     contexts=[
                         "gd_claim_override=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:dirt"
                         title="&6block-trampling"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=collide-block, target=minecraft:turtle_egg, target=minecraft:farmland"
                     ]
@@ -1049,39 +1630,39 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:chest"
                         title="&6chest-access"
                     }
+                    owner-mode=true
                     permissions=[
-                        "flag=interact-block-secondary, target=minecraft:chest, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:chest, source=minecraft:player"
-                    ]
-                }
-                collide-pixelmon-grass {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=collide-block, target=pixelmon:pixelmon_grass, source=minecraft:player"
+                        "flag=interact-block-secondary, target=minecraft:chest_minecart, target=minecraft:chest, source=minecraft:player, target=minecraft:trapped_chest",
+                        "flag=interact-inventory, target=minecraft:chest_minecart, target=minecraft:chest, source=minecraft:player, target=minecraft:trapped_chest"
                     ]
                 }
                 crop-growth {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:wheat"
                         title="&6crop-growth"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-grow, target=#crops"
                     ]
@@ -1090,29 +1671,41 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:mutton"
                         title="&6damage-animals"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-damage, target=#animal",
-                        "flag=projectile-impact-entity, target=#animal"
+                        "flag=projectile-impact-entity, target=#animal",
+                        "flag=entity-damage, target=#fishes",
+                        "flag=projectile-impact-entity, target=#fishes"
                     ]
                 }
                 enderman-grief {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:ender_eye"
                         title="&6enderman-grief"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-break, source=minecraft:enderman",
                         "flag=block-place, source=minecraft:enderman"
@@ -1122,13 +1715,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:blaze_powder"
                         title="&6fire-spread"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=block-spread, source=minecraft:fire",
                         "flag=block-spread, source=minecraft:lava"
@@ -1138,13 +1736,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:tall_grass"
                         title="&6grass-growth"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-grow, target=minecraft:grass"
                     ]
@@ -1153,13 +1756,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:packed_ice"
                         title="&6ice-form"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-modify, target=minecraft:ice"
                     ]
@@ -1168,130 +1776,38 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:blue_stained_glass"
                         title="&6ice-melt"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-modify, target=minecraft:water, source=minecraft:ice"
-                    ]
-                }
-                interact-with-chattingnpc {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-entity-secondary, target=pixelmon:chattingnpc, source=minecraft:player"
-                    ]
-                }
-                interact-with-endtable {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=false
-                    enabled=true
-                    permissions=[
-                        "flag=interact-block-secondary, source=minecraft:player, target=pixelmon:end_table",
-                        "flag=interact-inventory, source=minecraft:player, target=pixelmon:end_table"
-                    ]
-                }
-                interact-with-fridge {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=false
-                    enabled=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=pixelmon:fridge, source=minecraft:player",
-                        "flag=interact-inventory, target=pixelmon:fridge, source=minecraft:player"
-                    ]
-                }
-                interact-with-healer {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=pixelmon:healer, source=minecraft:player"
-                    ]
-                }
-                interact-with-move-relearner {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-entity-secondary, target=pixelmon:relearner, source=minecraft:player"
-                    ]
-                }
-                interact-with-move-tutor {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-entity-secondary, target=pixelmon:tutor, source=minecraft:player"
-                    ]
-                }
-                interact-with-nurses {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-entity-secondary, target=pixelmon:nursejoy, source=minecraft:player"
-                    ]
-                }
-                interact-with-old-fisherman {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-entity-secondary, target=pixelmon:oldfisherman, source=minecraft:player"
-                    ]
-                }
-                interact-with-shopkeepers {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-entity-secondary, target=pixelmon:shopkeeper, source=minecraft:player"
-                    ]
-                }
-                interact-with-traders {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-entity-secondary, target=pixelmon:trader, source=minecraft:player"
                     ]
                 }
                 lava-flow {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:lava_bucket"
                         title="&6lava-flow"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=liquid-flow, source=minecraft:lava, target=minecraft:air"
                     ]
@@ -1300,13 +1816,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:oak_leaves"
                         title="&6leaf-decay"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=leaf-decay"
                     ]
@@ -1315,43 +1836,38 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:flint_and_steel"
                         title="&6lighter"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-item-secondary, target=minecraft:flint_and_steel, source=minecraft:player"
-                    ]
-                }
-                monster-spawn {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:zombie_spawn_egg"
-                        title="&6monster-spawn"
-                    }
-                    permissions=[
-                        "flag=entity-spawn, target=#monster"
                     ]
                 }
                 mushroom-growth {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:brown_mushroom_block"
                         title="&6mushroom-growth"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-grow, target=#mushroom"
                     ]
@@ -1360,140 +1876,78 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:mycelium"
                         title="&6mycelium-spread"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-spread, target=minecraft:mycelium"
-                    ]
-                }
-                occupied-pokeball-usage {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=projectile-impact-block, source=pixelmon:occupied_pokeball",
-                        "flag=projectile-impact-entity, source=pixelmon:occupied_pokeball, target=pixelmon:any",
-                        "flag=entity-spawn, source=pixelmon:occupied_pokeball, target=#pixelmon:animal"
                     ]
                 }
                 painting-damage {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:painting"
                         title="&6painting-damage"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-damage, target=minecraft:painting"
-                    ]
-                }
-                phantom-spawn {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:phantom_membrane"
-                        title="&6phantom-spawn"
-                    }
-                    permissions=[
-                        "flag=entity-spawn, target=minecraft:phantom"
-                    ]
-                }
-                player-button-interact {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:stone_button"
-                        title="&6player-button-interact"
-                    }
-                    permissions=[
-                        "flag=interact-block-secondary, target=minecraft:button, source=minecraft:player"
                     ]
                 }
                 player-enter {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:oak_door"
                         title="&6player-enter"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=enter-claim, source=minecraft:player"
-                    ]
-                }
-                player-item-drop {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:dropper"
-                        title="&6player-item-drop"
-                    }
-                    permissions=[
-                        "flag=item-drop, source=minecraft:player"
-                    ]
-                }
-                player-item-pickup {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:hopper"
-                        title="&6player-item-pickup"
-                    }
-                    permissions=[
-                        "flag=item-pickup, source=minecraft:player"
-                    ]
-                }
-                poke-spawn {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=entity-spawn, target=#pixelmon:animal"
                     ]
                 }
                 pvp {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:diamond_sword"
                         title="&6pvp"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=entity-damage, target=minecraft:player, source=minecraft:player",
                         "flag=projectile-impact-entity, target=minecraft:player, source=minecraft:player"
@@ -1503,29 +1957,59 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:saddle"
                         title="&6ride"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=entity-riding, target=#vehicle, source=minecraft:player",
                         "flag=interact-entity-secondary, target=#vehicle, source=minecraft:player"
+                    ]
+                }
+                sign-edit {
+                    contexts=[
+                        "gd_claim_default=user"
+                    ]
+                    default-groups {}
+                    default-value=false
+                    enabled=true
+                    icon {
+                        enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
+                        id="minecraft:oak_sign"
+                        title="&6sign-edit"
+                    }
+                    owner-mode=false
+                    permissions=[
+                        "flag=block-modify, target=#signs, source=minecraft:player"
                     ]
                 }
                 sign-use {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:oak_sign"
                         title="&6sign-use"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-block-primary, target=#signs, source=minecraft:player",
                         "flag=interact-block-secondary, target=#signs, source=minecraft:player"
@@ -1535,13 +2019,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:red_bed"
                         title="&6sleep"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-block-secondary, target=#beds, source=minecraft:player",
                         "flag=interact-item-secondary, target=#beds, source=minecraft:player"
@@ -1551,13 +2040,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:snowball"
                         title="&6snow-fall"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-place, target=minecraft:snow, source=minecraft:air"
                     ]
@@ -1566,13 +2060,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:snow_block"
                         title="&6snow-melt"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-break, source=minecraft:snow"
                     ]
@@ -1581,13 +2080,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:snow"
                         title="&6snowman-trail"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-place, source=minecraft:snow_golem, target=minecraft:snow"
                     ]
@@ -1596,121 +2100,38 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:farmland"
                         title="&6soil-dry"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=block-modify, source=minecraft:farmland, state=moisture:0"
-                    ]
-                }
-                throw-any-pokeball {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=projectile-impact-block, source=pixelmon:empty_pokeball",
-                        "flag=projectile-impact-entity, source=pixelmon:empty_pokeball"
-                    ]
-                }
-                use-cushion-chairs {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=pixelmon:red_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:yellow_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:green_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:pink_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:blue_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:black_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:gray_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:cyan_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:white_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:brown_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:orange_cushion_chair, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:purple_cushion_chair, source=minecraft:player"
-                    ]
-                }
-                use-fossil-cleaner {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=pixelmon:fossil_cleaner, source=minecraft:player"
-                    ]
-                }
-                use-fossil-machines {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=pixelmon:fossil_machine, source=minecraft:player"
-                    ]
-                }
-                use-pc {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=pixelmon:pc, source=minecraft:player"
-                    ]
-                }
-                use-trade-machines {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=pixelmon:trade_machine, source=minecraft:player"
-                    ]
-                }
-                use-vending-machines {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-value=true
-                    enabled=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=pixelmon:pink_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:blue_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:green_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:orange_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:red_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:yellow_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, source=minecraft:player, target=pixelmon:brown_vending_machine",
-                        "flag=interact-block-secondary, target=pixelmon:white_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:gray_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:black_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:cyan_vending_machine, source=minecraft:player",
-                        "flag=interact-block-secondary, target=pixelmon:purple_vending_machine, source=minecraft:player"
                     ]
                 }
                 vehicle-use {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:oak_boat"
                         title="&6vehicle-use"
                     }
+                    owner-mode=true
                     permissions=[
                         "flag=interact-item-secondary, target=minecraft:minecart, target=#vehicle, target=#boats, source=minecraft:player",
                         "flag=entity-damage, target=minecraft:minecart, target=minecraft:boat, target=#vehicle, source=minecraft:player",
@@ -1722,13 +2143,18 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:emerald"
                         title="&6villager-trade"
                     }
+                    owner-mode=false
                     permissions=[
                         "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
                     ]
@@ -1737,68 +2163,45 @@ minecraft {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=true
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:vine"
                         title="&6vine-growth"
                     }
+                    owner-mode=false
                     permissions=[
-                        "flag=block-grow, target=minecraft:vine"
+                        "flag=block-spread, target=minecraft:vine"
                     ]
                 }
                 water-flow {
                     contexts=[
                         "gd_claim_default=user"
                     ]
+                    default-groups {}
                     default-value=false
                     enabled=true
                     icon {
                         enchanted=false
+                        icon-flags=[
+                            "hide_attributes"
+                        ]
                         id="minecraft:water_bucket"
                         title="&6water-flow"
                     }
+                    owner-mode=true
                     permissions=[
-                        "flag=liquid-flow, source=minecraft:water, target=minecraft:air"
-                    ]
-                }
-                work-station-access {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:crafting_table"
-                        title="&6work-station-access"
-                    }
-                    permissions=[
-                        "flag=interact-block-secondary, target=minecraft:crafting_table, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:crafting_table, source=minecraft:player",
-                        "flag=interact-block-secondary, target=minecraft:anvil, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:anvil, source=minecraft:player",
-                        "flag=interact-block-secondary, source=minecraft:player, target=minecraft:brewing_stand",
-                        "flag=interact-inventory, source=minecraft:player, target=minecraft:brewing_stand",
-                        "flag=interact-block-secondary, target=minecraft:cartography_table, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:cartography_table, source=minecraft:player",
-                        "flag=interact-block-secondary, target=minecraft:smithing_table, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:smithing_table, source=minecraft:player",
-                        "flag=interact-block-secondary, target=minecraft:enchanting_table, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:enchanting_table, source=minecraft:player",
-                        "flag=interact-block-secondary, target=minecraft:grindstone, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:grindstone, source=minecraft:player",
-                        "flag=interact-block-secondary, target=minecraft:loom, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:loom, source=minecraft:player",
-                        "flag=interact-block-secondary, target=minecraft:stonecutter, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:stonecutter, source=minecraft:player",
-                        "flag=interact-block-secondary, source=minecraft:player, target=minecraft:ender_chest",
-                        "flag=interact-inventory, source=minecraft:player, target=minecraft:ender_chest"
+                        "flag=liquid-flow, source=minecraft:water, target=minecraft:air",
+                        "flag=liquid-flow, source=minecraft:water, target=#crops"
                     ]
                 }
             }
-            # Whether flag definition group is enabled.
+            # Whether definition group is enabled.
             enabled=true
             icon {
                 enchanted=false
@@ -1818,83 +2221,84 @@ minecraft {
 
 </details>
 
-## INTERFACE
+## GUI  
 
-O GD fornece uma interface de definição de bandeira projetada para permitir que usuários e administradores administrem facilmente seus bandeiras de reivindicação.
+GD fornece uma GUI de definição de bandeiras que é projetada para permitir que usuários e administradores administrem facilmente seus bandeiras de reivindicação.  
 
-Para exibir a interface de definição de bandeira, um comando de usuário deve executar o seguinte comando `/cf` ou `/gd flag Claim`
+Para exibir a GUI de definição de bandeira, um comando do usuário deve executar o seguinte comando `/cf` ou `/gd flag claim`  
 
-A interface será exibida na tela no bate-papo ou como uma interface de inventário.
-Isso depende de qual permissão o usuário definiu e do status de alternância de `/claimgui`. Veja a página [Interface Principal](/br/wiki/basic/GUI.html#interface) para mais detalhes.
+A GUI será então exibida na tela no CHAT ou como uma GUI de inventário.  
+Isso depende da permissão que o usuário definiu e do status de alternância de `/claimgui`. Consulte a página [GUI principal](/wiki/basic/GUI.html) para obter mais detalhes.  
 
-Assim que a interface de definição do bandeira for exibida, o usuário verá 2 subseções rotuladas como `PUBLIC` e `OWNER`.
-Essas subseções funcionam da seguinte forma
+Todas as definições de bandeiras terão um valor `true` ou `false` e representarão o valor ativo atual para a reivindicação em que você está.
 
-### PÚBLICO
+Depois que a GUI de definição do bandeira for exibida, o usuário verá uma subseção chamada `PUBLIC` e subseções adicionais baseadas em permissões.  
+Essas subseções funcionam da seguinte maneira  :
 
-* Todas as definições de bandeiras sempre suportarão o tipo `PUBLIC` e, portanto, sempre serão listadas abaixo dele.
-* Ao alternar uma definição de bandeira dentro de `PUBLIC` na interface, todos os players não confiáveis serão afetados.
-* Todas as permissões serão definidas no grupo LP `griefdefender_definition`
+### PUBLIC  
 
-### PROPRIETÁRIO
+A seção pública da GUI controla as permissões de sinalização para usuários não confiáveis. Alternar bandeiras nesta seção NÃO afetará usuários confiáveis ou proprietário da reivindicação.
 
-* Uma definição de bandeira só será exibida em `OWNER` se a definição de bandeira tiver `owner-mode` definido como `true`.
-* Ao alternar uma definição de bandeira dentro de `OWNER` na interface, todos os jogadores confiáveis, incluindo o proprietário, serão afetados.
-* Todas as permissões do bandeira de reivindicação serão definidas no usuário do LP que possui a reivindicação.
-Observação: para reivindicações de área selvagem, todas as permissões de bandeira de reivindicação são definidas no usuário LP selvagem `_GDWorld_` com UUID `00000000-0000-0000-0000-000000000000`
-Observação: para reivindicações administrativa, todas as permissões de bandeira de reivindicação são definidas no usuário administrador do LP `_GDAdmin_` com UUID `11111111-1111-1111-1111-111111111111`
+Nota: Todas as definições de bandeiras sempre suportarão o tipo `PUBLIC` e, portanto, sempre serão listadas abaixo dele.  
+Nota: Todas as permissões serão definidas no grupo LP `griefdefender_definition`  
+
+### OWNER  
+
+A seção do proprietário da GUI controla as permissões de sinalização para usuários confiáveis, incluindo o proprietário da declaração.  
+
+Nota: Uma definição de bandeira só será exibida em `OWNER` se a definição do bandeira tiver `owner-mode` definido como `true`.  
+Observação: todas as permissões do bandeira de reivindicação serão definidas para o usuário LP que possui a reivindicação.   
+Nota: Para reivindicações selvagens, todas as permissões de sinalização de reivindicação são definidas no usuário selvagem LP `_GDWorld_` com UUID `00000000-0000-0000-0000-000000000000`  
+Observação: para declarações de administrador, todas as permissões de bandeira de declaração são definidas no usuário administrador do LP `_GDAdmin_` com UUID `11111111-1111-1111-1111-111111111111`   
 
 
 ### Permissões  
 
-A permissão a seguir controla a capacidade do usuário de alternar as definições de bandeiras na interface 
-`griefdefender.user.definition.flag.<preset>.<group>.<definition_name>`
+A permissão a seguir controla a capacidade do usuário de alternar definições de bandeiras na GUI  
+`griefdefender.user.definition.flag.<preset>.<grupo>.<definition_name>`
 
-Como exemplo, vamos supor que você queira negar o acesso do usuário para alternar o bandeira `damage-animals` na interface.
-Você digitaria o seguinte em LuckPerms
-`/lp group <groupname> conjunto de permissões griefdefender.user.definition.flag.minecraft.user.damage-animals false`
+Como exemplo, vamos supor que você deseja negar o acesso do usuário para alternar o bandeira `damage-animals` na GUI.  
+Você inseriria o seguinte em LuckPerms  
+`/lp group <groupname> permission set griefdefender.user.definition.flag.minecraft.user.damage-animals false`
 
-### Valores de bandeiras
-
-Conforme mostrado abaixo, ambos os bandeiras de administrador/usuário começam como `verdadeiro` ou `falso` e representam o valor ativo atual da reivindicação em que você está.
+Conforme mostrado abaixo, ambos os bandeiras de administrador/usuário começam como `true` ou `false` e representarão o valor ativo atual da reivindicação em que você está.  
 
 ### ADMIN
-:warning: As bandeiras de administrador APENAS afetarão a reivindicação em que você está.
+:warning: Os bandeiras de administrador afetarão SOMENTE a reivindicação em que você está.  
 
-![Interface do ADMIN](https://i.imgur.com/tSVSC7q.png)
+![Admin GUI](https://i.imgur.com/tSVSC7q.png)
 
 
 Por padrão, os administradores têm acesso a 2 modos `PRESET` e `ADVANCED`.
-O modo `PRESET` está diretamente ligado ao arquivo predefinido de definições de bandeira do minecraft. Cada grupo é lido na interface como uma guia junto com suas definições.
-Existem 2 grupos entregues com os quais o GD é fornecido, `USER` e `ADMIN`.
+O modo `PRESET` está diretamente vinculado ao arquivo predefinido de definições de bandeira do minecraft. Cada grupo é lido na GUI como uma guia junto com suas definições.
+Existem 2 grupos entregues com os quais o GD é fornecido, `USER` e `ADMIN`. 
  
-Ambos os grupos aplicarão bandeiras para afirmar que você está de pé. Se você precisar de bandeiras definidos como padrão, configure-o na configuração conforme mostrado acima.
+Ambos os grupos aplicarão bandeiras para afirmar que você está participando. Se você precisar de bandeiras definidos como padrão, configure-os na configuração conforme mostrado acima.
 
 
-Definição de bandeira                                  | Valor padrão | Descrição |
+Flag Definition                                  | Valor padrão | Descrição |
 -------------------------------------------------|---------------|--------------|
 ```ambient-spawn``` |  true  | Controla se ambientes, como morcegos, aparecem.
 ```animal-block-modify``` |  true  | Controla se os animais podem modificar blocos, como coelhos comendo cenouras.
-```animal-spawn``` |  true  | Controla se animais, como vacas/porcos/cavalos/etc., geram.
-```aquatic-spawn``` |  true  | Controla se os aquáticos que vivem na água, como lulas, desovam.
-```armorstand-use``` |  false | Controla se armaduras podem ser colocadas ou quebradas.
-```block-trampling``` |  false  | Controla se terras arradads e ovos de tartaruga podem ser pisoteados.
+```animal-spawn``` |  true  | Controla se animais, como vacas/porcos/cavalos/etc., spawnam.
+```aquatic-spawn``` |  true  | Controla se os animais aquáticos que vivem na água, como lulas, spawnam.
+```armorstand-use``` |  false | Controla se os suportes de armadura podem ser colocados ou quebrados.
 ```chorus-fruit-teleport``` | false | Controla se um jogador pode usar a fruta do coro para se teletransportar.
 ```commandblock-block-break``` | false | Controla se os blocos de comando podem quebrar blocos.
 ```commandblock-block-place``` | false | Controla se os blocos de comando podem colocar blocos.
 ```creeper-block-explosion``` | false | Controla se uma trepadeira pode explodir blocos.
 ```creeper-entity-explosion``` | false | Controla se uma trepadeira pode explodir entidades.
 ```endcrystal-use```      | false  | Controla se os cristais finais podem ser colocados ou quebrados.
-```entity-armorstand-damage``` | false | Controla se as entidades podem causar dano a armaduras.
-```entity-itemframe-damage``` | false | Controla se as entidades podem causar danos aos quadros de itens.
-```exp-drop``` | true | Controla se orbes de experiência podem cair.
-```fall-entity-damage``` | true | Controla se as entidades podem sofrer dano de queda.
-```fall-player-damage``` | true | Controla se os jogadores podem sofrer dano de queda.
+```entity-armorstand-damage``` | false | Controla se as entidades podem causar dano aos suportes de armadura.
+```entity-itemframe-damage``` | false | Controla se as entidades podem causar danos às estruturas dos itens.
+```exp-drop``` | true | Controla se os orbes de experiência podem cair.
+```fall-entity-damage``` | true | Controla se as entidades podem sofrer danos de queda.
+```fall-player-damage``` | true | Controla se os jogadores podem sofrer danos de queda.
 ```falling-block-break``` | true | Controla se os blocos em queda podem quebrar.
 ```fire-block-damage``` | true | Controla se o fogo pode causar danos ao bloco.
 ```fire-entity-damage``` | true |  Controla se o fogo pode causar danos à entidade.
 ```lightning-damage```  | true | Controla se um raio pode causar danos.
-```monster-animal-damage``` | false |  Controla se os monstros podem causar dano a animais.
+```monster-animal-damage``` | false |  Controla se os monstros podem causar danos aos animais.
 ```monster-player-damage``` | true | Controla se os monstros podem causar dano aos jogadores.
 ```monster-spawn```  | true | Controla se monstros, como trepadeiras e esqueletos, podem aparecer.
 ```piston-item-spawn``` | true | Controla se o micélio pode se espalhar.
@@ -1903,44 +2307,44 @@ Definição de bandeira                                  | Valor padrão | Descr
 ```player-block-interact``` | false | Controla se os jogadores podem interagir com os blocos.<br />Nota: Isso não inclui blocos de inventário, como baús.
 ```player-block-place``` | false | Controla se os jogadores podem colocar blocos.
 ```player-damage``` | true | Controla se os jogadores podem ser danificados.
-```player-enderpearl-interact``` | true | Controla se os jogadores podem usar uma enderpearl.
-```player-endportal-use``` | true | Controla se os jogadores podem usar o portal do fim.
-```player-entity-interact``` | true | Controla se os jogadores podem interagir com entidades.<br />Nota: Isso não inclui acesso ao baú com entidades como cavalos.
-```player-enter``` | true | Controla se um jogador pode entrar nesta reivindicação.
+```player-enderpearl-interact``` | true | Controla se os jogadores podem usar uma Enderpearl.
+```player-endportal-use``` | true | Controla se os jogadores podem usar o portal final.
+```player-entity-interact``` | true | Controla se os jogadores podem interagir com entidades.<br />Nota: Isto não inclui acesso ao baú com entidades como cavalos.
 ```player-exit``` | true | Controla se um jogador pode sair desta reivindicação.
-```player-item-drop``` | true | Controla se os jogadores podem soltar itens.
-```player-item-pickup``` | true | Controla se os jogadores podem pegar itens.
-```player-itemframe-interact``` | false | Controla se os jogadores podem interagir com os quadros de itens.
+```player-item-drop``` | true | Controla se os jogadores podem largar itens.
+```player-item-pickup``` | true | Controla se os jogadores podem coletar itens.
+```player-itemframe-interact``` | false | Controla se os jogadores podem interagir com molduras de itens.
 ```player-itemhanging-place``` | false | Controla se os jogadores podem colocar itens pendurados, como molduras de itens.
-```player-netherportal-use``` | true | Controla se os jogadores podem usar o portal nether.
+```player-netherportal-use``` | true | Controla se os jogadores podem usar o portal inferior.
 ```player-teleport-from``` | true | Controla se os jogadores podem se teletransportar desta reivindicação.
 ```player-teleport-to``` | true | Controla se os jogadores podem se teletransportar para esta reivindicação.
 ```player-villager-damage``` | false | Controla se os jogadores podem causar dano aos aldeões.
-```ravager-block-break``` | true | Controla se os saqueadores podem quebrar blocos durante as invasões.
-```silverfish-block-infest``` | false | Controla se o silverfish pode infestar blocos como paralelepípedos.
+```ravager-block-break``` | true | Controla se os saqueadores podem quebrar blocos durante ataques.
+```silverfish-block-infest``` | false | Controla se a traça pode infestar blocos como pedregulhos.
 ```tnt-block-explosion``` | false | Controla se o tnt pode explodir blocos.
 ```tnt-entity-explosion``` | false | Controla se o tnt pode explodir entidades.
 ```turtle-egg-hatch``` | true | Controla se os ovos de tartaruga podem eclodir.
-```villager-farm``` | true | Controla se as aldeias podem cultivar colheitas.
+```villager-farm``` | true | Controla se as aldeias podem cultivar culturas.
 ```wither-block-break``` | false | Controla se a cernelha pode quebrar blocos.
 ```wither-entity-damage``` | true | Controla se a cernelha pode danificar entidades.
 
 ### USER
-:warning: As bandeiras do usuário APENAS afetarão a reivindicação em que você está.
-:warning: Se você deseja modificar as definições do bandeira `USER` em uma reivindicação que não é sua, você deve ter permissões ignoreclaims e digite `/ignoreclaims` antes de executar o comando `/cf`.
+:warning: As sinalizações do usuário afetarão SOMENTE a reivindicação em que você está.  
+:warning: Se você deseja modificar as definições do bandeira `USER` em uma declaração que não é de sua propriedade, você deve ter permissões ignoreclaims e inserir `/ignoreclaims` antes de executar o comando `/cf`.
 
 
-Como usuário, se você digitar o comando `/cf`, verá o seguinte
+Como usuário, se você inserir o comando `/cf`, verá o seguinte
 
-![INterface do jogador](https://i.imgur.com/LTeNaaD.png)
+![User GUI](https://i.imgur.com/LTeNaaD.png)
 
-Definição de bandeiras                                  | Valor padrão | Descrição | 
+Flag Definition                                  | Valor padrão | Descrição | 
 -------------------------------------------------|---------------|--------------|
 ```block-fertilize``` | false | Controla se um jogador pode fertilizar um bloco com farinha de ossos.
-```chest-access``` | false | Controla se um jogador pode acessar inventários de baús.
-```crop-growth``` | true | Controla se as agriculturas (trigos, melancia, etc...) podem crescer.
-```damage-animals``` | false | Controla se os animais podem ser tomar dano.
-```enderman-grief``` | false | Controla se o enderman pode pegar/colocar bloco.
+```block-trampling``` |  false  | Controla se as terras agrícolas e os ovos de tartaruga podem ser pisoteados.
+```chest-access``` | false | Controla se um jogador pode acessar os inventários do baú.
+```crop-growth``` | true | Controla se as culturas podem crescer.
+```damage-animals``` | false | Controla se os animais podem ser danificados.
+```enderman-grief``` | false | Controla se enderman podem grifar.
 ```fire-spread``` | false | Controla se o fogo pode se espalhar.
 ```grass-growth``` | true | Controla se a grama pode crescer.
 ```ice-form``` | true | Controla se o gelo pode se formar.
@@ -1951,16 +2355,17 @@ Definição de bandeiras                                  | Valor padrão | Desc
 ```mushroom-growth``` | true | Controla se os cogumelos podem crescer.
 ```mycelium-spread``` | true | Controla se o micélio pode se espalhar.
 ```painting-damage``` | false | Controla se os jogadores podem quebrar pinturas.
+```player-enter``` | true | Controla se um jogador pode entrar nesta reivindicação.
 ```pvp``` | true | Controla se o combate PvP é permitido.
-```ride``` | false | Controla se veículos (incluindo animais), não pertencentes ao jogador, podem ser montados.
-```sign-use``` | true | Controla se os jogadores podem usar placas (Útil para lojas ou interações com placas).
-```sleep``` | true | Controla se os jogadores podem dormir em camas
+```ride``` | false | Controla se veículos (incluindo animais), que não são de propriedade do jogador, podem ser montados.
+```sign-edit``` | true | Controla se os jogadores podem editar placas.
+```sign-use``` | true | Controla se os jogadores podem usar placas.
+```sleep``` | true | Controla se os jogadores podem dormir nas camas
 ```snow-fall``` | true | Controla se a neve pode cair.
 ```snow-melt``` | true | Controla se a neve pode derreter.
 ```snowman-trail``` | true | Controla se os bonecos de neve podem criar neve abaixo deles.
 ```soil-dry``` | true | Controla se o solo vai secar.
-```vehicle-use``` | false | Controla se os veículos (botes, carrinhos de mina, etc.) podem ser colocados, montados e quebrados.
+```vehicle-use``` | false | Controla se os veículos (barcos, minecarts, etc.) podem ser colocados, montados e quebrados.
 ```villager-trade``` | true | Controla se os jogadores podem negociar com os aldeões.
-```vine-growth``` | true | Controla se trepadeiras (e algas) podem crescer.
+```vine-growth``` | true | Controla se as vinhas (e algas) podem crescer.
 ```water-flow``` | false | Controla se a água pode fluir.
-
