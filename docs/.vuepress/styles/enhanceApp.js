@@ -3,24 +3,26 @@ import { defineClientConfig } from '@vuepress/client';
 
 export default defineClientConfig({
   setup() {
-    if (typeof window !== 'undefined') {
-      const setupMenu = () => {
-        const menuButton = document.querySelector('.navbar-toggle');
-        const menu = document.querySelector('.navbar-menu');
+    const setupMenu = () => {
+      const menuButton = document.querySelector('.navbar-toggle');
+      const menu = document.querySelector('.navbar-menu');
 
-        const toggleMenu = () => {
-          menu.classList.toggle('active');
-        };
-
-        // Remove existing listeners to prevent duplicates
-        menuButton?.removeEventListener('click', toggleMenu);
-        
-        // Add event listener
-        menuButton?.addEventListener('click', toggleMenu);
+      const toggleMenu = () => {
+        menu.classList.toggle('active');
       };
 
+      if (menuButton && menu) {
+        // Remove existing listeners to prevent duplicates
+        menuButton.removeEventListener('click', toggleMenu);
+        
+        // Add event listener
+        menuButton.addEventListener('click', toggleMenu);
+      }
+    };
+
+    if (typeof window !== 'undefined') {
       // Initial setup on page load
-      document.addEventListener('DOMContentLoaded', setupMenu);
+      window.addEventListener('load', setupMenu);
 
       // Setup after each route change
       router.afterEach(() => {
