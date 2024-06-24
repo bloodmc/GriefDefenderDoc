@@ -1,18 +1,16 @@
 import { sidebar } from "vuepress-theme-hope";
 
-export const en = sidebar({
-	"/faq/": require("./faq/_sidebar"),
-    "/hooks/": require("./hooks/_sidebar"),
-	"/mods/": require("./mods/_sidebar"),
-	"/wiki/": [ 
-        "/",
-        {
+export const en = sidebar(
+            {
+	        "/wiki/": [ 
+              "/",
+            {
 		  text: "",
-          prefix: "/wiki/",
+              prefix: "/wiki/",
 		  collapsible: false,
-          children: ["", "Configuration", "Permissions", "Commands"],
-        },
-{
+              children: ["", "Configuration", "Permissions", "Commands"],
+            },
+            {
 		  text: "Basics",
 		  icon: "search",
 		  prefix: "/wiki/basic/",

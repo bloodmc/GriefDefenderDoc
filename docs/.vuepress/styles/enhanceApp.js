@@ -4,20 +4,24 @@ import { defineClientConfig } from '@vuepress/client';
 export default defineClientConfig({
   setup() {
     const setupMenu = () => {
-      const menuButton = document.querySelector('.navbar-toggle');
-      const menu = document.querySelector('.navbar-menu');
+      const menuButtons = document.querySelectorAll('.navbar-toggle, .vp-toggle-sidebar-button');
+      const menus = document.querySelectorAll('.navbar-menu, .sidebar');
 
       const toggleMenu = () => {
-        menu.classList.toggle('active');
+        menus.forEach(menu => {
+          menu.classList.toggle('active');
+        });
       };
 
-      if (menuButton && menu) {
-        // Remove existing listeners to prevent duplicates
-        menuButton.removeEventListener('click', toggleMenu);
-        
-        // Add event listener
-        menuButton.addEventListener('click', toggleMenu);
-      }
+      menuButtons.forEach((menuButton) => {
+        if (menuButton) {
+          // Remove existing listeners to prevent duplicates
+          menuButton.removeEventListener('click', toggleMenu);
+          
+          // Add event listener
+          menuButton.addEventListener('click', toggleMenu);
+        }
+      });
     };
 
     if (typeof window !== 'undefined') {
@@ -30,6 +34,9 @@ export default defineClientConfig({
           setupMenu();
         }, 0);
       });
+
+      // Ensure setup runs when the document is ready
+      document.addEventListener('DOMContentLoaded', setupMenu);
     }
   },
 });
