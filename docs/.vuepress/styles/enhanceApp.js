@@ -12,14 +12,21 @@ export default defineClientConfig({
           menu.classList.toggle('active');
         };
 
-        if (menuButton && menu) {
-          menuButton.addEventListener('click', toggleMenu);
-        }
+        // Remove existing listeners to prevent duplicates
+        menuButton?.removeEventListener('click', toggleMenu);
+        
+        // Add event listener
+        menuButton?.addEventListener('click', toggleMenu);
       };
 
+      // Initial setup on page load
       document.addEventListener('DOMContentLoaded', setupMenu);
+
+      // Setup after each route change
       router.afterEach(() => {
-        setupMenu();
+        setTimeout(() => {
+          setupMenu();
+        }, 0);
       });
     }
   },
