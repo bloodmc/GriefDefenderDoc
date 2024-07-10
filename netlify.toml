@@ -1,0 +1,14 @@
+[build]
+  command = "pnpm docs:build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--store=node_modules/.pnpm-store"
+
+[dev]
+  command = "pnpm docs:dev"
+  port = 8080
+
+[[plugins]]
+  package = "netlify-plugin-pnpm"
