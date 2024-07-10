@@ -1,12 +1,14 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme";
-import { searchProPlugin } from "vuepress-plugin-search-pro";
-
+import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
   base: "/",
   dest: "./dist",
-
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {},
+  }),
   locales: {
     "/": {
       lang: "en-US",
@@ -25,25 +27,6 @@ export default defineUserConfig({
     },
   },
 
-  plugins: [[
-    searchProPlugin({
-      customFields: [
-        {
-          getter: (page) => page.frontmatter.category,
-          formatter: {
-            "/": "Category: $content",
-            "/zh/": "分类：$content",
-          },
-        },
-        {
-          getter: (page) => page.frontmatter.tag,
-          formatter: {
-            "/": "Tag: $content",
-            "/zh/": "标签：$content",
-          },
-        },
-      ],
-    }),
-  ]],
+  plugins: [[]],
   theme,
 });

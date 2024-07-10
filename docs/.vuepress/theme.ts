@@ -67,9 +67,27 @@ export default hopeTheme({
     blog: false,
     mdEnhance: {
 	  tabs: true,
-      presentation: {
+      revealJs: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
+    },
+    searchPro: {
+      customFields: [
+        {
+          getter: (page) => page.frontmatter.category,
+          formatter: {
+            "/": "Category: $content",
+            "/zh/": "分类：$content",
+          },
+        },
+        {
+          getter: (page) => page.frontmatter.tag,
+          formatter: {
+            "/": "Tag: $content",
+            "/zh/": "标签：$content",
+          },
+        },
+      ],
     },
   },
 });
