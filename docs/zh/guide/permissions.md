@@ -11,6 +11,7 @@ icon: node-tree
 <br>GD 不建议 `*` 或 `OP` 作为管理员权限，
 请使用 ```griefdefender.user.*``` 和 ```griefdefender.admin.*``` 来授予管理员权限。
 <br>如果你使用了 `*` 作为权限，请将 `griefdefender.login.inventory-gui` 设置为 `false` 来使用聊天界面交互。
+<br>如果你需要设置 `griefdefender.flag.xxx` 的权限，你需要特殊权限节点 `griefdefender.advanced.*`。
 ::::
 
 ```
@@ -31,7 +32,7 @@ icon: node-tree
 - `default` 权限组继承自所有  `griefdefender_` GD 创建的权限组。
 - `default` 权限组不应该被禁用。LP 强烈建议不要禁用此组。 
 详见 https://luckperms.net/wiki/Default-Groups  
-- 一般情况下不要将 `griefdefender.flag.xxx` 当作权限授予玩家，其作为内部领地权限检查使用！(使用准则参考[特殊用例](./usecases.md))
+- 一般情况下不要将 `griefdefender.flag.xxx` 当作权限授予玩家，其作为内部领地权限检查使用！(使用准则参考[特殊用例及常见问题](./faq/))
 ::::
 
 # 用户权限

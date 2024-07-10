@@ -1,0 +1,9 @@
+[build]
+  command = "pnpm docs:build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--store=node_modules/.pnpm-store"
+  # don't need playwright for docs build
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"

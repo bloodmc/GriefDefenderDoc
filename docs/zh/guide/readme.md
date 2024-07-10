@@ -15,8 +15,8 @@ GriefDefender 是一个功能丰富的插件，直截了当的翻译并不能让
 
 ## 一些链接
 - 社区运营
-<br>[MCBBS 搬运贴](https://www.mcbbs.net/thread-1275237-1-1.html) --- 了解 GD 的好去处
 <br>[GriefDefender 服主交流群](https://jq.qq.com/?_wv=1027&k=thsjkzxK) --- 向他人询问问题，或给予别人帮助
+<br>[~~MCBBS 搬运贴~~](https://www.mcbbs.net/thread-1275237-1-1.html) --- ~~了解 GD 的好去处~~ MCBBS 已停站
 - 官方链接
 <br>[GitHub](https://github.com/bloodmc/GriefDefender)
 <br>[SpigotMC](https://www.spigotmc.org/resources/68900/)
