@@ -5,10 +5,5 @@
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--store=node_modules/.pnpm-store"
-
-[dev]
-  command = "pnpm docs:dev"
-  port = 8080
-
-[[plugins]]
-  package = "netlify-plugin-pnpm"
+  # don't need playwright for docs build
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
