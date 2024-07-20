@@ -4,7 +4,7 @@
   "description": "A documentation/wiki for GriefDefender",
   "license": "MIT",
   "scripts": {
-    "docs:build": "vuepress build docs",
+    "docs:build": "vuepress build docs && node toLowerCase.js",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs"
   },
