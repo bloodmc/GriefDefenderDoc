@@ -10,5 +10,5 @@ module.exports = [
 		prefix: "/mods/",
 		collapsible: false,
 		children: ["Pixelmon"],
-	  },
+	},
 ];

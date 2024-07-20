@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme";
-import { viteBundler } from '@vuepress/bundler-vite'
+import { viteBundler } from '@vuepress/bundler-vite';
+import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
 
 export default defineUserConfig({
   base: "/",
@@ -27,6 +28,6 @@ export default defineUserConfig({
     },
   },
 
-  plugins: [[]],
+  plugins: [removeHtmlExtensionPlugin()],
   theme,
 });
