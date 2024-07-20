@@ -7,6 +7,7 @@
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs",
+    "serve": "vite serve ./dist"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.14",
