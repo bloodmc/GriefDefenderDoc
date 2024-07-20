@@ -28,6 +28,6 @@ export default defineUserConfig({
     },
   },
 
-  plugins: [[removeHtmlExtensionPlugin()]],
+  plugins: [removeHtmlExtensionPlugin()],
   theme,
 });
