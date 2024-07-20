@@ -8,6 +8,5 @@
   # don't need playwright for docs build
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
 
-[build.processing]
-  [build.processing.html]
-    pretty_urls = true  # Converts URLs to pretty URLs (without .html extension)
+[build.processing.html]
+  pretty_urls = true
