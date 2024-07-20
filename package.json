@@ -6,17 +6,15 @@
   "scripts": {
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
-    "docs:dev": "vuepress dev docs"
+    "docs:dev": "vuepress dev docs",
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.14",
     "reveal.js": "^5.1.0",
     "vue": "^3.4.33",
     "vuepress": "2.0.0-rc.14",
+    "vuepress-plugin-remove-html-extension": "^1.11.0",
     "vuepress-plugin-search-pro": "2.0.0-rc.52",
     "vuepress-theme-hope": "2.0.0-rc.52"
-  },
-  "dependencies": {
-    "vuepress-plugin-remove-html-extension": "^1.11.0"
   }
 }
