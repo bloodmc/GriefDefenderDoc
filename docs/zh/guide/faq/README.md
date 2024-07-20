@@ -10,7 +10,7 @@ The following are FAQ pages for their respective topics
 
 [Flag Definitions - WIP](./Flag-Definitions)  
 
-[Options - WIP](./options)  
+[Options - WIP](./Options)  
 
 [Permissions](./Permissions)
 
