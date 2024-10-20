@@ -18,6 +18,7 @@ global.yml
 gui.yml
 options.yml
 storage.yml
+tag.yml
 ```
 
 ### bans (proibições)  

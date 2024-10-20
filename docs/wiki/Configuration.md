@@ -13,11 +13,13 @@ GriefDefender includes various configuration files for admins. The current avail
 bans.yml
 blacklist.yml
 claimnames.yml
+config_format.txt
 flags.yml
 global.yml
 gui.yml
 options.yml
 storage.yml
+tag.yml
 ```
 
 ### Bans  
