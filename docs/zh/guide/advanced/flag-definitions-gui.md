@@ -12,7 +12,7 @@ icon: sidebar
 『预制标签』系统为用户及管理员提供了简便管理领地标签的可能，
 它允许管理员将复杂的[『预制标签』]打包好，以游戏内GUI的方式呈现给使用者。
 
-GriefDefender 内置一个适用于原版的标签预设`minecraft.conf`，里边有两个标签组为`admin`和`user`。
+GriefDefender 内置一个适用于原版的标签预设`minecraft.yml`，里边有两个标签组为`admin`和`user`。
 :::: details 名词详解
 flag definitions - 预制标签
 flag - 基础标签
@@ -24,9 +24,9 @@ OWNER - 受信者
 ## 配置简章 preset
 
 管理员能根据需要对『预制标签』进行**增删改**，以便最大程度的客制化用户的标签使用体验。
-<br>任何『预制标签』在游戏界面对应的翻译都可以通过`lang/presets/标签预设名称/语言代码.conf`进行更改。
+<br>任何『预制标签』在游戏界面对应的翻译都可以通过`lang/presets/标签预设名称/语言代码.yml`进行更改。
 
-以默认标签预设 `minecraft.conf` 为例，简析结构
+以默认标签预设 `minecraft.yml` 为例，简析结构
 ```
 minecraft {
     depend=""
@@ -77,7 +77,7 @@ minecraft {
 标签 GUI旨在允许用户和管理员轻松管理其领地标签。
 
 打开标签界面的指令是 `/cf` 或 `/gd flag claim`
-<br>打开的标签预设可以在 `flags.conf` 进行更改，默认是 `minecraft:user`，其中 minecraft 指代预设名称，user 指代标签组名称。
+<br>打开的标签预设可以在 `flags.yml` 进行更改，默认是 `minecraft:user`，其中 minecraft 指代预设名称，user 指代标签组名称。
 
 在 GD 2.0 中, 所有预制标签可以应用到两种新玩家类型，即 : PUBLIC 和 OWNER。
 
@@ -85,8 +85,8 @@ minecraft {
 `OWNER` - 在标签界面中切换预制标签页为 `OWNER`，所有领地受信者及所有者本身都将被影响。
 
 ## 添加新的预制标签
-- 您可以直接创建一个新的预设标签，只需在 `presets/预设标签名.conf` 中按照格式添加，
-- 您也可以直接更改现在的`minecraft.conf`。
+- 您可以直接创建一个新的预设标签，只需在 `presets/预设标签名.yml` 中按照格式添加，
+- 您也可以直接更改现在的`minecraft.yml`。
 
 我们现在针对标签定义进行讲解。
 ```

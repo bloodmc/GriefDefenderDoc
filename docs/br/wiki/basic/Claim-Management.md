@@ -128,7 +128,7 @@ Ferramenta básica, você pode usá-la para indicar a posição das reivindicaç
 
 As ferramentas de inspeção e modificação agora oferecem suporte a CustomModelData. Para usar, adicione {key:value} após o identificador do item.  
 
-Procure a linha `inspection-tool="minecraft:stick"` e `modification-tool="minecraft:golden_shovel"`  no [`global.conf`](/br/wiki/advanced/Global-Config.html)  
+Procure a linha `inspection-tool="minecraft:stick"` e `modification-tool="minecraft:golden_shovel"`  no [`global.yml`](/br/wiki/advanced/Global-Config.html)  
 
 Altere para:  
 `inspection-tool="minecraft:stick{CustomModelData:1}"`  
@@ -170,7 +170,7 @@ Os administradores podem acessar os identificadores de reivindicação pessoal d
 
 ### Armazenamento
 
-Todos os identificadores de reivindicação são armazenados em `./GriefDefender/claimnames.conf`  
+Todos os identificadores de reivindicação são armazenados em `./GriefDefender/claimnames.yml`  
 
 
 ## Nomes de exibição de reivindicações
@@ -189,24 +189,24 @@ Exemplo: Você pode salvar uma área da loja, sem itens, e caso queirá restaura
 #### Public
 
 Os snapshots de reivindicação pública são acessíveis por todos os usuários.
-Os dados são armazenados em `./GriefDefender/snapshots/public/<group>/<snapshotname>.conf`
+Os dados são armazenados em `./GriefDefender/snapshots/public/<group>/<snapshotname>.yml`
 
 #### Admin
 
 Os snapshots de reivindicação de administrador são acessíveis apenas por administradores.
-Os dados são armazenados em `./GriefDefender/snapshots/admin/<group>/<snapshotname>.conf`
+Os dados são armazenados em `./GriefDefender/snapshots/admin/<group>/<snapshotname>.yml`
 
 
 #### Do utilizador
 
 Os snapshots de reivindicação do usuário são acessíveis apenas pelo Criador.
-Os dados são armazenados em `./GriefDefender/snapshots/user/<player_uuid>/<snapshotname>.conf`
+Os dados são armazenados em `./GriefDefender/snapshots/user/<player_uuid>/<snapshotname>.yml`
 
 
 #### Reivindicação
 
 A reivindicação de snapshots locais são acessíveis apenas na reivindicação em que o instantâneo foi criado.
-Os dados são armazenados em `./GriefDefender/worlds/<dimension_type>/<nome_do_mundo>/snapshots/<claim_uuid>/<snapshotname>.conf`
+Os dados são armazenados em `./GriefDefender/worlds/<dimension_type>/<nome_do_mundo>/snapshots/<claim_uuid>/<snapshotname>.yml`
 
 ### Interface
 
@@ -257,12 +257,12 @@ Existem 2 tipos de GRUPO-REIVINDICAÇÃO
 #### admin
 
 Grupos de reivindicações de administrador são acessíveis apenas por administradores.
-Data is stored in `./GriefDefender/claimgroups/admin/<claimgroup_name>.conf`
+Data is stored in `./GriefDefender/claimgroups/admin/<claimgroup_name>.yml`
 
 #### Do utilizador
 
 Os GRUPO-REIVINDICAÇÃO de usuários são acessíveis apenas pelo usuário que criou o grupo.
-Os dados são armazenados em `./GriefDefender/claimgroups/user/<player_uuid>/<claimgroup_name>.conf`
+Os dados são armazenados em `./GriefDefender/claimgroups/user/<player_uuid>/<claimgroup_name>.yml`
 
 ### Interface
 
@@ -371,7 +371,7 @@ Para remover a entrada para um usuário específico
 
 ## Como desativar a funcionalidade de reivindicação/GD
 
-:warning: Veja em [global.conf](/wiki/advanced/Global-Config.html) na secção [`World`](/br/wiki/advanced/Global-Config.html#world) para proteção de mundos ou recursos.
+:warning: Veja em [global.yml](/wiki/advanced/Global-Config.html) na secção [`World`](/br/wiki/advanced/Global-Config.html#world) para proteção de mundos ou recursos.
 
 ### Desative a reivindicação em um mundo específico
 
@@ -390,7 +390,7 @@ the_end
 ```
 
 Desde o mundo `valhalla` é do tipo `overworld` , entrar `normal` pasta.Você verá uma pasta chamada `valhalla`.
-Dentro desta pasta será uma pasta de configuração chamada `world.conf`. Edite o arquivo de configuração como o seguinte
+Dentro desta pasta será uma pasta de configuração chamada `world.yml`. Edite o arquivo de configuração como o seguinte
 
 ```
 # 1.2.7
@@ -410,13 +410,13 @@ GriefDefender {
 
 ## Como lidar com explosões acima do nível da superfície
 
-Abrir o [global.conf](/br/wiki/advanced/Global-Config.html) encontrado em `./plugins/griefdefender` em Bukkit e `./config/griefdefender` e em servidores de Sponge.
+Abrir o [global.yml](/br/wiki/advanced/Global-Config.html) encontrado em `./plugins/griefdefender` em Bukkit e `./config/griefdefender` e em servidores de Sponge.
 Você encontrará as seguintes configurações de configuração 
 
 * `explosion-block-surface-blacklist` - Permite que você faça uma fonte de bloco específica da lista negra, como TNT, acima do nível de superfície definido pela configuração `explosion-surface-block-level`. Para a lista negra de todos os blocos, use o ID `any`.
 * `explosion-entity-surface-blacklist` - Permite que você faça fontes de explosão de entidade específicas da lista negra, como o Creeper, acima do nível de superfície definido pela configuração `explosion-surface-block-level`. Para a lista negra de todas as entidades, use o ID `any`.
 * `explosion-surface-block-level` - Permite configurar o nível da superfície do bloco (coordenado Y) que o Griefdefender usará para determinar se uma explosão está acima da superfície.(Padrão: 63)
-Nota: Você pode definir essas configurações por mundo copiando a configuração para o seu respectivo arquivo `world.conf`.
+Nota: Você pode definir essas configurações por mundo copiando a configuração para o seu respectivo arquivo `world.yml`.
 
 
 ## Como substituir a altura do mundo mínimo/max
@@ -424,16 +424,16 @@ Nota: Você pode definir essas configurações por mundo copiando a configuraç�
 Para substituir um mundo chamado `valhalla` com tipo de ambiente `overworld`, tAs seguintes alterações de configuração precisam ser feitas
 
 #### Bukkit
-* Localize world.conf dentro de `./plugins/GriefDefender/worlds/normal/valhalla/world.conf`
-* Copiar reivindicações de criação de configurações de [`global.conf`](/br/wiki/advanced/Global-Config.html) Para novo world.conf
-* Abrir `./plugins/GriefDefender/options.conf`
+* Localize world.yml dentro de `./plugins/GriefDefender/worlds/normal/valhalla/world.yml`
+* Copiar reivindicações de criação de configurações de [`global.yml`](/br/wiki/advanced/Global-Config.html) Para novo world.yml
+* Abrir `./plugins/GriefDefender/options.yml`
 * Debaixo `default-user-options` definir `min-level` Para combinar a configuração de substituição
 * Debaixo `default-user-options` definir `max-level` Para combinar a configuração de substituição
 
 #### Sponge
-* Localize world.conf in `./config/GriefDefender/worlds/overworld/valhalla/world.conf`
-* Copiar reivindicações de criação de configurações de [`global.conf`](/br/wiki/advanced/Global-Config.html) Para novo world.conf
-* Abrir `./config/GriefDefender/options.conf`
+* Localize world.yml in `./config/GriefDefender/worlds/overworld/valhalla/world.yml`
+* Copiar reivindicações de criação de configurações de [`global.yml`](/br/wiki/advanced/Global-Config.html) Para novo world.yml
+* Abrir `./config/GriefDefender/options.yml`
 * Debaixo `default-user-options` definir `min-level` Para combinar a configuração de substituição
 * Debaixo `default-user-options` definir `max-level` Para combinar a configuração de substituição
 

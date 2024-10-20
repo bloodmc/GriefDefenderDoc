@@ -8,7 +8,7 @@ icon: config
 A configuração padrão do GriefDefender oferece personalização estendida para o seu servidor. Abaixo está um detalhamento de todas as variáveis padrão para sua conveniência.  
 
 :::: warning Algumas opções podem causar alterações irreparáveis em seus dados
-Certifique-se de ter lido o subtexto encontrado ao lado das variáveis em seu arquivo [global.conf](/br/wiki/advanced/Global-Config.html)  
+Certifique-se de ter lido o subtexto encontrado ao lado das variáveis em seu arquivo [global.yml](/br/wiki/advanced/Global-Config.html)  
 **Todas as variáveis de migração SEMPRE devem ser usadas APÓS o backup de seus dados ser feito.**
 ::::
 

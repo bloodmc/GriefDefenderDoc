@@ -73,7 +73,7 @@ To verify tags are working with specific actions in GriefDefender, run the `/gdd
 
 ## GriefDefender has a tag system
 
-GriefDefender relies on a tag map found in the [tag.conf](/wiki/basic/Tags.html) file  
+GriefDefender relies on a tag map found in the [tag.yml](/wiki/basic/Tags.html) file  
 A map of tags for block/item/entity to a list of one or more identifiers.  
 Always store tag keys with the '#' prefix.  
 For example, '#shulker_boxes'.  

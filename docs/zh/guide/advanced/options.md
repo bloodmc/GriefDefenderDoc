@@ -12,7 +12,7 @@ icon: Options
 简言之，选项将极大提升客制化体验，它不局限于 是(true) 和 否(false)，可以是数字，也可以是字符，常被用于设置领地过期时间，税率，玩家持有领地上限等功能。
 
 ## Configuration  
-选项的默认值都存储在 `options.conf`  
+选项的默认值都存储在 `options.yml`  
 请查看 [*选项配置*](未实现)  
 
 ## 指令
@@ -39,7 +39,7 @@ icon: Options
 * 在该领地内禁用饱食度。
 `/claimoption player-deny-hunger true`  
 
-Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.conf`.
+Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.yml`.
 Note: Using `/claimoption` with no arguments opens up the GUI and displays all claim options for claim you are standing in including default options that affect all claims.  
 
 ## LuckPerms

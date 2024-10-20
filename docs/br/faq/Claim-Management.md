@@ -6,7 +6,7 @@ category: faq
 
 ## 1. Como permitir que todos os jogadores criem reivindicações gratuitamente?**
 
-Defina `requires-claim-blocks` para `false` em [`global.conf`](/br/wiki/advanced/Global-Config.html) dentro da seção `creation-settings`  
+Defina `requires-claim-blocks` para `false` em [`global.yml`](/br/wiki/advanced/Global-Config.html) dentro da seção `creation-settings`  
 
 ## 2. Como transfiro uma reivindicação para outro jogador gratuitamente?**
 
@@ -145,7 +145,7 @@ Eles podem usar o comando `/gdconfirm`
 
 ## 16. Como faço para impedir que os jogadores ganhem blocos enquanto estão AFK?  
 
-1. Abra [`global.conf`](/br/wiki/advanced/Global-Config.html).  
+1. Abra [`global.yml`](/br/wiki/advanced/Global-Config.html).  
 2. Procure a seguinte seção 
 ```
 # O limite mínimo de movimento (em blocos) necessário para receber os blocos de reivindicação acumulados. (Padrão: 0)

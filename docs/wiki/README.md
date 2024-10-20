@@ -78,15 +78,15 @@ All configuration files can be found in a folder called `GriefDefender` in your 
 plugins/
 └── GriefDefender/
     ├── ...
-    ├── bans.conf
-    ├── blacklist.conf
-    ├── claimnames.conf
-    ├── flags.conf
-    ├── global.conf
-    ├── gui.conf
-    ├── options.conf
-    ├── storage.conf
-    └── tag.conf
+    ├── bans.yml
+    ├── blacklist.yml
+    ├── claimnames.yml
+    ├── flags.yml
+    ├── global.yml
+    ├── gui.yml
+    ├── options.yml
+    ├── storage.yml
+    └── tag.yml
 ```
 
 You can change a number of settings in the [config file](/wiki/advanced/Global-Config.html). The file has detailed annotations that should make it clear what each option does. There are three types of configs:
@@ -196,7 +196,7 @@ Note: All configuration sections are automatically sorted alphabetically. This c
 GD supports the following languages : `de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK`
 
 The default language is `en_US`.  
-To change the lang, open [`global.conf`](/wiki/advanced/Global-Config.html) and under `message` category change `locale="en_US"` to the language you want.  
+To change the lang, open [`global.yml`](/wiki/advanced/Global-Config.html) and under `message` category change `locale="en_US"` to the language you want.  
 
 ### Storage
 
@@ -221,19 +221,19 @@ config/
     │   │   │   ├── world/
     │   │   │   │   ├── ClaimData/
     │   │   │   │   ├── SchematicData/
-    │   │   │   │   └── world.conf
-    │   │   │   └── dimension.conf
+    │   │   │   │   └── world.yml
+    │   │   │   └── dimension.yml
     │   │   └── other...
     │   └── 
-    ├── bans.conf
-    ├── blacklist.conf
-    ├── claimnames.conf
-    ├── flags.conf
-    ├── global.conf
-    ├── gui.conf
-    ├── options.conf
-    ├── storage.conf
-    └── tag.conf
+    ├── bans.yml
+    ├── blacklist.yml
+    ├── claimnames.yml
+    ├── flags.yml
+    ├── global.yml
+    ├── gui.yml
+    ├── options.yml
+    ├── storage.yml
+    └── tag.yml
 ```
 
 #### Database  
@@ -241,7 +241,7 @@ config/
 :warning: If specifying port in `address` surround with quotes or GD will not load. :warning:  
 
 If you want to switch to database storage, do the following
-1. Open [`storage.conf`](/wiki/basic/Storage.html) file.  
+1. Open [`storage.yml`](/wiki/basic/Storage.html) file.  
 2. Change `storage-method` value to a supported database format.  
 For example, if you want to use mysql, you would set this value to `mysql`.
 3. Set `address` to DB address and port. Make sure to use quotes if specifying a port. Ex. `"localhost:1000"`  
@@ -263,7 +263,7 @@ GD defaults users to chat GUI. If you want users to default to inventory GUI, th
 
 ### Blacklist  
 
-GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your [`blacklist.conf`](/wiki/Configuration.html#blacklist) and remove any id's you do not want to blacklist for your server.  
+GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your [`blacklist.yml`](/wiki/Configuration.html#blacklist) and remove any id's you do not want to blacklist for your server.  
 
 See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to configure.  
 
@@ -273,11 +273,11 @@ See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to conf
 :warning: Before enabling economy mode, make sure to test on a TEST server to make sure all settings are working properly. :warning:
 
 By default, GD allows players to accrue claim blocks to be used for claim creation.  
-However, If you want all claims created to use economy directly instead of claim blocks then set `economy-mode` to `true` in [`global.conf`](/wiki/advanced/Global-Config.html#economy).  
+However, If you want all claims created to use economy directly instead of claim blocks then set `economy-mode` to `true` in [`global.yml`](/wiki/advanced/Global-Config.html#economy).  
 With `economy-mode` turned on, all claim creations will prompt players with a confirmation of claim cost. Once confirmed, the funds will be taken from the player account.  
 If you want to bypass these confirmations, set the permission `griefdefender.user.claim.economy.create-confirm` to `false`.
 
-After this setting is turned on, open up [`options.conf`](/wiki/basic/Options.html) and configure the following options to a value greater than `0`
+After this setting is turned on, open up [`options.yml`](/wiki/basic/Options.html) and configure the following options to a value greater than `0`
 * `economy-block-cost`  
 * `economy-sell-return` 
 
@@ -305,10 +305,10 @@ For `<group>` use your default group, use `default` if you don't have one.
 Once GD is installed and running, see [Claim Management](/wiki/basic/Claim-Management.html) to learn how to create a protection claim and manage it.
 
 ### Options
-:warning: It is VERY IMPORTANT you follow [`options.conf`](/wiki/basic/Options.html) before proceeding. :warning:  
-:warning: All persisted options [meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta) set in LuckPerms will take priority over defaults in [`options.conf`](/wiki/basic/Options.html) :warning:
+:warning: It is VERY IMPORTANT you follow [`options.yml`](/wiki/basic/Options.html) before proceeding. :warning:  
+:warning: All persisted options [meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta) set in LuckPerms will take priority over defaults in [`options.yml`](/wiki/basic/Options.html) :warning:
 
-If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in [`options.conf`](/wiki/basic/Options.html#global-options).  
+If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in [`options.yml`](/wiki/basic/Options.html#global-options).  
 All default option settings are applied at server startup.  
 
 [Paper]: https://papermc.io/downloads

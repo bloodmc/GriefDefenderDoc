@@ -38,7 +38,7 @@ Contexto                                          |     Valor     | Descrição 
 ```world```   |   `<nome_do_mundo>`  | Aplica bandeira a um mundo específico.
 
 Nota: Cada permissão de bandeira ou opção SEMPRE conterá um dos seguintes contextos principais `gd_claim`, `gd_claim_default` ou `gd_claim_override`.
-Nota: Ao usar contextos com comandos `/cf`, `/claimoption` ou `flags.conf`, você pode usar os seguintes aliases para chaves de contexto
+Nota: Ao usar contextos com comandos `/cf`, `/claimoption` ou `flags.yml`, você pode usar os seguintes aliases para chaves de contexto
 `gd_claim_default` - `default`  
 `gd_claim_override` - `override`  
 Então como exemplo

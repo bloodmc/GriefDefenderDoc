@@ -15,19 +15,19 @@ Gerencie em `/claimoption` ou mais informações na seção dedicada [Opções](
 
 ### Instalar bandeiras do mcMMO  
 
-* [presets/mcmmo.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/presets/mcmmo.conf)
+* [presets/mcmmo.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/presets/mcmmo.yml)
 
-Clique com o botão direito na página e selecione "Salvar como", salve como `mcmmo.conf` em `config/griefdefender/presets`
+Clique com o botão direito na página e selecione "Salvar como", salve como `mcmmo.yml` em `config/griefdefender/presets`
 
-* [lang/presets/mcmmo/en_US.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.conf) ([pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/pt_BR.conf))
+* [lang/presets/mcmmo/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.yml) ([pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/pt_BR.yml))
 
-Clique com o botão direito na página e selecione "Salvar como", salve como `en_US.conf` em `config/griefdefender/lang/presets/mcmmo`    
+Clique com o botão direito na página e selecione "Salvar como", salve como `en_US.yml` em `config/griefdefender/lang/presets/mcmmo`    
 
 Depois de fazer os dois, `/gdreload`  
 
 Execute o comando `/claimoption` e você verá uma nova predefinição chamada `mcmmo`. Clique para carregar e configurar por reivindicação, conforme necessário.  
 
-Nota: Se você não vir a predefinição na interface, certifique-se de que os arquivos acima terminam em `.conf`.  
+Nota: Se você não vir a predefinição na interface, certifique-se de que os arquivos acima terminam em `.yml`.  
 
 Consulte [Interface de Definições de Bandeira](/br/wiki/basic/Flag-Definitions-GUI.html) para obter mais informações sobre como trabalhar com predefinições e configurações padrões para bandeiras.  
 

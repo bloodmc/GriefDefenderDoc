@@ -11,7 +11,7 @@ As opções, também conhecidas como Meta, são uma maneira de configurar plugin
 
 
 ## Configuração  
-Os valores padrão podem ser alterados em `options.conf`
+Os valores padrão podem ser alterados em `options.yml`
 Veja [Configuração de opções](/br/wiki/Configuration.html#opcoes)
 
 ## Comandos embutidos
@@ -38,7 +38,7 @@ Veja [Contextos](/br/wiki/advanced/Contexts.html) sobre quais contextos você po
 * Negue a fome do jogador ao reivindicar que o jogador está dentro.
 `/claimoption player-deny-hunger true`
 
-Nota: Se você receber uma mensagem informando que a opção não está habilitada, habilite-a em `option-control` em [`options.conf`](/br/wiki/basic/Options.html). Veja [Controle de opções](Options.html#comandos-embutidos)
+Nota: Se você receber uma mensagem informando que a opção não está habilitada, habilite-a em `option-control` em [`options.yml`](/br/wiki/basic/Options.html). Veja [Controle de opções](Options.html#comandos-embutidos)
 Nota: O uso de `/claimoption` sem argumentos abre a Interface e exibe todas as opções de reivindicação para a reivindicação em que você está, incluindo opções padrão que afetam todas as reivindicações.
 
 ## LuckPerms

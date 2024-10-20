@@ -13,17 +13,17 @@ Os dados de definição de bandeira vanilla entregues podem ser encontrados no s
 
 Fabric, Forge e Sponge está localizada em  
 
-`./config/GriefDefender/presets/minecraft.conf`  
+`./config/GriefDefender/presets/minecraft.yml`  
 
 Bukkit & Hybrid está localizada em  
 
-`./plugins/GriefDefender/presets/minecraft.conf`  
+`./plugins/GriefDefender/presets/minecraft.yml`  
 
 
 
 Os administradores recebem controle total para adicionar/remover/personalizar definições de bandeiras.   
 
-Para adicionar uma definição de bandeira a uma predefinição de minecraft entregue existente, abra o arquivo `./presets/minecraft.conf`.  
+Para adicionar uma definição de bandeira a uma predefinição de minecraft entregue existente, abra o arquivo `./presets/minecraft.yml`.  
 Nesta seção, você verá 2 grupos entregues `admin` e `user`.  
 
 Todas as definições de bandeiras localizadas dentro do `admin` grupo são acessíveis apenas por administradores. Isto é devido ao `admin-group` configuração seja definida como `true`.  

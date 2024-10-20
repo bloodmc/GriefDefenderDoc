@@ -15,19 +15,19 @@ Manage from `/claimoption` or more information in the dedicated section [Options
 
 ### Install mcMMO Flag Definition  
 
-* [presets/mcmmo.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/presets/mcmmo.conf)
+* [presets/mcmmo.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/presets/mcmmo.yml)
 
-Right click on the page and select "Save as", save as `mcmmo.conf` in `config/griefdefender/presets`
+Right click on the page and select "Save as", save as `mcmmo.yml` in `config/griefdefender/presets`
 
-* [lang/presets/mcmmo/en_US.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.conf) ([pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/pt_BR.conf))
+* [lang/presets/mcmmo/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.yml) ([pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/pt_BR.yml))
 
-Right click on the page and select "Save as", save as `en_US.conf` in `config/griefdefender/lang/presets/mcmmo`    
+Right click on the page and select "Save as", save as `en_US.yml` in `config/griefdefender/lang/presets/mcmmo`    
 
 After doing both, `/gdreload`  
 
 Execute command `/claimoption` and you should see a new preset named `mcmmo`. Click that to load and configure per claim as needed.  
 
-Note: If you do not see the preset in GUI, make sure the files above end in `.conf`.  
+Note: If you do not see the preset in GUI, make sure the files above end in `.yml`.  
 
 See [Flag Definitions GUI](/wiki/basic/Flag-Definitions-GUI.html) for more info on how to work with presets and default settings for flags.  
 

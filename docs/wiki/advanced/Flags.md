@@ -19,7 +19,7 @@ Note: Flag commands are just wrappers around LuckPerm's API. Everything set via 
 Note: In order to use flags with command arguments, you must have the `griefdefender.advanced.admin.flags.*` permission. 
 
 ## Default Claim Flags
-All default flags can be customized per claim type. Currently, GriefDefender supports default flags for Admin, Basic, Town and Wilderness. You can modify the defaults in `flags.conf` and `presets/minecraft.conf`.
+All default flags can be customized per claim type. Currently, GriefDefender supports default flags for Admin, Basic, Town and Wilderness. You can modify the defaults in `flags.yml` and `presets/minecraft.yml`.
 
 ## Contexts
 

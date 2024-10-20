@@ -22,7 +22,7 @@ Veja [LuckPerms - Prefixes, Suffixes & Meta](https://luckperms.net/wiki/Prefixes
 2. Remova o jar do GriefPrevention dos plugins
 3. Inicie o servidor para gerar as configurações do GriefDefender.
 4. Pare (stop) o servidor
-5. Edite [global.conf](/br/wiki/advanced/Global-Config.html) em ./plugins/GriefDefender/
+5. Edite [global.yml](/br/wiki/advanced/Global-Config.html) em ./plugins/GriefDefender/
 6. Localize a seção
 ```
 # Lista de migradores que convertem dados de proteção antigos ou outros dados de proteção no formato atual de dados de reivindicação GD.
@@ -50,23 +50,23 @@ migrator {
 ```
 7a. Se estiver migrando do formato de arquivo GP, defina classic para `true`  
 OU  
-:warning: Este passo requer que o [`storage.conf`](/br/wiki/basic/Storage.html) seja configurado para o banco de dados GD.  
+:warning: Este passo requer que o [`storage.yml`](/br/wiki/basic/Storage.html) seja configurado para o banco de dados GD.  
 7b. Se estiver migrando do banco de dados GP, configure a seção `classic-database`.  
 8. Iniciar Servidor  
 Se feito corretamente, o GriefDefender migrará todos os dados de `plugins/GriefPreventionData` para `plugins/GriefDefender`.  
 O resultado da migração deve aparecer no console durante o processo.  
-9. Desabilite o migrador em  [`global.conf`](/br/wiki/advanced/Global-Config.html)  
+9. Desabilite o migrador em  [`global.yml`](/br/wiki/advanced/Global-Config.html)  
 
 ## Sponge
 
-:warning: O migrador não copiará o  [`global.conf`](/br/wiki/advanced/Global-Config.html) porque houve muitas mudanças no GriefDefender. Você terá que copiar manualmente as configurações desejadas do  [`global.conf`](/br/wiki/advanced/Global-Config.html) do GP para o GD.
+:warning: O migrador não copiará o  [`global.yml`](/br/wiki/advanced/Global-Config.html) porque houve muitas mudanças no GriefDefender. Você terá que copiar manualmente as configurações desejadas do  [`global.yml`](/br/wiki/advanced/Global-Config.html) do GP para o GD.
 :warning: Certifique-se de que GriefPreventionData existe na pasta `./plugins/`. Se estiver migrando do Bukkit, você deve copiar `GriefPreventionData` para `./plugins/`
 
 1. Adicione o jar do GriefDefender à pasta de mods ou plugins
 2. Remova o jar do GriefPrevention da pasta mods/plugins
 3. Inicie o servidor para gerar as configurações do GriefDefender.
 4. Pare (stop) o servidor
-5. Edite  [`global.conf`](/br/wiki/advanced/Global-Config.html) em ./plugins/GriefDefender/
+5. Edite  [`global.yml`](/br/wiki/advanced/Global-Config.html) em ./plugins/GriefDefender/
 6. Localize a seção
 ```
 # Lista de migradores que convertem dados de proteção antigos ou outros dados de proteção no formato atual de dados de reivindicação GD.
@@ -118,4 +118,4 @@ playerdata {
 11. Inicie o servidor
 Se feito corretamente, o GriefDefender migrará todos os dados de `plugins/GriefPreventionData` para `plugins/GriefDefender` incluindo dados de permissão.
 O resultado da migração deve aparecer no console durante o processo.
-12. Desabilite o migrador em  [`global.conf`](/br/wiki/advanced/Global-Config.html)
+12. Desabilite o migrador em  [`global.yml`](/br/wiki/advanced/Global-Config.html)

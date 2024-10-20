@@ -15,10 +15,10 @@ To disable PvP on server, open [`server.properties`](https://minecraft.wiki/w/Se
 
 ### Disable PvP globally except specific claims
 
-1. Open `presets/minecraft.conf` in the GD config directory.  
+1. Open `presets/minecraft.yml` in the GD config directory.  
 2. Change `default-value=true` to `default-value=false` under the `pvp` definition  
 3. Toggle the `pvp` definition to true in claims where pvp is wanted  
-4. Optional: Move the `pvp` flag definition from USER group to ADMIN group in `minecraft.conf`  
+4. Optional: Move the `pvp` flag definition from USER group to ADMIN group in `minecraft.yml`  
 Note: Make this change if you ONLY want admins to be able to toggle `pvp` in claims.  
 5. `/gdreload`
 

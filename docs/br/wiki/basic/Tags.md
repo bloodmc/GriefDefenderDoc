@@ -73,7 +73,7 @@ Para verificar se as tags estão funcionando com ações específicas no GriefDe
 
 ## GriefDefedender tem um sistema de tags
 
-O GriefDefender conta com um mapa de tags encontrado no arquivo [tag.conf](/br/wiki/basic/Tags.html)  
+O GriefDefender conta com um mapa de tags encontrado no arquivo [tag.yml](/br/wiki/basic/Tags.html)  
 Um mapa de tags para bloco/item/entidade para uma lista de um ou mais identificadores.  
 Sempre armazene chaves de tags com o prefixo '#'.  
 Por exemplo, '#shulker_boxes'.  

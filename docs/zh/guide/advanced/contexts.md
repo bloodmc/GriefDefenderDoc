@@ -42,7 +42,7 @@ GD 根据需要对 『情境』 进行了拓展，以便于你能客制化 『�
 ```world```   |   `<world_name>`  | Applies flag to a specific world.
 
 Note: Every flag or option permission will ALWAYS contain one of the following core contexts `gd_claim`, `gd_claim_default`, or `gd_claim_override`.  
-Note: When using contexts with commands `/cf`, `/claimoption`, or `flags.conf` you can use the following aliases for context keys  
+Note: When using contexts with commands `/cf`, `/claimoption`, or `flags.yml` you can use the following aliases for context keys  
 `gd_claim_default` - `default`  
 `gd_claim_override` - `override`  
 So as an example  

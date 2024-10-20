@@ -10,19 +10,19 @@ icon: config
 GriefDefender inclui vários arquivos de configuração para administradores. Os arquivos de configuração disponíveis atualmente são os seguintes
 
 ```
-bans.conf
-blacklist.conf
-claimnames.conf
-flags.conf
-global.conf
-gui.conf
-options.conf
-storage.conf
+bans.yml
+blacklist.yml
+claimnames.yml
+flags.yml
+global.yml
+gui.yml
+options.yml
+storage.yml
 ```
 
 ### bans (proibições)  
 
-O `bans.conf` armazena todos os dados de proibições global e mundial executados pelo comando `/claimban`  
+O `bans.yml` armazena todos os dados de proibições global e mundial executados pelo comando `/claimban`  
 
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
@@ -78,7 +78,7 @@ Um exemplo de como impedir que itens sejam verificados pelo GD é mostrado
 
 Veja [Identificadores de Reivindicação](/br/wiki/basic/Claim-Management.html#identificadores-de-reivindicacao)  
 
-O arquivo `claimnames.conf` é usado para armazenar um mapeamento do UUID do player para nomes de reivindicações amigáveis.
+O arquivo `claimnames.yml` é usado para armazenar um mapeamento do UUID do player para nomes de reivindicações amigáveis.
 
 ```
 e035f345-1234-5678-b341-cb1c91fe2123 {
@@ -101,7 +101,7 @@ Existem 2 UUIDs integrados que o GriefDefender usa para identificadores amigáve
 
 ### flags (bandeiras)  
 
-O arquivo `flags.conf` não deve ser confundido com definições de bandeiras e/ou presets. Este arquivo controla todos os principais bandeiras que o GD usa em eventos.
+O arquivo `flags.yml` não deve ser confundido com definições de bandeiras e/ou presets. Este arquivo controla todos os principais bandeiras que o GD usa em eventos.
 
 #### Seção de bandeiras de reivindicação padrão
 
@@ -169,7 +169,7 @@ Veja [Configuração global](/br/wiki/advanced/Global-Config.html)
 
 ### GUI (Interface) 
 
-O arquivo [`gui.conf`](/br/wiki/basic/GUI.html) é responsável por todas as configurações relacionadas ao [bate-papo](/br/wiki/basic/GUI.html#Bate-Papo) e [Interface de Inventário](/br/wiki/basic/GUI.html#Inventario).
+O arquivo [`gui.yml`](/br/wiki/basic/GUI.html) é responsável por todas as configurações relacionadas ao [bate-papo](/br/wiki/basic/GUI.html#Bate-Papo) e [Interface de Inventário](/br/wiki/basic/GUI.html#Inventario).
 
 #### Seção de bate-papo
 
@@ -213,7 +213,7 @@ As seguintes bandeiras de ícone estão disponíveis para uso com um ícone
 
 ### options (Opções)  
 
-O arquivo [`options.conf`](/br/wiki/basic/Options.html) controla todas as configurações padrões de reivindicação e jogador.
+O arquivo [`options.yml`](/br/wiki/basic/Options.html) controla todas as configurações padrões de reivindicação e jogador.
 
 
 #### Opções padrão
@@ -284,5 +284,5 @@ vanilla-fallback-values {
 
 ### Storage (Armazenamento)  
 
-O arquivo [`storage.conf`](/br/wiki/basic/Storage.html) controla as configurações de armazenamento do GriefDefender.
+O arquivo [`storage.yml`](/br/wiki/basic/Storage.html) controla as configurações de armazenamento do GriefDefender.
 

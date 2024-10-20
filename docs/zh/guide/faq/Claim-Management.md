@@ -6,7 +6,7 @@ category: faq
 
 ## 1. How do allow all users to create claims for free?**
 
-Set `requires-claim-blocks` to `false` in  [`global.conf`](/wiki/advanced/Global-Config.html) within claim `creation-settings` section.  
+Set `requires-claim-blocks` to `false` in  [`global.yml`](/wiki/advanced/Global-Config.html) within claim `creation-settings` section.  
 
 ## 2. How do I transfer a claim to another player for free?**
 
@@ -145,7 +145,7 @@ They can use the command `/gdconfirm`
 
 ## 16. How do I prevent players from earning blocks while AFK?  
 
-1. Open [`global.conf`](/wiki/advanced/Global-Config.html).  
+1. Open [`global.yml`](/wiki/advanced/Global-Config.html).  
 2. Search for the following section  
 ```
 # The minimum threshold of movement (in blocks) required to receive accrued claim blocks. (Default: 0)

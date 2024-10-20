@@ -19,7 +19,7 @@ Este novo sistema permitirá que você configure seu pedido de aluguel e ganhe a
 Caso você utilize o [RealEstate](/br/hooks/RealEstate.html) mantenha esse desabilitado para evitar problemas.
 ::::
 
-Abra seu arquivo [global.conf](/br/wiki/advanced/Global-Config.html) e na seção economia, você encontrará as seguintes linhas:
+Abra seu arquivo [global.yml](/br/wiki/advanced/Global-Config.html) e na seção economia, você encontrará as seguintes linhas:
 
 ```
         # The specific hour in day to attempt to get owed claim rent balances from delinquent renters. Note: This uses military time and accepts values between 0-23. Default: 0

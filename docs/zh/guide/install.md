@@ -42,7 +42,7 @@ GD 大量使用了 LP 的 `default` 权限组，请不要删除 `default` 中有
 ### 配置
 
 1. 打开您所属平台对应的 GriefDefender 配置文件夹。
-2. 打开 global.conf, 通过 `Ctrl+F` 搜索 `locale`。
+2. 打开 global.yml, 通过 `Ctrl+F` 搜索 `locale`。
 3. 将 locale 的值从默认 en_US 更改为 zh_CN。
 4. 控制台输入 /gd reload 完成汉化。
 :::: info 
