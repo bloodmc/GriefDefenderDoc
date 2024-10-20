@@ -129,7 +129,7 @@ Basic tool, you can use it to indicate the position of claims, and identify who 
 
 The inspection and modification tools now support CustomModelData support. To use, add {key:value} after item identifier.  
 
-Search the line `inspection-tool="minecraft:stick"` and `inspection-tool="minecraft:golden_shovel"` on [`global.yml`](/wiki/advanced/Global-Config.html)
+Search the line `inspection-tool="minecraft:stick"` and `inspection-tool="minecraft:golden_shovel"` on [`global.yml`](/wiki/advanced/Global-Config.html)  
 
 Change to:  
 `inspection-tool="minecraft:stick{CustomModelData:1}"`  

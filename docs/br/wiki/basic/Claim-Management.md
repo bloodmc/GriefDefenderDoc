@@ -128,7 +128,7 @@ Ferramenta básica, você pode usá-la para indicar a posição das reivindicaç
 
 As ferramentas de inspeção e modificação agora oferecem suporte a CustomModelData. Para usar, adicione {key:value} após o identificador do item.  
 
-Procure a linha `inspection-tool="minecraft:stick"` e `modification-tool="minecraft:golden_shovel"`  no [`global.yml`](/br/wiki/advanced/Global-Config.html)  
+Procure a linha `inspection-tool="minecraft:stick"` e `modification-tool="minecraft:golden_shovel"` no [`global.yml`](/br/wiki/advanced/Global-Config.html)  
 
 Altere para:  
 `inspection-tool="minecraft:stick{CustomModelData:1}"`  
