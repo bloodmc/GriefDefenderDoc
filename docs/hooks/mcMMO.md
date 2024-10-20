@@ -15,11 +15,11 @@ Manage from `/claimoption` or more information in the dedicated section [Options
 
 ### Install mcMMO Flag Definition  
 
-* [presets/mcmmo.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/presets/mcmmo.yml)
+* [presets/mcmmo.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/presets/mcmmo.conf)
 
 Right click on the page and select "Save as", save as `mcmmo.yml` in `config/griefdefender/presets`
 
-* [lang/presets/mcmmo/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.yml) ([pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/pt_BR.yml))
+* [lang/presets/mcmmo/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.yml) ([pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/pt_BR.conf))
 
 Right click on the page and select "Save as", save as `en_US.yml` in `config/griefdefender/lang/presets/mcmmo`    
 

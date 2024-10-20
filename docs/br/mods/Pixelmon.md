@@ -18,11 +18,11 @@ Nota: Este comando deve ser executado por um administrador com permissão `grief
 
 ## Instala bandeiras definidas para o Pixelmon
 
-* [presets/pixelmon.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/presets/pixelmon.yml)
+* [presets/pixelmon.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/presets/pixelmon.conf)
 
   Clique com o botão direito na página e selecione "Salvar como...", salve como `pixelmon.yml` em `config/griefdefender/presets`
 
-* [lang/presets/pixelmon/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.yml) ([zh_CN](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/zh_CN.yml)/[pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/pt_BR.yml))
+* [lang/presets/pixelmon/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.conf) ([zh_CN](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/zh_CN.conf)/[pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/pt_BR.conf))
 
   Clique com o botão direito na página e selecione "Salvar como...", salve como `en_US.yml` em config/griefdefender/lang/presets/pixelmon
 

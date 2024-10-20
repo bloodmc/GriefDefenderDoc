@@ -18,11 +18,11 @@ Note: This command must be executed by an admin with permission `griefdefender.a
 
 ## Install Pixelmon Flag Definition
 
-* [presets/pixelmon.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/presets/pixelmon.yml)
+* [presets/pixelmon.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/presets/pixelmon.conf)
 
   Right click on the page and select "Save as", save as `pixelmon.yml` in config/griefdefender/presets
 
-* [lang/presets/pixelmon/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.yml) ([zh_CN](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/zh_CN.yml)/[pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/pt_BR.yml))
+* [lang/presets/pixelmon/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.conf) ([zh_CN](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/zh_CN.conf)/[pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/pt_BR.conf))
 
   Right click on the page and select "Save as", save as `en_US.yml` in `config/griefdefender/lang/presets/pixelmon`
 

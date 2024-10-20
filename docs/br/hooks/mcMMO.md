@@ -15,11 +15,11 @@ Gerencie em `/claimoption` ou mais informações na seção dedicada [Opções](
 
 ### Instalar bandeiras do mcMMO  
 
-* [presets/mcmmo.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/presets/mcmmo.yml)
+* [presets/mcmmo.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/presets/mcmmo.conf)
 
 Clique com o botão direito na página e selecione "Salvar como", salve como `mcmmo.yml` em `config/griefdefender/presets`
 
-* [lang/presets/mcmmo/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.yml) ([pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/pt_BR.yml))
+* [lang/presets/mcmmo/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/en_US.conf) ([pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/mcMMO/lang/presets/mcmmo/pt_BR.conf))
 
 Clique com o botão direito na página e selecione "Salvar como", salve como `en_US.yml` em `config/griefdefender/lang/presets/mcmmo`    
 
