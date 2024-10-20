@@ -13,6 +13,7 @@ GriefDefender inclui vários arquivos de configuração para administradores. Os
 bans.yml
 blacklist.yml
 claimnames.yml
+config_format.txt
 flags.yml
 global.yml
 gui.yml

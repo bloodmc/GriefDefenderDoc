@@ -86,11 +86,11 @@ plugins/
     ├── bans.yml
     ├── blacklist.yml
     ├── claimnames.yml
+    ├── config_format.txt
     ├── flags.yml
     ├── global.yml
     ├── gui.yml
     ├── options.yml
-    └── storage.yml
     ├── storage.yml
     └── tag.yml
 ```
@@ -237,6 +237,7 @@ config/
     ├── bans.yml
     ├── blacklist.yml
     ├── claimnames.yml
+    ├── config_format.txt
     ├── flags.yml
     ├── global.yml
     ├── gui.yml

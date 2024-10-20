@@ -81,6 +81,7 @@ plugins/
     ├── bans.yml
     ├── blacklist.yml
     ├── claimnames.yml
+    ├── config_format.txt
     ├── flags.yml
     ├── global.yml
     ├── gui.yml
@@ -228,6 +229,7 @@ config/
     ├── bans.yml
     ├── blacklist.yml
     ├── claimnames.yml
+    ├── config_format.txt
     ├── flags.yml
     ├── global.yml
     ├── gui.yml
