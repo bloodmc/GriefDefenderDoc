@@ -34,7 +34,7 @@ GriefDefender allows for modular enabling. As per default configuration files ho
 * Projectiles: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.5.5
+Version based on release file: GriefDefender 3.0.2
 <hr>
 
 # claim
@@ -71,6 +71,16 @@ Version based on release file: GriefDefender 2.5.5
 | modification-tool | The item used to create/resize claims with a right click. <br  /> Note: Set to empty quotes if you want to assign no item and use '/claim' mode exclusively. | ["minecraft:golden_shovel"](/wiki/basic/Claim-Management.html#item-custommodeldata-support) |
 | piston-protection-in-claims | Whether piston protection should be enabled within claims. Note: This does not affect pistons crossing into another claim, that is always protected. This only determines whether or not GD should process pistons if it doesn't cross into another claim. | false |
 | player-trapped-cooldown | The cooldown time, in seconds, when using the '/trapped' command. | 300 |
+
+# plot-settings
+Controls plot claim settings.
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| use-schematics | If enabled, a schematic will be generated on plot creation and used to restore the plot to its original state when abandoned. <br  /> Note: A schematic will restore all blocks to their original state. Use with caution. <br  />Note: This setting requires WorldEdit. | true |
+| use-snapshots | If enabled, snapshots will be generated on plot creation and used to restore the plot to its original state when abandoned. <br  /> Note: A snapshot will include all claim data such as settings, flags, options, and trust. | true |
+
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
 | protect-tamed-entities | Whether tamed entities should be protected in claims from non-owners. | true |
 
 # removal-settings
@@ -100,7 +110,13 @@ Controls claim removal/expiration settings.
 | claim-chunk-radius | The radius, in chunks, used to determine how large a temporary claim should be. (Default: 3) <br /> Note: This value must be an odd number such as 1,3,5,7, or 9. If even number is used, the value will be increased by 1. | 3 |
 claim-create-limit | The amount of temporary claims a single player can have at one time. (Default: 5) | 5 |
 | expiration-days | The amount in days that a temporary claim will expire. | 9 |
-| use-temporary-claims | If enabled, allows players to create temporary claims that expire after a set amount of time. (Default: false) | false |
+| require-claim-block | Whether temporary claims require claim blocks. | true |
+| use-temporary-claims | If enabled, allows players to create temporary claims that expire after a set amount of time. | false |
+
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| unclaimable-allow-trust | This setting controls whether trusted players are affected by 'unclaimable-block-radius' checks in wilderness. | true |
+| unclaimable-block-radius | Adds an unclaimable border of specified radius (in blocks), centered on claim.<br  /> Note: This only affects non-trusted players attempting to create a new claim next to another player's claim.<br  />  Note: It is not recommended to set this value too high as performance can degrade due to deeper claim searches. | 1 |
 
 # command
 | Variable | Description | Default Value |
@@ -111,7 +127,7 @@ claim-create-limit | The amount of temporary claims a single player can have at 
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
 | enchantments | Whether potion effect contexts should be applied during permission checks. | false |
-|ignored-debug-contexts | A list of ignored context values during debug. | [] |
+| ignored-debug-contexts | A list of ignored context values during debug. | <br  />- '#azalea_root_replaceable'<br  />- '#base_stone_overworld'<br  />- '#dripstone_replaceable_blocks'<br  />- '#goats_spawnable_on'<br  />- '#lush_ground_replaceable'<br  />- '#mineable/pickaxe'<br  />- '#minecraft:azalea_root_replaceable'<br  />- '#minecraft:base_stone_overworld'<br  />- '#minecraft:dripstone_replaceable_blocks'<br  />- '#minecraft:goats_spawnable_on'<br  />- '#minecraft:lush_ground_replaceable'<br  />- '#minecraft:mineable/pickaxe'<br  />- '#minecraft:moss_replaceable'<br  />- '#minecraft:stone_ore_replaceables'<br  />- '#stone_ore_replaceables'<br  />- '#moss_replaceable'<br  />- '#minecraft:foxes_spawnable_on'<br  />- '#minecraft:inside_step_sound_blocks'<br  />- '#minecraft:mineable/shovel'<br  />- '#minecraft:rabbits_spawnable_on'<br  />- '#minecraft:wolves_spawnable_on'<br  />- '#foxes_spawnable_on'<br  />- '#inside_step_sound_blocks'<br  />- '#rabbits_spawnable_on'<br  />- '#wolves_spawnable_on' |
 | player-equipment | Whether player equipment contexts should be applied during permission checks. | true |
 | potion-effects | Whether potion effect contexts should be applied during permission checks. | true |
 
@@ -121,6 +137,7 @@ claim-create-limit | The amount of temporary claims a single player can have at 
 | bank-system | Whether to enable the bank system for claims. Set to true to enable. | false |
 | bank-transaction-log-limit | The amount of transactions to keep for history. | 60 |
 | currency-symbol | The currency symbol for economy messages. | $ |
+| currency-symbol-after-amount | Whether the currency symbol should be shown after the amount | false |
 | economy-mode | Uses economy instead of player claim blocks for claim creation. # If true, disables the claim block system in favor of economy.  <br  /> Note: Using this mode disables the '/buyblocks' command as claim creation will pull funds directly from a player's economy balance. <br  /> Note: If players have existing claimblocks from past configurations, an admin must use the '/ecomigrateblocks' command to convert remainder to currency. | false |
 
 # rent
@@ -141,6 +158,8 @@ Use [RealEstate](/hooks/RealEstate.html) this is being discontinued
 | --------- | ----------- | ----------- |
 | sell-sign | Whether sell signs are enabled. | false |
 | sign-update-interval | The interval in minutes for updating sign data. Set to 0 to disable. | 1 |
+| tax-2d-claims | Whether to apply tax on 2d claims. | true |
+| tax-3d-claims | Whether to apply tax on 3d claims | true |
 | tax-apply-hour | The specific hour in day to apply tax to all claims. Note: This uses military time and accepts values between 0-23. | 0 |
 | tax-system | Whether to enable the tax system for claims. Set to true to enable. | false |
 | tax-transaction-log-limit | The amount of transactions to keep for history. | 60 |
@@ -157,6 +176,7 @@ Use [RealEstate](/hooks/RealEstate.html) this is being discontinued
 | greeting-farewell-action-bar | Controls whether to send greeting/farewell messages to action bar by default. <br />Note: Setting to true will send messages to actionbar. <br />Note: This will only be set if there is no actionbar already set in claim. If so, it will use chat instead. | FALSE |
 | locale | Set the locale to use for GP messages. Available languages: de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK. The data is stored under assets in jar. <br />Note: The language code must be lowercase and the country code must be uppercase. | "en_US" |
 | locale-unicode-fix | Attempts to adjust unicode fonts to represent minecraft default fonts better. <br />Note: If you are using 'pl_PL' or 'ru_RU', this setting should be set to false. <br />Note: Any other languages that experience misalignment in chat menus should disable this setting. | TRUE |
+| regex-filters | Used to check all messages stored in GD with provided regex filters. If match is found, message will not be able to be set. | [] |
 | wilderness-default-message | Controls whether wilderness default enter message is sent to players. | TRUE |
 
 # Migrators
@@ -184,7 +204,7 @@ Use [RealEstate](/hooks/RealEstate.html) this is being discontinued
 | entity-move-event | Allows GD's enter-claim and exit-claim to support non-player movement such as monsters and animals. | false |
 | block-id-convert-list | Used to override generic block id's to their actual id during TE and item usage if available. Add the target block id to list if you want to force a conversion when detected. <br  /> Note: This is useful for mods such as IC2 which uses the generic id 'ic2:te' for its multi-block. | "gregtech:machine", "ic2:te" |
 | fakeplayer-identifiers | Contains a list of strings used to identify a fakeplayer by UUID or name. To use, add the fakeplayer UUID or name. | ["41C82C87-7AfB-4024-BA57-13D2C99CAE77", BFC3377F-C3C9-3382-9DA6-79B50A9AFE57, "0D0C4CA0-4FF1-11E4-916C-0800200C9A66", "[Minecraft]", "OpenModsFakethis*"] |
-| mod-id-map | Used to map an unknown mod item/block/entity to a mod id. To use, add the mod package with a mapping to a mod id. Ex. 'com.pixelmonmod.*', 'pixelmon' would map an entity containing class name 'com.pixelmonmod.*' to 'pixelmon' | "com.pixelmonmod.*"=pixelmon |
+| mod-id-map | Used to map an unknown mod item/block/entity to a mod id. To use, add the mod package with a mapping to a mod id. Ex. 'com.pixelmonmod.*', 'pixelmon' would map an entity containing class name 'com.pixelmonmod.*' to 'pixelmon' | com.pixelmonmod.*: pixelmon<br  />net.minecraftforge.*: forge<br  />openblocks.*: openblocks<br  />openmods.*: openmods |
 | tile-id-nbt-map | Used to override generic tileentity id's to their actual id during TE usage. Add the target TE id as key and NBT key where ID is stored as value. | "gregtech:machine"=MetaId |
 
 # Optimization
@@ -237,9 +257,10 @@ cache-entity-damage-expiration | Controls the amount of time, in seconds, for th
 | --------- | ----------- | ----------- |
 | claim-block-system | Determines which claim block system to use for claims. <br />If set to VOLUME, claim blocks will use the chunk count system to balance 3d claiming. <br />If set to AREA, the standard 2d block count system will be used. | AREA |
 | context-storage-type | The context type used when storing playerdata within GD's database. <br />Available types are : global, server, world. <br />Global will store data globally shared by all servers. <br />Server will store data per server. Note: This requires servername to be properly set in permissions config. <br />World will store data per world.  | GLOBAL |
-| force-server-only | <br /> If set to true, GD will only calculate player block data for claims loaded on THIS server. It will not include other servers with same LP server context. <br /> Note: This setting is only used with GD DB storage. <br /> Note: Use with CAUTION!
+| force-server-only | <br /> If set to true, GD will only calculate player block data for claims loaded on THIS server. It will not include other servers with same LP server context. <br /> Note: This setting is only used with GD DB storage. <br /> Note: Use with CAUTION! | false |
 | migrate-area-rate | The rate to divide each accrued claim blocks total by. <br />Set to a value greater than -1 to enable. <br />Note: This should only be used when migrating from volume (3D system) to area (2D system). <br /> In this system, a chunk costs 256 blocks. <br />This requires 'claim-block-system' to be set to AREA. | -1 |
 | migrate-volume-rate | The rate to multiply each accrued claim blocks total by. <br />Set to a value greater than -1 to enable. <br />Note: This should only be used when migrating from area (2D system) to volume (3D system). <br />Each chunk is worth 65,536 blocks in the new system compared to 256 in old. <br />This requires 'claim-block-system' to be set to VOLUME. |-1 |
+| per-world-claim-limits | Whether limiting claim options are checked per world instead of globally. Allows for finer per-world control when using global or server-wide playerdata. | false |
 | reset-accrued-claim-blocks | If enabled, resets all playerdata accrued claim blocks to match total cost of claims owned. <br />Example: If a player has 5 basic claims with a total cost of 1000, this will set their accrued claim blocks to 1000. <br />Note: This will also reset all bonus claim blocks to 0. It is highly recommended to backup before using. | FALSE |
 | reset-migrations | If enabled, resets all playerdata migration flags to allow for another migration. <br /> Note: Use this with caution as it can easily mess up claim block data. It is highly recommended to backup before using. | FALSE |
 
