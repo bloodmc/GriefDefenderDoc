@@ -20,7 +20,7 @@ Se estiver usando um identificador para outro jogador, o formato é `<jogador>:<
 
 * [/gd](#gd)
 
-### Reivindicações
+### Claims
 
 * [/gd abandon claim](#gd-abandon-claim)
 * [/gd abandon all](#gd-abandon-all)
@@ -64,6 +64,11 @@ Se estiver usando um identificador para outro jogador, o formato é `<jogador>:<
 * [/gd toggle inherit](#gd-toggle-inherit)
 * [/gd toggle notifications](#gd-toggle-notifications)
 * [/gd toggle tool](#gd-toggle-tool)
+
+### Plots
+* [/gd plot create](#gd-plot-create)
+* [/gd plot merge](#gd-plot-merge)
+* [/gd plot unmerge](#gd-plot-unmerge)
 
 ### Bandeiras
 
@@ -526,6 +531,39 @@ ___
 
 Para ativar/desativar a ferramenta de reivindicação.
 
+### Plots
+
+___
+#### `/gd plot claim`
+**Atalho**: claimplot
+**Argumentos**: [identificador_do_plot]
+**Permissão**: griefdefender.user.claim.create.plot
+
+Permitir que os jogadores reivindiquem um plot próximo ou um plot com um identificador de lote especifico.
+
+___
+#### `/gd plot create`
+**Atalho**: `claimcreateplot`
+**Argumentos**: `<nome> <raio> <quantidade> <espaçamento> [X Z]`
+**Permissão**: `griefdefender.admin.claim.create.plot`
+
+Permita que os administradores criem um conjunto de plot para os jogadores.​
+
+___
+#### `/gd plot merge`
+**Atalho**: `claimplotmerge`
+**Argumentos**: `[identificador]`
+**Permissão**: `griefdefender.user.claim.plot.merge`
+
+Permite que os jogadores mesclem plot na direção em que estão olhando.
+
+___
+#### `/gd plot unmerge`
+**Atalho**: `claimplotunmerge`
+**Argumentos**: `[identificador]`
+**Permissão**: `griefdefender.admin.claim.plot.unmerge`
+
+Permite que os administradores desfaçam a mesclagem dos plot em que estão.
 
 ### Flags
 

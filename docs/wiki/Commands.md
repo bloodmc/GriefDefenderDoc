@@ -65,6 +65,11 @@ If using an identifier for another player, the format is `<playername>:<identifi
 * [/gd toggle notifications](#gd-toggle-notifications)
 * [/gd toggle tool](#gd-toggle-tool)
 
+### Plots
+* [/gd plot create](#gd-plot-create)
+* [/gd plot merge](#gd-plot-merge)
+* [/gd plot unmerge](#gd-plot-unmerge)
+
 ### Flags
 
 * [/gd flag claim](#gd-flag-claim)
@@ -527,6 +532,39 @@ ___
 
 To enable/disable the claim tool.
 
+### Plots
+
+___
+#### `/gd plot claim`
+**Aliases**: claimplot
+**Arguments**: [plot_identifier]
+**Permission**: griefdefender.user.claim.create.plot
+
+Allow players to claim a nearby plot or a plot in specified plot container identifier.​
+
+___
+#### `/gd plot create`
+**Aliases**: `claimcreateplot`
+**Arguments**: `<name> <child_radius> <quantity> <spacing> [X Z]`
+**Permission**: `griefdefender.admin.claim.create.plot`
+
+Allow admins to create a container of plots for players.​
+
+___
+#### `/gd plot merge`
+**Aliases**: `claimplotmerge`
+**Arguments**: `[identifier]`
+**Permission**: `griefdefender.user.claim.plot.merge`
+
+Allows players to merge plots in the direction they are facing.​
+
+___
+#### `/gd plot unmerge`
+**Atalho**: `claimplotunmerge`
+**Arguments**: `[identifier]`
+**Permissão**: `griefdefender.admin.claim.plot.unmerge`
+
+Allows admins to unmerge plots they are standing in.​
 
 ### Flags
 
