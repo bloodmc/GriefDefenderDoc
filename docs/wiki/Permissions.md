@@ -156,6 +156,14 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.town.command.name | Allows to set a town claimname |
 | griefdefender.user.town.command.tag | Allows to set the tag of your town |
 
+## Plots
+| Permission Node | Description |
+| --------- | ----------- |
+| griefdefender.user.claim.create.plot | Allow players to claim a nearby plot or a plot in specified plot container identifier.​ |
+| griefdefender.admin.claim.create.plot | Allow admins to create a container of plots for players.​ |
+| griefdefender.user.claim.plot.merge | Allows players to merge plots in the direction they are facing.​ |
+| griefdefender.admin.claim.plot.unmerge | Allows admins to unmerge plots they are standing in.​ |
+
 ## Flags
 | Permission Node | Description |
 | --------- | ----------- |

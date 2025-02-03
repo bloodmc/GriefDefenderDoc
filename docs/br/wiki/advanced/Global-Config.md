@@ -8,7 +8,7 @@ icon: config
 A configuração padrão do GriefDefender oferece personalização estendida para o seu servidor. Abaixo está um detalhamento de todas as variáveis padrão para sua conveniência.  
 
 :::: warning Algumas opções podem causar alterações irreparáveis em seus dados
-Certifique-se de ter lido o subtexto encontrado ao lado das variáveis em seu arquivo [global.conf](/br/wiki/advanced/Global-Config.html)  
+Certifique-se de ter lido o subtexto encontrado ao lado das variáveis em seu arquivo [global.yml](/br/wiki/advanced/Global-Config.html)  
 **Todas as variáveis de migração SEMPRE devem ser usadas APÓS o backup de seus dados ser feito.**
 ::::
 
@@ -34,7 +34,7 @@ GriefDefender permite configuração modular. No entanto, de acordo com os arqui
 * Projéteis: projectile-impact-block, projectile-impact-entity
 
 <hr>
-Version based on release file: GriefDefender 2.5.5
+Version based on release file: GriefDefender 3.0.2
 <hr>
 
 # claim
@@ -71,7 +71,17 @@ Controla as configurações padrão de criação de declarações. <br /> Obs: o
 | modification-tool | O item usado para criar/redimensionar declarações com um clique direito. <br /> Nota: Defina aspas vazias se não quiser atribuir nenhum item e usar exclusivamente o modo '/claim'. | ["minecraft:golden_shovel"](/br/wiki/basic/Claim-Management.html#suporte-a-custommodeldata) |
 | piston-protection-in-claims | Se a proteção do pistão deve ser habilitada nas reivindicações. Nota: Isto não afeta os pistões que passam para outra reivindicação, que está sempre protegida. Isso apenas determina se a GD deve ou não processar pistões se não passar para outra reivindicação. | false |
 | player-trapped-cooldown | O tempo de espera, em segundos, ao usar o comando '/trapped'. | 300 |
-| protect-tamed-entities | Se as entidades domesticadas devem ser protegidas em reivindicações de não-proprietários. | true |
+
+# plot-settings
+Controls plot claim settings.
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| use-schematics | If enabled, a schematic will be generated on plot creation and used to restore the plot to its original state when abandoned. <br  /> Note: A schematic will restore all blocks to their original state. Use with caution. <br  />Note: This setting requires WorldEdit. | true |
+| use-snapshots | If enabled, snapshots will be generated on plot creation and used to restore the plot to its original state when abandoned. <br  /> Note: A snapshot will include all claim data such as settings, flags, options, and trust. | true |
+
+| Variable | Description | Default Value |
+| --------- | ----------- | ----------- |
+| protect-tamed-entities | Whether tamed entities should be protected in claims from non-owners. | true |
 
 # removal-settings
 Controla as configurações de remoção/expiração de reivindicações.
@@ -112,7 +122,7 @@ claim-create-limit | A quantidade de reivindicações temporárias que um único
 | Variável | Descrição | Valor padrão |
 | --------- | ----------- | ----------- |
 | enchantments | Se os contextos de efeito de poção devem ser aplicados durante as verificações de permissão. | false |
-|ignored-debug-contexts | Uma lista de valores de contexto ignorados durante a depuração. | [] |
+| ignored-debug-contexts | Uma lista de valores de contexto ignorados durante a depuração. | <br  />- '#azalea_root_replaceable'<br  />- '#base_stone_overworld'<br  />- '#dripstone_replaceable_blocks'<br  />- '#goats_spawnable_on'<br  />- '#lush_ground_replaceable'<br  />- '#mineable/pickaxe'<br  />- '#minecraft:azalea_root_replaceable'<br  />- '#minecraft:base_stone_overworld'<br  />- '#minecraft:dripstone_replaceable_blocks'<br  />- '#minecraft:goats_spawnable_on'<br  />- '#minecraft:lush_ground_replaceable'<br  />- '#minecraft:mineable/pickaxe'<br  />- '#minecraft:moss_replaceable'<br  />- '#minecraft:stone_ore_replaceables'<br  />- '#stone_ore_replaceables'<br  />- '#moss_replaceable'<br  />- '#minecraft:foxes_spawnable_on'<br  />- '#minecraft:inside_step_sound_blocks'<br  />- '#minecraft:mineable/shovel'<br  />- '#minecraft:rabbits_spawnable_on'<br  />- '#minecraft:wolves_spawnable_on'<br  />- '#foxes_spawnable_on'<br  />- '#inside_step_sound_blocks'<br  />- '#rabbits_spawnable_on'<br  />- '#wolves_spawnable_on' |
 | player-equipment | Se os contextos de equipamento do jogador devem ser aplicados durante as verificações de permissão. | true |
 | potion-effects | Se os contextos de efeito de poção devem ser aplicados durante as verificações de permissão. | true |
 
@@ -122,6 +132,7 @@ claim-create-limit | A quantidade de reivindicações temporárias que um único
 | bank-system | Se deve ativar o sistema bancário para reclamações. Defina como verdadeiro para ativar. | false |
 | bank-transaction-log-limit | A quantidade de transações a serem mantidas no histórico. | 60 |
 | currency-symbol | O símbolo monetário para mensagens econômicas. | $ |
+| currency-symbol-after-amount | Whether the currency symbol should be shown after the amount | false |
 | economy-mode | Usa economia em vez de blocos de reivindicação de jogadores para criação de reivindicações. # Se verdadeiro, desativa o sistema de bloqueio de reivindicações em favor da economia. <br /> Nota: Usar este modo desativa o comando '/buyblocks', pois a criação de reivindicações retirará fundos diretamente do saldo econômico do jogador. <br /> Nota: Se os jogadores tiverem blocos de reivindicação de configurações anteriores, um administrador deve usar o comando '/ecomigrateblocks' para converter o restante em moeda. | false |
 
 # rent
@@ -142,6 +153,8 @@ Use [RealEstate](/br/hooks/RealEstate.html) isso está sendo descontinuado
 | --------- | ----------- | ----------- |
 | sell-sign | Se as placas de venda estão habilitados. | false |
 | sign-update-interval | O intervalo em minutos para atualização dos dados da placa. Defina como 0 para desativar. | 1 |
+| tax-2d-claims | Whether to apply tax on 2d claims. | true |
+| tax-3d-claims | Whether to apply tax on 3d claims | true |
 | tax-apply-hour | A hora específica do dia para aplicar o imposto a todas as reivindicações. Nota: Isso usa o horário militar e aceita valores entre 0-23. | 0 |
 | tax-system | Se deve ativar o sistema tributário para reclamações. Defina como true para ativar. | false |
 | tax-transaction-log-limit | A quantidade de transações a serem mantidas no histórico. | 60 |
@@ -158,6 +171,7 @@ Use [RealEstate](/br/hooks/RealEstate.html) isso está sendo descontinuado
 | greeting-farewell-action-bar | Controla se mensagens de saudação/despedida devem ser enviadas para a barra de ação por padrão. <br />Nota: Definir como verdadeiro enviará mensagens para a barra de ação. <br />Nota: Isto só será definido se não houver nenhuma barra de ação já definida na reivindicação. Nesse caso, ele usará o chat. | FALSE |
 | locale | Defina a localidade a ser usada para mensagens GP. Idiomas disponíveis: de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK. Os dados são armazenados em ativos no jar. <br />Nota: O código do idioma deve estar em letras minúsculas e o código do país deve estar em letras maiúsculas. | "en_US" |
 | locale-unicode-fix | Tentativas de ajustar as fontes Unicode para representar melhor as fontes padrão do Minecraft. <br />Nota: Se você estiver usando 'pl_PL' ou 'ru_RU', esta configuração deve ser definida como falsa. <br />Obs: quaisquer outros idiomas que apresentem desalinhamento nos menus de bate-papo devem desativar esta configuração. | TRUE |
+| regex-filters | Used to check all messages stored in GD with provided regex filters. If match is found, message will not be able to be set. | [] |
 | wilderness-default-message | Controla se a mensagem de entrada padrão da natureza selvagem é enviada aos jogadores. | TRUE |
 
 # Migrators
@@ -185,7 +199,7 @@ Use [RealEstate](/br/hooks/RealEstate.html) isso está sendo descontinuado
 | entity-move-event | Permite que a reivindicação de entrada e saída de GD apoie movimentos de não jogadores, como monstros e animais. | false |
 | block-id-convert-list | Usado para substituir IDs de bloco genéricos por seus IDs reais durante TE e uso de item, se disponível. Adicione o ID do bloco de destino à lista se quiser forçar uma conversão quando detectado. <br /> Nota: Isto é útil para mods como IC2 que usa o id genérico 'ic2:te' para seu multi-bloco. | "gregtech:machine", "ic2:te" |
 | fakeplayer-identifiers | Contém uma lista de strings usadas para identificar um fakeplayer por UUID ou nome. Para usar, adicione o UUID ou nome do fakeplayer. | ["41C82C87-7AfB-4024-BA57-13D2C99CAE77", BFC3377F-C3C9-3382-9DA6-79B50A9AFE57, "0D0C4CA0-4FF1-11E4-916C-0800200C9A66", "[Minecraft]", "OpenModsFakethis*"] |
-| mod-id-map | Usado para mapear um item/bloco/entidade de mod desconhecido para um ID de mod. Para usar, adicione o pacote mod com um mapeamento para um id de mod. Ex. 'com.pixelmonmod.*', 'pixelmon' mapearia uma entidade contendo o nome da classe 'com.pixelmonmod.*' para 'pixelmon' | "com.pixelmonmod.*"=pixelmon |
+| mod-id-map | Usado para mapear um item/bloco/entidade de mod desconhecido para um ID de mod. Para usar, adicione o pacote mod com um mapeamento para um id de mod. Ex. 'com.pixelmonmod.*', 'pixelmon' mapearia uma entidade contendo o nome da classe 'com.pixelmonmod.*' para 'pixelmon' | com.pixelmonmod.*: pixelmon<br  />net.minecraftforge.*: forge<br  />openblocks.*: openblocks<br  />openmods.*: openmods |
 | tile-id-nbt-map | Usado para substituir IDs genéricos de entidade de bloco por seus IDs reais durante o uso do TE. Adicione o ID TE de destino como chave e a chave NBT onde o ID é armazenado como valor. | "gregtech:machine"=MetaId |
 
 # Optimization
@@ -238,9 +252,10 @@ cache-entity-damage-expiration | Controla a quantidade de tempo, em segundos, pa
 | --------- | ----------- | ----------- |
 | claim-block-system | Determina qual sistema de bloqueio de declarações usar para declarações. <br />Se definido como VOLUME, os blocos de reivindicação usarão o sistema de contagem de blocos para equilibrar a reivindicação 3D. <br />Se definido como AREA, o sistema padrão de contagem de blocos 2d será usado. | AREA |
 | context-storage-type | O tipo de contexto usado ao armazenar playerdata no banco de dados do GD. <br />Os tipos disponíveis são: global, servidor, mundo. <br />Global armazenará dados compartilhados globalmente por todos os servidores. <br />O servidor armazenará dados por servidor. Nota: Isso requer que o nome do servidor seja definido corretamente na configuração de permissões. <br />O mundo armazenará dados por mundo.  | GLOBAL |
-| force-server-only | <br /> If set to true, GD will only calculate player block data for claims loaded on THIS server. It will not include other servers with same LP server context. <br /> Note: This setting is only used with GD DB storage. <br /> Note: Use with CAUTION!
+| force-server-only | <br /> If set to true, GD will only calculate player block data for claims loaded on THIS server. It will not include other servers with same LP server context. <br /> Note: This setting is only used with GD DB storage. <br /> Note: Use with CAUTION! | false |
 | migrate-area-rate | A taxa pela qual dividir o total de cada sinistro acumulado. <br />Defina um valor maior que -1 para ativar. <br />Nota: Isto só deve ser usado ao migrar do volume (sistema 3D) para a área (sistema 2D). <br /> Neste sistema, um pedaço custa 256 blocos. <br />Isto requer que 'claim-block-system' seja definido como AREA. | -1 |
 | migrate-volume-rate | A taxa pela qual multiplicar o total de cada sinistro acumulado. <br />Defina um valor maior que -1 para ativar. <br />Nota: Isto só deve ser usado ao migrar de área (sistema 2D) para volume (sistema 3D). <br />Cada pedaço vale 65.536 blocos no novo sistema, em comparação com 256 no antigo. <br />Isto requer que 'claim-block-system' seja definido como VOLUME. |-1 |
+| per-world-claim-limits | Whether limiting claim options are checked per world instead of globally. Allows for finer per-world control when using global or server-wide playerdata. | false |
 | reset-accrued-claim-blocks | Se ativado, redefine todos os bloqueios de reivindicações acumuladas de dados do jogador para corresponder ao custo total das reivindicações possuídas. <br />Exemplo: Se um jogador tiver 5 reivindicações básicas com um custo total de 1.000, isso definirá seus blocos de reivindicações acumulados para 1.000. <br />Nota: Isso também redefinirá todos os bloqueios de reivindicações de bônus para 0. É altamente recomendado fazer backup antes de usar. | FALSE |
 | reset-migrations | Se ativado, redefine todos os sinalizadores de migração de playerdata para permitir outra migração. <br /> Obs: use isso com cuidado, pois pode facilmente atrapalhar os dados do bloco de reivindicação. É altamente recomendável fazer backup antes de usar. | FALSE |
 

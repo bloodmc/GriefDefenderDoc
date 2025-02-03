@@ -157,8 +157,16 @@ DELETE FROM minecraft.luckperms_group_permissions WHERE contexts LIKE CONCAT('%g
 | griefdefender.user.town.command.name | Permite definir um nome para a cidade (claimname) |
 | griefdefender.user.town.command.tag | Permite definir a tag da sua cidade |
 
+## Lotes
+| Node de permissão | Descrição |
+| --------- | ----------- |
+| griefdefender.user.claim.create.plot | Permitir que os jogadores reivindiquem um plot próximo ou um plot com um identificador de lote especifico.​ |
+| griefdefender.admin.claim.create.plot | Permita que os administradores criem um conjunto de plot para os jogadores.​ |
+| griefdefender.user.claim.plot.merge | Permite que os jogadores mesclem plot na direção em que estão olhando.​ |
+| griefdefender.admin.claim.plot.unmerge | Permite que os administradores desfaçam a mesclagem dos plot em que estão.​ |
+
 ## Bandeiras
-| Permission Node | Description |
+| Node de permissão | Descrição |
 | --------- | ----------- |
 | griefdefender.admin.claim.command.flag.arg | Permite usar o comando Claimflag com argumentos de linha de comando |
 | griefdefender.user.claim.command.flag.base | Permite usar o comando Claimflag |

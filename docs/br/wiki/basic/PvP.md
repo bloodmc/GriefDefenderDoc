@@ -15,10 +15,10 @@ Para desabilitar o PvP do servidor, abra [`server.properties`](https://pt.minecr
 
 ### Desative o PvP globalmente, exceto reivindicações específicas
 
-1. Abra `presets/minecraft.conf` no diretório de configuração do GD.  
+1. Abra `presets/minecraft.yml` no diretório de configuração do GD.  
 2. Altere `default-value=true` para `default-value=false` na definição de `pvp`  
 3. Alterne a definição de `pvp` para true em reivindicações onde o pvp é desejado  
-4. Opcional: Mova a definição a bandeira `pvp` do grupo USER para o grupo ADMIN em `minecraft.conf`  
+4. Opcional: Mova a definição a bandeira `pvp` do grupo USER para o grupo ADMIN em `minecraft.yml`  
 Nota: Faça esta alteração se você APENAS quiser que os administradores possam alternar `pvp` nas reivindicações.  
 5. `/gdreload`
 

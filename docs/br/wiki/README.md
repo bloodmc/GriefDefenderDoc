@@ -83,16 +83,16 @@ Todos os arquivos de configuração podem ser encontrados em uma pasta chamada `
 plugins/
 └── GriefDefender/
     ├── ...
-    ├── bans.conf
-    ├── blacklist.conf
-    ├── claimnames.conf
-    ├── flags.conf
-    ├── global.conf
-    ├── gui.conf
-    ├── options.conf
-    └── storage.conf
-    ├── storage.conf
-    └── tag.conf
+    ├── bans.yml
+    ├── blacklist.yml
+    ├── claimnames.yml
+    ├── config_format.txt
+    ├── flags.yml
+    ├── global.yml
+    ├── gui.yml
+    ├── options.yml
+    ├── storage.yml
+    └── tag.yml
 ```
 
 Você pode alterar várias configurações no [arquivo de configuração](/br/wiki/advanced/Global-Config.html). O arquivo tem anotações detalhadas que deixam claro o que cada opção faz. Existem três tipos de configurações:
@@ -204,7 +204,7 @@ Nota: Todas as seções de configuração são classificadas automaticamente em 
 GD suporta os seguintes idiomas : `de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK`
 
 O idioma padrão é `en_US`.  
-Para alterar o idioma, abra o [`global.conf`](/br/wiki/advanced/Global-Config.html) e encontre `message` mude a linha `locale="en_US"` para `locale="pt_BR"`
+Para alterar o idioma, abra o [`global.yml`](/br/wiki/advanced/Global-Config.html) e encontre `message` mude a linha `locale="en_US"` para `locale="pt_BR"`
 
 ### Armazenamento
 
@@ -230,19 +230,20 @@ config/
     │   │   │   ├── world/
     │   │   │   │   ├── ClaimData/
     │   │   │   │   ├── SchematicData/
-    │   │   │   │   └── world.conf
-    │   │   │   └── dimension.conf
+    │   │   │   │   └── world.yml
+    │   │   │   └── dimension.yml
     │   │   └── other...
     │   └── 
-    ├── bans.conf
-    ├── blacklist.conf
-    ├── claimnames.conf
-    ├── flags.conf
-    ├── global.conf
-    ├── gui.conf
-    ├── options.conf
-    ├── storage.conf
-    └── tag.conf
+    ├── bans.yml
+    ├── blacklist.yml
+    ├── claimnames.yml
+    ├── config_format.txt
+    ├── flags.yml
+    ├── global.yml
+    ├── gui.yml
+    ├── options.yml
+    ├── storage.yml
+    └── tag.yml
 ```
 
 #### Banco de dados  
@@ -250,7 +251,7 @@ config/
 :warning: Se especificar a porta em `address` envolvido com aspas ou GD não será carregado. :warning:  
 
 Se você deseja alternar para o armazenamento de banco de dados, faça o seguinte
-1. Abra o arquivo [`storage.conf`](/br/wiki/basic/Storage.html)  
+1. Abra o arquivo [`storage.yml`](/br/wiki/basic/Storage.html)  
 2. Altere `storage-method` para um formato de banco de dados suportado.
 Por exemplo, se você quiser usar mysql, você deve definir este valor para `mysql`.
 3. Defina `address` para o endereço e porta do banco de dados. Certifique-se de usar aspas ao especificar uma porta. Ex. `"localhost:1000"`  
@@ -272,7 +273,7 @@ GD padroniza os usuários para conversar com a GUI. Se você deseja que os usuá
 
 ### lista negra  
 
-O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu [`blacklist.conf`](/br/wiki/Configuration.html#blacklist-lista-negra) e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
+O GriefDefender agora oferece configurações de lista negra padrão para várias ações barulhentas no mundo do minecraft, a fim de fornecer o melhor desempenho imediato. Quando um item, bloco ou id de entidade está na lista negra, o GriefDefender irá ignorá-lo quando processado em um evento. Se você encontrar uma ação que não aparece na depuração do GD, ela está na lista negra ou não está disparando corretamente um evento. Certifique-se de revisar seu [`blacklist.yml`](/br/wiki/Configuration.html#blacklist-lista-negra) e remova qualquer id que você não queira colocar na lista negra para o seu servidor.
 
 Veja a [Lista negra](/br/wiki/Configuration.html#blacklist-lista-negra) para obter mais informações sobre como configurar.
 
@@ -280,11 +281,11 @@ Veja a [Lista negra](/br/wiki/Configuration.html#blacklist-lista-negra) para obt
 :warning: Antes de ativar o modelo econômico, certifique-se de testar em um servidor de TESTE para garantir que todas as configurações estejam funcionando corretamente. :warning:
 
 Por padrão, o GD permite que os jogadores acumulem blocos de reivindicações para serem usados na criação de reivindicações.  
-No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em [`global.conf`](/br/wiki/advanced/Global-Config.html#economy).  
+No entanto, se você quiser que todas as reivindicações criadas usem economia diretamente em vez de blocos de reivindicações, defina `economy-mode` para `true` em [`global.yml`](/br/wiki/advanced/Global-Config.html#economy).  
 Com `economy-mode` ativado, todas as criações de reivindicação solicitarão aos jogadores uma confirmação do custo da reivindicação. Uma vez confirmado, o dinheiro será retirado da conta do jogador.  
 Se você quiser ignorar essas confirmações, defina a permissão `griefdefender.user.claim.economy.create-confirm` para `false`.  
 
-Depois que essa configuração for ativada, abra [`options.conf`](/br/wiki/basic/Options.html) e configure as seguintes opções para um valor maior que `0`  
+Depois que essa configuração for ativada, abra [`options.yml`](/br/wiki/basic/Options.html) e configure as seguintes opções para um valor maior que `0`  
 * `economy-block-cost`  
 * `economy-sell-return`  
 
@@ -314,10 +315,10 @@ Para `<grupo>` use seu grupo padrão, use `default` se você não tiver um.
 Depois que o GD estiver instalado e em execução, veja [Gestão de Reivindicações](/br/wiki/basic/Claim-Management.html) para saber como criar uma proteção de terrra e gerenciá-lo.
 
 ### Opções
-:warning: É MUITO IMPORTANTE que você veja [`options.conf`](/br/wiki/basic/Options.html) antes de prosseguir. :warning:  
-:warning: Todas as opções persistentes [meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta) definidas em LuckPerms terão prioridade sobre os padrões em [`options.conf`](/br/wiki/basic/Options.html) :warning:
+:warning: É MUITO IMPORTANTE que você veja [`options.yml`](/br/wiki/basic/Options.html) antes de prosseguir. :warning:  
+:warning: Todas as opções persistentes [meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta) definidas em LuckPerms terão prioridade sobre os padrões em [`options.yml`](/br/wiki/basic/Options.html) :warning:
 
-Se você quiser definir configurações como com quantos blocos iniciais um jogador pode começar, limites de criação de reivindicação, etc... então você deve começar ajustando as opções padrão do GD encontradas em [`options.conf`](br/wiki/basic/Options.html#opcoes-globais).  
+Se você quiser definir configurações como com quantos blocos iniciais um jogador pode começar, limites de criação de reivindicação, etc... então você deve começar ajustando as opções padrão do GD encontradas em [`options.yml`](br/wiki/basic/Options.html#opcoes-globais).  
 Todas as configurações de opção padrão são aplicadas na inicialização do servidor.
 
 [Paper]: https://papermc.io/downloads

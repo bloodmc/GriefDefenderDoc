@@ -20,7 +20,7 @@ Ver [Usando com LuckPerms](/br/wiki/advanced/Flags.html#usando-com-luckperms)
 Nota: Para usar bandeiras com argumentos de comando, você deve ter a permissão `griefdefender.advanced.admin.flags.*`
 
 ## bandeiras de reivindicação padrão
-Todos os bandeiras padrão podem ser personalizados por tipo de reivindicação. Atualmente, o Griefdefender suporta bandeiras padrão para administrador, básico, cidade e regiaõ selvagem. Você pode modificar os padrões em `flags.conf` e `presets/minecraft.conf`.
+Todos os bandeiras padrão podem ser personalizados por tipo de reivindicação. Atualmente, o Griefdefender suporta bandeiras padrão para administrador, básico, cidade e regiaõ selvagem. Você pode modificar os padrões em `flags.yml` e `presets/minecraft.yml`.
 
 ## Contextos
 

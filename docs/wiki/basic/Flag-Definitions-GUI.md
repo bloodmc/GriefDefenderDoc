@@ -13,17 +13,17 @@ The delivered vanilla flag definition data can be found in the following locatio
 
 Fabric, Forge, and Sponge preset vanilla config is located in  
 
-`./config/GriefDefender/presets/minecraft.conf`  
+`./config/GriefDefender/presets/minecraft.yml`  
 
 Bukkit and Hybrid preset vanilla config is located in  
 
-`./plugins/GriefDefender/presets/minecraft.conf`  
+`./plugins/GriefDefender/presets/minecraft.yml`  
 
 
 
 Admins are given full control to add/remove/customize flag definitions.   
 
-To add a flag definition to an existing delivered minecraft preset, open the `./presets/minecraft.conf` file.  
+To add a flag definition to an existing delivered minecraft preset, open the `./presets/minecraft.yml` file.  
 Within this section, you will see 2 delivered groups `admin` and `user`.   
 
 All flag definitions located within the `admin` group are accessible by only admins. This is due to the `admin-group` setting be set to `true`.  

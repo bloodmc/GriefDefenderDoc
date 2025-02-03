@@ -14,8 +14,8 @@ Agora que você tem uma compreensão básica do que é um contexto e como eles f
 Contexto                                          |     Valor     | Descrição | 
 -------------------------------------------------|---------------|--------------|
 ```gd_claim```            |   ```<claim_uuid>```  | Aplica bandeira para reivindicação com uuid especificado.
-```gd_claim_default```    |   ```admin```<br>```basic```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Aplica a bandeira como padrão a todas as reivindicações do tipo especificado. <br />Nota: Use `global` como valor para aplicar a todos os tipos.<br/>Nota: Use `user` como valor para aplicar a todos os tipos EXCETO região selvagem.
-```gd_claim_override```   |   ```admin```<br>```basic```<br>```claim```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Aplica a bandeira como uma substituição a todas as reivindicações do tipo especificado. <br />Nota: Use `global` como valor para aplicar a todos os tipos.<br/>Nota: Use `user` como valor para aplicar a todos os tipos EXCETO região selvagem.
+```gd_claim_default```    |   ```admin```<br>```basic```<br>```subdivision```<br>```town```<br>```global```<br>```user```<br>```wilderness```  | Aplica a bandeira como padrão a todas as reivindicações do tipo especificado. <br />Nota: Use `global` como valor para aplicar a todos os tipos.<br/>Nota: Use `user` como valor para aplicar a todos os tipos EXCETO região selvagem.
+```gd_claim_override```   |   ```admin```<br>```basic```<br>```claim```<br>```subdivision```<br>```town```<br>```global```<br>```user```<br>```wilderness```  | Aplica a bandeira como uma substituição a todas as reivindicações do tipo especificado. <br />Nota: Use `global` como valor para aplicar a todos os tipos.<br/>Nota: Use `user` como valor para aplicar a todos os tipos EXCETO região selvagem.
 ```gd_rent```             |   ```rent```         | Aplica bandeira para reivindicações de aluguéis.
 ```source```   |   `<source_id>`  | Aplica bandeira a uma fonte específica. <br />Exemplo: `minecraft:creeper`
 ```target```   |   `<target_id>`  | Aplica bandeira a um destino específico. <br />Exemplo: `minecraft:player` <br />Nota: O destino é **SEMPRE** necessário após a bandeira no uso do comando /cf, mas mais de um destino pode ser especificado com o uso do contexto.
@@ -38,7 +38,7 @@ Contexto                                          |     Valor     | Descrição 
 ```world```   |   `<nome_do_mundo>`  | Aplica bandeira a um mundo específico.
 
 Nota: Cada permissão de bandeira ou opção SEMPRE conterá um dos seguintes contextos principais `gd_claim`, `gd_claim_default` ou `gd_claim_override`.
-Nota: Ao usar contextos com comandos `/cf`, `/claimoption` ou `flags.conf`, você pode usar os seguintes aliases para chaves de contexto
+Nota: Ao usar contextos com comandos `/cf`, `/claimoption` ou `flags.yml`, você pode usar os seguintes aliases para chaves de contexto
 `gd_claim_default` - `default`  
 `gd_claim_override` - `override`  
 Então como exemplo

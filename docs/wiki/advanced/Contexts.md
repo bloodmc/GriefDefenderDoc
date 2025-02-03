@@ -15,8 +15,8 @@ Now that you have a basic understanding of what a context is and how they work w
 Context                                          |     Value     | Description | 
 -------------------------------------------------|---------------|--------------|
 ```gd_claim```            |   ```<claim_uuid>```  | Applies flag to claim with specified uuid.
-```gd_claim_default```    |   ```admin```<br>```basic```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Applies flag as a default to all claims of type specified. <br />Note: Use `global` as value to apply to all types.<br/>Note: Use `user` as value to apply to all types EXCEPT wilderness.
-```gd_claim_override```   |   ```admin```<br>```basic```<br>```claim```<br>```subdivision```<br>```town```<br>```global```<br>```user```  | Applies flag as an override to all claims of type specified. <br />Note: Use `global` as value to apply to all types.<br/>Note: Use `user` as value to apply to all types EXCEPT wilderness.
+```gd_claim_default```    |   ```admin```<br>```basic```<br>```subdivision```<br>```town```<br>```global```<br>```user```<br>```wilderness```  | Applies flag as a default to all claims of type specified. <br />Note: Use `global` as value to apply to all types.<br/>Note: Use `user` as value to apply to all types EXCEPT wilderness.
+```gd_claim_override```   |   ```admin```<br>```basic```<br>```claim```<br>```subdivision```<br>```town```<br>```global```<br>```user```<br>```wilderness```  | Applies flag as an override to all claims of type specified. <br />Note: Use `global` as value to apply to all types.<br/>Note: Use `user` as value to apply to all types EXCEPT wilderness.
 ```gd_rent```             |   ```rent```         | Apply flag for rental claims.
 ```source```   |   `<source_id>`  | Applies flag to a specific source. <br />Example: `minecraft:creeper`
 ```target```   |   `<target_id>`  | Applies flag to a specific target. <br />Example: `minecraft:player` <br />Note: Target is **ALWAYS** required after the flag in /cf command usage, but more than one target can be specified with use of context.
@@ -39,7 +39,7 @@ Context                                          |     Value     | Description |
 ```world```   |   `<world_name>`  | Applies flag to a specific world.
 
 Note: Every flag or option permission will ALWAYS contain one of the following core contexts `gd_claim`, `gd_claim_default`, or `gd_claim_override`.  
-Note: When using contexts with commands `/cf`, `/claimoption`, or `flags.conf` you can use the following aliases for context keys  
+Note: When using contexts with commands `/cf`, `/claimoption`, or `flags.yml` you can use the following aliases for context keys  
 `gd_claim_default` - `default`  
 `gd_claim_override` - `override`  
 So as an example  

@@ -5,11 +5,11 @@ category: info
 icon: optimization-timer
 ---
 
-O Griefdefender fornece controle interno para quase todas as ações do seu mundo Minecraft.No entanto, tentar controlar muito às vezes pode causar problemas de recursos, dependendo da carga do servidor.A solução para esse problema é usar a configuração de otimização interna encontrada em [`global.conf`](/br/wiki/advanced/Global-Config.html) e aprendendo a usar [listas negras](/br/wiki/Configuration.html#blacklist-lista-negra). 
+O Griefdefender fornece controle interno para quase todas as ações do seu mundo Minecraft.No entanto, tentar controlar muito às vezes pode causar problemas de recursos, dependendo da carga do servidor.A solução para esse problema é usar a configuração de otimização interna encontrada em [`global.yml`](/br/wiki/advanced/Global-Config.html) e aprendendo a usar [listas negras](/br/wiki/Configuration.html#blacklist-lista-negra). 
 
 ### Configuração de otimização global
 
-Abaixo está um trecho das configurações de [otimização](/br/wiki/advanced/Global-Config.html#otimizacao) que você pode encontrar no GriefDefender na parte do [`global.conf`](/br/wiki/advanced/Global-Config.html) 
+Abaixo está um trecho das configurações de [otimização](/br/wiki/advanced/Global-Config.html#otimizacao) que você pode encontrar no GriefDefender na parte do [`global.yml`](/br/wiki/advanced/Global-Config.html) 
 
 ## Utilize Aikar's Flags
 Os sinalizadores do Aikar são um conjunto otimizado de sinalizadores que podem aumentar o desempenho do seu servidor com pouco esforço de sua parte. Por padrão, o coletor de lixo do Java não é otimizado para executar servidores Minecraft, mas os sinalizadores do Aikar são um conjunto de sinalizadores ajustados que é projetado especificamente para executar servidores Minecraft. Esses sinalizadores reduzirão os tempos de pausa do servidor devido à coleta de lixo e farão com que a JVM evite longos ciclos de coleta de lixo de geração antiga.  

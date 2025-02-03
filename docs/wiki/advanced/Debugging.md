@@ -106,7 +106,7 @@ This column contains the base flag that the event was checked against. eg; `bloc
 
 #### `Flag Definition`
 
-This column contains the Flag Definition (Found in the `GriefDefender/Presets` folder within the `.conf` files) that shows the source of the event check in the presets.
+This column contains the Flag Definition (Found in the `GriefDefender/Presets` folder within the `.yml` files) that shows the source of the event check in the presets.
 
 #### `Trust`
 

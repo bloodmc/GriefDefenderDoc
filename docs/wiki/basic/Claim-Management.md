@@ -129,7 +129,7 @@ Basic tool, you can use it to indicate the position of claims, and identify who 
 
 The inspection and modification tools now support CustomModelData support. To use, add {key:value} after item identifier.  
 
-Search the line `inspection-tool="minecraft:stick"` and `inspection-tool="minecraft:golden_shovel"` on [`global.conf`](/wiki/advanced/Global-Config.html)
+Search the line `inspection-tool="minecraft:stick"` and `inspection-tool="minecraft:golden_shovel"` on [`global.yml`](/wiki/advanced/Global-Config.html)  
 
 Change to:  
 `inspection-tool="minecraft:stick{CustomModelData:1}"`  
@@ -171,7 +171,7 @@ Admins can access any player's personal claim identifiers by using the format `<
 
 ### Storage
 
-All claim identifiers are stored in `./GriefDefender/claimnames.conf`  
+All claim identifiers are stored in `./GriefDefender/claimnames.yml`  
 
 
 ## Claim Display Names
@@ -189,24 +189,24 @@ Claim snapshots allow a user to backup all associated claim data of the claim in
 #### Public
 
 Public claim snapshots are accessible by all users.  
-Data is stored in `./GriefDefender/snapshots/public/<group>/<snapshotname>.conf`
+Data is stored in `./GriefDefender/snapshots/public/<group>/<snapshotname>.yml`
 
 #### Admin
 
 Admin claim snapshots are accessible by only admins.  
-Data is stored in `./GriefDefender/snapshots/admin/<group>/<snapshotname>.conf`
+Data is stored in `./GriefDefender/snapshots/admin/<group>/<snapshotname>.yml`
 
 
 #### User
 
 User claim snapshots are only accessible by the creator.  
-Data is stored in `./GriefDefender/snapshots/user/<player_uuid>/<snapshotname>.conf`
+Data is stored in `./GriefDefender/snapshots/user/<player_uuid>/<snapshotname>.yml`
 
 
 #### Claim
 
 Claim local snapshots are only accessible in the claim the snapshot was created in.  
-Data is stored in `./GriefDefender/worlds/<dimension_type>/<world_name>/snapshots/<claim_uuid>/<snapshotname>.conf`
+Data is stored in `./GriefDefender/worlds/<dimension_type>/<world_name>/snapshots/<claim_uuid>/<snapshotname>.yml`
 
 ### GUI
 
@@ -257,12 +257,12 @@ There are 2 types of claim groups
 #### Admin
 
 Admin claim groups are only accessible by admins.  
-Data is stored in `./GriefDefender/claimgroups/admin/<claimgroup_name>.conf`
+Data is stored in `./GriefDefender/claimgroups/admin/<claimgroup_name>.yml`
 
 #### User
 
 User claim groups are only accessible by user who created the group.   
-Data is stored in `./GriefDefender/claimgroups/user/<player_uuid>/<claimgroup_name>.conf`
+Data is stored in `./GriefDefender/claimgroups/user/<player_uuid>/<claimgroup_name>.yml`
 
 ### GUI
 
@@ -371,7 +371,7 @@ To remove entry for a specific user
 
 ## How to disable claiming/GD functionality
 
-:warning: See [global.conf](/wiki/advanced/Global-Config.html) in the [`World`](/wiki/advanced/Global-Config.html#world) section for protecting worlds or resources
+:warning: See [global.yml](/wiki/advanced/Global-Config.html) in the [`World`](/wiki/advanced/Global-Config.html#world) section for protecting worlds or resources
 ### Disable claiming in a specific world
 
 To disable creating claims for a specific group of users in a world called `valhalla`, enter the following command  
@@ -389,7 +389,7 @@ the_end
 ```
 
 Since the world `valhalla` is of type `overworld` , go into `normal` folder. You will see a folder named `valhalla`.
-Inside this folder will be a config folder named `world.conf`. Edit the config file to be the following
+Inside this folder will be a config folder named `world.yml`. Edit the config file to be the following
 
 ```
 # 1.2.7
@@ -409,13 +409,13 @@ GriefDefender {
 
 ## How to handle explosions above surface level
 
-Open up the [global.conf](/wiki/advanced/Global-Config.html) found under `./plugins/griefdefender` on Bukkit and `./config/griefdefender` on Sponge servers.  
+Open up the [global.yml](/wiki/advanced/Global-Config.html) found under `./plugins/griefdefender` on Bukkit and `./config/griefdefender` on Sponge servers.  
 You will find the following config settings  
 
 * `explosion-block-surface-blacklist` - Allows you to blacklist specific block source, such as tnt, above the surface level defined by setting `explosion-surface-block-level`. To blacklist ALL blocks, use the id `any`.
 * `explosion-entity-surface-blacklist` - Allows you to blacklist specific entity explosion sources, such as creeper, above the surface level defined by setting `explosion-surface-block-level`. To blacklist ALL entities, use the id `any`.
 * `explosion-surface-block-level` - Allows you to configure the block surface level (Y coord) that GriefDefender will use to determine if an explosion is above the surface. (Default: 63)  
-Note: You can configure these settings per world by copying the setting to your respective `world.conf` file.
+Note: You can configure these settings per world by copying the setting to your respective `world.yml` file.
 
 
 ## How to override default min/max world height
@@ -423,16 +423,16 @@ Note: You can configure these settings per world by copying the setting to your 
 To override a world named `valhalla` with environment type `overworld`, the following config changes need to be made
 
 #### Bukkit
-* Locate world.conf in `./plugins/GriefDefender/worlds/normal/valhalla/world.conf`
-* Copy claim create settings from [`global.conf`](/wiki/advanced/Global-Config.html) to new world.conf
-* Open `./plugins/GriefDefender/options.conf`
+* Locate world.yml in `./plugins/GriefDefender/worlds/normal/valhalla/world.yml`
+* Copy claim create settings from [`global.yml`](/wiki/advanced/Global-Config.html) to new world.yml
+* Open `./plugins/GriefDefender/options.yml`
 * Under `default-user-options` set `min-level` to match override setting
 * Under `default-user-options` set `max-level` to match override setting
 
 #### Sponge
-* Locate world.conf in `./config/GriefDefender/worlds/overworld/valhalla/world.conf`
-* Copy claim create settings from [`global.conf`](/wiki/advanced/Global-Config.html) to new world.conf
-* Open `./config/GriefDefender/options.conf`
+* Locate world.yml in `./config/GriefDefender/worlds/overworld/valhalla/world.yml`
+* Copy claim create settings from [`global.yml`](/wiki/advanced/Global-Config.html) to new world.yml
+* Open `./config/GriefDefender/options.yml`
 * Under `default-user-options` set `min-level` to match override setting
 * Under `default-user-options` set `max-level` to match override setting
 

@@ -10,19 +10,21 @@ icon: config
 GriefDefender includes various configuration files for admins. The current available config files are the following  
 
 ```
-bans.conf
-blacklist.conf
-claimnames.conf
-flags.conf
-global.conf
-gui.conf
-options.conf
-storage.conf
+bans.yml
+blacklist.yml
+claimnames.yml
+config_format.txt
+flags.yml
+global.yml
+gui.yml
+options.yml
+storage.yml
+tag.yml
 ```
 
 ### Bans  
 
-The `bans.conf` file stores all global and world ban data performed by the ban command `/claimban`.  
+The `bans.yml` file stores all global and world ban data performed by the ban command `/claimban`.  
 
 | Variable | Description | Default Value |
 | --------- | ----------- | ----------- |
@@ -78,7 +80,7 @@ An example of how to block items from being checked by GD is as shown
 
 See [Claim Identifiers](/wiki/basic/Claim-Management.html#claim-identifiers)  
 
-The `claimnames.conf` file is used to store a mapping of player UUID to friendly claim names.  
+The `claimnames.yml` file is used to store a mapping of player UUID to friendly claim names.  
 
 ```
 e035f345-1234-5678-b341-cb1c91fe2123 {
@@ -101,7 +103,7 @@ There are 2 built-in UUID's that GriefDefender uses for friendly identifiers.
 
 ### Flags  
 
-The `flags.conf` file is not to be confused with flag definitions and/or presets. This file controls all core flags that GD uses in events.  
+The `flags.yml` file is not to be confused with flag definitions and/or presets. This file controls all core flags that GD uses in events.  
 
 #### Default claim flag section  
 
@@ -169,7 +171,7 @@ See [Global Config](/wiki/advanced/Global-Config.html)
 
 ### Gui  
 
-The [`gui.conf`](/wiki/basic/GUI.html) file is responsible for all settings related to [Chat](/wiki/basic/GUI.html#Chat) and [Inventory](/wiki/basic/GUI.html#Inventory) GUI.  
+The [`gui.yml`](/wiki/basic/GUI.html) file is responsible for all settings related to [Chat](/wiki/basic/GUI.html#Chat) and [Inventory](/wiki/basic/GUI.html#Inventory) GUI.  
 
 #### Chat section  
 
@@ -213,7 +215,7 @@ The following icon flags are available to use with an icon
 
 ### Options  
 
-The [`options.conf`](/wiki/basic/Options.html) file controls all default claim and player settings.  
+The [`options.yml`](/wiki/basic/Options.html) file controls all default claim and player settings.  
 
 
 #### Default Options   
@@ -284,5 +286,5 @@ vanilla-fallback-values {
 
 ### Storage  
 
-The [`storage.conf`](/wiki/basic/Storage.html) file controls GriefDefender storage settings.  
+The [`storage.yml`](/wiki/basic/Storage.html) file controls GriefDefender storage settings.  
 

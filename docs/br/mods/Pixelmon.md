@@ -18,19 +18,19 @@ Nota: Este comando deve ser executado por um administrador com permissão `grief
 
 ## Instala bandeiras definidas para o Pixelmon
 
-* [presets/pixelmon.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/presets/pixelmon.conf)
+* [presets/pixelmon.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/presets/pixelmon.conf)
 
-  Clique com o botão direito na página e selecione "Salvar como...", salve como `pixelmon.conf` em `config/griefdefender/presets`
+  Clique com o botão direito na página e selecione "Salvar como...", salve como `pixelmon.yml` em `config/griefdefender/presets`
 
-* [lang/presets/pixelmon/en_US.conf](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.conf) ([zh_CN](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/zh_CN.conf)/[pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/pt_BR.conf))
+* [lang/presets/pixelmon/en_US.yml](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/en_US.conf) ([zh_CN](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/zh_CN.conf)/[pt_BR](https://raw.githubusercontent.com/bloodmc/GriefDefenderDefinitions/master/1.12.2/lang/presets/pixelmon/pt_BR.conf))
 
-  Clique com o botão direito na página e selecione "Salvar como...", salve como `en_US.conf` em config/griefdefender/lang/presets/pixelmon
+  Clique com o botão direito na página e selecione "Salvar como...", salve como `en_US.yml` em config/griefdefender/lang/presets/pixelmon
 
 * Depois de fazer os dois, execute /gdreload
 
 * Execute o comando `/cf` e você deverá ver uma nova predefinição chamada `pixelmon`. Clique nele para carregar e configurar por reivindicação conforme o necessário.  
 
-Nota: Se você não ver a predefinição na GUI, verifique se os arquivos acima terminam `.conf`.  
+Nota: Se você não ver a predefinição na GUI, verifique se os arquivos acima terminam `.yml`.  
 
 Veja [Interface de definições de bandeira](/br/wiki/basic/Flag-Definitions-GUI.html) para obter mais informações sobre como trabalhar com predefinições e configurações padrão para bandeiras.
 

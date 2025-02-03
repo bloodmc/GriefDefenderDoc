@@ -12,7 +12,7 @@ icon: Options
 简言之，选项将极大提升客制化体验，它不局限于 是(true) 和 否(false)，可以是数字，也可以是字符，常被用于设置领地过期时间，税率，玩家持有领地上限等功能。
 
 ## Configuration  
-选项的默认值都存储在 `options.conf`  
+选项的默认值都存储在 `options.yml`  
 请查看 [*选项配置*](未实现)  
 
 ## 指令
@@ -39,7 +39,7 @@ icon: Options
 * 在该领地内禁用饱食度。
 `/claimoption player-deny-hunger true`  
 
-Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.conf`.
+Note: If you get a message stating the option is not enabled, enable it under `option-control` in `options.yml`.
 Note: Using `/claimoption` with no arguments opens up the GUI and displays all claim options for claim you are standing in including default options that affect all claims.  
 
 ## LuckPerms
@@ -106,14 +106,14 @@ Option                                           | Default Value | Description |
 -------------------------------------------------|---------------|--------------|
 ```griefdefender.abandon-return-ratio```       |   1.0         | The portion of claim blocks returned to a player when a claim is abandoned. Note: When using Economy Mode, this is the ratio of funds returned when abandoning a claim.
 ```griefdefender.accrued-blocks```       |   0        | The total number of claim blocks accrued by a player. <br />Note: This does not account for bonus blocks, and has no use/effect being set on a group.
-```griefdefender.blocks-accrued-per-hour```    |   120         | Blocks earned per hour. By default, each 'active' player should receive 6 blocks every 5 min.  Note: The player must have moved at least 3 blocks since last delivery. If using 'wilderness-cuboids', this value is 30720 by default with 1536 blocks every 5 min to players. Minimum setting is 12 due to 5 minute check interval, setting it lower will result in no blocks accruing.
+```griefdefender.blocks-accrued-per-hour```    |   120         | Blocks earned per hour. By default, each 'active' player should receive 6 blocks every 5 min.  Note: The player must have moved at least 3 blocks since last delivery. Minimum setting is 12 due to 5 minute check interval, setting it lower will result in no blocks accruing.
 ```griefdefender.bonus-blocks```       |   0        | The total number of bonus claim blocks given to a player, and has no use/effect being set on a group.
 ```griefdefender.chest-expiration```     |   7           | Number of days of inactivity before an automatic chest claim will be deleted.
 ```griefdefender.economy-block-cost``` | 0.0 | The economy amount to charge per block of a claim. <br />Note: If set to 0 or less, the buy block feature will be disabled.
 ```griefdefender.economy-block-sell-return``` | 0.0 | The return value for selling claim blocks. <br />Note: If set to 0 or less, the sell block feature will be disabled.
 ```griefdefender.expiration```    |   14          | Number of days of inactivity before a claim will be deleted.<br />Note: If set to 0, it will disable claim expiration for user/group.
-```griefdefender.initial-blocks```       |   120         | The number of bonus starter claim blocks a player has initially. <br />Note: This number is not counted as part of accrued blocks. <br />Note: If using 'wilderness-cuboids', this value is 25600 by default.
-```griefdefender.max-accrued-blocks```   |   80000       | The limit on accrued blocks (over time). doesn't limit purchased or admin-gifted blocks. <br />Note: If using 'wilderness-cuboids', this value is 20480000 by default. <br />Note: This setting will affect `/scb` command.
+```griefdefender.initial-blocks```       |   120         | The number of bonus starter claim blocks a player has initially. <br />Note: This number is not counted as part of accrued blocks.
+```griefdefender.max-accrued-blocks```   |   80000       | The limit on accrued blocks (over time). doesn't limit purchased or admin-gifted blocks. <br />Note: This setting will affect `/scb` command.
 ```griefdefender.max-bonus-blocks```   |   -1      | The maximum amount of bonus blocks a player can obtain. <br />Note: Set to -1 or less to make unlimited. <br />Note: This setting will affect commands `/acb` and `/buyclaimblocks`, use with caution.
 ```griefdefender.radius-inspect``` | 100 | The radius in blocks used to search for nearby claims while inspecting.
 

@@ -10,7 +10,7 @@ GDHooks é um addon oficial do GriefDefender projetado para estender seu suporte
 [**Código-Fonte**](https://github.com/bloodmc/GDHooks)  
 [**Permissões**](/br/hooks/gdhooks-perms)  
 
-Você também pode verificar em [Global.conf](/br/wiki/advanced/Global-Config.html) nas configuração a parte de [providers](/br/wiki/advanced/Global-Config.html#provider)
+Você também pode verificar em [Global.yml](/br/wiki/advanced/Global-Config.html) nas configuração a parte de [providers](/br/wiki/advanced/Global-Config.html#provider)
 
 #### Suportado por GDHooks
 
@@ -36,7 +36,7 @@ Você também pode verificar em [Global.conf](/br/wiki/advanced/Global-Config.ht
 
 ## Clans
 
-* [Ultimate Clans]: [ [Grátis](https://polymart.org/resource/2529) | [Pago](https://polymart.org/resource/1162) ]
+* [Ultimate Clans]: [ [Pago](https://polymart.org/resource/1162) ]
 * [SimpleClans]: [ [Spigot](https://www.spigotmc.org/resources/71242/) | [Github](https://github.com/RoinujNosde/SimpleClans) ]
 * [Guilds]: [ [Spigot](https://www.spigotmc.org/resources/66176/) ]
 * [Towny]: [ [Spigot](https://www.spigotmc.org/resources/72694/) | [Github](https://github.com/TownyAdvanced/Towny) ]
@@ -52,10 +52,9 @@ Você também pode verificar em [Global.conf](/br/wiki/advanced/Global-Config.ht
 * [ExcellentCrates]: [ [Spigot](https://www.spigotmc.org/resources/48732/) | [Github](https://github.com/nulli0n/ExcellentCrates-spigot) ]
 * [Chat Manager]: [ [Spigot](https://www.spigotmc.org/resources/52245/) | [Github](https://github.com/Crazy-Crew/ChatManager) ]
 * [ChocoFly]: [ [Spigot](https://www.spigotmc.org/resources/95180/)]
-* [CustomItems]: [ [Pago](https://www.spigotmc.org/resources/36128/) ]
 * [FancyWayStones]: [ [Spigot](https://www.spigotmc.org/resources/94376/) ]
 * [OreRegenerator]: [ [Spigot](https://www.spigotmc.org/resources/71743/) ]
-* [Nova]: [ [Spigot](https://www.spigotmc.org/resources/93648/) | [Github](https://github.com/xenondevs/Nova) ]
+* [Nova]: [ [Github](https://github.com/xenondevs/Nova) ]
 * [Slimefun]: [ [Github](https://github.com/Slimefun/Slimefun4/releases) ]
 * [VoteParty]: [ [Spigot](https://www.spigotmc.org/resources/987/) ]
 * [EliteMobs]: [ [Spigot](https://www.spigotmc.org/resources/40090/) | [Github](https://github.com/MagmaGuy/EliteMobs) ]
@@ -72,6 +71,7 @@ Nota: Qualquer bloco ou item criado por ItemsAdder deve aparecer como `itemsadde
 
 ## Teletransportes
 * [BetterRTP]: [ [Spigot](https://www.spigotmc.org/resources/36081/) | [Github](https://github.com/SuperRonanCraft/BetterRTP) ]
+* [Elevator]: [ [Spigot](https://www.spigotmc.org/resources/elevator.67723/) ]
 * [HyperDrive]: [ [Spigot](https://www.spigotmc.org/resources/17184/) | [Github](https://github.com/XZot1K/HyperDrive) ]
 * [WildernessTp]: [ [Spigot](https://www.spigotmc.org/resources/22853/) | [Github](https://github.com/AcmeProject/WildernessTp) ]
 
@@ -87,7 +87,6 @@ Nota: Qualquer bloco ou item criado por ItemsAdder deve aparecer como `itemsadde
 
 
 ## Variados
-* [Anti Block Climbing Glitch]: [ [Spigot](https://www.spigotmc.org/resources/108935/) | [Github](https://github.com/fernet1911/AntiBlockClimbingGlitch) ]
 * [RoyaleEconomy]: [ [Polymart](https://polymart.org/resource/royaleeconomy-1-8-1-17.113) ]
 * [BanFromClaim]: [ [Spigot](https://www.spigotmc.org/resources/70897/) | [Github](https://github.com/Baktus79/BanFromClaim) ] - Bane/Chuta jogadores da reivindicação.
 * [CombatLogX]: [ [Spigot](https://www.spigotmc.org/resources/31689/) | [Github](https://github.com/SirBlobman/CombatLogX/blob/main/expansion/compatibility/GriefDefender/src/main/java/combatlogx/expansion/compatibility/region/grief/defender/GriefDefenderRegionHandler.java) ] - Respeite as definições de bandeira do GriefDefender
