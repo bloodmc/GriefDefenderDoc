@@ -22,7 +22,7 @@ export default defineUserConfig({
       description: "为 GriefDefender 准备的文档",
     },
     "/br/": {
-      lang: "pt-BR",
+      lang: "br",
       title: "GriefDefender",
       description: "Documentação do plugin GriefDefender",
     },

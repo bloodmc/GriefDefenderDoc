@@ -66,28 +66,19 @@ export default hopeTheme({
   plugins: {
     blog: false,
     mdEnhance: {
-	  tabs: true,
-      revealJs: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
-      },
+	  tabs: true
     },
-    searchPro: {
+    slimsearch: {
       customFields: [
-        {
-          getter: (page) => page.frontmatter.category,
-          formatter: {
-            "/": "Category: $content",
-            "/zh/": "分类：$content",
+          {
+            name: 'updateTime',
+            getter: (page) => page.data.git?.updateTime.toLocaleString(),
+            formatter: {
+              '/': 'Update time: $content',
+              '/zh/': '更新时间：$content'
+            },
           },
-        },
-        {
-          getter: (page) => page.frontmatter.tag,
-          formatter: {
-            "/": "Tag: $content",
-            "/zh/": "标签：$content",
-          },
-        },
       ],
-    },
+    }
   },
 });

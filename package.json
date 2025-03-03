@@ -10,12 +10,14 @@
     "serve": "vite serve ./dist"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.80",
     "reveal.js": "^5.1.0",
-    "vue": "^3.4.33",
-    "vuepress": "2.0.0-rc.14",
-    "vuepress-plugin-remove-html-extension": "^1.11.0",
-    "vuepress-plugin-search-pro": "2.0.0-rc.52",
-    "vuepress-theme-hope": "2.0.0-rc.52"
-  }
+    "sass-embedded": "^1.85.1",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.20",
+    "vuepress-plugin-remove-html-extension": "^1.17.0",
+    "vuepress-theme-hope": "2.0.0-rc.73"
+  },
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
