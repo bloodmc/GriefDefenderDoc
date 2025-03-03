@@ -10,7 +10,7 @@
     "serve": "vite serve ./dist"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
     "reveal.js": "^5.1.0",
     "vue": "^3.4.33",
     "vuepress": "2.0.0-rc.14",
