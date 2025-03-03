@@ -15,7 +15,7 @@
     "vue": "^3.4.33",
     "vuepress": "2.0.0-rc.14",
     "vuepress-plugin-remove-html-extension": "^1.11.0",
-    "vuepress-plugin-search-pro": "2.0.0-rc.52",
+    "vuepress-plugin-search-pro": "2.0.0-rc.59",
     "vuepress-theme-hope": "2.0.0-rc.52"
   }
 }
