@@ -68,17 +68,6 @@ export default hopeTheme({
     mdEnhance: {
 	  tabs: true
     },
-    slimsearch: {
-      customFields: [
-          {
-            name: 'updateTime',
-            getter: (page) => page.data.git?.updateTime.toLocaleString(),
-            formatter: {
-              '/': 'Update time: $content',
-              '/zh/': '更新时间：$content'
-            },
-          },
-      ],
-    }
+    slimsearch: true
   },
 });
