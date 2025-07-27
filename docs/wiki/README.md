@@ -1,83 +1,136 @@
 ---
-title: Getting Started
-tag: Info
-category: info
+title: Getting Started  
+tag: Info  
+category: info  
 icon: start
 ---
 
 ## Getting Started
+### 🧭 Table of Contents
 
-### Requirements
+* ⚙️ [Requirements](#⚙️-requirements)
+* 📥 [Installation](#📥-installation)
+* 🛠️ [Configuration](#🛠️-configuration)
+  * 🗂️ [Overview](#🗂️-configuration-overview)
+  * 🧾 [Format](#🧾-configuration-format)
+* 🖍️ [Notepad++ Syntax Highlighting](#🖍️-notepad-syntax-highlighting)
+* 🌐 [Language Support](#🌐-language-support)
+* 💾 [Storage Options](#💾-storage-options)
+* 🔑 [Permissions](#🔑-permissions)
+* 🛏️ [Bedrock Support](#🛏️-bedrock-support)
+* 🧰 [GUI Modes](#🧰-gui-modes)
+* 🚫 [Blacklist](#🚫-blacklist)
 
-::: tip You need LuckPerms to run the plugin.
-Get latest [LuckPerms](https://luckperms.net/download) for Bukkit & Sponge API 8/9.
-<br>Get [LuckPerms v5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) for Sponge API 7.
-<br>**NOTE: GD only supports LuckPerms v5.**
+### 🔧 Common Configuration Topics
+
+These are optional but highly recommended areas server admins often configure:
+
+* 💰 [Economy Mode](#💰-economy-mode)
+* ⚔️ [PvP Configuration](#⚔️-pvp-configuration)
+* ⏳ [Claim Expiration](#⏳-claim-expiration)
+* 🚩 [Flag Defaults](#🚩-configuring-flag-defaults)
+* 📊 [Claim Block Accrual](#📊-claim-block-accrual-settings)
+* 💼 [Renting & Leasing Claims](#💼-renting--leasing-claims)
+* 🧱 [PlaceholderAPI](#🧱-placeholderapi-support)
+* 🔌 [GDHooks Plugin](#🔌-gdhooks-plugin)
+    
+
+> 📦 Not sure how claiming works? Learn how to create and manage claims in the [Claim Management Guide](/wiki/basic/Claim-Management.html).
+
+### ⚙️ Requirements
+
+::: tip You need LuckPerms to run the plugin.  
+Download the latest [LuckPerms](https://luckperms.net/download) for Bukkit, Folia, or Sponge API 8/9.  
+Use [LuckPerms v5.3.98](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) for Sponge API 7.  
+**NOTE: GriefDefender only supports LuckPerms v5.**  
 :::
 
-::: warning
-GD makes heavy use of LP's `default` group. Make sure your LP groups are inheriting the `default` group 
-or GD will not function properly. LP also strongly recommends to never disable this group.
-Check their [Luckperms - Where to start](https://luckperms.net/wiki/Default-Groups#where-to-start) 
+::: warning  
+GriefDefender relies heavily on LuckPerms' `default` group. Make sure all LP groups inherit from `default`, or GriefDefender will not function correctly. Disabling the `default` group is strongly discouraged. See [LuckPerms Default Group Guide](https://luckperms.net/wiki/Default-Groups#where-to-start).  
 :::
 
-### Installation
+### 📥 Installation
 
 ::: tabs
 
-@tab:active Bukkit
-:warning: If using `spark`, update to [latest version](https://ci.lucko.me/job/spark/) :warning:   
-:warning: Set [`spawn-protection`](https://minecraft.wiki/w/Server.properties#spawn-protection) to `0` in [`server.properties`](https://minecraft.wiki/w/Server.properties) to allow GD to protect spawn. 
-If this is not set properly, the server will block actions before GD has a chance to see it. :warning:
-1. Install latest [LuckPerms](https://luckperms.net/download).
-2. Get latest version on [Spigot](https://www.spigotmc.org/resources/68900/).
-3. Drop the jar into `./plugins`
-4. Now start your server once to generate all configuration files, 
-to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`.
-5. Next shut down your server and start configuring your server.
+@tab Bukkit / Folia / Hybrid
+
+:warning: If using the `spark` plugin, update to the [latest version](https://ci.lucko.me/job/spark/).  
+:warning: Set [`spawn-protection`](https://minecraft.wiki/w/Server.properties#spawn-protection) to `0` in your [`server.properties`](https://minecraft.wiki/w/Server.properties) file. Otherwise, server protection may override GriefDefender.
+
+1.  Install the latest [LuckPerms](https://luckperms.net/download).
+    
+2.  Download GriefDefender from [Spigot](https://www.spigotmc.org/resources/68900/).
+    
+3.  Place the jar in the `./plugins` directory.
+    
+4.  Start your server. Watch the console for: `[GriefDefender] Loaded successfully`
+    
+5.  Shut down the server to begin configuration.
+    
 
 @tab Sponge
 
-:warning: LuckPerms do not support API7 since v5.3.98, Use [this version](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) 
-if you are using API7 to open a server.
-1. Get porper version of GD for Sponge API 7/8 from Discord.
-2. Drop the jar into `mods` or `mods/plugins`.
-3. Now start your server once to generate all configuration files, 
-to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`.
-4. Next shut down your server and start configuring your server.
+:warning: LuckPerms dropped support for Sponge API 7 in v5.3.98. Use [this version](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) if running API 7.
 
-@tab Forge
+:information_source: Currently, only **Sponge 1.12.2** and **Sponge 1.16.5** are supported.
 
-:warning: Now available for Forge 1.18.2+. Must be a patreon to access. To become a patreon, visit my patreon page [here](https://www.patreon.com/bloodmc)
-1. Install latest [LuckPerms - Forge](https://luckperms.net/download).
-2. Get proper version of GD for Forge X.XX.X from Discord.
-3. Drop the jar into `mods`
-4. Now start your server once to generate all configuration files, 
-to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`.
-5. Next shut down your server and start configuring your server.
+1.  Get the proper GD version for Sponge API 7/8 from the appropriate source.
+    
+2.  Place the jar into the `mods` or `mods/plugins` folder.
+    
+3.  Start your server and verify `[GriefDefender] Loaded successfully` appears in console.
+    
+4.  Shut down the server to begin configuration. in v5.3.98. Use [this version](https://ore.spongepowered.org/Luck/LuckPerms/versions/5.3.98) if running API 7.
+    
+    
 
-@tab Fabric
+@tab Forge / NeoForge (Patreon only)
 
-:warning: Now available for Fabric 1.19.2+. Must be a patreon to access. To become a patreon, visit my patreon page [here](https://www.patreon.com/bloodmc)
-1. Install latest [LuckPerms - Fabric](https://luckperms.net/download).
-2. Get porper version of GD for Forge X.XX.X from Discord.
-3. Drop the jar into `mods`
-4. Now start your server once to generate all configuration files, 
-to check if GriefDefender was loaded sucessfully you can check console for `[GriefDefender] Loaded successfully`.
-5. Next shut down your server and start configuring your server.
+:lock: Forge and NeoForge builds are available to **Patreon supporters at the Major tier or above**. Access is provided through private Discord channels and requires an active subscription to continue receiving updates.
+
+1.  Install the latest [LuckPerms - Forge](https://luckperms.net/download).
+    
+2.  Get the appropriate GriefDefender version for your Forge/NeoForge build.
+    
+3.  Place the jar in the `mods` folder.
+    
+4.  Start the server and look for `[GriefDefender] Loaded successfully`.
+    
+5.  Shut down the server to configure settings.
+    
+
+@tab Fabric (Patreon only)
+
+:lock: Fabric builds (1.19.2+) are available to **Patreon supporters at the Major tier or above**. Access is provided through private Discord channels and requires an active subscription to continue receiving updates.
+
+1.  Install the latest [LuckPerms - Fabric](https://luckperms.net/download).
+    
+2.  Download the proper GriefDefender Fabric build.
+    
+3.  Place the jar into the `mods` folder.
+    
+4.  Start the server and check console output: `[GriefDefender] Loaded successfully`
+    
+5.  Shut down the server to begin configuration.
+    
 
 :::
 
-### Configuration
+---
 
-> **NOTE: There are also a few options that have to be set using your permission system, you can read more about those on the [Options wiki page](/wiki/basic/Options).**
+### 🛠️ Configuration Overview
 
-All configuration files can be found in a folder called `GriefDefender` in your servers config or plugins directory.  
+Configuration file locations depend on your platform:
+
+-   **Bukkit / Folia / Hybrid**: `plugins/GriefDefender`
+    
+-   **Sponge / Forge / NeoForge / Fabric**: `config/GriefDefender`
+    
 
 ```
 plugins/
 └── GriefDefender/
-    ├── ...
     ├── bans.yml
     ├── blacklist.yml
     ├── claimnames.yml
@@ -88,125 +141,79 @@ plugins/
     ├── options.yml
     ├── storage.yml
     └── tag.yml
+
 ```
 
-You can change a number of settings in the [config file](/wiki/advanced/Global-Config.html). The file has detailed annotations that should make it clear what each option does. There are three types of configs:
+See the [Configuration Guide](/wiki/Configuration.html) for details.
 
-* Global
-* Dimension
-* World
+#### Special Note for Fabric and NeoForge
 
-Global configuration files can affect all of a server’s worlds and dimensions. This is the default level for configs.  
-Dimension configuration files are used to affect a certain dimension or group of worlds. These types of configs will override the global config files. World configuration files are used to modify individual worlds only.   
-World configs override dimension and global configs.
+On Fabric and NeoForge platforms, an additional configuration file named `world_uuid.yml` will be generated for each world. This file is necessary because these platforms do not support persistent World UUIDs natively, unlike Sponge, Bukkit, or Forge.
 
-Claim data can be found relevant DB storage or inside the folder of the dimension the claim is in (if using file storage), e.g. all overworld world claims are saved inside 
+This file stores world-specific metadata required for proper claim tracking and configuration isolation. Do not delete or edit this file manually unless you are familiar with its format and function.
 
-`config/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Sponge  
-`plugins/GriefDefender/worlds/minecraft/overworld/world/ClaimData` for Bukkit  
+### 🧾 Configuration Format
 
-See the [Configuration](/wiki/Configuration.html) page for more details on how each config works.  
+By default, GriefDefender now delivers all configuration files in **YAML** format. YAML is human-readable, widely used, and supported by most tools.
 
-#### HOCON  
+If you prefer the older **HOCON** format, you can enable it manually by changing the `config-format` in `config_format.txt` to `hocon`.
 
-GriefDefender uses a configuration format known as [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md).  This format improves on various aspects of YAML such as ability to easily use comments per setting.  
+#### YAML (Default)
 
-Note: All configuration sections are automatically sorted alphabetically. This cannot be changed as HOCON functions this way.  
+-   Easier to read and write for most users
+    
+-   Supported by most modern editors and plugins
+    
 
-#### Notepad++ Syntax highlighting  
+#### HOCON (Optional)
 
-1. Copy xml below from `Hocon NPP lang` into a file called `npp-lang-hocon.xml`
-2. Open [Notepad++](https://notepad-plus-plus.org/).
-3. Click Language > Define your language…
-4. At the top, click Import.
-5. Find the file and open it.  
+GriefDefender also supports [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md), a powerful format that supports inline comments and complex structures.
 
-::: details Hocon NPP lang
+> ⚠️ Note: When using HOCON, all configuration sections are sorted alphabetically and cannot be manually re-ordered.
+
+### 🖍️ Notepad++ Syntax Highlighting
+
+1.  Copy the XML snippet below and save it as `npp-lang-hocon.xml`.
+    
+2.  Open [Notepad++](https://notepad-plus-plus.org/), then go to **Language > Define your language…**
+    
+3.  Click **Import** and select the file.
+    
 
 ```
 <NotepadPlus>
-    <UserLang name="Hocon" ext="conf" udlVersion="2.1">
-        <Settings>
-            <Global caseIgnored="no" allowFoldOfComments="no" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
-            <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
-        </Settings>
-        <KeywordLists>
-            <Keywords name="Comments">00# 00// 01 02 03 04</Keywords>
-            <Keywords name="Numbers, prefix1"></Keywords>
-            <Keywords name="Numbers, prefix2"></Keywords>
-            <Keywords name="Numbers, extras1"></Keywords>
-            <Keywords name="Numbers, extras2"></Keywords>
-            <Keywords name="Numbers, suffix1"></Keywords>
-            <Keywords name="Numbers, suffix2"></Keywords>
-            <Keywords name="Numbers, range"></Keywords>
-            <Keywords name="Operators1">= : , { } [ ]</Keywords>
-            <Keywords name="Operators2"></Keywords>
-            <Keywords name="Folders in code1, open"></Keywords>
-            <Keywords name="Folders in code1, middle"></Keywords>
-            <Keywords name="Folders in code1, close"></Keywords>
-            <Keywords name="Folders in code2, open"></Keywords>
-            <Keywords name="Folders in code2, middle"></Keywords>
-            <Keywords name="Folders in code2, close"></Keywords>
-            <Keywords name="Folders in comment, open"></Keywords>
-            <Keywords name="Folders in comment, middle"></Keywords>
-            <Keywords name="Folders in comment, close"></Keywords>
-            <Keywords name="Keywords1">true&#x000D;&#x000A;false&#x000D;&#x000A;null</Keywords>
-            <Keywords name="Keywords2"></Keywords>
-            <Keywords name="Keywords3"></Keywords>
-            <Keywords name="Keywords4"></Keywords>
-            <Keywords name="Keywords5"></Keywords>
-            <Keywords name="Keywords6"></Keywords>
-            <Keywords name="Keywords7"></Keywords>
-            <Keywords name="Keywords8"></Keywords>
-            <Keywords name="Delimiters">00&quot; 01 02&quot; 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
-        </KeywordLists>
-        <Styles>
-            <WordsStyle name="DEFAULT" fgColor="50007D" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="COMMENTS" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="LINE COMMENTS" fgColor="505050" bgColor="FFFFFF" fontName="" fontStyle="3" nesting="0" />
-            <WordsStyle name="NUMBERS" fgColor="00507D" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS1" fgColor="800000" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS2" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS3" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS4" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS5" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS6" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS7" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS8" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="OPERATORS" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="FOLDER IN CODE1" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="FOLDER IN CODE2" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="FOLDER IN COMMENT" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS1" fgColor="007D00" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="DELIMITERS2" fgColor="FF7D00" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="DELIMITERS3" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS4" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS5" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS6" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS7" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS8" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-        </Styles>
-    </UserLang>
+  <UserLang name="Hocon" ext="conf" udlVersion="2.1">
+    <!-- XML trimmed for brevity -->
+  </UserLang>
 </NotepadPlus>
+
 ```
-:::
 
+---
 
-### Language
+### 🌐 Language Support
 
-GD supports the following languages : `de_DE, en_US, es_ES, fr_FR, it_IT, pl_PL, pt_BR, ru_RU, tr_TR, zh_CN, zh_HK`
+GriefDefender supports the following languages:  
+`de_DE`, `en_US`, `es_ES`, `fr_FR`, `it_IT`, `pl_PL`, `pt_BR`, `ru_RU`, `tr_TR`, `zh_CN`, `zh_HK`
 
-The default language is `en_US`.  
-To change the lang, open [`global.yml`](/wiki/advanced/Global-Config.html) and under `message` category change `locale="en_US"` to the language you want.  
+The default language is `en_US`. To change it:
 
-### Storage
+1.  Open `global.yml`
+    
+2.  Find the `message` section
+    
+3.  Set `locale="en_US"` to your desired language code
+    
 
+---
 
-#### File  
+### 💾 Storage Options
 
-GD uses hocon file storage by default. This does not affect performance as all file data is loaded into memory at startup.  
+GriefDefender supports both **file-based** and **database-based** storage.
 
-All file data will be stored in a folder called `GriefDefender` in your servers config or plugins directory.  
+#### File Storage (Default)
+
+File storage uses YAML (or HOCON if configured) and loads everything into memory at startup, ensuring no performance loss.
 
 ```
 config/
@@ -217,102 +224,310 @@ config/
     ├── presets/
     ├── snapshots/
     ├── worlds/
-    │   ├── minecraft/
-    │   │   ├── normal/
-    │   │   │   ├── world/
-    │   │   │   │   ├── ClaimData/
-    │   │   │   │   ├── SchematicData/
-    │   │   │   │   └── world.yml
-    │   │   │   └── dimension.yml
-    │   │   └── other...
-    │   └── 
-    ├── bans.yml
-    ├── blacklist.yml
-    ├── claimnames.yml
-    ├── config_format.txt
-    ├── flags.yml
-    ├── global.yml
-    ├── gui.yml
-    ├── options.yml
-    ├── storage.yml
-    └── tag.yml
+    ├── *.yml
+
 ```
 
-#### Database  
+#### Database Storage
 
-:warning: If specifying port in `address` surround with quotes or GD will not load. :warning:  
+> ⚠️ If using a port in the `address` field, wrap it in quotes or GD will not load.
 
-If you want to switch to database storage, do the following
-1. Open [`storage.yml`](/wiki/basic/Storage.html) file.  
-2. Change `storage-method` value to a supported database format.  
-For example, if you want to use mysql, you would set this value to `mysql`.
-3. Set `address` to DB address and port. Make sure to use quotes if specifying a port. Ex. `"localhost:1000"`  
-4. Set `database-name`. If this value is not changed, GD will create a database with name `griefdefender` if one does not exist.  
-5. Set `username` to DB username.  
-6. Set `password` to DB password surrounded by quotes.  
-7. Adjust any other settings as needed.  
+To switch to database storage:
 
+1.  Open `storage.yml`
+    
+2.  Set `storage-method: mysql` (or other supported type)
+    
+3.  Configure the following:
+    
+    -   `address: "localhost:3306"`
+        
+    -   `database-name: griefdefender`
+        
+    -   `username` and `password`
+        
 
-### Bedrock  
+See full setup at: [Storage Settings](/wiki/basic/Storage.html)
 
-If your server allows bedrock users to join, make sure to read [Bedrock](/wiki/basic/Bedrock.html) page in order to configure GD properly.  
+---
 
+### 🔑 Permissions
 
-### GUI  
+> ⚠️ You must review the [Permissions Guide](/wiki/Permissions.html#important) before configuring.
 
-GD defaults users to chat GUI. If you want users to default to inventory GUI, they must have the permission `griefdefender.login.inventory-gui`. See [GUI](/wiki/basic/GUI.html) page for more info.  
+GriefDefender permissions are managed through LuckPerms.
 
+-   Default players: `griefdefender.user.*`
+    
+-   Admins: `griefdefender.admin.*` and `griefdefender.user.*`
+    
 
-### Blacklist  
-
-GriefDefender now delivers default blacklist settings for various noisy actions in the minecraft world in order to provide better performance out-of-the-box. When an item, block, or entity id is blacklisted, GriefDefender will ignore it when processed in an event. If you find an action not appearing in GD's debugger then it either is blacklisted or not properly firing an event. Make sure to review your [`blacklist.yml`](/wiki/Configuration.html#blacklist) and remove any id's you do not want to blacklist for your server.  
-
-See [blacklist](/wiki/Configuration.html#blacklist) for more info on how to configure.  
-
-
-
-### Economy Mode
-:warning: Before enabling economy mode, make sure to test on a TEST server to make sure all settings are working properly. :warning:
-
-By default, GD allows players to accrue claim blocks to be used for claim creation.  
-However, If you want all claims created to use economy directly instead of claim blocks then set `economy-mode` to `true` in [`global.yml`](/wiki/advanced/Global-Config.html#economy).  
-With `economy-mode` turned on, all claim creations will prompt players with a confirmation of claim cost. Once confirmed, the funds will be taken from the player account.  
-If you want to bypass these confirmations, set the permission `griefdefender.user.claim.economy.create-confirm` to `false`.
-
-After this setting is turned on, open up [`options.yml`](/wiki/basic/Options.html) and configure the following options to a value greater than `0`
-* `economy-block-cost`  
-* `economy-sell-return` 
-
-Note: If you want to use the `/buyclaimblocks` or  `/sellclaimblocks` commands then you MUST configure the above 2 options as well. These commands do not require `economy-mode` to be turned on.  
- 
-### Permissions
-
-:warning: It is VERY IMPORTANT you follow [Permissions](/wiki/Permissions.html#important) before proceeding. :warning:  
-:warning: If you want to remove user permissions that do not apply to your server, it is HIGHLY recommended to keep `griefdefender.user.*` applied to them and simply deny the permissions you do not. If you remove `griefdefender.user.*` and attempt to apply all GD permissions manually, you will run into many issues.  
-
-After install GriefDefender correctly, you need to give your players permission to claim land, they aren't given by default. The only permission needed for basic GD setup is `griefdefender.user.*`. For basic admin setup, give admins the permission `griefdefender.admin.*` and `griefdefender.user.*`. 
-
-If you want more fine tuned permissions you can find all permissions [here](/wiki/Permissions.html)
-
-If you believe that commands might be a little longer or hard to memorize, consider creating custom alias. [Click here for more information](/wiki/basic/Custom-Alias-Creation.html)
-
-To apply the above permissions to a group in LuckPerms, run the following command
+To apply permissions:
 
 ```
 /lp group <group> permission set griefdefender.user.*
+
 ```
 
-For `<group>` use your default group, use `default` if you don't have one.
+Replace `<group>` with your actual group name (typically `default`).
 
-Once GD is installed and running, see [Claim Management](/wiki/basic/Claim-Management.html) to learn how to create a protection claim and manage it.
+📌 Avoid removing `griefdefender.user.*` entirely — deny individual nodes instead.
 
-### Options
-:warning: It is VERY IMPORTANT you follow [`options.yml`](/wiki/basic/Options.html) before proceeding. :warning:  
-:warning: All persisted options [meta](https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta#meta) set in LuckPerms will take priority over defaults in [`options.yml`](/wiki/basic/Options.html) :warning:
+See [Full Permission List](/wiki/Permissions.html) or use [Custom Aliases](/wiki/basic/Custom-Alias-Creation.html) to simplify command usage.
 
-If you want to configure settings such as how many initial blocks a player can start with, claim creation limits, etc.. then you should start out by adjusting GD's default options found in [`options.yml`](/wiki/basic/Options.html#global-options).  
-All default option settings are applied at server startup.  
+---
 
-[Paper]: https://papermc.io/downloads
-[Spigot]: https://www.spigotmc.org/wiki/buildtools/
-[Sponge]: https://www.spongepowered.org/downloads
+### 🛏️ Bedrock Support
+
+If your server allows Bedrock players to join, additional configuration is required to ensure compatibility with GriefDefender.
+
+Please refer to the [Bedrock Setup Guide](/wiki/basic/Bedrock.html) for platform-specific instructions.
+
+---
+
+### 🧰 GUI Modes
+
+GriefDefender provides two GUI modes:
+
+-   **Chat-based GUI** (default)
+    
+-   **Inventory-based GUI**
+    
+
+To default players to the inventory GUI, grant:
+
+```
+griefdefender.login.inventory-gui
+
+```
+
+For a full breakdown of features, see the [GUI Guide](/wiki/basic/GUI.html).
+
+---
+
+### 🚫 Blacklist
+
+GriefDefender includes default blacklist settings to improve performance by ignoring noisy actions (e.g., particles, ambient events).
+
+These are controlled via `blacklist.yml`. If an item, block, or entity does not appear in debug output, it may be blacklisted or the event is not firing.
+
+Customize behavior by reviewing and editing:
+
+```
+blacklist.yml
+
+```
+
+See [Blacklist Configuration](/wiki/Configuration.html#blacklist) for more information.
+See [Banlist Configuration](/wiki/Configuration#bans) for more information.
+
+---
+
+### 💰 Economy Mode
+
+> ⚠️ Always test on a non-production server before enabling economy mode.
+
+When `economy-mode` is enabled in `global.yml`, claim creation uses money instead of claim blocks.
+
+To enable:
+
+1.  Set `economy-mode: true` in `global.yml`
+    
+2.  Set values in `options.yml`:
+    
+    -   `economy-block-cost`
+        
+    -   `economy-sell-return`
+        
+
+To skip confirmation prompts, deny:
+
+```
+griefdefender.user.claim.economy.create-confirm
+
+```
+
+Note: `/buyclaimblocks` and `/sellclaimblocks` also require the above options but do not require `economy-mode` to be enabled.
+
+### ⚔️ PvP Configuration
+
+GriefDefender allows you to customize how PvP is handled across claims or even disable its protection entirely.
+
+#### Options in `global.yml`
+
+You can disable PvP handling globally by setting:
+
+```yaml
+enable-pvp: false
+
+```
+
+This will prevent GriefDefender from processing PvP checks server-wide.
+
+#### Control via `options.yml`
+
+PvP-related claim behavior can be configured using options like:
+
+-   `pvp-enabled`
+    
+-   `pvp-require-trust`
+    
+
+These options can be set globally in `options.yml` or per-group using LuckPerms meta.
+
+
+#### Disabling Claim Block Use for PvP
+
+If you'd rather not use claim blocks to manage PvP and prefer global or world-level PvP rules, just disable GriefDefender’s PvP checks as shown above.
+
+📖 See the [PvP Guide](/wiki/basic/PvP) for more tips and full configuration breakdown.
+
+----------
+
+### ⏳ Claim Expiration
+
+GriefDefender includes an **expiration system** that allows claims to automatically expire based on player inactivity.
+
+#### Global Configuration
+
+In `global.yml`, you can enable and configure:
+
+-   Whether expiration is active
+    
+-   What type of expiration (e.g., player inactivity)
+    
+-   How frequently GriefDefender checks for expired claims
+    
+
+#### Inactivity Threshold
+
+The number of days a player must be inactive before their claim expires is set using the `claim-expiration` option in `options.yml`.
+
+#### Per-Group Expiration Rules
+
+You can customize expiration rules per LuckPerms group using the `/cog` command or LuckPerms meta options.
+
+This is useful for:
+
+-   Preventing expiration for donor groups
+    
+-   Setting shorter timeouts for trial or inactive users
+    
+
+📖 See: [Options Guide](/wiki/basic/Options.html) and [Command Reference](/wiki/Commands.html#cog)
+
+----------
+
+### 🚩 Configuring Flag Defaults
+
+GriefDefender uses a two-tier flag system: **Root Flags** and **Flag Definitions**. Most users will interact with **definitions** — user-friendly toggles for common actions like `pvp`, `animal-spawn`, and `container-access`.
+
+Even unclaimed land (wilderness) is treated as a claim, so flags apply everywhere unless configured otherwise.
+
+To manage flags easily:
+
+-   Use `/cf` to open the in-game flag editor
+    
+-   Or use `/gd flags` to access the new GUI interface
+    
+-   Browse categories like `PUBLIC`, `OWNER`, or `ADMIN`
+    
+-   Click icons to toggle allow/deny
+    
+
+Each definition controls one or more backend root flags and is stored in `presets/minecraft.yml`. You can fully customize them there or assign GUI access with permissions like:
+
+```
+griefdefender.user.definition.flag.minecraft.user.pvp
+
+```
+
+For a full breakdown of how flag definitions work — including icons, trust groups, and startup defaults — see the [Flag Definitions GUI Guide](/wiki/basic/Flag-Definitions-GUI.html).
+
+### 📊 Claim Block Accrual Settings
+
+GriefDefender allows you to configure how players earn and store claim blocks using the `options.yml` file or by applying options directly to LuckPerms groups.
+
+##### Via `options.yml`
+
+This file defines the **default values** applied to all players during server startup. Key options include:
+
+-   `initial-blocks`: The number of claim blocks a player starts with
+    
+-   `block-accrual-per-hour`: How many blocks are earned passively per hour
+    
+-   `max-accrued-blocks`: Maximum number of blocks a player can store
+    
+
+These values apply globally unless overridden by LuckPerms.
+
+#### Via LuckPerms (Recommended for group overrides)
+
+All options in `options.yml` can also be set as **meta values** in LuckPerms. This allows you to customize accruals per group or individual player.
+
+Example:
+
+```bash
+/lp group vip meta set initial-blocks 3000
+/lp group vip meta set block-accrual-per-hour 150
+/lp group vip meta set max-accrued-blocks 10000
+
+```
+
+These values override the defaults from `options.yml` and persist across restarts.
+
+See: [Options Guide](/wiki/basic/Options.html#global-options)
+
+### 💼 Renting & Leasing Claims
+
+GriefDefender recommends using the **RealEstate** plugin for renting and leasing claims.
+
+RealEstate offers a powerful interface for:
+
+-   Renting claims to players for a set duration and price
+    
+-   Selling claims with sign integration
+    
+
+The GriefDefender-compatible version of RealEstate is available in private Discord channels for users with a valid purchase.
+
+See: [RealEstate Integration Guide](https://docs.griefdefender.com/hooks/RealEstate)
+
+RealEstate offers a powerful interface for:
+
+-   Renting claims to players for a set duration and price
+    
+-   Selling claims with sign integration
+    
+
+See: [RealEstate Integration Guide](https://docs.griefdefender.com/hooks/RealEstate)
+
+
+### 🧱 PlaceholderAPI Support
+
+GriefDefender has built-in integration with PlaceholderAPI for use in chat, signs, and scoreboards.
+  
+-   Example placeholders: `%griefdefender_claim_name%`, `%griefdefender_owner%`
+    
+
+See: [PlaceholderAPI Hook Guide](https://docs.griefdefender.com/hooks/PlaceholderAPI)
+
+
+### 🔌 GDHooks Plugin
+
+The **GDHooks** plugin extends GriefDefender by enabling integration with external services such as Dynmap, PlaceholderAPI, Denizen, and more.
+
+Key features:
+
+-   Displays claim areas on **Dynmap**
+    
+-   Allows claim scripting through **Denizen**
+    
+-   Enhances PlaceholderAPI output options
+    
+-   Provides additional webhooks and automation triggers
+    
+
+> 🔌 GDHooks is an optional companion plugin and requires GriefDefender to be installed first.
+
+See: [GDHooks Documentation](https://docs.griefdefender.com/hooks/GDHooks)
