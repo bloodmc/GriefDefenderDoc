@@ -1,118 +1,835 @@
 ---
-title: Flag Definitions GUI
+title: "Flag System: Root Flags, Definitions and GUI"
 tag: flags
 category: claim
 icon: screen
 ---
 
-## Config
 
-The flag definition system provides both users and admins the ability to manage their claim flags in a [chat](/wiki/basic/GUI.html#chat) or [inventory](/wiki/basic/GUI.html#inventory) GUI.  
-GriefDefender delivers a bundle of flag definitions by default to provide the best compatibility across servers.  
-The delivered vanilla flag definition data can be found in the following location
+# Flag System: Root Flags, Definitions and GUI
 
-Fabric, Forge, and Sponge preset vanilla config is located in  
+**Tag**: `flags`
+**Category**: `claim`
+**Icon**: `screen`
 
-`./config/GriefDefender/presets/minecraft.yml`  
+---
 
-Bukkit and Hybrid preset vanilla config is located in  
+## 📌 Table of Contents
 
-`./plugins/GriefDefender/presets/minecraft.yml`  
+* [📖 Overview](#📖-overview)
+* [🛠️ Configuration Paths](#🛠️-configuration-paths)
+* [🚀New Users Start Here](#🚀-new-users-start-here)
+  * [🧩How Flags and Definitions Work](#🧩-how-flags-and-definitions-work) 
+* [🚩 Flags Overview](#🚩-flags-overview)
+  * [⚙️ Root Flags](#⚙️-root-flags)
+  * [🎛️ Flag Definitions](#🎛️-flag-definitions)
+    * [🧭 Contexts](#🧭-contexts)
+    * [👥 Default Groups](#👥-default-groups)
+    * [✅ Default Value](#✅-default-value)
+    * [🟢 Enabled](#🟢-enabled)
+    * [🧱 Icon](#🧱-icon)
+    * [👑 Owner Mode](#👑-owner-mode)
+    * [🧩 Permissions](#🧩-permissions)
+* [🖥️ GUI Overview](#🖥️-gui-overview)
+* [🔐 GUI Permissions](#🔐-gui-permissions)
+* [🧱 GUI Structure & Behavior](#🧱-gui-structure--behavior)
+  * [💬 Chat GUI](#💬-chat-gui)
+  * [🎨 Inventory GUI](#🎨-inventory-gui)
+  * [🚫 Restricting GUI Access](#🚫-restricting-gui-access)
+  * [📂 Admin Flag Definitions](#📂-admin-flag-definitions)
+  * [👤 User Flag Definitions](#👤-user-flag-definitions)
+* [🧠 Advanced: Root Flag Usage & Commands](#🧠-advanced-root-flag-usage--commands)
+
+  * [📌 What Are Root Flags?](#📌-what-are-root-flags)
+  * [❓ Why Use Root Flags Directly?](#❓-why-use-root-flags-directly)
+  * [🛠️ Key Commands](#🛠️-key-commands)
+  * [📏 Command Syntax](#📏-command-syntax)
+  * [💡 Examples](#💡-examples)
+  * [🧩 LuckPerms Equivalents](#🧩-luckperms-equivalents)
+  * [📋 Available Root Flags](#📋-available-root-flags)
+  * [🏷 Custom Target Tags](#🏷-custom-target-tags)
+  * [⚙️ Flag Control Section](#⚙️-flag-control-section)
+  * [🏷 Custom Tags](#🏷-custom-tags)
+  * [🔍 Interpreting `gddebug` Output](#🔍-interpreting-gddebug-output)
+  * [📚 How Flags Are Stored in LuckPerms](#📚-how-flags-are-stored-in-luckperms)
+  * [🛠 Applying Custom Root Flag Rules](#🛠-applying-custom-root-flag-rules)
+* [🧠 Advanced Flag Definition Configuration](#🧠-advanced-flag-definition-configuration)
+  * [📄 Defining New GUI Flags](#📄-defining-new-gui-flags)
+  * [📍 Context Application](#📍-context-application)
+  * [👥 Group-Based Flag Defaults](#👥-group-based-flag-defaults)
+
+
+---
+
+
+## 🚀 New Users Start Here
+
+If you're new to GriefDefender or claim flags, begin with these:
+
+- Use `/cf` to manage claim flags in a GUI
+- Understand that each toggle (like `animal-spawn`) is a **definition** that controls one or more **root flags** (like `entity-spawn`)
+- Explore the Inventory GUI or Chat GUI to see which flags apply to public vs trusted users
+- Use `/gddebug record claim` to inspect what's happening when something is blocked
+
+Once you're comfortable, you can create or customize flags in `minecraft.yml`, set icons, group permissions, and even define what shows up in GUIs.
+
+
+### 🧩 How Flags and Definitions Work
+
+GriefDefender uses two core systems to control what players and entities can do in claims:
+
+- **Root Flags**: These are the raw server actions (e.g., `block-break`, `entity-damage`, `interact-block-secondary`) triggered by events like placing a block or opening a container.
+- **Flag Definitions**: These are pre-built combinations of one or more root flags plus context (like player, block type, or time of day). They’re what you see in the `/cf` GUI.
+
+Definitions make things easier by grouping logic under names like `animal-spawn` or `pvp`, so users and admins don't have to deal with raw flags.
+
+- Definitions are stored in `presets/minecraft.yml`
+- The GUI uses these definitions to toggle claim behavior
+- If no matching definition is found, the plugin falls back to root flags in `flags.yml`
+- Use `/gddebug` to inspect which root flag and definition was triggered during an event
+
+
+---
 
 
 
-Admins are given full control to add/remove/customize flag definitions.   
+## 📖 Overview
 
-To add a flag definition to an existing delivered minecraft preset, open the `./presets/minecraft.yml` file.  
-Within this section, you will see 2 delivered groups `admin` and `user`.   
+GriefDefender’s flag system lets you control what players and entities can do inside (or outside) of claims, through a combination of base events and customizable definitions.
 
-All flag definitions located within the `admin` group are accessible by only admins. This is due to the `admin-group` setting be set to `true`.  
-All flag definitions located within the `user` group are accessible by all users.  
-You can add/remove/move flag definitions as you please and even create new preset files from scratch which will get read when GUI is loaded.  
+There are two main components:
 
-### Flag Definition
+- **Root Flags**: Low-level events triggered by game actions (like `block-break`, `entity-spawn`, or `command-execute`). These are the raw building blocks of permission checks.
+- **Flag Definitions**: Named toggles shown in the GUI (like `animal-spawn` or `pvp`). Each definition maps to one or more root flags, bundled with a specific context, icon, name, and rule.
 
-If you want to add a flag to the 'admin' section, do the following  
-1. Clone an existing flag definition. We will use `villager-trade` for this example.  
+Players interact with definitions using the `/cf` GUI or command-based editors, while administrators can define, group, and override behaviors using YAML files or LuckPerms directly.
+
+Admins can fully customize definitions and behaviors through YAML-based preset files, while players interact with simplified GUI toggles.
+
+> 💡 You can even define your own GUI flags and allow users to toggle them!
+
+---
+
+## 🛠️ Configuration Paths
+
+* `config/griefdefender/flags.yml`: Enables/disables specific root flags
+* `config/griefdefender/presets/minecraft.yml`: Defines GUI claim flags and their behavior
+* `config/griefdefender/tags.yml`: Defines custom tags for use in flags
+
+---
+
+
+## 🚩 Flags Overview
+
+GriefDefender uses a layered flag system that separates raw events from player-facing controls. Understanding the distinction between **Root Flags** and **Flag Definitions** is key to mastering claim behavior.
+
+### ⚙️ Root Flags
+
+Root flags represent the fundamental events GriefDefender listens for — things like `block-break`, `entity-spawn`, or `interact-block-secondary`. These are triggered by the game engine (e.g., PaperMC) and directly determine whether an action is allowed or denied within a claim.
+
+They are:
+- **Low-level and fine-grained**, ideal for admins or advanced users
+- Managed directly through commands or permission nodes
+- Defined internally by the plugin ([see list](https://github.com/bloodmc/GriefDefenderAPI/blob/master/src/main/java/com/griefdefender/api/permission/flag/Flags.java))
+
+Root flags can be modified via:
+- `/gd flag ...` commands
+- LuckPerms nodes like `griefdefender.flag.block-break`
+- Configuration fallbacks in `flags.yml` (used only if no definition applies)
+
+### 🎛️ Flag Definitions
+
+GUI Flags — more precisely called **Flag Definitions** — are higher-level, user-friendly wrappers around root flags. These are the toggles you interact with in the in-game GUI via `/cf` or `/claimgui`.
+
+Each GUI flag is a definition composed of:
+- One or more **root flags**
+- A set of **contexts** (e.g., claim type, target, source)
+- A display name, icon, and default value
+- A permission key used for LuckPerms storage
+
+These definitions live in `presets/minecraft.yml` and are organized under `admin` and `user` sections to control what appears in the GUI for each permission group.
+
+Example:
+```yaml
+animal-spawn:
+  contexts:
+    gd_claim_default: user
+  default-value: true
+  enabled: true
+  icon:
+    id: minecraft:pig_spawn_egg
+  title: '&6animal-spawn'
+  owner-mode: true
+  permissions:
+    flag: entity-spawn
+    target: "#animal"
+```
+In this example:
+
+-   The GUI toggle labeled `animal-spawn` maps to the root flag `entity-spawn`
+    
+-   It applies only to entities tagged `#animal`
+    
+-   Players see a simple toggle, but behind the scenes it's enforcing a complex rule
+    
+
+GUI flags are the **preferred interface** for most users and are critical for creating intuitive claim management menus.
+
+---
+
+####  🧭 Contexts
+
+**What it does:**  
+Controls where a flag applies by default during **server startup**.  
+These values only apply **initially** — **GUI toggles will override them**.
+
+**Common usage:**  
+`gd_claim_default=user` → applies to all user claims (excluding wilderness)
+
+**Accepted values:**
+
+- `user` — All user claims  
+- `admin` — Admin claims  
+- `basic` — Basic claims  
+- `subdivision` — Subdivisions  
+- `town` — Towns  
+- `global` — All claims (including wilderness)
+
+> ⚠️ GUI toggles always use the `gd_claim` context, which overrides the above on interaction.  
+> 💡 See [Advanced Contexts](#advanced-contexts) for full details.
+
+---
+
+#### 👥 Default Groups
+
+**What it does:**  
+Applies persistent flag values to specific trust groups or LP groups.
+
+**Examples:**
+
+- `accessor=false` → denies all accessor-trusted users  
+- `manager=false` → affects claim owners and managers
+
+These are stored directly in **LuckPerms** and take priority unless the GUI is used to change them.
+
+**To enable GUI toggles for these groups, assign:**
+
+- `griefdefender.advanced.user.gui.flag.group.accessor`
+- `griefdefender.advanced.user.gui.flag.group.container`
+- `griefdefender.advanced.user.gui.flag.group.manager`  
+*(and others)*
+
+> 🛠️ See [Advanced Default Groups](#advanced-default-groups) for more use cases.
+
+---
+
+#### ✅ Default Value
+
+Sets whether the flag is enabled by default when a claim is created.  
+Overrides only apply if not toggled manually.
+
+---
+
+#### 🟢 Enabled
+
+Controls whether the definition is available in GUI or `/claimflagdefinition`.
+
+---
+
+####  🧱 Icon
+
+Controls how the flag appears in the **Inventory GUI** (not Chat GUI).
+
+**Available keys:**
+
+| Key            | Type    | Description |
+|----------------|---------|-------------|
+| `id`           | String  | Item used for the icon (e.g., `minecraft:emerald`) |
+| `title`        | String  | Hover title (e.g., `&6villager-trade`) |
+| `lore`         | String  | Hover description |
+| `quantity`     | Int     | Stack size shown |
+| `model-data`   | Int     | Custom model data |
+| `enchanted`    | Boolean | Makes the icon glow |
+| `icon-flags`   | List    | Hides item metadata like:<br> – `hide_enchants`<br> – `hide_attributes`<br> – `hide_potion_effects` |
+
+📚 See the [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/) for valid `id` values.
+
+---
+
+#### 👑 Owner Mode
+
+If `true`, lets claim **owners** be affected by the flag.  
+Owners will see it under the `OWNER` section in GUI.
+
+---
+
+####  🧩 Permissions
+
+This is the logic behind the toggle.  
+Each entry links root flags with conditions like source/target.
+
+**Example:**  
+`flag=interact-block-secondary, target=minecraft:chest`
+
+You can use Minecraft tags (e.g., `#animal`) or specific IDs.
+
+
+---
+
+## 🖥️ GUI Overview
+
+Use `/cf` or `/claimflag` in a claim you own to access the flag menu. You can toggle GUI type (Inventory or Chat) via `/claimgui`.
+
+Each toggleable GUI flag is based on the definitions from `minecraft.yml`.
+
+Use `/claimflagdefinition` to view raw definitions. You can also add your own.
+
+---
+
+## 🔐 GUI Permissions
+
+GriefDefender allows fine-grained control over which GUI flag definitions a user or group can access and toggle.
+
+The permission format is:
+```
+griefdefender.user.definition.flag.<preset>.<group>.<definition_name>
+```
+
+- `<preset>` typically refers to the filename (e.g., `minecraft`)
+- `<group>` is usually `user` or `admin`, depending on where the flag is defined
+- `<definition_name>` is the key of the flag definition, like `damage-animals`
+
+#### Example: Denying Access to a Specific Flag
+
+To prevent a group from toggling the `damage-animals` flag, apply the following in LuckPerms:
 
 ```
-villager-trade {
-    contexts=[
-        "gd_claim_default=user"
-    ]
-    default-groups {}
-    default-value=true
-    enabled=true
-    icon {
-        enchanted=false
-        icon-flags=[
-            "hide_attributes"
-        ]
-        id="minecraft:emerald"
-        title="&6villager-trade"
-    }
-    owner-mode=false
-    permissions=[
-        "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
-    ]
-}
+/lp group <groupname> permission set griefdefender.user.definition.flag.minecraft.user.damage-animals false
 ```
 
-Lets break this example down  
+> 💡 GUI flags start off with their defined default (`true` or `false`) and reflect the current permission state for the claim you're in. Changing the toggle updates the underlying LuckPerms permission.
 
-#### Name  
 
-`villager-trade` - This is the name of your definition that will be displayed to users when they open it up in the flag GUI. It can be whatever you like.  
-Note: These are not actual GD core flags but rather a `flag definition` and cannot be used with the `/cf` command.  If you want to toggle a flag definition with a command then use `/claimflagdefinition` or `/gd flag definition`  
+---
 
-#### Contexts  
+## 🧱 GUI Structure & Behavior
+
+GriefDefender provides two types of flag management interfaces:
+
+- **Chat GUI**: Text-based interface grouped by trust type (e.g., PUBLIC, OWNER, ADMIN, ACCESSOR, BUILDER, etc.)
+- **Inventory GUI**: Visual interface with icons representing each definition, grouped into tabs by preset
+
+Both are accessed via `/cf` or `/gd flag claim`. The display depends on the user's permissions and the `/claimgui` toggle. See the [Main GUI](/wiki/basic/GUI.html) page for visuals and more.
+
+### 💬 Chat GUI
+
+In the Chat GUI, definitions appear as lists grouped by:
+
+- **PUBLIC**: Affects non-trusted users. Always visible.
+- **OWNER**: Affects claim owners and trusted users. Only visible if the definition has `owner-mode: true` and the user has the permission:  
+  `griefdefender.advanced.user.gui.flag.group.owner`
+- **ADMIN**: Affects only the current claim, for administrative control.
+- **Trust Types**: Accessor, Builder, Container, Manager — used for fine-tuned trusted role behavior
+
+Each toggle reflects the **current state** (`true` / `false`) for the claim you're standing in.
+
+
+
+### 🎨 Inventory GUI
+
+The Inventory GUI displays flag definitions as **Minecraft item icons** inside a chest-style interface.
+
+- Each icon represents a flag definition (like `animal-spawn`, `pvp`, or `container-access`)
+- Icons are fully customizable via `inventory.yml` (located in the root GriefDefender config folder), which controls layout, title, lore, and grouping
+- Definitions shown depend on the current claim, user trust level, and GUI section (e.g., `PUBLIC`, `OWNER`, `ADMIN`)
+- The layout mimics a standard Minecraft chest — all icons appear in a single view
+- Hovering over an icon shows its name, description, and current value
+- Clicking an icon toggles the flag between `true` and `false`
+
+There are no tabs — everything is arranged visually in one interface using Minecraft’s inventory system.
+
+> 🎨 Inventory GUI is ideal for players who prefer visual cues. Admins can tailor the interface using `inventory.yml` for better UX and organization.
+
+---
+
+### 🚫 Restricting GUI Access
+
+To prevent a group from toggling a specific flag in the GUI (e.g., `damage-animals`):
+
+```bash
+/lp group <groupname> permission set griefdefender.user.definition.flag.minecraft.user.damage-animals false
+```
+
+###  📂 Admin Flag Definitions
+
+> ⚠️ **Admin flags will ONLY affect the claim you are in.**
+
+![Admin GUI](https://i.imgur.com/tSVSC7q.png)
+
+By default, admins have access to two GUI modes: `PRESET` and `ADVANCED`.
+
+- The **PRESET** mode is directly linked to the `minecraft.yml` preset file.
+- Each group in this file (e.g., `USER`, `ADMIN`) becomes a tab in the GUI.
+- These groups define which flags appear and how they behave.
+
+> 💡 Admin definitions still apply flags only to the **claim you are standing in**. If you want defaults applied to all claims, use configuration options like `gd_claim_default`.
+
+#### ✨ Delivered Admin Flag Definitions
+
+These definitions are included with GriefDefender by default in the `ADMIN` group:
+
+| Flag Definition                      | Default | Description |
+|--------------------------------------|---------|-------------|
+| `ambient-spawn`                     | true    | Controls ambient mob spawning (e.g., bats). |
+| `animal-block-modify`              | true    | Whether animals can modify blocks (e.g., rabbits eating crops). |
+| `animal-spawn`                     | true    | Whether animals like cows or pigs can spawn. |
+| `aquatic-spawn`                    | true    | Whether aquatic creatures can spawn. |
+| `armorstand-use`                   | false   | Allows placement/breaking of armor stands. |
+| `chorus-fruit-teleport`            | false   | Allows teleporting with chorus fruit. |
+| `commandblock-block-break`         | false   | Command blocks breaking blocks. |
+| `commandblock-block-place`         | false   | Command blocks placing blocks. |
+| `creeper-block-explosion`          | false   | Creepers damaging blocks. |
+| `creeper-entity-explosion`         | false   | Creepers damaging entities. |
+| `endcrystal-use`                   | false   | Allows placing or breaking end crystals. |
+| `entity-armorstand-damage`         | false   | Damage to armor stands by any entity. |
+| `entity-itemframe-damage`          | false   | Damage to item frames. |
+| `exp-drop`                         | true    | Controls XP orb drops. |
+| `fall-entity-damage`               | true    | Fall damage to mobs. |
+| `fall-player-damage`               | true    | Fall damage to players. |
+| `falling-block-break`              | true    | Falling blocks breaking others. |
+| `fire-block-damage`                | true    | Fire damaging blocks. |
+| `fire-entity-damage`               | true    | Fire damaging entities. |
+| `lightning-damage`                 | true    | Lightning causing harm. |
+| `monster-animal-damage`            | false   | Monsters damaging animals. |
+| `monster-player-damage`            | true    | Monsters damaging players. |
+| `monster-spawn`                    | true    | Monster spawn (e.g., creepers, skeletons). |
+| `piston-item-spawn`                | true    | Item spawn from piston movement. |
+| `piston-use`                       | false   | Whether pistons can be used. |
+| `player-block-break`              | false   | Players breaking blocks. |
+| `player-block-interact`           | false   | Players interacting with blocks (non-containers). |
+| `player-block-place`              | false   | Players placing blocks. |
+| `player-damage`                   | true    | Players taking damage. |
+| `player-enderpearl-interact`      | true    | Using ender pearls. |
+| `player-endportal-use`            | true    | Entering the End via portal. |
+| `player-entity-interact`          | true    | Interacting with entities (not containers). |
+| `player-exit`                     | true    | Players exiting the claim. |
+| `player-item-drop`                | true    | Dropping items. |
+| `player-item-pickup`              | true    | Picking up items. |
+| `player-itemframe-interact`       | false   | Interacting with item frames. |
+| `player-itemhanging-place`        | false   | Placing hanging items (e.g., frames). |
+| `player-netherportal-use`         | true    | Using Nether portal. |
+| `player-teleport-from`            | true    | Teleporting *from* the claim. |
+| `player-teleport-to`              | true    | Teleporting *to* the claim. |
+| `player-villager-damage`          | false   | Damaging villagers. |
+| `ravager-block-break`             | true    | Ravagers breaking blocks. |
+| `silverfish-block-infest`         | false   | Silverfish infesting blocks. |
+| `tnt-block-explosion`             | false   | TNT destroying blocks. |
+| `tnt-entity-explosion`            | false   | TNT damaging entities. |
+| `turtle-egg-hatch`                | true    | Turtle eggs hatching. |
+| `villager-farm`                   | true    | Villagers farming crops. |
+| `wither-block-break`              | false   | Wither damaging blocks. |
+| `wither-entity-damage`            | true    | Wither damaging entities. |
+
+### 👤 User Flag Definitions
+
+> ⚠️ **User flags only affect the claim you are currently standing in.**  
+> ⚠️ To modify `USER` flag definitions in a claim you do not own, you must use `/ignoreclaims` and have the appropriate `ignoreclaims` permission.
+
+When a regular user executes `/cf`, they'll see a simplified GUI with flag toggles grouped under the `USER` tab:
+
+![User GUI](https://i.imgur.com/LTeNaaD.png)
+
+The table below outlines the default user-level flag definitions provided in `minecraft.yml`:
+
+| **Flag Definition**       | **Default Value** | **Description**                                                                 |
+|---------------------------|-------------------|---------------------------------------------------------------------------------|
+| `block-fertilize`         | false             | Controls whether a player can use bonemeal to fertilize blocks.                |
+| `block-trampling`         | false             | Controls whether farmland and turtle eggs can be trampled.                     |
+| `chest-access`            | false             | Controls whether a player can access chests and other inventory blocks.        |
+| `crop-growth`             | true              | Controls whether crops grow naturally.                                         |
+| `damage-animals`          | false             | Controls whether animals can be damaged by players.                            |
+| `enderman-grief`          | false             | Controls whether endermen can pick up or move blocks.                          |
+| `fire-spread`             | false             | Controls whether fire spreads to adjacent blocks.                              |
+| `grass-growth`            | true              | Controls whether grass spreads over dirt blocks.                               |
+| `ice-form`                | true              | Controls whether water can freeze into ice.                                    |
+| `ice-melt`                | true              | Controls whether ice can melt.                                                 |
+| `lava-flow`               | false             | Controls whether lava can flow into or out of the claim.                       |
+| `leaf-decay`              | true              | Controls whether leaves decay over time.                                       |
+| `lighter`                 | false             | Controls whether a player can use flint and steel.                             |
+| `mushroom-growth`         | true              | Controls whether mushrooms grow or spread.                                     |
+| `mycelium-spread`         | true              | Controls whether mycelium spreads to nearby blocks.                            |
+| `painting-damage`         | false             | Controls whether players can break paintings.                                  |
+| `player-enter`            | true              | Controls whether a player can enter the claim.                                 |
+| `pvp`                     | true              | Controls whether players can engage in PvP combat.                             |
+| `ride`                    | false             | Controls whether players can ride vehicles or animals not owned by them.       |
+| `sign-edit`               | true              | Controls whether players can edit existing signs.                              |
+| `sign-use`                | true              | Controls whether players can use signs (e.g., click events).                   |
+| `sleep`                   | true              | Controls whether players can sleep in beds.                                    |
+| `snow-fall`               | true              | Controls whether snow can fall naturally.                                      |
+| `snow-melt`               | true              | Controls whether snow melts naturally.                                         |
+| `snowman-trail`           | true              | Controls whether snowmen leave snow trails.                                    |
+| `soil-dry`                | true              | Controls whether tilled soil can dry out.                                      |
+| `vehicle-use`             | false             | Controls whether vehicles (boats, minecarts, etc.) can be used or placed.      |
+| `villager-trade`          | true              | Controls whether players can trade with villagers.                             |
+| `vine-growth`             | true              | Controls whether vines (and kelp) can grow.                                     |
+| `water-flow`              | false             | Controls whether water can flow into or out of the claim.                      |
+
+
+## 🧠 Advanced: Root Flag Usage & Commands
+
+This section expands on low-level control for admins and advanced users.
+
+
+### 📌 What Are Root Flags?
+
+Root flags are internal triggers used by GD to detect and handle player actions. These include things like:
+
+* `interact-block-secondary` (right-click block)
+* `entity-damage` (any damage to entities)
+* `command-execute` (any command run by a player)
+
+### ❓ Why Use Root Flags Directly?
+
+GUI flags are great for claim owners, but advanced users may want to:
+
+* Apply flags globally or per-claim-type
+* Target specific mod entities/items
+* Apply override behavior
+* Use via LuckPerms for groups/players
+
+
+### Key Commands
+
+```shell
+/gd flag claim <flag> <target> <value> [contexts]     # /cf
+/gd flag group <group> <flag> <target> <value> [contexts]   # /cfg
+/gd flag player <player> <flag> <target> <value> [contexts] # /cfp
+/gd flag reset                                         # /cfr
+```
+
+
+### Command Syntax
+
+| Argument     | Meaning                                                                       |
+| ------------ | ----------------------------------------------------------------------------- |
+| `<flag>`     | Root flag to modify (e.g. `entity-spawn`)                                     |
+| `<target>`   | Entity, block, or wildcard (e.g. `minecraft:chest`, `#animal`)                |
+| `<value>`    | `true`, `false`, or `undefined` (or `0`)                                      |
+| `[contexts]` | Optional key-value filters (e.g. `source=minecraft:player`, `override=admin`) |
+
+### Examples
+
+* Block block breaking: `/cf block-break minecraft:diamond_block false`
+* Deny right-click on beds: `/cf interact-block-secondary minecraft:bed false`
+* Prevent portal use in admin claims: `/cfg Admin portal-use any false override=admin`
+
+---
+### LuckPerms Equivalents
+
+The same flag can be applied as a LuckPerms permission:
+
+```
+/lp group Admin permission set griefdefender.flag.block-break false gd_claim_default=admin target=minecraft:diamond_block
+```
+
+### Available Root Flags
+
+[A full list of root flags is here](https://github.com/bloodmc/GriefDefenderAPI/blob/master/src/main/java/com/griefdefender/api/permission/flag/Flags.java)
+
+Includes: `block-break`, `block-place`, `entity-spawn`, `item-use`, `command-execute`, etc.
+
+### Custom Target Tags
+
+GriefDefender supports Minecraft’s tag system and defines its own target groups like:
+
+* `#animal`
+* `#monster`
+* `#vehicle`
+
+You can create more tags by defining them in `tags.yml`. Example:
+
+```yaml
+container:
+  - minecraft:chest
+  - minecraft:barrel
+  - minecraft:trapped_chest
+```
+Use them in `target=` for future-proofing definitions.
+
+### Flag Control Section
+
+Enable/disable root flags in `flags.yml`:
+
+```yaml
+flag-control:
+  block-break: true
+  entity-damage: true
+  portal-use: false
+```
+Disable root flags here only if absolutely necessary.
+
+### 🏷 Custom Tags
+
+Custom tags let you group targets under a shared name. Useful for defining broad behavior (e.g. `#containers`) without repeating every block ID. Example:
+
+**Configuration Path:**  
+`config/griefdefender/tags.yml`
+
+#### Example `tags.yml`
+```yaml
+container:
+  - minecraft:chest
+  - minecraft:barrel
+  - minecraft:shulker_box
+```
+
+Then use it in a flag:
+
+```
+/cf interact-block-secondary #container false
+```
+
+### 🔍 Interpreting `gddebug` Output
+
+`/gddebug` helps determine what claim flags are being triggered by specific in-game actions. Run `/gddebug record claim`, perform an action (like breaking a block), then run `/gddebug paste` to see the results.
+
+Each event in the output includes:
+
+* **Flag**: The root claim flag that was triggered (e.g. `block-break`)
+* **Definition**: GUI flag definition(s) that matched the root flag (e.g. `player-block-break`)
+* **Trust**: The level of trust required (e.g. `builder`)
+* **Source**: What triggered the event (e.g. `minecraft:player`)
+* **Target**: The object being acted upon (e.g. `minecraft:grass_block`)
+* **Location**: Coordinates of the event
+* **User/Group**: Who caused the event (e.g. player username or group)
+* **Contexts**: Additional metadata that adds meaning to the event (e.g. vanilla or custom tags the target belongs to)
+* **Result**: Whether the action was permitted (`true`) or denied (`false`) based on current flag settings
+
+> 💡 **Pro tip**: The last few lines in a `gddebug` output usually relate to the command itself and can often be ignored.
+
+Understanding `gddebug` outputs is essential for:
+
+* Diagnosing why an action was blocked or allowed
+* Identifying which flag needs to be edited
+* Creating precise flag definitions using `source`, `target`, and `context`
+
+> 💡 See [Debugging](/wiki/advanced/Debugging.html) for full details.
+
+### 📚 How Flags Are Stored in LuckPerms
+
+GriefDefender does **not** store flag states in its own flat files or database. Instead, **all user changes to flag values** (like toggling them in the GUI) are stored as **permissions in LuckPerms**.
+
+For example:
+
+* When you toggle the `block-fertilize` flag in the GUI, it adds a permission to the `griefdefender_definition` group in LuckPerms.
+* This permission might look like:
+
+```
+griefdefender.flag.block-fertilize target=minecraft:wheat source=minecraft:player gd_claim=claim_abc123
+```
+#### 🔍 How to Read This
+
+- **Permission Node**: `griefdefender.flag.block-fertilize` is the root flag
+- **Context**:
+  - `gd_claim` – unique claim ID this permission applies to
+  - `source` – who or what triggered the event (e.g., `minecraft:player`)
+  - `target` – what the event was acting on (e.g., `minecraft:wheat`)
+
+This setup is how GriefDefender keeps track of which flags are active in which claims — **LuckPerms becomes the real-time storage and logic layer** for permissions enforcement.
+
+
+
+#### 🧱 Where Are Flags Stored?
+
+GriefDefender creates several LuckPerms groups on first launch to manage claim and trust data. Here's a breakdown of each group and its purpose:
+
+#### Claim Flag Groups
+
+| Group                        | Purpose                                                                                  |
+|-----------------------------|------------------------------------------------------------------------------------------|
+| `griefdefender_claim`       | Stores flag permissions set via `/cf` in a specific claim (not from GUI presets)         |
+| `griefdefender_default`     | Stores flags with `gd_claim_default` context via `/cf default=<type>`                    |
+| `griefdefender_definition`  | Stores GUI-based flag definition permissions (from preset GUI)                           |
+| `griefdefender_option`      | Stores all option meta permissions (e.g., max claims, max trust)                         |
+| `griefdefender_override`    | Stores flags with `gd_claim_override` context                                            |
+| `griefdefender_claim_group` | Stores flags applied to claim groups                                                     |
+
+##### Trust Permission Groups
+
+| Group                            | Purpose                                             |
+|----------------------------------|-----------------------------------------------------|
+| `griefdefender_trust_resident`   | Trusts with resident-level access                   |
+| `griefdefender_trust_accessor`   | Trusts with accessor-level access                   |
+| `griefdefender_trust_builder`    | Trusts with builder-level access                    |
+| `griefdefender_trust_container`  | Trusts with container-level access                  |
+| `griefdefender_trust_manager`    | Trusts with manager-level access                    |
+
+
+### ⚖️ LuckPerms Group Weights
+
+| Group Name                         | Weight |
+|-----------------------------------|--------|
+| `griefdefender_option`            | 0      |
+| `griefdefender_override`          | -40    |
+| `griefdefender_claim`             | -60    |
+| `griefdefender_trust_manager`     | -70    |
+| `griefdefender_trust_builder`     | -71    |
+| `griefdefender_trust_container`   | -72    |
+| `griefdefender_trust_accessor`    | -73    |
+| `griefdefender_trust_resident`    | -74    |
+| `griefdefender_claim_group`       | -75    |
+| `griefdefender_definition`        | -80    |
+| `griefdefender_default`           | -100   |
+
+Lower weights take priority in LuckPerms. For example, a `-100` weight from `griefdefender_default` will override a `-60` setting from `griefdefender_claim`.
+
+
+### 🛠 Managing Flags
+
+- Use `/lp editor` to view and edit all GUI flag changes
+- Back up your LuckPerms data regularly to preserve flag settings
+- Use weights and group inheritance in LP for advanced behavior control
+
+![LuckPerms Flag Entry Example](https://i.imgur.com/1Fci4SS.png)
+
+> 💡 GUI toggles like `/cf` write these permissions behind the scenes—no manual LuckPerms input required.
+
+> 🔒 You’ll need `griefdefender.advanced.admin.flags.*` to work with advanced or custom flag setups.
+
+> 🧠 For complex rule-building, use GD’s `/gddebug record` and analyze contexts before writing new flag logic.
+
+
+
+### 🛠 Applying Custom Root Flag Rules
+
+You may have read the last section and thought, well does that mean you can basically skip the step of using a GUI and create a flag in LuckPerms itself? And yes, that is absolutely the case and I would recommend admins go in to edit the actual LuckPerms claim flags for a claim if you are changing the `minecraft.yml` config a lot or are messing with the custom claim flags in a claim.
+
+But in general it’s a pain to do that manually—thankfully GriefDefender comes with its own command just to create these! If you don’t run `/claimflag` directly but instead hit space, you can choose from any of the root claim flags. Hit space again to select from all tags, blocks, and entities (i.e. the target). Then space again to choose the value (true/false).
+
+> 💡 To go deeper, hit space again to choose a context like `source=pixelmon:occupiedpokeball`.
+
+By default, this sets the flag only for the claim you're standing in. If you want to make it global, add `default=basic` (or `admin`, `town`, etc.).
+
+This method excels at per-claim customization. For example:
+
+* Allowing only Shulker Boxes to be broken/placed at spawn via 3D claim groups
+* Allowing end crystals to only be right-clicked on bedrock in the End (dragon summoning)
+
+However, it's **not ideal** for global claim flags—use Method 2 for that.
+
+
+## 🧠 Advanced: Flag Definition Configuration
+
+The following sections provide advanced configuration techniques for flag definitions. These are intended for server administrators who want fine-grained control over how default flag values are applied at startup or vary by group.
+
+While GUI toggles apply directly to the claim you are in, the methods below allow you to automate and enforce default behaviors across all claims, based on context or group membership.
+
+Use these tools to predefine protection rules for new claims, limit trust groups from performing actions by default, or create scalable rule sets for your server.
+
+
+### 📄 Defining New GUI Flags
+
+The `minecraft.yml` file in the `presets` folder is the main place to define new **GUI claim flags**. It contains two main sections: `admin` flags and `user` flags. Whichever heading a flag is placed under determines which GUI menu it will appear in.
+
+The easiest way to create a new flag is to copy and modify an existing one. Typically, you only need to adjust values between `default-value` and `permissions`.
+
+When setting the permission, it's best to first run `/gddebug` while performing the action you want to control—this will reveal the root flag and context.
+
+> 🔎 Tip: Use `/gddebug record claim` to limit debug output to only the claim you're standing in.
+
+For example, to fix an issue where players could change what Allays were holding in other people’s claims, the user created an **admin-only claim flag** with a `default-value: false`—effectively turning off the feature unless explicitly re-enabled.
+
+By also setting `owner-mode: false`, this flag could be enforced even for claim owners.
+
+Claim flags can also be applied to **wilderness**, effectively disabling features server-wide.
+
+This method is ideal for:
+
+* Flags you want permanently enabled/disabled
+* Admin-only controls
+* Server-wide configuration defaults
+
+For greater flexibility and a user-friendly interface, consider combining this with Method 1 (in-game commands + GUI).
+
+---
+
+### 📍 Context Application
 
 :::: warning Important  
-Contexts set in flag definition do NOT apply when toggled in GUI. They are only used during server startup.  GUI will always apply flags to the claim player is standing in by using the `gd_claim` context.  
-::::  
+**Contexts in a flag definition only apply at server startup.** When players toggle a flag in the GUI, it is always applied using the `gd_claim` context for the claim they are currently standing in.  
+::::
 
-```
-contexts=[
-    "gd_claim_default=user"
+```yaml
+contexts = [
+  "gd_claim_default=user"
 ]
 ```
-These are the definition contexts that will be used with all permissions defined within `permissions=[...]`.  
-It currently only supports context keys `gd_claim_default` and `gd_claim_override`.  
+The `contexts` section defines _where and how_ a flag definition should be applied during server startup.  
+Each context applies to all `permissions=[...]` entries inside the definition.
 
-`gd_claim_default` - This context is used with most definitions. It instructs GD to apply the definition at server startup to all existing/new claims.   
-This context accepts the following values :   
-`admin` - Only apply definition to admin claims.   
-`basic` - Only apply definition to basic claims.  
-`subdivision` - Only apply definition to subdivisions.  
-`town`  - Only apply definition to towns.  
-`global`  - Apply definition to ALL claims including wilderness.  
-`user` - Apply definition to ALL claims excluding wilderness.  
-
-Note: The default context ALWAYS applies permissions as transient in LuckPerms. In otherwords, the permissions only exist in memory while server is running. If the flag definition is toggled in GD GUI or set by an admin via command or editor, it will take priority over defaults as it will persist in LP storage.  
-Note: Toggled flags in GUI will be stored in `griefdefender_definition` and will take priority over the `default-value` set in definition. Removing these permissions from `griefdefender_definition` will force GD to fallback to the default values of definitions in preset.  
+GriefDefender supports **two context types** in definitions:
 
 
-`gd_claim_override` - This context is used with a few definitions. It instructs GD to apply the definition at server startup as an override to all existing/new claims.  
-This context accepts the following values :  
-`admin` - Only apply definition to admin claims.  
-`basic` - Only apply definition to basic claims.  
-`subdivision` - Only apply definition to subdivisions.  
-`town`  - Only apply definition to towns.  
-`global`  - Apply definition to ALL claims including wilderness.  
-`user` - Apply definition to ALL claims excluding wilderness.  
+---
 
-Note: This context has higher priority than `gd_claim_default`. During server startup, GD will apply any flag definition using the override context as a persistent permission in the `griefdefender_override` LP group which has the highest priority of GD flag groups.  
+##### 🔹 `gd_claim_default`
 
-See [GriefDefender - Context](https://docs.griefdefender.com/wiki/advanced/Contexts.html) for more information on how contexts work in GD.  
-See [LuckPerms - Context](https://luckperms.net/wiki/Context) for more information on how contexts work with LP.  
+This is the **most common** context. It tells GriefDefender to apply the definition as a **transient (non-persistent)** permission to specified claim types when the server starts.
 
-#### Default Groups
+**Supported values:**
 
-The `default-groups` section allows admins to segment specific LP groups with their own default values. These permissions will always be applied as persistent in LP which means they will exist in storage.  
+| Value         | Applies To                                |
+|---------------|-------------------------------------------|
+| `admin`       | Admin claims only                         |
+| `basic`       | Basic claims only                         |
+| `subdivision` | Subdivisions only                         |
+| `town`        | Town claims only                          |
+| `user`        | All claims **except** wilderness          |
+| `global`      | All claims **including** wilderness       |
 
-##### Example 1
+**Notes:**
 
-If you want to provide default values based on trust you could do the following :  
+- These flags only exist in memory unless changed by a player or admin.
+- If a flag is toggled in GUI or applied via command, it gets stored permanently in LuckPerms and **overrides** this default.
+- Such GUI-based changes are saved in the `griefdefender_definition` group.
+- To reset, simply remove the specific permission from LuckPerms.
+
+---
+##### 🔹 `gd_claim_override`
+
+This context sets up **persistent override flags** during startup, saved in the `griefdefender_override` LP group — which has the **highest priority** across GD permissions.
+
+**Supported values:**
+
+| Value         | Applies To                                |
+|---------------|-------------------------------------------|
+| `admin`       | Admin claims only                         |
+| `basic`       | Basic claims only                         |
+| `subdivision` | Subdivisions only                         |
+| `town`        | Town claims only                          |
+| `user`        | All claims **except** wilderness          |
+| `global`      | All claims **including** wilderness       |
+
+**Notes:**
+
+- Unlike `gd_claim_default`, these overrides are written to LuckPerms storage and persist across restarts.
+- If both override and default are present, **override takes precedence**.
+
+---
+
+##### 🔗 Learn More
+
+- [GriefDefender - Contexts](https://docs.griefdefender.com/wiki/advanced/Contexts.html)  
+- [LuckPerms - Context System](https://luckperms.net/wiki/Context)
+---
+
+###  👥 Group-Based Flag Defaults
+
+The `default-groups` section allows admins to segment specific LP groups with their own default values. These permissions will always be applied as **persistent** in LuckPerms, meaning they are stored in LP rather than applied transiently at runtime.
+
+#### 🧪 Example 1: Trust-Based Defaults
+
+Apply different defaults based on the trust level:
 
 ```
 default-groups {
@@ -121,8 +838,9 @@ default-groups {
 }
 ```
 
-This would prevent users with accessor and container trust from interacting with villagers by default. However, a claim owner could override this default by toggling the `villager-trade` flag under `ACCESSOR` or `CONTAINER` menu in GUI.  
-Note: By default, users will only be able to control `PUBLIC` flags in GUI. In order for a user to control user trust flags, they must be assigned the following permissions :  
+This prevents players with **accessor** and **container** trust from interacting with certain entities (e.g., villagers) by default. Claim owners can override this via the GUI under the appropriate trust tab.
+
+> By default, players can only toggle `PUBLIC` flags in the GUI. To enable control over trust-specific groups, assign:
 
 ```
 griefdefender.advanced.user.gui.flag.group.owner
@@ -132,12 +850,13 @@ griefdefender.advanced.user.gui.flag.group.container
 griefdefender.advanced.user.gui.flag.group.manager
 ```
 
-Note: These LP groups are actually prefixed with `griefdefender_` but GD allows you to omit the prefix. Other LP groups require the full group name.  
+> Note: Internally, these groups are prefixed with `griefdefender_`, but GD allows you to omit that prefix in the definition.
 
+---
 
-##### Example 2
+#### 🧪 Example 2: Group-Based Restriction
 
-Deny users in `novice` group to interact with all villagers in claims by default.  
+Restrict interaction for users in a specific LP group:
 
 ```
 default-groups {
@@ -145,12 +864,13 @@ default-groups {
 }
 ```
 
-Even though the `default-value` is set to `true` by default, this setting would instruct GD to deny any user part of the `novice` group from interacting with villagers.  
+Even if the `default-value` is `true`, users in the `novice` group would be denied this flag by default.
 
+---
 
-##### Example 3
+#### 🧪 Example 3: Affecting Claim Owners
 
-Set default that affects all claim owners in existing claims.  
+Apply a default to all claim owners:
 
 ```
 default-groups {
@@ -158,2214 +878,7 @@ default-groups {
 }
 ```
 
-The manager trust group has a special use case for the `default-groups` section. It not only affects users with manager trust but also affects owners. Admins can utilize this group to control claim owner defaults.  
+The `manager` group has special behavior: it affects not only users with **manager trust**, but also **claim owners**. Admins can use this to configure claim-wide owner defaults.
 
-Note: If you want to restrict claim owners from overriding this default value, you should deny the permission `griefdefender.advanced.user.gui.flag.group.manager` so they are not able to see the group in GUI.  
-
-#### Default value  
-
-`default-value=true` - This is the default-value GD will use when applying the definition during startup.  
-GD will only apply this value during startup as a transient permission to the if the context is `gd_claim_default` . If the context is `gd_claim_override` then it will apply the value as a persistent permission to the `griefdefender_override` group.  
-If the definition does not contain one of these contexts then the default value is ignored.  
-
-#### Enabled  
-
-`enabled=true` - This controls whether the definition is enabled in GD. If set to `false`, the definition will not be applied at server startup and will NOT be shown to users in GUI.  
-
-#### Icon
-
-This setting controls the icon settings that will be used when the flag definition is displayed in the inventory GUI. It does NOT affect anything within the Chat GUI.  
-The following icon settings can be used within the icon section :  
-
-Key            |  Type | Description | 
----------------|---------------|--------------|
-```enchanted``` | Boolean      | Controls whether the icon glows when displayed.
-```icon-flags``` | List  | Controls what shows up on overlay of the icon via flags. Accepts the following flag values : <br>    ```hide_attributes``` - Controls whether icon attributes are displayed. <br> ```hide_destroys``` - Controls whether to show what can break or destroy. <br>  ```hide_dye``` - Controls whether to show dyes. <br>  ```hide_enchants``` - Controls whether to show enchants. <br> ```hide_placed_on``` - Controls whether to show what can be built or placed on.<br>```hide_potion_effects``` - Controls whether to show potion effects.<br>```hide_unbreakable``` - Controls whether to show the unbreakable state.
-```lore``` | String | Controls the lore displayed when hovering over icon.
-```quantity``` | Integer | Controls the quantity displayed with icon.
-```model-data``` | Integer | Controls the custom model data associated with icon.
-```id``` | String | The identifier used for the icon. <br> Ex. ```minecraft:emerald``` <br> See [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/) for a complete list of identifiers that can be used for icons.
-```title``` | String | Controls the hover title displayed when hovering over icon. <br> Ex. ```&6villager-trade```.
-
-#### Owner mode
-:::: warning Important  
-In order for players to utilize owner mode, they must have the following permission `griefdefender.advanced.user.gui.flag.group.owner`. If a player does not have this permission, they will not see the owner section in GUI.  
-::::  
-
-Owner mode is only applicable when a flag definition action can be caused by a player.  
-For example, `fall-player-damage` affects whether a player can receive damage when falling. If this flag is set under the `PUBLIC` section, it will only affect non-trusted users. However, if the flag definition has `owner-mode` set to `true` then this flag will also be displayed under the `OWNER` section allowing claim owners to control whether or not they should receive fall damage in their claims.  
-
-Note: In most cases, `owner-mode` is set to false and not used.  
-
-
-#### Permissions  
-
-```
-permissions=[
-    "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
-]
-```
-
-This flag definition only contains 1 permission entry.  
-
-`flag=interact-entity-secondary` - Uses the base flag `interact-entity-secondary` which is triggered when a player right-clicks on an entity in the world.  
-`target=minecraft:villager` - Sets the target to villager.  
-`source=minecraft:player` - Sets the source to player.  
-
-In order for this definition to be triggered, a player must right-click on a villager in the world.  
-
-Permissions can hold one or more flag entries. To add an additional line, add a `,` at end of previous then insert a new line.     
-Each line requires a `flag=<flag_name>` entry followed by either source or target  context.  
-If you want to apply a permission to all possible targets then don't include `target` as GD will automatically apply to all targets.   
-If you want to apply a permission to all possible sources then don't include `source` as GD will automatically apply to all sources.   
-
-The most common contexts for permissions are as follows  
-```
-source
-target
-used_item
-item_name
-server
-state
-world
-```
-
-The accepted context value must be a valid identifier. To locate the proper value in game, do the following  
-
-1. Run command `/gddebug record claim` - This will start a debug session in the claim you are in.  
-2. Perform an action you want to manage via flag definition.  
-3. Run command `/gddebug paste` - This will display a web link to view debug results.  
-4. Open link, and you will see a list of actions GD checked for the claim. You will a `source` and `target` column which will contain the values you need.  
-
-To locate a value for `used_item` or any other context, locate the Context column and you will see a list of all support contexts for the specific line action.  
-
-Another way to find an id you are looking for is to check a community run wiki for it  
-
-See [Contexts](/wiki/advanced/Contexts.html) for more information on how contexts work.  
-See [Minecraft ID List](https://minecraft-ids.grahamedgecombe.com/)  
-
-
-### Minecraft Flag Definition Preset Config  
-
-For more information on what you can do with the flags config, see below
-
-<details>
-  <summary>Minecraft Preset</summary>
-
-```
-# A collection of definitions designed for vanilla minecraft.
-# Each group defined will be displayed in the flag or option GUI for users.
-# Groups can have the following settings : 
-# enabled=<true|false>: Whether the group is enabled.
-# admin-group=<true|false>: Whether this group is considered for admin use only.
-# Note: GUI toggles in PRESETS will always apply to current claim only.
-#    It is recommended not to assign this permission to users for best experience.
-# value=<true|false>: This is used to set a default value for the definition. It is only used in conjunction with 'override=<type>, default=<type> settings.
-# contexts=["key=value"]: A list of definition contexts that will be applied to all permissions.
-# Note: This is primary used with 'default' and 'override' contexts. Ex. contexts=["default=global"]
-# Note: You must specify one of the following contexts :'gd_claim_default=<type>' or 'gd_claim_override=<type>''
-# Note: Context values support wildcards '?' and '*' by using Apache's wildcard matcher.
-# The wildcard '?' represents a single character.
-# The wildcard '*' represents zero or more characters.
-# Each group will have an associated permission in order to be viewable.
-# The user groups will use the permission : 'griefdefender.user.definition.flag.<preset>.<group>' and 'griefdefender.user.definition.option.<preset>.<group>'
-# The admin groups will use the permission : 'griefdefender.admin.definition.flag.<preset>.<group>' and 'griefdefender.admin.definition.option.<preset>.<group>'
-# Within each group, you can define definitions.
-# Each flag definition must be defined in the following format:
-# enabled: Controls whether the definition is enabled. Accepts a value of 'true' or 'false'
-# default-value: The default value to assign flag definition.
-# description: The flag description to display on hover. Uses the legacy text format.
-# permissions: The list of permissions to link to definition. Permissions can accept various contexts such as :
-# flag=<linked-flag>: This context is used to link the permission to a GD specific flag. Ex. 'flag=block-break' would link permission to GD's block-break flag
-# source=<id>: This context is used to specify a source id such as 'minecraft:creeper'.
-# target=<id>: This context is used to specify a target id such as 'minecraft:chest'.
-# state=<properties>: This context is used to specify a blockstate property such as 'state=lit:true'.
-# Note: All definitions that contain a definition context of 'gd_claim_default' or 'gd_claim_override' will be applied to permissions during server startup.
-# Note: Required if no source or target context is specified, the permission will default to ALL.
-# Note: Commonly used contexts are : flag, source, target, state, used_item, item_name, world, server
-# These contexts may change, See https://github.com/bloodmc/GriefDefender/wiki/Contexts for latest information.
-
-minecraft {
-    # The plugin id's that this preset depends on in order to load. Note: Plugin id's should be separated by comma. Note: Leave blank if only using GriefDefender flags/options.
-    depend=""
-    enabled=true
-    groups {
-        admin {
-            # Set to true if this definition group is for admin use only.
-            # Note: If admin group, the permission is 'griefdefender.admin.custom.flag.<groupname>
-            # Note: If user group (admin set false), the permission is 'griefdefender.user.definition.flag.<preset>.<group>.<flagname>
-            admin-group=true
-            definitions {
-                ambient-spawn {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:bat_spawn_egg"
-                        title="&6ambient-spawn"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-spawn, target=#ambient"
-                    ]
-                }
-                animal-block-modify {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:chorus_plant"
-                        title="&6animal-block-modify"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=block-break, source=#animal",
-                        "flag=block-modify, source=#animal"
-                    ]
-                }
-                animal-spawn {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:pig_spawn_egg"
-                        title="&6animal-spawn"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-spawn, target=#animal"
-                    ]
-                }
-                aquatic-spawn {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:squid_spawn_egg"
-                        title="&6aquatic-spawn"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-spawn, target=#aquatic"
-                    ]
-                }
-                armorstand-use {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:armor_stand"
-                        title="&6armorstand-use"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-item-secondary, target=minecraft:armor_stand, source=minecraft:player",
-                        "flag=entity-damage, target=minecraft:armor_stand, source=minecraft:player",
-                        "flag=interact-entity-secondary, target=minecraft:armor_stand, source=minecraft:player",
-                        "flag=interact-inventory, target=minecraft:armor_stand, source=minecraft:player"
-                    ]
-                }
-                chorus-fruit-teleport {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:chorus_fruit"
-                        title="&6chorus-fruit-teleport"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=item-use, target=minecraft:chorus_fruit, source=minecraft:player"
-                    ]
-                }
-                commandblock-block-break {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:command_block"
-                        title="&6commandblock-block-break"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=block-break, source=minecraft:command_block, source=minecraft:chain_command_block, source=minecraft:repeating_command_block"
-                    ]
-                }
-                commandblock-block-place {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:command_block"
-                        title="&6commandblock-block-place"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=block-place, source=minecraft:command_block, source=minecraft:chain_command_block, source=minecraft:repeating_command_block"
-                    ]
-                }
-                creeper-block-explosion {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:creeper_head"
-                        title="&6creeper-block-explosion"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=explosion-block, source=minecraft:creeper"
-                    ]
-                }
-                creeper-entity-explosion {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:creeper_head"
-                        title="&6creeper-entity-explosion"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=explosion-entity, source=minecraft:creeper"
-                    ]
-                }
-                endcrystal-use {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:end_crystal"
-                        title="&6endcrystal-use"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=projectile-impact-entity, target=minecraft:end_crystal, source=minecraft:arrow",
-                        "flag=interact-item-secondary, target=minecraft:end_crystal, source=minecraft:player",
-                        "flag=entity-damage, target=minecraft:end_crystal, source=minecraft:player",
-                        "flag=interact-entity-secondary, target=minecraft:end_crystal, source=minecraft:player"
-                    ]
-                }
-                entity-armorstand-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=true
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:armor_stand"
-                        title="&6entity-armorstand-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-damage, target=minecraft:armor_stand, source=minecraft:player",
-                        "flag=projectile-impact-entity, target=minecraft:armor_stand, source=minecraft:player",
-                        "flag=entity-damage, source=#monster, target=minecraft:armor_stand",
-                        "flag=projectile-impact-entity, source=#monster, target=minecraft:armor_stand"
-                    ]
-                }
-                entity-itemframe-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=true
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:item_frame"
-                        title="&6entity-itemframe-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-damage, target=minecraft:glow_item_frame, target=minecraft:item_frame",
-                        "flag=projectile-impact-entity, target=minecraft:glow_item_frame, target=minecraft:item_frame"
-                    ]
-                }
-                exp-drop {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:experience_bottle"
-                        title="&6exp-drop"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-spawn, target=minecraft:xp_orb"
-                    ]
-                }
-                fall-entity-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=true
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:feather"
-                        title="&6fall-entity-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-damage, source=minecraft:fall"
-                    ]
-                }
-                fall-player-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:feather"
-                        title="&6fall-player-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-damage, target=minecraft:player, source=minecraft:fall"
-                    ]
-                }
-                falling-block-break {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:sand"
-                        title="&6falling-block-break"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-break, source=minecraft:fall"
-                    ]
-                }
-                fire-block-damage {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:magma_block"
-                        title="&6fire-block-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=block-modify, source=minecraft:fire"
-                    ]
-                }
-                fire-entity-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:magma_cream"
-                        title="&6fire-entity-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-damage, source=minecraft:fire",
-                        "flag=entity-damage, source=minecraft:fire_tick",
-                        "flag=entity-damage, source=minecraft:magma_block",
-                        "flag=entity-damage, source=minecraft:lava"
-                    ]
-                }
-                lightning-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:dead_bush"
-                        title="&6lightning-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-damage, source=minecraft:lightning_bolt"
-                    ]
-                }
-                monster-animal-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:skeleton_skull"
-                        title="&6monster-animal-damage"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=entity-damage, source=#monster, target=#animal",
-                        "flag=entity-damage, source=#monster, target=#aquatic",
-                        "flag=projectile-impact-entity, source=#monster, target=#aquatic"
-                    ]
-                }
-                monster-player-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:zombie_head"
-                        title="&6monster-player-damage"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=entity-damage, source=#monster, target=minecraft:player",
-                        "flag=projectile-impact-entity, source=#monster, target=minecraft:player"
-                    ]
-                }
-                monster-spawn {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:zombie_spawn_egg"
-                        title="&6monster-spawn"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-spawn, target=#monster"
-                    ]
-                }
-                piston-item-spawn {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:piston"
-                        title="&6piston-item-spawn"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=item-spawn, source=minecraft:piston",
-                        "flag=item-spawn, source=minecraft:sticky_piston"
-                    ]
-                }
-                piston-use {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:sticky_piston"
-                        title="&6piston-use"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=block-break, source=minecraft:piston",
-                        "flag=block-place, source=minecraft:piston",
-                        "flag=block-break, source=minecraft:sticky_piston",
-                        "flag=block-place, source=minecraft:sticky_piston"
-                    ]
-                }
-                player-block-break {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:diamond_pickaxe"
-                        title="&6player-block-break"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=block-break, source=minecraft:player"
-                    ]
-                }
-                player-block-interact {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:stone_button"
-                        title="&6player-block-interact"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-block-secondary, source=minecraft:player"
-                    ]
-                }
-                player-block-place {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:grass_block"
-                        title="&6player-block-place"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=block-place, source=minecraft:player"
-                    ]
-                }
-                player-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:cactus"
-                        title="&6player-damage"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=entity-damage, target=minecraft:player",
-                        "flag=projectile-impact-entity, target=minecraft:player"
-                    ]
-                }
-                player-deny-flight {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="false"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:feather"
-                        title="&6player-deny-flight"
-                    }
-                    permissions=[
-                        "option=player-deny-flight"
-                    ]
-                }
-                player-deny-glide {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="false"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:elytra"
-                        title="&6player-deny-glide"
-                    }
-                    permissions=[
-                        "option=player-deny-glide"
-                    ]
-                }
-                player-deny-godmode {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="false"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:totem_of_undying"
-                        title="&6player-deny-godmode"
-                    }
-                    permissions=[
-                        "option=player-deny-godmode"
-                    ]
-                }
-                player-deny-hunger {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="false"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:cooked_beef"
-                        title="&6player-deny-hunger"
-                    }
-                    permissions=[
-                        "option=player-deny-hunger"
-                    ]
-                }
-                player-enderpearl-interact {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:ender_pearl"
-                        title="&6player-enderpearl-interact"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-item-secondary, source=minecraft:player, target=minecraft:ender_pearl"
-                    ]
-                }
-                player-endportal-use {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:end_portal_frame"
-                        title="&6player-endportal-use"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-teleport-from, source=minecraft:end_portal, target=minecraft:player"
-                    ]
-                }
-                player-entity-interact {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:carrot_on_a_stick"
-                        title="&6player-entity-interact"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-entity-secondary, source=minecraft:player"
-                    ]
-                }
-                player-exit {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:iron_door"
-                        title="&6player-exit"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=exit-claim, source=minecraft:player"
-                    ]
-                }
-                player-fly-speed {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="0"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:firework_rocket"
-                        title="&6player-fly-speed"
-                    }
-                    permissions=[
-                        "option=player-fly-speed"
-                    ]
-                }
-                player-gamemode {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=undefined
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:emerald_block"
-                        title="&6player-gamemode"
-                    }
-                    permissions=[
-                        "option=player-gamemode"
-                    ]
-                }
-                player-health-regen {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="0"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:glistering_melon_slice"
-                        title="&6player-health-regen"
-                    }
-                    permissions=[
-                        "option=player-health-regen"
-                    ]
-                }
-                player-item-drop {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:dropper"
-                        title="&6player-item-drop"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=item-drop, source=minecraft:player"
-                    ]
-                }
-                player-item-drop-lock {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="false"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:piston"
-                        title="&6player-item-drop-lock"
-                    }
-                    permissions=[
-                        "option=player-item-drop-lock"
-                    ]
-                }
-                player-item-pickup {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:hopper"
-                        title="&6player-item-pickup"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=item-pickup, source=minecraft:player"
-                    ]
-                }
-                player-itemframe-interact {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:item_frame"
-                        title="&6player-itemframe-interact"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-entity-secondary, target=minecraft:glow_item_frame, target=minecraft:item_frame, source=minecraft:player"
-                    ]
-                }
-                player-itemhanging-place {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:item_frame"
-                        title="&6player-itemhanging-place"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-item-secondary, target=#hanging, source=minecraft:player"
-                    ]
-                }
-                player-keep-inventory {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=undefined
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:ender_chest"
-                        title="&6player-keep-inventory"
-                    }
-                    permissions=[
-                        "option=player-keep-inventory"
-                    ]
-                }
-                player-keep-level {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=undefined
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:experience_bottle"
-                        title="&6player-keep-level"
-                    }
-                    permissions=[
-                        "option=player-keep-level"
-                    ]
-                }
-                player-netherportal-use {
-                    contexts=[
-                        "gd_claim_default=global"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:obsidian"
-                        title="&6player-netherportal-use"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-teleport-from, source=minecraft:nether_portal, target=minecraft:player"
-                    ]
-                }
-                player-teleport-cost {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="0"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:ender_eye"
-                        title="&6player-teleport-cost"
-                    }
-                    permissions=[
-                        "option=player-teleport-cost"
-                    ]
-                }
-                player-teleport-delay {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="0"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:clock"
-                        title="&6player-teleport-delay"
-                    }
-                    permissions=[
-                        "option=player-teleport-delay"
-                    ]
-                }
-                player-teleport-from {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:magenta_glazed_terracotta"
-                        title="&6entity-itemframe-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-teleport-from, target=minecraft:player"
-                    ]
-                }
-                player-teleport-to {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=true
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:magenta_glazed_terracotta"
-                        title="&6entity-itemframe-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-teleport-to, target=minecraft:player"
-                    ]
-                }
-                player-villager-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:tripwire_hook"
-                        title="&6player-villager-damage"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=entity-damage, target=minecraft:villager, source=minecraft:player",
-                        "flag=projectile-impact-entity, target=minecraft:villager, source=minecraft:player"
-                    ]
-                }
-                player-walk-speed {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="0"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:leather_boots"
-                        title="&6player-walk-speed"
-                    }
-                    permissions=[
-                        "option=player-walk-speed"
-                    ]
-                }
-                player-weather {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=undefined
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:lightning_rod"
-                        title="&6player-weather"
-                    }
-                    permissions=[
-                        "option=player-weather"
-                    ]
-                }
-                pvp-combat-command {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="false"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:command_block"
-                        title="&6pvp-combat-command"
-                    }
-                    permissions=[
-                        "option=pvp-combat-command"
-                    ]
-                }
-                pvp-combat-teleport {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="false"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:ender_pearl"
-                        title="&6pvp-combat-teleport"
-                    }
-                    permissions=[
-                        "option=pvp-combat-teleport"
-                    ]
-                }
-                ravager-block-break {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:ravager_spawn_egg"
-                        title="&6ravager-block-break"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-break, source=minecraft:ravager"
-                    ]
-                }
-                silverfish-block-infest {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:infested_cobblestone"
-                        title="&6silverfish-block-infest"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-modify, source=minecraft:silverfish"
-                    ]
-                }
-                tnt-block-explosion {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:tnt"
-                        title="&6tnt-block-explosion"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=explosion-block, source=minecraft:tnt"
-                    ]
-                }
-                tnt-entity-explosion {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:tnt"
-                        title="&6tnt-entity-explosion"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=explosion-entity, source=minecraft:tnt"
-                    ]
-                }
-                turtle-egg-hatch {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:egg"
-                        title="&6turtle-egg-hatch"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-place, source=minecraft:turtle, target=minecraft:turtle_egg",
-                        "flag=block-break, source=minecraft:turtle_egg, target=minecraft:turtle_egg",
-                        "flag=block-modify, source=minecraft:turtle_egg, target=minecraft:turtle_egg",
-                        "flag=entity-damage, source=minecraft:turtle_egg, target=minecraft:turtle_egg"
-                    ]
-                }
-                villager-farm {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:composter"
-                        title="&6villager-farm"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-break, source=minecraft:villager, target=#crops",
-                        "flag=block-place, source=minecraft:villager, target=#crops"
-                    ]
-                }
-                villager-raid {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value="false"
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        id="minecraft:crossbow"
-                        title="&6villager-raid"
-                    }
-                    permissions=[
-                        "option=raid"
-                    ]
-                }
-                wither-block-break {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:wither_skeleton_skull"
-                        title="&6wither-block-break"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-break, source=minecraft:wither"
-                    ]
-                }
-                wither-entity-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:nether_star"
-                        title="&6wither-entity-damage"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=entity-damage, source=minecraft:wither"
-                    ]
-                }
-            }
-            # Whether definition group is enabled.
-            enabled=true
-            icon {
-                enchanted=false
-                id="minecraft:enchanted_golden_apple"
-                title="&cAdmin"
-            }
-        }
-        user {
-            # Set to true if this definition group is for admin use only.
-            # Note: If admin group, the permission is 'griefdefender.admin.custom.flag.<groupname>
-            # Note: If user group (admin set false), the permission is 'griefdefender.user.definition.flag.<preset>.<group>.<flagname>
-            admin-group=false
-            definitions {
-                block-fertilize {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:bone_meal"
-                        title="&6block-fertilize"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=block-grow, used_item=minecraft:bone_meal, target=#crops, source=minecraft:player",
-                        "flag=block-grow, used_item=minecraft:bone_meal, target=#plants, source=minecraft:player",
-                        "flag=interact-item-secondary, target=minecraft:bonemeal, source=minecraft:player"
-                    ]
-                }
-                block-trampling {
-                    contexts=[
-                        "gd_claim_override=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:dirt"
-                        title="&6block-trampling"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=collide-block, target=minecraft:turtle_egg, target=minecraft:farmland"
-                    ]
-                }
-                chest-access {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:chest"
-                        title="&6chest-access"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=minecraft:chest_minecart, target=minecraft:chest, source=minecraft:player, target=minecraft:trapped_chest",
-                        "flag=interact-inventory, target=minecraft:chest_minecart, target=minecraft:chest, source=minecraft:player, target=minecraft:trapped_chest"
-                    ]
-                }
-                crop-growth {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:wheat"
-                        title="&6crop-growth"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-grow, target=#crops"
-                    ]
-                }
-                damage-animals {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:mutton"
-                        title="&6damage-animals"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-damage, target=#animal",
-                        "flag=projectile-impact-entity, target=#animal",
-                        "flag=entity-damage, target=#fishes",
-                        "flag=projectile-impact-entity, target=#fishes"
-                    ]
-                }
-                enderman-grief {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:ender_eye"
-                        title="&6enderman-grief"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-break, source=minecraft:enderman",
-                        "flag=block-place, source=minecraft:enderman"
-                    ]
-                }
-                fire-spread {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:blaze_powder"
-                        title="&6fire-spread"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=block-spread, source=minecraft:fire",
-                        "flag=block-spread, source=minecraft:lava"
-                    ]
-                }
-                grass-growth {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:tall_grass"
-                        title="&6grass-growth"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-grow, target=minecraft:grass"
-                    ]
-                }
-                ice-form {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:packed_ice"
-                        title="&6ice-form"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-modify, target=minecraft:ice"
-                    ]
-                }
-                ice-melt {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:blue_stained_glass"
-                        title="&6ice-melt"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-modify, target=minecraft:water, source=minecraft:ice"
-                    ]
-                }
-                lava-flow {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:lava_bucket"
-                        title="&6lava-flow"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=liquid-flow, source=minecraft:lava, target=minecraft:air"
-                    ]
-                }
-                leaf-decay {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:oak_leaves"
-                        title="&6leaf-decay"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=leaf-decay"
-                    ]
-                }
-                lighter {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:flint_and_steel"
-                        title="&6lighter"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-item-secondary, target=minecraft:flint_and_steel, source=minecraft:player"
-                    ]
-                }
-                mushroom-growth {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:brown_mushroom_block"
-                        title="&6mushroom-growth"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-grow, target=#mushroom"
-                    ]
-                }
-                mycelium-spread {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:mycelium"
-                        title="&6mycelium-spread"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-spread, target=minecraft:mycelium"
-                    ]
-                }
-                painting-damage {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:painting"
-                        title="&6painting-damage"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-damage, target=minecraft:painting"
-                    ]
-                }
-                player-enter {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:oak_door"
-                        title="&6player-enter"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=enter-claim, source=minecraft:player"
-                    ]
-                }
-                pvp {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:diamond_sword"
-                        title="&6pvp"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=entity-damage, target=minecraft:player, source=minecraft:player",
-                        "flag=projectile-impact-entity, target=minecraft:player, source=minecraft:player"
-                    ]
-                }
-                ride {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:saddle"
-                        title="&6ride"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=entity-riding, target=#vehicle, source=minecraft:player",
-                        "flag=interact-entity-secondary, target=#vehicle, source=minecraft:player"
-                    ]
-                }
-                sign-edit {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:oak_sign"
-                        title="&6sign-edit"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-modify, target=#signs, source=minecraft:player"
-                    ]
-                }
-                sign-use {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:oak_sign"
-                        title="&6sign-use"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-block-primary, target=#signs, source=minecraft:player",
-                        "flag=interact-block-secondary, target=#signs, source=minecraft:player"
-                    ]
-                }
-                sleep {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:red_bed"
-                        title="&6sleep"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-block-secondary, target=#beds, source=minecraft:player",
-                        "flag=interact-item-secondary, target=#beds, source=minecraft:player"
-                    ]
-                }
-                snow-fall {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:snowball"
-                        title="&6snow-fall"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-place, target=minecraft:snow, source=minecraft:air"
-                    ]
-                }
-                snow-melt {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:snow_block"
-                        title="&6snow-melt"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-break, source=minecraft:snow"
-                    ]
-                }
-                snowman-trail {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:snow"
-                        title="&6snowman-trail"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-place, source=minecraft:snow_golem, target=minecraft:snow"
-                    ]
-                }
-                soil-dry {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:farmland"
-                        title="&6soil-dry"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-modify, source=minecraft:farmland, state=moisture:0"
-                    ]
-                }
-                vehicle-use {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:oak_boat"
-                        title="&6vehicle-use"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=interact-item-secondary, target=minecraft:minecart, target=#vehicle, target=#boats, source=minecraft:player",
-                        "flag=entity-damage, target=minecraft:minecart, target=minecraft:boat, target=#vehicle, source=minecraft:player",
-                        "flag=entity-riding, target=minecraft:minecart, target=minecraft:boat, target=#vehicle, source=minecraft:player",
-                        "flag=interact-entity-secondary, target=minecraft:minecart, target=minecraft:boat, target=#vehicle, source=minecraft:player"
-                    ]
-                }
-                villager-trade {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:emerald"
-                        title="&6villager-trade"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=interact-entity-secondary, target=minecraft:villager, source=minecraft:player"
-                    ]
-                }
-                vine-growth {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=true
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:vine"
-                        title="&6vine-growth"
-                    }
-                    owner-mode=false
-                    permissions=[
-                        "flag=block-spread, target=minecraft:vine"
-                    ]
-                }
-                water-flow {
-                    contexts=[
-                        "gd_claim_default=user"
-                    ]
-                    default-groups {}
-                    default-value=false
-                    enabled=true
-                    icon {
-                        enchanted=false
-                        icon-flags=[
-                            "hide_attributes"
-                        ]
-                        id="minecraft:water_bucket"
-                        title="&6water-flow"
-                    }
-                    owner-mode=true
-                    permissions=[
-                        "flag=liquid-flow, source=minecraft:water, target=minecraft:air",
-                        "flag=liquid-flow, source=minecraft:water, target=#crops"
-                    ]
-                }
-            }
-            # Whether definition group is enabled.
-            enabled=true
-            icon {
-                enchanted=false
-                id="minecraft:apple"
-                title="&aUser"
-            }
-        }
-    }
-    icon {
-        enchanted=false
-        id="minecraft:light_blue_shulker_box"
-        title="&dminecraft"
-    }
-    version="1.0"
-}
-```
-
-</details>
-
-## GUI  
-
-GD provides a flag definition GUI which is designed to allow both users and admins to easily administer their claim flags.  
-
-In order to display the flag definition GUI, a user command must execute the following command `/cf` or `/gd flag claim`  
-
-The GUI will then be displayed on screen in either CHAT or as an inventory GUI.  
-This depends on what permission the user has set and the toggle status of `/claimgui`.  See the [Main GUI](/wiki/basic/GUI.html) page for more details.  
-
-All flag definitions will have a value of `true` or `false` and will represent the current active value for the claim you are in.
-
-Once the flag definition GUI has been displayed, the user will see a subsection labeled `PUBLIC` and additional subsections based on permissions.  
-These subsections work as follows  :
-
-### PUBLIC  
-
-The public section of GUI controls flag permissions for non-trusted users. Toggling flags under this section will NOT affect trusted users or claim owner.
-
-Note: All flag definitions will always support the `PUBLIC` type and thus will always be listed under it.  
-Note: All permissions will be set on LP group `griefdefender_definition`  
-
-### OWNER  
-
-The owner section of GUI controls flag permissions for trusted users including the claim owner.  
-
-Note: A flag definition will only be displayed under `OWNER` if the flag definition has `owner-mode` set to `true`.  
-Note: All claim flag permissions will be set on LP user that owns the claim.   
-Note: For wilderness claims, all claim flag permissions are set on the LP wilderness user `_GDWorld_` with UUID `00000000-0000-0000-0000-000000000000`  
-Note: For admin claims, all claim flag permissions are set on the LP admin user `_GDAdmin_` with UUID `11111111-1111-1111-1111-111111111111`   
-
-
-### Permissions  
-
-The following permission controls the user's ability to toggle flag definitions in GUI  
-`griefdefender.user.definition.flag.<preset>.<group>.<definition_name>`
-
-As an example, lets assume you want to deny user access to toggle the `damage-animals` flag in GUI.  
-You would enter the following in LuckPerms  
-`/lp group <groupname> permission set griefdefender.user.definition.flag.minecraft.user.damage-animals false`
-
-As shown below, both admin/user flags start off as either `true` or `false` and will represent the current active value of claim you are in.  
-
-### ADMIN
-:warning: Admin flags will ONLY affect the claim you are in.  
-
-![Admin GUI](https://i.imgur.com/tSVSC7q.png)
-
-
-By default, admins have access to 2 modes `PRESET` and `ADVANCED`.
-The `PRESET` mode is directly linked to the minecraft flag definitions preset file. Each group is read into the GUI as a tab along with its definitions.
-There are 2 delivered groups that GD ships with, `USER` and `ADMIN`. 
- 
-Both groups will apply flags to claim you are standing in. If you need flags set as a default, set it up in config as shown above.
-
-
-Flag Definition                                  | Default Value | Description |
--------------------------------------------------|---------------|--------------|
-```ambient-spawn``` |  true  | Controls whether ambients, such as bats, spawn.
-```animal-block-modify``` |  true  | Controls whether animals can modify blocks such as rabbits eating carrots.
-```animal-spawn``` |  true  | Controls whether animals, such as cows/pigs/horses/etc., spawn.
-```aquatic-spawn``` |  true  | Controls whether aquatics that live in water, such as squids, spawn.
-```armorstand-use``` |  false | Controls whether armorstands can be placed or broken.
-```chorus-fruit-teleport``` | false | Controls whether a player can use chorus fruit to teleport.
-```commandblock-block-break``` | false | Controls whether command blocks can break blocks.
-```commandblock-block-place``` | false | Controls whether command blocks can place blocks.
-```creeper-block-explosion``` | false | Controls whether a creeper can explode blocks.
-```creeper-entity-explosion``` | false | Controls whether a creeper can explode entities.
-```endcrystal-use```      | false  | Controls whether endcrystals can be placed or broken.
-```entity-armorstand-damage``` | false | Controls whether entities can deal damage to armorstands.
-```entity-itemframe-damage``` | false | Controls whether entities can deal damage to item frames.
-```exp-drop``` | true | Controls whether experience orbs can drop.
-```fall-entity-damage``` | true | Controls whether entities can take fall damage.
-```fall-player-damage``` | true | Controls whether players can take fall damage.
-```falling-block-break``` | true | Controls whether falling blocks can break.
-```fire-block-damage``` | true | Controls whether fire can cause block damage.
-```fire-entity-damage``` | true |  Controls whether fire can cause entity damage.
-```lightning-damage```  | true | Controls whether lightning can cause harm.
-```monster-animal-damage``` | false |  Controls whether monsters can deal damage to animals.
-```monster-player-damage``` | true | Controls whether monsters can deal damage to players.
-```monster-spawn```  | true | Controls whether monsters, such as creepers and skeletons, can spawn.
-```piston-item-spawn``` | true | Controls whether mycelium can spread.
-```piston-use``` | false | Controls whether pistons can be used.
-```player-block-break``` | false | Controls whether players can break blocks.
-```player-block-interact``` | false | Controls whether players can interact with blocks.<br />Note: This does not include inventory blocks such as chests.
-```player-block-place``` | false | Controls whether players can place blocks.
-```player-damage``` | true | Controls whether players can be damaged.
-```player-enderpearl-interact``` | true | Controls whether players can use an enderpearl.
-```player-endportal-use``` | true | Controls whether players can use end portal.
-```player-entity-interact``` | true | Controls whether players can interact with entities.<br />Note: This does not include chest access with entities such as horses.
-```player-exit``` | true | Controls whether a player can exit this claim.
-```player-item-drop``` | true | Controls whether players can drop items.
-```player-item-pickup``` | true | Controls whether players can pickup items.
-```player-itemframe-interact``` | false | Controls whether players can interact with item frames.
-```player-itemhanging-place``` | false | Controls whether players can place hanging items such as itemframes.
-```player-netherportal-use``` | true | Controls whether players can use nether portal.
-```player-teleport-from``` | true | Controls whether players can teleport from this claim.
-```player-teleport-to``` | true | Controls whether players can teleport to this claim.
-```player-villager-damage``` | false | Controls whether players can deal damage to villagers.
-```ravager-block-break``` | true | Controls whether ravagers can break blocks during raids.
-```silverfish-block-infest``` | false | Controls whether silverfish can infest blocks such as cobblestone.
-```tnt-block-explosion``` | false | Controls whether tnt can explode blocks.
-```tnt-entity-explosion``` | false | Controls whether tnt can explode entities.
-```turtle-egg-hatch``` | true | Controls whether turtle eggs can hatch.
-```villager-farm``` | true | Controls whether villages can farm crops.
-```wither-block-break``` | false | Controls whether withers can break blocks.
-```wither-entity-damage``` | true | Controls whether withers can damage entities.
-
-### USER
-:warning: User flags will ONLY affect the claim you are in.  
-:warning: If you want to modify `USER` flag definitions in a claim that you do not own, you must have ignoreclaims permissions and enter `/ignoreclaims` before executing `/cf` command.
-
-
-As a user, if you enter the `/cf` command, you will see the following
-
-![User GUI](https://i.imgur.com/LTeNaaD.png)
-
-Flag Definition                                  | Default Value | Description | 
--------------------------------------------------|---------------|--------------|
-```block-fertilize``` | false | Controls whether a player can fertilize a block with bonemeal.
-```block-trampling``` |  false  | Controls whether farmland and turtle eggs can be trampled.
-```chest-access``` | false | Controls whether a player can access chest inventories.
-```crop-growth``` | true | Controls whether crops can grow.
-```damage-animals``` | false | Controls whether animals can be damaged.
-```enderman-grief``` | false | Controls whether enderman can grief.
-```fire-spread``` | false | Controls whether fire can spread.
-```grass-growth``` | true | Controls whether grass can grow.
-```ice-form``` | true | Controls whether ice can form.
-```ice-melt``` | true | Controls whether ice can melt.
-```lava-flow``` | false | Controls whether lava can flow.
-```leaf-decay``` | true | Controls whether leaves can decay.
-```lighter``` | false | Controls whether a player can use flint and steel.
-```mushroom-growth``` | true | Controls whether mushrooms can grow.
-```mycelium-spread``` | true | Controls whether mycelium can spread.
-```painting-damage``` | false | Controls whether players can break paintings.
-```player-enter``` | true | Controls whether a player can enter this claim.
-```pvp``` | true | Controls whether PvP combat is allowed.
-```ride``` | false | Controls whether vehicles(including animals), not owned by the player, can be mounted.
-```sign-edit``` | true | Controls whether players can edit signs.
-```sign-use``` | true | Controls whether players can use signs.
-```sleep``` | true | Controls whether players can sleep in beds
-```snow-fall``` | true | Controls whether snow can fall.
-```snow-melt``` | true | Controls whether snow can melt.
-```snowman-trail``` | true | Controls whether snowmen can create snow beneath them.
-```soil-dry``` | true | Controls whether soil will dry.
-```vehicle-use``` | false | Controls whether vehicles(boats, minecarts, etc.) can be placed, ridden and broken.
-```villager-trade``` | true | Controls whether players can trade with villagers.
-```vine-growth``` | true | Controls whether vines(and kelp) can grow.
-```water-flow``` | false | Controls whether water can flow.
+> To prevent owners from overriding this in the GUI, deny the permission:  
+> `griefdefender.advanced.user.gui.flag.group.manager`

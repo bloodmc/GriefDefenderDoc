@@ -17,57 +17,37 @@ export default hopeTheme({
 
   locales: {
     "/": {
-      // navbar
       navbar: navbar.en,
-
-      // sidebar
       sidebar: sidebar.en,
-
       footer: "Licensed under MIT",
-
       displayFooter: true,
-
     },
 
-    /**
-     * Chinese locale config
-     */
     "/zh/": {
-      // navbar
       navbar: navbar.zh,
-
-      // sidebar
       sidebar: sidebar.zh,
-
       footer: "在 MIT 下授权分发",
-
       displayFooter: true,
-
     },
 
-    /**
-     * Brazilian Portuguese locale config
-     */
     "/br/": {
-      // navbar
       navbar: navbar.br,
-
-      // sidebar
       sidebar: sidebar.br,
-
       footer: "Licenciado sob o MIT",
-
       displayFooter: true,
-
     },
-
   },
 
   plugins: {
     blog: false,
+    slimsearch: true,
     mdEnhance: {
-	  tabs: true
+      tabs: true,
     },
-    slimsearch: true
+    git: {
+      createdTime: false,
+      updatedTime: true,
+      contributors: false,
+    },
   },
 });

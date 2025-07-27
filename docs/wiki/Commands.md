@@ -14,18 +14,15 @@ This document outlines all available `/gd` commands in **GriefDefender**, organi
 
 ### `/gd`
 
-When used without any arguments, `/gd` opens the **GriefDefender GUI**. This interface may appear as either a **chat-based GUI** or an **inventory-based GUI**, depending on the player's toggle setting:
+When used without any arguments, `/gd` opens the **GriefDefender GUI**. This interface may appear as either a **chat-based GUI** or an **inventory-based GUI**, depending on the player's toggle setting.
 
 * Use `/gd toggle gui` to switch between chat and inventory modes.
-* See [GUI Documentation ↗](https://docs.griefdefender.com/wiki/basic/GUI) for a full breakdown of features and usage tips.
+* See the [GUI Documentation ↗](https://docs.griefdefender.com/wiki/basic/GUI) for a full breakdown of features and usage tips.
 
-This is the primary command to access all major GriefDefender functionality in a user-friendly interface. This interface may appear as either a **chat-based GUI** or an **inventory-based GUI**, depending on the player's toggle setting:
-
-* Use `/gd toggle gui` to switch between chat and inventory modes.
-
-This is the primary command to access all major GriefDefender functionality in a user-friendly interface.
+This is the primary command to access all major GriefDefender functionality through a user-friendly interface.
 
 **Arguments Key:** `<required>` `[optional]`
+
 
 ### 📌 Claim Identifier
 
