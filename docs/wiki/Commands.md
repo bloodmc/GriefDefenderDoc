@@ -5,72 +5,118 @@ category: info
 icon: shell
 ---
 
-# Command Overview
+# GriefDefender Commands
 
-Arguments Key: \<required\> [optional]
+This document outlines all available `/gd` commands in **GriefDefender**, organized for clarity and usability. Each section includes aliases, permissions, arguments, and usage notes.
 
-### Claim Identifier  
+## 🛠️ Command Overview
 
-Many commands support the new argument [`[identifier]`](/wiki/basic/Claim-Management.html#claim-identifiers) which is the claim id set by the claim owner.  If you do not want to be required to stand in a claim for a specific command, set the claim identifier using `/gd claim id <identifier>` then pass the identifier at the end of the command.  
-If using an identifier for an admin claim, the format is `admin:<identifier>`     
-If using an identifier for wilderness, the format is `wilderness:<identifier>`  
-If using an identifier for another player, the format is `<playername>:<identifier>`  
 
-### Main Command
+### `/gd`
 
-* [/gd](#gd)
+When used without any arguments, `/gd` opens the **GriefDefender GUI**. This interface may appear as either a **chat-based GUI** or an **inventory-based GUI**, depending on the player's toggle setting:
 
-### Claims
+* Use `/gd toggle gui` to switch between chat and inventory modes.
+* See [GUI Documentation ↗](https://docs.griefdefender.com/wiki/basic/GUI) for a full breakdown of features and usage tips.
 
-* [/gd abandon claim](#gd-abandon-claim)
-* [/gd abandon all](#gd-abandon-all)
-* [/gd abandon top](#gd-abandon-top)
-* [/gd buy blocks](#gd-buy-blocks)
-* [/gd buy claim](#gd-buy-claim)
-* [/gd claim bank](#gd-claim-bank)
-* [/gd claim contract](#gd-claim-contract)
+This is the primary command to access all major GriefDefender functionality in a user-friendly interface. This interface may appear as either a **chat-based GUI** or an **inventory-based GUI**, depending on the player's toggle setting:
+
+* Use `/gd toggle gui` to switch between chat and inventory modes.
+
+This is the primary command to access all major GriefDefender functionality in a user-friendly interface.
+
+**Arguments Key:** `<required>` `[optional]`
+
+### 📌 Claim Identifier
+
+Many commands support the new argument [`[identifier]`](/wiki/basic/Claim-Management#claim-identifiers) which is the claim id set by the claim owner.  If you do not want to be required to stand in a claim for a specific command, set the claim identifier using `/gd claim id <identifier>` then pass the identifier at the end of the command.
+If using an identifier for an admin claim, the format is `admin:<identifier>`
+If using an identifier for wilderness, the format is `wilderness:<identifier>`
+If using an identifier for another player, the format is `<playername>:<identifier>`
+
+---
+
+
+## 📒 Table of Contents
+
+### 🙋 User Commands
+
+#### 🏗️ Creation & Modification
+
 * [/gd claim create](#gd-claim-create)
-* [/gd claim debug](#gd-claim-debug)
-* [/gd claim displayname](#gd-claim-displayname)
 * [/gd claim expand](#gd-claim-expand)
-* [/gd claim farewell](#gd-claim-farewell)
-* [/gd claim greeting](#gd-claim-greeting)
+* [/gd claim contract](#gd-claim-contract)
+* [/gd claim displayname](#gd-claim-displayname)
+* [/gd claim title](#gd-claim-title)
+* [/gd claim setspawn](#gd-claim-setspawn)
+* [/gd claim we](#gd-claim-we)
 * [/gd claim id](#gd-claim-id)
+
+#### 🎚️ Toggles
+
+* [/gd toggle claim](#gd-toggle-claim)
+* [/gd toggle cuboid](#gd-toggle-cuboid)
+* [/gd toggle inherit](#gd-toggle-inherit)
+* [/gd toggle tool](#gd-toggle-tool)
+* [/gd toggle gui](#gd-toggle-gui)
+
+#### 📜 Info & Inspection
+
 * [/gd claim info](#gd-claim-info)
 * [/gd claim inspect](#gd-claim-inspect)
 * [/gd claim list](#gd-claim-list)
-* [/gd claim rent](#gd-claim-rent)
-* [/gd claim setspawn](#gd-claim-setspawn)
-* [/gd claim spawn](#gd-claim-spawn)
-* [/gd claim tax](#gd-claim-tax)
-* [/gd claim title](#gd-claim-title)
-* [/gd claim transfer](#gd-claim-transfer)
-* [/gd claim we](#gd-claim-we)
-* [/gd claimgroup admin](#gd-claimgroup-admin)
-* [/gd confirm](#gd-confirm)
-* [/gd givepet](#gd-givepet)
-* [/gd mode basic](#gd-mode-basic)
-* [/gd mode subdivide](#gd-mode-subdivide)
-* [/gd mode town](#gd-mode-town)
+* [/gd claim debug](#gd-claim-debug)
 * [/gd player info](#gd-player-info)
-* [/gd player transferblocks](#gd-player-transferblocks)
-* [/gd player trapped](#gd-player-trapped)
-* [/gd player unlockdrops](#gd-player-unlockdrops)
-* [/gd sell blocks](#gd-sell-blocks)
-* [/gd sell claim](#gd-sell-claim)
-* [/gd toggle claim](#gd-toggle-claim)
-* [/gd toggle cuboid](#gd-toggle-cuboid)
-* [/gd toggle gui](#gd-toggle-gui)
-* [/gd toggle inherit](#gd-toggle-inherit)
-* [/gd toggle notifications](#gd-toggle-notifications)
-* [/gd toggle tool](#gd-toggle-tool)
 
-### Plots
+#### 🔁 Transfers & Grouping
+
+* [/gd claim transfer](#gd-claim-transfer)
+* [/gd player transferblocks](#gd-player-transferblocks)
+* [/gd claimgroup admin](#gd-claimgroup-admin)
+* [/gd givepet](#gd-givepet)
+
+#### 💵 Economy & Rentals
+
+* [/gd buy blocks](#gd-buy-blocks)
+* [/gd sell blocks](#gd-sell-blocks)
+* [/gd buy claim](#gd-buy-claim)
+* [/gd sell claim](#gd-sell-claim)
+* [/gd claim bank](#gd-claim-bank)
+* [/gd claim rent](#gd-claim-rent)
+* [/gd claim tax](#gd-claim-tax)
+
+#### 🧩 Plot Management
+
+* [/gd plot claim](#gd-plot-claim)
 * [/gd plot create](#gd-plot-create)
 * [/gd plot merge](#gd-plot-merge)
 * [/gd plot unmerge](#gd-plot-unmerge)
 
-### Flags
+#### 🚪 Greetings & Messages
+
+* [/gd claim greeting](#gd-claim-greeting)
+* [/gd claim farewell](#gd-claim-farewell)
+
+#### 🚶 Movement & Trapped
+
+* [/gd claim spawn](#gd-claim-spawn)
+* [/gd player trapped](#gd-player-trapped)
+* [/gd player unlockdrops](#gd-player-unlockdrops)
+
+#### 🧹 Abandoning & Confirmation
+
+* [/gd abandon claim](#gd-abandon-claim)
+* [/gd abandon all](#gd-abandon-all)
+* [/gd abandon top](#gd-abandon-top)
+* [/gd confirm](#gd-confirm)
+
+#### ⚙️ Claim Modes
+
+* [/gd mode basic](#gd-mode-basic)
+* [/gd mode subdivide](#gd-mode-subdivide)
+* [/gd mode town](#gd-mode-town)
+
+#### 🚩 Flag Management
 
 * [/gd flag claim](#gd-flag-claim)
 * [/gd flag group](#gd-flag-group)
@@ -80,59 +126,72 @@ If using an identifier for another player, the format is `<playername>:<identifi
 * [/gd flagdefinition group](#gd-flagdefinition-group)
 * [/gd flagdefinition player](#gd-flagdefinition-player)
 
-### Options
+#### 🛠️ Option Management
+
 * [/gd option claim](#gd-option-claim)
 * [/gd option group](#gd-option-group)
 * [/gd option player](#gd-option-player)
 
-### Trust  
-
-Note: Use `public` if you want to trust all users.
+#### 🤝 Trust Management
 
 * [/gd trust player](#gd-trust-player)
 * [/gd trust group](#gd-trust-group)
-* [/gd trust list](#gd-trust-list)
 * [/gd trustall player](#gd-trustall-player)
 * [/gd trustall group](#gd-trustall-group)
-* [/gd trustalladmin group](#gd-trustall-group)
+* [/gd trustalladmin group](#gd-trustalladmin-group)
+* [/gd trust list](#gd-trust-list)
 * [/gd untrust player](#gd-untrust-player)
 * [/gd untrust group](#gd-untrust-group)
 * [/gd untrustall player](#gd-untrustall-player)
-* [/gd untrustall group](#gd-untrustall-group)
+* [/untrustall group](#untrustall-group)
 
-### Admin
+### 🛡️ Admin Commands
+
+#### 🧹 Claim & User Cleanup
 
 * [/gd abandon allother](#gd-abandon-all-other)
 * [/gd abandon world](#gd-abandon-world)
-* [/gd ban](#gd-ban)
-* [/gd claim clear](#gd-claim-clear)
-* [/gd claim reserve](#gd-claim-reserve)
-* [/gd claim restore](#gd-claim-restore)
-* [/gd claim schematic](#gd-claim-schematic)
-* [/gd debug](#gd-debug)
 * [/gd delete claim](#gd-delete-claim)
 * [/gd delete all](#gd-delete-all)
 * [/gd delete alladmin](#gd-delete-alladmin)
 * [/gd delete top](#gd-delete-top)
-* [/gd economy blocktransfer](#gd-economy-blocktransfer)
-* [/gd mode admin](#gd-mode-admin)
-* [/gd mode nature](#gd-mode-nature)
-* [/gd permission group](#gd-permission-group)
-* [/gd permission player](#gd-permission-player)
 * [/gd player adjustbonusblocks](#gd-player-adjustbonusblocks)
 * [/gd player adjustbonusblocksall](#gd-player-adjustbonusblocksall)
 * [/gd player setaccruedblocks](#gd-player-setaccruedblocks)
-* [/gd reload](#gd-reload)
+
+#### 🧱 Claim Management
+
+* [/gd claim clear](#gd-claim-clear)
+* [/gd claim reserve](#gd-claim-reserve)
+* [/gd claim restore](#gd-claim-restore)
+* [/gd claim schematic](#gd-claim-schematic)
+
+#### ⚙️ Admin Modes & Toggles
+
+* [/gd mode admin](#gd-mode-admin)
+* [/gd mode nature](#gd-mode-nature)
 * [/gd toggle ignore](#gd-toggle-ignore)
+
+#### 🔐 Permissions
+
+* [/gd permission group](#gd-permission-group)
+* [/gd permission player](#gd-permission-player)
+
+#### 💸 Economy Tools
+
+* [/gd economy blocktransfer](#gd-economy-blocktransfer)
+
+#### 🔧 Utility & Debug
+
+* [/gd debug](#gd-debug)
+* [/gd reload](#gd-reload)
+
+#### 🚫 Ban Management
+
+* [/gd ban](#gd-ban)
 * [/gd unban](#gd-unban)
 
-
-### Advanced
-
-* [/gd claimgroup player](#gd-claimgroup-player)
-* [/gd snapshot](#gd-snapshot)
-
-### Misc
+### 📦 Misc
 
 * [/gd help](#gd-help)
 * [/gd version](#gd-version)
@@ -142,913 +201,1203 @@ Note: Use `public` if you want to trust all users.
 
 ### Claims
 ___
-#### `/gd abandon claim`
-**Aliases**: `abandon, abandonclaim`  
+
+### `/gd abandon claim`
+
+**Aliases**: `abandon`, `abandonclaim`  
 **Arguments**: `[identifier]`  
-**Permission**: `griefdefender.user.claim.command.abandon.base`  
-**Additional Permissions**:  
-    `griefdefender.user.claim.command.abandon.basic` - Required if abandoning basic claim.  
-    `griefdefender.user.claim.command.abandon.subdivision` - Required if abandoning subdivision.  
-    `griefdefender.user.claim.command.abandon.town` - Required if abandoning town.  
-**Note**: This is only used for user claims NOT admin claims. See [/gd delete claim [identifier]](#gd-delete-claim)  
+**Permission**: `griefdefender.user.claim.command.abandon.base`
 
-Abandons the claim you are standing on unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
-Note: This command will only work on claims with no children. If you want to abandon a claim with children, you must use
-[/gd abandon top](#gd-abandon-top) instead.
+**Additional Permissions:**  
+* `griefdefender.user.claim.command.abandon.basic` – Required to abandon a **basic** claim  
+* `griefdefender.user.claim.command.abandon.subdivision` – Required to abandon a **subdivision**  
+* `griefdefender.user.claim.command.abandon.town` – Required to abandon a **town**  
 
-___
-#### `/gd abandon all`
-**Aliases**: `abandonall, abandonallclaims`  
- **Permission**: `griefdefender.user.claim.command.abandon-all`  
- 
-Abandons ALL your user claims.
+**Description**:  
+Abandons the claim the player is currently standing in or the one specified by a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers).
+
+**Notes**:  
+* This command is for **user claims only**. To delete an **admin claim**, use [`/gd delete claim`](#gd-delete-claim).  
+* Only works on claims with **no child claims**. To abandon a claim with children, use [`/gd abandon top`](#gd-abandon-top).
 
 ___
-#### `/gd abandon top`
-**Aliases**:  `abandontop`  
-**Arguments**: `[identifier]`   
-**Permission**: `griefdefender.user.claim.command.abandon-top-level`  
 
-Abandons the claim you are standing on and all its subdivisions unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
-Note: If used on a town claim, it will also include all basic children claims owned by the town owner.
+### `/gd abandon all`
+
+**Aliases**: `abandonall`, `abandonallclaims`  
+**Permission**: `griefdefender.user.claim.command.abandon-all`
+
+**Description**:  
+Abandons **all** user claims owned by the player.
 
 ___
-#### `/gd buy blocks`
-**Aliases**: `buyblocks, buyclaimblocks`  
+
+### `/gd abandon top`
+
+**Aliases**: `abandontop`  
+**Arguments**: `[identifier]`  
+**Permission**: `griefdefender.user.claim.command.abandon-top-level`
+
+**Description**:  
+Abandons the top-level claim the player is currently standing in or the one specified by a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers), including any child subdivisions.
+
+**Notes**:  
+* If used on a **town** claim, it will also abandon all **basic claims** owned by the town owner.
+
+___
+
+### `/gd buy blocks`
+
+**Aliases**: `buyblocks`, `buyclaimblocks`  
 **Arguments**: `<amount>`  
 **Permission**: `griefdefender.user.claim.command.buy-blocks`  
 **Requires**: Economy plugin  
 
-Purchases additional claim blocks with currency. 
-Note: `economy-block-cost` must be set higher than 0 in [`options.yml`](/wiki/basic/Options.html) for this command to work.
+**Description**:  
+Purchases additional claim blocks using in-game currency.
+
+**Notes**:  
+* The `economy-block-cost` option must be greater than `0` in [`options.yml`](/wiki/basic/Options.html) for this command to function.
 
 ___
-#### `/gd buy claim`
+
+### `/gd buy claim`
+
 **Aliases**: `claimbuy`  
 **Permission**: `griefdefender.user.claim.command.buy`  
-**Requires**: Economy plugin.  
+**Requires**: Economy plugin  
 
-View a list of claims for sale. Click [Buy] to purchase.
+**Description**:  
+Displays a list of claims that are available for sale. Players can purchase claims by clicking the `[Buy]` button.
 
 ___
-#### `/gd claim bank`
+
+### `/gd claim bank`
+
 **Aliases**: `claimbank`  
 **Arguments**: `<withdraw|deposit> <amount> <name> [identifier]`  
 **Permission**: `griefdefender.user.claim.command.bank`  
-**Requires**: Economy plugin that supports virtual banks and config setting`bank-system` set to `true` in [`global.yml`](/wiki/advanced/Global-Config.html)  
+**Requires**: Economy plugin with virtual bank support and `bank-system: true` in [`global.yml`](/wiki/advanced/Global-Config.html)
 
-Used to withdraw or deposit money for use in claim you are standing in unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+**Description**:  
+Withdraws or deposits currency into the virtual bank account of a claim.
 
+**Notes**:  
+* Affects the claim the player is currently standing in, unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is provided.
 
 ___
-#### `/gd claim contract`
+
+### `/gd claim contract`
+
 **Aliases**: `claimcontract`, `contractclaim`  
 **Arguments**: `<amount> [direction] [identifier]`  
-**Permission**: `griefdefender.user.claim.command.contract`  
+**Permission**: `griefdefender.user.claim.command.contract`
 
-Contracts/Shrinks the claim you are standing in, unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified, from the direction specified or facing.  
+**Description**:  
+Contracts (shrinks) the current claim or the one specified, from the direction the player is facing or the one provided.
 
+**Notes**:  
+* Supports use of [claim identifiers](/wiki/basic/Claim-Management.html#claim-identifiers).
 ___
-#### `/gd claim create`
+
+### `/gd claim create`
+
 **Aliases**: `claimcreate`  
 **Arguments**: `<radius>|chunk [type]`  
-**Permission**: `griefdefender.user.claim.create.base`  
-**Additional Permissions**:  
-    `griefdefender.user.claim.create.basic` - Required if creating basic claim.  
-    `griefdefender.user.claim.create.subdivision` - Required if creating subdivision.  
-    `griefdefender.user.claim.create.town` - Required if creating town.  
-    `griefdefender.admin.claim.command.admin-mode` - Required if creating admin claim.  
+**Permission**: `griefdefender.user.claim.create.base`
 
-Creates a claim around the player of the given type. If no claimtype (or an incorrect one) is specified, a basic claim will be created.   
-Note: If `chunk` is used instead of `<radius>`, the claim will consume entire chunk you are standing in.  
+**Additional Permissions:**  
+* `griefdefender.user.claim.create.basic` – Required to create a **basic** claim.  
+* `griefdefender.user.claim.create.subdivision` – Required to create a **subdivision**.  
+* `griefdefender.user.claim.create.town` – Required to create a **town**.  
+* `griefdefender.admin.claim.command.admin-mode` – Required to create an **admin** claim.
 
+**Description**:  
+Creates a claim around the player based on the specified type. If no type or an invalid one is provided, a basic claim will be created by default.
 
-#### `/gd claim debug`
-**Aliases**: `cfdebug`  
-**Permission**: `griefdefender.user.claim.command.flag.debug`  
+**Notes**:  
+* If `chunk` is used instead of a `<radius>`, the entire chunk the player is standing in will be claimed.
 
-Toggles user claim debugging mode for claim owners to test protection as a non-trusted user.
 
 ___
-#### `/gd claim displayname`
+
+### `/gd claim debug`
+
+**Aliases**: `cfdebug`  
+**Permission**: `griefdefender.user.claim.command.flag.debug`
+
+**Description**:  
+Toggles **claim debug mode** for the player, allowing claim owners to simulate behavior as a **non-trusted user** to test protection settings.
+
+___
+
+### `/gd claim displayname`
+
 **Aliases**: `claimdisplayname`  
 **Arguments**: `<name>|clear`  
-**Permission**: `griefdefender.user.claim.command.display-name`  
+**Permission**: `griefdefender.user.claim.command.display-name`
 
-Sets the display name of your claim.  
-Note: Use `clear` as argument to clear display name.  
-Note: This command checks for reserved names set by admins in [`global.yml`](/wiki/advanced/Global-Config.html). If a reserved name is found, it will not be set unless set by an admin.  
+**Description**:  
+Sets or clears the display name of the claim you're standing in.
+
+**Notes**:  
+* Use `clear` to remove the current display name.  
+* Display names are validated against reserved entries in [`global.yml`](/wiki/advanced/Global-Config.html). Only admins can set names that are reserved.
 
 ___
-#### `/gd claim expand`
-**Aliases**: `claimexpand, expandclaim`  
+
+### `/gd claim expand`
+
+**Aliases**: `claimexpand`, `expandclaim`  
 **Arguments**: `<amount> [direction] [identifier]`  
-**Permission**: `griefdefender.user.claim.command.expand`  
- 
-Expands the claim you are standing in, unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified, in the direction specified or facing.  
+**Permission**: `griefdefender.user.claim.command.expand`
+
+**Description**:  
+Expands the size of the current claim or the one specified by a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers), in the direction you are facing or the one provided.
 
 ___
-#### `/gd claim farewell`
+
+### `/gd claim farewell`
+
 **Aliases**: `claimfarewell`  
 **Arguments**: `<message>|clear|none [identifier]`  
-**Permission**: `griefdefender.user.claim.command.farewell`  
+**Permission**: `griefdefender.user.claim.command.farewell`
 
-Sets the farewell message of the claim you are standing in, unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.  
-Note: To unset, use `/gd claim farewell clear`
+**Description**:  
+Sets the **farewell message** for a claim when players exit.
+
+**Notes**:  
+* Applies to the claim you're standing in unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is used.  
+* Use `clear` to remove the farewell message.
 
 ___
-#### `/gd claim greeting`
+
+### `/gd claim greeting`
+
 **Aliases**: `claimgreeting`  
 **Arguments**: `<message>|clear|none [identifier]`  
-**Permission**: `griefdefender.user.claim.command.greeting`  
+**Permission**: `griefdefender.user.claim.command.greeting`
 
-Sets the greeting message of your claim.  
-Note: To unset, use `/gd claim greeting clear`
+**Description**:  
+Sets the **greeting message** for a claim when players enter.
 
+**Notes**:  
+* Applies to the claim you're standing in unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is used.  
+* Use `clear` to remove the greeting message.
 
 ___
-#### `/gd claim id`
+
+### `/gd claim id`
+
 **Aliases**: `claimid`  
 **Arguments**: `<identifier>`  
-**Permission**: `griefdefender.user.claim.command.id`  
+**Permission**: `griefdefender.user.claim.command.id`
 
-Sets the friendly identifier of your claim.  
-Note: This command checks for reserved names set by admins in [`global.yml`](/wiki/advanced/Global-Config.html). If a reserved name is found, it will not be set unless set by an admin.
+**Description**:  
+Assigns a **custom identifier** to the claim you're standing in.
+
+**Notes**:  
+* Reserved identifiers in [`global.yml`](/wiki/advanced/Global-Config.html) can only be assigned by admins.
 
 ___
-#### `/gd claim info`
+
+### `/gd claim info`
+
 **Aliases**: `claiminfo`  
 **Arguments**: `[identifier]`  
-**Permission**: `griefdefender.user.claim.command.info.base`  
-**Additional Permissions**:  
-    `griefdefender.user.claim.command.info.others` - Required to see other claim info not owned by you.  
-    `griefdefender.user.claim.create.town` - Required to change a claim to a town type.  
-    `griefdefender.user.claim.command.info.raid` - Required to toggle raids.  
-    `griefdefender.user.claim.command.greeting` - Required to set claim greeting.  
-    `griefdefender.user.claim.command.farewell` - Required to set claim farewell.  
-    `griefdefender.user.claim.command.enter-title` - Required to set claim enter title.  
-    `griefdefender.user.claim.command.exit-title` - Required to set claim exit title.  
-    `griefdefender.user.chat.capture` - Required to toggle chat capture.  
-    `griefdefender.user.claim.command.info.others.creation-date` - Required to see creation date in claims not owned by you.  
-    `griefdefender.user.claim.command.info.others.last-active` - Required to see last active in claims not owned by you.  
-    `griefdefender.user.claim.command.info.others.claim-uuid` - Required to see claim UUID in claims not owned by you.  
+**Permission**: `griefdefender.user.claim.command.info.base`
 
-Gets information about the claim you are standing in unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+**Additional Permissions:**  
+* `griefdefender.user.claim.command.info.others` – View info for claims not owned by you.  
+* `griefdefender.user.claim.create.town` – Required to change claim type to town.  
+* `griefdefender.user.claim.command.info.raid` – Toggle raid mode.  
+* `griefdefender.user.claim.command.greeting` – Set greeting message.  
+* `griefdefender.user.claim.command.farewell` – Set farewell message.  
+* `griefdefender.user.claim.command.enter-title` – Set enter title.  
+* `griefdefender.user.claim.command.exit-title` – Set exit title.  
+* `griefdefender.user.chat.capture` – Toggle chat capture.  
+* `griefdefender.user.claim.command.info.others.creation-date` – View creation date on others’ claims.  
+* `griefdefender.user.claim.command.info.others.last-active` – View last active on others’ claims.  
+* `griefdefender.user.claim.command.info.others.claim-uuid` – View UUID on others’ claims.
 
+**Description**:  
+Displays detailed information about the current claim or one specified by a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers).
 
 ___
-#### `/gd claim inspect`
+
+### `/gd claim inspect`
+
 **Aliases**: `claiminspect`  
 **Arguments**: `[area|hide|hideall]`  
-**Permission**: `griefdefender.user.claim.command.inspect`  
+**Permission**: `griefdefender.user.claim.command.inspect`
 
-Inspects the target block player is looking at or nearby claims.
+**Description**:  
+Displays information about the block the player is looking at or reveals nearby claims.
 
 ___
-#### `/gd claim list`
+
+### `/gd claim list`
+
 **Aliases**: `claimlist`  
 **Arguments**: `[<player> [world]]`  
-**Permission**: `griefdefender.user.claim.command.list.base`  
-**Additional Permissions**:  
-    `griefdefender.user.claim.command.list.others` - Required to list claims not owned by you.  
-    `griefdefender.user.claim.create.town` - Required to list towns not owned by you.  
-    `griefdefender.user.chat.capture` - Required to toggle chat capture.  
+**Permission**: `griefdefender.user.claim.command.list.base`
 
-List information about a player's claims.
+**Additional Permissions:**  
+* `griefdefender.user.claim.command.list.others` – List claims owned by others.  
+* `griefdefender.user.claim.create.town` – List towns owned by others.  
+* `griefdefender.user.chat.capture` – Toggle chat capture.
+
+**Description**:  
+Lists all claims owned by the specified player or yourself.
+
 
 ___
-#### `/gd claim rent`
+
+### `/gd claim rent`
+
 **Aliases**: `claimrent`  
-**Arguments**: `[create <rate> [max_days]|list|cancel]`  
+**Arguments**: `[create <rate> [max_days] | list | cancel]`  
 **Permission**: `griefdefender.user.claim.command.rent`  
-**Requires**: Economy plugin and `rent-system` to be enabled in [`global.yml`](/wiki/advanced/Global-Config.html)  
+**Requires**: Economy plugin and `rent-system` enabled in [`global.yml`](/wiki/advanced/Global-Config.html)
 
-Used to rent/list claims.  
-Note: This command is only used for built-in GD rent system. It is recommended to use RealEstate instead.
+**Description**:  
+Used to list claims for rent, view available rentals, or cancel existing rentals.
+
+**Notes**:  
+* `create` – Lists the claim you're standing in for rent at the specified rate, with an optional maximum duration in days.  
+* `list` – Displays a list of claims currently for rent.  
+* `cancel` – Cancels the rental of the claim you're standing in.  
+* Only applies to the built-in GD rent system. For a more robust rental experience, consider using the [RealEstate plugin](https://www.spigotmc.org/resources/realestate.44306/).
 
 ___
-#### `/gd claim setspawn`
+
+### `/gd claim setspawn`
+
 **Aliases**: `claimsetspawn`  
-**Permission**: `griefdefender.user.claim.command.set-spawn`  
+**Permission**: `griefdefender.user.claim.command.set-spawn`
 
-Sets the spawn of your claim to the location you are standing in.
+**Description**:  
+Sets the spawn point of your current claim to your current location.
 
 ___
-#### `/gd claim spawn`
+
+### `/gd claim spawn`
+
 **Aliases**: `claimspawn`  
 **Arguments**: `[identifier]`  
 **Permission**: `griefdefender.user.claim.command.spawn`  
-**Requires**: Economy plugin if `player-teleport-cost` is used.  
+**Requires**: Economy plugin if `player-teleport-cost` is configured
 
-Teleports you to claim spawn, if available.  
-Note: To delay teleport, set option `player-teleport-delay` higher than `0` in [`options.yml`](/wiki/basic/Options.html).  
-Note: To charge currency on teleport, set `player-teleport-cost` to a value higher than 0 in [`options.yml`](/wiki/basic/Options.html).
+**Description**:  
+Teleports the player to the spawn point of the current claim, or a specified claim using [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers).
+
+**Notes**:  
+* To delay teleport, set `player-teleport-delay` in [`options.yml`](/wiki/basic/Options.html).  
+* To charge for teleport, set `player-teleport-cost` in [`options.yml`](/wiki/basic/Options.html).
 
 ___
-#### `/gd claim tax`
-**Arguments**: `balance|force|reset|resetall|pay <amount>]`   
+
+### `/gd claim tax`
+
+**Arguments**: `balance | force | reset | resetall | pay <amount>`  
 **Permission**: `griefdefender.user.claim.command.claim.tax`  
-**Requires**: Economy plugin and config setting `tax-system` to be enabled in [`global.yml`](/wiki/advanced/Global-Config.html). It is highly recommended to test this feature before turning on.  
+**Requires**: Economy plugin and `tax-system` enabled in [`global.yml`](/wiki/advanced/Global-Config.html)
 
-Used to manage taxes of a claim.  See [Tax System](/wiki/basic/Tax-System.html) for more info.  
-Note: The argument `force` allows an admin to pay a claim's tax balance for another player.    
-Note: The argument `reset` will reset tax owed in claim. Requires `griefdefender.admin.claim.command.admin-mode` or ability to ignore claim type.  
-Note: The argument `resetall` will reset tax owed in all claims. Requires `griefdefender.admin.claim.command.admin-mode` or ability to ignore claim type.
+**Description**:  
+Manages taxes for a claim. See the [Tax System Guide](/wiki/basic/Tax-System.html) for configuration and usage details.
 
+**Notes**:  
+* `balance` – Shows the current tax balance.  
+* `pay <amount>` – Pays the specified amount toward the claim's tax.  
+* `force` – Allows an admin to pay another claim's tax.  
+* `reset` – Resets tax on the current claim (requires `admin-mode` or ignore flag).  
+* `resetall` – Resets tax on all claims (requires `admin-mode` or ignore flag).  
+* It is recommended to thoroughly test before enabling in production.
 
 ___
-#### `/gd claim title`
+
+### `/gd claim title`
+
 **Aliases**: `claimtitle`  
 **Arguments**: `enter|exit main|sub <message>|clear|none`  
-**Permission**: `griefdefender.user.claim.command.enter-title`  
+**Permission**: `griefdefender.user.claim.command.enter-title`
 
-Sets the enter or exit title of your claim.  
-Note: Use `clear` or `none` to clear title.
+**Description**:  
+Sets a **title message** that appears when players enter or exit a claim.
+
+**Notes**:  
+* Use `clear` or `none` to remove the title.  
+* `main` applies to the main claim; `sub` applies to subdivisions.
 
 ___
-#### `/gd claim transfer`
-**Aliases**: `claimtransfer, transferclaim`  
+
+### `/gd claim transfer`
+
+**Aliases**: `claimtransfer`, `transferclaim`  
 **Arguments**: `<player> [identifier]`  
-**Permission**: `griefdefender.user.claim.command.transfer`  
+**Permission**: `griefdefender.user.claim.command.transfer`
 
-Transfer the claim you're standing in, unless [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified, to target player.
+**Description**:  
+Transfers ownership of the claim you're standing in (or the one identified) to the specified player.
 
 ___
-#### `/gd claim we`
-**Aliases**: `gdwe, gdworldedit`  
-**Arguments**: `claim|clear|select [identifier]`  
-  `claim` - creates GD claim from WE selection.  
-  `clear` - clears worldedit selection.  
-  `select` - creates new WE selection from GD claim.  
+
+### `/gd claim we`
+
+**Aliases**: `gdwe`, `gdworldedit`  
+**Arguments**: `claim | clear | select [identifier]`  
 **Permission**: `griefdefender.user.claim.command.worldedit.create`  
-**Requires**: WorldEdit.  
+**Requires**: [WorldEdit](https://enginehub.org/worldedit)
 
-Used to manage GD claims with worldedit.  
-Note: This command will not work unless the server has WorldEdit.
+**Description**:  
+Integrates claim creation and selection with WorldEdit.
+
+**Modes**:  
+* `claim` – Creates a claim from current WorldEdit selection.  
+* `clear` – Clears your WorldEdit selection.  
+* `select` – Selects an existing claim as a WorldEdit region.
+
+**Note**:  
+WorldEdit must be installed on the server for this to work.
 
 ___
-#### `/gd claimgroup admin`
-**Aliases**: `cga, claimgroupadmin`  
-**Arguments**: `join <group> [<identifier>]|unjoin [<identifier>]|create <group>|delete <group>`  
-**Permission**: `griefdefender.admin.claim.command.group`  
 
-Used to manage global admin claim groups. See [Claim Groups](/wiki/basic/Claim-Management.html#claim-groups) for more info.
+### `/gd claimgroup admin`
+
+**Aliases**: `cga`, `claimgroupadmin`  
+**Arguments**:  
+* `join <group> [identifier]`  
+* `unjoin [identifier]`  
+* `create <group>`  
+* `delete <group>`  
+**Permission**: `griefdefender.admin.claim.command.group`
+
+**Description**:  
+Used to manage **admin claim groups**. See [Claim Groups](/wiki/basic/Claim-Management.html#claim-groups) for details on group behavior and use cases.
+
 
 ___
-#### `/gd confirm`
+
+### `/gd confirm`
+
 **Aliases**: `gdconfirm`  
 **Permission**: `griefdefender.user.command.ymlirm`  
 
-Used to confirm chat confirmations by command.  
+**Description**:  
+Confirms pending chat-based confirmations. This is typically required for certain sensitive actions like abandoning large claims or transferring ownership.
 
 ___
-#### `/gd givepet`
+
+### `/gd givepet`
+
 **Aliases**: `givepet`  
 **Arguments**: `<player>`  
 **Permission**: `griefdefender.user.claim.command.give.pet`  
 
-Transfers a pet you own to a new owner.
-
-
-___
-#### `/gd mode basic`
-**Aliases**: `bc, basicclaims, modeadmin`  
-**Permission**:   `griefdefender.user.claim.command.basic-mode`  
-
-Switches the modification tool to basic claims mode which allows user to create basic claims.
+**Description**:  
+Transfers a tamed pet (e.g., wolf) that you own to the specified player.
 
 ___
-#### `/gd mode subdivide`
-**Aliases**: `sc, modesubdivide, subdivideclaims`  
-**Permission**:   `griefdefender.user.claim.command.subdivide-mode`  
 
-Switches the modification tool to subdivision mode, used to subdivide your claims.
+### `/gd mode basic`
 
-___
-#### `/gd mode town`
-**Aliases**: `modetown, townclaims`  
-**Permission**:   `griefdefender.user.claim.command.town-mode`  
+**Aliases**: `bc`, `basicclaims`, `modeadmin`  
+**Permission**: `griefdefender.user.claim.command.basic-mode`  
 
-Switches the modification tool to town claims mode.
+**Description**:  
+Switches the modification tool into **basic claims mode**, allowing players to create and manage standard personal claims.
 
 ___
-#### `/gd player info`
-**Aliases**: `gdplayerinfo, playerinfo`  
-**Arguments**: `[<player>|<player> <world>]`  
+
+### `/gd mode subdivide`
+
+**Aliases**: `sc`, `modesubdivide`, `subdivideclaims`  
+**Permission**: `griefdefender.user.claim.command.subdivide-mode`  
+
+**Description**:  
+Switches the modification tool into **subdivision mode**, used to divide an existing claim into smaller areas with independent trust and permissions.
+
+___
+
+### `/gd mode town`
+
+**Aliases**: `modetown`, `townclaims`  
+**Permission**: `griefdefender.user.claim.command.town-mode`  
+
+**Description**:  
+Switches the modification tool into **town claims mode**, allowing creation and management of town-type claims that can contain child claims owned by other players.
+
+___
+
+### `/gd player info`
+
+**Aliases**: `gdplayerinfo`, `playerinfo`  
+**Arguments**: `[<player>] [<world>]`  
 **Permission**: `griefdefender.user.command.info.base`  
 **Additional Permissions**:  
-    `griefdefender.user.command.info.others` - Required to view other player's info.  
-    `griefdefender.user.command.info.others.last-active` - Required to view other player's last active info.  
-   `griefdefender.user.claim.create.town` - Required to view town info.  
-    `griefdefender.user.chat.capture` - Required to toggle chat capture.  
+* `griefdefender.user.command.info.others` – View data for players other than yourself.  
+* `griefdefender.user.command.info.others.last-active` – View last active time of other players.  
+* `griefdefender.user.claim.create.town` – View town information.  
+* `griefdefender.user.chat.capture` – Toggle chat capture.
 
-Gets information about a player's data, claim blocks, and claim limits.
+**Description**:  
+Displays claim-related data for the specified player, including claim block balances, claim limits, and town stats.
 
 ___
-#### `/gd player transferblocks`
+
+### `/gd player transferblocks`
+
 **Aliases**: `transferblocks`  
 **Arguments**: `<player> <amount>`  
 **Permission**: `griefdefender.user.claim.command.give.blocks`  
 
-Transfers owned claim blocks to another player.  
-Note: This will deduct claim blocks from player using command. Use with caution!
+**Description**:  
+Transfers a specified number of your **claim blocks** to another player.
+
+**Note**:  
+This action **cannot be undone**. Use caution when transferring claim blocks.
 
 ___
-#### `/gd player trapped`  
+
+### `/gd player trapped`
+
 **Aliases**: `trapped`  
 **Permission**: `griefdefender.user.claim.command.trapped`  
 
-Teleports the player to a safe location if stuck and unable to build.
+**Description**:  
+Teleports you to a safe nearby location if you're stuck in a claim and unable to build or move.
 
 ___
-#### `/gd player unlockdrops`  
+
+### `/gd player unlockdrops`
+
 **Aliases**: `unlockdrops`  
 **Permission**: `griefdefender.user.claim.command.unlock-drops`  
 
-Allows other players to pickup any items dropped from death.  
+**Description**:  
+Unlocks your **death drops**, allowing other players to pick them up.
 
 ___
-#### `/gd sell blocks`
-**Aliases**: `sellblocks, sellclaim, sellclaimblocks`  
+
+### `/gd sell blocks`
+
+**Aliases**: `sellblocks`, `sellclaim`, `sellclaimblocks`  
 **Arguments**: `[amount]`  
 **Permission**: `griefdefender.user.claim.command.sell-blocks`  
-**Requires**: Economy plugin.  
+**Requires**: Economy plugin  
 
-Sell your claim blocks for server money.  
-Note: `economy-block-sell-return` must be set higher than 0 in [`options.yml`](/wiki/basic/Options.html) for this command to work.
+**Description**:  
+Sells a specified number of your claim blocks in exchange for currency.
+
+**Note**:  
+* `economy-block-sell-return` in [`options.yml`](/wiki/basic/Options.html) must be set higher than `0`.
 
 ___
-#### `/gd sell claim`
+
+### `/gd sell claim`
+
 **Aliases**: `claimsell`  
-**Arguments**: `<price>|cancel`  
+**Arguments**: `<price> | cancel`  
 **Permission**: `griefdefender.user.claim.command.sell`  
 
-Puts your claim up for sale at the set price.  
-Note: To cancel sale, execute `/claimsell cancel`
+**Description**:  
+Puts your current claim up for sale at the specified price.
+
+**Notes**:  
+* Use `/claimsell cancel` to remove the claim from the sale list.
+
 
 ___
-#### `/gd toggle claim`
-**Aliases**: `claim, toggleclaim`  
+
+### `/gd toggle claim`
+
+**Aliases**: `claim`, `toggleclaim`  
 **Permission**: `griefdefender.user.claim.command.claim-mode.base`  
 
-Toggles claim mode creation. This mode does not use tools.  
-Note: This will default to basic claim mode.  
-Note: Use left-click to visualize/hide claims.  
-Note: Use right-click to begin claiming.
+**Description**:  
+Toggles claim creation mode without using a tool. Enables manual claim creation through mouse clicks.
+
+**Notes**:  
+* Defaults to **basic** claim mode.  
+* **Left-click** – Visualize or hide nearby claims.  
+* **Right-click** – Begin creating a new claim.
 
 ___
-#### `/gd toggle cuboid`
-**Aliases**: `cuboid, togglecuboid`  
+
+### `/gd toggle cuboid`
+
+**Aliases**: `cuboid`, `togglecuboid`  
 **Permission**: `griefdefender.user.claim.command.cuboid`  
 
-Toggles 3D cuboid claims mode which takes height into account rather than claiming from bedrock to sky.
+**Description**:  
+Toggles **cuboid (3D)** claim mode, allowing you to define claims with specific height rather than defaulting from bedrock to sky.
 
 ___
-#### `/gd toggle gui`
+
+### `/gd toggle gui`
+
 **Aliases**: `claimgui`  
 **Permission**: `griefdefender.user.claim.command.gui`  
 
-Toggle interface between Chat/Inventory GUI.
+**Description**:  
+Toggles between **Chat GUI** and **Inventory GUI** interfaces when using GriefDefender commands and menus.
 
 ___
-#### `/gd toggle inherit`
-**Aliases**: `claiminherit, toggleclaiminherit`  
+
+### `/gd toggle inherit`
+
+**Aliases**: `claiminherit`, `toggleclaiminherit`  
 **Permission**: `griefdefender.user.claim.command.inherit`  
 
-Toggles whether claim inherits flags and trust from parent claim.  
-Note: Does not affect children claims in towns as this is always enforced.
+**Description**:  
+Toggles whether a claim inherits **trust** and **flag settings** from its parent claim.
+
+**Note**:  
+* This has no effect on **child claims in towns**—inheritance is always enforced in those cases.
 
 ___
-#### `/gd toggle notifications`
+
+### `/gd toggle notifications`
+
 **Aliases**: `claimnotifications`  
 **Permission**: `griefdefender.user.claim.command.toggle.notifications`  
 
-To enable/disable greeting/farewell messages on trusted claims.
+**Description**:  
+Enables or disables **greeting** and **farewell** message notifications on trusted claims you enter or leave.
 
 ___
-#### `/gd toggle tool`
+
+### `/gd toggle tool`
+
 **Aliases**: `claimtool`  
 **Permission**: `griefdefender.user.claim.command.claim-tool`  
 
-To enable/disable the claim tool.
+**Description**:  
+Toggles the use of the **claim tool**, typically a golden shovel or item defined by the server, used for visualizing and creating claims.
+
+___
+
 
 ### Plots
 
-___
-#### `/gd plot claim`
-**Aliases**: claimplot
-**Arguments**: [plot_identifier]
-**Permission**: griefdefender.user.claim.create.plot
-
-Allow players to claim a nearby plot or a plot in specified plot container identifier.​
 
 ___
-#### `/gd plot create`
-**Aliases**: `claimcreateplot`
-**Arguments**: `<name> <child_radius> <quantity> <spacing> [X Z]`
-**Permission**: `griefdefender.admin.claim.create.plot`
 
-Allow admins to create a container of plots for players.​
+### `/gd plot claim`
 
-___
-#### `/gd plot merge`
-**Aliases**: `claimplotmerge`
-**Arguments**: `[identifier]`
-**Permission**: `griefdefender.user.claim.plot.merge`
+**Aliases**: `claimplot`  
+**Arguments**: `[plot_identifier]`  
+**Permission**: `griefdefender.user.claim.create.plot`  
 
-Allows players to merge plots in the direction they are facing.​
+**Description**:  
+Allows a player to claim a nearby unclaimed plot, or a specific plot inside a plot container using the given `[plot_identifier]`.
 
 ___
-#### `/gd plot unmerge`
-**Atalho**: `claimplotunmerge`
-**Arguments**: `[identifier]`
-**Permissão**: `griefdefender.admin.claim.plot.unmerge`
 
-Allows admins to unmerge plots they are standing in.​
+### `/gd plot create`
+
+**Aliases**: `claimcreateplot`  
+**Arguments**: `<name> <child_radius> <quantity> <spacing> [X Z]`  
+**Permission**: `griefdefender.admin.claim.create.plot`  
+
+**Description**:  
+Allows an admin to generate a plot container containing multiple child plots that can be claimed by players.
+
+**Notes**:  
+* `<child_radius>` defines the size of each plot.  
+* `<quantity>` is the total number of plots to generate.  
+* `<spacing>` sets the space between plots.  
+* `[X Z]` (optional) specifies the center coordinates. If omitted, the player’s current location is used.
+
+___
+
+### `/gd plot merge`
+
+**Aliases**: `claimplotmerge`  
+**Arguments**: `[identifier]`  
+**Permission**: `griefdefender.user.claim.plot.merge`  
+
+**Description**:  
+Allows a player to merge their plot with an adjacent plot in the direction they are facing.  
+Useful for combining multiple owned plots into one larger claim.
+
+___
+
+### `/gd plot unmerge`
+
+**Aliases**: `claimplotunmerge`  
+**Arguments**: `[identifier]`  
+**Permission**: `griefdefender.admin.claim.plot.unmerge`  
+
+**Description**:  
+Allows an admin to unmerge previously merged plots.  
+The command must be executed while standing inside the merged plot or by specifying a claim identifier.
+
+___
+
 
 ### Flags
 
+
 ___
-#### `/gd flag claim`
-**Aliases**: `cf, claimflag`   
+
+### `/gd flag claim`
+
+**Aliases**: `cf`, `claimflag`  
 **Arguments**: `[<flag> <target> <value> [contexts]]`  
 **Permission**: `griefdefender.user.claim.command.flag.base`  
-**Additional Permissions**:  
-    `griefdefender.user.claim.command.flag.gui` - Required for using flag GUI if command specified with no args.  
-    `griefdefender.advanced.admin.flag.<flag_name>` - Required for using this command for `<flag_name>` specified as argument.  
-    `griefdefender.user.claim.command.list-flags` - Required for listing current flags used in claim.  
-    `griefdefender.user.definition.flag.<preset_name>.<group>.<definition_name>` - Required to see user flag definitions presented in GUI.  
-    `griefdefender.admin.definition.flag.<preset_name>.<group>.<definition_name>` - Required to see admin flag definitions presented in GUI.  
-    `griefdefender.user.chat.capture` - Required to use chat capture feature in chat GUI.  
-    `griefdefender.advanced.admin.flags.base` - Required to see `ADVANCED` button in chat GUI.  
-    `griefdefender.advanced.user.gui.flag.group.owner` - Required to see `OWNER` tab in GUI.  
-    `griefdefender.advanced.user.gui.flag.group.accessor` - Required to see `ACCESSOR` tab in GUI.  
-    `griefdefender.advanced.user.gui.flag.group.builder` - Required to see `BUILDER` tab in GUI.  
-    `griefdefender.advanced.user.gui.flag.group.container` - Required to see `CONTAINER` tab in GUI.  
-    `griefdefender.advanced.user.gui.flag.group.manager` - Required to see `MANAGER` tab in GUI.  
 
-Gets/Sets claim flags in the claim you are standing in.
+**Additional Permissions:**  
+* `griefdefender.user.claim.command.flag.gui` – Enables the flag GUI when no arguments are provided.  
+* `griefdefender.advanced.admin.flag.<flag_name>` – Required to set specific advanced flags.  
+* `griefdefender.user.claim.command.list-flags` – Allows listing of flags in the claim.  
+* `griefdefender.user.definition.flag.<preset>.<group>.<definition>` – Grants access to user flag definitions in GUI.  
+* `griefdefender.admin.definition.flag.<preset>.<group>.<definition>` – Grants access to admin flag definitions in GUI.  
+* `griefdefender.user.chat.capture` – Enables chat capture feature in the GUI.  
+* `griefdefender.advanced.admin.flags.base` – Required to view the `ADVANCED` tab in GUI.  
+* `griefdefender.advanced.user.gui.flag.group.owner` – Enables access to the `OWNER` tab in GUI.  
+* `griefdefender.advanced.user.gui.flag.group.accessor` – Enables access to the `ACCESSOR` tab.  
+* `griefdefender.advanced.user.gui.flag.group.builder` – Enables access to the `BUILDER` tab.  
+* `griefdefender.advanced.user.gui.flag.group.container` – Enables access to the `CONTAINER` tab.  
+* `griefdefender.advanced.user.gui.flag.group.manager` – Enables access to the `MANAGER` tab.
+
+**Description**:  
+Gets or sets flag permissions in the claim the player is standing in. If no arguments are used, opens a GUI (if permitted).
 
 ___
-#### `/gd flag group`
+
+### `/gd flag group`
+
 **Aliases**: `cfg`  
 **Arguments**: `<group> [<flag> <target> <value> [contexts]]`  
 **Permission**: `griefdefender.admin.claim.command.flag.group`  
 
-Gets/Sets flag permission for a LP group in claim you are standing in.
+**Description**:  
+Gets or sets flag permissions for a specified LuckPerms group in the current claim.
 
 ___
-#### `/gd flag player`
+
+### `/gd flag player`
+
 **Aliases**: `cfp`  
 **Arguments**: `<player> <flag> <target> <value> [contexts]`  
 **Permission**: `griefdefender.user.claim.command.flag.player`  
 
-Adds flag permission to player.
+**Description**:  
+Adds or modifies a flag permission for a specific player within the claim.
 
 ___
-#### `/gd flag reset`
+
+### `/gd flag reset`
+
 **Aliases**: `cfr`  
 **Arguments**: `[identifier]`  
 **Permission**: `griefdefender.user.claim.command.flag.reset`  
 
-Resets a claim to flag defaults by removing all persisted permissions with claim UUID in LP.
+**Description**:  
+Resets all flags in the claim to their defaults by removing any LuckPerms permissions tied to the claim UUID.
 
 ___
-#### `/gd flagdefinition`
-**Aliases**: `claimflagdefinition, flagdefinition`  
+
+### `/gd flagdefinition`
+
+**Aliases**: `claimflagdefinition`, `flagdefinition`  
 **Arguments**: `<preset:group:public|owner> <definition> <value> [identifier]`  
 **Permission**: `griefdefender.user.claim.command.flag.definition`  
-**Additional Permissions**:  
-    `griefdefender.user.definition.flag.<preset_name>.<group>.<definition_name>` - The flag definition specified as argument will require this permission.  
-**Example**: To toggle flag definition `tnt-block-explosion` in minecraft user group  
-`/gd flagdefinition minecraft:user:public tnt-block-explosion true`  
 
-Toggles specified flag definition to true or false.
+**Additional Permissions:**  
+* `griefdefender.user.definition.flag.<preset>.<group>.<definition>` – Required to use the specified flag definition.
 
-___
-#### `/gd flagdefinition group`
-**Aliases**: `claimflagdefinitiongroup, flagdefinitiongroup`  
-**Arguments**: `<group> <preset:group:public|owner> <definition> <value> [identifier]`  
-**Permission**: `griefdefender.user.claim.command.flag.definition-group`  
-**Additional Permissions**:  
-    `griefdefender.user.definition.flag.<preset_name>.<group>.<definition_name>` - The flag definition specified as argument will require this permission.  
-**Example**: To toggle flag definition `tnt-block-explosion` in minecraft user group on LP group named `vip`  
-`/gd flagdefinition group vip minecraft:user:public tnt-block-explosion true`  
-
-Toggles specified flag definition on LP group to true or false.
+**Example**:  
+To enable `tnt-block-explosion` for the `public` group in the `minecraft` preset:  
 
 ___
-#### `/gd flagdefinition player`
-**Aliases**: `claimflagdefinitionplayer, flagdefinitionplayer`  
-**Arguments**: `<player> <preset:group:public|owner> <definition> <value> [identifier]`  
-**Permission**: `griefdefender.user.claim.command.flag.definition-player`  
-**Additional Permissions**:  
-    `griefdefender.user.definition.flag.<preset_name>.<group>.<definition_name>` - The flag definition specified as argument will require this permission.  
-**Example**: To toggle flag definition `tnt-block-explosion` in minecraft user group on LP player named `Player123`  
-`/gd flagdefinition player Player123 minecraft:user:public tnt-block-explosion true`  
-
-Toggles specified flag definition on LP player to true or false.
-
-
 
 ### Options
+
 ___
-#### `/gd option claim `
-**Aliases**: `cod, claimoption`    
+
+### `/gd option claim`
+
+**Aliases**: `cod`, `claimoption`  
 **Arguments**: `[<option> <value> [contexts]]`  
 **Permission**: `griefdefender.admin.claim.command.option.base`  
-**Additional Permissions**:  
-    `griefdefender.user.claim.command.option.gui` - Required for using option GUI.  
-    `griefdefender.advanced.admin.options.arg` - Required for using command with args.  
-    `griefdefender.advanced.admin.option.<option_name>` - Required for using this command for `<option_name>` specified as argument.  
-    `griefdefender.user.claim.command.list-options` - Required for listing current options used in claim.  
-    `griefdefender.user.definition.option.<preset_name>.<group>.<definition_name>` - Required to see user option definitions presented in GUI.  
-    `griefdefender.admin.definition.option.<preset_name>.<group>.<definition_name>` - Required to see admin option definitions presented in GUI.  
 
-Gets/Sets options in the claim you are standing in.
+**Additional Permissions:**  
+* `griefdefender.user.claim.command.option.gui` – Enables the option GUI when no arguments are used.  
+* `griefdefender.advanced.admin.options.arg` – Required to use command arguments.  
+* `griefdefender.advanced.admin.option.<option_name>` – Required to set specific advanced options.  
+* `griefdefender.user.claim.command.list-options` – Allows listing options currently applied to the claim.  
+* `griefdefender.user.definition.option.<preset>.<group>.<definition>` – Grants access to user option definitions in GUI.  
+* `griefdefender.admin.definition.option.<preset>.<group>.<definition>` – Grants access to admin option definitions in GUI.
+
+**Description:**  
+Gets or sets an option on the claim you are currently standing in. If no arguments are provided, opens the GUI (if permitted).
 
 ___
-#### `/gd option group`
+
+### `/gd option group`
+
 **Aliases**: `cog`  
 **Arguments**: `<group> [<option> <value> [contexts]]`  
 **Permission**: `griefdefender.admin.claim.command.option.group`  
 
-Gets/Sets options for LP group in claim you are standing in.
+**Description:**  
+Gets or sets claim-specific options for the specified LuckPerms group in the current claim.
 
 ___
-#### `/gd option player`
+
+### `/gd option player`
+
 **Aliases**: `cop`  
-**Arguments**: `<player> [<option> <value> [contexts]]`   
+**Arguments**: `<player> [<option> <value> [contexts]]`  
 **Permission**: `griefdefender.admin.claim.command.option.player`  
 
-Gets/Sets options for a player in claim you are standing in.
+**Description:**  
+Gets or sets claim-specific options for a specified player in the current claim.
+
+___
 
 
-### Trust
+
+### Trusts
 Note: `public` is for all users.
+
 ___
-#### `/gd trust player`
-*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`  
-*Accessor*: `Grants a player entry to your claim(s) and use of your bed`  
-*Container*: `Grants a player access to your claim's containers, crops, animals, bed, buttons, and levers`  
-*Builder*: `Grants a player edit access to your claim(s)`  
-*Manager*: `Grants a player access to all of the above including claim settings`  
+
+### `/gd trust player`
+
 **Aliases**: `trust`  
-**Arguments**: `<player>|public <trusttype>`  
+**Arguments**: `<player>|public <accessor|builder|container|manager|resident>`  
 
-Grants a player access to your claim(s).
+**Trust Types:**  
+* **Accessor** – Grants entry to your claim(s) and use of beds.  
+* **Container** – Grants access to containers, crops, animals, buttons, levers, and beds.  
+* **Builder** – Grants full build/edit permissions.  
+* **Manager** – Grants access to all of the above, plus claim settings.  
+* **Resident** – Grants ability to create claims within yours (for towns), includes accessor permissions.
+
+**Description:**  
+Grants a player access to your current claim based on the selected trust type.
 
 ___
-#### `/gd trust group`
-*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`  
-*Accessor*: `Grants a group entry to your claim(s) and use of your bed`  
-*Container*: `Grants a group access to your claim's containers, crops, animals, bed, buttons, and levers`  
-*Builder*: `Grants a group edit access to your claim(s)`  
-*Manager*: `Grants a group access to all of the above including claim settings`  
+
+### `/gd trust group`
+
 **Aliases**: `trustgroup`  
 **Arguments**: `<group> [<accessor|builder|container|manager|resident>] [identifier]`  
 **Permission**: `griefdefender.admin.claim.command.trust.group`  
 
-Grants a LP group access to the claim you are standing in unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+**Description:**  
+Grants a LuckPerms group access to the specified claim or the claim you are standing in.
 
 ___
-#### `/gd trustall player`
-*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`  
-*Accessor*: `Grants a player entry to ALL your claim(s) and use of your bed`  
-*Container*: `Grants a player access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
-*Builder*: `Grants a player edit access to ALL your claim(s)`  
-*Manager*: `Grants a player access to all of the above including claim settings`  
-**Aliases**: `trust`  
-**Arguments**: `<player>|public <trusttype>`  
+
+### `/gd trustall player`
+
+**Aliases**: `trustall`  
+**Arguments**: `<player>|public <accessor|builder|container|manager|resident>`  
 **Permission**: `griefdefender.user.claim.command.trustall.player`  
 
-Grants a player access to ***ALL*** your claim(s).
+**Description:**  
+Grants a player access to ***ALL*** your claims using the specified trust type.
 
 ___
-#### `/gd trustall group`
-*Resident*: `Grants a player/group ability to create claims, includes accessor trust.  `
-*Accessor*: `Grants a group entry to ALL your claim(s) and use of your bed`  
-*Container*: `Grants a group access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
-*Builder*: `Grants a group edit access to ALL your claim(s)`  
-*Manager*: `Grants a group access to all of the above including claim settings`  
+
+### `/gd trustall group`
+
 **Aliases**: `trustallgroup`  
 **Arguments**: `<group>|public <accessor|builder|container|manager|resident>`  
 **Permission**: `griefdefender.admin.claim.command.trustall.group`  
 
-Grants a LP group access to ***ALL*** your claim(s).
+**Description:**  
+Grants a LuckPerms group access to ***ALL*** your claims using the specified trust type.
 
 ___
-#### `/gd trustalladmin group`
-*Resident*: `Grants a player/group ability to create claims, includes accessor trust.`  
-*Accessor*: `Grants a group entry to ALL your claim(s) and use of your bed`  
-*Container*: `Grants a group access to ALL your claim's containers, crops, animals, bed, buttons, and levers`  
-*Builder*: `Grants a group edit access to ALL your claim(s)`  
-*Manager*: `Grants a group access to all of the above including claim settings`  
+
+### `/gd trustalladmin group`
+
 **Aliases**: `trustallgroup`  
-**Arguments**: `<group>|public <accessor|builder|container|manager|resident>`    
+**Arguments**: `<group>|public <accessor|builder|container|manager|resident>`  
 **Permission**: `griefdefender.admin.claim.command.trustalladmin.group`  
 
-Grants a LP group access to ***ALL*** admin claim(s).
+**Description:**  
+Grants a LuckPerms group access to ***ALL*** admin claims using the specified trust type.
 
 ___
-#### `/gd trust list`
+
+### `/gd trust list`
+
 **Aliases**: `trustlist`  
 **Arguments**: `[type] [identifier]`  
- **Permission**: `griefdefender.user.claim.command.trust.list`  
- 
-Manages trust for the claim you're standing in.
+**Permission**: `griefdefender.user.claim.command.trust.list`  
+
+**Description:**  
+Displays or manages trust list for the current claim or specified claim identifier.
 
 ___
-#### `/gd untrust player`
+
+### `/gd untrust player`
+
 **Aliases**: `untrust`  
 **Arguments**: `<player>|public [<accessor|builder|container|manager|resident>] [identifier]`  
 **Permission**: `griefdefender.user.claim.command.untrust.player`  
 
-Revokes a player's access to your claim.
+**Description:**  
+Revokes a player's trust from the current claim or specified claim.
 
 ___
-#### `/gd untrust group`
+
+### `/gd untrust group`
+
 **Aliases**: `untrustgroup`  
 **Arguments**: `<group>|public [<accessor|builder|container|manager|resident>] [identifier]`  
 **Permission**: `griefdefender.admin.claim.command.untrust.group`  
 
-Revokes a group's access to your claim.
+**Description:**  
+Revokes a group's trust from the current claim or specified claim.
 
 ___
-#### `/gd untrustall player`
+
+### `/gd untrustall player`
+
 **Aliases**: `untrustall`  
 **Arguments**: `<player>|public [<accessor|builder|container|manager|resident>]`  
 **Permission**: `griefdefender.user.claim.command.untrustall.player`  
 
-Revokes a player's access to ***ALL*** your claim(s).
+**Description:**  
+Revokes a player's trust from ***ALL*** your claims.
 
 ___
-#### `/untrustall group`
+
+### `/gd untrustall group`
+
 **Aliases**: `untrustallgroup`  
-**Arguments**: `<group>|public [<accessor|builder|container|manager|resident>]`   
+**Arguments**: `<group>|public [<accessor|builder|container|manager|resident>]`  
 **Permission**: `griefdefender.admin.claim.command.untrustall.group`  
 
-Revokes a group's access to ***ALL*** your claim(s).
+**Description:**  
+Revokes a group's trust from ***ALL*** your claims.
+
+___
+
 
 
 ### Admin
 
 
+
 ___
-#### `/gd abandon allother`
+### `/gd abandon allother`
+
 **Aliases**: `abandonallother`  
 **Arguments**: `<player> <world>`  
- **Permission**: `griefdefender.admin.claim.command.abandon.all-other`  
- 
-Allows an admin to abandon ALL claims of specified player for specified world.
+**Permission**: `griefdefender.admin.claim.command.abandon.all-other`  
 
+**Description**:  
+Allows an admin to abandon ***all*** claims owned by the specified player in the given world.
 
 ___
-#### `/gd abandon world`  
+### `/gd abandon world`  
+
 **Aliases**: `abandonworld`  
 **Arguments**: `[world]`  
 **Permission**: `griefdefender.admin.claim.command.abandon.world`  
 
-Allows an to abandon ALL user claims in current world unless specified.  
+**Description**:  
+Abandons ***all*** user claims in the current world, or the specified world if provided.
 
 ___
-#### `/gd ban`  
+### `/gd ban`  
+
 **Aliases**: `claimban`  
 **Arguments**: `hand | <type> <target> [world] [<message>]`  
-Note: Valid types are `entity`, `item`, `block`  
-Note: Target represents the identifier of `entity, item, or block`  
 **Permission**: `griefdefender.admin.claim.command.ban`  
-**Example**:  To ban sticky piston usage in world named `valhalla` :  
-`/gd ban block minecraft:sticky_piston valhalla "You are not allowed to use sticky pistons in this world."`  
 
-Bans target entity, item, block, or item in hand from all usage.  
+**Description**:  
+Bans the specified entity, item, or block (or item in hand) from being used.  
+Valid types: `entity`, `item`, `block`  
+**Example**:  
+`/gd ban block minecraft:sticky_piston valhalla "You are not allowed to use sticky pistons in this world."`
 
 ___
-#### `/gd claim clear`
+### `/gd claim clear`
+
 **Aliases**: `claimclear`  
 **Arguments**: `<target> [identifier]`  
 **Permission**: `griefdefender.admin.claim.command.clear`  
-**Example**: To clear all pigs in current claim :  
-`/gd claim clear minecraft:pig`  
 
-Allows clearing of entities within one or more claims in claim you are standing on unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.
+**Description**:  
+Clears the specified entity type(s) within the current claim, or target claim if identifier is provided.  
+**Example**:  
+`/gd claim clear minecraft:pig`
 
 ___
-#### `/gd claim reserve`
+### `/gd claim reserve`
+
 **Aliases**: `claimreserve`  
 **Arguments**: `[name]`  
 **Permission**: `griefdefender.admin.claim.command.reserve-name`  
 
-Reserves a claim name for administrator use.  
-Note: Use no arguments to see current list of reserved names.
+**Description**:  
+Reserves a claim name for administrator use. Use no arguments to list reserved names.
 
 ___
-#### `/gd claim restore`
+### `/gd claim restore`
+
 **Aliases**: `claimrestore, restoreclaim`  
 **Permission**: `griefdefender.admin.command.restore-claim.base`  
-**Requires**: WorldEdit.  
+**Requires**: WorldEdit  
 
-Restores claim to its natural world generated state. Use with caution.  
-Note: This does not support custom worlds.
+**Description**:  
+Restores a claim to its original natural state using world generation. Use with caution — custom worlds are not supported.
 
 ___
-#### `/gd claim schematic`
+### `/gd claim schematic`
+
 **Aliases**: `claimschematic`  
 **Arguments**: `[<apply|create|delete> <name>]`  
 **Permission**: `griefdefender.admin.claim.command.reserve-name`  
 
-Manages claim schematics. Use `/claimschematic create <name>` to create a live backup of claim.  
-Note: Use no arguments to launch schematic GUI.
+**Description**:  
+Manages claim schematics. Use `/claimschematic create <name>` to save a live backup of the current claim.  
+Use no arguments to open the schematic GUI.
 
 ___
-#### `/gd debug`
+### `/gd debug`
+
 **Aliases**: `gddebug`  
 **Arguments**: `on|off|record|paste [filter]`  
 **Permission**: `griefdefender.admin.claim.command.debug`  
-**Example**: To record all flag actions in claim you are standing in :  
-`/gddebug record claim` then `/gddebug paste` to retrieve link.  
 
-Toggles admin claim debugging mode to record actions in claim. See [Debugging](/wiki/advanced/Debugging.html) for more info.  
-Note: Use `claim` filter to only include debug in claim you are standing in.
+**Description**:  
+Enables debugging mode to log claim-related actions. Use `/gddebug paste` to generate a link.  
+**Example**:  
+`/gddebug record claim` — records all actions in the current claim.  
+See [Debugging](/wiki/advanced/Debugging.html) for more info.
 
 ___
-#### `/gd delete claim`
+### `/gd delete claim`
+
 **Aliases**: `deleteclaim`    
 **Arguments**: `[identifier]`  
 **Permission**: `griefdefender.admin.claim.command.delete-claims`  
 
-Deletes the claim you're standing in, even if it's not your claim.  
-Note: This command will not refund player currency back or handle the abandon return ratio. Use with caution on user claims!
+**Description**:  
+Deletes the claim you're standing in or the one specified.  
+**Note**: This will not refund blocks or currency. Use with caution.
 
 ___
-#### `/gd delete all`
+### `/gd delete all`
+
 **Aliases**: `deleteall`  
 **Arguments**: `<player> [world]`  
 **Permission**: `griefdefender.admin.claim.command.delete-claims`  
 
-Delete all of another player's claims.  
-Note: This command will not refund player currency back or handle the abandon return ratio. Use with caution on user claims!
+**Description**:  
+Deletes all claims belonging to another player.  
+**Note**: Refunds are not processed — use with caution.
 
 ___
-#### `/gd delete alladmin`
+### `/gd delete alladmin`
+
 **Aliases**: `deletealladmin`  
 **Arguments**: `[world]`  
 **Permission**: `griefdefender.admin.claim.command.delete-claims`  
 
-Deletes all administrative claims.
+**Description**:  
+Deletes all administrative claims in the current or specified world.
 
 ___
-#### `/gd delete top`
+### `/gd delete top`
+
 **Aliases**: `deletetop`  
 **Permission**: `griefdefender.admin.claim.command.delete-claims`  
 
-Deletes the claim you are standing on and all its subdivisions unless a [claim identifier](/wiki/basic/Claim-Management.html#claim-identifiers) is specified.  
-Note: If used on a town claim, it will also include all basic children claims owned by the town owner.
+**Description**:  
+Deletes the current top-level claim and all subdivisions, or specified claim by identifier.
 
 ___
-#### `/gd economy blocktransfer`
+### `/gd economy blocktransfer`
+
 **Aliases**: `gdblocktransfer`  
 **Permission**: `griefdefender.admin.claim.command.block-transfer`  
 
-Transfers ALL player remaining accrued/bonus claim blocks into currency then sets their accrued and bonus amounts to `0`.  
-Note: This MUST be used if you are switching from claim blocks system to economy mode.
-
+**Description**:  
+Transfers all remaining player claim blocks (accrued + bonus) into currency and resets both to zero.  
+**Note**: Required when migrating from block-based to economy-based system.
 
 ___
-#### `/gd mode admin`
+### `/gd mode admin`
+
 **Aliases**: `ac, adminclaims, modeadmin`  
-**Permission**:   `griefdefender.admin.claim.command.admin-mode`  
+**Permission**: `griefdefender.admin.claim.command.admin-mode`  
 
-Switches the modification tool to admin claims mode which allows user to create admin claims.
+**Description**:  
+Enables admin claim mode for creating and managing administrative claims.
 
 ___
-#### `/gd mode nature`
+### `/gd mode nature`
+
 **Aliases**: `modenature`  
 **Permission**: `griefdefender.admin.command.restore-nature.base`  
 
-Switches the modification tool to restoration mode.  
-Note: This command is current not available.
+**Description**:  
+Switches the claim tool to nature restore mode.  
+**Note**: Currently not available.
 
 ___
-#### `/gd player adjustbonusblocks`
+### `/gd player adjustbonusblocks`
+
 **Aliases**: `adjustbonusblocks`  
 **Arguments**: `<player> <amount> [world]`  
 **Permission**: `griefdefender.admin.command.set-accrued-claim-blocks`  
 
-Adds or subtracts bonus claim blocks for a player
+**Description**:  
+Adjusts a player's bonus claim block total by adding or subtracting the specified amount.
 
 ___
-#### `/gd player adjustbonusblocksall`
+### `/gd player adjustbonusblocksall`
+
 **Aliases**: `adjustbonusblocksall`  
 **Arguments**: `<amount>`  
 **Permission**: `griefdefender.admin.command.set-accrued-claim-blocks-all`  
 
-
-Adjusts bonus claim block total for all online players by amount specified.
+**Description**:  
+Adjusts bonus claim block total for ***all online players***.
 
 ___
-#### `/gd player setaccruedblocks`
+### `/gd player setaccruedblocks`
+
 **Aliases**: `scb, setaccruedblocks`  
 **Arguments**: `<player> <amount> [world]`  
 **Permission**: `griefdefender.admin.command.set-accrued-claim-blocks`  
 
-Updates a player's accrued claim block total.
+**Description**:  
+Sets a player's total accrued claim blocks to the specified value.
 
 ___
-#### `/gd permission group`
+### `/gd permission group`
+
 **Aliases**: `cpg`  
 **Arguments**: `<group> [<permission> <value>]`  
 **Permission**: `griefdefender.admin.claim.command.permission-group`  
-**Requires**: The command source executing this command must have the permission specified as arg.  
 
-Sets a permission on a group with a claim context.  
-Note: Use this command when you want to override LP permissions in a claim.
+**Description**:  
+Sets a permission for a LuckPerms group with claim context.  
+**Note**: The command executor must have the target permission themselves.
 
 ___
-#### `/gd permission player`
+### `/gd permission player`
+
 **Aliases**: `cpp`  
 **Arguments**: `<player> [<permission> <value>]`  
 **Permission**: `griefdefender.admin.claim.command.permission-player`  
-**Requires**: The command source executing this command must have the permission specified as arg.  
 
-Sets a permission on a player with a claim context.  
-Note: Use this command when you want to override LP permissions in a claim.
+**Description**:  
+Sets a permission for a player with claim context.  
+**Note**: The command executor must have the target permission themselves.
 
 ___
-#### `/gd reload`
+### `/gd reload`
+
 **Aliases**: `gdreload`  
 **Permission**: `griefdefender.admin.command.reload`  
 
-Reloads GriefDefender's configuration settings.
+**Description**:  
+Reloads GriefDefender configuration files and settings.
 
 ___
-#### `/gd schematic`  
+### `/gd schematic`
+
 **Aliases**: `claimschematic`  
 **Arguments**: `<create|delete> <name>`  
 **Permission**: `griefdefender.admin.claim.command.schematic`  
 
-Manages claim schematics. Use `/claimschematic create <name>` to create a live backup of claim. 
+**Description**:  
+Creates or deletes live backups of claims via schematics.
 
 ___
-#### `/gd toggle ignore`
+### `/gd toggle ignore`
+
 **Aliases**: `claimignore, ic, ignoreclaims, toggleclaimignore`  
 **Permission**: `griefdefender.admin.claim.command.ignore.base`  
 **Additional Permissions**:  
-    `griefdefender.admin.claim.command.ignore.admin` - Required to ignore admin claims.  
-    `griefdefender.admin.claim.command.ignore.basic` - Required to ignore basic claims.  
-    `griefdefender.admin.claim.command.ignore.town` - Required to ignore town claims.  
-    `griefdefender.admin.claim.command.ignore.wilderness` - Required to ignore wilderness.  
+* `griefdefender.admin.claim.command.ignore.admin`  
+* `griefdefender.admin.claim.command.ignore.basic`  
+* `griefdefender.admin.claim.command.ignore.town`  
+* `griefdefender.admin.claim.command.ignore.wilderness`  
 
-Toggles ignore claims mode.
+**Description**:  
+Toggles ignore mode for various claim types. Useful for bypassing claim restrictions.
 
 ___
-#### `/gd unban`  
-**Aliases**: `claimunban`    
+### `/gd unban`  
+
+**Aliases**: `claimunban`  
 **Arguments**: `hand | <type> <target>`  
-Note: Valid types are `entity`, `item`, `block`  
-Note: Target represents the identifier of `entity, item, or block`  
 **Permission**: `griefdefender.admin.claim.command.ban`  
-**Example**:  To unban sticky piston usage in current world :  
-`/gd unban block minecraft:sticky_piston`  
 
-Unbans target entity, item, block, or item in hand allowing it to be used again.  
-
+**Description**:  
+Removes a ban on an entity, item, or block — or item currently held.  
+**Example**:  
+`/gd unban block minecraft:sticky_piston`
+___
 
 ### Advanced
 
+
 ___
-#### `/gd claimgroup player`
+### `/gd claimgroup player`
+
 **Aliases**: `claimgroup`  
-**Arguments**: `join <group> [<identifier>]|unjoin [<identifier>]|create <group>|delete <group>`  
+**Arguments**:  
+- `join <group> [<identifier>]`  
+- `unjoin [<identifier>]`  
+- `create <group>`  
+- `delete <group>`  
+
 **Permission**: `griefdefender.advanced.user.claim.command.player`  
 
-Used to manage player claim groups. See [Claim Groups](/wiki/basic/Claim-Management.html#claim-groups) for more info.
+**Description**:  
+Manages player claim groups, allowing users to create, join, leave, or delete groups for collaborative claim management.  
+See [Claim Groups](/wiki/basic/Claim-Management.html#claim-groups) for more information.
 
 ___
-#### `/gd snapshot`
+### `/gd snapshot`
+
 **Aliases**: `claimsnapshot`  
 **Arguments**: `<apply|create|delete> <name> [contexts]`  
 **Permission**: `griefdefender.advanced.user.claim.command.snapshot`  
 
-Manages claim snapshots used to backup/restore/replace a claim's permission, option, trust, or claim data. See [Claim Snapshots](/wiki/basic/Claim-Management.html#claim-snapshots) for more info.
+**Description**:  
+Manages claim snapshots to back up, restore, or replace permission, option, trust, and claim settings.  
+See [Claim Snapshots](/wiki/basic/Claim-Management.html#claim-snapshots) for more information.
 
+___
 
 ### Misc
 
-___
-#### `/gd`
-
-Lists detailed information on each command.
 
 ___
-#### `/gd help`
-**Permission**: `griefdefender.user.command.help`
+### `/gd`
 
-Displays GriefDefender command help.
+**Description**:  
+Displays a general overview of available GriefDefender commands, organized by category. Useful for discovering what commands are accessible based on your permissions.
 
 ___
-#### `/gd version`
+### `/gd help`
+
+**Permission**: `griefdefender.user.command.help`  
+
+**Description**:  
+Displays detailed usage instructions for GriefDefender commands. Use this to learn how to structure commands and see available arguments.
+
+___
+### `/gd version`
+
 **Aliases**: `gdversion`  
 **Permission**: `griefdefender.user.command.version`  
 
-Lists GD, LP, and platform version information.
+**Description**:  
+Displays the currently installed versions of GriefDefender, LuckPerms (if present), and the server platform (e.g., Paper, Sponge).
