@@ -468,9 +468,9 @@ All options in `options.yml` can also be set as **meta values** in LuckPerms. Th
 Example:
 
 ```bash
-/lp group vip meta set initial-blocks 3000
-/lp group vip meta set block-accrual-per-hour 150
-/lp group vip meta set max-accrued-blocks 10000
+/lp group vip meta set griefdefender.initial-blocks 3000
+/lp group vip meta set griefdefender.block-accrual-per-hour 150
+/lp group vip meta set griefdefender.max-accrued-blocks 10000
 
 ```
 
